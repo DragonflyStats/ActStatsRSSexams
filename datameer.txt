@@ -1,0 +1,2 @@
+Datameer specializes in analysis of large volumes of data[1] for business users of Apache Hadoop.[2] The company's product, Datameer Analytics Solution (DAS), is a business integration platform for Hadoop and includes data source integration, an analytics engine with a spreadsheet interface designed for business users with over 200 analytic functions and visualization including reports, charts and dashboards. DAS is available for all major Hadoop distributions including Apache, Cloudera, EMC Greenplum HD, IBM BigInsights, MapR, Yahoo! and Amazon.
+
