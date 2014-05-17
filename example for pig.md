@@ -1,8 +1,10 @@
+Apache pig
+
 Instructions on how to run example.pig.
 
 ================================================================
 
-STEP 1:
+### STEP 1:
 
 Importing the myudfs.jar file in pig.  You need this because
 example.pig uses the function RDFSplit3(...) which is defined in myudfs.jar:
@@ -27,7 +29,7 @@ Master Node (see hw6-awsusage.html).
 
 ================================================================
 
-STEP2
+### STEP2
 
 Start an AWS Cluster (see hw6-awsusage.html), start pig interactively,
 and cut and paste the content of example.pig.
