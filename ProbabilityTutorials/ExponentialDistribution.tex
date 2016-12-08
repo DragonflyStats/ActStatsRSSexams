@@ -1,0 +1,101 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+	
+
+Assume that the time between arrivals of customers at a particular bank is exponentially distributed with a mean of 4 minutes. 
+
+\begin{itemize}
+	\item[(i)]
+	Find the probability that the time between arrivals is greater than 5 minutes.
+	\item[(ii)]
+	Find the probability that the time between arrivals will be less than 1 minute.
+\end{itemize}
+
+%======================================================================================%
+
+\section*{Question D11 - Exponential Distribution}
+Each 500-ft roll of sheet steel includes two flaws on average. 
+What is the probability that as the sheet steel is unrolled the first flaw occurs within the first 50-ft segment?
+
+
+\begin{itemize}
+	\item Average per 500-ft roll = 2.0
+	\item average per 50-ft segment = 2.0/10 = 0.20
+	\item $P(X \leq 50)$
+	\[ = 1 - e^{-\lambda} = 1 - e^{-0.20}\] = 1-0.81873 = 0.18127
+\end{itemize}
+
+
+\section{Question D12 : Exponential Distribution}
+
+A machine is said to have a mean failure free lifetime of 2000 hours. What is the probability that the machine will last:
+
+\begin{itemize}
+	\item[(i)]	at least 1000 hours
+	\item[(ii)]	at least 1500 hours
+	\item[(iii)]	less than 800 hours
+	\item[(iv)]	less than 1800 hours
+\end{itemize}
+\section{Question D13 -  The Exponential Distribution - Example}
+The average lifespan ppf a laptop is 5 year. You may assume that the lifespan of laptop computers follows an exponential distribution.
+\begin{itemize}
+	\item What is the probability that the lifespan of the laptop will be at least 6 years.
+	\item What is the probability that the lifespan of the laptop will not exceed 4 years.
+	\item What is the probability that the lifespan of the laptop will be between 5 years and 6 years.
+\end{itemize}
+
+\section*{Question D14 - Exponential Distribution - Example}
+
+An average of five calls per hour are received by a machine repair department. 
+Beginning the observation at any point in time, compute the following probabilites
+
+\begin{itemize} 
+	\item[(a)] that the first call 
+	for service will arrive within ten minutes.
+	\item[(b)] that the first call 
+	for service will not arrive for 30 minutes.
+\end{itemize}
+
+\begin{itemize}
+	\item $\mu$ = Average per hour = 5.0
+	\item $\lambda= \mu$ = Average per half hour = 2.5
+	\item $P(X \leq 2.5) $
+	\[P(X \leq 2.5) = 1 - e^{-2.5} = 1 - 0.08208 = 0.91792\]
+\end{itemize}
+
+%---------------------------------------------------%
+\subsection{Question 3}
+(a) 	The period of pain relief reported by people treated with a drug is normally distributed with a Mean of 50 hours and a Standard Deviation of 16 hours.  In a random sample of 64 people treated with the drug, what is the probability that the mean period of relief reported is between 48 and 53 hours?
+(2 marks)
+
+
+\section{Question D10 -  Exponential Distribution}
+
+Faults occur in a fibre optic cable at the rate of 0.5 per 10KM of cable.  Calculate the probability that:
+
+\begin{itemize}
+\item[(i)] Exactly 2 flaws will occur in a given 10KM section
+\item[(ii)] 4 or more flaws will occur in a given 10KM section
+\item[(iii)] Eircom are providing 100KM fibre optic connection between Limerick and Cork.  What is the probability of 7 or more flaws in the 100KM section?	
+\end{itemize}				
+(6 marks)
+
+
+\end{document}	
