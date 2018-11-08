@@ -1,0 +1,319 @@
+EXAMINATIONS OF THE HONG KONG STATISTICAL SOCIETY
+GRADUATE DIPLOMA, 2013
+MODULE 1 : Probability distributions
+Time allowed: Three Hours
+Candidates should answer FIVE questions.
+All questions carry equal marks.
+The number of marks allotted for each part-question is shown in brackets.
+Graph paper and Official tables are provided.
+Candidates may use calculators in accordance with the regulations published in
+the Society's "Guide to Examinations" (document Ex1).
+The notation log denotes logarithm to base e.
+Logarithms to any other base are explicitly identified, e.g. log 10 .
+Note also that
+( nr ) is the same as
+n
+C r .
+1
+This examination paper consists of 12 printed pages.
+This front cover is page 1.
+Question 1 starts on page 2.
+There are 8 questions altogether in the paper.
+© RSS 2013
+GD Module 1 20131.
+(a) The events E 1 , E 2 , ..., E n form a mutually exclusive and exhaustive partition
+of the sample space S. Another event A in S has probability P(A) > 0. Write
+down the Law of Total Probability, which expresses P(A) in terms of
+conditional and unconditional probabilities involving the events E 1 , E 2 , ..., E n .
+Write down Bayes' Theorem for probabilities of the form P(E j | A).
+(4)
+(b) Each question in a certain multiple-choice examination has 4 possible answers,
+of which just 1 is correct. It can be assumed that candidates who do not know
+the correct answer to a question always guess it, choosing one of the 4 possible
+answers at random.
+(i)
+A particular candidate has probability θ (0 < θ < 1) of knowing the
+correct answer to a question. Show that the probability that this
+candidate answers a question correctly is 14 (1 + 3 θ ) .
+(4)
+(ii) When a candidate gives the correct answer, 1 mark is awarded. When a
+1
+of a mark is deducted.
+candidate gives the wrong answer, a fraction
+n
+Show that the value n = 3 makes the expected number of marks
+awarded to the candidate in part (i) equal to θ .
+(6)
+(iii) The examination consists of 60 questions. Verify that, when n = 3 as in
+part (ii), this candidate must give at least 45 correct answers in order to
+obtain a total of at least 40 marks.
+Assume also that, in a particular case, θ = 0.75 independently for each
+question. Find approximately the probability that this candidate's total
+mark for the examination is at least 40.
+(6)
+22.
+For some θ > 0, the continuous random variable X has the probability density function
+1
+f ( x ) θ e − θ x ( x > 0) , i.e. X has the exponential distribution with expected value
+=
+θ
+and variance
+(i)
+1
+θ 2
+. Let Y =
+X .
+Use Taylor series expansions to show that
+7
+and
+8 θ
+1
+are approximate
+4 θ
+expressions for E(Y) and Var(Y) respectively.
+(6)
+(ii) Prove that Y has the Weibull distribution, with probability density function
+g ( y ) = 2 θ y exp( − θ y 2 ) ( y > 0) .
+(7)
+(iii) Hence obtain exact expressions for E(Y) and Var(Y), and compare these with
+the approximations obtained in part (i).
+∞
+k − 1 − u
+[Hint: the gamma function is defined by Γ ( k ) =
+∫ u e du for k > 0; you
+may use, without proof, the result that Γ (
+1
+2
+) = π .]
+0
+(7)
+33.
+The independent continuous random variables X 1 , X 2 , ..., X n (for n ≥ 2) are identically
+distributed, each with cumulative distribution function F(x) and probability density
+function f (x).
+(i)
+Let V = min(X 1 , X 2 , ..., X n ). Explain why, for any value v,
+P ( V ≤ v ) = 1 − {1 − F ( v )} n .
+Hence write down the probability density function of V.
+(3)
+(ii) Let W = max(X 1 , X 2 , ..., X n ). Find the cumulative distribution function and
+probability density function of W in terms of f (w) and F(w).
+(3)
+(iii) Explain why, for any values v and w such that v ≤ w,
+P ( V ≤ v and W ≤ w ) =
+P ( W ≤ w ) − P ( V > v and W ≤ w )
+and why
+P ( V > v and W ≤ w =
+) [ F ( w ) − F ( v )] n .
+Hence show that the joint probability density function of V and W is
+f VW ( v , w ) =
+n ( n − 1) f ( v ) f ( w )[ F ( w ) − F ( v )] n − 2 , v ≤ w .
+(6)
+(iv)
+Suppose now that each X i , i = 1, 2, ..., n, has the uniform distribution on the
+1
+interval (0, 1). Show that E ( VW ) =
+and find the covariance of V and W.
+n + 2
+[Hint: you may use, without proof, the result that, for non-negative integers r
+1
+r ! s !
+.]
+and s, ∫ u r (1 − u ) s du =
+0
+( r + s + 1)!
+(8)
+44.
+(a)
+(b)
+The random variables X 1 , X 2 have the bivariate Normal distribution with
+2
+ρσ 1 σ 2 
+ σ
+.
+expectation μ = ( μ 1 μ 2 ) T and covariance matrix Σ =  1
+σ 2 2  
+ ρσ 1 σ 2
+(i) Write out explicitly the joint probability density function of X 1 and X 2 .
+(3)
+(ii) State (without proof) the marginal distribution of X 2 and write out its
+marginal probability density function.
+(1)
+(iii) Hence obtain the conditional probability density function of X 1 given
+that X 2 = x 2 . Identify this as a Normal distribution with parameters that
+you should state explicitly.
+(6)
+The random variables X 1 , X 2 , X 3 have the multivariate Normal distribution
+and
+covariance
+matrix
+with
+expectation
+μ = ( μ 1 μ 2 μ 3 ) T
+ σ 1 σ 12 σ 13 
+ , where Σ 23 is a 2 × 2 sub-matrix. In general, the
+Σ =  σ 12
+
+
+23
+ σ 13
+
+conditional distribution of X 1 given that X 2 = x 2 , X 3 = x 3 is a Normal
+distribution with
+2
+Σ
+− 1 x − μ 2 
+E ( X 1 | x 2 , x 3 =
+) μ 1 + ( σ 12 σ 13 ) Σ 23   2
+ ,
+ x 3 − μ 3 
+− 1 σ
+Var( X 1 | x 2 , x 3 =
+) σ 1 2 − ( σ 12 σ 13 ) Σ 23   12   .
+ σ 13 
+Obtain the parameters of the conditional distribution of X 1 given that X 2 = x 2 ,
+X 3 = x 3 in the special case where X 2 and X 3 are independent random variables.
+Find an expression for the multiple correlation of X 1 on both X 2 and X 3 in this
+case.
+(10)
+55.
+The continuous random variable X has the gamma distribution with parameters
+α and θ . The probability density function of X is given by
+f ( x )
+=
+θ α x α − 1 e − θ x
+, x > 0,
+Γ ( α )
+where α > 0 and θ > 0 and Γ(.) denotes the gamma function. Furthermore, the
+continuous random variable Y has the gamma distribution with parameters β > 0
+and θ . X and Y are independent random variables.
+(i)
+Obtain the joint probability density function of U and V, where
+U =
+X
+and V = X + Y .
+X + Y
+State explicitly the region on which this joint probability density function is
+non-zero.
+(11)
+(ii) Explain how you know that U and V are independent. Show that V has a
+gamma distribution and identify its parameters. Write down the marginal
+distribution of U.
+(5)
+(iii) U has a beta distribution with parameters α and β . Show that E ( U ) =
+α
+α + β
+.
+Find E(V).
+(4)
+66.
+The discrete random variables X 1 , X 2 , ..., X n (n ≥ 2) are independent and each X i has
+e − λ i λ i x i
+x
+=
+)
+, for λ i > 0 (i = 1, 2, ..., n).
+the Poisson distribution, P ( X =
+i
+i
+x i !
+(i)
+Show that X i has moment generating function
+=
+M i ( t ) exp{ λ i ( e t − 1)} .
+Use this moment generating function to find E(X i ) and Var(X i ).
+(8)
+(ii)
+Using moment generating functions, show that
+S = X 1 + X 2 +  + X n
+has the Poisson distribution with expected value λ 1 + λ 2 +  + λ n .
+(4)
+(iii)
+Let S = s, for some s ≥ 0. What can you say about the possible values of
+(X 1 , X 2 , ..., X n–1 )? For (x 1 , x 2 , ..., x n–1 ) in this range, obtain the conditional
+probability mass function p 12  ( n − 1)| S ( x 1 , x 2 ,  , x n − 1 | S = s ) .
+Express this function in the form
+s !
+p x 1  p n x n
+x 1 !  x n ! 1
+where x n = s − x 1 −  − x n − 1 , stating explicitly the values of the parameters
+p 1 , ..., p n .
+(8)
+77.
+A university café is considering introducing the following system for charging
+customers, in an attempt to reduce the need to keep a lot of change. Bills will be
+worked out as usual but the customer will always pay a whole number of pounds. If a
+bill comes to £A and x pence (for x = 0, 1, ..., 99), then the till will be programmed to
+x
+randomly charge the customer either £A, with probability 1 −
+, or £(A + 1), with
+100
+x
+probability
+. For example, a customer whose bill is £7.14 will have probability
+100
+0.86 of being charged £7 and probability 0.14 of being charged £8.
+(i)
+Suppose that X 1 , the number of pence on a bill, is equally likely to be any of
+the values 0, 1, ..., 99. Find E(X 1 ) and Var(X 1 ).
+n
+[Hint: you may use, without proof, the result that
+∑ x 2 = 16 n ( n + 1)(2 n + 1) .]
+x = 0
+(4)
+(ii)
+Let X 2 be the amount (in pence) that a customer gains (or loses) on a single
+transaction when this system is introduced. Find E(X 2 | X 1 ) and Var(X 2 | X 1 ).
+Hence find E(X 2 ) and Var(X 2 ), where
+Var(X 2 ) = E{Var(X 2 | X 1 )} + Var{E(X 2 | X 1 )}.
+(10)
+(iii)
+A student who hears about this proposed system believes that she will eat in the
+café 100 times in the coming semester. Find the approximate probability that,
+in the course of the semester, the total amount she is charged in the café when
+this system is used will be no more than 100 pence (i.e. £1) different from the
+total amount of her bills. You may assume that the amounts gained or lost each
+time are independent random variables.
+(6)
+88.
+(a) Let X be any continuous random variable, and let F(x) be its cumulative
+distribution function. Suppose that the continuous random variable U has a
+uniform distribution on the interval (0, 1). Define the new random variable Y
+by Y = F –1 (U) (where F –1 (.) is the inverse function of F(.)). By considering the
+cumulative distribution function of Y, or otherwise, show that Y has the same
+distribution as X.
+(4)
+(b) The following values are a random sample of numbers from a uniform
+distribution on the interval (0, 1):
+0.149,
+0.281,
+0.534,
+0.906.
+Use these values to generate 4 random variates from each of the following
+distributions, carefully explaining the method you use in each case.
+(i)
+Geometric:
+P ( X = x =
+) ( 12 ) , =
+x 1, 2,  .
+x
+(6)
+(ii)
+Pareto:
+=
+f ( x )
+24
+, x > 2.
+x 4
+(6)
+(iii)
+Standard Normal: =
+f ( x )
+1
+exp ( − 12 x 2 ) , − ∞ < x < ∞ .
+2 π
+(4)
+9BLANK PAGE
+10BLANK PAGE
+11BLANK PAGE
+12
