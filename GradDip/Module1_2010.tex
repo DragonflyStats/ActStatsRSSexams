@@ -1,0 +1,204 @@
+EXAMINATIONS OF THE HONG KONG STATISTICAL SOCIETY
+GRADUATE DIPLOMA, 2010
+MODULE 1 : Probability Distributions
+Time Allowed: Three Hours
+Candidates should answer FIVE questions.
+All questions carry equal marks.
+The number of marks allotted for each part-question is shown in brackets.
+Graph paper and Official tables are provided.
+Candidates may use calculators in accordance with the regulations published in
+the Society's "Guide to Examinations" (document Ex1).
+The notation log denotes logarithm to base e.
+Logarithms to any other base are explicitly identified, e.g. log 10 .
+Note also that
+( nr ) is the same as
+n
+C r .
+1
+GD Module 1 2010
+This examination paper consists of 6 printed pages, each printed on one side only.
+This front cover is page 1.
+Question 1 starts on page 2.
+There are 8 questions altogether in the paper.
+© RSS 20101.
+Let X be a random variable with probability mass function
+P ( X = n ) =
+K
+,
+n ( n + 2 )
+n = 1, 2, 3, ...
+for some constant K.
+(i)
+By noting that
+1
+1 ⎛ 1
+1 ⎞
+4
+= ⎜ −
+⎟ , or otherwise, show that K = .
+n ( n + 2 ) 2 ⎝ n n + 2 ⎠
+3
+(6)
+(ii)
+Calculate the probability that the value of X is an odd number.
+(6)
+(iii)
+Suppose Y is independent of X and has the same distribution as X. Find the
+probability that
+(a)
+X + Y is even,
+(4)
+(b)
+X is even, given that X + Y is even.
+(4)
+2
+Turn over2.
+[In this question, all random variables take non-negative integer values only, and you
+may quote standard properties of probability generating functions (pgfs) without
+proof.]
+Let N be a random variable with pgf g(z), and let X 1 , X 2 , X 3 , ... be independent random
+variables all having the same distribution whose pgf is f (z).
+(i)
+Define S N = X 1 + X 2 + ... + X N for N ≥ 1, and S 0 = 0. Show that the pgf of S N
+is the composition g ( f ( z ) ) .
+(6)
+(ii) Suppose that N has the Poisson distribution with mean λ > 0, while each X i
+takes only the values 0 and 1 with respective probabilities 1 – p and p
+(0 < p < 1). Find the corresponding pgfs, and deduce the distribution of S N .
+(7)
+(iii) Suppose instead that, for m = 0, 1, 2, ..., p m denotes the probability that, in any
+given road accident, m casualties will need hospital treatment. Assume that the
+numbers of casualties in different accidents are independent, and that the
+number of road accidents relevant to a particular hospital on a Sunday
+afternoon has the Poisson distribution with mean 1. Show that the probability
+that this hospital will have to treat at most two road accident casualties next
+Sunday afternoon is
+⎛
+p 1 2 ⎞
+⎜ 1 + p 1 + p 2 +
+⎟ exp ( p 0 − 1 ) .
+2 ⎠
+⎝
+(7)
+3.
+Suppose that X and Y are independent random variables with the same probability
+density function (pdf) f (x). Write down, without proof, a formula for the pdf of X + Y.
+(2)
+Suppose that f (x) = x/2 for 0 < x < 2 (and f (x) = 0 elsewhere).
+(i)
+Find the pdf of W = X + Y for 0 < w < 2 and for 2 < w < 4.
+(12)
+(ii)
+Find the pdf of V = (X – 1) 2 .
+(6)
+3
+Turn over4.
+A sequence of independent Bernoulli trials, in which the probability of success is p,
+with 0 < p < 1, is carried out.
+Let X denote the number of trials up to and including the first success. Find the
+distribution of X and obtain its expected value and variance.
+(8)
+A further sequence of x trials is carried out, where x is the observed value of the
+random variable X. Let Y denote the number of successes in these trials. Show that Y
+has expected value 1 and find its variance.
+(8)
+[You may use the result Var(Y) = E(Var(Y | X)) + Var(E(Y | X)).]
+Explain briefly why the result E(Y) = 1 should cause no surprise, and why it might be
+anticipated that the variance of Y decreases as p increases.
+(4)
+5.
+Suppose {X n } (n = 1, 2, 3, ...) are independent random variables, all having the same
+continuous distribution. When observations are made sequentially, a record occurs
+whenever a value exceeds all previous values (note that the first value is itself a
+record). Let A n denote the event that X n is a record, and let S n denote the number of
+records in the sequence {X 1 , X 2 , ..., X n }.
+(i)
+Show that the probability of A n is 1/n.
+(2)
+(ii)
+Explain why the events A n and A m are independent when m ≠ n.
+(4)
+(iii)
+Find the mean and variance of S n .
+(6)
+(iv)
+Use the central limit theorem, with a continuity correction, to estimate the
+probability of at least 10 records in the first 100 values of {X n }.
+(8)
+2
+n
+n
+1
+1 π
+[You may use the results ∑ ≈ log n and ∑ 2 ≈
+.]
+6
+r = 1 r
+r = 1 r
+4
+Turn over6.
+Suppose that U has the uniform distribution over the interval (0, 1).
+Write V = exp(U 2 ), W = V + K(U – 0.5) where K is a constant, and θ = ∫ exp ( t 2 ) dt .
+1
+0
+(i)
+Show that E(W) = E(V) = θ .
+(5)
+(ii)
+Show that the covariance of U and V is (e – 1 – θ )/2.
+(5)
+(iii)
+Deduce the value of K that minimises the variance of W.
+(5)
+(iv)
+7.
+(i)
+The mean of 1000 simulated values of V yields a preliminary estimate of θ as
+approximately 1.46. Assume that you have an unlimited supply of values from
+independent random variables all of which have the same distribution as U.
+Describe an efficient simulation method, based on (i) and (iii), that would be
+expected to lead to the estimation of the value of θ to a high degree of
+precision.
+(5)
+Show that, if U has the uniform distribution on the interval (0, 1), then –2logU
+has the exponential distribution with mean 2.
+(5)
+Suppose that X and Y are independent standard Normal random variables. Let (R, Θ )
+be the corresponding polar coordinates, i.e.
+R = X 2 + Y 2 and cos Θ = X / R , sin Θ = Y / R .
+(ii)
+Show that the joint density of ( R , Θ ) is g ( r , θ ) =
+⎛ r 2 ⎞
+r
+exp ⎜ − ⎟ over 0 < r < ∞ ,
+2 π
+⎝ 2 ⎠
+0 < θ < 2 π . Deduce the density function of R .
+(10)
+(iii) Hence or otherwise show that R 2 has the exponential distribution with mean 2.
+(5)
+5
+Turn over8.
+Let X denote the smallest and Y the largest of four independent random variables, each
+having the continuous uniform distribution over the interval (0, θ ) where θ > 0.
+(i)
+For given 0 < x < y < θ , show that P ( X > x , Y < y )
+( y − x )
+=
+θ 4
+4
+. Deduce the
+joint density of X and Y .
+(4)
+(ii) Write U = Y – X and V = Y + X . Find the joint density of U and V . Sketch the
+region over which this density is non-zero.
+(6)
+(iii) Deduce the marginal densities of U and V .
+(4)
+(iv)
+You are given that E ( X ) = θ /5, Var( X ) = 2 θ 2 /75, E ( Y ) = 4 θ /5, Var( Y ) = 2 θ 2 /75,
+Var( U ) = θ 2 /25 and Var( V ) = θ 2 /15. Find constants c 1 , c 2 , c 3 , c 4 such that
+E ( c 1 X ) = E ( c 2 Y ) = E ( c 3 U ) = E ( c 4 V ) = θ . Which of the four quantities c 1 X , c 2 Y ,
+c 3 U , c 4 V has the smallest variance?
+(6)
+6
