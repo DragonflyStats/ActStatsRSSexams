@@ -1,0 +1,56 @@
+9
+(i)
+Consider the loss function given by:
+ 0 p    g ( x )  p  
+L ( g ( x ) p ) = 
+ 1 otherwise
+The expected loss is
+E ( L ) = 1  
+g 
+g 
+f ( p  x ) dp
+= 1  2 f ( gx )
+Page 12Subject CT6 (Statistical Methods Core Technical) – April 2015 – Examiners’ Report
+To minimise this expression we need to maximise f ( gx ) which is done by
+choosing g at the mode of the posterior distribution.
+(ii)
+The likelihood function is L ( p )  p 13 (1  p ) 87 p 20 (1  p ) 80+ g
+ p 33 (1  p ) 167+ g
+the prior likelihood of p is given by f ( p )  p (1  p ) 7
+so f ( px )  f ( xp ) f ( p )
+ p 33 (1  p ) 167+ g p (1  p ) 7
+ p 34 (1  p ) 174+ g
+so we have a Beta distribution with  = 35 and  = 175 + g .
+(iii)
+Under all-or-nothing loss we need to find the mode of
+f ( px )  p 34 (1  p ) 174+ g
+ f
+= 34 p 33 (1  p ) 174+ g  (174 + g ) p 34 (1  p ) 173+ g
+ p
+= p 33 (1  p ) 173+g [34(1  p )  (174 + g ) p ]
+And setting this equal to zero we have
+34(1  p ˆ ) = (174  g ) p ˆ
+34 = (208  g ) p ˆ
+p̂ =
+34
+208  g
+Under quadratic loss the Bayes estimate is given by mean of the posterior
+distribution which is given by
+p̂ =
+35
+35
+=
+35  175  g 210  g
+Page 13Subject CT6 (Statistical Methods Core Technical) – April 2015 – Examiners’ Report
+The two are equal if
+34
+35
+=
+208  g
+210  g
+i.e. 34(210 + g ) = 35(208 + g )
+i.e. 7140 + 34 g = 7280 + 35 g
+i.e. g = 7140  7280 =  140
+This would imply there were  40 policies in year 2 which is impossible.
+Disappointingly few candidates knew the bookwork for part (i). Stronger candidates familiar
+with Bayes Theory were able to score very well here.
