@@ -1,0 +1,224 @@
+
+
+The following time series model is being used to model monthly data:
+Y t  Y t  1  Y t  12  Y t  13  e t   1 e t  1   12 e t  12   1  12 e t  13
+where e t is a white noise process with variance  2 .
+8
+(i) Perform two differencing transformations and show that the result is a moving
+average process which you may assume to be stationary.
+[3]
+(ii) Explain why this transformation is called seasonal differencing.
+(iii) Derive the auto-correlation function of the model generated in part (i).
+[8]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+[Total 12]
+[1]
+The number of claims, N, in a given year on a particular type of insurance policy is
+given by:
+P(N = n) = 0.8  0.2 n
+n = 0, 1, 2, ...
+Individual claim amounts are independent from claim to claim and follow a Pareto
+distribution with parameters  = 5 and  = 1,000.
+(i) Calculate the mean and variance of the aggregate annual claims per policy. [4]
+(ii) Calculate the probability that aggregate annual claims exceed 400 using:
+(a)
+(b)
+a Normal approximation.
+a Lognormal approximation.
+[6]
+(iii)
+CT6 A2015–4
+Explain which approximation in part (ii) you believe is more reliable.
+[2]
+[Total 12]9
+Let p be an unknown parameter and let f(px) be the probability density of the
+posterior distribution of p given information x.
+(i)
+Show that under all-or-nothing loss the Bayes estimate of p is the mode of
+f(px).
+[2]
+John is setting up an insurance company to insure luxury yachts. In year 1 he will
+insure 100 yachts and in year 2 he will insure 100 + g yachts where g is an integer.
+If there is a claim the insurance company pays a fixed sum of $1m per claim.
+The probability of a claim on a policy in a given year is p. You may assume that the
+probability of more than one claim on a policy in any given year is zero. Prior beliefs
+about p are described by a Beta distribution with parameters  = 2 and  = 8.
+In year 1 total claims are $13m and in year 2 they are $20m.
+10
+(ii) Derive the posterior distribution of p in terms of g.
+[4]
+(iii) Show that it is not possible in this case for the Bayes estimate of p to be the
+same under quadratic loss and all-or-nothing loss.
+[6]
+[Total 12]
+Claims on a certain portfolio of insurance policies arise as a Poisson process with
+annual rate . Individual claim amounts are independent from claim to claim and
+follow an exponential distribution with mean . The insurance company has
+purchased excess of loss reinsurance with retention M from a reinsurer who calculates
+premiums using a premium loading of . Denote by X i the amount paid by the
+reinsurer on the i th claim (so that X i = 0 if the i th claim amount is below M).
+(i)
+(ii)
+Explain why the claims arrival process for the reinsurer is also a Poisson
+process and specify its parameter.
+Show that
+M X i ( t )  1  e
+(iii)
+(iv)
+ M
+
+
+ t
+.
+1   t
+[4]
+(a) Determine E(X i ).
+(b) Write down and simplify the equation for the reinsurer’s adjustment
+coefficient.
+[6]
+Comment on your results to part (iii).
+END OF PAPER
+CT6 A2015–5
+[3]
+[2]
+[Total 15]
+
+7
+(i)
+Set X t = (1  B 12 )(1  B) Y t where B is the background shift operator
+i.e. X t = Y t  Y t 1  Y t  12 + Y t 13
+then we have X t = e t +  1 e t 1 +  12 e t 12 +  1  12 e t 13
+= (1 +  1 B)(1 +  12 B 12 )e t
+which is a moving average process [of order 13].
+(ii)
+This is called seasonal differencing because it compares the monthly change in
+Y t with the corresponding monthly change at the same time last year.
+Page 9Subject CT6 (Statistical Methods Core Technical) – April 2015 – Examiners’ Report
+(iii)
+We can see that
+ 0 = Cov(X t , X t ) = (1   1 2   12 2   1 2  12 2 )  2 = (1   1 2 )(1   12 2 )  2
+ 1 = Cov(X t , X t 1 ) = Cov(e t +  1 e t 1 +  12 e t 12 +  1  12 e t 13 ;
+e t 1 +  1 e t 2 +  12 e t 13 +  1  12 e t 14 )
+= (  1   1  12 2 )  2   1 (1   12 2 )  2
+ 11 = Cov(X t , X t 11 ) = Cov(e t +  1 e t 1 +  12 e t 12 +  1  12 e t 13 ;
+e t 11 +  1 e t 12 +  12 e t 23 +  1  12 e t 24 )
+  1  12  2
+ 12 = (  12   1 2  12 )  2   12 (1   1 2 )  2
+ 13   1  12  2
+and  s = 0 for all other values of s.
+so  1 =
+2
+ 1 (1   12
+)
+2
+(1   1 2 )(1   12
+)
+ 11 =  13 =
+ 12 =
+=
+ 1
+1   1 2
+ 1  12
+2
+(1   1 2 )(1   12
+)
+ 12 (1   1 2 )
+2
+(1   1 2 )(1   12
+)
+=
+ 12
+2
+1   12
+and  0 = 1 and  s = 0 for all other s.
+Most candidates were able to identify this as a moving average process, however only the
+strongest candidates were able to work through the algebra to derive the auto-correlation
+function.
+Page 10Subject CT6 (Statistical Methods Core Technical) – April 2015 – Examiners’ Report
+8
+(i)
+First note that N has a type 2 negative binomial distribution with parameters
+p = 0.8 and k = 1. Hence
+E(N) =
+0.2
+= 0.25
+0.8
+Var(N) =
+0.2
+0.8 2
+= 0.3125
+Let X denote the distribution of an individual claim. Then
+E ( X ) =
+
+1000
+=
+= 250
+4
+  1
+Var( X ) = 250 2 ×
+5
+= 104,166.666 = (322.75) 2
+3
+Now let S denote aggregate annual claims. Then
+E ( S )
+= E ( N ) E ( X ) = 0.25 × 250 = 62.5
+Var( S ) = E ( N ) Var( X ) + Var( N ) E ( X ) 2
+= 0.3125 × 250 2 + 0.25 × 104,166.666
+= 45,572.92 = 213.478 2
+(ii)
+(a)
+P ( S > 400) = P ( N (62.5, 213.478 2 ) > 400)
+400  62.5 
+
+= P  N (0,1) 
+
+213.478 
+
+= P ( N (0,1) > 1.581)
+= 1  [0.94295 × 0.9 + 0.1 × 0.94408]
+= 0.0569
+(b)
+Let  and  be the parameters of the underlying Normal distribution.
+Then
+e
+
+ 2
+2
+= 62.5
+e 2  ( e   1) = 213.478 2
+2
+2
+(A)
+(B)
+Page 11Subject CT6 (Statistical Methods Core Technical) – April 2015 – Examiners’ Report
+(B) ÷ (A) 2  e   1 =
+2
+213.478 2
+62.5 2
+= 11.66665
+ 2 = log12.66665 = 2.53897 = 1.5934 2
+substituting into (A)  + 2.53897 = log62.5
+2
+so  = log62.5  2.53897 = 2.8657
+2
+and so P ( S > 400) = P ( N (2.8657, 1.5934 2 ) > log 400)
+log 400  2.8657 
+
+= P  N (0,1) 
+
+1.5934
+
+
+= P ( N (0,1) > 1.9617)
+= 1  (0.17 × 0.97558 + 0.83 × 0.97500)
+= 0.0249
+(iii)
+The Pareto distribution is significantly skewed and the Normal approximation
+is not. The Normal approximation in (ii)(b) has variance 213.48 2 and mean
+62.5, so negative values of S (which are impossible in reality) are less than 1
+standard deviation from the mean.
+The approximation in (ii)(b) will therefore be more reliable.
+This question was well answered by the majority of candidates. Full credit was given to
+alternative correct answers in part (iii).
