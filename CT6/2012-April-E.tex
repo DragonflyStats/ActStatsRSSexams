@@ -1,0 +1,252 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+9
+Consider the time series model
+(1 − α B ) 3 X t = e t
+where B is the backwards shift operator and e t is a white noise process with variance
+σ 2 .
+(i)
+Determine for which values of α the process is stationary.
+[2]
+Now assume that α = 0.4.
+(ii)
+(iii)
+10
+(a) Write down the Yule-Walker equations.
+(b) Calculate the first two values of the auto-correlation function ρ 1 and
+ρ 2 .
+[7]
+Describe the behaviour of ρ k and the partial autocorrelation function φ k as
+k →∞ .
+[3]
+[Total 12]
+Let X 1 and X 2 be random variables with moment generating functions M X 1 ( t ) and
+M X 2 ( t ) respectively. A new random variable Y is formed by choosing a sample
+from X 1 with probability p or a sample from X 2 with probability 1 − p .
+(i)
+Show that the moment generating function of Y is given by
+M Y ( t ) = pM X 1 ( t ) + ( 1 − p ) M X 2 ( t )
+[2]
+A portfolio of insurance policies consists of two different types of policy. Claims on
+type 1 policies arrive according to a Poisson process with parameter λ 1 and claim
+amounts have a distribution X 1 . Claims on type 2 policies arrive according to a
+Poisson process with parameter λ 2 and claim amounts have a distribution X 2 .
+(ii)
+Show that aggregate claims on the whole portfolio follow a compound Poisson
+distribution, specifying the claim rate and the claim size distribution.
+[6]
+Now suppose that λ 1 = 10 and λ 2 = 15 and that the claim sizes are exponentially
+distributed with mean 50 for type 1 policies and mean 70 for type 2 policies.
+(iii)
+CT6 A2012–5
+Construct an algorithm for simulating total claims on the whole portfolio. [6]
+[Total 14]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+9
+(i)
+The characteristic polynomial is (1 − α Y ) 3 = 0 .
+This has a triple root at 1
+α
+and so the process is stationary when
+i.e. α < 1 .
+(ii)
+Expanding the cubic equation and rearranging gives:
+X t − 3 α X t − 1 + 3 α 2 X t − 2 − α 3 X t − 3 = e t
+So the Yule-Walker equations give:
+ρ 0 − 3 αρ 1 + 3 α 2 ρ 2 − α 3 ρ 3 = σ 2
+ρ 1 − 3 α + 3 α 2 ρ 1 − α 3 ρ 2 = 0 (A)
+ρ 2 − 3 αρ 1 + 3 α 2 − α 3 ρ 1 = 0 (B)
+ρ 3 − 3 αρ 2 + 3 α 2 ρ 1 − α 3 ρ 0 = 0
+(
+)
+So re-writing we have from (A) ρ 1 1 + 3 α 2 − 3 α = α 3 ρ 2
+And substituting into (B) gives
+(
+)
+ρ 1 1 + 3 α 2 − 3 α
+α
+i.e.
+Page 12
+3
+− 3 αρ 1 + 3 α 2 − α 3 ρ 1 = 0
+ρ 1 (1 + 3 α 2 − 3 α 4 − α 6 )
+α 3
+=
+3 α − 3 α 5
+α 3
+1
+> 1
+αSubject CT6 (Statistical Methods) – April 2012 – Examiners’ Report
+i.e.
+ρ 1 =
+3 α (1 − α 4 )
+(1 + 3 α 2 − 3 α 4 − α 6 )
+= 0.83573487
+And so
+ρ 2 =
+(
+)
+3 α 1 − α 4 (1 + 3 α 2 )
+2
+4
+6
+(1 + 3 α − 3 α − α ) α
+3
+−
+3
+α 2
+= 0.576368876
+Alternative solution:
+Express the Yule-Walker equations in terms of the covariances:
+X t = 1.2 X t − 1 − 0.48 X t − 2 + 0.064 X t − 3 + e t
+γ 0 = 1.2 γ 1 − 0.48 γ 2 + 0.064 γ 3 + σ 2
+γ 1 = 1.2 γ 0 − 0.48 γ 1 + 0.064 γ 2
+γ 2 = 1.2 γ 1 − 0.48 γ 0 + 0.064 γ 1
+γ 3 = 1.2 γ 2 − 0.48 γ 1 + 0.064 γ 0
+Or in general:
+γ 0 = 1.2 γ 1 − 0.48 γ 2 + 0.064 γ 3 + σ 2
+γ k = 1.2 γ k − 1 − 0.48 γ k − 2 + 0.064 γ k − 3 k ≥ 1
+Simplifying the second and third equations:
+148 γ 1 = 1.2 γ 0 + 0.064 γ 2 ⇒ γ 1 =
+30 γ
+37 0
+8 γ
++ 185
+2
+γ 2 = 1.264 γ 1 + 0.064 γ 1
+To obtain:
+γ 2 =
+200 γ
+347 0
+λ 1 =
+290 γ
+347 0
+Dividing both by γ 0 gives the same solutions as above.
+(iii)
+The series is an AR(3) series. The asymptotic behaviour is therefore that ρ k
+decays exponentially to zero
+whilst φ k is zero for k>3.
+The latter parts of this question were not particularly well answered. Candidates generally
+showed an understanding of how to solve the problem, but made a number of arithmetic and
+algebraic slips.
+Page 13Subject CT6 (Statistical Methods) – April 2012 – Examiners’ Report
+10
+(i)
+( )
+( )
+( )
+M Y ( t ) = E e tY = pE e tX 1 + ( 1 − p ) E e tX 2
+= pM X 1 ( t ) + ( 1 − p ) M X 2 ( t )
+(ii)
+Let S 1 , S 2 denote aggregate claims on the type 1 and type 2 policies
+respectively, and let N 1 , N 2 denote the number of claims from type 1 and type
+2 policies respectively. Let S = S 1 + S 2 denote the aggregate claims on the
+combined portfolio. We know that S 1 , S 2 follow compound Poisson processes
+and so
+M S i ( t ) = M N i (log M X i ( t )) = exp( λ i ( M X i ( t ) − 1))
+Now
+M S ( t ) = M S 1 + S 2 ( t ) = M S 1 ( t ) M S 2 ( t )
+( (
+) )
+= exp λ 1 M X 1 ( t ) − 1 exp( λ 2 ( M X 2 ( t ) − 1))
+⎡
+⎛ λ 1
+⎞ ⎤
+λ 2
+= exp ⎢ ( λ 1 + λ 2 ) ⎜
+M X ( t ) +
+M X ( t ) − 1 ⎟ ⎥
+1
+2
+λ 1 + λ 2
+⎝ λ 1 + λ 2
+⎠ ⎦
+⎣
+= exp(( λ 1 + λ 2 )( pM X 1 ( t ) + ( 1 − p ) M X 2 ( t ) − 1) where p =
+λ 1
+λ 1 + λ 2
+= exp(( λ 1 + λ 2 )( M Y ( t ) − 1))
+Where Y is defined as in part (i). This is of the form M N ( logM Y ( t ) ) where N
+is a Poisson distribution with parameter λ 1 + λ 2 . Hence S has a compound
+Poisson distribution with rate λ 1 + λ 2 and where individual claim amounts are
+λ 1
+taken from distribution X 1 with probability p =
+and from distribution
+λ 1 + λ 2
+λ 2
+X 2 with probability 1 − p =
+.
+λ 1 + λ 2
+Page 14Subject CT6 (Statistical Methods) – April 2012 – Examiners’ Report
+(iii)
+Step 1
+We first begin by generating a random sample from N ~ P ( 25 ) as follows:
+Let u be a random sample from a Uniform distribution on (0,1).
+Find the positive integer i such that P ( N ≤ i − 1 ) < u ≤ P ( N ≤ i ) (using the
+cumulative Poisson tables)
+Then i is the simulated number of claims.
+Step 2
+Now we simulate the individual claim amount
+Generate v a sample from a Uniform distribution on (0,1).
+10
+10
+=
+= 0.4 then we have a type 1 claim otherwise we have a
+10 + 15 25
+type 2 claim. Let the claim type be j.
+If v ≤
+Put μ 1 = 50 and μ 2 = 70 . Generate w a sample from a uniform distribution on
+(0,1).
+The simulated claim Z is given by setting
+F X j ( Z ) = w
+⎛ 1 ⎞
+So 1 − exp ⎜
+Z ⎟ = w
+⎜ μ
+⎟
+⎝ j ⎠
+So Z = − μ j ln( 1 − w )
+Step 3
+Repeat Step 2 for a total of i samples and add the results.
+Alternative algorithm: simulate the two results separately and add together at
+the end.
+This question was not answered well. In particular, many candidates did not attempt part
+(iii). Of those that did, most had a good attempt at step 2, but very few got step 1 (to deduce
+the simulated number of claims).
+
+\end{document}
