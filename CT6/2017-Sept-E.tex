@@ -1,0 +1,149 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+9
+Consider a random variable X, with probability density:
+h ( x ) = 2(1 − x )
+(i)
+0 < x < 1
+Construct an algorithm to sample from h(x) using the inverse transform
+method.
+[4]
+Now consider the probability density function:
+f ( x ) = 6 x (1 − x ) 0 < x < 1
+10
+(ii) Construct an algorithm to sample from f(x) using the acceptance-rejection
+method and h(x).
+[4]
+(iii) Explain whether the method used in part (ii) would be more efficient when
+using samples from a standard Uniform distribution U(0,1) instead of h(x). [3]
+[Total 11]
+Let X t = a + bt + Y t , where Y t is a stationary time series, and a and b are fixed non-
+zero constants.
+(i)
+Show that X t is not stationary.
+[2]
+Let Δ X t = X t − X t − 1 .
+(ii) Show that Δ X t is stationary. [1]
+(iii) Determine the autocovariance values of Δ X t in terms of those of Y t . [4]
+Now assume that Y t is an MA(1) process, i.e. Y t = ε t + βε t–1
+(iv) Set out an equation for Δ X t in terms of b, β , ε t and L, the lag operator.
+(v) Show that Δ X t has a variance larger than that of Y t .
+CT6 S2017–6
+[1]
+[4]
+[Total 12]
+
+Q9
+(i)
+The cumulative distribution function for h ( x ) is:
+x
+F h  x    2  1  u  du  2 x  x 2
+[1]
+0
+the equation F h  X   U is then equivalent to 2X  X 2  U
+so
+ X  1  2  1  U ,
+[1⁄2]
+1
+X  1   1  U  2
+[11⁄2]
+so the required inversion is then obtained. Algorithm is therefore:
+1. Sample u from U(0,1)
+X  1    1  U 
+2. Return
+[1⁄2]
+[1⁄2]
+Since 0 < X < 1
+(ii)
+In this case we need to find first:
+C  max
+f ( x ) 6 x (1  x )
+
+ 3 x
+h ( x )
+2(1  x )
+i.e. C = 3
+[11⁄2]
+The rejection algorithm is then:
+(iii)
+Sample x from h  x  as in (i) [1]
+Sample u from U(0,1) [1⁄2]
+If u < 1/3 f(x)/h(x) = x then set y = x, otherwise go to step 1. [1]
+If we are to use the standard uniform U(0,1) as envelope, consider
+C1 = max(f(x)).
+C1 = f(1/2) = 3/2. (max at 6 – 12x = 0)
+[11⁄2]
+Therefore, since the acceptance rate is 1 / C 1 =2/3 which is greater than
+Page 9Subject CT6 (Statistical Methods Core Technical) – September 2017 – Examiners’ Report
+C 
+1
+h(x) is less efficient.
+3
+[11⁄2]
+Most candidates were able to score well here, although a number of
+students failed to convert to a cumulative distribution in part (i). There
+was a markedly improved performance in answers to the question on
+efficiency, relative to previous diets.
+Q10
+i)
+Since E(Yt ) = μ Y is constant for each t, E(Xt ) = a + bt + μ Y . [1]
+Since this mean depends on t then the time series Xt is not stationary. [1]
+(ii) ΔXt = b + ΔYt (and since Yt is stationary ΔXt is) [1]
+(iii) And the covariance function is Cov(ΔXt , ΔXt–s ) = Cov(Yt – Yt–1 ,Y t–s – Yt–s–1 ) [1]
+= Cov(Yt ,Yt–s ) + Cov(Yt–1,Yt–1–s ) – Cov(Yt ,Yt–s–1 ) – Cov(Yt–1,Yt–s ) [1]
+=  Y (s) +  Y (s) –  Y (s + 1) –  Y (s – 1) [1]
+= 2 Y (s) –  Y (s + 1) –  Y (s – 1) [1]
+Where  Y (s) represents the autocovariance of Y at s.
+(iv)
+(v)
+Yt = ε t + βε t–1 , where ε t is white noise with variance σ 2 then
+ΔXt = b + ε t + βε t–1 - ε t -1 - βε t–2
+or
+ΔXt = b + (1 – L)(1 + βL) ε t .
+[1]
+[1]
+[Max 1]
+In particular Y t   t   t  1 the corresponding auto-covariance function is
+γ Y (0)  (1   2 )  2 and γ Y (1)   2 .
+[2]
+So from (iii) var(Δ(X)) = 2γ Y (0) − 2γ Y (1) = 2(1 + β 2 )σ 2 − 2βσ 2 =
+( 1 + β 2 ) σ 2 + ( 1 − β ) 2 σ 2 > ( 1 + β 2 ) σ 2 = γ Y ( 0)
+[2]
+Most candidates were able to score well on parts (i) and (ii), and
+although only stronger candidates were able to score well on parts (iii)
+and (v), this question presented few problems for those well prepared
+on this topic.
