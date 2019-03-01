@@ -1,0 +1,110 @@
+
+%%%%%%% Question 4
+4
+[3]
+It is assumed that the numbers of claims arising in one year from motor insurance
+policies for young male drivers and young female drivers are distributed as Poisson
+random variables with parameters λ m and λ f respectively.
+Independent random samples of 120 policies for young male drivers and 80 policies
+for young female drivers were examined and yielded the following mean number of
+claims per policy in the last calendar year: x m = 0.24 and x f = 0.15 .
+Calculate an approximate 95% confidence interval for λ m − λ f , the difference between
+the respective Poisson parameters.
+[3]
+5
+A computer routine selects one of the integers 1, 2, 3, 4, 5 at random and replicates
+the process a total of 100 times. Let S denote the sum of the 100 numbers selected.
+Calculate the approximate probability that S assumes a value between 280 and 320
+inclusive.
+[5]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Let X 1 , X 2 , ... , X n be a random sample of claim amounts which are modelled using a
+gamma distribution with known parameter α = 4 and unknown parameter λ .
+n
+\item 
+(a)
+Specify the distribution of
+∑ X i .
+i = 1
+(b)
+Justify the fact that 2n λ X has a χ 2 k distribution, where X is the mean
+of the sample, by using a suitable relationship between the gamma and
+the χ 2 distribution, and specify the degrees of freedom k.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+4
+1
+E ⎡ S 2 ⎤ =
+{ Σ E ( X i 2 ) − nE ( X 2 )}
+⎣ ⎦
+n − 1
+σ 2
+1
+=
+{ Σ ( σ 2 + μ 2 ) − n ( + μ 2 )}
+n − 1
+n
+1
+{ n ( σ 2 + μ 2 ) − σ 2 − n μ 2 }
+=
+n − 1
+1
+{( n − 1) σ 2 } = σ 2
+=
+n − 1
+Approximate 95% CI for λ m − λ f is ( x m − x f ) ± 1.96
+⇒ (0.24 − 0.15) ± 1.96
+x m x f
++
+120 80
+0.24 0.15
++
+120
+80
+⇒ 0.09 ± 1.96(0.062) ⇒ 0.09 ± 0.122 or ⇒ ( − 0.032, 0.212)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+5
+S = Σ X i where X i has a uniform distribution on 1, 2, 3, 4, 5, with mean 3 and variance
+(25 – 1)/12 = 2 (result known, or calculated via E [ X 2 ] = 11, or from book of formulae,
+p10, with a = 1, b = 5, h = 1).
+So S ~ N (300, 200) approximately
+320.5 − 300 ⎞
+⎛ 279.5 − 300
+P (280 ≤ S ≤ 320) = P ⎜
+< Z <
+⎟
+200
+200 ⎠
+⎝
+= P ( − 1.450 < Z < 1.450 ) = 0.853
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+6
+(i)
+(a) Σ X i ~ gamma(4 n , λ)
+(b) If Y ~ gamma(α, λ) and 2α is an integer, then 2 λ Y ~ χ 22 α (from book
+of formulae, p12)
+So 2 λ nX ~ χ 2 with df 8 n .
+(ii)
+P ( χ 2 40 (97.5) < 10 λ X < χ 2 40 (2.5)) = 0.95
+⎛ χ 2 (97.5) χ 2 40 (2.5) ⎞
+giving the 95% CI as ⎜ 40
+,
+⎟ ⎟
+⎜ 10 X
+10
+X
+⎝
+⎠
+⎛ 24.43
+59.34 ⎞
+Data ⇒ ⎜
+,
+⎟ = (0.140, 0.339)
+⎝ 10(17.5) 10(17.5) ⎠
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5

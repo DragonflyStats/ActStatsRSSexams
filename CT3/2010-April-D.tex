@@ -1,0 +1,286 @@
+9
+The number of claims, N, arising over a period of five years for a particular policy is
+assumed to follow a “Type 2” negative binomial distribution (as in the book of
+k (1 − p )
+Formulae and Tables page 9) with mean E [ N ] =
+and variance
+p
+k (1 − p )
+.
+V [ N ] =
+p 2
+Each claim amount, X (in units of £1,000), is assumed to follow an exponential
+distribution with parameter λ independently of each other claim amount and of the
+number of claims.
+Let S be the total of the claim amounts for the period of five years, in the case
+k = 2, p = 0.8 and λ = 2.
+\item 
+Calculate the mean and the standard deviation of S based on the above
+assumptions.
+[4]
+Now assume that:
+N follows a Poisson distribution with parameter μ = 0.5, that is, with the same
+mean as N above;
+X follows a gamma distribution with parameters α = 2 and λ = 4, that is, with
+the same mean as X above.
+\item 
+\item 
+10
+Calculate the mean and the standard deviation of S based on these
+assumptions.
+Compare the two sets of answers in \item  and \item  above.
+[3]
+[2]
+[Total 9]
+The size of claims (in units of £1,000) arising from a portfolio of house contents
+insurance policies can be modelled using a random variable X with probability density
+function (pdf) given by:
+ac a
+f X ( x ) = a + 1 , x ≥ c
+x
+where a > 0 and c > 0 are the parameters of the distribution.
+ac
+, for a > 1 .
+a − 1
+\item  Show that the expected value of X is E [ X ] =
+\item  Verify that the cumulative distribution function of X is given by
+[2]
+a
+⎛ c ⎞
+F X ( x ) = 1 − ⎜ ⎟ ,
+⎝ x ⎠
+CT3 A2010—4
+x ≥ c
+(and = 0 for x < c).
+[2]Suppose that for the distribution of claim sizes X it is known that c = 2.5, but a is
+unknown and needs to be estimated given a random sample x 1 , x 2 , ..., x n .
+\item 
+(iv)
+Show that the maximum likelihood estimate (MLE) of a is given by:
+n
+a ˆ = n
+.
+⎛ x i ⎞
+∑ log ⎜ ⎝ 2.5 ⎟ ⎠
+i = 1
+Derive the asymptotic variance of the MLE â , and hence determine its
+approximate asymptotic distribution.
+[3]
+[4]
+Consider a sample of 30 observations from this distribution, for which:
+30
+∑ log( x i ) = 32.9 .
+i = 1
+(v)
+Calculate the MLE â in this case, together with an approximate 95%
+confidence interval for a.
+[5]
+In the current year, claim sizes are assumed to follow the distribution of X with a = 6,
+c = 2.5. Inflation for the following year is expected to be 5%.
+(vi)
+Calculate the probability that the size of a claim arising from this portfolio in
+the following year will exceed £4,000.
+[3]
+[Total 19]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+9
+(i)
+E [ N ] = k (1 − p ) 2(0.2)
+k (1 − p ) 2(0.2)
+=
+= 0.5 and V [ N ] =
+=
+= 0.625
+p
+0.8
+p 2
+0.8 2
+E [ X ] = 1 1
+1
+1
+= = 0.5 and V [ X ] = 2 = 2 = 0.25
+λ 2
+λ
+2
+E [ S ] = E [ N ] E [ X ] = 0.5 × 0.5 = 0.25 , i.e. £250
+V [ S ] = E [ N ] V [ X ] + V [ N ] { E [ X ] } = 0.5 × 0.25 + 0.625 × 0.5 2 = 0.28125
+2
+∴ SD [ S ] = 0.530 , i.e. £530
+Page 4Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2010 — Examiners’ Report
+(ii)
+E [ N ] = V [ N ] = μ = 0.5
+E [ X ] =
+α 2
+α
+2
+= = 0.5 and V [ X ] = 2 = 2 = 0.125
+λ 4
+4
+λ
+E [ S ] = E [ N ] E [ X ] = 0.5 × 0.5 = 0.25 , i.e. £250
+V [ S ] = E [ N ] V [ X ] + V [ N ] { E [ X ] } = 0.5 × 0.125 + 0.5 × 0.5 2 = 0.1875
+2
+∴ SD [ S ] = 0.433 , i.e. £433
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+10
+(iii) As expected the means are the same,
+but the standard deviation in (i) is larger than that in (ii) due to the fact that
+both N and X have larger variances.
+(i) We have:
+∞
+∞
+E [ X ] = ∫ xf X ( x ) dx = ∫ x
+c
+c
+ac a
+x
+dx = ac
+a + 1
+∞
+a
+− a
+∫ x dx = −
+c
+ac a ⎡ − ( a − 1) ⎤ ∞
+x
+⎦ c
+a − 1 ⎣
+and for a > 1
+E [ X ] = −
+(ii)
+ac a
+ac
+.
+(0 − c − a + 1 ) =
+a − 1
+a − 1
+x x
+c t a + 1
+c
+F X ( x ) = ∫ f X ( t ) dt = ∫
+ac a
+dt
+which gives
+a
+x
+⎛ c ⎞
+F X ( x ) = − c ⎡ t − a ⎤ = − c a ( x − a − c − a ) = 1 − ⎜ ⎟ ,
+⎣ ⎦ c
+⎝ x ⎠
+a
+x ≥ c
+[OR differentiate F X ( x ) to obtain f X ( x ) ]
+Page 5Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2010 — Examiners’ Report
+(iii)
+The likelihood function is given by:
+n n ac a
+i = 1 i = 1 x i a + 1
+L ( a ) = ∏ f X ( x i ) = ∏
+n
+= a n c na ∏ x i − ( a + 1)
+i = 1
+and
+n
+l ( a ) = n log( a ) + na log( c ) − ( a + 1) ∑ log( x i )
+i = 1
+For the MLE:
+l ′ ( a ) = 0 ⇒
+⇒ a ˆ =
+n
+n
++ n log( c ) − ∑ log( x i ) = 0
+a
+i = 1
+n
+=
+n
+∑ log( x i ) − n log( c )
+i = 1
+and for c = 2.5, a ˆ =
+n
+n
+⎛ x ⎞
+∑ log ⎜ ⎝ c i ⎟ ⎠
+i = 1
+,
+n
+n
+⎛ x ⎞
+∑ log ⎜ ⎝ 2.5 i ⎟ ⎠
+i = 1
+(iv)
+For the asymptotic variance we use the Cramer-Rao lower bound:
+l ′′ ( a ) = −
+n
+a
+2
+, and E ⎡ ⎣ l ′′ ( a ) ⎤ ⎦ = −
+n
+a 2
+giving
+{
+}
+V [ a ˆ ] = − E ⎡ ⎣ l ′′ ( a ) ⎤ ⎦
+− 1
+=
+a 2
+.
+n
+Hence, asymptotically, a ˆ ~ N ( a , a 2 n ) .
+(v)
+MLE is
+a ˆ =
+n
+n
+n
+n
+∑ log ⎜ ⎝ c i ⎟ ⎠ ∑ log( x i ) − n log( c )
+i = 1
+Page 6
+⎛ x ⎞
+=
+i = 1
+=
+30
+= 5.544 .
+32.9 − 30 × log(2.5)
+%--------------------------%
+Using the asymptotic normal distribution given above, an approximate 95% CI
+is given by
+a ˆ ± 1.96
+a 2
+a ˆ
+= a ˆ ± 1.96
+n
+n
+i.e. 5.544 ± 1.96
+(vi)
+5.544
+, giving (3.560, 7.528).
+30
+Size of claim in the following year will be given by 1.05X
+4 ⎞
+⎛
+⎛ 4 ⎞
+So we want P (1.05 X > 4) = P ⎜ X >
+⎟ = 1 − F X ⎜
+⎟
+1.05 ⎠
+⎝
+⎝ 1.05 ⎠
+and using F X given in the question
+6
+⎛ 1.05 × 2.5 ⎞
+P (1.05 X > 4) = ⎜
+⎟ = 0.0799 .
+4
+⎝
+⎠
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

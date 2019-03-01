@@ -1,0 +1,203 @@
+
+CT3 A2010—612
+As part of a project in a modelling module, a statistics student is required to submit a
+report on the sums insured on home contents insurance policies based on samples of
+such policies covering risks in five medium-sized towns in each of England, Wales,
+and Scotland. Data are provided on the average sum insured (Y, in units of £1,000)
+for each of the 15 towns and are as follows:
+England
+y 11.9 11.1 9.5 9.2
+For these data:
+∑ y
+13.9
+5.9
+Wales
+9.1 8.0 5.7
+8.1
+9.3
+Scotland
+9.1 7.7 8.2
+10.4
+= 55.6 (England), 36.8 (Wales), 44.7 (Scotland)
+overall
+∑ y = 137.1, ∑ y 2
+= 1,316.63
+The student decides to use an analysis of variance approach.
+\item 
+Suggest brief comments the student should make on the basis of the plot
+below:
+Individual and mean value plot of England, Wales, Scotland
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+England
+Wales
+Scotland
+[2]
+\item 
+(a)
+(b)
+Carry out the analysis of variance on the average sums insured.
+Comment on your conclusions.
+[6]
+The lecturer of the module decides to provide further information. It has been
+suggested that the value of a UK index of the town’s prosperity (X) might also be a
+useful explanatory variable (in addition to the country in which the town is situated).
+The data on the index are as follows (for the towns in the same order as in the first
+table):
+x
+23
+27
+England
+14 19
+For these data: overall
+CT3 A2010—7
+29
+15
+27
+Wales
+24 18
+22
+22
+16
+Scotland
+20 25
+28
+∑ x = 329 , ∑ x 2 = 7,543 , ∑ xy = 3, 091.7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A graph of average sum insured against index (with country identified) is given
+below:
+Average sum insured v index
+*
+* England
++ Scotland
+% Wales
+*
++
+*
+*
++
++
+*
+%
++
+%
+10
+%
++
+%
+%
+15
+20
+25
+30
+x
+The student decides to add the results of a regression approach to her report, using
+“index” as an explanatory variable, so she fits the regression model
+Y = a + bX + e
+using the least squares criterion.
+Part of the output from fitting the model using a statistics package on a computer is as
+follows:
+Coefficients: Estimate
+(Intercept) 3.46166
+x
+0.25889
+Residual standard error:
+R-Squared: 0.3449
+\item 
+Std. Error t value Pr(>|t|)
+2.21919
+1.560 0.1428
+0.09896
+2.616 0.0213*
+1.789 on 13 degrees of freedom
+Verify (by performing your own calculations) the following results for the
+fitted model as given in the output above:
+(a) the fitted regression line is y = 3.462 + 0.2589x
+(b) the percentage of the variation in the response (y) explained by the
+model (x) is 34.5%
+(c) the standard error of the slope estimate is 0.09896
+[8]
+(iv) Comment briefly on the usefulness of “index” as a predictor for the average
+sum insured.
+[2]
+(v) Suggest another model which you think might be more successful in
+explaining the variability in the values of the average sum insured and provide
+a better predictor.
+[2]
+[Total 20]
+END OF PAPER
+CT3 A2010—8
+
+
+
+12
+(i)
+(ii)
+• the three sets of points are positioned at different levels (the means are
+shown), so there is a prima facie case for suggesting that the underlying
+means are different (i.e. there are country effects)
+• the means are in the order England (highest), Scotland, Wales (lowest)
+• the variation in the data for Scotland is perhaps lower than that for
+England, but with only 5 observations for each country, we cannot be sure
+that there is a real underlying difference in variance
+(a)
+SS T = 1316.63 – 137.1 2 /15 = 63.536, SS B = (55.6 2 + 36.8 2 + 44.7 2 ) /
+5 – 137.1 2 /15 = 35.644
+∴ SS R = 63.536 – 35.644 = 27.892
+Source of variation
+Between countries
+Residual
+Total
+Df
+2
+12
+14
+SS
+MSS
+35.644 17.82
+27.892 2.324
+Under H 0 : no country effects F = 17.82/2.324 = 7.67 on (2,12) df
+P-value of F = 7.67 is less than 0.01, so we reject H 0 and conclude that
+there are differences among the population means of the average sum
+insured
+(b)
+Page 8
+We have strong evidence that country effects exist − the means appear
+to be in the order England (highest), Scotland, Wales (lowest).Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2010 — Examiners’ Report
+(iii)
+(a)
+S xx = 7543 – 329 2 /15 = 326.9333, S yy = 63.536 (from (i)(b) above)
+S xy = 3091.7 – 329×137.1/15 = 84.64
+ˆ ( 329 /15 ) = 3.4617
+β ˆ = 84.64 / 326.9333 = 0.25889 , α ˆ = 137.1/15 − β×
+So fitted line is y = 3.462 + 0.2589 x
+(b) R 2 = S xy 2 /( S xx S yy ) = 84.64 2 /(326.9333×63.536) = 0.34488 so 34.5%
+(c) SSRES = S yy – S xy 2 / S xx = 63.536 – 84.64 2 /326.9333 = 41.62349
+⇒ σ ˆ 2 = 41.62349 /13 = 3.201807
+()
+1/2
+⇒ s . e . β ˆ = ( 3.201807 / 326.9333 ) = 0.09896
+(iv)
+From the plot we see that the relationship between “index” and “average sum
+insured” is weak, positive (and possibly linear) – the percentage of the
+variation in “average sum insured” explained by the relationship with “index”
+is only 34.5%.
+So “index” is of some, but limited, use as a predictor of “average sum
+insured”.
+(v)
+We should try a “multiple regression” model which includes “country” and
+“index” in the model.
+[ Note: although not explicitly in the syllabus, a comment to the effect that
+“Country” should be included as a qualitative variable (a “factor”) e.g. by
+using a text vector (with entries “ E ”, “ W ”, “ S ” say) or a pair of (Bernoulli)
+dummy variables, may attract a bonus for a borderline candidate.]
+END OF EXAMINERS’ REPORT
+Page 9
