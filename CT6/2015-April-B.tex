@@ -1,0 +1,149 @@
+3
+(i)
+(a)
+To protect itself from the risk of large claims.
+(b)
+(ii)
+ Excess of loss reinsurance where the reinsurer pays any amount of
+a claim above the retention.
+ Proportional reinsurance where the reinsurer pays a fixed
+proportion of any claim.
+We must first find the parameters  and  of the Pareto distribution.
+ 2
+
+= 270 and
+= 340 2
+2
+  1
+(   1) (   2)
+
+ 2
+
+= 340 2
+2
+  2 (   1)
+so
+340 2
+
+=
+= 1.585733882
+ 2
+270 2
+so  =
+2  1.585733882
+1.585733882  1
+= 5.4145
+and  = 270 × 4.4145 = 1191.920375
+Page 4Subject CT6 (Statistical Methods Core Technical) – April 2015 – Examiners’ Report
+We need to find M such that P(X > M) = 0.05
+
+i.e.
+  
+
+ = 0.05
+  M 
+
+ M
+
+= 1
+
+0.05
+= 1
+0.05  (   M )
+1 
+
+  1  0.05  
+
+
+
+M = 
+1
+0.05 
+1 
+
+5.4145
+
+1191.920375   1  0.05
+
+
+
+
+=
+1
+0.05 5.4145
+= 880.8
+This question was the best answered on the paper with most candidates scoring well. Some
+candidates were unable to manipulate the Pareto distribution.
+4
+(i)
+X has an exponential distribution with parameter 1.
+Let u be a sample from a U(0,1) distribution.
+Then using the inverse transform method we set
+u = F(x) = 1  e x
+i.e. 1  u = e x
+i.e. x = log(1  u)
+so the algorithm is
+Step 1
+Step 2
+Generate u from U(0,1).
+Set x = log(1  u).
+Page 5Subject CT6 (Statistical Methods Core Technical) – April 2015 – Examiners’ Report
+(ii)
+We first find C = max
+x  0
+= max
+h ( x )
+f ( x )
+2 xe  x
+x  0
+2
+e  x
+= max 2 xe x  x
+2
+x  0
+To find the maximum consider g(x) = 2 xe x  x
+then
+log g(x) = log2 + logx + x  x 2
+d log g ( x )
+dx = 1  1  2 x
+x
+2
+setting this equal to zero we have
+1
+ 1  2 x = 0
+x
+i.e.
+1 + x  2x 2 = 0
+2x 2  x  1 = 0
+(2x + 1)(x 1) = 0
+x = 1 or x = 1⁄2
+but x > 0 so C = 2 × 1 × e 11 = 2
+so now set w(x) =
+2
+h ( x )
+= xe x  x
+2 f ( x )
+and our algorithm is
+Step 1
+Step 2
+Step 3
+Step 4
+Page 6
+Generate u from U(0,1) distribution.
+Generate x = log(1  u).
+Generate v from U(0,1).
+If v > w(x) return to step 1 else return x.Subject CT6 (Statistical Methods Core Technical) – April 2015 – Examiners’ Report
+(iii)
+1
+1
+=
+so on average 2 simulations are needed to
+c
+2
+return 1 value, so in this case we need 20 simulations. Each simulation
+requires 2 pseudo-random numbers so on average we will need 40 pseudo-
+random numbers.
+We accept a proportion
+Most candidates were able to produce good quality answers to part (i), although the majority
+struggled with part (ii). Candidates with the confidence to apply the acceptance-rejection
+method scored well.
