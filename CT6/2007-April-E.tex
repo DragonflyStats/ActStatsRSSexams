@@ -1,0 +1,249 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+9
+An insurer’s NCD scale for motor policies has 3 levels of discount: 0%, 25% and
+40%. The rules for moving between these levels are as follows:
+• following a claim-free year, a policyholder moves to the next higher level of
+discount, or remains at 40% discount
+• following a year of one or more claims, a policyholder at 40% discount moves to
+25% discount while a policyholder at 25% or 0% moves to or stays at 0% discount
+The full premium for each policyholder is £1,000. Following an accident,
+policyholders decide whether or not to claim by considering total outgoing over the
+next two years, assuming no further claims in this period and ignoring interest.
+(i) Find the claim threshold for each level of discount.
+(ii) The probability of no accidents in any year for each policyholder is 0.88 and
+individual losses are assumed to have a lognormal distribution with μ = 6.0
+and σ = 3.33. Ignoring the possibility of more than 1 accident occurring in a
+year, calculate the transition matrix.
+[3]
+(iii) Calculate the stationary distribution.
+(iv) Derive the stationary distribution under the alternative assumption that a
+policyholder always claims after a loss (regardless of the size of the claim). [3]
+(v) Comment on the difference between the results of (iii) and (iv).
+CT6 A2007—7
+[3]
+[3]
+[1]
+[Total 13]
+PLEASE TURN OVER10
+(i)
+The Gamma distribution with mean μ and variance μ 2 /α has density function
+f(y) =
+α α
+μ α Γ ( α )
+y
+α− 1
+e
+−
+y α
+μ
+( y > 0 )
+(a) Show that this may be written in the form of an exponential family.
+(b) Use the properties of exponential families to confirm that the mean and
+[9]
+variance of the distribution are μ and μ 2 /α.
+(ii) Explain the difference between a continuous covariate and a factor.
+[3]
+(iii) A company is analysing its claims data on a portfolio of motor policies, and
+uses a gamma distribution to model the claim severities. The company uses
+three rating factors:
+policyholder age (as a continuous variable);
+policyholder gender;
+vehicle rating group (as a factor).
+(a) Write down the form of the linear predictor when all rating factors are
+included as main effects.
+(b) State how the linear predictor changes if an interaction between
+policyholder age and gender is included.
+[4]
+[Total 16]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9
+(i)
+£
+Starting level (Year 0)
+0%
+25%
+40%
+Year 1 Premium if claim in year 0
+Premium if no claim in year 0
+Saving
+Year 2 Premium if claim in year 0
+Premium if no claim in year 0
+Saving
+Claim threshold
+(ii)
+1,000
+750
+250
+750
+600
+150
+400
+1,000
+600
+400
+750
+600
+150
+550
+750
+600
+150
+600
+600
+0
+150
+P(X > 400) = P(log X > log 400) = P(Z > (log400 - 6)/3.33) = P(Z > - 0.0026)
+= 1 - 0.4990 = 0.5010
+P(X > 550) = P(log X > log 550) = P(Z > (log550 - 6)/3.33)
+= P(Z > 0.0931) = 1 – 0.5371 = 0.4629
+P(X > 150) = P(log X > log 150) = P(Z > (log150 - 6)/3.33)
+= P(Z > - 0.2971) = 0.6168
+0.12 × 0.5010 = 0.0601
+0.12 × 0.4629 = 0.0556
+0.12 × 0.6168 = 0.0740
+Hence the transition matrix is
+0 ⎤
+⎡ 0.0601 0.9399
+⎢ 0.0556
+0
+0.9444 ⎥ ⎥
+⎢
+⎢ ⎣ 0
+0.0740 0.9260 ⎥ ⎦
+(iii)
+π = π P
+0.0601 π 0 +
+π 0 =
+π 25 = 0.9399 π 0 +
+π 40 =
+π 25 = 16.905 π 0
+π 40 = 215.740 π 0
+π 0 + π 25 + π 40 = 1
+0.0556 π 25
+0.9444 π 25 +
+0.0740 π 40
+0.9260 π 40
+Page 9Subject CT6 (Statistical Methods Core Technical) — April 2007 — Examiners’ Report
+Hence
+π = (0.0043, 0.0724, 0.9234)
+(iv)
+Stationary distribution if policyholder claims after a loss
+0 ⎤
+⎡ 0.12 0.88
+P = ⎢ ⎢ 0.12
+0
+0.88 ⎥ ⎥
+⎢ ⎣ 0
+0.12 0.88 ⎥ ⎦
+π 0 =
+π 25 =
+π 40 =
+0.12 π 0 +
+0.88 π 0 +
+0.12 π 25
+0.88 π 25 +
+0.12 π 40
+0.88 π 40
+π 25 = 7.333 π 0
+π 40 = 7.333 π 25 = 53.778 π 0
+π 0 + π 25 + π 40 = 1
+Hence:
+π = (0.0161, 0.1181, 0.8658)
+10
+(v) Award 1 mark for any sensible comment on the reduction in the number of
+policyholders in the lower discount categories (or increase in the higher
+discount categories)
+(i) (a)
+⎡ y α
+⎤
+f(y) = exp ⎢ −
+− α log μ + ( α − 1) log y + α log α − log Γ ( α ) ⎥
+⎣ μ
+⎦
+⎡ ⎛ y
+⎤
+⎞
+= exp ⎢ α ⎜ − − log μ ⎟ + ( α − 1) log y + α log α − log Γ ( α ) ⎥
+⎠
+⎣ ⎝ μ
+⎦
+which is in the form of an exponential family.
+θ = −
+1
+μ
+b(θ) = log μ
+⎛ 1 ⎞
+= log ⎜ − ⎟ = - log( - θ)
+⎝ θ ⎠
+Page 10Subject CT6 (Statistical Methods Core Technical) — April 2007 — Examiners’ Report
+(b)
+The mean and variance of the distribution are b ′ ( θ ) and a ( φ ) b ′′ ( θ )
+b ′ ( θ ) = −
+1
+= μ
+θ
+which confirms that the mean is μ.
+b ′′ ( θ ) =
+a(φ) =
+1
+θ
+2
+= μ 2
+1
+α
+hence the variance is
+(ii)
+1 2
+μ , as required
+α
+A factor is categorical e.g. male/female.
+For a continuous covariate, the value is included. For example, if x is a
+continuous covariate, a main effect would be α + βx.
+(iii)
+(a)
+The linear predictor has the form
+α i + β j + γx
+where α i is the factor for policyholder gender (i = 1,2)
+β j is the factor for vehicle rating group
+x is the policyholder age
+(α 1 = 0, β 1 = 0)
+(b)
+The linear predictor becomes
+α i + β j + γ i x
+Page 11Subject CT6 (Statistical Methods Core Technical) — April 2007 — Examiners’ Report
