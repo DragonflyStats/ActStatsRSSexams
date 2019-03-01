@@ -1,0 +1,218 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+A random variable X follows a Poisson distribution with parameter λ.
+(i)
+(ii)
+(iii)
+CT6 S2017–4
+Show that the distribution of X is a member of the Exponential family of
+distributions. [4]
+Show that the mean of X equals the variance of X, using your answer to
+part (i). [2]
+Describe the three key components required when fitting a Generalised Linear
+Model (GLM).
+[3]
+[Total 9]8
+(i)
+Describe the key difference between excess of loss and proportional
+reinsurance.
+[1]
+A random variable X follows an Exponential distribution.
+(ii)
+Show that E ( X | X > M ) = E ( X ) + M .
+[3]
+An insurance company writes travel insurance policies, with a premium loading factor
+of 15%. There are two types of claims, and a maximum of one claim per policy.
+Type I claims are for a delay. Claim amounts follow a Uniform distribution with a
+minimum of $500 and a maximum of $1,500.
+Type II claims are for a cancellation. Claim amounts are Exponentially distributed
+with parameter λ = 0.001.
+5% of policies result in a claim, 85% of which are Type I and 15% of which are
+Type II.
+(iii)
+Calculate the premium charged for each policy.
+[2]
+The insurer is choosing between two different reinsurance policies:
+Policy A: The reinsurer covers 10% of every claim, and uses a premium loading
+factor of 35%.
+Policy B: The reinsurer covers the maximum of {0, claim amount – $1,500}, and uses
+a premium loading factor of 45%.
+(iv)
+Determine the reinsurance policy the insurance company should purchase,
+under:
+(a)
+(b)
+the Bayes criterion.
+the minimax criterion.
+[3]
+The insurance company’s actuary, Tom, believes the minimax criterion is more
+relevant in this case.
+(v)
+CT6 S2017–5
+Suggest a reason for Tom’s belief.
+[2]
+[Total 11]
+PLEASE TURN OVER
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+
+Q7
+(i)
+The density of the Poisson distribution is then:
+f  y   e
+
+Which to the general form
+ y
+ e
+y !
+y log 
+ log y !
+1
+g  y   e
+y  b   
+ c  y ,  
+a   
+[1]
+it corresponds to
+[1]
+  log  , b       e  , a       1, c  y ,     log y !
+[1⁄2 per element]
+ 
+'
+(ii) From the theory E  Y   b '     e    and var  Y   b      
+(iii) A GLM consists of three components:
+
+
+[2]
+a distribution for the data (Poisson, exponential, gamma, normal or
+binomial) [1]
+a linear predictor (a function of the covariates that is linear in the
+parameters) [1]
+Page 7Subject CT6 (Statistical Methods Core Technical) – September 2017 – Examiners’ Report
+
+a link function (that links the mean of the response variable to the linear
+predictor).
+[1]
+Most candidates scored very well on this straightforward GLM
+question.
+Q8
+(i)
+Under excess of loss, the reinsurer covers claims above a certain retention
+amount M
+[1⁄2]
+Under proportional reinsurance, the reinsurer covers a proportion of claims α
+[1⁄2]
+(ii)
+1
+e
+ M
+
+ x  e
+ x
+dx
+[1]
+M
+Let t  x  M
+Then want
+1
+e  M
+(iii)
+(iv)
+
+e  M
+  t  M 
+t
+
+M
+
+e
+dt
+
+  
+e  M
+0
+
+
+
+
+
+ t
+ t 
+t
+
+e
+dt
+
+M
+
+e
+dt
+ 
+  E  X   M
+
+ 0
+
+0
+
+
+[2]
+Premium = 5%*  85%*1000  1 5%*1000  *1.15  $57.50
+(a)
+Expected reinsurance cost per policy for A is
+35%*10%*1000*5%  $1.75
+[2]
+[1⁄2]
+For B only need to consider Type II
+E  X | X  1500   2500 from part (i)
+[1⁄2]
+So expected cost per policy for B is
+(b)
+(v)
+45% *15% * e  1.5 * (2500  1500) *5%  $0.75 [1⁄2]
+So B is better under the Bayes criterion [1⁄2]
+B is clearly better under minimax, since total claims are capped [1]
+Unlikely that the assumption of independence holds, since events that lead to
+travel cancellations are likely to affect more than one policy holder.
+[2]
+The reinsurer is a malevolent opponent so minimax is appropriate.
+[2]
+Page 8Subject CT6 (Statistical Methods Core Technical) – September 2017 – Examiners’ Report
+[Max 2]
+The first part aside, this question proved to be the hardest on the paper,
+with only the strongest candidates able to score well, particularly on
+parts (iv) and (v).
