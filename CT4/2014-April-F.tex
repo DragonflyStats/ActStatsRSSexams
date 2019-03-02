@@ -1,0 +1,241 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+10
+An industrial kiln is used to produce batches of tiles and is run with a standard firing
+cycle. After each firing cycle is finished, a maintenance inspection is undertaken on
+the heating element which rates it as being in Excellent, Good or Poor condition, or
+notes that the element has Failed.
+The probabilities of the heating element being in each condition at the end of a cycle,
+based on the condition at the start of the cycle are as follows:
+START
+END
+Excellent
+Excellent
+Good
+Poor
+Failed
+0.5
+Good Poor Failed
+0.2
+0.5 0.2
+0.3
+0.5 0.1
+0.2
+0.5
+1
+(i) Write down the name of the stochastic process which describes the condition
+of a single heating element over time.
+[1]
+(ii) Explain whether the process describing the condition of a single heating
+element is:
+(a)
+(b)
+(iii)
+irreducible.
+periodic.
+[2]
+Derive the probability that the condition of a single heating element is
+assessed as being in Poor condition at the inspection after two cycles, if the
+heating element is currently in Excellent condition.
+[2]
+If the heating element fails during the firing cycle, the entire batch of tiles in the kiln
+is wasted at a cost of £1,000. Additionally a new heating element needs to be
+installed at a cost of £50 which will, of course, be in Excellent condition.
+(iv) Write down the transition matrix for the condition of the heating element in
+the kiln at the start of each cycle, allowing for replacement of failed heating
+elements.
+[2]
+(v) Calculate the long term probabilities for the condition of the heating element
+in the kiln at the start of a cycle.
+[4]
+The kiln is fired 100 times per year.
+(vi)
+Calculate the expected annual cost incurred due to failures of heating
+elements.
+[2]
+The company is concerned about the cost of ruined tiles and decides to change its
+policy to replace the heating element if it is rated as in Poor condition.
+(vii)
+Evaluate the impact of the change in replacement policy on the profitability of
+the company.
+[6]
+[Total 19]
+END OF PAPER
+CT4 A2014–9
+
+
+10
+(i) Markov chain.
+(ii) (a)
+It is not irreducible
+because a heating element cannot move to a state of being in better
+condition.
+(b)
+It is not periodic
+because it can remain in each state (or any other suitable reason).
+(iii)
+EITHER
+The second order transition matrix is:
+0.25
+0
+0
+0
+0.2
+0.25
+0
+0
+0.26
+0.3
+0.25
+0
+0.29
+0.45
+0.75
+1
+Hence probability in Poor condition at the second inspection is 0.26.
+OR
+The required probability is equal to
+Prob [Excellent to Excellent to Poor] +
+Prob [Excellent to Good to Poor] +
+Prob [Excellent to Poor to Poor]
+which is (0.5 × 0.2) + (0.2 × 0.3) + (0.2 × 0.5) = 0.26.
+(iv)
+Excellent
+Excellent
+Good
+Poor
+(v)
+0.6
+0.2
+0.5
+Good
+0.2
+0.5
+0
+Poor
+0.2
+0.3
+0.5
+Long-term probabilities satisfy π = π P .
+0.6 π E + 0.2 π G + 0.5 π P = π E (1)
+0.2 π E + 0.5 π G = π G
+(2)
+0.2 π E + 0.3 π G + 0.5 π P = π P (3)
+Page 17Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
+Also π E + π G + π P = 1.
+(2)–(3) gives:
+5
+π G = π P .
+8
+So π E =
+25
+π P .
+16
+⎛ 25 5 ⎞
+Hence ⎜ + + 1 ⎟ π P = 1.
+⎝ 16 8 ⎠
+Stationary distribution π E =
+(vi)
+25
+10
+16
+, π G = , π P = .
+51
+51
+51
+The expected number of failures of heating elements is:
+(0.1 π E + 0.2 π G + 0.5 π P )*100 = 24.51.
+The cost of each failure is £1,050 so the expected cost over a year is £25,735.
+(vii)
+The transition matrix for the condition of the element at the start of each cycle
+will now be:
+Excellent Good
+0.8
+0.5 0.2
+0.5
+Excellent
+Good
+The revised stationary distribution satisfies ρ = ρ P
+0.8 ρ E + 0.5 ρ G = ρ E (1)
+0.2 ρ E + 0.5 ρ G = ρ G (2)
+0.2(1 − ρ G ) + 0.5 ρ G = ρ G
+ρ E =
+5
+2
+, ρ G =
+7
+7
+Expected cost of failures is now:
+(0.1 ρ E + 0.2 ρ G )*100*1050 = £13,500.
+Page 18Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
+But we also now have extra heating element replacement costs of:
+(0.2 ρ E + 0.3 ρ G )*100*50 = £1,143 .
+So overall profits have improved by:
+£25,735 − £13,500 − £1,143 = £11,092.
+In part (i) “Markov jump chain” is not correct as the question makes reference to time, and
+the Markov jump chain loses the information about the timing of the transitions. Answers to
+part (ii) were very good. In part (iii) the full matrix was not required but some indication of
+where the numbers have come from or what they are was needed. In parts (iv) onwards many
+candidates offered a 4 × 4 matrix as a solution as follows:
+Excellent
+Excellent
+Good
+Poor
+Failed
+0.5
+0
+0
+1
+Good
+0.2
+0.5
+0
+0
+Poor
+0.2
+0.3
+0.5
+0
+Failed
+0.1
+0.2
+0.5
+0
+this is incorrect because it implicitly assumes that the kiln is run for a complete cycle with a
+failed element. It was penalised in part (iv) but full credit could be scored in part (v) for the
+correctly followed-through stationary distribution.
+The better prepared candidates scored highly on this question.
+END OF EXAMINERS’ REPORT
+Page 19
