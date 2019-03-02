@@ -1,0 +1,209 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+9
+(i)
+(a) State three features which are desirable when a graduation is
+performed.
+(b) Explain why they are desirable.
+[3]
+The actuary to a large pension scheme has attempted to graduate the scheme’s recent
+mortality experience with reference to a table used for similar sized schemes in a
+different industry. He has calculated the standardised deviations between the crude
+and the graduated rates, z x , at each age and has sent you a printout of the figures over
+a small range of ages. Unfortunately the dot matrix printer on which he printed the
+results was very old and the dots which would form the minus sign in front of
+numbers no longer function, so you cannot tell which of the standardised deviations is
+positive and which negative. Below are the data which you have.
+(ii)
+(iii)
+(iv)
+CT4 A2014–8
+Age Standardised
+deviation
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70 2.40
+0.08
+0.80
+0.76
+1.04
+0.77
+1.30
+1.76
+0.28
+0.68
+0.93
+(a) Carry out an overall goodness-of-fit test on the data.
+(b) Comment on your result.
+(a) List four defects of a graduation which the test you have carried out
+would fail to detect.
+(b) Suggest, for each of the defects, a test which could be used to detect it.
+[4]
+Carry out one of the tests suggested in part (iii)(b).
+[5]
+[3]
+[Total 15]
+
+9
+(i)
+Smoothness,
+EITHER because we are likely to want to use the data for financial
+calculations, and clients expect these to progress smoothly.
+OR because we believe the underlying quantities vary smoothly with age.
+Adherence to data
+because we want the graduated rates to reflect as closely as possible the
+experience on which they are based.
+Suitability for the purpose to hand
+EITHER In life insurance work, losses result from premature deaths
+(benefits are paid sooner than expected) so we must not underestimate
+mortality,
+OR In annuity work, losses result from delayed deaths
+(benefits are paid for longer than expected) so we must not overestimate
+mortality.
+(ii)
+(a)
+To test for overall goodness of fit we use the χ 2 test.
+The null hypothesis is that the graduated rates are not significantly
+different from the underlying rates in the new experiences.
+2
+The test statistic ∑ z x 2 ≈ χ m
+where m is the degrees of freedom.
+x
+Page 14Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
+The calculations are below:
+Age
+deviation Standardised
+deviation Standardised
+deviation (squared)
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70 2.40
+0.08
+0.80
+0.76
+1.04
+0.77
+1.30
+1.76
+0.28
+0.68
+0.93 5.760
+0.006
+0.640
+0.578
+1.082
+0.593
+1.690
+3.098
+0.078
+0.462
+0.865
+Sum 14.852
+The observed value of the test statistic is 14.852.
+We compare this with the critical value of the χ 2 distribution with
+degrees of freedom equal to the number of ages minus at least 1 for the
+choice of standard table.
+With 8 degrees of freedom the critical value at the 95% significance
+level is 15.51 [with 9 d.f. it is 16.92, and with 10 d.f. 18.31].
+Since 14.852 < 15.51 [or 16.92]
+we do not reject the null hypothesis.
+(b)
+(iii)
+Overall, the graduated rates seem to represent the underlying rates in
+the new experience.
+There may be individual ages at which the graduated rates and the observed
+rates differ substantially, but if these ages are a small proportion of the whole
+the chi-squared test may not detect them.
+Use Individual Standardised Deviations Test.
+There may be a consistent but small bias in one direction, but the deviations
+are not large enough to allow detection by the chi-squared test.
+Use Signs Test or Cumulative Deviations Test.
+There may be bias over sections of the age range.
+Use Grouping of Signs Test or Serial Correlations test, or Cumulative.
+Page 15Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
+Deviations Test over sections of the age range (chosen independently of the
+pattern of deviations).
+The graduation may not be sufficiently smooth if the linking function is
+complex.
+Use Third Differences Test.
+(iv)
+We can carry out a modified version of the Individual Standardised
+Deviations Test.
+Under the null hypothesis we expect the individual standardised deviations to
+have a Normal (0,1) distribution.
+Only 1 in 20 of the z x s should lie above 1.96 in absolute value
+OR
+None should lie above 3 in absolute value.
+OR
+Range 0,1 1,2 2,3
+Expected
+Actual 7.5
+7 3.1
+3 0.4
+1
+We have one deviation with an absolute value of 2.4.
+OR
+We have no deviations above 3 in absolute value.
+OR
+The distribution of the deviations is close to that we might expect under a
+Normal (0,1) distribution
+therefore we have no strong reason to reject the null hypothesis
+In part (i), most candidates mentioned smoothness and adherence to data, but fewer
+mentioned suitability for the purpose to hand. Most candidates scored well on part (ii), the
+most widespread error being a failure to deduct degrees of freedom for the choice of
+standard table. Answers to part (iii) were sometimes vague. Few candidates realised that
+the chi-squared test only fails to detect small bias (it will detect large bias), and few
+mentioned smoothness. Some candidates used the terms “overgraduation” and
+“undergraduation” incorrectly to refer to situations where the graduated rates are
+systematically biased above and below the true rates respectively.
+Page 16Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
+Most candidates correctly identified the individual standardised deviations test as the only
+test which could be carried out in part (iv).
