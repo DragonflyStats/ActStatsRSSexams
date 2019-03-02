@@ -1,143 +1,189 @@
-CT4 A2008—49
-An investigation into the mortality of patients following a specific type of major
-operation was undertaken. A sample of 10 patients was followed from the date of the
-operation until either they died, or they left the hospital where the operation was
-carried out, or a period of 30 days had elapsed (whichever of these events occurred
-first). The data on the 10 patients are given in the table below.
-(i)
-Patient number Duration of
-observation
-(days) Reason for
-observation
-ceasing
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10 2
-6
-12
-20
-24
-27
-30
-30
-30
-30 Died
-Died
-Died
-Left hospital
-Left hospital
-Died
-Study ended
-Study ended
-Study ended
-Study ended
-State whether the following types of censoring are present in this
-investigation. In each case give a reason for your answer.
-(a)
-(b)
-(c)
-Type I
-Type II
-Random
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+PLEASE TURN OVER8
+An education authority provides children with musical instrument tuition. The
+authority is concerned about the number of children giving up playing their
+instrument and is testing a new tuition method with a proportion of the children which
+it hopes will improve persistency rates. Data have been collected and a Cox
+proportional hazards model has been fitted for the hazard of giving up playing the
+instrument. Symmetric 95% confidence intervals (based upon standard errors) for the
+regression parameters are shown below.
+Covariate
+Confidence Interval
+Instrument
+Piano
+Violin
+Trumpet 0
+[-0.05,0.19]
+[0.07,0.21]
+Tuition method
+Traditional
+New 0
+[-0.15,0.05]
+Sex
+Male
+Female
+[-0.08,0.12]
+0
+(i) Write down a general expression for the Cox proportional hazards model,
+defining all terms that you use.
 [3]
-(ii) State, with a reason, whether the censoring in this investigation is likely to be
-informative.
-[1]
-(iii) Calculate the value of the Kaplan-Meier estimate of the survival function at
-duration 28 days.
-[5]
-(iv) Write down the Kaplan-Meier estimate of the hazard of death at duration 8
-days.
-[1]
-(v) Sketch the Kaplan-Meier estimate of the survival function.
-CT4 A2008—5
-[2]
+(ii) State the regression parameters for the fitted model. [2]
+(iii) Describe the class of children to which the baseline hazard applies. [1]
+(iv) Discuss the suggestion that the new tuition method has improved the chances
+of children continuing to play their instrument.
+[3]
+(v) Calculate, using the results from the model, the probability that a boy will still
+be playing the piano after 4 years if provided with the new tuition method,
+given that the probability that a girl will still be playing the trumpet after 4
+years following the traditional method is 0.7.
+[3]
 [Total 12]
-PLEASE TURN OVER10
-An internet service provider (ISP) is modelling the capacity requirements for its
-network. It assumes that if a customer is not currently connected to the internet
-(“offline”) the probability of connecting in the short time interval [t,dt] is
-0.2dt + o(dt). If the customer is connected to the internet (“online”) then it assumes
-the probability of disconnecting in the time interval is given by 0.8dt + o(dt).
-The probabilities that the customer is online and offline at time t are P ON (t) and
-P OFF (t) respectively.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+8
 (i)
-Explain why the status of an individual customer can be considered as a
-Markov Jump Process. [2]
-(ii) ′ ( t ) .
-Write down Kolmogorov’s forward equation for P OFF [2]
-(iii) Solve the equation in part (ii) to obtain a formula for the probability that a
-customer is offline at time t, given that they were offline at time 0.
-[3]
-(iv) Calculate the expected proportion of time spent online over the period [0,t].
-[HINT: Consider the expected value of an indicator function which takes the
-value 1 if offline and 0 otherwise.]
-[4]
-(v) (a)
-(b)
-CT4 A2008—6
-Sketch a graph of your answer to (iv) above.
-Explain its shape.
-[3]
-[Total 14]11
-An investigation was carried out into the relationship between sickness and mortality
-in an historical population of working class men. The investigation used a three-state
-model with the states:
-1
-2
-3
-Healthy
-Sick
-Dead
-Let the probability that a person in state i at time x will be in state j at time x+t be
-ij
-ij
-t p x . Let the transition intensity at time x+t between any two states i and j be μ x + t .
-(i) Draw a diagram showing the three states and the possible transitions between
-them.
-[2]
-(ii) Show from first principles that
-∂
-23
-21 13
-22 23
-t p x = t p x μ x + t + t p x μ x + t .
-∂ t
+h ( z , t ) = h 0 ( t ).exp( β . z i T )
+where h(z,t) is the hazard at duration t
+h o (t) is the baseline hazard
+z i are the covariates
+β is the vector of regression parameters
+(ii)
 (iii)
-[5]
-Write down the likelihood of the data in the investigation in terms of the
-transition rates and the waiting times in the Healthy and Sick states, under the
-assumption that the transition rates are constant.
-[3]
-The investigation collected the following data:
-•
-•
-•
-•
-man-years in Healthy state
-man-years in Sick state
-number of transitions from Healthy to Sick
-number of transitions from Sick to Dead
-265
-140
-20
-40
-(iv) Derive the maximum likelihood estimator of the transition rate from Sick to
-Dead.
-[3]
-(v) Hence estimate:
-(a)
-(b)
-the value of the constant transition rate from Sick to Dead
-95 per cent confidence intervals around this transition rate
-[4]
-[Total 17]
-END OF PAPER
-CT4 A2008—7
+z 1 = 1 plays violin, 0 otherwise β 1 = 0.07
+z 2 = 1 plays trumpet, 0 otherwise β 2 = 0.14
+z 3 = 1 new tuition method, 0 otherwise β 3 = − 0.05
+z 4 = 1 male, 0 otherwise β 4 = 0.02
+Baseline hazard refers to
+a female,
+following traditional tuition method,
+playing the piano
+(iv)
+The parameter associated with the new tuition
+method is - 0.05. Because the parameter is negative, the hazard of dropping
+out is reduced by the new tuition method.
+Therefore the new tuition method does appear
+to improve the chances of a child continuing
+with his or her instrument.
+However the 95% confidence interval for the parameter spans zero.
+So at the 5% significance level it is not possible to conclude that the new
+tuition method has improved the chances of children continuing to play their
+instrument.
+(v)
+The hazard for a girl being taught the trumpet by the traditional
+method giving up is h 0 ( t ) exp(0.14) .
+Therefore the probability of her still playing after 4 years is
+4
+⎛ 4
+⎞
+⎛
+⎞
+S female (4) = exp ⎜ − ∫ h 0 ( t ) exp(0.14) dt ⎟ = exp ⎜ − 1.150274 ∫ h 0 ( t ) dt ⎟
+0
+⎝ 0
+⎠
+⎝
+⎠
+Page 13Subject CT4 — Models Core Technical — April 2008 — Examiners’ Report
+Since this is equal to 0.7, we have
+4
+⎛
+⎞
+exp ⎜ − 1.150274 ∫ h 0 ( t ) dt ⎟ = 0.7, so that
+0
+⎝
+⎠
+4
+log e 0.7 = − 1.150274 ∫ h 0 ( t ) dt ,
+0
+4
+and hence
+∫ h 0 ( t ) dt =
+0
+log e 0.7
+= 0.310078.
+− 1.150274
+The hazard of giving up for a boy taught the piano by the new
+method is h 0 ( t ) exp( − 0.05 + 0.02) = h 0 ( t ) exp( − 0.03).
+Therefore the probability of him still playing after 4 years is
+⎛ 4
+⎞
+S male (4) = exp ⎜ − ∫ h 0 ( t ) exp( − 0.03) dt ⎟ = exp [ − 0.310078(0.970446) ]
+⎝ 0
+⎠
+which is exp( - 0.300914) = 0.74014.
+ALTERNATIVELY
+The hazard of giving up for a girl being taught the trumpet by the
+traditional method is h 0 ( t ) exp( β 2 ) .
+Therefore the probability of her still playing after 4 years is
+4
+⎛ 4
+⎞
+⎛
+⎞
+S female (4) = exp ⎜ − ∫ h 0 ( t ) exp( β 2 ) dt ⎟ = exp ⎜ − exp( β 2 ) ∫ h 0 ( t ) dt ⎟
+0
+⎝ 0
+⎠
+⎝
+⎠
+and hence
+4
+∫ h 0 ( t ) dt =
+0
+log e [ S female (4)]
+− exp β 2
+= − exp( − β 2 ) log e [ S female (4)] .
+The hazard of a boy being taught the piano by the new
+method giving up is h 0 ( t ) exp( β 3 + β 4 ) .
+Page 14Subject CT4 — Models Core Technical — April 2008 — Examiners’ Report
+Therefore the probability of him still playing after 4 years is
+4
+⎛
+⎞
+S male (4) = exp ⎜ − exp( β 3 + β 4 ) ∫ h 0 ( t ) dt ⎟ .
+0
+⎝
+⎠
+4
+Substituting for
+∫ h ( t ) dt produces
+0
+0
+S male (4) = exp ( exp( β 3 + β 4 ) exp( − β 2 ) log e [ S female (4)] )
+= exp[exp(-0.05+0.02)exp(-0.14)log e (0.7)]
+= exp[0.970446 x 0.869358 x -0.356675)
+= 0.74014.
