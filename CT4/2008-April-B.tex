@@ -1,4 +1,39 @@
-4 Describe the benefits and limitations of modelling in actuarial work.
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+
 5 A survey of first marriage patterns among women in a remote population in central
 Asia collected the following data for a sample of women:
 •
@@ -18,3 +53,176 @@ Explain to what age x your estimate of λ x applies. State any assumptions
 that you make.
 [2]
 [Total 7]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+5
+(i) Calendar year rate interval starting on 1 January each
+year.
+(ii) The first marriages data may be described as
+m x = number of first marriages, age x on the birthday in the
+calendar year of marriage, during a defined period of investigation of
+length N years
+A definition of the population data which is compatible with these data on first
+marriages is
+P x,t = number of lives under observation at time t since the start of the
+investigation who were aged x next birthday on the 1 January
+immediately preceding t
+Since we follow each cohort of lives through each calendar year, this exposed
+to risk is
+N
+E x c
+=
+∫ P x , t dt
+0
+which may be approximated as
+E x c =
+N − 1
+∑ 2 ( P x , t + P x + 1, t + 1 )
+1
+0
+(where the summation considers just integer values of t).
+This assumes that the population varies linearly across the
+calendar year.
+However, we have data classified by age last birthday
+so we need to make a further adjustment.
+If the number of lives aged x last birthday on 1 January
+in year t is P x,t * then
+P x,t = P x-1,t *
+and an appropriate exposed to risk in terms of the data we
+have is
+E x c =
+K + N
+∑
+t = K
+1
+( P x − 1, t * + P x , t + 1 * ) .
+2
+Page 7Subject CT4 — Models Core Technical — April 2008 — Examiners’ Report
+(iii)
+The age range at the start of the rate interval is (x–1, x)
+exact.
+So, assuming that birthdays are uniformly distributed
+across the calendar year the average age at the start of the rate interval is
+x–1⁄2 and the average age in the middle of the rate interval
+is x.
+Therefore the estimate of λ x applies to age x.
+6
+(i)
+Since we do not know the values of the rates in the
+crude experience but only the signs of the deviations the
+tests we can carry out are limited.
+We can, however, perform the signs test and the grouping
+of signs test.
+(ii)
+The signs test looks for overall bias.
+We have 25 ages, and at 18 of these the crude rates
+exceed the standard table rates (i.e. we have positive deviations)
+If the null hypothesis is true, then the observed number of
+positive deviations, P, will be such that P ~ Binomial (25, 1⁄2).
+EITHER
+We use the normal approximation to the Binomial
+distribution because we have a large number of ages (>20)
+This means that, approximately, P ~ Normal (12.5, 6.25).
+The z-score associated with the probability of getting 18
+positive deviations if the null hypothesis is true is, therefore
+17.5 − 12.5 − 5
+=
+= − 2.00 .
+2.5
+6.25
+(using a continuity correction).
+We use a two-tailed test, since both an excess of
+positive and an excess of negative deviations are of interest.
+Using a 5 % significance level, we have - 2.00 < - 1.96.
+This means we have just sufficient evidence to reject the
+null hypothesis.
+Page 8Subject CT4 — Models Core Technical — April 2008 — Examiners’ Report
+OR
+Using the Binomial exactly we have
+⎛ 25 ⎞ 25
+⎟ 0.5 .
+⎝ j ⎠
+Pr[j positive deviations] = ⎜
+So that the probability of obtaining 18 or more positive
+25
+deviations is
+∑
+j = 18
+⎛ 25 ⎞ 25
+⎜ ⎟ 0.5 .
+⎝ j ⎠
+This is equal to
+(1 + 25 + 300 + 2,300 + 12,650 + 53,130 + 177,100 + 480,700)
+× 0.0000000298
+= 0.02164.
+We apply a 2-tailed test, so we reject the null
+hypothesis at the 5% level if this is less than 0.025
+Since 0.02164 < 0.025
+we reject the null hypothesis.
+The grouping of signs test looks for long runs or clumps
+of ages with the same sign, indicating that the crude
+experience is different from the standard experience over a
+substantial age range.
+The number of runs of positive signs is 2 (65–72 years and
+75–84 years).
+We have 25 ages and 18 positive signs in total, which means
+7 negative signs.
+THEN EITHER
+Using the table provided under n 1 = 18 and n 2 = 7, we find
+that, under the null hypothesis, the greatest number of positive
+runs x for which the probability of x or fewer positive runs
+is less than 0.05 is 3.
+Since we only have 2 runs, we conclude that the probability
+of obtaining 2 or fewer runs is much less than 0.05.
+Therefore we reject the null hypothesis.
+Page 9Subject CT4 — Models Core Technical — April 2008 — Examiners’ Report
+OR
+Using exact computation
+⎛ 17 ⎞ ⎛ 8 ⎞
+⎜ ⎟⎜ ⎟
+0 1
+8
+Pr[1 positive run] = ⎝ ⎠ ⎝ ⎠ =
+= 0.0000166
+480, 700
+⎛ 25 ⎞
+⎜ ⎟
+⎝ 18 ⎠
+⎛ 17 ⎞ ⎛ 8 ⎞
+⎜ ⎟⎜ ⎟
+1
+2
+(17)(28)
+Pr[2 positive runs] = ⎝ ⎠ ⎝ ⎠ =
+= 0.000990
+480, 700
+⎛ 25 ⎞
+⎜ ⎟
+⎝ 18 ⎠
+Therefore we conclude that the probability
+of obtaining 2 or fewer runs is much less than 0.05.
+Therefore we reject the null hypothesis.
+OR
+Using the Normal approximation, the number of positive runs is distributed
+⎛ (18)(8) [(18)(7)] 2 ⎞
+N ⎜
+,
+⎟ = N ( 5.76,1.02 )
+⎜ 25
+(25) 3 ⎟ ⎠
+⎝
+so that the z-score associated with the probability of getting 2 runs
+is
+2 − 5.76
+= − 3.722 .
+1.02
+which is much less than - 1.645 (using a 1-tailed test).
+Therefore we conclude that the probability
+of obtaining 2 or fewer runs is much less than 0.05.
+Therefore we reject the null hypothesis.
