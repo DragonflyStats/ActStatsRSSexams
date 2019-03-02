@@ -1,4 +1,38 @@
 
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
 
 The following time series model is being used to model monthly data:
 Y t  Y t  1  Y t  12  Y t  13  e t   1 e t  1   12 e t  12   1  12 e t  13
@@ -46,16 +80,15 @@ The probability of a claim on a policy in a given year is p. You may assume that
 probability of more than one claim on a policy in any given year is zero. Prior beliefs
 about p are described by a Beta distribution with parameters  = 2 and  = 8.
 In year 1 total claims are $13m and in year 2 they are $20m.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 10
 (ii) Derive the posterior distribution of p in terms of g.
 [4]
 (iii) Show that it is not possible in this case for the Bayes estimate of p to be the
 same under quadratic loss and all-or-nothing loss.
 [6]
-[Total 12]
-Claims on a certain portfolio of insurance policies arise as a Poisson process with
-annual rate . Individual claim amounts are independent from claim to claim and
-follow an exponential distribution with mean . The insurance company has
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+Claims on a certain portfolio of insurance policies arise as a Poisson process with annual rate . Individual claim amounts are independent from claim to claim and follow an exponential distribution with mean . The insurance company has
 purchased excess of loss reinsurance with retention M from a reinsurer who calculates
 premiums using a premium loading of . Denote by X i the amount paid by the
 reinsurer on the i th claim (so that X i = 0 if the i th claim amount is below M).
@@ -79,12 +112,9 @@ M X i ( t )  1  e
 coefficient.
 [6]
 Comment on your results to part (iii).
-END OF PAPER
-CT6 A2015–5
-[3]
-[2]
-[Total 15]
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CT6 A2015–5
+\newpage
 7
 (i)
 Set X t = (1  B 12 )(1  B) Y t where B is the background shift operator
@@ -136,7 +166,7 @@ and  0 = 1 and  s = 0 for all other s.
 Most candidates were able to identify this as a moving average process, however only the
 strongest candidates were able to work through the algebra to derive the auto-correlation
 function.
-Page 10Subject CT6 (Statistical Methods Core Technical) – April 2015 – Examiners’ Report
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CT6 April 2015 – Examiners’ Report
 8
 (i)
 First note that N has a type 2 negative binomial distribution with parameters
@@ -192,7 +222,6 @@ e 2  ( e   1) = 213.478 2
 2
 (A)
 (B)
-Page 11Subject CT6 (Statistical Methods Core Technical) – April 2015 – Examiners’ Report
 (B) ÷ (A) 2  e   1 =
 2
 213.478 2
@@ -215,10 +244,11 @@ log 400  2.8657 
 = 1  (0.17 × 0.97558 + 0.83 × 0.97500)
 = 0.0249
 (iii)
-The Pareto distribution is significantly skewed and the Normal approximation
-is not. The Normal approximation in (ii)(b) has variance 213.48 2 and mean
-62.5, so negative values of S (which are impossible in reality) are less than 1
+The Pareto distribution is significantly skewed and the Normal approximation is not. The Normal approximation in (ii)(b) has variance 213.48 2 and mean 62.5, so negative values of S (which are impossible in reality) are less than 1
 standard deviation from the mean.
 The approximation in (ii)(b) will therefore be more reliable.
 This question was well answered by the majority of candidates. Full credit was given to
 alternative correct answers in part (iii).
+
+
+\end{document}
