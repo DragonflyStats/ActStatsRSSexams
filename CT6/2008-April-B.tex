@@ -1,0 +1,124 @@
+
+3
+(i) X and Y are independent Poisson random variables with mean λ. Derive the
+moment generating function of X, and hence show that X + Y also has a
+Poisson distribution.
+[4]
+(ii) An insurer has a portfolio of 100 policies. Annual premiums of 0.2 units per
+policy are payable annually in advance. Claims, which are paid at the end of
+the year, are for a fixed sum of 1 unit per claim. Annual claims numbers on
+each policy are Poisson distributed with mean 0.18.
+Calculate how much initial capital is needed in order to ensure that the
+probability of ruin at the end of the year is less than 1%.
+%-----------------------------------------------------------------------%
+4
+Y 1 , Y 2 , ..., Y n are independent observations from a normal distribution with E[Y i ] = μ i
+and Var[Y i ] = σ 2 .
+\begin{enumerate}[(i)]
+\item  Write the density of Y i in the form of an exponential family of distributions. [2]
+\item Identify the natural parameter and derive the variance function.
+\item Show that the Pearson residual is the same as the deviance residual.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3
+(i)
+M X ( t ) = E ( e tX )
+∞
+= ∑ e kt e −λ
+k = 0
+∞
+= ∑ e −λ
+k = 0
+= e −λ e λ e
+λ k
+k !
+( λ e t ) k
+k !
+t
+= e λ ( e − 1)
+t
+Hence
+M X + Y ( t ) = E ( e t ( X + Y ) )
+= E ( e tX ) E ( e tY )
+= M X ( t ) M Y ( t )
+= e λ ( e − 1) e λ ( e − 1)
+t
+t
+= e 2 λ ( e − 1)
+t
+which is the MGF of a Poisson distribution with parameter 2λ. Hence X + Y is
+Poisson distributed.
+(ii)
+Using the result above, aggregate claims on the portfolio over the year have a
+Poisson distribution with parameter 18.
+Let the initial capital be U. At the end of the year, the surplus will be
+U + 20 – N where N is the number of claims.
+Page 3Subject CT6 (Statistical Methods Core Technical) — April 2008 — Examiners’ Report
+Now using the tables in the gold book, P(N <= 28) = 0.9897, and
+P(N < = 29) = 0.9941.
+So we need U to be large enough that ruin would only occur if there were 30
+or more claims. So we need U + 20 – 29 > 0.
+i.e. U > 9.
+Comment: Many candidates struggled with (ii) here.
+4
+(i)
+f(y i ) =
+⎧ ⎪ ( y − μ ) 2 ⎫ ⎪
+exp ⎨ − i 2 i ⎬
+2 σ
+2 πσ 2
+⎩ ⎪
+⎭ ⎪
+1
+2
+logf = − 1⁄2 log(2 πσ ) −
+=
+y i μ i − 1⁄2 μ i 2
+σ 2
+( y i 2 − 2 y i μ i + μ i 2 )
+2 σ 2
+− 1⁄2 log(2 πσ 2 ) − 1⁄2
+y i 2
+σ 2
+which is the form of an exponential family of distributions.
+(ii)
+The natural parameter is μ i
+θ i = μ i
+b(θ i ) = 1⁄2 μ i 2 = 1⁄2 θ i 2
+b ′ ( θ i ) = θ i
+b ′′ ( θ i ) = 1
+Hence V(μ i ) = 1
+(iii)
+The scaled deviance is
+⎡ ( y − y ) 2
+⎤
+( y − μ ˆ ) 2
+2 ∑ ⎢ − i 2 i − 1⁄2 log(2 πσ 2 ) + i 2 i + 1⁄2 log(2 πσ 2 ) ⎥
+2 σ
+2 σ
+⎣ ⎢
+⎦ ⎥
+=
+Page 4
+∑
+( y i − μ ˆ i ) 2
+σ 2Subject CT6 (Statistical Methods Core Technical) — April 2008 — Examiners’ Report
+Hence the deviance residual is
+( y i − μ ˆ i ) 2
+y i − μ ˆ i
+σ
+σ
+y − μ ˆ i
+y − μ ˆ
+The Pearson residual is i
+= i
+σ V ( μ ˆ i )
+σ
+sign( y i − μ ˆ )
+2
+=
+Comment: This was a relatively easy question and many scored full marks in (i) and
+(iii) here.
+
+
+\end{document}
