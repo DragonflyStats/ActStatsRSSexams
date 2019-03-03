@@ -1,0 +1,152 @@
+CT6 A2008—3
+PLEASE TURN OVER7
+Consider the following model applied to some quarterly data:
+Y t = e t + β 1 e t-1 + β 4 e t-4 + β 1 β 4 e t-5
+where e t is a white noise process with mean zero and variance σ 2 .
+(i) Express in terms of β 1 and β 4 the roots of the characteristic polynomial of the
+MA part, and give conditions for invertibility of the model.
+[2]
+(ii) Derive the autocorrelation function (ACF) for Y t .
+[5]
+For our particular data the sample ACF is:
+(iii)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+8
+Lag ACF
+1
+2
+3
+4
+5
+6
+7 0.73
+0.14
+0.37
+0.59
+0.24
+0.12
+0.07
+Explain whether these results confirm the initial belief that the model could be
+appropriate for these data.
+[3]
+[Total 10]
+The NCD scale policy for an insurance company is:
+Level 0
+Level 1
+Level 2
+0%
+25%
+50%
+The premium at the Level 0 is £800. The probability that a policyholder has an
+accident in a year is 0.2, and it is assumed that a policyholder does not have more than
+one accident each year.
+In the event of a claim free year the policyholder moves to the next higher level of
+discount in the coming year or remains at Level 2.
+In the event of a claim the policyholder moves to the next lower level of discount in
+the coming year or remains at Level 0.
+Following an accident the policyholder decides whether or not to make a claim based
+on the claim size and the amount of premiums over the period of the next 2 policy
+years, assuming no more claims are made.
+CT6 A2008—4(i)
+(ii)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+(i)
+Using the back shift operator it can be seen that
+Y t = (1 + β 1 B) (1 + β 4 B 4 ) e t .
+The invertibility conditions are then β 1 < 1 and β 4 < 1.
+(ii)
+Since E (Y t ) = 0, γ 0 = E ( y t 2 ) = σ 2 (1 + β 1 2 + β 2 4 + β 1 2 β 2 4 ) = σ 2 (1 + β 1 2 )(1 + β 2 4 ).
+Similarly it can be shown that
+γ 1 = E (Y t Y t - 1 ) = σ 2 β 1 (1 + β 24 )
+γ 2 = 0
+γ 3 = σ 2 β 1 β 4
+γ 4 = σ 2 β 4 (1 + β 1 2 )
+γ 5 = γ 3
+γ k = 0, k > 5
+So the ACF is
+ρ 1 =
+β 1
+1 + β 1 2
+ρ 2 = 0
+ρ 3 = ρ 5 =
+ρ 4 =
+β 1 β 4
+(1 + β 1 2 )(1 + β 2 4 )
+β 4
+1 + β 24
+ρ k = 0, k > 5
+(iii)
+Since in general the ratio
+u
+1 + u 2
+≤ 0.5 then we see that for our model
+ρ 1 < 0.5, ρ 3 < 0.25, ρ 4 < 0.5 and ρ 5 < 0.25. These do not seem to be
+satisfied by the sample ACF. So the model is not appropriate for such data.
+Other observations like those listed below can suffice here:
+•
+r(2) is not zero, and neither are r(6) and r(7).
+Page 7Subject CT6 (Statistical Methods Core Technical) — April 2008 — Examiners’ Report
+• r(3) is not close to r(5).
+• r(1)r(4) = 0.43. This should be similar in value to both r(3) and r(5).
+Whilst close to r(3) it isn't close to r(5).
+Full marks for at least three correct statements.
+Comment: There were some easy marks here. With the exception of part (iii), many
+candidates did well but some dropped many points when the concept of auto-
+correlation was not clear.
+8
+(i)
+Level
+0
+1
+2
+(ii)
+Prem. If. claim
+800 600
+800 600
+600 400
+Prem. No claim
+600 400
+400 400
+400 400
+Difference
+400
+600
+200
+The claims are exponentially distributed with parameter λ = 1/ μ = 1/ 600 and
+so Pr(loss > u) = exp( - u λ).
+Since
+P(claim) = P(accident) P(claim|accident)
+We derive that for a policyholder at Level 0
+P(claim at 0%) = 0.2P(X > 400) = 0.2 exp( - 400/600) = 0.102683
+for Level 1
+P(claim at 25%) = 0.2P(X > 600) = 0.2 exp( - 600/600) = 0.07357589
+and for Level 2
+P(claim at 50%) = 0.2P(X > 200) = 0.2 exp( - 200/600) = 0.1433063
+(iii)
+The transition matrix will be
+⎛ 0.1027 0.8973 0.0000 ⎞
+⎜
+⎟
+⎜ 0.0736 0.0000 0.9264 ⎟
+⎜ 0.0000 0.1433 0.8567 ⎟
+⎝
+⎠
+π P = π and hence
+π 0 = 0.1027π 0 + 0.0736π 1
+π 1 = 0.8973π 0 + 0.1433π 2
+π 2 = 0.9264π 1 + 0.8567π 2
+Page 8Subject CT6 (Statistical Methods Core Technical) — April 2008 — Examiners’ Report
+The first and the last equations imply
+π 0 = 0.0736 / 0.8973π 1 = 0.0820π 1
+and
+π 2 = 0.9264 / 0.1433π 1 = 6.4748π 1
+From π 0 + π 1 + π 2 = 1 we obtain π 1 = 1/7.5568 = 0.1325
+with π 0 = 0.0820×0.1325 = 0.0109 and π 2 = 1 - 0.1325 - 0.0109 = 0.8566.
+The average premium is now:
+800 π 0 + 600 π 1 + 400 π 2 = 800 × 0.0109 + 600 × 0.1325 + 400 × 0.8566 =
+430.85.
+Comment: Generally, very good answers with many candidates scoring full marks.
