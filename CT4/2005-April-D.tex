@@ -1,0 +1,167 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+(i)
+Draw a transition diagram for the process defined by the number of
+breakdowns occurring up to time t. [1]
+(ii) Write down the Kolmogorov equations obeyed by P 0 ( t ), P 1 ( t ) and P 2 ( t ) . [2]
+(iii) (a)
+(b)
+Derive an expression for P 0 ( t ) and
+demonstrate that P 1 ( t ) = e
+t
+10
+e
+t
+5 .
+[3]
+(iv) Derive an expression for P 2 ( t ) .
+(v) Calculate the expected number of claims under the policy.
+CT4 A2005
+5
+[3]
+[3]
+[Total 12]
+PLEASE TURN OVER104 Questions
+B1
+B2
+(i) Write down the equation of the Cox proportional hazards model in which the
+hazard function depends on duration t and a vector of covariates z. You
+should define all the other terms that you use.
+[2]
+(ii) Explain why the Cox model is sometimes described as semi-parametric . [1]
+[Total 3]
+Show that if the force of mortality
+x t
+=
+x t
+(0
+t
+1) is given by
+q x
+,
+1 tq x
+this implies that deaths between exact ages x and x + 1 are uniformly distributed.
+B3
+[4]
+An investigation of mortality over the whole age range produced crude estimates of q x
+for exact ages x from 2 years to 93 years inclusive. The actual deaths at each age
+were compared with the number of deaths which would have been expected had the
+mortality of the lives in the investigation been the same as English Life Table 15
+(ELT15). 53 of the deviations were positive and 39 were negative.
+Test whether the underlying mortality of the lives in the investigation is represented
+by ELT15.
+[5]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+April 2005
+Examiners report
+104 Part
+B1
+(i)
+If the hazard for life i is ( t ; z i ) , then
+l 0 ( t ) exp( b z i T ) ,
+l ( t ; z i )
+where
+(ii)
+0 ( t ) is
+the baseline hazard,
+and is a vector of regression parameters.
+The model is semi-parametric because is possible to estimate
+from the data without estimating the baseline hazard.
+Therefore the baseline hazard can have any shape determined by
+the data.
+B2
+Since
+t
+t
+p x
+exp
+x s ds
+,
+0
+t
+t q x
+1
+t
+p x
+1 exp
+x s ds
+.
+0
+Substituting for
+x s
+produces
+t
+t q x
+1 exp
+0
+q x ds
+1 sq x
+Performing the integration we have
+t q x
+t
+0
+1 exp log(1 sq x )
+1 exp log(1 tq x ) log1
+1 exp log(1 tq x )
+1 exp log(1 tq x )
+1 (1 tq x )
+tq x .
+This is the assumption of a uniform distribution of deaths and implies that deaths
+between exact ages x and x + 1 are uniformly distributed.
+Page 13Subject CT4
+B3
+Models
+April 2005
+Examiners report
+The null hypothesis is that the observed rates are a sample from a population in which
+English Life Table 15 represents the true rates.
+If the null hypothesis is true, then the observed number of positive deviations, P,
+will be such that P ~ Binomial (92, 1⁄2).
+We use the normal approximation to the Binomial distribution because we have > 20
+ages
+This means that, approximately, P ~ Normal (46, 23).
+The z-score associated with the probability of getting 53 positive deviations if the null
+hypothesis is true is, therefore
+53 46
+23
+7
+1.46 .
+4.79
+We use a two-tailed test, since both an excess of positive and an excess of negative
+deviations are of interest.
+Using a 5 % significance level, we have -1.96 < 1.46 < +1.96.
+(Alternatively, the p-value of the test statistic could be calculated.)
+This means we have insufficient evidence to reject the null hypothesis.
