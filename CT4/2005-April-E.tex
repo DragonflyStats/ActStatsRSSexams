@@ -1,0 +1,245 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+B4
+A life insurance company has investigated the recent mortality experience of its male
+term assurance policy holders by estimating the mortality rate at each age, q x . It is
+proposed that the crude rates might be graduated by reference to a standard mortality
+table for male permanent assurance policy holders with forces of mortality s 1 , so
+x
+that the forces of mortality
+x
+1
+2
+2
+implied by the graduated rates q x are given by the
+function:
+x
+1
+2
+=
+s
+x
+1
+2
+k ,
+where k is a constant.
+(i)
+CT4 A2005
+Describe how the suitability of the above function for graduating the crude
+rates could be investigated.
+[2]
+6(ii)
+(a) Explain how the constant k can be estimated by weighted least squares.
+(b) Suggest suitable weights.
+[4]
+(iii)
+B5
+Explain how the smoothness of the graduated rates is achieved.
+[1]
+[Total 7]
+A study of the mortality of 12 laboratory-bred insects was undertaken. The insects
+were observed from birth until either they died or the period of study ended, at which
+point those insects still alive were treated as censored.
+The following table shows the Kaplan-Meier estimate of the survival function, based
+on data from the 12 insects.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+B4
+(i)
+The suitability of a linear relationship between
+investigated by plotting
+x
+1
+2
+against
+s
+x
+1
+2
+log(1 q x ) against
+s
+x
+1
+2
+and
+x
+1
+2
+could be
+log(1 q x s ) or by plotting
+and
+looking for a linear relationship.
+An approximately linear relationship will suffice.
+If data are scarce, too close a fit is not to be expected, especially at extreme
+ages.
+Page 14Subject CT4
+(ii)
+Models
+(a)
+April 2005
+Examiners report
+We can work with either q x s or
+s
+x
+1 .
+2
+The value of k which minimises either
+w x ( q x q x ) 2
+x
+or
+2
+w x
+x
+x
+1
+2
+x
+1
+2
+should be found (note that the summations are over all relevant ages x)
+At each age there will be a different sample size or exposed to risk, E x .
+This will usually be largest at ages where many term assurances are
+sold (e.g. ages 25 to 50 years) and smaller at other ages.
+(b)
+The estimation procedure should pay more attention to ages where
+there are lots of data. These ages should have a greater influence on
+the choice of k than other ages.
+This implies weights w x E x .
+A suitable choice would be
+1
+or w x
+var q x
+w x
+(iii)
+1
+var
+or w x = E x
+1
+x
+2
+The graduated forces of mortality are a linear function of the forces in the
+standard table.
+Since the forces in the standard table should already be smooth, a linear
+function of them will also be smooth.
+B5
+(i)
+Consider the durations t j at which events take place.
+Let the number of deaths at duration t j be d j and the number of insects still at
+risk of death at duration t j be n j .
+At t j = 1, S(t) falls from 1.0000 to 0.9167.
+Since the Kaplan-Meier estimate of S(t) is
+S ( t )
+(1
+( t j )) ,
+t j t
+Page 15Subject CT4
+Models
+April 2005
+we must have 0.9167 1
+Examiners report
+(1) ,
+so that (1) 0.0833.
+Since (1)
+d 1
+d
+, then we have 1
+n 1
+n 1
+0.0833 ,
+and, since all 12 insects are at risk of dying at t j = 1, we must therefore have
+d 1 = 1 and n 1 = 12.
+Similarly, at t j = 3, we must have 0.7130 0.9167(1
+so that (3)
+0.9167 0.7130
+0.9167
+0.222
+(3))
+d 3
+.
+n 3
+Since we can have at most 11 insects in the risk set at t j = 3, we must have
+d 3 = 2 and n 3 = 9.
+Similarly, at t j = 6, we must have 0.4278 0.7130(1 (6)) ,
+so that (6)
+0.7130 0.4278
+0.7130
+0.400
+d 6
+.
+n 6
+Since we can have at most 7 insects in the risk set at t j = 6, we must have
+d 6 = 2 and n 6 = 5.
+Therefore 2 insects died at duration 3 weeks and 2 insects died at duration 6
+weeks.
+Alternatively
+Some candidates worked back to produce a table in the usual format, as
+follows; this received full credit.
+t
+0
+1
+3
+6
+(ii)
+S(t) = (1- t )
+1.0000
+0.9167
+0.7130
+0.4278
+t
+0
+0.0833
+0.22
+0.4
+n t
+12
+12
+9
+5
+d t
+0
+1
+2
+2
+5
+c t
+2
+2
+3
+7
+Summing up the number of deaths we have
+total deaths = d 1 d 3 d 6 1 2 2 5 .
+Since we started with 12 insects, the remaining 7 insects histories were right-
+censored.
+Page 16Subject CT4 Models
+April 2005
