@@ -1,0 +1,226 @@
+
+Based on the proposal form, an applicant for life insurance is classified as a standard
+life (1), an impaired life (2) or uninsurable (3). The proposal form is not a perfect
+classifier and may place the applicant into the wrong category.
+The decision to place the applicant in state i is denoted by d i , and the correct state for
+the applicant is i .
+The loss function for this decision is shown below:
+1
+2
+3
+d 1 d 2 d 3
+0
+12
+20 5
+0
+15 8
+3
+0
+(i) Determine the minimax solution when assigning an applicant to a category. [1]
+(ii) Based on the application form, the correct category for a new applicant
+appears to be as an impaired life. However, of applicants which appear to be
+impaired lives, 15% are in fact standard lives and 25% are uninsurable.
+Determine the Bayes solution for this applicant.
+[4]
+[Total 5]
+CT6 A2006 24
+(i)
+Derive the autocovariance and autocorrelation functions of the AR(1) process
+X t = X t
+where
+(ii)
+1
++ e t
+< 1 and the e t form a white noise process.
+[4]
+The time series Z t is believed to follow a ARIMA(1, d, 0) process for some
+value of d. The time series Z t ( k ) is obtained by differencing k times and the
+sample autocorrelations, {r i : i = 1, , 10}, are shown in the table below for
+various values of k.
+r 1
+r 2
+r 3
+r 4
+r 5
+r 6
+r 7
+r 8
+r 9
+r 10
+k = 0 k = 1
+100%
+100%
+100%
+100%
+100%
+100%
+99%
+99%
+99%
+99% 100%
+100%
+100%
+99%
+99%
+99%
+98%
+98%
+97%
+97%
+k = 2
+83%
+66%
+54%
+45%
+37%
+30%
+27%
+24%
+19%
+13%
+k = 3
+3%
+12%
+11%
+1%
+3%
+12%
+3%
+3%
+3%
+7%
+k = 4
+45%
+5%
+4%
+6%
+4%
+12%
+7%
+0%
+5%
+5%
+Suggest, with reasons, appropriate values for d and the parameter
+underlying AR(1) process.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3
+(i)
+0
+12
+20
+Maximum loss: 20
+5
+0
+15
+15
+April 2006
+Examiners Report
+8
+3
+0
+8
+Minimax is d 3 .
+(ii)
+P( 1 ) = 0.15
+P( 2 ) = 0.6
+P( 3 ) = 0.25
+d 1 = 0.15
+d 2 = 0.15
+d 3 = 0.15
+0 + 0.6
+5 + 0.6
+8 + 0.6
+12 + 0.25 20 = 12.2
+0 + 0.25 15 = 4.5
+3 + 0.25 0 = 3
+Hence the Bayes decision is d 3 .
+Comments on question 3: No comments given.
+4
+(i)
+k
+= Cov(X t , X t k )
+= Cov( X t 1 + e t , X t k )
+= k 1
+and
+0
+= Cov(X t , X t )
+= Cov( X t 1 + e t , X t 1 + e t )
+= 2 Cov(X t 1 , X t 1 ) + Cov(e t , e t )
+= 2 0 + 2
+and hence
+2 )
+0 (1
+=
+2
+2
+i.e.
+0 =
+1
+2
+So our solution is
+k 2
+k =
+1
+2
+Page 3Subject CT6 (Statistical Methods Core Technical)
+April 2006
+Examiners Report
+The autocorrelation function is given by
+k
+=
+k
+=
+k
+0
+(ii)
+The autocorrelation should decay exponentially as i increases. Looking at the
+table this behaviour occurs after differencing 2 times, suggesting the value of
+d = 2.
+We know that the ratio of successive r s should be . We can form these
+ratios as follows:
+r 2 /r 1
+r 3 /r 2
+r 4 /r 3
+r 5 /r 4
+r 6 /r 5
+r 7 /r 6
+r 8 /r 7
+r 9 /r 8
+r 10 /r 9 80%
+82%
+83%
+82%
+81%
+90%
+89%
+79%
+68%
+Average 81.6%
+Alternatively we can take the ith root of the ith autocorrelation:
+i ith root
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10 83%
+81%
+81%
+82%
+82%
+82%
+83%
+84%
+83%
+82%
+Average 82%
+Both approaches suggest the value of alpha is around 82%.
+Full credit should be given to any reasonable approach.
+Comments on question 4: This question was generally done poorly. Although most
+candidates made a reasonable attempt at (i), very few correctly identified appropriate values
+or sensible reasons in (ii).
+Page 4Subject CT6 (Statistical Methods Core Technical)
