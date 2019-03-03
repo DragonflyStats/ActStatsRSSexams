@@ -1,0 +1,344 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+B6
+t (weeks) S(t)
+0
+1
+3
+6 1.0000
+0.9167
+0.7130
+0.4278
+t < 1
+t < 3
+t < 6
+t
+(i) Calculate the number of insects dying at durations 3 and 6 weeks.
+(ii) Calculate the number of insects whose history was censored.
+[6]
+[1]
+[Total 7]
+An investigation into mortality collects the following data:
+x
+= total number of policies under which death claims are made when the
+policyholder is aged x last birthday in each calendar year
+P x (t) = number of in-force policies where the policyholder was aged x nearest
+birthday on 1 January in year t
+(i) State the principle of correspondence.
+(ii) Obtain an expression, in terms of the P x (t), for the central exposed to risk, E x c ,
+which corresponds to the claims data and which may be used to estimate the
+force of mortality in year t at each age x, x . State any assumptions you
+make.
+[4]
+(iii) Comment on the effect on the estimation of the fact that the
+rather than deaths, and the P x ( t ) relate to policies, not lives.
+CT4 A2005
+7
+[1]
+x
+relate to claims,
+[4]
+[Total 9]
+PLEASE TURN OVERB7
+An investigation took place into the mortality of pensioners. The investigation began
+on 1 January 2003 and ended on 1 January 2004. The table below gives the data
+collected in this investigation for 8 lives.
+Date of birth Date of entry
+into observation Date of exit from
+observation Whether
+or not exit was
+due to death (1)
+or other
+reason (0)
+1 April 1932
+1 October 1932
+1 November 1932
+1 January 1933
+1 January 1933
+1 March 1933
+1 June 1933
+1 October 1933 1 January 2003
+1 January 2003
+1 March 2003
+1 March 2003
+1 June 2003
+1 September 2003
+1 January 2003
+1 June 2003 1 January 2004
+1 January 2004
+1 September 2003
+1 June 2003
+1 September 2003
+1 January 2004
+1 January 2004
+1 January 2004 0
+0
+1
+1
+0
+0
+0
+0
+The force of mortality,
+(i)
+70 ,
+between exact ages 70 and 71 is assumed to be constant.
+(a) Estimate the constant force of mortality,
+and the data for the 8 lives in the table.
+(b) Hence or otherwise estimate q 70 .
+70 ,
+using a two-state model
+[7]
+(ii) Show that the maximum likelihood estimate of the constant force, 70 , using a
+Poisson model of mortality is the same as the estimate using the two-state
+model.
+[5]
+(iii) Outline the differences between the two-state model and the Poisson model
+when used to estimate transition rates.
+[3]
+[Total 15]
+END OF PAPER
+CT4 A2005
+8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Examiners report
+B6 (i) The principle of correspondence states that a life alive at time t should be
+included in the exposure at age x at time t if and only if were that life to die
+immediately, he or she would be counted in the deaths data x at age x.
+(ii) P x (t) is the number of policies under observation aged x nearest birthday on
+1 January in year t.
+To correspond with the claims data, we wish to have policies classified by age
+last birthday.
+Let the number of policies aged x last birthday on 1 January in year t be P x ( t ) .
+Then, assuming that birthdays are evenly distributed,
+1
+P x ( t ) P x 1 ( t ) .
+2
+P x ( t )
+The central exposed to risk is then given by
+1
+E x c
+P x ( t ) dt .
+0
+Using the trapezium approximation this is
+E x c
+1
+P x ( t ) P x ( t 1) ,
+2
+and, substituting for the P x ( t ) in terms of P x (t) from the equation above
+produces
+E x c
+(iii)
+1 1
+P x ( t ) P x 1 ( t )
+2 2
+1
+P x ( t 1) P x 1 ( t 1) .
+2
+The principle of correspondence still holds, because we are dealing with
+claims and policies: one policy can only lead to one claim.
+However, because one life may have more than one policy it is possible that
+two distinct death claims are the result of the death of the same life.
+Therefore claims are not independent, whereas deaths are.
+Page 17Subject CT4
+Models
+April 2005
+Examiners report
+The effect of this is to increase the variance of the number of claims
+(compared to the situation in which each life has one and only one policy) by
+the ratio
+i 2
+i
+i
+i
+,
+i
+i
+where i is the proportion of the lives in the investigation owning i policies (i
+= 1, 2, 3, ...).
+Typically the ratio will vary for each age x.
+B7
+d 70
+, where v 70 is the total time the members
+v 70
+of the sample are under observation between exact ages 70 and 71 years.
+(i)(a) The two-state estimate of
+70
+is
+v 70,i ,
+v 70
+i
+where v 70,i is the duration that sample member i is under observation between
+exact ages 70 and 71 years.
+For each sample member, v 70,i = ENDDATE
+STARTDATE
+where ENDDATE is the earliest of the date at which the observation of that
+member ceases and the date of the member s 71st birthday,
+and STARTDATE is the latest of the date at which observation of that
+member begins and the date of the member s 70th birthday.
+The table below shows the computation of v 70 .
+i Date
+obs.
+begins Date of
+70th
+birthday Date
+obs.
+ends Date of
+71 st
+birthday v 70,i
+(years)
+1
+2
+3
+4
+5
+6
+7
+8 1/1/2003
+1/1/2003
+1/3/2003
+1/3/2003
+1/6/2003
+1/9/2003
+1/1/2003
+1/6/2003 1/4/2002
+1/10/2002
+1/11/2002
+1/1/2003
+1/1/2003
+1/3/2003
+1/6/2003
+1/10/2003 1/1/2004
+1/1/2004
+1/9/2003
+1/6/2003
+1/9/2003
+1/1/2004
+1/1/2004
+1/1/2004 1/4/2003
+1/10/2003
+1/11/2003
+1/1/2004
+1/1/2004
+1/3/2004
+1/6/2004
+1/10/2004 0.25
+0.75
+0.5
+0.25
+0.25
+0.3333
+0.5833
+0.25
+Therefore v 70
+v 70,i = 3.167.
+i
+Page 18Subject CT4
+Models
+April 2005
+Examiners report
+We observed two deaths (members 3 and 4), so
+2
+0.6316 .
+70
+3.167
+(b)
+q 70 1 exp(
+70 )
+1 exp( 0.6316) 1 0.5318 0.4682.
+(ii)
+The contributions to the Poisson likelihood made by each member are
+proportional to the following
+Member
+1 exp(-0.25 70 )
+2 exp(-0.75 70 )
+3 70 exp(-0.5 70 )
+4 70 exp(-0.25 70 )
+5 exp(-0.25
+70 )
+6 exp(-0.3333 70 )
+7 exp(-0.5833 70 )
+8 exp(-0.25
+70 )
+The total likelihood, L, is proportional to the product
+L
+[exp( 3.167
+70 )]( 70 )
+2
+.
+Then
+log L
+3.167
+70
+2 log
+70
+so that
+d log L
+d 70
+3.167
+2
+.
+70
+Setting this equal to zero and solving for
+likelihood estimate,
+which is 2/3.167 = 0.6316
+Since
+d 2 log L
+d 70
+maximum.
+2
+2
+2
+70 produces
+the maximum
+, which is always negative, we definitely have a
+70
+This is the same as the estimate from the two-state model.
+Page 19Subject CT4
+(iii)
+Models
+April 2005
+Examiners report
+The Poisson model is not an exact model, since it allows for a non-zero
+probability of more than n deaths in a sample of size n.
+The variance of the maximum likelihood estimator for the two-state model is
+only available asymptotically, whereas that for the Poisson model is available
+exactly in terms of the true .
+The two-state model extends to processes with increments, whereas the
+Poisson model does not.
+The Poisson model is a less satisfactory approximation to the multiple state
+model when transition rates are high.
+Page 20
