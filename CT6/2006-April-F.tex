@@ -1,0 +1,130 @@
+CT6 A2006 610
+An insurance company has two portfolios of independent policies, on each of which
+claims occur according to a Poisson process. For the first portfolio, all claims are for
+a fixed amount of £5,000 and 10 claims are expected per annum. For the second
+portfolio, claim amounts are exponentially distributed with mean £4,000 and 30
+claims are expected per annum.
+Let S denote aggregate annual claims from the two portfolios together.
+A check is made for ruin only at the end of the year.
+The insurer includes a loading of 10% in the premiums, for all policies.
+(i) Calculate the mean and variance of S.
+[4]
+(ii) Use a normal approximation to the distribution of S to calculate the initial
+capital, u, required in order that the probability of ruin at the end of the first
+year is 0.01.
+[3]
+The insurer is considering purchasing proportional reinsurance from a reinsurer that
+includes a loading of in its premiums. The proportion of each claim to be retained
+by the direct insurer is (0
+1).
+Let S I denote the aggregate annual claims paid by the direct insurer on the two
+portfolios together, net of reinsurance.
+(iii)
+Use a normal approximation to the distribution of S I to show that the initial
+capital, u , required in order that the probability of ruin at the end of the first
+year is 0.01 can be written as
+u = u + (1
+) (
+0.1) E[S].
+(iv) Show that u > u , as long as < 0.476.
+(v) Show that u u decreases as
+implications of this result.
+[3]
+increases, and discuss the practical
+END OF PAPER
+CT6 A2006 7
+[6]
+[3]
+[Total 19]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+10
+(i)
+E(S) = E[S 1 ] + E[S 2 ]
+= 10 5,000 + 30
+April 2006
+Examiners Report
+4,000 = 170,000
+Var[S] = Var[S 1 ] + Var[S 2 ]
+= 10 5,000 2 + 30 (4,000 2 + 4,000 2 )
+= 1.21 10 9
+(ii)
+We require u such that
+P(u + c < S) = 0.01
+S E ( S )
+Var( S )
+u c E ( S )
+= 0.01
+Var( S )
+i.e. P
+so u c E ( S )
+= 2.326
+Var( S )
+u = 2.326 Var( S )
+E ( S ) 1.1 E ( S )
+= 2.326 Var( S ) 0.1 E ( S )
+= 63,922
+(iii)
+We require u such that
+P ( u
+c c R
+S I ) = 0.01
+where c R = reinsurance premium
+u
+c c R E [ S I ]
+u c E [ S ]
+= 2.326 =
+Var[ S I ]
+Var( S )
+E[S I ] = E[S] and Var[S I ] =
+c R = (1 + )(1
+Hence
+u
+2 Var[S].
+) E[S]
+1.1 E [ S ] (1
+)(1 ) E [ S ]
+Var[ S ]
+E [ S ]
+=
+u 1.1 E [ S ] E [ S ]
+Var( S )
+u = (u + 0.1E[S]) 1.1E[S] + (1 + )(1
+) E[S] + E[S]
+= u + (0.1 1.1 + 1
++ (1
+) + ) E(S)
+= u + (1
+) (
+0.1) E(S)
+Page 12Subject CT6 (Statistical Methods Core Technical)
+(iv)
+u u = (1
+u u
+(v)
+0
+)[u
+u
+(
+(
+Examiners Report
+0.1) E(S)]
+0.1) E(S) > 0
+i.e. < u
+0.1
+E ( S )
+i.e. < 63,922
+0.1 = 0.476
+170, 000
+Since (1
+April 2006
+) E[S] > 0, u
+u decreases as increases.
+The greater the premium loading required by the reinsurer, the smaller the
+reduction in capital required by the insurer, i.e. the less effective the
+reinsurance is in reducing P(ruin) and hence replacing the capital.
+Comments on question 10: After Q8, candidates found this the most difficult question on the
+paper. Parts (i) and (ii) were well answered but the inclusion of premium loadings confused
+most candidates and consequently very few scored well on (iii), (iv) and (v).
+\end{document}
