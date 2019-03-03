@@ -1,0 +1,204 @@
+3
+(i) Let N be a random variable representing the number of claims arising from a
+portfolio of insurance policies. Let X i denote the size of the ith claim and
+suppose that X 1 , X 2 , are independent identically distributed random
+variables, all having the same distribution as X. The claim sizes are
+independent of the number of claims. Let S = X 1 + X 2 +
++ X N denote the
+total claim size. Show that
+M S (t) = M N (logM X (t)).
+(ii)
+[3]
+Suppose that N has a Type 2 negative binomial distribution with parameters
+k > 0 and 0 < p < 1. That is
+P(N = x) =
+( k x )
+p k q x
+( x 1) ( k )
+x = 0, 1, 2,
+Suppose that X has an exponential distribution with mean 1/ . Derive an
+expression for M s (t).
+CT6 A2006 4
+[2](iii)
+Now suppose that the number of claims on another portfolio is R with the size
+of the ith claim given by Y i . Let T = Y 1 +
++ Y R . Suppose that R has a
+binomial distribution, with parameters k and 1 p, and that Y i has an
+exponential distribution with mean 1/ . Show that if is chosen appropriately
+then S and T have the same distribution.
+[6]
+You may use any standard formulae for moment generating functions of
+specific distributions shown in the Formulae and Tables.
+[Total 11]
+8
+An insurer has for 2 years insured a number of domestic animals against veterinary
+costs. In year 1 there were n 1 policies and in year 2 there were n 2 policies. The
+number of claims per policy per year follows a Poisson distribution with unknown
+parameter .
+Individual claim amounts were a constant c in year 1 and a constant c(1 + r) in year 2.
+The average total claim amount per policy was y 1 in year 1 and y 2 in year 2. Prior
+beliefs about follow a gamma distribution with mean / and variance / 2 . In
+year 3 there are n 3 policies, and individual claim amounts are c(1 + r) 2 . Let Y 3 be the
+random variable denoting average total claim amounts per policy in year 3.
+(i) State the distribution of the number of claims on the whole portfolio over the 2
+year period.
+[1]
+(ii) Derive the posterior distribution of
+(iii) Show that the posterior expectation of Y 3 given y 1 , y 2 can be written in the
+form of a credibility estimate
+Z
+k + (1
+Z)
+[5]
+c (1 r ) 2
+specifying expressions for k and Z.
+(iv)
+given y 1 and y 2 .
+[5]
+Describe k in words and comment on the impact the values of n 1 , n 2 have
+on Z.
+[3]
+[Total 14]
+CT6 A2006 5
+PLEASE TURN OVER
+
+7
+(i)
+April 2006
+Examiners Report
+M s (t) = E(e St )
+= E ( E ( e ( X 1
+... X N ) t
+N ))
+= E ( E ( e X 1 t e X 2 t ... e X N t N ))
+= E ( M X ( t ) N )
+= E ( e N log M X ( t ) )
+= M N (log M X ( t ))
+(ii)
+From the tables
+M N (t) =
+M X (t) =
+k
+p
+1 qe t
+t
+So
+p
+M s (t) =
+1 qM X ( t )
+1 q
+=
+=
+k
+p
+=
+k
+t
+p ( t )
+t q
+p (
+p t )
+t
+k
+k
+Page 7Subject CT6 (Statistical Methods Core Technical)
+(iii)
+April 2006
+Examiners Report
+We now have
+M Y (t) =
+t
+M R (t) = (p + qe t ) k
+and so
+k
+M T (t) =
+=
+p q
+p
+t
+pt q
+t
+pt
+t
+=
+k
+k
+Thus if we choose = p then M T (t) = M S (t) and by the uniqueness of
+Moment Generating Functions, S and T have the same distribution.
+Comments on question 7: This question was generally well answered although relatively few
+managed the final step of demonstrating that S and T have the same distribution.
+8
+(i) The total number of claims has a Poisson distribution with parameter
+(n 1 + n 2 ) .
+(ii) Let Y i denote the average total claim amount per policy in year i and let X i
+denote the total number of claims in year i. Then X i has a Poisson distribution
+with parameter n i and
+X 1 =
+n 1 Y 1
+Yn
+and X 2 = 2 2 .
+c
+c (1 r )
+f( y 1 , y 2 )
+f(y 1 , y 2 ) f( )
+e n 1 ( n 1 ) y 1 n 1 / c e
+e ( n 1 n 2 )
+n 2
+n 1 y 1 n 2 y 2
+c c (1 r )
+So the posterior distribution of
+and
+Page 8
++ n 1 + n 2 .
+( n 2 ) y 2 n 2 / c (1
+r )
+e
+1
+1
+is gamma with parameters
+n 1 y 1
+c
+n 2 y 2
+c (1 r )Subject CT6 (Statistical Methods Core Technical)
+(iii)
+E(Y 3 y 1 , y 2 ) =
+2
+n 1 y 1
+n 2 y 2
+c
+c (1 r )
+n 1 n 2
+c (1 r )
+n 3
+= c (1 r ) 2 n 1 y 1 (1 r ) 2 n 2 y 2 (1 r )
+n 1 n 2
+k =
+Z =
+n 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555
+E(X 3 y 1 , y 2 )
+=
+= c (1 r )
+(iv)
+c (1 r ) 2
+n 3
+April 2006
+2
+n 1 n 2
+n 1 y 1 (1 r ) 2 n 2 y 2 (1 r )
+n 1 n 2
+n 1 n 2
+n 1 n 2
+n 1 y 1 (1 r ) 2 n 2 y 2 (1 r )
+and
+n 1 n 2
+n 1 n 2
+n 1 n 2
+k is effectively a weighted average of the inflation adjusted average claim
+amounts for the previous 2 years, weighted by the number of policies in force.
+As the number of policies in force increases, Z becomes closer to 1, and so
+more weight is placed on the actual experience, and less on the prior
+expectations.
+Comments on question 8: Candidates found this the most difficult question in the paper.
+Only those candidates with a methodical approach and an excellent grasp of the relevant
+bookwork managed to progress to the later parts of the question.
