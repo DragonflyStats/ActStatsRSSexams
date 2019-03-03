@@ -1,0 +1,64 @@
+9
+For each discount level, find the minimum claim amount for which the
+policyholder will make a claim. [2]
+Assuming that the cost of repair for each accident has an exponential
+distribution with mean £600, calculate the probability that a policyholder
+makes a claim at each level of discount. [5]
+(iii) Write down the transition matrix and calculate the average premium payment
+for a year when the system has reached the equilibrium.
+[6]
+[Total 13]
+(i) Describe the difference between strictly stationary processes and weakly
+stationary processes.
+[2]
+(ii) Explain why weakly stationary multivariate normal processes are also strictly
+stationary.
+[1]
+(iii) Show that the following bivariate time series process, (X n , Y n ) t , is weakly
+stationary:
+X n = 0.5X n-1 + 0.3Y n-1 + e n x
+Y n = 0.1X n-1 + 0.8Y n-1 + e n y
+where e n x and e n x are two independent white noise processes.
+(iv)
+[5]
+Determine the positive values of c for which the process
+X n = (0.5 + c) X n-1 + 0.3Y n-1 + e n x
+Y n = 0.1X n-1 + (0.8 + c) Y n-1 + e n y
+is stationary.
+CT6 A2008—5
+[6]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9
+(i)
+Strictly stationary processes have the property that the distribution of
+(X t+1 , ... X t+k ) is the same as that of (X t+s+1 , ... X t+s+k ) for each t, s and k. For
+the weakly stationary only the first two moments are needed to satisfy
+E (X t ) = μ ∀t
+and
+cov(X t , X t+s ) = γ(s)
+∀t, s.
+(ii) These two definitions coincide for the multivariate normal processes since the
+normal distribution is characterised by the first two moments only.
+(iii) In order to confirm that we need to calculate the eigenvalues of the parameter
+matrix
+⎛ 0.5 0.3 ⎞
+A = ⎜
+⎟ .
+⎝ 0.1 0.8 ⎠
+So we need to solve det(A - λI) = 0 which implies the solution of
+(0.5 - λ) (0.8 - λ) – 0.03 = 0
+0.37 − 1.3λ + λ 2 = 0
+We see that this equation is satisfied for λ 1 = 0.8791288 and λ 2 = 0.4208712.
+Since they are both smaller than 1, the process is stationary.
+(iv)
+The parameter matrix here is A c = A + cI , and the eigenvalues equation is now
+det( A + cI - λ I ) = 0 or det( A – (λ - c ) I ) = 0.
+Page 9Subject CT6 (Statistical Methods Core Technical) — April 2008 — Examiners’ Report
+So the eigenvalues of A c are λ 1 + c and λ 2 + c where λ i are those of A .
+Since λ i are positive then the required values for c are such that λ 1 + c < 1 and
+λ 2 + c < 1.
+Hence 0 < c < 1 - λ 1 = 0.1208712, since λ 1 is the largest of the two.
+Comment: This was not the easiest question. Some struggled with (ii), (iii) and (iv).
+There were quite a few candidates who managed to avoid the calculation of the eigen
+values of the matrix A by explicitly expressing each X_n and Y_n series as stationary
+univariate AR(2) processes with some white noise terms .
