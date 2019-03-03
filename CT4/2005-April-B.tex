@@ -1,0 +1,315 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+A3
+Let Y 1 , Y 3 , Y 5 ,
+variables with
+P Y 2 k
+, be a sequence of independent and identically distributed random
+1
+= 1 = P Y 2 k
+and define Y 2 k = Y 2 k
+(i)
+[6]
+1 / Y 2 k 1
+1
+= 1 =
+1
+,
+2
+for k = 1, 2,
+k = 0, 1, 2,...
+.
+Show that Y k : k = 1, 2,... is a sequence of independent and identically
+distributed random variables.
+Hint: You may use the fact that, if X, Y are two variables that take only two
+values and E XY
+E X E ( Y ), then X, Y are independent.
+[4]
+(ii) Explain whether or not Y k : k = 1, 2,... constitutes a Markov chain.
+(iii) (a)
+State the transition probabilities p ij ( n ) = P Y m
+n
+[1]
+= j | Y m = i of the
+sequence Y k : k = 1, 2,... .
+(b)
+CT4 A2005
+2
+Hence show that these probabilities do not depend on the current state
+and that they satisfy the Chapman-Kolmogorov equations.
+[3]
+[Total 8]A4
+Marital status is considered using the following time-homogeneous, continuous time
+Markov jump process:
+the transition rate from unmarried to married is 0.1 per annum
+the divorce rate is equivalent to a transition rate of 0.05 per annum
+the mortality rate for any individual is equivalent to a transition rate of 0.025 per
+annum, independent of marital status
+The state space of the process consists of five states: Never Married (NM),
+Married (M), Widowed (W), Divorced (DIV) and Dead (D).
+P x is the probability that a person currently in state x, and who has never previously
+been widowed, will die without ever being widowed.
+(i) Construct a transition diagram between the five states. [2]
+(ii) Show, by general reasoning or otherwise, that P NM equals P DIV . [1]
+(iii) Demonstrate that:
+P NM
+P M
+1
+5
+1
+4
+4
+P M
+5
+1
+P DIV
+2
+[2]
+(iv) Calculate the probability of never being widowed if currently in state NM. [2]
+(v) Suggest two ways in which the model could be made more realistic.
+CT4 A2005
+3
+[1]
+[Total 8]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A3
+(i)
+It is clear that Y 2k can only take two values, ±1, with probabilities
+1
+P Y 2 k 1 P Y 2 k 1 Y 2 k 1
+1 P Y 2 k 1 Y 2 k 1
+1
+2
+and
+P Y 2 k
+P Y 2 k
+1
+1
+1, Y 2 k
+1
+1
+P Y 2 k
+1
+1, Y 2 k
+1
+1
+1
+2
+so that they have the same distribution as Y 2k+1 .
+To show that Y 2 k , Y 2 k
+1
+are independent, we observe first that
+Page 5Subject CT4
+Models
+April 2005
+E Y 2 k
+E Y 2 k
+Examiners report
+0 .
+1
+Next,
+E Y 2 k Y 2 k
+1
+1
+E Y 2 k Y 2 k
+2
+1 | Y 2 k 1
+1
+E Y 2 k Y 2 k
+2
+1
+1 | Y 2 k 1
+1
+But
+E Y 2 k Y 2 k
+1 | Y 2 k 1
+1
+1 1 0 ( 1) 1,
+and similarly E Y 2 k Y 2 k
+E Y 2 k Y 2 k
+1
+1 | Y 2 k 1
+1
+1
+1
+2
+2
+1
+1
+1, which yields that
+0.
+Since
+E Y 2 k
+E Y 2 k
+1
+E ( Y 2 k Y 2 k 1 )
+it now follows from the hint that Y 2 k , Y 2 k
+1
+are independent.
+For the proof to be complete, we need to show that Y 2 k , Y 2 m are also
+independent for all k, m. This is obvious from the statement for all k, m
+except when m = k + 1 or m = k - 1. For this case, we could either argue as
+above or simply state that it is obvious by symmetry.
+(ii)
+(iii)
+Page 6
+The sequence Y k : k
+P Y 2 k 1 1| Y 2 k
+but
+P Y 2 k 1 1| Y 2 k
+(a)
+1 , 2 ,... is not Markov; for instance
+1
+1, Y 2 k
+1
+2
+1
+1
+0.
+Since the Y k are pairwise independent, we see that for all i, j, m, n,
+1
+p ij ( n ) P Y m n j | Y m i
+.
+2Subject CT4
+Models
+(b)
+April 2005
+Examiners report
+The probabilities do not depend on the current state as they are all 1⁄2
+Using the result in (a) we therefore see that
+1 1 1 1 1
+p ik ( n ) p kj ( r )
+2 2 2 2 2
+k
+1,1
+p ij ( n
+r ).
+which shows that the Chapman
+although Y k : k
+A4
+Kolmogorov equations are satisfied
+1 , 2 ,... is not Markov.
+(i)
+0.025
+M
+W
+0.1
+0.1
+NM
+0.05
+0.025
+0.1
+DIV
+0.025
+0.025
+0.025
+D
+(ii)
+The transitions out of the divorced state are to the same states, and with the
+same transition probabilities, as the transitions out of state NM.
+Therefore the probability of ever reaching state W is the same from both
+states.
+Alternatively, this could be shown by producing the equation conditioning on
+the first move out of DIV, as in part (iii), and showing this is identical to that
+for P NM .
+(iii)
+Conditioning on the first move out of each state:
+P NM
+P M
+As P D
+0.025
+P D
+0.125
+0.025
+P D
+0.1
+1 and P W
+0.1
+P M
+0.125
+0.05
+P DIV
+0.1
+0.025
+P W
+0.1
+0 , these give
+Page 7Subject CT4
+Models
+April 2005
+0.025
+0.125
+P NM
+0.025
+0.1
+P M
+0.1
+0.125
+0.05
+0.1
+P M
+P DIV
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1
+5 4
+5 P M
+1
+4 1
+2 P DIV
+as required.
+(iv)
+Using P NM
+P DIV in the above equations gives:
+P NM 1
+5 4
+5
+1 2
+5 P NM
+P NM
+1
+4
+1
+P NM
+2
+2
+5
+2
+3
+(v)
+Make mortality and marriage rates age dependent.
+Divorce rate dependent on duration of marriage.
+Divorce rate dependent on whether previously divorced.
+Make mortality rate marital status-dependent.
+Other sensible suggestions received credit.
