@@ -1,0 +1,165 @@
+PLEASE TURN OVER8
+Let X 1 , X 2 , ... , X n be a random sample from a distribution with parameter θ and
+density function:
+⎧ 2 x
+; 0 ≤ x ≤θ
+⎪
+f ( x ) = ⎨ θ 2
+.
+⎪ 0
+; x < 0 or x > θ
+⎩
+Suppose that x = ( x 1 , x 2 , ... , x n ) is a realisation of X 1 , X 2 , ... , X n .
+(i)
+(a) Derive the likelihood function L(θ; x) and produce a rough sketch of its
+graph.
+(b) Use the graph produced in part (i)(a) to explain why the maximum
+likelihood estimate of θ is given by x ( n ) = max{ x 1 , x 2 , ... , x n } .
+[4]
+Let X ( n ) = max{ X 1 , X 2 , ... , X n } be the estimator of θ, that is the random variable
+corresponding to x ( n ) .
+(ii)
+(a)
+Show that the cumulative distribution function of the estimator X ( n ) is
+given by:
+⎛ x ⎞
+F X ( n ) ( x ) = ⎜ ⎟
+⎝ θ ⎠
+2 n
+for 0 ≤ x ≤ θ.
+(b) Hence, derive the probability density function of the estimator X ( n ) .
+(c) Determine the expected value E ( X ( n ) ) and the variance V ( X ( n ) ) .
+(d) Show that the estimator
+2 n + 1
+X ( n ) is an unbiased estimator of θ.
+2 n
+[9]
+(iii)
+(a) Derive the mean square error of the estimator given in part (ii)(d).
+(b) Comment on the consistency of this estimator.
+[5]
+[Total 18]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+8
+(i)
+(a)
+Likelihood is given as
+ n f ( x ;  ) 
+
+L (  ; x )   i  1 i
+  0
+2 n x 1 x 2  x n
+ 2 n
+if   x ( n )  max{ x 1 , x 2 ,  , x n }
+if   x ( n ) .
+Its graph is given below:
+0
+max(x)
+theta
+(b)
+From the graph, the likelihood is maximised at
+  x  n   max  x 1 , x 2 ,  , x n  .
+Page 6Subject CT3 (Probability and Mathematical Statistics) – April 2014 – Examiners’ Report
+(ii)
+(a)
+F X
+ n 
+ x   P  X  n   x   P  X 1  x , X 2  x ,  , X n  x 
+ P  X 1  x  P ( X 2  x )  P ( X n  x )
+ P  X 1  x  n
+as X i are independent
+since X i are identically distributed
+n
+n
+  x 2 u      u 2  x    x  2 n
+   2 du     2     
+  0 
+         0     
+(b)
+Differentiating we obtain
+ 2 nx 2 n  1
+if 0  x  
+
+f X ( n ) ( x )    2 n
+ 0
+otherwise
+
+(c)
+  
+  
+E X  n   
+0
+E X  2 n   
+0
+2 nx 2 n
+
+2 n
+dx 
+2 nx 2 n  1
+ 2 n
+2 n 
+2 n  1
+dx 
+n  2
+n  1
+       
+V X  n   E X  2 n   E X  n 
+(iii)
+2
+2
+
+n  2  2 n  
+n  2
+ 
+
+
+n  1  2 n  1 
+ n  1  2 n  1  2
+ 
+(d) 2 n  1 2 n 
+ 2 n  1
+ 2 n  1
+E 
+X  n   
+E X  n  
+
+2 n
+2 n 2 n  1
+ 2 n
+
+(a)  2 n  1
+
+ 2 n  1
+
+MSE 
+X  n    V 
+X  n  
+ 2 n
+
+ 2 n
+
+2
+ 
+ 2 n  1 
+ 2 n  1 
+ 
+ V X  n   
+
+ 2 n 
+ 2 n 
+(b)
+2
+n  2
+ n  1  2 n  1  2
+ 2
+
+4 n  n  1 
+We have MSE  0 as n  , therefore the estimator is consistent.
+This question was not well answered, and there were some poor efforts especially in part (i).
+In many cases, the plotted graph revealed inadequate understanding of the likelihood
+concept, with some candidates attempting to draw it as a function of x. Note that for full
+marks the likelihood needs to include the range of the parameter and the graph must indicate
+Page 7Subject CT3 (Probability and Mathematical Statistics) – April 2014 – Examiners’ Report
+the value of max(x) on the x-axis. In parts (ii) and (iii) some candidates did not cope well
+with the algebra.
