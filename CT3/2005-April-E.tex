@@ -1,0 +1,253 @@
+PLEASE TURN OVER12
+(i)
+A random variable Y has a Poisson distribution with parameter but there is a
+restriction that zero counts cannot occur. The distribution of Y in this case is
+referred to as the zero-truncated Poisson distribution.
+(a)
+Show that the probability function of Y is given by
+y
+p ( y ) =
+(ii)
+e
+y !(1 e )
+( y = 1, 2, ).
+(b) Show that E [ Y ] = /(1 e ).
+[4]
+(a) Let y 1 , , y n denote a random sample from the zero-truncated Poisson
+distribution.
+Show that the maximum likelihood estimate of
+by the solution to the following equation:
+y
+e
+may be determined
+= 0,
+1 e
+and deduce that the maximum likelihood estimate is the same as the
+method of moments estimate.
+(b)
+(iii)
+Obtain an expression for the Cramer-Rao lower bound (CRlb) for the
+variance of an unbiased estimator of .
+[9]
+The following table gives the numbers of occupants in 2,423 cars observed on
+a road junction during a certain time period on a weekday morning.
+Number of occupants
+Frequency of cars
+1
+1,486
+2
+694
+3
+195
+4
+37
+5
+10
+6
+1
+The above data were modelled by a zero-truncated Poisson distribution as
+given in (i).
+The maximum likelihood estimate of is = 0.8925 and the Cramer-Rao
+lower bound on variance at = 0.8925 is 5.711574 10 4 (you do not need to
+verify these results.)
+CT3 A2005
+(a) Obtain the expected frequencies for the fitted model, and use a 2
+goodness-of-fit test to show that the model is appropriate for the data.
+(b) Calculate an approximate 95% confidence interval for and hence
+calculate a 95% confidence interval for the mean of the zero-truncated
+Poisson distribution.
+[9]
+[Total 22]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+12
+(i)
+(a)
+The probability function for the zero-truncated Poisson distribution is
+given by
+P ( Y
+y | Y
+P ( Y
+0)
+y and Y
+P ( Y 0)
+y
+e
+y !(1 P ( Y
+y
+0))
+e
+( y 1, 2, ).
+y !(1 e )
+(b)
+Expectation of Y:
+y
+E [ Y ]
+y
+y 1
+e
+y !(1 e )
+z
+(1 e )
+(1 e
+Page 6
+)
+z 0
+[1]
+e
+z !
+( z
+.
+(1 e
+)
+y 1)
+0)Subject CT3 (Probability and Mathematical Statistics Core Technical)
+(ii)
+(a)
+The log likelihood function for
+April 2005
+Examiners Report
+is:
+n
+log L ( )
+y i log
+n
+n log(1 e )
+constant
+i 1
+d log L ( )
+d
+ny
+n n
+e
+1 e
+the ML estimate is determined by the solution of the equation
+d log L ( )
+d
+0
+e
+y
+0
+1 e
+As this equation may be rewritten as
+y
+and E [ Y ]
+1 e
+1 e
+the ML estimate is the same as the method of moments estimate.
+(b)
+d 2
+d
+2
+ny
+log L ( )
+n
+2
+and since E [ Y ] E [ Y ]
+e
+(1 e ) 2
+(1 e )
+, the Cramer-Rao lower bound is
+given by,
+1
+CR lb
+E
+or
+d
+d
+2
+log L ( )
+(1 e ) 2
+n (1 e
+1
+2
+e )
+n
+1
+(1 e )
+e
+(1 e ) 2
+.
+Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical)
+(iii)
+(a)
+April 2005
+Examiners Report
+The expected frequencies for the fitted zero-truncated Poisson model
+are given by
+y
+n
+e
+( y 1, 2, ) where
+0.8925 and n
+2423
+y !(1 e )
+y
+e i
+f i
+1
+1500.48
+1486
+2
+669.59
+694
+3
+199.20
+195
+4
+44.45
+37
+( f i e i ) 2
+(1486 1500.48) 2
+=
+e i
+1500.48
+(on 4 df).
+2
+5
+7.93
+10
+6
+1.35
+1
+Total
+2423.00
+2423
+(1 1.35) 2
+= 2.99
+1.35
+The Yellow Book gives that the probability value is greater than 50%,
+therefore there is no evidence to reject the null hypothesis, i.e. the
+model seems appropriate for the data.
+[OR
+(b)
+2
+= 2.68 on 3 df if
+5 combined rather than 6.]
+As approx. ~ N ( , CR lb) for large n, a 95% confidence interval for
+is given by
+1.96 CR lb
+0.8925 1.96 5.711574 10
+at
+4
+, since CR lb
+5.711574
+= 0.8925,
+= 0.8925 1.96(0.0238989) = 0.8925
+= (0.84566, 0.93934)
+0.04684
+Then the 95% confidence interval for the mean of Y ,
+by
+0.84566
+1 e
+Page 8
+10 -4
+0.84566
+,
+0.93934
+1 e
+0.93934
+= (1.48, 1.54).
+1
+, is given
+1 eSubject CT3 (Probability and Mathematical Statistics Core Technical)
