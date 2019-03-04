@@ -1,0 +1,116 @@
+Let X be a random variable with probability density function:
+⎧ 1 x
+⎪ e
+f ( x ) = ⎨ 2
+⎪ 1 e − x
+⎩ 2
+(i)
+; x ≤ 0
+; x > 0
+Show that the moment generating function of X is given by:
+M X ( t ) = (1 − t 2 ) − 1 ,
+for t < 1 .
+(ii)
+CT3 A2014–2
+[3]
+Hence find the mean and the variance of X using the moment generating
+function in part (i).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+5
+Consider ten independent random variables X 1 , ... , X 10 which are identically
+distributed with an exponential distribution with expectation 4.
+10
+(i)
+Specify the approximate distribution of X = ∑ X i , including all parameters,
+i = 1
+using the central limit theorem.
+6
+[2]
+(ii) Calculate the approximate value of the probability P [ X < 40] using the result
+in part (i).
+[1]
+(iii) Calculate the exact probability P [ X < 40] .
+(iv) Comment on the answers in parts (ii) and (iii).
+[3]
+[1]
+[Total 7]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+4
+(i)
+1
+M X ( t )  E ( e ) 
+2
+tX
+1  e ( t  1) x 
+ 
+
+2   t  1  
+0
+
+0
+ e
+( t  1) x
+
+1  e ( t  1) x 
+ 
+
+2   t  1  
+
+1
+dx   e ( t  1) x dx
+2
+0
+
+0
+and for  t  1
+Page 3Subject CT3 (Probability and Mathematical Statistics) – April 2014 – Examiners’ Report
+M X ( t ) 
+(ii)
+1  1
+1 
+1
+
+
+ 
+2  t  1 t  1  1  t 2
+
+M  X ( t )  (1  t 2 )  1   (1  t 2 )  2 (  2 t )  2 t (1  t 2 )  2
+
+
+ E ( X )  M  X (0)  0
+
+M  X ( t )  2 t (1  t 2 )  2
+
+  2(1  t
+2  2
+)
+ 2 t (  2)(1  t 2 )  3 (  2 t )
+ 2(1  t 2 )  2  8 t 2 (1  t 2 )  3
+ E ( X 2 )  M  X (0)  2
+V ( X )  E ( X 2 )  E 2 ( X )  2
+(Alternatively, based on a series expansion:
+M X ( t )  1  t 2  t 4  ...  E ( X )  0 and E ( X 2 )  2 and the variance follows.)
+Generally well answered. In part (ii) most candidates were familiar with the method, but
+some showed poor differentiation skills.
+5
+
+
+(i) X ~ N  ,  2 with   10  4  40 and  2  10   4   160
+(ii) X is symmetric so P  X  40   0.5
+(iii) The exact distribution of X is gamma(10, 1⁄4)
+2
+ 1
+
+P  X  40   P  2   X  20   P  Y  20  where Y has a  2 distribution
+4
+
+
+with 20 d.f.
+P  X  40   P  Y  20   0.5421
+(iv)
+Although the sample size here is small, the CLT gives an answer which is
+close to the exact probability.
+Mostly well answered. There were a few problems with the distributions in part (iii). In part
+(iv) comments should refer to the use of CLT with small samples for full marks.
+Page 4Subject CT3 (Probability and Mathematical Statistics) – April 2014 – Examiners’ Report
