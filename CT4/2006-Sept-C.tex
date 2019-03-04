@@ -1,0 +1,200 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+A commuter catches a bus each morning for 100 days. The buses arrive at the stop
+according to a Poisson process, at an average rate of one per 15 minutes, so if X i is the
+waiting time on day i, then X i has an exponential distribution with parameter
+1
+15
+so
+E[X i ] = 15, Var[X i ] = 15 2 = 225.
+(i) Calculate (approximately) the probability that the total time the commuter
+spends waiting for buses over the 100 days exceeds 27 hours.
+[3]
+(ii) At the end of the 100 days the bus frequency is increased, so that buses arrive
+at one per 10 minutes on average (still behaving as a Poisson process). The
+commuter then catches a bus each day for a further 99 days. Calculate
+(approximately) the probability that the total time spent waiting over the
+whole 199 days exceeds 40 hours.
+[3]
+[Total 6]
+CT3 S2006
+3
+PLEASE TURN OVER8
+Let X 1 denote the mean of a random sample of size n from a normal population with
+mean
+2
+1 ,
+and variance
+and let X 2 denote the mean of a random sample also of
+size n from a normal population with the same mean
+two samples are independent.
+but with variance
+2
+2 .
+The
+Define W as the weighted average of the sample means
+W
+X 1 (1
+) X 2
+(i) Show that W is an unbiased estimator of . [1]
+(ii) Obtain an expression for the mean square error of W. [2]
+(iii) Show that the value of
+given by
+2
+2
+2
+1
+2
+2
+for which W has minimum mean square error is
+,
+and verify that the optimum corresponds to a minimum.
+9
+[3]
+(iv) Consider the special case when the variances of the two random samples are
+equal to a common value 2 . State (do not derive) the maximum likelihood
+estimator of calculated from the combined samples, and compare it with the
+estimator obtained in (iii).
+
+
+7
+(i)
+As stated in the question, if X i is the waiting time on day i, then X i has an
+exponential distribution with parameter
+1
+15
+so E(X i ) = 15, Var(X i ) = 15 2 = 225.
+If X is the total waiting time over the 100 days, X = ∑ i = 1 X i ,
+100
+Page 5Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
+so E [ X ] = 1500 and Var [ X ] = 22500 and by the CLT
+X has approximately an N (1500, 22500) distribution,
+⎛ 1620 − 1500 ⎞
+so P ( X > 1620) ≈ 1 − Φ ⎜
+⎟ = 1 − Φ(0.8) = 0.2119.
+150
+⎝
+⎠
+(ii)
+If Y j is the waiting time on day j of the extra 99 days, then E ( Y j ) = 10 and
+Var ( Y j ) = 100 so that if Y =
+∑ j = 1 Y j
+99
+is the total waiting time over the 99 days,
+then Y is approximately N (990,9900) by CLT.
+If Z = X + Y (so that Z is the total waiting time over the whole 199 days), then
+since X and Y are independent, Z is approximately N (1500+990, 22500+9900),
+i.e. N (2490, 32400).
+⎛ 2400 − 2490 ⎞
+Hence P ( Z > 2400) ≈ 1 − Φ ⎜
+⎟ = 1 − Φ(−0.5) = Φ(0.5) = 0.6915.
+180
+⎝
+⎠
+8
+(i)
+E ( W ) = E ( α X 1 + (1 − α ) X 2 )
+= α E ( X 1 ) + (1 − α ) E ( X 2 ) = αμ + (1 − α ) μ = μ
+Therefore W is unbiased.
+(ii)
+MSE(W) = var(W) + {bias(W)} 2
+W is unbiased
+∴ MSE(W) = var(W)
+= var( α X 1 + (1 − α ) X 2 )
+= α 2 var( X 1 ) + (1 − α ) 2 var( X 2 ) (independent samples)
+= α 2
+(iii)
+σ 1 2
+σ 2
++ (1 − α ) 2 2
+n
+n
+σ 2
+σ 2
+d MSE
+= 2 α 1 − 2(1 − α ) 2
+d α
+n
+n
+d MSE
+= 0 ⇒ ( σ 1 2 + σ 2 2 ) α = σ 2 2
+d α
+Page 6Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
+σ 22
+∴ α=
+σ 1 2 + σ 2 2
+d 2 MSE
+d α 2
+(iv)
+= 2
+σ 1 2
+σ 2
++ 2 2 > 0 ∴ minimum
+n
+n
+The maximum likelihood estimator of μ in the special case with
+σ 1 2 = σ 2 2 = σ 2 is
+μ ˆ =
+=
+nX + nX 2
+sum of observations
+= 1
+number of observations
+2 n
+1
+1
+X 1 + X 2
+2
+2
+This is the same as W since
+α=
+9
+(i)
+σ 2 2
+σ 1 2
++ σ 2 2
+=
+σ 2
+2
+σ +σ
+2
+=
+1
+1
+1
+⇒ W = X 1 + X 2 .
+2
+2
+2
