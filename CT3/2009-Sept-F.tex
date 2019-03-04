@@ -34,16 +34,11 @@
 \begin{enumerate}
 
 CT3 S2009—612
-A bank has a free telephone number for its customer services department. Often the
-call volume is heavy and customers are placed on hold until a staff member is
-available to answer. The bank hopes that a caller remains on hold until the call is
+A bank has a free telephone number for its customer services department. Often the call volume is heavy and customers are placed on hold until a staff member is available to answer. The bank hopes that a caller remains on hold until the call is
 answered, so as not to upset or lose an existing or potential customer.
-A survey was conducted to analyse whether callers would remain on hold longer (on
-average), if they heard a recorded message containing: (A) an advertisement about the
-bank’s products; (B) “easy listening” music; or (C) classical music. The bank
-randomly selected a sample of five unanswered calls under each recorded message,
-and the length of time (in minutes) that the caller remained on hold before hanging up
-is given in the table below.
+A survey was conducted to analyse whether callers would remain on hold longer (on average), if they heard a recorded message containing: (A) an advertisement about the bank’s products; (B) “easy listening” music; or (C) classical music. The bank
+randomly selected a sample of five unanswered calls under each recorded message, and the length of time (in minutes) that the caller remained on hold before hanging up is given in the table below.
+
 Recorded message
 Time
 Total
@@ -56,29 +51,21 @@ C: classical music
 14
 52
 For these data Σy = 93, Σy 2 = 865
-Let μ A , μ B , μ C denote the mean telephone holding times under recorded message A,
-B and C respectively.
+Let μ A , μ B , μ C denote the mean telephone holding times under recorded message A, B and C respectively.
 (i)
-(a) Perform an analysis of variance to test the hypothesis that the nature of
-the recorded message has no effect on the length of time that callers
-remain on hold. You should construct an appropriate ANOVA table
-and state your conclusion clearly.
-(b) Calculate a 95% confidence interval for μ A − μ C , using information
-available from all three samples.
-[11]
+(a) Perform an analysis of variance to test the hypothesis that the nature of the recorded message has no effect on the length of time that callers remain on hold. You should construct an appropriate ANOVA table and state your conclusion clearly.
+(b) Calculate a 95\% confidence interval for μ A − μ C , using information available from all three samples.
 An equivalent approach for analysing the effects of the recorded messages on holding
 time is the following:
 consider the regression model E [ Y i ] = a + b 1 x i 1 + b 2 x i 2 , i = 1, 2, ..., 15, where
-Y i is the telephone holding time and x i 1 , x i 2 are indicator variables such that
-x i 1 = 1 if the message for caller i contains an advertisement (and 0 otherwise),
-and x i 2 = 1 if the message contains easy listening music (and 0 otherwise).
+Y i is the telephone holding time and x i 1 , x i 2 are indicator variables such that x i 1 = 1 if the message for caller i contains an advertisement (and 0 otherwise), and x i 2 = 1 if the message contains easy listening music (and 0 otherwise).
 The results from fitting this model are given below:
 Coef.
 Intercept
 x 1
 x 2
 s = 3.406
-CT3 S2009—7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 10.400
 −5.000
 −7.600
@@ -93,7 +80,8 @@ p-value
 −3.528
 0.004
 R-sq = 51.7%
-PLEASE TURN OVER(ii)
+%-------------------------------------------------------------------------------%
+(ii)
 Using the fitted model:
 (a) Calculate the predicted value for the telephone holding time when the
 message contains classical music.
@@ -114,7 +102,7 @@ CT3 S2009—8
 2
 y A = 27, y B = 14, y C = 52 , y = 93, y = 865
 SST = 865 – 932/15 = 288.4
-Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2009 — Examiners’ Report
+
 2
 2
 2
@@ -133,10 +121,8 @@ Total 14 288.4
 (b)
 F = 74.6/11.6 = 6.431 on (2,12) degrees of freedom. 1
 From yellow tables, F 2,12 (0.05) = 3.885 and F 2,12 (0.01) = 6.927. 1
-We can reject the hypothesis of “no message effect” at the 5%
-significance level, but not at the 1% level. We have some evidence
-against the “no message effect” hypothesis and conclude that there
-is a message effect. 1
+We can reject the hypothesis of “no message effect” at the 5% significance level, but not at the 1% level. We have some evidence
+against the “no message effect” hypothesis and conclude that there is a message effect. 1
 t 12 (0.025) = 2.179 1
 1
 95% CI is (5.4 10.4) 2.179 11.6
@@ -180,5 +166,4 @@ A
 C
 the value 0, and thus we reject H 0 at the 5% level.
 2
-END OF EXAMINERS’ REPORT
-Page 8
+\ned{document}
