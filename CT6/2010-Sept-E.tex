@@ -1,0 +1,143 @@
+[1]
+[Total 10]
+An insurance company has a portfolio of 10,000 policies covering buildings against
+the risk of flood damage.
+(i)
+State the conditions under which the annual number of claims on the portfolio
+can be modelled by a binomial distribution B(n, p) with n = 10,000.
+[3]
+These conditions are satisfied and p = 0.03. Individual claim amounts follow a
+normal distribution with mean 400 and standard deviation 50. The insurer wishes to
+take out proportional reinsurance with the retention α set such that the probability of
+aggregate payments on the portfolio after reinsurance exceeding 120,000 is 1%.
+(ii)
+Calculate α assuming that aggregate annual claims can be approximated by a
+normal distribution.
+[7]
+This reinsurance arrangement is set up with a reinsurer who uses a premium loading
+of 15%.
+(iii)
+Calculate the annual premium charged by the reinsurer.
+[2]
+As an alternative, the reinsurer has offered an individual excess of loss reinsurance
+arrangement with a retention of M for the same annual premium. The reinsurer uses
+the same 15% loading to calculate premiums for this arrangement.
+(iv)
+Show that the retention M is approximately 358.50.
+[4]
+[You may wish to use the following formula which is given on page 18 of the Tables:
+If f(x) is the PDF of the N(μ, σ 2 ) distribution then
+U
+∫ L
+xf ( x ) dx = μ [ Φ ( U ') − Φ ( L ') ] − σ [ φ ( U ') − φ ( L ') ]
+where L ' =
+L −μ
+U −μ
+.
+and U ' =
+σ
+σ
+Here Φ(z) is the cumulative density function of the N(0, 1) distribution and
+φ ( z ) =
+e
+CT6 S2010—5
+−
+z 2
+2
+2 π
+.]
+[Total 16]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+Page 9Subject CT6 (Statistical Methods Core Technical) — September 2010 — Examiners’ Report
+10
+(i)
+We require:
+•
+•
+•
+(ii)
+The risk of flood damage is a constant p for each building.
+There can only be one claim per policy per year.
+The risk of flood damage is independent from building to building.
+Let the individual claim amounts net of re-insurance be X. Then
+E ( α X ) = α E ( X ) = 400 α
+And Var ( α X ) = α 2 Var ( X ) = (50 α ) 2
+So if Y represents the aggregate annual claims net of re-insurance, then we
+have:
+E ( Y ) = 10, 000 × 0.03 × 400 α = 120, 000 α
+and
+Var ( Y ) = 10, 000 × 0.03 × (50 α ) 2 + 10, 000 × 0.03 × 0.97 × (400 α ) 2 = 47,310, 000 α 2
+= (6,878.23 α ) 2
+We require α to be chosen so that
+P ( Y > 120, 000) = 0.01
+i.e. P ( N (0,1) >
+120, 000 − 120, 000 α
+) = 0.01
+6,878.23 α
+120, 000 − 120, 000 α
+= 2.3263
+6,878.23 α
+i.e. α =
+(iii)
+120 , 000
+= 0 . 8823476 ; α = 88 . 2 % to 3 sf
+120 , 000 + 2 . 3263 × 6 , 878 . 23
+The mean claim amount for the re-insurer is ( 1 − 0 . 882 ) × 400 = 47 . 20
+The annual premiums for reinsurance are 10 , 000 × 0 . 03 × 47 . 20 × 1 . 15 = 16 , 284
+Page 10Subject CT6 (Statistical Methods Core Technical) — September 2010 — Examiners’ Report
+(iv)
+We must show that using a retention of 358.50 to calculate the premium for
+the individual excess of loss arrangement gives the same result as the
+proportional reinsurance arrangement in part (ii).
+We first calculate the mean claim amount paid by re-insurer. This is equal to
+∞
+∫
+( x − 358.50) f ( x ) dx
+358.50
+⎛
+358.50 − 400 ⎤
+358.50 − 400 ⎤
+⎡
+⎡
+⎛ 358.50 − 400 ⎞ ⎞
+= 400 ⎢ 1 − Φ (
+) ⎥ − 50 ⎢ 0 − φ (
+) ⎥ − 358.50 × ⎜ 1 − Φ ⎜
+⎟ ⎟
+50
+50
+50
+⎣
+⎦
+⎣
+⎦
+⎝
+⎠ ⎠
+⎝
+This gives
+400 [ 1 − Φ ( − 0.83) ] + 50 φ ( − 0.83) − 358.50 × (1 − Φ ( − 0.83))
+1 −
+= 400 × 0.79673 + 50 ×
+e
+2 π
+= 47.20
+0.83 2
+2
+− 358.50 × 0.79673
+Then the aggregate premium charged will be 10, 000 × 0.03 × 47.20 × 1.15 =
+16,284 which is the same as under the first arrangement as required.
+Carrying forward more than 3 significant figures from the result in (ii) gives a slightly
+different value in (iii). To full accuracy, the solution in (iii) becomes 16,236 resulting in a
+minor discrepancy between the answers in (iii) and (iv). This appears not to have concerned
+candidates who were generally happy to observe that the results in (iii) and (iv) were
+approximately equal. The examiners gave credit for either approach.
+This question was a good differentiator – the better prepared candidates were able to score
+well whilst weaker candidates struggled.
