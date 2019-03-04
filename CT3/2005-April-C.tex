@@ -1,0 +1,172 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+[3]
+For a group of policies the total number of claims arising in a year is modelled as a
+Poisson variable with mean 10. Each claim amount, in units of £100, is independently
+modelled as a gamma variable with parameters = 4 and = 1/5.
+Calculate the mean and standard deviation of the total claim amount.
+CT3 A2005
+2
+[5]8
+9
+The distribution of claim size under a certain class of policy is modelled as a normal
+random variable, and previous years records indicate that the standard deviation is
+£120.
+(i) Calculate the width of a 95% confidence interval for the mean claim size if a
+sample of size 100 is available.
+[2]
+(ii) Determine the minimum sample size required to ensure that a 95% confidence
+interval for the mean claim size is of width at most £10 .
+[2]
+(iii) Comment briefly on the comparison of the confidence intervals in (i) and (ii)
+with respect to widths and sample sizes used.
+[1]
+[Total 5]
+Let X 1 , , X n denote a large random sample from a distribution with unknown
+population mean and known standard deviation 3. The null hypothesis H 0 : = 1 is
+to be tested against the alternative hypothesis H 1 : > 1, using a test based on the
+sample mean with a critical region of the form X
+k , for a constant k.
+It is required that the probability of rejecting H 0 when = 0.8 should be
+approximately 0.05, and the probability of not rejecting H 0 when = 1.2 should be
+approximately 0.1.
+(i)
+Show that the test requires
+k 0.8
+3/ n
+where
+(ii)
+0.95 and
+k 1.2
+3/ n
+0.10
+is the standard normal distribution function.
+[4]
+The values for the sample size n and the critical value k which satisfy the
+requirements of part (i) are n = 482 and k = 1.025 (you are not asked to verify
+these values).
+Calculate the approximate level of significance of the test, and comment on
+the value.
+[3]
+[Total 7]
+CT3 A2005
+3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Let S = X 1 + X 2 + . . . + X N be the total claim amount.
+Note that E[N] = V[N] = 10, E[X] = 4/(1/5) = 20, V[X] = 4/(1/5) 2 = 100
+E[S] = E[N]E[X] = 10(20) = 200
+mean of total claim amount = £20,000.
+V[S] = E[N]V[X] + V[N]{E[X]} 2
+=10(100) + 10(20) 2 = 5000
+s.d.[S] = 70.71
+8
+(i)
+s.d. of the total claim amount = £7,071
+Width of 95% confidence interval: 1.96
+120
+120
+[or 2 1.96
+n
+n
+3.92
+120
+]
+n
+120
+23.52
+100
+120
+[or 2 1.96
+£47.04]
+100
+1.96
+(ii)
+For the width of a 95% confidence interval to be at most
+120
+1.96
+10
+n
+n
+1.96 120
+10
+23.52 , n
+10 we require
+553.19
+i.e., take the sample size as 554.
+Page 3Subject CT3 (Probability and Mathematical Statistics Core Technical)
+9
+(iii) The confidence interval in (ii) in narrower
+much larger sample size.
+(i) X approx
+0.05
+N
+,
+3 2
+n
+April 2005
+Examiners Report
+to achieve this we require a
+for large n by the central limit theorem.
+P(reject H 0 | = 0.8) = P( X > k| = 0.8)
+k 0.8
+3/ n
+= 1
+k 0.8
+3/ n
+0.95
+and
+0.1
+P(do not reject H 0 | = 1.2)
+= P ( X
+1.2)
+k 1.2
+3/ n
+=
+(ii)
+k |
+Significance level
+1
+= P(reject H 0 when H 0 is true) = P ( X
+1.025 1
+3 / 482
+1
+k |
+1)
+(0.18) 1 0.57 0.43.
+The significance level of the test is very high (43%).
