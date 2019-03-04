@@ -1,0 +1,298 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+PLEASE TURN OVER10
+A model used for claim amounts (X, in units of £10,000) in certain circumstances has
+the following probability density function, f(x), and cumulative distribution function,
+F(x):
+f ( x ) =
+5(10 5 )
+(10 x )
+, x
+6
+0 ; F ( x ) = 1
+10
+10 x
+5
+.
+You are given the information that the distribution of X has mean 2.5 units (£25,000)
+and standard deviation 3.23 units (£32,300).
+(i) Describe briefly the nature of a model for claim sizes for which the standard
+deviation can be greater than the mean.
+[2]
+(ii) (a)
+Show that we can obtain a simulated observation of X by calculating
+x = 10 (1 r )
+0.2
+1
+where r is an observation of a random variable which is uniformly
+distributed on (0,1).
+(b)
+Explain why we can just as well use the formula
+x = 10 r
+0.2
+1
+to obtain a simulated observation of X.
+(c)
+Calculate the missing values for the simulated claim amounts in the
+table below (which has been obtained using the method in (ii)(b)
+above):
+r Claim (£)
+0.7423
+0.0291
+0.2770
+0.5895
+0.1131
+0.9897
+0.6875
+0.8525
+0.0016
+0.5154 6,141
+10,2872
+29,272
+11,148
+54,635
+207
+7,782
+3,243
+?
+?
+[5]
+[Total 7]
+CT3 A2005
+411
+Twenty insects were used in an experiment to examine the effect on their activity
+level, y, of 3 standard preparations of a chemical. The insects were randomly
+assigned, 4 to receive each of the preparations and 8 to remain untreated as controls.
+Their activity levels were metered from vibrations in a test chamber and were as
+follows:
+Activity levels (y)
+Totals
+Control
+Preparation A
+Preparation B
+Preparation C 43
+73
+84
+46
+40
+55
+63
+91
+For these data y = 1, 203 ,
+65
+61
+51
+84
+51
+65
+72
+71
+33
+39
+54
+62
+387
+254
+270
+292
+y 2 = 77, 249 .
+(i) Conduct an analysis of variance test to establish whether the data indicate
+significant differences amongst the results for the four treatments.
+[7]
+(ii) (a)
+Complete the following table of residuals for the data and analysis in
+part (i) above:
+Control
+Preparation A
+Preparation B
+Preparation C
+(iii)
+?
+9.5
+16.5
+?
+?
+8.5
+?
+?
+16.6
+2.5
+16.5
+?
+2.6
+1.5
+4.5
+2
+15.4
+9.4
+5.6 13.6
+(b) Make a rough plot of the residuals against the treatment means.
+(c) State the assumptions underlying the analysis of variance test
+conducted in part (i).
+(d) Comment on how well the data conform to these assumptions in the
+light of the residual plot.
+[8]
+It is suggested that any differences can be explained in terms of a difference
+between controls on the one hand and treated groups on the other.
+Comment on any evidence for this and state how you would formally test for
+this effect (but do not carry out the test).
+[4]
+[Total 19]
+CT3 A2005
+5
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+10
+(i) X takes positive values only so to have such a relatively high standard
+deviation the distribution must be positively skewed with sizeable probability
+associated with high values (i.e. the model embraces high claim sizes; the
+density has a long or heavy tail).
+(ii) (a) Solving r = F(x)
+(b) R ~ U(0,1) 1 R ~ U(0, 1) so (1 r) is also a random number from
+(0, 1), so we can use 1 r in place of r , giving the formula
+x 10 r
+(c)
+Page 4
+0.2
+r = 0.0016
+r = 0.5154
+(1 + x/10) = (1 r)
+1
+claim = 262390
+claim = 14175
+0.2
+x = 10[(1
+r)
+0.2
+1]Subject CT3 (Probability and Mathematical Statistics Core Technical)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555
+(i)
+SS T = 77249 1203 2 /20 = 4888.55
+SS B = 387 2 /8 + 254 2 /4 + 270 2 /4 + 292 2 /4
+SS R = 2857.875
+Examiners Report
+1203 2 /20 = 2030.675
+H 0 : no treatment effects (i.e. population means are equal) v H 1 : not H 0
+Analysis of Variance
+Source
+DF
+SS
+Factor
+3
+2031
+Error
+16
+2858
+Total
+19
+4889
+MS
+677
+179
+F
+3.79
+F 3,16 (0.05) = 3.239, F 3,16 (0.01) = 5.292
+P-value is lower than 0.05 (but higher than 0.01), so we can reject H 0 at least
+at the 5% level of testing (Note: actually P-value is 0.032). The data do
+indicate significant differences amongst the treatment means.
+(ii)
+(a)
+Residual = observed value treatment mean
+Treatment means are: Control 48.375, A 63.5, B 67.5, C 73.0
+Missing values are:
+Control
+Preparation A
+Preparation B
+Preparation C
+5.4
+9.5
+16.5
+27
+8.4
+8.5
+4.5
+18
+16.6
+2.5
+16.5
+11
+2.6
+1.5
+4.5
+2
+15.4
+9.4
+5.6
+13.6
+(b)
+20
+10
+11
+April 2005
+0
+-10
+-20
+-30
+means
+treatment
+50
+Control
+60
+70
+A
+B
+C
+Page 5Subject CT3 (Probability and Mathematical Statistics Core Technical)
+(iii)
+April 2005
+Examiners Report
+(c) Observations Y ij (j th value for treatment i) are independent and
+normally distributed with variance 2 which is constant across
+treatments.
+(d) The assumptions seem reasonable
+with the exception of the constant
+variance assumption, which is questionable
+the data for preparation
+A appear to be less variable than the data for the other treatments.
+The control mean is lower than all three treatment means
+(48.4 v 63.5, 67.5, 73.0) so there is prima facie evidence to support the
+suggestion.
+One could perform a two-sample t-test of control mean = treatment mean
+by combining the data for the 3 preparations (and using samples of sizes 8
+and 12).
