@@ -1,0 +1,142 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In an opinion poll, a sample of 100 people from a large town were asked which
+candidate they would vote for in a forthcoming national election with the following
+results:
+Candidate
+Supporters
+(i)
+A
+32
+B
+47
+C
+21
+Determine the approximate probability that candidate B will get more than
+50% of the vote.
+[3]
+A second opinion poll of 150 people was conducted in a different town with the
+following results:
+Candidate
+Supporters
+(ii)
+7
+A
+57
+B
+56
+C
+37
+Use an appropriate test to decide whether the two towns have significantly
+different voting intentions.
+[7]
+[Total 10]
+Let X and Y be two continuous random variables.
+(i)
+Prove that E [ E [ Y | X ]] = E [ Y ].
+[3]
+Suppose the number of claims, N, on a policy follows a Poisson distribution with
+mean μ, and the amount of the i th claim, X i , follows a Gamma distribution with
+parameters α and λ. Let S denote the total value of claims on a policy in a given year.
+(ii)
+Derive the mean of S using the result in part (i).
+[2]
+Suppose μ = 0.15, α = 100, and λ = 0.1.
+(iii)
+CT3 A2014–3
+Calculate the variance of S.
+[3]
+[Total 8]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6
+(i) 
+
+B  0.47
+0.5  0.47
+P  B  0.5   P 
+
+
+1  0.47
+1  0.47
+0.47 *
+ 0.47 *
+100
+100
+
+(ii) H 0 = Towns have the same voting intentions
+
+
+  1  Φ  0.601   0.274
+
+
+
+Actual Candidate
+Town 1
+Town 2 A
+32
+57
+89 B
+47
+56
+103 C
+21
+37
+58 Sum
+100
+150
+250
+Expected Candidate
+Town 1
+Town 2 A
+35.6
+53.4
+89 B
+41.2
+61.8
+103 C
+23.2
+34.8
+58 100
+150
+250
+0.364 0.817 0.209 0.243 0.544 0.139
+( f  e ) 2
+e
+Test statistic = 2.315
+Degrees of freedom = (3  1)*(2  1) = 2. Approximate p-value of X 2 2
+distribution is between 0.30 and 0.32 (0.314 from interpolation.)
+Therefore we fail to reject H 0 that towns have the same voting intentions.
+The wording in part (i) of the question was not entirely clear, as the question should in fact
+refer to the probability that the candidate will get more than 50% of the vote in a different
+sample of the same size. However, there was very little evidence that candidates were
+confused by this, and marking was generous in cases where answers seemed to be affected.
+In general the question was very well answered. Answers including a continuity correction
+were also given full marks in part (i).
+7
+(i)
+E   E  Y | X      E  Y | x  f X  x  dx   (  yf y | x  y  dy ) f X  x  dx
+  yf  x , y  dydx  E  Y 
+(ii)
+E  S   E   E  S | N     E   E  X 1  X N | N     E  N  /     / 
+Page 5Subject CT3 (Probability and Mathematical Statistics) – April 2014 – Examiners’ Report
+(iii)
+As S is compound Poisson,
+V  S    E  X 2 
+ 
+     2 
+   2    
+     
+
+
+ 100  100  2 
+
+ 0.15*  2  
+ 0.1  0.1   
+
+
+ 0.15*  1, 010, 000 
+ 151, 500
+Some mixed performance in part (i), which suggests that some candidates struggled with
+basic integration skills. The rest of the question was answered well. Use of alternative
+formulae was given full credit where correct.
