@@ -1,0 +1,127 @@
+CT3 S2007—612
+Consider a situation in which the data consist of two responses at each of five values
+of an explanatory variable (x = 1, 2, 3, 4, 5), so we have a data set with ten responses
+(y), as in the following table:
+1
+12
+x
+y
+1
+19
+2
+18
+2
+35
+3
+19
+3
+44
+4
+32
+4
+53
+5
+44
+5
+65
+For these data x = 30, y = 341, x 2 = 110, y 2 = 14,345 , xy = 1,211
+(i)
+(ii)
+You are asked to carry out a linear regression analysis using these data.
+(a) Draw a plot of the data to show the relationship between the response
+and explanatory values.
+(b) Calculate the total, regression, and residual sums of squares for a least-
+squares linear regression analysis of y on x, and hence calculate the
+value of R 2 , the coefficient of determination.
+(c) Determine the equation of the fitted regression line.
+(d) Calculate a 95% confidence interval for the slope of the underlying
+regression line.
+[12]
+A colleague suggests that it will be simpler and will produce the same results
+if we use the following reduced data, in which the two responses at each x
+value are replaced by their mean:
+x
+y
+1
+2
+3
+4
+5
+15.5 26.5 31.5 42.5 54.5
+The details of the regression analysis for these data are given in the box below.
+Regression equation: y = 5.90 + 9.40 x
+Coef Stdev t-ratio p-val
+Intercept
+x 5.900
+9.400 2.233
+0.673 2.64
+13.96 0.078
+0.001
+s = 2.129 R-sq = 98.5%
+Analysis of Variance
+Source
+df
+SS
+Regression 1 883.60
+Error
+3
+13.60
+Total
+4 897.20
+MS
+F
+p-val
+883.60 194.91 0.001
+4.53
+Discuss the similarities and the differences between the two approaches and their
+results, in particular addressing the claim by the colleague that the two analyses will
+produce “the same results”.
+[6]
+[Total 18]
+END OF PAPER
+CT3 S2008—7
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+12
+(i)
+(a)
+(b)
+SSTOT = S yy = 14345 – 341 2 /10 = 2716.9
+Σx = 30, Σx 2 = 110 so S xx = 110 – 30 2 /10 = 20
+S xy = 1211 − 30*341/10 = 188
+∴SSREG = 188 2 /20 = 1767.2
+SSRES = 2716.9 − 1767.2 = 949.7
+R 2 = 1767.2/2716.9 = 0.650 (65.0%)
+(c)
+y = a + bx:
+b ˆ = 188 / 20 = 9.4
+a ˆ = 341/10 − 9.4 × (30 /10) = 5.9
+Fitted line is y = 5.9 + 9.4x
+(d)
+()
+t 8 (0.025) = 2.306
+Page 8
+1/ 2
+⎛ 949.7 / 8 ⎞
+s . e . b ˆ = ⎜
+⎟
+⎝ 20 ⎠
+= 2.4363Subject CT3 (Probability and Mathematical Statistics Core Technical) — September2008 — Examiners’ Report
+95% confidence interval for b is given by 9.4 ± 2.306 × 2.4363
+i.e. 9.4 ± 5.62 i.e. (3.78, 15.02)
+(ii)
+When we replace the pair of responses by their mean:
+the equation of the fitted line remains the same
+but otherwise the analyses do not produce “equivalent results”
+the “fit” of the line is very much better [the goodness-of-fit measure R 2 increases
+to a very high value − from 65% to 98.5%]
+plus, for example:
+the estimate of the slope has a much lower standard error (2.436 drops to 0.6733)
+the SSTOT drops hugely (from 2716.9 on 9df to 897.2 on 4df)
+the residual error (SSRES) drops hugely [from 949.7 on 8df (error variance
+estimate 118.7 ) to 13.60 on 3 df (error variance estimate 4.53)]
+BUT we lose all information on the variation of the response for a given value of
+the explanatory variable
+Note: these and other relevant comments will receive credit.
+END OF EXAMINERS’ REPORT
+Page 9
