@@ -1,0 +1,186 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+[3]
+6
+A random sample of 16 observations was selected from each of four populations.
+Given that the between treatments mean square is 280 and the total sum of squares is
+SS T = 1,500, construct an analysis of variance table and test the null hypothesis that
+the means of the four populations are equal.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+27
+A sample of 20 claim amounts (£) on a group of household policies gave the
+following data summaries:
+x = 3,256 and
+8
+x 2 = 866,600.
+(a) Calculate the sample mean and standard deviation for these claim amounts.
+(b) Comment on the skewness of the distribution of these claim amounts, giving
+reasons for your answer.
+[4]
+A simple procedure for incorporating a no claims discount into an annual insurance
+policy is as follows:
+a premium of £400 is payable for the first year;
+if no claim is made in the first year, the premium for the second year is £400k,
+where k is a constant such that 0 < k < 1;
+if no claim is made in the first and second years, the premium for the third
+year is £400k 2 ;
+if no subsequent claims are made in future years, the premium remains as
+£400k 2 ;
+if a claim is made, the premium the following year reverts to £400 and the
+procedure starts again as above.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\begin{enumerate}
+\item
+Show that the probability distribution of the premium for the fourth year, that
+is, for the year following the third year, is given by
+£400
+with probability
+£400k with probability
+£400k 2 with probability
+p
+p(1 p)
+(1 p) 2
+where p is the probability of a claim being made in any year.
+
+\item  Obtain an expression for the expected premium for the fourth year under this
+procedure.
+
+\item If it is desired that this expected premium should equal £300, determine the
+required value of k for the case where p = 0.1.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+Random samples are taken from two independent normally distributed populations
+(with means 1 and 2 respectively) with the following results.
+Sample from population 1:
+sample size n 1 = 11, sample mean x 1 124 , sample variance s 1 2
+59
+Sample from population 2:
+sample size n 2 = 15, sample mean x 2 105 , sample variance s 2 2
+42
+Calculate a 95% confidence interval for 1
+2 , the difference between the
+population means (you may assume that the population variances are equal).
+[5]
+\newpage
+
+
+6
+Source of variation
+Between groups
+Residual
+Total
+d.f.
+3
+60
+63
+SS
+840
+660
+1500
+MSS
+280
+11
+F = 280/11 which equals 25.45.
+Therefore there is overwhelming evidence to suggest that the four population
+means are not equal (F 3,60 (5%) = 2.758, F 3,60 (1%) = 4.126).
+7
+(a)
+x
+s
+8
+2
+1
+(3256) 162.8
+20
+1
+3256 2
+866600
+19
+20
+17711.7
+s 133.1
+(b) Distribution must have strong positive skewness
+since the s.d. is large relative to the mean and the amounts must be positive.
+(i) Using C for a claim, N for no claim, then
+P(premium = 400) = P(C in year 3, regardless of the first 2 years) = p
+P(premium = 400k) = P(CN in years 2/3, regardless of the first year) = p(1 p)
+P(premium = 400k 2 ) = P(NN in years 2/3, regardless of the first year) = (1 p) 2
+[These probabilities may be derived in other ways, such as via a tree diagram]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+(ii) E(premium) = 400.p + 400k.p(1 p) + 400k 2 .(1
+= 400{p + kp(1 p) + k 2 (1 p) 2 }
+(iii) For E(premium) = 300 when p = 0.1
+then 0.1 + 0.09k + 0.81k 2 = 0.75
+0.81k 2 + 0.09k
+0.09 2 4(0.81)(0.65)
+1.62
+0.09
+k
+k
+9
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+p) 2
+0.09 1.454
+1.62
+0.65 = 0
+for 0 k 1
+0.84
+Pooled estimate of common population variance =
+10 59
+14 42
+10 14
+49.0833
+t 24 (0.025) = 2.064
+95% CI for
+1
+124 105
+10
+2
+is given by
+2.064
+49.0833
+1 1
+11 15
+1/ 2
+i.e. 19 5.74 i.e. 13.3 , 24.7
+\end{document}

@@ -1,0 +1,388 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+13
+A survey, carried out at a major flower and gardening show, was concerned with the
+association between the intention to return to the show next year and the purchase of
+goods at this year s show. There were 220 people interviewed and of these 101 had
+made a purchase; 69 of these people said they intended to return next year. Of the
+119 who had not made a purchase, 68 said they intended to return next year.
+(i)
+Suppose one of the 220 people surveyed is selected at random.
+Calculate the probabilities that the selected person:
+(a)
+(b)
+(c)
+(ii)
+CT3 S2005
+intends to return next year, given that he/she has made a purchase
+intends to return next year, given that he/she has not made a purchase
+has made a purchase, given that he/she intends to return next year
+[3]
+By testing the difference between the proportions of purchasers and non-
+purchasers who intend to return next year, examine whether there is sufficient
+evidence to justify concluding that the intention to return depends on whether
+or not a purchase was made.
+[7]
+614
+(iii) Present the data as a contingency table and perform a 2 test of association
+between the attributes intention to return and purchasing status .
+[5]
+(iv) Discuss briefly the connection between the comparison of proportions carried
+out in part (ii) and the test of association performed in part (iii).
+[2]
+[Total 17]
+The data given in the following table are the numbers of deaths from AIDS in
+Australia for 12 consecutive quarters starting from the second quarter of 1983.
+1
+1
+Quarter (i):
+Number of deaths (n i ):
+(i)
+2
+2
+3
+3
+4
+1
+5
+4
+6 7 8 9
+9 18 23 31
+10
+20
+11
+25
+12
+37
+(a) Draw a scatterplot of the data.
+(b) Comment on the nature of the relationship between the number of
+deaths and the quarter in this early phase of the epidemic.
+[4]
+(ii)
+A statistician has suggested that a model of the form
+E N i = i 2
+might be appropriate for these data, where is a parameter to be estimated
+from the above data. She has proposed two methods for estimating , and
+these are given in parts (a) and (b) below.
+(a)
+Show that the least squares estimate of , obtained by minimising
+q =
+12
+( n
+i 1 i
+=
+(b)
+i 2 ) 2 , is given by
+12 2
+i n i
+i 1
+12 4
+i
+i 1
+.
+Show that an alternative (weighted) least squares estimate of ,
+obtained by minimising q * =
+(c)
+= 12
+n
+i 1 i
+12 2
+i
+i 1
+Noting that 12 4
+i
+i 1
+12
+i 1
+i 2
+n i
+i 2
+2
+is given by
+.
+= 60, 710 and
+12 2
+i
+i 1
+= 650 , calculate
+and
+for the above data.
+[8]
+CT3 S2005
+7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+To assess whether the single parameter model which was used in part (ii) is
+appropriate for the data, a two parameter model is now considered. The model
+is of the form
+E N i = i
+for i = 1,
+(a)
+, 12.
+To estimate the parameters and , a simple linear regression model
+E Y i =
+x i
+is used, where x i = log(i) and Y i = log(N i ) for i = 1, , 12. Relate the
+parameters and to the regression parameters and .
+(b)
+The least squares estimates of and are 0.6112 and 1.6008 with
+standard errors 0.4586 and 0.2525 respectively (you are not asked to
+verify these results).
+Using the value for the estimate of , conduct a formal statistical test to
+assess whether the form of the model suggested in (ii) is adequate.
+[7]
+[Total 19]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+13
+return
+no return
+purchase
+69
+32
+101
+no purchase
+68
+137
+51
+83
+119
+220
+(i) (a)
+(b)
+(c)
+69/101 (= 0.6832)
+68/119 (= 0.5714)
+69/137 (= 0.5036)
+(ii) H 0 : population proportions of those who intend to return are equal
+v H 1 : not H 0
+Proportion of purchasers
+2
+1
+69 /101 ; proportion of non-purchasers
+68 /119
+Under H 0 , estimate of common proportion who intend to return = 137/220
+Observed value of D
+1
+2
+0.1117
+137 83 1
+1
+Estimated standard error of D =
+220 220 101 119
+1/ 2
+0.06558
+Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical)
+P-value = 2
+= 2
+September 2005
+Examiners Report
+P(D > 0.1117) = 2 P(Z > 0.1117/0.06558) = 2
+(1 0.95543) = 0.08914 (i.e. 8.9%)
+P(Z > 1.70)
+There is not sufficient evidence (using a two-sided test) to justify rejecting H 0
+i.e. there is not sufficient evidence to justify concluding that the intention to
+return depends on whether or not a purchase was made.
+(iii)
+H 0 : no association between attributes v H 1 : not H 0
+Expected frequencies under H 0 in brackets:
+return
+no return
+Test statistic = 6.1 2
+P-value = P
+2
+1
+1
+62.9
+2.90
+purchase
+69 (62.9)
+32 (38.1)
+101
+no purchase
+68 (74.1)
+51 (44.9)
+119
+1
+1
+1
+74.1 38.1 44.9
+137
+83
+220
+2.90
+1 0.9114 0.0886 (i.e. 8.9%)
+There is not sufficient evidence to justify rejecting H 0 i.e. there is not
+sufficient evidence to justify concluding that the intention to return is
+associated with purchasing status.
+(iv)
+The two approaches complement each other:
+the P-values are the same
+the conclusions are the same.
+[Note: there is a formal connection: the
+the z value in (ii) (1.70).]
+Page 8
+2
+1 value
+in (iii) (2.90) is the square ofSubject CT3 (Probability and Mathematical Statistics Core Technical)
+(i)
+(a)
+Examiners Report
+Points are shown on scatterplot.
+40
+Number
+14
+September 2005
+30
+20
+10
+0
+0
+5
+10
+Quarter
+(b)
+The mean number of deaths increases with an increasing rate with
+quarter.
+The variance also appears to increase with quarter.
+(ii)
+(a)
+q
+i 2 ) 2
+( n i
+dq
+d
+2 i 2 ( n i
+dq
+d
+2 i 2 ( n i
+0
+i 2 n i
+i 4
+i 2 n i
+i 4
+(
+d 2 q
+d
+2
+i 2 )
+i 2 ) 0
+0
+.
+2 i 4
+0
+minimum.)
+Page 9Subject CT3 (Probability and Mathematical Statistics Core Technical)
+(b)
+q * ( n i
+dq *
+d 2
+i 2 ) 2
+n i
+i
+i 2
+dq *
+d
+i
+0
+n i
+i
+September 2005
+2
+i
+i
+i 2
+n i
+0
+n i
+i 2
+(
+d 2 q *
+d
+i 2
+2
+2
+i 2 n i
+(c)
+i
+4
+n i
+i
+(iii)
+(a)
+E N i
+15694
+60710
+174
+650
+2
+minimum.)
+0
+0.259
+0.268
+i
+Taking logs gives
+log E N i
+Thus
+[OR
+(b)
+log( i ) = log
+= log and
+log( i ) log
+= .
+e and
+.]
+= 1.6008 s.e.( ) = 0.2525
+H 0 :
+t
+= 2 v H 1 :
+2
+s.e.( )
+2
+1.6008 2
+0.2525
+1.58
+Compare with a t-distribution with 10 d.f.
+Page 10
+x i
+
+As the 5% critical value of a two-tailed test is 2.228, do not reject the
+null hypothesis.
+Therefore, the model used in (ii) with
+=
+= 2 seems appropriate.
+
+
+\end{document}
