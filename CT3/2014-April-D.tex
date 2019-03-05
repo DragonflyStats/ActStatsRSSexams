@@ -1,4 +1,38 @@
-PLEASE TURN OVER8
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
 Let X 1 , X 2 , ... , X n be a random sample from a distribution with parameter θ and
 density function:
 ⎧ 2 x
@@ -13,11 +47,8 @@ Suppose that x = ( x 1 , x 2 , ... , x n ) is a realisation of X 1 , X 2 , ... ,
 (i)
 (a) Derive the likelihood function L(θ; x) and produce a rough sketch of its
 graph.
-(b) Use the graph produced in part (i)(a) to explain why the maximum
-likelihood estimate of θ is given by x ( n ) = max{ x 1 , x 2 , ... , x n } .
-[4]
-Let X ( n ) = max{ X 1 , X 2 , ... , X n } be the estimator of θ, that is the random variable
-corresponding to x ( n ) .
+(b) Use the graph produced in part (i)(a) to explain why the maximum likelihood estimate of θ is given by x ( n ) = max{ x 1 , x 2 , ... , x n } .
+Let X ( n ) = max{ X 1 , X 2 , ... , X n } be the estimator of θ, that is the random variable corresponding to x ( n ) .
 (ii)
 (a)
 Show that the cumulative distribution function of the estimator X ( n ) is
@@ -37,10 +68,10 @@ X ( n ) is an unbiased estimator of θ.
 (iii)
 (a) Derive the mean square error of the estimator given in part (ii)(d).
 (b) Comment on the consistency of this estimator.
-[5]
-[Total 18]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
 8
 (i)
 (a)
@@ -60,7 +91,7 @@ theta
 (b)
 From the graph, the likelihood is maximised at
   x  n   max  x 1 , x 2 ,  , x n  .
-Page 6Subject CT3 (Probability and Mathematical Statistics) – April 2014 – Examiners’ Report
+
 (ii)
 (a)
 F X
@@ -156,10 +187,8 @@ n  2
 
 4 n  n  1 
 We have MSE  0 as n  , therefore the estimator is consistent.
-This question was not well answered, and there were some poor efforts especially in part (i).
-In many cases, the plotted graph revealed inadequate understanding of the likelihood
-concept, with some candidates attempting to draw it as a function of x. Note that for full
-marks the likelihood needs to include the range of the parameter and the graph must indicate
-Page 7Subject CT3 (Probability and Mathematical Statistics) – April 2014 – Examiners’ Report
+
+This question was not well answered, and there were some poor efforts especially in part (i). In many cases, the plotted graph revealed inadequate understanding of the likelihood concept, with some candidates attempting to draw it as a function of x. Note that for full marks the likelihood needs to include the range of the parameter and the graph must indicate
 the value of max(x) on the x-axis. In parts (ii) and (iii) some candidates did not cope well
 with the algebra.
+\end{document}
