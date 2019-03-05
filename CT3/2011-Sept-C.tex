@@ -1,0 +1,119 @@
+The number of claims made by each policyholder in a certain class of business is
+modelled as having a Poisson distribution with mean λ.
+(i)
+Derive an expression for the probability, p, that a policyholder in this class has
+made at least one claim.
+[2]
+The claims records of 20 randomly chosen policyholders were examined and the
+number of policyholders that made at least one claim in a year, X, was recorded.
+(ii)
+(a) State the distribution of the random variable X and its parameters.
+(b) Derive an expression for the maximum likelihood estimator of the
+probability p given in (i) using your answer in (ii)(a).
+[4]
+(iii)
+Show that, in the case X = 5, the maximum likelihood estimate (MLE) of p is
+[3]
+p ˆ = 0.25 and hence calculate the MLE of λ.
+It is now found that of the five policyholders who had made at least one claim there
+were four who had made exactly one claim and one who had made two claims.
+(iv)
+Calculate the MLE of λ given this additional information.
+CT3 S2011—3
+[4]
+[Total 13]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+6
+(i) p = Pr( N ≥ 1) = 1 − Pr( N = 0) = 1 − e −λ .
+(ii) (a)
+X ~ Bin(20,p)
+(b)
+L ( p ) ∝ p X (1 − p ) 20 − X
+⇒ l ( p ) = log( L ( p )) = X log p + (20 − X ) log(1 − p )
+and l '( p ) = 0 ⇒
+(and l ''( p ) = −
+(iii)
+p ˆ =
+X 20 − X
+X
+−
+= 0 ⇒ X − 20 p ˆ = 0 ⇒ p ˆ =
+p ˆ
+1 − p ˆ
+20
+20 − X
+X
+−
+≤ 0)
+p ˆ 2 (1 − p ˆ ) 2
+5
+= 0.25
+20
+Then, using the invariance property of the MLE:
+ˆ
+p ˆ = 1 − e −λ ⇒ λ ˆ = − log(1 − p ˆ ) = − log(0.75) = 0.288
+Likelihood function now is:
+(iv)
+L ( λ ) ∝ P ( X = 0) 15 × P ( X = 1) 4 × P ( X = 2)
+( ) ( λ e ) ( λ e )
+∝ e −λ
+15
+−λ
+4
+2 −λ
+⇒ l ( λ ) ∝ − 15 λ + 4 log λ − 4 λ + 2 log λ − λ = − 20 λ + 6 log λ
+and l ′ ( λ ) = 0 ⇒ − 20 +
+Page 4
+6
+= 0 ⇒ λ ˆ = 0.3
+ˆ λSubject CT3 (Probability and Mathematical Statistics) — September 2011 — Examiners’ Report
+(Also l ′′ ( λ ) = −
+6
+< 0 , hence max)
+λ ˆ 2
+Notice that part (ii)(b) requires the use of the binomial distribution from (ii)(a). In part (iii)
+the invariance property must be used and mentioned for full credit.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+7
+(i) F = 0.213/0.0106 = 20.094 and at the 5% significance level,
+F 3,20 (0.05) = 3.098.
+Since F = 20.094 > 3.098, there is strong evidence against the null hypothesis,
+and we conclude that there are differences in the mean amounts paid out by
+the companies.
+(ii) The variance of the residuals seems to be similar for the four companies; this
+is consistent with the assumption of constant variance in the response variable.
+Also there are no obvious patterns or outliers. The analysis seems valid.
+(iii) (a)
+LSD = t 20 (0.025)
+= 2.086
+(b)
+⎛ 1 1 ⎞
+σ 2 ⎜ + ⎟
+⎝ 6 6 ⎠
+0.0106 / 3 = 0.124
+The four company (treatment) means are:
+y 1 i = 17.810
+18.940
+17.715
+= 2.968, y 2 i =
+= 3.157, y 3 i =
+= 2.953
+6
+6
+6
+y 4 i = 16.185
+= 2.698
+6
+which are given in order and underlined as
+y 4 i < y 3 i < y 1 i < y 2 i
+Amounts paid out by companies 2 and 4 are significantly different
+from those paid out by the other two companies. Company 4 seems to
+pay out significantly lower amounts, with Company 2 paying
+significantly higher.
+Parts (i) and (ii) were generally well answered. In part (iii) many candidates did not use the
+correct formula for LSD and then performed pair-wise comparisons using the wrong statistic.
+Page 5Subject CT3 (Probability and Mathematical Statistics) — September 2011 — Examiners’ Report
