@@ -34,19 +34,18 @@
 \begin{enumerate}
 PLEASE TURN OVER7
 An insurance company distinguishes between three types of fraudulent claims:
-Type 1: legitimate claims that are slightly exaggerated
-Type 2: legitimate claims that are strongly exaggerated
-Type 3: false claims
+\begin{description}
+\item[Type 1:] legitimate claims that are slightly exaggerated
+\item[Type 2:] legitimate claims that are strongly exaggerated
+\item[Type 3:] false claims
+\end{description}
+%-----------------------------------------------%
 Every fraudulent claim is characterised as exactly one of the three types. Assume that
 the probability of a newly submitted claim being a fraudulent claim of type 1 is 0.1.
 For type 2 this probability is 0.02, and for type 3 it is 0.003.
-(i)
-Calculate the probability that a newly submitted claim is not fraudulent.
-[1]
-The insurer uses a statistical software package to identify suspicious claims. If a
-claim is fraudulent of type 1, it is identified as suspicious by the software with
-probability 0.5. For a type 2 claim this probability is 0.7, and for type 3 it is 0.9.
-Of all newly submitted claims, 20% are identified by the software as suspicious.
+(i) Calculate the probability that a newly submitted claim is not fraudulent.
+The insurer uses a statistical software package to identify suspicious claims. If a claim is fraudulent of type 1, it is identified as suspicious by the software with probability 0.5. For a type 2 claim this probability is 0.7, and for type 3 it is 0.9.
+Of all newly submitted claims, 20\% are identified by the software as suspicious.
 (ii)
 Calculate the probability that a claim that has been identified by the software
 as suspicious is:
@@ -54,19 +53,14 @@ as suspicious is:
 (b)
 a fraudulent claim of type 1,
 a fraudulent claim of any type.
-[5]
 (iii)
 8
 Calculate the probability that a claim which has NOT been identified as
 suspicious by the software is in fact fraudulent.
 [3]
 [Total 9]
-Two medications, labelled A and B, were being investigated using a group of twelve
-patients each of whom was approximately at the same stage of suffering from a severe
-cough. The patients were divided randomly into two groups of six and medication A
-was administered to each patient in the first group while medication B was
-administered to each patient in the second group. Over the next three days the total
-number of coughs was recorded for each patient, with the following results:
+Two medications, labelled A and B, were being investigated using a group of twelve patients each of whom was approximately at the same stage of suffering from a severe cough. The patients were divided randomly into two groups of six and medication A
+was administered to each patient in the first group while medication B was administered to each patient in the second group. Over the next three days the total number of coughs was recorded for each patient, with the following results:
 A:
 B:
 321
@@ -82,20 +76,16 @@ B:
 532
 426
 Σ x A = 2,972 , Σ x 2 A = 1,530, 284 , Σ x B = 2, 791 , Σ x B 2 = 1,343, 205
-(i) Apply an appropriate t-test to determine whether these two medications differ
-in their effectiveness for the relief of coughing, assuming that the two samples
-are independent and come from normal populations with equal variances. [7]
+(i) Apply an appropriate t-test to determine whether these two medications differ in their effectiveness for the relief of coughing, assuming that the two samples are independent and come from normal populations with equal variances. [7]
 (ii) In relation to the test performed in part (i):
 (a) Comment on the required assumption of independence.
-(b) Present the data graphically and hence comment on the required
-assumption of normality.
+(b) Present the data graphically and hence comment on the required assumption of normality.
 CT3 A2011—4(c)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Apply an appropriate F-test to comment on the required assumption of
 equal variances.
 [6]
-Suppose that the investigators had used a total of eighteen such patients divided into
-three groups of six and that a placebo (an inactive substance) was administered to
-each patient in the third group, labelled C. Suppose that the resulting data for
+Suppose that the investigators had used a total of eighteen such patients divided into three groups of six and that a placebo (an inactive substance) was administered to each patient in the third group, labelled C. Suppose that the resulting data for
 medications A and B were as above together with the following results for the placebo
 group.
 C:
@@ -110,7 +100,10 @@ C:
 (iv)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 7
-(i) 1 − P[T1 ∪ T2 ∪ T3] = 1 − (0.1 + 0.02 + 0.003) = 1 − 0.123 = 0.877
+(i) 
+\begin{eqnarray*} 
+1 − P[T1 ∪ T2 ∪ T3] &=& 1 − (0.1 + 0.02 + 0.003) \\ &=& 1 − 0.123 \\ &=& 0.877\\ 
+\end{eqnarray*}
 (ii) (a)
 P[T1 | S] =
 (b)
@@ -180,18 +173,15 @@ P [ S ]
 101.527
 +
 6 6
-∴ s P = 101.527Subject CT3 (Probability and Mathematical Statistics Core Technical) — Examiners’ Report, April 2011
+∴ s P = 101.527
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 without needing to look up tables (although candidates can do so, e.g.
 t 10 (2.5%) = 2.228)
-there is clearly no evidence of a difference between medications A and B as
-regards their effectiveness for the relief of coughing.
+there is clearly no evidence of a difference between medications A and B as regards their effectiveness for the relief of coughing.
 (ii)
-(a) As the 12 patients were split at random into the two groups, the two
-samples are independent.
-(Valid comments on the need for this assumption will also receive full
-credit.)
-(b) The most appropriate graphical representation is two dotplots (or
-boxplots):
+(a) As the 12 patients were split at random into the two groups, the two samples are independent.
+(Valid comments on the need for this assumption will also receive full credit.)
+(b) The most appropriate graphical representation is two dotplots (or boxplots):
 350
 400
 450
@@ -203,8 +193,7 @@ boxplots):
 coughs
 These show that there is nothing that suggests lack of normality in each
 case.
-(Valid comments on the need for this assumption will also receive full
-credit.)
+% (Valid comments on the need for this assumption will also receive full credit.)
 (c)
 F =
 s 2 A
@@ -229,7 +218,7 @@ SS B = (2972 2 + 2791 2 + 4151 2 ) −
 6
 18
 SS R = SS T − SS B = 164279
-Page 5Subject CT3 (Probability and Mathematical Statistics Core Technical) — Examiners’ Report, April 2011
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 giving the ANOVA table:
 Source of variation
 Between groups
@@ -250,10 +239,10 @@ MSS
 90900
 = 8.30 on 2, 15 df
 10952
-F 2,15 (5%) = 3.682 and F 2,15 (1%) = 6.359 . So P-value < 0.01
-So there is very strong evidence of a difference between medications A and B
-and the placebo as regards their effectiveness for the relief of coughing.
+F 2,15 (5%) = 3.682 and F 2,15 (1\%) = 6.359 . So P-value < 0.01
+So there is very strong evidence of a difference between medications A and B and the placebo as regards their effectiveness for the relief of coughing.
 9
-(iv) It would appear that both medications have a more beneficial effect on the
-level of coughing as compared to the placebo, but that they are equally
-beneficial.
+(iv) It would appear that both medications have a more beneficial effect on the level of coughing as compared to the placebo, but that they are equally beneficial.
+
+
+\end{document}
