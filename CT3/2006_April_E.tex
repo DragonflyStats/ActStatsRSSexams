@@ -1,0 +1,227 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+11
+An actuary has been advised to use the following positively-skewed claim size
+distribution as a model for a particular type of claim, with claim sizes measured in
+units of £100,
+f ( x ; )
+x 2
+2
+3
+exp
+x
+: 0
+x
+,
+with moments given by E[X] = 3 , E[X 2 ] = 12
+0
+2
+and E[X 3 ] = 60 3 .
+(i) Determine the variance of this distribution and calculate the coefficient of
+skewness.
+[4]
+(ii) Let X 1 , X 2 ,
+, X n be a random sample of n claim sizes for such claims.
+Show that the maximum likelihood estimator (MLE) of
+is given by
+and show that it is unbiased for .
+(iii)
+A sample of n = 50 claim sizes yields x i
+X
+3
+[5]
+313.6 and x i 2
+2, 675.68 .
+(a) Calculate the MLE
+.
+(b) Calculate the sample variance and comment briefly on its comparison
+with the variance of the distribution evaluated at .
+(c) Given that the sample coefficient of skewness is 1.149, comment
+briefly on its comparison with the coefficient of skewness of the
+distribution.
+[4]
+(iv)
+12
+(a) Write down a large-sample approximate 95% confidence interval for
+the mean of the distribution in terms of the sample mean x and the
+sample variance s 2 . Hence obtain an approximate 95% confidence
+interval for and evaluate this for the data in part (iii) above.
+(b) Evaluate the variance of the distribution at both the lower and upper
+limits of this confidence interval and comment briefly with reference to
+your answer in part (iii)(b) above.
+[5]
+[Total 18]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 8Subject CT3 (Probability and Mathematical Statistics Core Technical)
+11
+(i)
+2
+= E[X 2 ]
+[E(X)] 2 = 12
+2
+= E[X 3 ] 3 E[X 2 ] + 2
+3
+= 60
+(3 ) 2 = 3
+April 2006
+Examiners Report
+2
+3
+3(3 )(12 2 ) + 2(3 ) 3
+= (60
+108 + 54)
+3
+3
+= 6
+coefficient of skewness =
+3
+3
+3
+6
+1.155
+2 3
+( 3
+)
+[OR: note that X ~ gamma(3,1/ ) and use formulae in tables
+2
+so var = 3 2 and coef. of skew. =
+]
+3
+n
+(ii)
+L ( )
+i 1
+x i 2
+2
+exp(
+3
+x i
+x i 2
+)
+2
+n 3 n
+log L ( ) log( x i 2 ) n log 2 3 n log
+x i
+x i
+3 n
+log L ( )
+x i
+exp
+2
+equate to zero:
+x i
+3 n
+x i
+3 n
+2
+2
+this clearly maximises L( )
+X i
+3 n
+So MLE is
+(iii)
+E 1
+E X
+3
+(a) x
+(b) s 2
+2
+2
+log L ( ) ]
+X
+3
+1
+E X
+3
+313.6
+50
+[or consider
+6.272
+1
+3
+3
+unbiased
+6.272
+3
+2.091
+1
+313.6 2
+(2675.68
+) 14.465
+49
+50
+3
+2
+and 3
+2
+13.117
+s 2 is a bit larger but still quite close
+Page 9Subject CT3 (Probability and Mathematical Statistics Core Technical)
+(iv)
+April 2006
+Examiners Report
+(c) sample coefficient 1.149 is very close to the distribution value 1.155
+(a) s 2
+is x 1.96
+n
+approximate 95% CI for
+as
+= 3 , divide by 3 for an approximate 95% CI for
+1
+s 2
+x 1.96
+3
+n
+for data:
+1
+14.465
+6.272 1.96
+3
+50
+2.091 0.351
+(b)
+2
+= 3
+2
+or
+(1.740, 2.442)
+= 9.083 at lower limit of 1.740
+= 17.890 at upper limit of 2.442
+s 2 = 14.465 is well within these values
+confirming that s 2 is quite close to 3 2 .
+
+\end{document}

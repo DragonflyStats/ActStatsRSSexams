@@ -1,0 +1,162 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+1
+The stem and leaf plot below gives the surrender values (to the nearest 1,000) of 40
+endowment policies issued in France and recently purchased by a dealer in such
+policies in Paris. The stem unit is 10,000 and the leaf unit is 1,000.
+5
+5
+6
+6
+7
+7
+8
+8
+9
+9
+3
+6
+02
+5779
+122344
+556677899
+1123444
+567778
+024
+6
+Determine the median surrender value for this batch of policies.
+2
+
+In a certain large population 45\% of people have blood group A. A random sample of 300 individuals is chosen from this population.
+Calculate an approximate value for the probability that more than 115 of the sample have blood group A.
+[3]
+3
+A random sample of size 10 is taken from a normal distribution with mean variance 2 = 1.
+= 20 and
+Find the probability that the sample variance exceeds 1, that is find P(S 2 > 1).
+4
+%-----------------------------------------------------------%
+[3]
+In a one-way analysis of variance, in which samples of 10 claim amounts (£) from each of three different policy types are being compared, the following means were
+calculated:
+y 1
+276.7 ,
+y 2
+254.6 ,
+y 3
+296.3
+with residual sum of squares SS R given by
+3 10
+SS R
+( y ij
+y i ) 2 15,508.6
+i 1 j 1
+Calculate estimates for each of the parameters in the usual mathematical model, that
+is, calculate , 1 , 2 , 3 , and 2 .
+[4]
+CT3 A2006 25
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 n = 40, so the median is the 20.5 th observation, which is 1⁄2(7.7+7.8) = 7.75.
+This represents 77,500.
+2 If X is the number in the sample with group A, then X has a binomial (300, 0.45)
+distribution, so
+E[X] = 300
+0.45 = 135 and Var[X] = 300
+0.45
+0.55 = 74.25.
+Then, using the continuity correction,
+P(X > 115) = P(X > 115.5) 1
+3
+n 1 S 2
+2
+~
+P S 2 1
+1 0.5627
+4
+1
+2
+3
+2
+5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Page 4
+(i)
+so here 9 S 2 ~
+2
+n 1
+P
+2
+9
+0.437
+115.5 135
+= 1
+74.25
+( 2.26) =
+2
+9
+9
+(tables p165)
+1
+(276.7 254.6 296.3) 275.87
+3
+276.7 275.87 0.83
+254.6 275.87
+21.27
+296.3 275.87 20.43
+SS R
+27
+15508.6
+27
+574.4
+Let X = number of policies with claims
+So X ~ binomial(25, p).
+Poisson approximation is X Poisson(25p).
+(a) using Poisson(2.5)
+P(X 4) = 0.89118 from tables [or evaluation]
+(b) using Poisson(5)
+P(X 4) = 0.44049 again from tables
+(2.26) = 0.99.Subject CT3 (Probability and Mathematical Statistics Core Technical)
+(ii)
+
+in (a) error is 0.8912 0.9020 = 0.0108
+in (b) error is 0.4405 0.4207 = 0.0198
+The approximation is valid for small p , and, as p is smaller in (a), this gives a better approximation as noted with the smaller error.
+[Note: candidates may also comment on the fact that the sample size 25 is not large and so we would not expect the Poisson approximations to be very
+good anyway. In fact the key to the approximations is the small p and here the given approximations are quite good]
+
+
+\end{document}
