@@ -1,0 +1,68 @@
+4
+The random variables X and Y are related as follows:
+X conditional on Y = y has a N(2y, y 2 ) distribution.
+Y has a N(200, 100) distribution.
+Derive the unconditional variance of X, V[X].
+CT3 S2011—2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+[3]5
+Consider the random variable X taking the value X = 1 if a randomly selected person
+is a smoker, or X = 0 otherwise. The random variable Y describes the amount of
+physical exercise per week for this randomly selected person. It can take the values 0
+(less than one hour of exercise per week), 1 (one to two hours) and 2 (more than two
+hours of exercise per week). The random variable R = (3 − Y) 2 (X + 1) is used as a risk
+index for a particular heart disease.
+The joint distribution of X and Y is given by the joint probability function in the
+following table.
+X
+0
+1
+6
+0
+0.2
+0.1
+Y
+1
+0.3
+0.1
+2
+0.25
+0.05
+(i) Calculate the probability that a randomly selected person does more than two
+hours of exercise per week.
+[1]
+(ii) Decide whether X and Y are independent or not and justify your answer. [2]
+(iii) Derive the probability function of R. [3]
+(iv) Calculate the expectation of R.
+[2]
+[Total 8]
+
+
+4
+V[X]
+= E[V(X|Y)] + V[E(X|Y)]
+= E[Y 2 ] + V[2Y] = (100 + 200 2 ) + 4*100 = 40,500
+Generally very well answered.
+5
+(i) P[Y = 2] = 0.25 + 0.05 = 0.3
+(ii) P[X = 0] = 0.75 and
+P[{X = 0} ∩ {Y = 2}] = 0.25 ≠ 0.225 = 0.3 * 0.75 = P[X = 0] * P[Y = 2]
+Therefore X and Y are not independent.
+(Any other joint probability can be used.)
+Page 3Subject CT3 (Probability and Mathematical Statistics) — September 2011 — Examiners’ Report
+(iii)
+(iv)
+The probability function is
+r 1
+2
+4
+8
+9
+18
+P(R = r) 0.25 0.05 0.3 0.1 0.2 0.1
+E[R] = 0.2 * 9 + 0.3 * 4 + 0.25 * 1 + 0.1 * 18 + 0.1 * 8 + 0.05 * 2
+= 1.8 + 1.2 + 0.25 + 1.8 + 0.8 + 0.1 = 5.95
+In part (ii) notice that one example of P(XY) = P(X)P(Y) is not sufficient for showing
+independence (it needs to hold for all cases). Also, some candidates failed to provide the
+probability function in (iii).
+
