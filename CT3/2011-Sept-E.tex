@@ -1,0 +1,188 @@
+8
+Consider a random sample X 1 , ..., X n from a Poisson distribution with expectation
+E[X i ] = λ. An estimator λ̂ for the parameter λ is given by the observed mean of the
+sample, that is:
+1 n
+λ ˆ = ∑ X i .
+n i = 1
+(i)
+Derive formulae for the expected value and the variance of λ̂ in terms of λ
+and n.
+[3]
+Assume in parts (ii) to (v) that the true parameter value is λ = 0.25.
+(ii) Calculate the exact probability that 0.2 ≤ λ̂ ≤ 0.3 if the sample size is n = 10.
+[3]
+(iii) Calculate the approximate probability that 0.2 ≤ λ̂ ≤ 0.3 if the sample size is
+n = 10 using the following:
+(a) the normal approximation to ∑ i = 1 X i with continuity correction
+(b) the normal approximation to ∑ i = 1 X i without continuity correction.
+n
+n
+[6]
+(iv) Comment on the differences in your answers in parts (ii) and (iii).
+[2]
+(v) Calculate the minimal required sample size n for which the probability that
+0.2 ≤ λ̂ ≤ 0.3 is at least 0.95, using the normal approximation without
+continuity correction
+[4]
+Suppose a random sample of size n = 400 gives the estimate λ̂ = 0.27.
+(vi)
+Calculate a 95% confidence interval for λ.
+CT3 S2011—5
+[3]
+[Total 21]
+PLEASE TURN OVER9
+In a recent study of attitudes to a proposed new piece of consumer legislation
+(“proposal X”) independent random samples of 200 men and 200 women were asked
+to state simply whether they were “for” (in favour of) , or “against”, the proposal.
+The resulting frequencies, as reported by the consultants who carried out the survey,
+are given in the following table:
+For
+Against
+(i)
+Men
+138
+62
+Women
+130
+70
+Carry out a formal chi-squared test to investigate whether or not an association
+exists between gender and attitude to proposal X.
+Note: in this and any later such tests in this question you should state the P-
+value of the data and your conclusion clearly.
+[6]
+At a subsequent meeting to discuss these and other results, the consultants revealed
+that they had in fact stratified the survey, sampling 100 men and 100 women in
+England and 100 men and 100 women in Wales. The resulting frequencies were as
+follows:
+For
+Against
+England
+Men
+Women
+82
+66
+18
+34
+Wales
+Men
+56
+44
+Women
+64
+36
+A chi-squared test to investigate whether or not an association exists between gender
+and attitude to proposal X in England gives χ 2 = 6.653, while an equivalent test for
+Wales gives χ 2 = 1.333.
+(ii)
+(iii)
+(a) Find the P-value for each of the chi-squared tests mentioned above and
+state your conclusions regarding possible association between gender
+and attitude to proposal X in England and in Wales.
+(b) Discuss the results of the survey for England and Wales separately and
+together, quoting relevant percentages to support your comments.
+[9]
+A different survey of 200 people conducted in each of England, Wales, and
+Scotland gave the following percentages in favour of another proposal:
+% in favour of proposal
+England
+62%
+Wales
+53%
+Scotland
+58%
+A chi-squared test of association between country and attitude to the proposal
+gives χ 2 = 3.332 on 2 degrees of freedom, with P-value 0.189.
+Suppose a second survey of the same size is conducted in the three countries
+and results in the same percentages in favour of the proposal as in the first
+survey. The results of the two surveys are now combined, giving a survey
+based on the attitudes of 1,200 people.
+CT3 S2011—6State (or find) the results of a second chi-squared test for an association
+between country and attitude to the proposal, based on the overall
+survey of 1,200 people.
+[3]
+(b) Comment briefly on the results.
+[1]
+[Total 19]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9
+(i)
+H 0 : no association exists v. H 1 : association exists
+for
+against
+men
+138
+62
+200
+Under H 0 : expected frequencies:
+O – E:
+4
+–4
+women
+130
+70
+200
+134
+66
+268
+132
+400
+134
+66
+–4
+4
+1
+1
+1 ⎞
+⎛ 1
+χ 2 = 4 2 ⎜
++
++
++
+⎟ = 0.724
+66 ⎠
+⎝ 134 134 66
+P -value = P (χ 21 > 0.724) = 0.395
+No evidence against H 0 – we conclude that no association exists between
+gender and attitude to proposal X.
+[ Note: using Yates’ correction (not in the Core Reading)
+P -value = P (χ 21 > 0.554) = 0.457]
+(ii)
+(a)
+For England:
+P -value = P ( χ 1 2 > 6.653) = 0.010
+Evidence against H 0 – we reject it at the 1% level of testing and
+conclude that an association exists between gender and attitude to
+proposal X in England.
+For Wales:
+P -value = P ( χ 1 2 > 1.333) = 0.248
+Page 7Subject CT3 (Probability and Mathematical Statistics) — September 2011 — Examiners’ Report
+No evidence against H 0 – we conclude that there is no association
+between gender and attitude to proposal X in Wales.
+(b)
+England: there is evidence of an association – 82% of men and only
+66% of women support proposal X – these proportions are
+significantly different.
+Wales: there is no evidence of an association – 56% of men and 64%
+of women support proposal X – these proportions are not significantly
+different.
+The effects are in different directions and cancel out to some extent
+when the data are combined: now there is no evidence of an
+association – overall 69% of men and 65% of women support proposal
+X – these proportions are not significantly different.
+The combined data give a misleading message – they hide the effect of
+the factor “country” and fail to reveal that there is an association in
+England.
+(iii)
+(a)
+The χ 2 value doubles to 6.664
+P -value = P (χ 22 > 6.664) = 0.0357
+Conclusion: reject “no association” at the 3.6% level of testing and
+conclude that an association does exist.
+(b)
+Comment: having more data with the same proportions provides strong
+enough evidence to justify claiming that an association exists.
+Caution required with the null and alternative hypotheses in (i) – some candidates got these
+wrong. Also, the associated degrees of freedom were wrongly given in some cases. Part
+(ii)(b) required comments on the results, but very few candidates did this. Part (iii) was not
+well answered either.
