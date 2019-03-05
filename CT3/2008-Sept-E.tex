@@ -1,0 +1,195 @@
+PLEASE TURN OVER11
+Male
+4
+6
+10
+1
+1
+A study was conducted to investigate lengths of stay, in days, of short-term stay
+patients in a particular hospital. Independent random samples of 40 male patients and
+35 female patients were selected and the lengths of stay of these patients are given in
+the following tables:
+8
+6
+7
+7
+8
+2
+8
+5
+2
+1
+6
+7
+7
+8
+3
+9
+3
+7
+11
+9
+6
+5
+6
+5
+3
+4
+6
+9
+6
+1
+Male: x = 215 x 2 = 1,481
+10
+1
+2
+2
+3
+Female
+2
+7
+8
+6
+3
+5
+7
+2
+3
+6
+5
+4
+4
+4
+5
+1
+1
+6
+4
+9
+9
+5
+5
+11
+6
+1
+4
+1
+6
+2
+3
+4
+8
+8
+3
+Female: x = 168 x 2 = 1,026
+The male observations are assumed to be normally distributed with mean  1 and
+standard deviation  1 , and independently the female observations are assumed to be
+normally distributed with mean  2 and standard deviation  2 .
+(i)
+Suppose that it is known that  1 = 3.0 days and  2 = 2.5 days.
+(a) Construct a 95% confidence interval for the difference between the
+mean length of stay for males and the mean length of stay for females,
+that is for  1   2 .
+(b) Comment briefly on any implications of this confidence interval.
+[6]
+(ii)
+Suppose now that  1 and  2 are unknown.
+(a) Perform a two-sample t-test to investigate whether there is a difference
+between the mean length of stay for males and the mean length of stay
+for females, assuming that  1 and  2 are equal.
+(b) Show that the variances in the male and female samples are not
+significantly different at the 5% level, and comment briefly with
+reference to the validity of the test conducted in (ii)(a).
+(c) Suppose you are not prepared to assume more than you feel is
+absolutely necessary – in particular you do not want to assume that
+ 1 and  2 are equal, nor that the observations necessarily come from
+normal populations.
+Perform an alternative (large-sample) test to that conducted in part
+(ii)(a), “to investigate whether there is a difference between the mean
+length of stay for males and the mean length of stay for females”, and
+compare the results of the test with the results of the test obtained in
+part (ii)(a).
+[11]
+[Total 17]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+11
+(i)
+(a)
+Males: n 1 = 40
+x 1 = 215/40 = 5.375
+Females: n 2 = 35 x 2 = 168/35 = 4.8
+95% CI:
+x 1 − x 2 ± z 0.025
+σ 1 2 σ 2 2
++
+n 1 n 2
+= 5.375 – 4.8 ± 1.96
+3 2 2.5 2
++
+40 35
+= 0.575 ± (1.96)(0.6353)
+= 0.575 ± 1.245 or (–0.67, 1.82)
+(b)
+Page 6
+As this CI includes the value 0 we would not eliminate the possibility
+that the males and females have the same expected length of stay.Subject CT3 (Probability and Mathematical Statistics Core Technical) — September2008 — Examiners’ Report
+(ii)
+(a)
+s 1 2 = (1481 – 215 2 /40)/39 = 8.34295
+s 2 2 = (1026 – 168 2 /35)/34 = 6.45882
+s 2 p =
+( n 1 − 1) s 1 2 + ( n 2 − 1) s 2 2
+(39)(8.34295) + (34)(6.45882)
+=
+= 7.46541
+40 + 35 − 2
+n 1 + n 2 − 2
+Two sample t-test
+x 1 − x 2
+t =
+⎛ 1 1 ⎞
+s 2 p ⎜ + ⎟
+⎝ n 1 n 2 ⎠
+=
+5.375 − 4.8
+1 ⎞
+⎛ 1
+7.46541 ⎜ + ⎟
+⎝ 40 35 ⎠
+= 0.909
+t 73 (0.025) = 1.996 (by interpolation of 2.000 and 1.980 for 60 df and
+120 df)
+[OR just quote the N(0,1) value 1.96 in place of the t 73 value.]
+Therefore there is no evidence to reject the null hypothesis that the
+means for males and females do not differ at the 5% significance level,
+and we conclude that the mean lengths of stay are the same.
+(b)
+s 1 2
+s 2 2
+=
+8.34295
+= 1.29
+6.45882
+Comparing this to an F 39,34 distribution, which has a 5% critical point
+between 2.075 and 1.717 (two-sided test), there is no evidence that the
+population variances differ.
+The assumption of common variance was made when conducting the
+test in (ii)(a), and this seems valid given the result of the test in (ii)(b).
+(c)
+z =
+=
+x 1 − x 2
+s 1 2 s 2 2
++
+n 1 n 2
+5.375 − 4.8
+8.34295 6.45882
++
+40
+35
+= 0.917
+Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2008 — Examiners’ Report
+Compare with N(0,1), e.g. 1.96 for 5% level test. Therefore we reach
+exactly the same conclusion (as in (ii)(a) but without making the
+assumptions of equal variances and normal distributions – we have
+large samples and can rely on CLT).
