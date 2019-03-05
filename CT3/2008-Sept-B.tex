@@ -1,0 +1,92 @@
+5
+[3]
+The number of claims, X, arising on each policy in a certain portfolio depends on
+another random variable Y. X is considered to follow a Poisson distribution with
+mean Y. The variable Y itself is assumed to have a gamma distribution with
+parameters (a,b).
+Find expressions for the unconditional moments E[X] and E[X 2 ] using appropriate
+conditional moments.
+[4]
+CT3 S2007—26
+Suppose that the time T, measured in days, until the next claim arises under a
+portfolio of non-life insurance policies, follows an exponential distribution with
+mean 2.
+\begin{enumerate}[(i)]
+\item Find the probability that no claim is made in the next one day period.
+\item The median of a random variable is defined as the value for which the
+cumulative distribution function of the variable is equal to 0.5.
+Find the median time until the next claim arises.
+\item 
+Now let T 1 , T 2 , ..., T 30 be the times (in days) until the next claim arises under
+each one of 30 similar portfolios of non-life insurance policies, and assume
+that each T i , i = 1,...,30, follows an exponential distribution with mean 2,
+independently of all others.
+Calculate, approximately, the probability that the total of all 30 times which
+elapse until a claim arises on each of the portfolios exceeds 45 days.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%
+5
+E ( X ) = E Y { E X ( X Y ) } = E ( Y ) =
+a
+.
+b
+E ( X 2 ) = var( X ) + E 2 ( X )
+with
+var( X ) = E Y { var X ( X Y ) } + var Y { E X ( X Y ) }
+= E ( Y ) + var( Y ) =
+a a
++
+b b 2
+giving
+a a a 2
+E ( X ) = + 2 + 2 .
+b b
+b
+2
+{
+{ var
+}
+[ OR E ( X 2 ) = E Y E X ( X 2 Y )
+= E Y
+X
+}
+( X Y ) + E X 2 ( X Y ) = E ( Y ) + E ( Y 2 )
+= E ( Y ) + var( Y ) + E 2 ( Y )
+=
+6
+a a a 2
+.]
++ +
+b b 2 b 2
+%---------------------------------------------------------------%
+(i) $T ~ Exp(0.5) and therefore P ( T > 1) = e − 0.5 × 1 = 0.6065$ .
+(ii) The median, $M$, is such that
+M
+∫
+0
+M
+f ( t ) dt = 0.5 ⇒ ∫ 0.5 e − 0.5 t dt = 0.5
+0
+which gives
+\[1 − e − 0.5 M = 0.5 ⇒ M = − 2 log(0.5) , or M = 2 log(2) = 1.386 .\]
+(Note: the cdf is available from the Yellow Book, p11.)
+30
+(iii)
+From CLT, Y = ∑ T i ~ N (30 × 2, 30 × 4), i.e. N (60,120) , approximately.
+i = 1
+Then,
+45 − 60 ⎞
+⎛
+P ( Y > 45) = P ⎜ Z >
+⎟ = P ( Z > − 1.3693) = P ( Z < 1.3693) = 0.915.
+120 ⎠
+⎝
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2
+, from which we can then use the
+[OR Y ~ gamma(30,1/2), that is Y ~ χ 60
+normal approximation as above, or get P(Y > 45) = 0.922 (approximately) by
+2
+(Yellow Book p168).]
+interpolating in tables of percentage points of χ 60
