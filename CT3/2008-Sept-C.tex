@@ -1,0 +1,57 @@
+7
+Let N be the number of claims arising on a group of policies in a period of one week
+and suppose that N follows a Poisson distribution with mean 60.
+Let X 1 , X 2 , . . , X N be the corresponding claim amounts and suppose that,
+independently of N, these are independent and identically distributed with mean £500
+and standard deviation £400.
+N
+Let S   X i be the total claim amount for the period of one week.
+i  1
+(i) Determine the mean and the standard deviation of S.
+(ii) Explain why the distribution of S can be taken as approximately normal, and
+hence calculate, approximately, the probability that S is greater than £40,000.
+[3]
+[Total 5]
+CT3 S2008—3
+[2]
+PLEASE TURN OVER8
+(i)
+Use the following uniform(0,1) random numbers
+0.9236 , 0.2578
+and a suitable table of probabilities to simulate two observations of the random
+variable X, where X ~ N(200,100).
+[3]
+(ii)
+Use the following uniform(0,1) random numbers
+0.3287 , 0.9142
+to simulate two observations of the random variable Y, where Y has an
+exponential distribution with mean 100.
+[3]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+(i)
+E ( S ) = E ( N ) E ( X ) = (60)(500) = £30, 000
+V ( S ) = E ( N ) V ( X ) + V ( N )[ E ( X )] 2
+= (60)(400 2 ) + (60)(500 2 ) = 24, 600, 000 ∴ sd ( S ) = £4,960
+(ii)
+As S is the sum of a large number of i.i.d. variables, then the central limit
+theorem gives an approximate normal distribution for S.
+P ( S > 40000) = P ( Z >
+40000 − 30000
+= 2.016)
+4960
+= 1 − 0.9781 = 0.0219
+[Note: 2.02 leading to 0.0217 is also acceptable.]
+8
+(i)
+From Yellow Book Table
+P(Z < 1.43) = 0.9236 giving x value (10*1.43) + 200 = 214.3
+P(Z < −0.65) = 0.2578 giving x value (10*(−0.65)) + 200 = 193.5
+(ii)
+Setting r = P(Y < y) = 1 – exp(−y/100) ⇒ y = −100*log(1 − r)
+r = 0.3287 ⇒ y = −100log(0.6713) = 39.85
+r = 0.9142 ⇒ y = −100log(0.0858) = 245.6
+Note: We can do away with the step of subtracting r from 1 and use.
+y = −100*log(r). This gives y = 111.3, 8.971.
