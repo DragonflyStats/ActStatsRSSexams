@@ -47,45 +47,40 @@ CT3 S2006
 [5]
 [Total 8]10
 Let (X 1 , X 2 ,
-, X n ) be a random sample of a gamma(4.5, ) random variable, with
-sample mean X .
+, X n ) be a random sample of a gamma(4.5, ) random variable, with sample mean X .
 (i)
 (ii)
 2
 9 n .
 (a) Using moment generating functions, show that 2 nX ~
-(b) Construct a 95% confidence interval for , based on X and the result
-in (i)(a) above.
-(c) Evaluate the interval in (i)(b) above in the case for which a random
-sample of 10 observations gave a value
+(b) Construct a 95\% confidence interval for , based on X and the result in (i)(a) above.
+(c) Evaluate the interval in (i)(b) above in the case for which a random sample of 10 observations gave a value
 x i 21.47
-[9]
-(a) Show that the maximum likelihood estimator of
-is given by
+
+(a) Show that the maximum likelihood estimator of is given by
 4.5
 .
 X
-(b)
-Show that the asymptotic standard error of
+(b) Show that the asymptotic standard error of
 4.5n
 (c)
 1/ 2
 is estimated by
 .
-Construct a 95% confidence interval for based on the asymptotic
-distribution of , and evaluate this interval in the case for which a
-random sample of 100 observations gave a value
-x i 225.3.
+Construct a 95\% confidence interval for based on the asymptotic distribution of , and evaluate this interval in the case for which a
+random sample of 100 observations gave a value x i 225.3.
 [9]
 [Total 18]
 CT3 S2006
 5
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{eqnarray*}
+E [ E ( Y | X )] &=& ∫ E [ Y | X = x ] f ( x ) dx\\
+&=& ∫ ∫ yf ( y | x ) dy f ( x ) dx\\
+&=& ∫ ∫ y f ( y | x ) f ( x ) dydx\\
+\end{eqnarray*}
 
-E [ E ( Y | X )] = ∫ E [ Y | X = x ] f ( x ) dx
-= ∫ ∫ yf ( y | x ) dy f ( x ) dx
-= ∫ ∫ y f ( y | x ) f ( x ) dydx
 but f ( y | x ) f ( x ) = f ( x , y ), the joint pdf of X and Y , so
 E [ E ( Y | X )] = ∫ ∫ y f ( x , y ) dxdy = E [ Y ]
 (ii)
@@ -162,7 +157,8 @@ d A
 = 4.5 n / λ − ∑ x i
 d λ
 d 2 A
-Setting
+\begin{itemize}
+\item Setting
 = 4.5 n / λ 2 so s . e .( λ ˆ ) ≅
 (b) −
 (c) 95% CI is λ ˆ ± 1.96 × s . e . λ ˆ
@@ -172,16 +168,18 @@ d λ
 λ ˆ
 ( 4.5 n ) 1/ 2
 ( ) }
-In the case n = 100, Σx = 225.3,
+\item In the case n = 100, $\sum x = 225.3$,
 Page 8
 4.5 n 4.5
 d A
 =
 = 0 ⇒ λ ˆ =
 d λ
-∑ X i XSubject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
+∑ X i X
 4.5 / 2.253
 λ ˆ = 4.5 / 2.253 = 1.9973 and s . e .( λ ˆ ) ≅
 = 0.0942
 ( 450 ) 1/ 2
-so CI is 1.9973 ±(1.96 × 0.0942) i.e. (1.81 , 2.18).
+\item so CI is $1.9973 \pm (1.96 \times 0.0942)$ i.e. $(1.81 , 2.18)$.
+\end{itemize}
+\end{document}
