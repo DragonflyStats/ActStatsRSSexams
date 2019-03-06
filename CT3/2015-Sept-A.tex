@@ -1,0 +1,150 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+
+CT3 S2015–2
+1 A random sample of 20 claim amounts (x, in £) made on a certain type of travel
+insurance policy (type A) was selected and gave the following data summaries:
+  x 1 1,860
+x2  8, 438, 200
+sample mean = 593
+sample standard deviation = 271.95.
+It was later discovered that two of these 20 claims were made on a different incorrect
+type of policy, and the corresponding amounts were £770 and £510.
+These claims are going to be replaced by two claims made on the correct type of
+policy, with corresponding amounts £1,000 and £280.
+(i) Determine the sample mean and standard deviation of the revised sample. [4]
+(ii) Comment on how your answers compare with the original sample mean and
+standard deviation. [3]
+[Total 7]
+2 Consider the following measure of skewness for a unimodal distribution:
+  mean mode
+standard deviation
+
+  .
+(i) Determine the value of  for a gamma distribution with parameters α = 1.6 and
+ = 0.2. [5]
+(ii) Comment on why  is a suitable measure of skewness for distributions with
+one mode. [3]
+[Total 8]
+3 Random samples are drawn from two different normally distributed populations with
+variances 2
+1 and 22
+ . From the first population a sample of 25 measurements is taken
+with a sample variance of 2
+1 s  2.4 . For the second population the sample size is 13
+with a sample variance of 2
+s2 1.5.
+Determine a 95% confidence interval for the ratio of the true variances 2 2
+1 / 2. [3]
+
+Solutions
+Q1 (i) New sum is (11860 – 770 – 510 + 1000 + 280) = 11860
+New sum of squares: (8438200 – 7702 – 5102 + 10002 + 2802) = 8663600
+Therefore:
+  New sample mean = 11860/20 = 593
+New standard deviation (sd) = {(8663600 – 118602/20)/19}0.5 = 292.95
+(ii) Since the sum of the two new claims is the same as those replaced, the mean is
+the same.
+However the sd has increased as the two new claims are further away from the
+mean as compared to the two claims in the first sample.
+Part (i) was generally well answered. In part (ii) the explanation about the sd
+was not always convincing.
+Q2 (i) We have mean = 1.6/0.2 = 8 and sd = (1.6/0.22)0.5 = 6.325
+For the mode we need to maximise the probability density function (pdf):
+     
+           
+1
+log log log 1 log
+f y y e y
+fy yy
+
+  
+
+ 
+           
+and
+d log f  y 1 0 y 1
+dy y
+   
+   
+
+.
+Subject CT3 (Probability and Mathematical Statistics Core Technical) – September 2015 – Examiners’ Report
+Page 4
+   2
+2 2
+Also d log f y 1 0.
+dy y
+   
+    
+ 
+So mode is at y 1 3  
+ 
+
+.
+Therefore, 8 3 0.791
+6.325
+
+   .
+(ii) For unimodal symmetrical distributions, the mode will coincide with the mean
+and therefore deviations of this measure from 0 will indicate asymmetry.
+Also, the measure is standardised by dividing with the standard deviation to
+make it scale-free.
+Many candidates failed to work out the mode correctly. Note that this is a
+typical calculus maximisation exercise. Part (ii) was not well answered, with
+many candidates failing to comment on the relationship between the mean
+and the mode, and very few mentioning the standardisation.
+Q3
+2 2
+1 1
+2 2 24,12
+2 2
+S / ~ F
+S
+
+
+so the confidence interval is given by
+ 
+2 2
+1 1
+2 2 12,24
+2 24,12 2
+* 1 , * 2.4 * 1 , 2.4 *2.541 0.530, 4.066
+1.5 3.019 1.5
+s s F
+s F s
+             
+Generally very well answered.
+
+
