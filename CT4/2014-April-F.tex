@@ -33,9 +33,7 @@
 \begin{document}
 \begin{enumerate}
 10
-An industrial kiln is used to produce batches of tiles and is run with a standard firing
-cycle. After each firing cycle is finished, a maintenance inspection is undertaken on
-the heating element which rates it as being in Excellent, Good or Poor condition, or
+An industrial kiln is used to produce batches of tiles and is run with a standard firing cycle. After each firing cycle is finished, a maintenance inspection is undertaken on the heating element which rates it as being in Excellent, Good or Poor condition, or
 notes that the element has Failed.
 The probabilities of the heating element being in each condition at the end of a cycle,
 based on the condition at the start of the cycle are as follows:
@@ -55,9 +53,8 @@ Good Poor Failed
 0.2
 0.5
 1
-(i) Write down the name of the stochastic process which describes the condition
-of a single heating element over time.
-[1]
+(i) Write down the name of the stochastic process which describes the condition of a single heating element over time.
+
 (ii) Explain whether the process describing the condition of a single heating
 element is:
 (a)
@@ -65,35 +62,23 @@ element is:
 (iii)
 irreducible.
 periodic.
-[2]
-Derive the probability that the condition of a single heating element is
-assessed as being in Poor condition at the inspection after two cycles, if the
-heating element is currently in Excellent condition.
-[2]
-If the heating element fails during the firing cycle, the entire batch of tiles in the kiln
-is wasted at a cost of £1,000. Additionally a new heating element needs to be
-installed at a cost of £50 which will, of course, be in Excellent condition.
-(iv) Write down the transition matrix for the condition of the heating element in
-the kiln at the start of each cycle, allowing for replacement of failed heating
-elements.
-[2]
-(v) Calculate the long term probabilities for the condition of the heating element
-in the kiln at the start of a cycle.
-[4]
+
+Derive the probability that the condition of a single heating element is assessed as being in Poor condition at the inspection after two cycles, if the heating element is currently in Excellent condition.
+
+If the heating element fails during the firing cycle, the entire batch of tiles in the kiln is wasted at a cost of £1,000. Additionally a new heating element needs to be installed at a cost of £50 which will, of course, be in Excellent condition.
+(iv) Write down the transition matrix for the condition of the heating element in the kiln at the start of each cycle, allowing for replacement of failed heating elements.
+(v) Calculate the long term probabilities for the condition of the heating element in the kiln at the start of a cycle.
+
 The kiln is fired 100 times per year.
 (vi)
 Calculate the expected annual cost incurred due to failures of heating
 elements.
 [2]
-The company is concerned about the cost of ruined tiles and decides to change its
-policy to replace the heating element if it is rated as in Poor condition.
+The company is concerned about the cost of ruined tiles and decides to change its policy to replace the heating element if it is rated as in Poor condition.
 (vii)
 Evaluate the impact of the change in replacement policy on the profitability of
 the company.
-[6]
-[Total 19]
-END OF PAPER
-CT4 A2014–9
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 10
@@ -130,7 +115,7 @@ The required probability is equal to
 Prob [Excellent to Excellent to Poor] +
 Prob [Excellent to Good to Poor] +
 Prob [Excellent to Poor to Poor]
-which is (0.5 × 0.2) + (0.2 × 0.3) + (0.2 × 0.5) = 0.26.
+which is \[(0.5 × 0.2) + (0.2 × 0.3) + (0.2 × 0.5) = 0.26.\]
 (iv)
 Excellent
 Excellent
@@ -153,7 +138,8 @@ Long-term probabilities satisfy π = π P .
 0.2 π E + 0.5 π G = π G
 (2)
 0.2 π E + 0.3 π G + 0.5 π P = π P (3)
-Page 17Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Page 17Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
 Also π E + π G + π P = 1.
 (2)–(3) gives:
 5
@@ -176,7 +162,7 @@ Stationary distribution π E =
 51
 51
 The expected number of failures of heating elements is:
-(0.1 π E + 0.2 π G + 0.5 π P )*100 = 24.51.
+\[(0.1 π E + 0.2 π G + 0.5 π P )*100 = 24.51.\]
 The cost of each failure is £1,050 so the expected cost over a year is £25,735.
 (vii)
 The transition matrix for the condition of the element at the start of each cycle
@@ -204,11 +190,10 @@ But we also now have extra heating element replacement costs of:
 (0.2 ρ E + 0.3 ρ G )*100*50 = £1,143 .
 So overall profits have improved by:
 £25,735 − £13,500 − £1,143 = £11,092.
-In part (i) “Markov jump chain” is not correct as the question makes reference to time, and
-the Markov jump chain loses the information about the timing of the transitions. Answers to
-part (ii) were very good. In part (iii) the full matrix was not required but some indication of
-where the numbers have come from or what they are was needed. In parts (iv) onwards many
+
+In part (i) “Markov jump chain” is not correct as the question makes reference to time, and the Markov jump chain loses the information about the timing of the transitions. Answers to part (ii) were very good. In part (iii) the full matrix was not required but some indication of where the numbers have come from or what they are was needed. In parts (iv) onwards many
 candidates offered a 4 × 4 matrix as a solution as follows:
+
 Excellent
 Excellent
 Good
@@ -233,9 +218,7 @@ Failed
 0.2
 0.5
 0
-this is incorrect because it implicitly assumes that the kiln is run for a complete cycle with a
-failed element. It was penalised in part (iv) but full credit could be scored in part (v) for the
-correctly followed-through stationary distribution.
+this is incorrect because it implicitly assumes that the kiln is run for a complete cycle with a failed element. It was penalised in part (iv) but full credit could be scored in part (v) for the correctly followed-through stationary distribution.
 The better prepared candidates scored highly on this question.
-END OF EXAMINERS’ REPORT
-Page 19
+
+\end{document}
