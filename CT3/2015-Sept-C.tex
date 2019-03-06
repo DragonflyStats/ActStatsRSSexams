@@ -1,0 +1,181 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+CT3 S2015–4
+7 X and Y are discrete random variables with joint distribution given below.
+Y = −1 Y = 0 Y = 1
+X = 1 0 1/4 0
+X = 0 1/4 1/4 1/4
+(i) Determine the conditional expectation E[Y|X = 1]. [1]
+(ii) Determine the conditional expectation E[X|Y = y] for each value of y. [3]
+(iii) Determine the expected value of X based on your conditional expectation
+results from part (ii). [2]
+[Total 6]
+8 Consider three groups of policyholders: A, B and C. Denote by XA the random
+variable for the number of claims that a randomly chosen policyholder in group A
+submits during any particular calendar year. XB and XC denote the corresponding
+random variables for policyholders in groups B and C.
+Assume that XA, XB and XC have Poisson distributions with parameters A = 0.2,
+B = 0.1 and C = 0.05, depending on the group.
+Each policyholder belongs to exactly one group and group membership does not
+change during the lifetime of a policyholder.
+Assume that:
+   any individual policyholder submits a claim during any year independently of
+claims submitted by other policyholders.
+ the number of claims a policyholder submits during a year depends on the group
+the policyholder belongs to, but given which group the policyholder is a member
+of, the number of claims submitted during a year is independent of the number of
+claims the policyholder submitted in previous years.
+An insurance company has a portfolio of policies with 20% of policyholders
+belonging to group A, 20% belonging to group B and the remaining policyholders
+belonging to group C.
+The insurance company randomly chooses one of its policyholders.
+(i) Calculate the probability that this policyholder will submit at least two claims
+in a particular year given that he belongs to group A. [2]
+Now assume that the insurance company does not know to which group the randomly
+selected policyholder belongs.
+(ii) Show that the probability that the randomly selected policyholder submits
+exactly one claim in any particular year is approximately 0.0794. [3]
+CT3 S2015–5 PLEASE TURN OVER
+(iii) Determine the probability that the randomly selected policyholder belongs to
+group A given that the policyholder submitted exactly one claim in the
+previous year. [2]
+(iv) Determine the probability that the randomly chosen policyholder will submit
+one claim during the current year given that he submitted one claim in the
+previous year. [5]
+
+%%%Q7 (i)  
+1 0 0 1 1 0
+| 1 4 0 1
+4
+E Y X
+     
+  
+(ii)  
+1 0 0 1
+| 1 4 0 1
+4
+E X Y
+  
+    ,  
+1 1 0 1 | 0 4 4 1 1 2
+2
+E X Y
+  
+  
+ 
+1 0 0 1
+| 1 4 0 1
+4
+E X Y
+  
+  
+(iii) E X   E EX |Y  EX |Y  1 PY  1
+EX |Y  0 PY  0
+EX |Y 1 PY 1
+and   0 1 1 1 0 1 1
+4 2 2 4 4
+E X       
+Some reasonable answers, but generally a mixed performance. Note that the
+question asks candidates to “determine” the various expectations, so working
+needs to be shown to gain full marks.
+Subject CT3 (Probability and Mathematical Statistics Core Technical) – September 2015 – Examiners’ Report
+Page 7
+Q8 (i) PXA  2 1 FA 1 1 0.98248  0.01752 using tables
+(ii) PX A 1PA PXB 1PB PXC 1PC
+ e0.2 *0.2*0.2  e0.1 *0.1*0.2  e0.05 *0.05*0.6  0.07938286 .
+(iii) Let X 0 be the number of claims submitted last year
+0    
+0
+1
+| 1
+1
+P X A P A
+P A X
+P X
+           
+= 0.2 *0.2* 0.2 0.4125
+0.0794
+e 
+(iv) Let X 0 be the number of claims submitted last year, and X1 be the number of
+claims that will be submitted in the current year.
+P[X1 1 |X 0 1]  P[{X1 1 A | X 0 1} P{X1 1 B | X 0 1}]
+ P[{X1 1 C | X 0 1}]
+The first probability is given as
+P[{X1 1} A|X 0 1]  P[X1 1| AX 0 1P A| X 0 1]
+ P[X1 1| AP A| X 0 1]
+where the last equality follows from conditional independence of X1 from
+X 0 given group membership. Then
+1   0      
+0
+1
+[ 1| | 1] 1
+1
+A
+A
+P X P A
+P X A P A X P X
+P X
+
+   
+    
+ (e0.2 *0.2)2 *0.2 / 0.0794  0.06754
+Similarly
+1 0  2  
+0 [{ 1} | 1] 1 0.02062
+1 B
+P B
+P X BX P X
+P X
+     
+    
+1 0  2  
+0 [{ 1} | 1] 1 0.01709
+1 C
+P C
+P X CX P X
+P X
+     
+    
+Subject CT3 (Probability and Mathematical Statistics Core Technical) – September 2015 – Examiners’ Report
+Page 8
+Thus:
+  P[X1 1 |X 0 1]  0.06754 0.02062  0.01709  0.10521
+Part (i) Well answered, although some candidates over-complicated the
+answer.
+Part (ii) Generally well answered.
+Part (iii) Reasonably well answered.
+Part (iv) This was not well answered. It is a more challenging question, with
+other parts leading up to this. Many candidates did not attempt it.
+
+
