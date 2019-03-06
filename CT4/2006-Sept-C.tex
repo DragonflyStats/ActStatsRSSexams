@@ -42,23 +42,15 @@ E[X i ] = 15, Var[X i ] = 15 2 = 225.
 (i) Calculate (approximately) the probability that the total time the commuter
 spends waiting for buses over the 100 days exceeds 27 hours.
 [3]
-(ii) At the end of the 100 days the bus frequency is increased, so that buses arrive
-at one per 10 minutes on average (still behaving as a Poisson process). The
-commuter then catches a bus each day for a further 99 days. Calculate
-(approximately) the probability that the total time spent waiting over the
-whole 199 days exceeds 40 hours.
-[3]
-[Total 6]
-CT3 S2006
-3
-PLEASE TURN OVER8
+(ii) At the end of the 100 days the bus frequency is increased, so that buses arrive at one per 10 minutes on average (still behaving as a Poisson process). The commuter then catches a bus each day for a further 99 days. Calculate (approximately) the probability that the total time spent waiting over the whole 199 days exceeds 40 hours.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%- 8
 Let X 1 denote the mean of a random sample of size n from a normal population with
 mean
 2
 1 ,
 and variance
-and let X 2 denote the mean of a random sample also of
-size n from a normal population with the same mean
+and let X 2 denote the mean of a random sample also of size n from a normal population with the same mean
 two samples are independent.
 but with variance
 2
@@ -68,9 +60,11 @@ Define W as the weighted average of the sample means
 W
 X 1 (1
 ) X 2
-(i) Show that W is an unbiased estimator of . [1]
-(ii) Obtain an expression for the mean square error of W. [2]
-(iii) Show that the value of
+
+\begin{enumerate}[(i)]
+\item Show that W is an unbiased estimator of . 
+\item Obtain an expression for the mean square error of W.
+\item  Show that the value of
 given by
 2
 2
@@ -82,11 +76,8 @@ for which W has minimum mean square error is
 ,
 and verify that the optimum corresponds to a minimum.
 9
-[3]
-(iv) Consider the special case when the variances of the two random samples are
-equal to a common value 2 . State (do not derive) the maximum likelihood
-estimator of calculated from the combined samples, and compare it with the
-estimator obtained in (iii).
+\item  Consider the special case when the variances of the two random samples are equal to a common value 2 . State (do not derive) the maximum likelihood estimator of calculated from the combined samples, and compare it with the estimator obtained in (iii).
+\end{enumerate}
 
 
 7
@@ -112,10 +103,8 @@ If Y j is the waiting time on day j of the extra 99 days, then E ( Y j ) = 10 an
 Var ( Y j ) = 100 so that if Y =
 ∑ j = 1 Y j
 99
-is the total waiting time over the 99 days,
-then Y is approximately N (990,9900) by CLT.
-If Z = X + Y (so that Z is the total waiting time over the whole 199 days), then
-since X and Y are independent, Z is approximately N (1500+990, 22500+9900),
+is the total waiting time over the 99 days, then Y is approximately N (990,9900) by CLT.
+If Z = X + Y (so that Z is the total waiting time over the whole 199 days), then since X and Y are independent, Z is approximately N (1500+990, 22500+9900),
 i.e. N (2490, 32400).
 ⎛ 2400 − 2490 ⎞
 Hence P ( Z > 2400) ≈ 1 − Φ ⎜
@@ -151,7 +140,7 @@ n
 d MSE
 = 0 ⇒ ( σ 1 2 + σ 2 2 ) α = σ 2 2
 d α
-Page 6Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 σ 22
 ∴ α=
 σ 1 2 + σ 2 2
@@ -198,3 +187,4 @@ This is the same as W since
 2
 2
 2
+\end{document}
