@@ -43,11 +43,11 @@ The insurer knows that the only likely date a claim will be made is on the day o
 St Ignitius feast on 1 August each year, when it is traditional to have an enormous
 fireworks display. The annual probability of a claim on each policy is 40%. Claim
 amounts follow a Pareto distribution with parameters = 10 and = 9,000.
-(i) Calculate the mean and standard deviation of the annual aggregate claims. [4]
-(ii) Denote by (U, t) the probability of ruin before time t given initial surplus U.
+(i) Calculate the mean and standard deviation of the annual aggregate claims. 
+(ii) Denote by (U, t) the probability of ruin before time t given initial surplus $U$.
 (a)
 (b)
-CT6 A2005
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 3
 Explain why for this portfolio (U, t 1 ) = (U, t 2 ) if
 7/12 < t 1 , t 2 < 19/12.
@@ -57,11 +57,9 @@ Normally distributed.
 [4]
 [Total 9]
 PLEASE TURN OVER7
-The no claims discount (NCD) system operated by an insurance company has three
-levels of discount: 0%, 25% and 50%.
-If a policyholder makes a claim they remain at or move down to the 0% discount level
-for two years. Otherwise they move up a discount level in the following year or
-remain at the maximum 50% level.
+The no claims discount (NCD) system operated by an insurance company has three levels of discount: 0%, 25% and 50%.
+If a policyholder makes a claim they remain at or move down to the 0\% discount level
+for two years. Otherwise they move up a discount level in the following year or remain at the maximum 50% level.
 The probability of an accident depends on the discount level:
 Discount Level Probability of accident
 0%
@@ -70,11 +68,8 @@ Discount Level Probability of accident
 0.2
 0.1
 The full premium payable at the 0% discount level is 750.
-Losses are assumed to follow a lognormal distribution with mean 1,451 and standard
-deviation 604.4.
-Policyholders will only claim if the loss is greater than the total additional premiums
-that would have to be paid over the next three years, assuming that no further
-accidents occur.
+Losses are assumed to follow a lognormal distribution with mean 1,451 and standard deviation 604.4.
+Policyholders will only claim if the loss is greater than the total additional premiums that would have to be paid over the next three years, assuming that no further accidents occur.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 The number of annual claims N follows a binomial distribution:
 N ~ B(100, 0.4) then
@@ -108,27 +103,20 @@ Var(S) = E(N)Var(X) + Var(N)E(X) 2
 Page 5Subject CT6 (Statistical Methods Core Technical)
 (ii)
 (a)
-April 2005
-Examiners Report
-Since claims can only fall on one day of the year, there is effectively
-only one day of the year on which ruin can occur, namely 1 August (or
-strictly shortly thereafter). For a year after 1 August, the insurer will
-be receiving premiums but paying no claims, and hence solvency will
-be improving. Hence
-(U, t 1 ) = (U, t 2 ) if 7/12 < t 1 , t 2 < 19/12.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Since claims can only fall on one day of the year, there is %%effectively only one day of the year on which ruin can occur, namely 1 August (or strictly shortly thereafter). For a year after 1 August, the insurer will be receiving premiums but paying no claims, and hence solvency will be improving. Hence
+\[(U, t 1 ) = (U, t 2 ) if 7/12 < t 1 , t 2 < 19/12.\]
 (b)
 We must find (15,000, 1). But ruin will have occurred before time 1
-only if it occurs at t = 7/12. Just before the claims occur, the insurers
-assets will be 7/12 100 600 + 15,000 = 50,000 and ruin will occur
-if the aggregate claims in the first year exceed this level. Assuming
-that S is approximately normally distributed, we have
-P(Ruin) = P(N(40,000, (8,602.33) 2 ) > 50,000)
-= P N (0, 1)
+only if it occurs at t = 7/12. Just before the claims occur, the insurers assets will be 7/12 100 600 + 15,000 = 50,000 and ruin will occur if the aggregate claims in the first year exceed this level. Assuming that S is approximately normally distributed, we have
+P(Ruin) = P(N(40,000, (8,602.33) 2 ) > 50,000)\\
+= P N (0, 1)\\
 = 1
 50, 000 40, 000
 8, 602.33
 (1.162)
 = 0.123.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 7
 (i)
 Denote:
@@ -189,7 +177,7 @@ So the transition matrix is
 0.2316 0 0.7684 0
 0.1628 0 0 0.8372
 0.0814 0 0 0.9186
-Page 7Subject CT6 (Statistical Methods Core Technical)
+%%%%%%%%%%%%%%%%%%%%%55
 (iii)
 (iv)
 0.2498
@@ -229,6 +217,5 @@ April 2005
 (0.1211 + 0.0909 + 0.0698
 0.75 + 0.7182
 0.5) = £467.59
-(v) Intention is to automatically premium rate with NCD system. Small number of categories and the relatively low discount result in high proportion of
-policyholders in maximum discount category. Many more categories and higher discount levels would be required to correctly rate such a
-heterogeneous population.
+(v) Intention is to automatically premium rate with NCD system. Small number of categories and the relatively low discount result in high proportion of policyholders in maximum discount category. Many more categories and higher discount levels would be required to correctly rate such a heterogeneous population.
+\end{document}
