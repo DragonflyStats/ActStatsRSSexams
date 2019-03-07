@@ -43,27 +43,23 @@ discount, or remains at 40% discount
 • following a year of one or more claims, a policyholder at 40% discount moves to
 25% discount while a policyholder at 25% or 0% moves to or stays at 0% discount
 The full premium for each policyholder is £1,000. Following an accident,
-policyholders decide whether or not to claim by considering total outgoing over the
-next two years, assuming no further claims in this period and ignoring interest.
-(i) Find the claim threshold for each level of discount.
-(ii) The probability of no accidents in any year for each policyholder is 0.88 and
+policyholders decide whether or not to claim by considering total outgoing over the next two years, assuming no further claims in this period and ignoring interest.
+\begin{enumerate}[(i)]
+\item (i) Find the claim threshold for each level of discount.
+\item (ii) The probability of no accidents in any year for each policyholder is 0.88 and
 individual losses are assumed to have a lognormal distribution with μ = 6.0
 and σ = 3.33. Ignoring the possibility of more than 1 accident occurring in a
 year, calculate the transition matrix.
-[3]
-(iii) Calculate the stationary distribution.
-(iv) Derive the stationary distribution under the alternative assumption that a
+\item (iii) Calculate the stationary distribution.
+\item (iv) Derive the stationary distribution under the alternative assumption that a
 policyholder always claims after a loss (regardless of the size of the claim). [3]
-(v) Comment on the difference between the results of (iii) and (iv).
-CT6 A2007—7
-[3]
-[3]
-[1]
-[Total 13]
-PLEASE TURN OVER10
+\item (v) Comment on the difference between the results of (iii) and (iv).
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10
 (i)
 The Gamma distribution with mean μ and variance μ 2 /α has density function
-f(y) =
+\[f(y) =
 α α
 μ α Γ ( α )
 y
@@ -72,25 +68,22 @@ e
 −
 y α
 μ
-( y > 0 )
+( y > 0 )\]
 (a) Show that this may be written in the form of an exponential family.
 (b) Use the properties of exponential families to confirm that the mean and
 [9]
 variance of the distribution are μ and μ 2 /α.
 (ii) Explain the difference between a continuous covariate and a factor.
 [3]
-(iii) A company is analysing its claims data on a portfolio of motor policies, and
-uses a gamma distribution to model the claim severities. The company uses
+(iii) A company is analysing its claims data on a portfolio of motor policies, and uses a gamma distribution to model the claim severities. The company uses
 three rating factors:
 policyholder age (as a continuous variable);
 policyholder gender;
 vehicle rating group (as a factor).
-(a) Write down the form of the linear predictor when all rating factors are
-included as main effects.
+(a) Write down the form of the linear predictor when all rating factors are included as main effects.
 (b) State how the linear predictor changes if an interaction between
 policyholder age and gender is included.
-[4]
-[Total 16]
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 9
 (i)
@@ -187,8 +180,7 @@ Hence:
 π = (0.0161, 0.1181, 0.8658)
 10
 (v) Award 1 mark for any sensible comment on the reduction in the number of
-policyholders in the lower discount categories (or increase in the higher
-discount categories)
+policyholders in the lower discount categories (or increase in the higher discount categories)
 (i) (a)
 ⎡ y α
 ⎤
@@ -211,7 +203,7 @@ b(θ) = log μ
 ⎛ 1 ⎞
 = log ⎜ − ⎟ = - log( - θ)
 ⎝ θ ⎠
-Page 10Subject CT6 (Statistical Methods Core Technical) — April 2007 — Examiners’ Report
+%%--- Page 10Subject CT6 (Statistical Methods Core Technical) — April 2007 — Examiners’ Report
 (b)
 The mean and variance of the distribution are b ′ ( θ ) and a ( φ ) b ′′ ( θ )
 b ′ ( θ ) = −
@@ -233,17 +225,16 @@ hence the variance is
 μ , as required
 α
 A factor is categorical e.g. male/female.
-For a continuous covariate, the value is included. For example, if x is a
-continuous covariate, a main effect would be α + βx.
+For a continuous covariate, the value is included. For example, if x is a continuous covariate, a main effect would be $\alpha  + \beta x$.
 (iii)
 (a)
 The linear predictor has the form
-α i + β j + γx
+\[α i + β j + γx\]
 where α i is the factor for policyholder gender (i = 1,2)
 β j is the factor for vehicle rating group
 x is the policyholder age
 (α 1 = 0, β 1 = 0)
 (b)
 The linear predictor becomes
-α i + β j + γ i x
-Page 11Subject CT6 (Statistical Methods Core Technical) — April 2007 — Examiners’ Report
+\[α i + β j + γ i x\]
+\end{document}
