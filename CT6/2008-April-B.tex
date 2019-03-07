@@ -1,21 +1,48 @@
+\documentclass[a4paper,12pt]{article}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+
+\begin{enumerate}
 3
-(i) X and Y are independent Poisson random variables with mean λ. Derive the
-moment generating function of X, and hence show that X + Y also has a
-Poisson distribution.
+(i) X and Y are independent Poisson random variables with mean λ. Derive the moment generating function of X, and hence show that X + Y also has a Poisson distribution.
 [4]
-(ii) An insurer has a portfolio of 100 policies. Annual premiums of 0.2 units per
-policy are payable annually in advance. Claims, which are paid at the end of
-the year, are for a fixed sum of 1 unit per claim. Annual claims numbers on
-each policy are Poisson distributed with mean 0.18.
-Calculate how much initial capital is needed in order to ensure that the
-probability of ruin at the end of the year is less than 1%.
+(ii) An insurer has a portfolio of 100 policies. Annual premiums of 0.2 units per policy are payable annually in advance. Claims, which are paid at the end of the year, are for a fixed sum of 1 unit per claim. Annual claims numbers on each policy are Poisson distributed with mean 0.18.
+
+Calculate how much initial capital is needed in order to ensure that the probability of ruin at the end of the year is less than 1%.
 %-----------------------------------------------------------------------%
 4
 Y 1 , Y 2 , ..., Y n are independent observations from a normal distribution with E[Y i ] = μ i
 and Var[Y i ] = σ 2 .
 \begin{enumerate}[(i)]
-\item  Write the density of Y i in the form of an exponential family of distributions. [2]
+\item  Write the density of Y i in the form of an exponential family of distributions. 
 \item Identify the natural parameter and derive the variance function.
 \item Show that the Pearson residual is the same as the deviance residual.
 \end{enumerate}
@@ -49,17 +76,17 @@ t
 which is the MGF of a Poisson distribution with parameter 2λ. Hence X + Y is
 Poisson distributed.
 (ii)
-Using the result above, aggregate claims on the portfolio over the year have a
-Poisson distribution with parameter 18.
-Let the initial capital be U. At the end of the year, the surplus will be
-U + 20 – N where N is the number of claims.
-Page 3Subject CT6 (Statistical Methods Core Technical) — April 2008 — Examiners’ Report
+Using the result above, aggregate claims on the portfolio over the year have a Poisson distribution with parameter 18.
+Let the initial capital be U. At the end of the year, the surplus will be U + 20 – N where N is the number of claims.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 Now using the tables in the gold book, P(N <= 28) = 0.9897, and
-P(N < = 29) = 0.9941.
+$P(N < = 29) = 0.9941$.
 So we need U to be large enough that ruin would only occur if there were 30
 or more claims. So we need U + 20 – 29 > 0.
 i.e. U > 9.
 Comment: Many candidates struggled with (ii) here.
+
 4
 (i)
 f(y i ) =
@@ -102,7 +129,9 @@ The scaled deviance is
 Page 4
 ∑
 ( y i − μ ˆ i ) 2
-σ 2Subject CT6 (Statistical Methods Core Technical) — April 2008 — Examiners’ Report
+σ 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 Hence the deviance residual is
 ( y i − μ ˆ i ) 2
 y i − μ ˆ i
