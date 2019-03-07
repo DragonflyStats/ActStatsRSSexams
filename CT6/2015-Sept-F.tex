@@ -1,0 +1,278 @@
+11 Consider the following pair of equations:
+  Xt = 0.5Xt1 + Yt + 1t
+  
+  Yt = 0.5Yt1 + Xt + 2
+  t
+  where 1t
+   and 2
+  t are independent white noise processes.
+  (i) (a) Show that these equations can be represented as
+  M
+  Xt
+  Yt
+  
+  
+  
+  
+  
+  
+   N
+  Xt1
+  Yt1
+  
+  
+  
+  
+  
+  
+  
+  t
+  1
+  t
+  2
+  
+  
+  
+  
+  
+  
+  where M and N are matrices to be determined.
+  (b) Determine the values of  for which these equations represent a
+  stationary bivariate time series model. [9]
+  (ii) Show that the following set of equations represents a VAR(p) (vector auto
+                                                                     regressive) process, by specifying the order and the relevant parameters:
+    Xt = Xt1 + Yt1 + 1t
+  
+  Yt = Xt1  Xt2 + 2
+  t
+  [3]
+  [Total 12]
+  12 An actuary needs to sample from a particular claim size distribution with the
+  following density function:
+    f(x) = kex 2, 0  x  2
+  kex , x  2
+  
+   
+   
+  (i) Calculate the value of 􀝇. 􁈾2􁈿
+  (ii) Set out an algorithm for sampling from f(x) using the inverse transform
+  method. [5]
+  (iii) Set out an algorithm for sampling from f(x) using the acceptance – rejection
+  method, by using samples from the exponential distribution with mean 1. [6]
+  [Total 13]
+  END OF PAPER
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    Page 12
+  Q11 (i) (a) It follows that
+  1
+  1
+  1 2
+  1 0.5 0
+  1 0 0.5
+  t t t
+  t t t
+  X X
+  Y Y
+  
+  
+          
+                      
+  (b) Multiplying both sides by
+  1
+  2
+  1 1 1
+  1 (1 ) 1
+      
+           
+  we then have
+     
+  1
+  1
+  2 1 2 2
+  1 1 1 1
+  2 1 1 1 1
+  t t t
+  t t t
+  X X
+  Y Y
+  
+  
+         
+                       
+  
+  
+  .
+  Which is a stationary VAR(1) model if the eigenvalues of
+  A1 = 2
+  1 1
+  2(1 ) 1
+   
+       
+  are those  such that
+  1
+  det 0
+  1
+      
+        
+  or 1,2 = 1  
+  then the eigenvalues of A1 are less than one in absolute value if
+  2
+  1 1
+  2(1 )
+   
+  
+   
+  i.e.
+  1 1
+  2(1 )
+  
+   
+  and
+  1 1
+  2(1 )
+  
+   
+  which implies that 1
+  2
+    or 3
+  2
+   
+  Subject CT6 (Statistical Methods Core Technical) – September 2015 – Examiners’ Report
+  Page 13
+  (ii) Here we have a VAR(2) where
+  A1 =
+    0
+   
+      
+  A2 =
+    0 0
+  0
+   
+     
+  since
+  t
+  t
+  X
+  Y
+   
+   
+   
+  =
+    1
+  1 2
+  1 2 2
+  0 0
+  0 0
+  t t t
+  t t t
+  X X
+  Y Y
+   
+   
+         
+                      
+  
+  
+  .
+  This was by far the poorest answered question on the paper, with many
+  candidates scoring few marks. Only the strongest candidates were able to
+  derive the required eigenvalues and score well.
+  Q12 (i) Here k1 = 2
+  2
+  0 2
+  x
+  e dx e xdx
+        = 􀵆2 􀝁􀬿􁈺􀳣
+  􀰮􁈻􁉃
+  􀬶
+  􀮶
+  = 2(1  e1) + e2  0
+  = 1.399576
+  So k = 1.3995761 = 0.714502
+  (ii) The distribution function here is
+       
+  2 2
+  0
+  1 1 2
+  2
+  2 1 , 0 2
+  2 1 21 , 2
+  x u x
+  x
+  u x
+  k e du k e x
+  k e e du k e e e x
+   
+      
+    
+        
+        
+    
+                 
+  
+  
+  At 􀝔 = 2, (2) = 2 ∗ 􀝇 ∗ (1 – exp(−1)) = 0.9033029, therefore the inversion
+  function is
+  X = F1(U) =
+    1 2
+  2ln 1 , 0 0.9033029
+  2
+  ln 2(1 ) , 0.9033029
+  U U
+  k
+  e e U U
+  k
+   
+             
+  
+              
+  The inversion algorithm is then:
+    Sample U from U(0,1)
+  Take X = F1(U) as above.
+  Subject CT6 (Statistical Methods Core Technical) – September 2015 – Examiners’ Report
+  Page 14
+  (iii) M =
+    0
+  max ( ) x x
+  f x
+   e
+  = 2 1
+  0
+  max ( ) , 0 2
+  , 2
+  x
+  x x
+  f x ke x ke
+  e k x
+  
+   
+  
+     
+   
+  The rejection function is then
+  h(x) = ( )
+  x
+  f x
+  Me =
+    1 2
+  1
+  , 0 2
+  , 2
+  x
+  e e x
+  e x
+  
+  
+  
+    
+    
+  The algorithm is then:
+    1  Simulate U1 from U(0,1), so that Y = logU1 is Exp(1)
+  2  Simulate U2 from U(0,1)
+  If U2 < h(Y) take X = Y otherwise start again.
+  Most candidates were able to score well in part (i), and also at least partially
+  in part (iii). Only the better prepared candidates were able to apply the
+  inversion theory to part (ii), and only the strongest candidates correctly
+  included the term 2(1 – e–1) for the second half of the distribution.
+  END OF EXAMINERS’ REPORT
