@@ -1,0 +1,97 @@
+3 A child playing a game believes that a six sided die is unfair, and that he has a
+probability p > 1/6 of predicting the outcome of any given throw. His mother is less
+sure, and her prior beliefs about p are as follows:
+   a 1/3 chance that p = 2/6 and
+ a 2/3 chance that p = 1/6
+The child accurately predicts the results of 4 out of 10 dice throws.
+Calculate the posterior probability that p = 1/6. [6]
+CT6 A2016–3 PLEASE TURN OVER
+4 Let us consider that we need to sample from a discrete random variable Y with
+distribution function:
+  Y 1 2 3
+P 1
+3 1
+3 1
+3
+(i) Set out a direct method of sampling from Y. [2]
+Consider now another random variable 􀜺 with distribution:
+  X 1 2 3
+P 1
+2 1
+3 1
+6
+(ii) Set out a direct method of sampling from X. [2]
+(iii) (a) Explain how you can apply the acceptance-rejection method to
+sample X by rejecting/accepting samples from Y.
+(b) Calculate how many samples from Y on average are needed to
+generate one sample from X. [6]
+[Total 10]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q3 Let X be the number of correct predictions, so X ~ Bin (10, p) [1]
+P(p = 1/6 | X = 4) = P(p = 1/6 and X = 4) / P(X = 4)
+= P(X = 4 | p = 1/6) * P(p = 1/6) / P(X = 4) [1]
+P(X = 4 | p = 1/6) = 10 ( )4 ( )6
+C4 1 / 6 5 / 6 = 0.0542 659 … [1]
+P(X = 4 | p = 2/6) = 10 ( )4 ( )6
+C4 2 / 6 4 / 6 = 0.227 607 580… [1]
+P(X = 4) = P(p = 1/6) * P(X = 4|p = 1/6) + P(p = 2/6) * P(X = 4|p = 2/6)
+= 2/3 * 0.054 265 9 … + 1/3 * 0.227 607 58
+= 0.112 046 … [1]
+Subject CT6 (Statistical Methods Core Technical) – April 2016 – Examiners’ Report
+Page 4
+So posterior prob = 0.0542659 * (2/3)/0.112046 = 0.323 [1]
+[TOTAL 6]
+Candidates who were well prepared on Bayes’ Theorem and previous exam
+questions on this topic did very well here, although a number of candidates
+struggled.
+Q4 (i) Algorithm
+(1) Simulate one 􀜷 from U(0,1) [1]
+(2) If 0 1 , 1; 1 2 , 2;else 3
+3 3 3
+<U ≤ Y = <U ≤ Y = Y = [1]
+[Total 2]
+(ii) Similarly for generating samples from 􀜺
+Algorithm
+Simulate one U from U(0,1) [1]
+If 0 1
+2
+≤U < , X=1 ; if 1 5
+2 6
+≤U < , X = 2, else X = 3 [1]
+[Total 2]
+(iii) The rejection here applied in the same way as in the continuous case we need
+to calculate again
+1 1 1
+max 2 , 3 , 6 max 3 ,1, 3 3 1 1 1 2 6 2
+3 3 3
+M
+ 
+    =   =   =
+     
+ 
+[1]
+Hence ( )
+( )
+1, 2 , 1
+3 3
+f X
+M g x
+=    
+ 
+if X = 1, 2,3 respectively. [1]
+Algorithm
+1 – Simulate Y as in (i). [1]
+2 – Sample U from U(0,1) and then take.
+If Y = 1 X = Y [½]
+U < 2/3 and if Y = 2 take X = Y [½]
+If U < 1/3 and if Y = 3 take X = Y [½]
+Subject CT6 (Statistical Methods Core Technical) – April 2016 – Examiners’ Report
+Page 5
+Otherwise start again. [½]
+The average number of samples from Y needed for a single sample from X is
+of the order M = 3/2, i.e. 1.5 samples on average. [1]
+[Total 6]
+[TOTAL 10]
+Most candidates scored well on parts (i) and (ii), although only the better
+prepared candidates were able to apply the acceptance-rejection method to
+part (iii).
