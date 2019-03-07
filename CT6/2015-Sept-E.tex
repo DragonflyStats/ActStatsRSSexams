@@ -1,0 +1,227 @@
+
+9 A random variable X follows a gamma distribution with parameters  and .
+(i) Derive the moment generating function (MGF) of X. [3]
+(ii) Derive the coefficient of skewness of X. [8]
+[Total 11]
+10 Claims on a portfolio of insurance policies arrive as a Poisson process with annual
+rate . Individual claims are uniformly distributed between 0 and 50, and the
+insurance company uses a premium loading of 12%.
+(i) Show that the insurance company’s adjustment coefficient is 0.0066 to four
+decimal places. [3]
+The insurance company has entered into an excess of loss insurance agreement with
+a retention amount of M and with a reinsurer who uses a premium loading of 15%.
+(ii) (a) Determine the mean amount per claim paid by the reinsurer as a
+function of M.
+(b) Determine the minimum retention level Mmin for the insurance
+company, assuming that expected net premium income needs to be
+greater than expected net claims.
+[6]
+The insurance company manages to negotiate a lower reinsurance premium loading.
+(iii) Explain what happens to the minimum retention level Mmin, without doing
+any further calculations. [2]
+[Total 11]
+CT6 S2015–6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  Q9 (i) M(t) = 1
+0
+[ ] = * 1
+( )
+E etx etx x e xdx
+
+  
+  
+= 1 ( )
+0
+1
+( )
+x e t xdx
+
+   
+  
+=
+          1
+0
+1
+Γ
+t x e t xdx
+t
+ 
+   
+
+
+ 
+   
+The integral is PDF of  (,  - t)  = 1
+ M(t) =
+  t
+   
+     
+= 1 t ,t .
+          
+(ii) Coefficient =  
+3
+3
+[( ) ]
+Var( )
+E x
+x
+  , given E[x]  
+E[(x )3] = E[x3  3x2 + 3x2  3]
+= E[x3]  3 E[x2] + 32 E[x]  3
+= E[x3]  3 E[x2] + 23
+= E[x3]  3 *
+  
+
+* E[x2] + 2(E[x])3
+M(t) = 1 t         
+from (i)
+M(t) =  *  1
+
+
+ 
+
+ 
+1
+*
+  1
+1 t         
+=
+  1
+* 1 t           
+M(t) =
+  
+
+* [( + 1)] *  1
+
+
+ 
+
+ 
+1
+*
+  2
+1 t         
+= 2
+*( 1)
+
+*
+  2
+1 t         
+Subject CT6 (Statistical Methods Core Technical) – September 2015 – Examiners’ Report
+Page 10
+M(t) = 2
+*( 1)
+
+* [( +2)] *
+   1 1     
+*
+  3
+1 t         
+= 3
+*( 1)*(  2)
+
+*
+  3
+1 t         
+E[x3] = M(0) = 3
+*( 1)*(  2)
+
+E[x2] = M''(0) = 2
+( 1)
+
+So
+E[(x  )3] = *( 1) *(  2)
+3
+ 3
+
+* ( 1)
+2
+ 2* 
+
+
+ 
+
+ 
+3
+=  3 2 3 2 3 
+3 3
+1 3 2 3 3 2 2
+
+           
+ 
+Coefficient =
+  2
+3
+
+2
+
+ 
+
+ 
+3 = 2
+
+3
+2
+= 2
+
+Most candidates were able to score well on part (i), but many candidates
+struggled with part (ii), particularly those who had forgotten or were unfamiliar
+with CT3 concepts. Many stronger candidates made use of the cumulant
+generating function in part (ii), which simplified the algebra considerably, and
+were awarded full credit.
+Q10 (i)   cR   MX R
+c  1 EX  1.12 *25  28 
+  50  50 
+0
+1
+0.02
+50
+R
+Rx
+X
+e
+M R e dx
+R
+
+  
+Subject CT6 (Statistical Methods Core Technical) – September 2015 – Examiners’ Report
+Page 11
+So (dividing by lambda)
+ 50 1
+1 28 0
+50
+e R
+R
+R
+
+  
+At R = 0.00665, fn = -0.000 115
+At R = 0.00655 fn = 0.000 209
+(ii) (a)    
+50 2
+0.02 0.02 50 25 0.01 2
+2 M
+M
+E Z   x M dx  x Mx  M  M
+(b) cnet  1 EX  1.15EZ
+ 28 1.1525M 0.01M2 
+ 0.751.15M 0.0115M2 
+net claims =      
+ 
+2
+2
+25 25 0.01
+0.01
+E X E Z M M
+M M
+     
+  
+Need income > claims so
+ 0.75 + 1.15M  0.0115M2 > M – 0.01M2
+ 0.0015M2 + 0.15M – 0.75 > 0
+M > 5.279
+(iii) It decreases Mmin since reinsurance is less of a drag.
+Again most candidates were able to score well on part (i), but only stronger
+candidates were able to apply reinsurance theory to score well on parts (ii)
+and (iii).
+Subject CT6 (Statistical Methods Core Technical) – September 2015 – Examiners’ Report
