@@ -1,20 +1,49 @@
-1 Give two examples of the main types of liability insurance, stating for each example a
-typical insured peril.
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+
+\begin{enumerate}
+
+1 Give two examples of the main types of liability insurance, stating for each example a typical insured peril.
 [4]
-2 A claim amount distribution is normal with unknown mean μ and known standard
-deviation £50. Based on past experience a suitable prior distribution for μ is normal
-with mean £300 and standard deviation £20.
+2 A claim amount distribution is normal with unknown mean μ and known standard deviation £50. Based on past experience a suitable prior distribution for μ is normal with mean £300 and standard deviation £20.
 (i)
 (ii)
-Calculate the prior probability that μ, the mean of the claim amount
-distribution, is less than £270.
-[1]
+Calculate the prior probability that μ, the mean of the claim amount distribution, is less than £270.
+
 A random sample of 10 current claims has a mean of £270.
 (a) Determine the posterior distribution of μ.
 (b) Calculate the posterior probability that μ is less than £270 and
 comment on your answer.
-[5]
-[Total 6]
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 1
@@ -36,6 +65,7 @@ product
 • Wrong medical diagnosis, error in medical
 operation etc.
 Comment: Most of the candidates did very well here.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 2
 (i)
 P ( μ < 270) = P ( N (300, 20 2 ) < 270)
@@ -73,7 +103,7 @@ and variance
 20
 = 153.85 = 12.40 2
 So the posterior distribution of μ is N (281.54,12.40 2 ) .
-Page 2Subject CT6 (Statistical Methods Core Technical) — April 2008 — Examiners’ Report
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (b)
 The posterior probability required is given by:
 270 − 281.54
@@ -83,10 +113,8 @@ The posterior probability required is given by:
 = 1 − (0.9 × 0.82381 + 0.1 × 0.82639)
 P ( N (281.54,12.40 2 ) < 270) = P ( N (0,1) <
 = 0.1759
-Comment: The probability that the true mean is less than £270 has risen, as the
-sample evidence suggests that the true mean is less than the mean of the prior
-distribution. Nevertheless, the sample size is relatively small, and the variance of the
-prior distribution is also small, so that a reasonable weight is still given to the prior
-information.
+Comment: The probability that the true mean is less than £270 has risen, as the sample evidence suggests that the true mean is less than the mean of the prior distribution. Nevertheless, the sample size is relatively small, and the variance of the prior distribution is also small, so that a reasonable weight is still given to the prior information.
 Comment: Some candidates did not use tables for generating the posterior
 parameters in (ii)(a). A few gave the correct interpretation in (ii)(b).
+
+\end{document}
