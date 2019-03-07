@@ -1,0 +1,50 @@
+CT6 S2016–6
+9 In order to model the seasonality of a particular data set an actuary is asked to
+consider the following model:
+  (1 12 )(1 ( ) 2 ) − B − α + β B + αβB Xt = εt
+where B is the backshift operator and εt is a white noise process with variance σ2.
+The actuary intends to apply a seasonal difference ∇s Xt = Yt.
+(i) Explain why s should be 12 in this case (i.e. Yt = Xt – Xt−12). [1]
+(ii) Determine the range of values for α and β for which the process will be
+stationary after applying this seasonal difference. [3]
+Assume that after the appropriate seasonal differencing the following sample
+autocorrelation values for observations of Yt are ρˆ1 = 0 and ρˆ2 = 0.09.
+(iii) Estimate the parameters α and β. [5]
+The actuary observes a sequence of observations x1, x2, …, xT of Xt, with T > 12.
+(iv) Derive the next two forecasted values for next two observations xˆT+1 and
+xˆT +2, as a function of the existing observations. [4]
+[Total 13]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  Q9 (i) The first term in the equation has period 12 and so this removes the periodic
+effect. [1]
+(ii) The characteristic polynomial will be 1− (α + β) B + αβB2 [1]
+with roots 1/ α and 1/β . [1]
+Hence the stationarity holds for α <1 and β <1. [1]
+Subject CT6 (Statistical Methods Core Technical) – September 2016 – Examiners’ Report
+Page 11
+(iii) Yt is an AR(2) where a1 = α + β and a2 = −αβ. Since from the Yule-walker
+equations for AR(2) we have
+ρ1 = a1 + a2ρ1 [1]
+and
+ρ2 = a1ρ1 + a2 [1]
+which imply that a1 = (1− a2 )ρ1 = 0 since ρ1 = 0 . [1]
+This implies that α +β = 0, α = −β [1]
+and the second equation 2
+0.09=ρ2 =a1ρ1+a2 =a2 =α i.e. α = −β = ±0.3. [1]
+(iv) Since 12 t t t Y X X−
+= − we have that
+XT +1 = YT +1 + XT −11 [½]
+XT +2 = YT +2 + XT −10 [½]
+With the forecasted values
+xˆT +1 = yˆT +1 + xT −11 [½]
+and
+xˆT +2 = yˆT +2 + xT −10 [½]
+where
+yˆT +1 = 0* yT + 0.09 yT −1 = 0.09(xT −1 − xT −13 ) [1]
+And similarly
+yˆT +2 = 0.09 (xT − xT −12 ) [1]
+[Total 13]
+The performance on this time series question was very good, although only
+the stronger candidates were able to score well on part (iv).
+Subject CT6 (Statistical Methods Core Technical) – September 2016 – Examiners’ Report
