@@ -1,5 +1,34 @@
-[Total 14]
-PLEASE TURN OVER10
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document}
+
+\begin{enumerate}
+% 10
 A bicycle wheel manufacturer claims that its products are virtually indestructible in
 accidents and therefore offers a guarantee to purchasers of pairs of its wheels. There
 are 250 bicycles covered, each of which has a probability p of being involved in an
@@ -7,8 +36,9 @@ accident (independently). Despite the manufacturer’s publicity, if a bicycle i
 involved in an accident, there is in fact a probability of 0.1 for each wheel
 (independently) that the wheel will need to be replaced at a cost of £100. Let S denote
 the total cost of replacement wheels in a year.
-(i)
-Show that the moment generating function of S is given by
+
+\begin{enumerate}[(i)]
+\item Show that the moment generating function of S is given by
 ⎡ pe 200 t + 18 pe 100 t + 81 p
 ⎤
 M S ( t ) = ⎢
@@ -19,29 +49,25 @@ M S ( t ) = ⎢
 (ii)
 250
 .
-Show that E ( S ) = 5, 000 p and Var ( S ) = 550, 000 p − 100, 000 p 2
+\item Show that E ( S ) = 5, 000 p and Var ( S ) = 550, 000 p − 100, 000 p 2
 [4]
 [6]
 Suppose instead that the manufacturer models the cost of replacement wheels
 as a random variable T based on a portfolio of 500 wheels, each of which
 (independently) has a probability of 0.1p of requiring replacement.
-(iii) Derive expressions for E(T) and Var(T) in terms of p.
-(iv) Suppose p = 0.05.
+\item (iii) Derive expressions for E(T) and Var(T) in terms of p.
+\item (iv) Suppose p = 0.05.
 (a)
 (b)
 (b)
 Calculate the mean and variance of S and T.
 Calculate the probabilities that S and T exceed £500.
 Comment on the differences.
-END OF PAPER
-CT6 A2008—6
-[2]
-[5]
-[Total 17]
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 10
 (i)
-Let N denote the annual number of accidents. Then N ~ B (250, p ) and (from the tables) M N ( t ) = ( pe t + 1 − p ) 250
+Let N denote the annual number of accidents. Then $N \sim B (250, p )$ and (from the tables) $M N ( t ) = ( pe t + 1 − p ) 250$
 If there is an accident, then the total cost of replacement wheels, X , has the following distribution:
 Number of wheels requiring replacement
 Cost of replacement X
@@ -85,7 +111,8 @@ M S '( t ) = 250 × ⎜
 E ( S ) = M S '(0) = 250 × 1 × 20 p = 5000 p
 Page 10
 249
-× (2 pe 200 t + 18 pe 100 t )Subject CT6 (Statistical Methods Core Technical) — April 2008 — Examiners’ Report
+× (2 pe 200 t + 18 pe 100 t )
+%% - Subject CT6 (Statistical Methods Core Technical) — April 2008 — Examiners’ Report
 E ( S 2 ) = M S ''(0)
 ⎛ pe 200 t + 18 pe 100 t + 81 p
 M S ''( t ) = 250 × 249 × ⎜
@@ -112,31 +139,36 @@ p ⎟
 249
 × (400 pe 200 t + 1800 pe 100 t )
 M S ''(0) = 250 × 249 × (20 p ) 2 + 250 × 1 × 2200 p = 24,900, 000 p 2 + 550, 000 p
-Var ( S ) = E ( S 2 ) − E ( S ) 2 = 24,900, 000 p 2 + 550, 000 p − (5000 p ) 2 = 550, 000 p − 100, 000 p 2 .
+\[Var ( S ) = E ( S 2 ) − E ( S ) 2 = 24,900, 000 p 2 + 550, 000 p − (5000 p ) 2 = 550, 000 p − 100, 000 p 2 .\]
 Alternatively, we note that
-E ( N ) = 250 p and Var( N ) = 250 p (1 - p )
-E ( X ) = 0.01 × 200 + 0.18 × 100 = 20
-Var( X ) = 40000 × 0.01 + 10000 × 0.18 – 20 × 20 = 1800
+\[E ( N ) = 250 p and Var( N ) = 250 p (1 - p )\]
+\[E ( X ) = 0.01 × 200 + 0.18 × 100 = 20\]
+\[Var( X ) = 40000 × 0.01 + 10000 × 0.18 – 20 × 20 = 1800\]
 and
-E ( S ) = E ( N ) E ( X ) = 250 p × 20 = 5000 p
-Var( S ) = E ( N ) Var( X ) +Var( N ) × E ( X ) × E ( X )
-Var( S ) = 250 p × 1800 + 250 p (1 - p ) × 20 × 20
-= 450,000 p + 100,000 p (1 - p ) = 550,000 p - 100,000 p 2 .
+\[E ( S ) = E ( N ) E ( X ) = 250 p × 20 = 5000 p\]
+\[Var( S ) = E ( N ) Var( X ) +Var( N ) × E ( X ) × E ( X )]\
+\[Var( S ) = 250 p × 1800 + 250 p (1 - p ) × 20 × 20 \\
+= 450,000 p + 100,000 p (1 - p ) = 550,000 p - 100,000 p 2 .\]
 (iii)
 Let W denote the total number of wheels needing replacement. Then
-W ~ B (500,0.1 p ) and T = 100 W
+$W ~ B (500,0.1 p )$ and T = 100 W
 Hence
 E ( T ) = 100 E ( W ) = 100 × 500 × 0.1 p = 5000 p
 and
-Var ( T ) = Var (100 W ) = 100 2 Var ( W ) = 100 2 × 500 × 0.1 p × (1 − 0.1 p )
-= 500, 000 p (1 − 0.1 p )
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{eqnarray*}
+Var ( T ) &=& Var (100 W ) \\ 
+&=& 100 2 Var ( W ) \\ &=& 100 2 × 500 × 0.1 p × (1 − 0.1 p )\\
+&=& 500, 000 p (1 − 0.1 p )\\
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (iv)
 (a)
 If p = 0.05 then
 E ( S ) = E ( T ) = 250.
 Var ( S ) = 550 , 000 × 0 . 05 − 100 , 000 × 0 . 05 × 0 . 05 = 27 , 250 = 165 . 08 2
 Var ( T ) = 500 , 000 × 0 . 05 × 0 . 995 = 24 , 875 = 157 . 72 2
-Page 11Subject CT6 (Statistical Methods Core Technical) — April 2008 — Examiners’ Report
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (b)
 And so assuming both can be approximated by a normal distribution, and allowing for a continuity correction
 550 − 250
@@ -152,10 +184,7 @@ P ( S > 550 ) ≈ P ( N ( 0 , 1 ) >
 P ( T > 500 ) ≈ P ( N ( 0 , 1 ) >
 = 0 . 02859
 (c)
-The two distributions have the same mean, but different variances – the
-variance of S is slightly higher than that of T . This leads to a higher
-probability for such a loss under S than under the approximation T .
-Though the probabilities are both small in absolute terms, that for S is
+The two distributions have the same mean, but different variances – the variance of S is slightly higher than that of T . This leads to a higher probability for such a loss under S than under the approximation T . Though the probabilities are both small in absolute terms, that for S is
 20% higher than that for T . Effectively, fewer accidents are needed
 under S to give a high loss, because each accident can lead to two
 wheels being replaced, whereas under T only one wheel can be
