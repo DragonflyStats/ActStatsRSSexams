@@ -3,101 +3,70 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
   
-  
-  
-  \usepackage{eurosym}
-
+\usepackage{eurosym}
 \usepackage{vmargin}
-
 \usepackage{amsmath}
-
 \usepackage{graphics}
-
 \usepackage{epsfig}
-
 \usepackage{enumerate}
-
 \usepackage{multicol}
-
 \usepackage{subfigure}
-
 \usepackage{fancyhdr}
-
 \usepackage{listings}
-
 \usepackage{framed}
-
 \usepackage{graphicx}
-
 \usepackage{amsmath}
-
 \usepackage{chngpage}
-
-
 
 %\usepackage{bigints}
 
 \usepackage{vmargin}
-
-
-
 % left top textwidth textheight headheight
 
-
-
 % headsep footheight footskip
-
-
-
 \setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
 
-
-
 \renewcommand{\baselinestretch}{1.3}
-
-
-
 \setcounter{MaxMatrixCols}{10}
-
-
 
 \begin{document}
 
 \begin{enumerate}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%10 A factory manager is measuring the times that different teams are taking to assemble
-an electronic device. For each team, A, B and C, the following times are measured on
-a given day (in minutes):
-  A 52.1 51.4 55.8 53.6 50.3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#
+10 A factory manager is measuring the times that different teams are taking to assemble an electronic device. For each team, A, B and C, the following times are measured on a given day (in minutes):
+
+\begin{verbatim}
+A 52.1 51.4 55.8 53.6 50.3
 B 46.6 49.0 51.2 48.3 71.0
 C 54.2 56.3 57.4 59.3 58.2
+\end{verbatim}
+
 yA  263.2, yB  266.1, yC  285.4
 2 13,873.06, 2 14,567.89, 2 16,305.82 yA  yB  yC 
-The manager decides to use analysis of variance (ANOVA) to assess whether there is
-a difference between the teams and produces the following table:
+The manager decides to use analysis of variance (ANOVA) to assess whether there is a difference between the teams and produces the following table:
   Source of Variation SS df MSS
 Between Teams 58.25 2 29.12
 Residual 439.45 12 36.62
 Total 497.70 14
-(i) Test the hypothesis that there is no difference between team times against a
-general alternative. [3]
+\begin{enumerate}[(i)]
+\item  Test the hypothesis that there is no difference between team times against a general alternative. 
 Plotting the residuals from the ANOVA gives the following chart:
-  (ii) Explain why the ANOVA may or may not be valid. [1]
-On further investigation it is discovered that the time of 71.0 minutes for Team B was
-an error and the observation is removed from the sample.
-(iii) (a) Prepare an updated ANOVA table.
+\item (ii) Explain why the ANOVA may or may not be valid. 
+On further investigation it is discovered that the time of 71.0 minutes for Team B was an error and the observation is removed from the sample.
+\item  (a) Prepare an updated ANOVA table.
 (b) Test the hypothesis that there is no difference between the team times,
-using your updated ANOVA table. [7]
-(iv) Comment on the results of parts (i) and (iii). [2]
-[Total 13]
-CT3 A2015–6
+using your updated ANOVA table. 
+(iv) Comment on the results of parts (i) and (iii). 
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
   10 (i) F = 29.12/36.62 = 0.795 on 2,12df
 F2,12;10% = 2.807
 Therefore we cannot reject H0 that there is no difference between the teams.
-(ii) Clear outlier for team B, so not constant variance
-(also other valid comments about non-normality etc.)
+(ii) Clear outlier for team B, so not constant variance (also other valid comments about non-normality etc.)
 (iii) (a) Now yB 195.1,yB2  9526.89
 So yi2j 13873.06  9526.89 16305.82  39705.77
 y.. yi  263.2 195.1 285.4  743.7
@@ -108,8 +77,8 @@ B 5 4 5 14 SS
  
       
  
-Subject CT3 (Probability and Mathematical Statistics) – April 2015 – Examiners’ Report
-Page 9
+
+
 SSR 199.36 155.08  44.28
 SS df MS
 Between teams 155.08 2 77.538
@@ -117,9 +86,9 @@ Residual 44.28 11 4.025
 Total 199.36 13
 (b) F = 77.538/4.025 = 19.26 on 2,11d.f.
 F2,11;1% = 7.206
-So H0 can be comfortably rejected at the 1% level – and there does
-seem to be a difference between teams
+So H0 can be comfortably rejected at the 1\% level – and there does seem to be a difference between teams
 (iv) In (i) could not reject H0 but in (iii) we did.
 Outlier observation gave larger estimated variance which hid differences
 between groups.
 Very well answered with only a few errors in calculations.
+\end{document}
