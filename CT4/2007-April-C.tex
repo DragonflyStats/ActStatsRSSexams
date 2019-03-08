@@ -1,0 +1,148 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+7
+Every person has two chromosomes, each being a copy of one of the chromosomes
+from one of their parents. There are two types of chromosomes labelled X and Y. A
+child born with an X and a Y chromosome is male and a child with two X
+chromosomes is female.
+The blood-clotting disorder haemophilia is caused by a defective X chromosome
+(X*). A female with the defective chromosome (X*X) will not usually exhibit
+symptoms of the disease but may pass the defective gene to her children and so is
+known as a carrier. A male with the defective chromosome (X*Y) suffers from the
+disease and is known as a haemophiliac.
+A medical researcher wishes to study the progress of the disease through the first born
+child in each generation, starting with a female carrier.
+You may assume:
+• every parent has a equal chance of passing either of their chromosomes to their
+children
+• the partner of each person in the study does not carry a defective X chromosome;
+and
+• no new genetic defects occur
+(i)
+Show that the expected progress of the disease through the generations may be
+modelled as a Markov chain and specify carefully:
+(a)
+(b)
+the state space; and
+the transition diagram
+[5]
+(ii)
+State, with reasons, whether the chain is:
+(a)
+(b)
+irreducible; and
+aperiodic
+[2]
+(iii)
+Calculate the stationary distribution of the Markov chain.
+CT4 A2007—5
+[3]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+(i)
+Consider the sequence of the status of the first born child in each generation.
+The state space consists of the four possible combinations of chromosomes:
+Female non-carrier (FN)
+Female carrier
+(FC)
+Male non-sufferer (MN)
+Male haemophiliac (MH)
+or XX
+or X*X
+or XY
+or X*Y
+Using the assumption that there is an equal chance of either chromosome
+being inherited:
+• A female non-carrier will lead to a female non-carrier or male non-carrier.
+• A female carrier may produce:
+X*X, XX, X*Y, XY all with equal probability.
+• A male non-sufferer will lead to female non-carrier or male non-carrier.
+• A male haemophiliac may produce:
+X*X or XY (because his partner must provide an X) with equal
+probability.
+Page 8Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
+The transition diagram is therefore:
+0.5
+0.25
+0.25
+FN
+0.5
+FC
+0.5
+0.25
+0.25
+0.5
+MN
+MH
+0.5
+0.5
+Each of the transition probabilities depends only on state currently occupied,
+so the process possesses the Markov property.
+(ii)
+(iii)
+(a) The chain is reducible because once it enters states FN or MN it cannot
+access FC or MH.
+(b) The chain is aperiodic.
+As it is reducible we need to consider each group of states. FN/MN
+clearly have no period, and MH/FC do not either because a loop is
+possible in state FC.
+The transition matrix is
+FN FC MN MH
+0
+0.5
+0
+FN (0) 0.5
+A = FC (1) 0.25 0.25 0.25 0.25
+0
+0.5
+0
+MN (2) 0.5
+0
+0.5 0.5
+0
+MH (3)
+Page 9Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
+The stationary distribution π must satisfy:
+π 0 = 0.5 π 0 + 0.25 π 1 + 0.5 π 2
+π 1 = 0.25 π 1 + 0.5 π 3
+π 2 = 0.5 π 0 + 0.25 π 1 + 0.5 π 2 + 0.5 π 3
+π 3 = 0.25 π 1
+So,
+π 1 = 0.25 π 1 + 0.5 × 0.25 π 1
+⇒ π 1 = π 3 = 0
+⇒ π 0 = π 2 = 0.5
+An alternative solution combines the states FN and MN to give a 3-state model. This
+was given credit.
