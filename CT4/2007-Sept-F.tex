@@ -1,0 +1,294 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+PLEASE TURN OVER11
+The following data have been collected from observation of a three-state process in
+continuous time:
+State
+occupied Total time
+spent in state
+(hours)
+Total transitions to:
+State A State B State C
+A
+B
+C 50
+25
+90 Not applicable
+80
+120 110
+Not applicable
+15 90
+45
+Not applicable
+It is proposed to fit a Markov jump model to this data set.
+(i)
+(ii)
+(a)
+(b) List all the parameters of the model.
+Describe the assumptions underlying the model. [4]
+(a)
+(b) Estimate the parameters of the model.
+Give the estimated generator matrix. [4]
+The following additional data in respect of secondary transitions were collected from
+observation of the same process.
+Triplet of
+successive
+transitions Observed
+number of
+triplets
+n ijk Triplet of
+successive
+transitions Observed
+number of
+triplets
+n ijk
+ABC
+ABA
+ACA
+ACB
+BAB
+BAC 42
+68
+85
+4
+50
+30 BCA
+BCB
+CAB
+CAC
+CBA
+CBC 38
+7
+64
+56
+8
+7
+(iii) State the distribution of the number of transitions from state i to state j , given
+the number of transitions out of state i .
+[1]
+(iv) Test the goodness-of-fit of the model by considering whether triplets of
+successive transitions adhere to the distribution given in (iii).
+[Hint: Use the test statistic χ = ∑∑∑
+2
+i
+j
+( n ijk − E ) 2
+k
+E
+[5]
+where E is the expected
+number of triplets under the distribution in (iii)]
+(v) Identify two other aspects of the appropriateness of the fitted model that could
+be tested, stating suitable tests in each case.
+[2]
+(vi) Outline two methods for simulating the Markov jump process, without
+performing any calculations.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+11
+(i)
+(a)
+The parameters are:
+•
+•
+the rate of leaving state i , λ i , for each i ,
+the jump-chain transition probabilities, r ij , for j ≠ i , where r ij is the
+conditional probability that the next transition is to state j given the
+current state is i .
+[Alternatively the parameters may be expressed as σ ij , where σ ii = - λ i
+and (for j ≠ i), σ ij = λ i r ij .]
+(b)
+The assumptions are as follows.
+• The holding time in each state is exponentially distributed. The
+parameter of this distribution varies only by state i . The
+distribution is independent of anything that happened prior to the
+current arrival in state i .
+• The destination of the jump on leaving state i is independent of
+holding time, and of anything that happened prior to the current
+arrival in state i .
+Page 16Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+ALTERNATIVELY
+The holding time in each state is exponentially distributed and the
+destination of the jump on leaving state i is independent of holding
+time
+Both holding time distribution and destination of jump on leaving state
+i are independent of anything that happened prior to arrival in state i
+(ii)
+(a)
+The estimator [it is the MLE but this need not
+be stated] of λ i , λ̂ , is the inverse of the average duration of each visit
+to state i .
+so λ ˆ A = 4 per hour, λ ˆ B = 5 per hour, λ ˆ C = 1.5 per hour
+The estimator [it is the MLE but this need not be stated] of r ij , r ˆ ij , is
+the proportion of observed jumps out of state i to state j .
+r ˆ AB = 11/20
+r ˆ AC = 9/20
+r ˆ BA = 80/125 =16/25
+r ˆ BC = 9/25
+r ˆ CA = 24/27 =8/9
+r ˆ CB = 1/9
+(b)
+The estimated generator matrix (in hr - 1 ) is:
+9 ⎞
+⎛ − 4 11
+5
+5 ⎟
+⎜
+⎜ 16
+9 ⎟
+− 5
+5 ⎟
+⎜ 5
+⎜ ⎜ 4
+⎟
+1
+− 3 ⎟
+6
+2 ⎠
+⎝ 3
+(iii)
+Distribution is binomial with mean n . r ij and variance n.r ij
+(1 - r ij ), where n is the given number of transitions.
+Page 17Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+(iv)
+Null hypothesis is that the Markov property applies to successive transitions,
+or that the observed triplets are from a Binomial distribution with the
+estimated parameters (given the number of transitions to the middle state).
+Using test statistic given in the hint, we can draw up the table below.
+Triplet n ijk
+ABC
+ABA
+ACA
+ACB
+BAB
+BAC
+BCA
+BCB
+CAB
+CAC
+CBA
+CBC 42
+68
+85
+4
+50
+30
+38
+7
+64
+56
+8
+7
+E=n i j r ˆ jk
+Test statistic
+39.6
+70.4
+80
+10
+44
+36
+40
+5
+66
+54
+9.6
+5.4
+( n ijk − E ) 2
+E
+0.1455
+0.08182
+0.3125
+3.6
+0.8182
+1
+0.1
+0.8
+0.0606
+0.07407
+0.2667
+0.4741
+7.7335
+Under the null hypothesis, the test statistic follows a χ 2 distribution with the
+following number of degrees of freedom:
+Number of triplets
+Minus Number of pairs
+Plus Number of states
+Minus One
+12
+6
+3
+1
+8 degrees of freedom
+The critical value of χ 8 2 at the 5% significance level is 15.51
+As 7.7335 < 15.51 there is no evidence to reject the null hypothesis.
+[Alternative approaches could be taken which resulted in a slightly different
+result for the test statistic. These were given full credit where appropriate.]
+Page 18Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+(v)
+[Refer back to part (i) — the test in (iv) has only tested that there is no
+evidence that the destination that the next jump depends on the previous state
+occupied. Need to test the other assumptions].
+Holding times — are these exponentially distributed?
+A chi-squared goodness of fit test would be appropriate
+Is destination of jump independent of the holding time?
+There is no obvious test statistic for doing this. A suitable test would be to
+classify jumps as being from short, medium and long holding times and
+investigating these graphically.
+(vi)
+APPROXIMATE METHOD
+Divide time into very short intervals, h , such that σ ij h is much less than 1.
+Simulate a discrete-time Markov chain { Y n : n ≥ 0 } , with transition
+probabilities p ij * ( h ) = δ ij + h σ ij .
+The jump process, X t is given by X t = Y [ t h ] .
+EXACT METHOD
+Simulate the jump chain as a Markov chain, with transition probabilities
+p ij = σ ij λ i .
+{
+}
+Once the path X ˆ n : n = 0,1,... has been generated, the holding times
+{ T n : n = 0,1,... } are a sequence of independent exponential random variables,
+having parameter λ X ˆ .
+n
+\end{document}
