@@ -1,0 +1,319 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+8
+(ii) Derive an expression for the ratio of the variance of the number of claims
+arising compared with that if each policy covered an independent life.
+[4]
+(iii) Explain how the expression derived in (ii) could be used in practice.
+[2]
+[Total 8]
+A No-Claims Discount system operated by a motor insurer has the following four
+levels:
+Level 1:
+Level 2:
+Level 3:
+Level 4:
+0% discount
+25% discount
+40% discount
+60% discount
+The rules for moving between these levels are as follows:
+• Following a year with no claims, move to the next higher level, or remain at
+level 4.
+• Following a year with one claim, move to the next lower level, or remain at
+level 1.
+• Following a year with two or more claims, move down two levels, or move to
+level 1 (from level 2) or remain at level 1.
+For a given policyholder in a given year the probability of no claims is 0.85 and the
+probability of making one claim is 0.12.
+(i) Write down the transition matrix of this No-Claims Discount process.
+(ii) Calculate the probability that a policyholder who is currently at level 2 will be
+at level 2 after:
+(a)
+(b)
+(iii)
+[1]
+one year.
+two years.
+[3]
+Calculate the long-run probability that a policyholder is in discount level 2.
+[5]
+[Total 9]
+CT4 S2008—5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+9
+A company pension scheme, with a compulsory scheme retirement age of 65, is
+modelled using a multiple state model with the following categories:
+1
+2
+3
+4
+5 currently employed by the company
+no longer employed by the company, but not yet receiving a pension
+pension in payment, pension commenced early due to ill health retirement
+pension in payment, pension commenced at scheme retirement age
+dead
+(i) Describe the nature of the state space and time space for this process.
+(ii) Draw and label a transition diagram indicating appropriate transitions between
+the states.
+[2]
+[2]
+For i,j in {1,2,3,4,5}, let:
+t
+p 1i x
+the probability that a life is in state i at age x+t, given they are in state 1 at age
+x
+μ ijx + t the transition intensity from state i to state j at age x+t
+(iii) Write down equations which could be used to determine the evolution of t p 1i x
+(for each i) appropriate for:
+(a)
+(b)
+(c)
+x + t < 65.
+x + t = 65.
+x + t > 65.
+[6]
+[Total 10]
+
+8
+(i)
+The transition matrix of the process is
+⎛ 0.15
+⎜
+0.15
+P = ⎜
+⎜ 0.03
+⎜
+⎝ 0
+(ii)
+0.85
+0
+0.12
+0.03
+0
+0.85
+0
+0.12
+0 ⎞
+⎟
+0 ⎟
+0.85 ⎟
+⎟
+0.85 ⎠
+(a) For the one year transition, p 22 = 0, as can be seen
+from above (or is obvious from the statement).
+(b) The second order transition matrix is
+⎛ 0.15 2 + 0.85 × 0.15
+⎜
+⎜ 0.15 2 + 0.85 × 0.03
+⎜
+⎜ 0.03 × 0.15 + 0.12 × 0.15
+⎜
+⎜ 0.03 × 0.15 + 0.12 × 0.03
+⎝
+⎛ 0.15
+⎜
+0.048
+= ⎜
+⎜ 0.0225
+⎜
+⎝ 0.0081
+⎞
+⎟
+⎟
+0.85 × 0.15 + 0.85 × 0.12 0
+0.85 2
+⎟
+⎟
+0.85 × 0.03 × 2
+0.85 × 0.12 × 2
+0.85 2
+⎟
+0.12 2 + 0.85 × 0.03
+0.85 × 0.03 + 0.85 × 0.12 0.12 × 0.85 + 0.85 2 ⎟ ⎠
+0.85 2
+0.85 × 0.15
+0.1275
+0.2295
+0.051
+0.0399
+0.7225
+0
+0.204
+0.1275
+0
+0
+⎞
+⎟
+0.7225 ⎟
+0.7225 ⎟
+⎟
+0.8245 ⎠
+hence the required probability is 0.2295.
+(iii)
+In matrix form, the equation we need to solve is πP = π,
+where π is the vector of equilibrium probabilities.
+This reads
+0.15 π 1 + 0.15 π 2 + 0.03 π 3
+0.85 π 1 +
++ 0.85 π 2
+= π 1
++ 0.12 π 3 + 0.03 π 4 = π 2
++ 0.12 π 4 = π 3
+0.85 π 3 + 0.85 π 4 = π 4
+(1)
+(2)
+(3)
+(4)
+Discard the first of these equations and use also the fact that
+∑ i= 1 π i = 1 .
+4
+Then, we obtain first from (4) that 0.85 π 3 = 0.15 π 4
+or, that π 4 = 17 π 3 / 3
+Page 9Subject CT4 — Models Core Technical — September 2008 — Examiners’ Report
+Substituting in (3) this gives
+0.85 π 2 + 0.12 ×
+17
+π 3 = π 3 ⇒ π 3 = 2.65625 π 2
+3
+(2) now yields that
+0.85 π 1 = π 2 − 0.12 π 3 − 0.03 π 4 =
+1
+π 3 − 0.12 π 3 − 0.17 π 3 = 0.0865 π 3 ,
+2.65625
+so that finally we get π 1 = 0.10173 π 3 .
+Using now that the probabilities must add up to one, we obtain
+π 1 + π 2 + π 3 + π 4 = (0.10173 + 0.3765 + 1 + 5.666) π 3 = 1,
+or that π 3 = 0.13996.
+Solving back for the other variables we get that
+π 1 = 0.01424, π 2 = 0.05269, π 4 = 0.79311
+The long-run probability that the motorist is in discount level 2 is therefore
+0.05269.
+9
+(i)
+The state space is discrete with states as given in the question.
+The process operates in continuous time.
+However, at the compulsory scheme retirement
+age of 65 there is a discrete step change.
+This is sometimes described as a mixed process.
+Page 10Subject CT4 — Models Core Technical — September 2008 — Examiners’ Report
+(ii)
+2
+μ 12
+x + t
+No longer
+employed
+μ 24
+x + t
+μ 14
+x + t
+1
+Currently
+employed
+4
+μ 13
+x + t
+3
+Ill health
+μ 45
+x + t
+μ 35
+x + t
+μ 15
+x + t
+Pensioner
+μ 25
+x + t
+5
+Dead
+(iii)
+(a)
+For x + t < 65
+∂
+∂
+∂
+∂
+∂ t t 12
+13
+15
+11
+p 11
+x = − ( μ x + t + μ x + t + μ x + t ) t p x
+∂ t t 12
+11
+25
+12
+p 12
+x = μ x + t . t p x − μ x + t . t p x
+∂ t t 13
+11
+35
+13
+p 13
+x = μ x + t . t p x − μ x + t . t p x
+∂ t t 15
+11
+25
+12
+35
+13
+p 15
+x = μ x + t . t p x + μ x + t . t p x + μ x + t . t p x
+and t p 14
+x is zero.
+(b)
+For x + t = 65
+t
+12
+p 11
+x and t p x become 0 at x + t = 65+ δ
+t +δ
+p 14
+x =
+t −δ
+12
+p 11
+x + t −δ p x
+Page 11Subject CT4 — Models Core Technical — September 2008 — Examiners’ Report
+(c)
+For x + t >65
+t
+12
+p 11
+x = t p x = 0
+∂
+∂
+∂
+
