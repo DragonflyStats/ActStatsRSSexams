@@ -1,0 +1,262 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+CT4 S2008—610
+In an investigation of reconviction rates among those who have served prison
+sentences, let X be a random variable which measures the duration from the date of
+release from prison until the ex-prisoner is convicted of a subsequent offence. The
+investigation monitored a sample of 100 ex-prisoners (who were all released on the
+same date) at one-monthly intervals from their date of release for a period of 6
+months. Those who could not be traced in any month were removed from the sample
+at that point and not traced in subsequent months. Reconviction was assumed to take
+place at the duration that a prisoner was first known to have been reconvicted.
+(i)
+Express the hazard rate at duration x months in terms of probabilities.
+[1]
+The investigation produced the following data for a sample of 100 ex-prisoners.
+Months since release
+1
+2
+3
+4
+5
+6
+(ii)
+Number of prisoners
+contacted
+Number who had
+been reconvicted
+since last contact
+100
+97
+95
+90
+85
+80
+0
+0
+4
+3
+5
+0
+Calculate the Nelson-Aalen estimate of the survival function.
+[5]
+A previous investigation found that the probability that a prisoner would be
+reconvicted within 6 months of release was 0.2.
+(iii)
+Estimate confidence intervals around the integrated hazard using the results
+from part (ii) to test the hypothesis that the rate of reconviction has declined
+since the previous investigation.
+[6]
+[Total 12]
+CT4 S2008—7
+PLEASE TURN OVERn
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10
+(i)
+∂ t t 35
+13
+p 13
+x = −μ x + t . t p x
+∂ t t 45
+14
+p 14
+x = −μ x + t . t p x
+∂ t t 35
+13
+45
+14
+p 15
+x = μ x + t . t p x + μ x + t . t p x
+EITHER
+The hazard rate at duration x is given by
+Pr[ X ≤ x + dt | X > x ]
+.
+dt → 0
+dt
+lim
+OR
+In discrete time, the hazard rate at duration x is given by, Pr[ X = x | X ≥ x ] .
+OR
+The hazard rate at duration x is given by h ( x ) = −
+1 d
+[ S ( x )] ,
+S ( x ) dx
+where S(x) is the survival function defined as Pr[X > x].
+(ii)
+The integrated hazard, Λ x , is estimated as follows:
+x j
+n j
+d j
+c j
+0 100 0 0
+1
+2
+3
+4
+5
+6 100
+97
+95
+90
+85
+80 0
+0
+4
+3
+5
+0 3
+2
+1
+2
+0
+80
+d j
+n j
+Λ x =
+d j
+∑ n j
+x j ≤ x
+0 0
+0
+0
+4/95 = 0.0421
+3/90 = 0.0333
+5/85 = 0.0588
+0 0
+0
+0.0421
+0.0754
+0.1343
+0.1343
+Page 12Subject CT4 — Models Core Technical — September 2008 — Examiners’ Report
+The survival function S ( x ) is given by exp( − Λ x ), so that we have
+(iii)
+x S ( x )
+0 ≤ x < 3
+3 ≤ x < 4
+4 ≤ x < 5
+5 ≤ x 1.0000
+0.9588
+0.9274
+0.8744
+Confidence intervals around the integrated hazard may
+be estimated using the formula
+~
+Var [ Λ x ] =
+∑
+d j ( n j − d j )
+n 3 j
+x j ≤ x
+Applying this to the data gives
+x j
+0
+1
+2
+3
+4
+5
+6
+n j
+100
+100
+97
+95
+90
+85
+80
+d j
+0
+0
+0
+4
+3
+5
+0
+d j ( n j − d j )
+∑
+n 3 j
+0
+0
+0
+0.000425
+0.000358
+0.000651
+0
+d j ( n j − d j )
+x j ≤ x
+n 3 j
+0
+0
+0
+0.000425
+0.000783
+0.001434
+0.001434
+95 per cent confidence intervals around the integrated
+hazard at duration 6 can therefore be computed as
+^
+^
+Λ 6 ± 1.96 var Λ 6
+= 0.1343 ± 1.96 0.001434
+= (0.1343 – 0.0742, 0.1343 + 0.0742)
+= (0.0601, 0.2085).
+Page 13Subject CT4 — Models Core Technical — September 2008 — Examiners’ Report
+THEN EITHER
+^
+The estimated survival function, S ( x ) is given
+^
+by exp( − Λ x ) ,
+^
+so that the 95 per cent confidence interval for S ( x ) is
+[exp( −0.0601), exp(−0.2085)]
+which is (0.9417, 0.8118).
+In the previous investigation the probability that a
+prisoner would not be reconvicted within 6 months
+of release was 1 – 0.2 = 0.8.
+^
+Since the 95 per cent confidence interval around S ( x ) in the current
+^
+investigation does not include the value 0.8, and our estimate of S ( x ) > 0.8
+we conclude that the rate of reconviction has declined since the previous
+investigation.
+OR
+In the previous investigation the probability that a
+prisoner would not be reconvicted within 6 months
+of release was 1 – 0.2 = 0.8 – i.e. S (6) = 0.8
+Since S ( x ) = exp(−Λ x ), the value of Λ 6 corresponding to S (6) = 0.8 is
+Λ 6 = −log e (0.8) = 0.2231.
+Since this is higher than the upper limit in the range (0.0601, 0.2085) we
+conclude that the rate of reconviction has declined since the previous
+investigation.
