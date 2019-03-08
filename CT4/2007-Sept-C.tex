@@ -1,0 +1,282 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+CT4 S2007—47
+In order to boost sales, a national newspaper in a European country wishes to compile
+a “fair play league table” for the country’s leading football clubs. On 1 December it
+undertakes a survey of all the players who play for these clubs, in which it collects the
+following data:
+• number of games played by each player since the beginning of the season (the
+football season in this country begins in September); and
+• for each player who had been dismissed from the field of play between the
+beginning of the season and 1 December (inclusive), the number of games he had
+played before the game in which he was first dismissed
+No games were played on 1 December.
+The statistic the newspaper proposes to use in order to construct its “fair play league
+table” is the probability that a player will not have been dismissed in any of his first
+10 games. It plans to calculate this statistic for each of the 20 leading clubs.
+The following table shows the data collected for the players of the club which was top
+of the league on 1 December.
+(i)
+(ii)
+Player Total number
+of games played Number of times
+dismissed
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15 12
+12
+12
+12
+12
+12
+10
+9
+9
+8
+6
+5
+5
+4
+4 0
+0
+1
+0
+1
+0
+0
+1
+1
+0
+2
+0
+0
+1
+0
+Games
+played before
+first dismissal
+5
+7
+0
+5
+2
+0
+(a) Explain how the Kaplan-Meier estimator can be used to estimate the
+newspaper’s statistic from these data.
+(b) Comment on the way in which censoring arises and on the type of
+censoring produced.
+[4]
+Calculate the newspaper’s statistic using the data above.
+CT4 S2007—5
+[4]
+[Total 8]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+(i)
+(a)
+If, for player i , T i is the number of games played before he is
+dismissed, and C i is the total number of games played before
+1 December, and d i = 1 if the player had been dismissed before
+1 December and 0 otherwise.
+then
+EITHER
+from the data given we can create the two variables
+min( T i , C i )
+and d i ,
+e.g. for player 1, min( T i , C i ) = 12 and d i = 0
+OR
+Page 8Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+The required data for the Kaplan-Meier estimator are therefore
+(b)
+Player min(T i ,C i ) d i
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15 12
+12
+5
+12
+7
+12
+10
+0
+5
+8
+2
+5
+5
+0
+4 0
+0
+1
+0
+1
+0
+0
+1
+1
+0
+1
+0
+0
+1
+0
+Censoring in these data arises because not all players have been
+dismissed before 1 December. Those players who have yet to be
+dismissed on that data are right-censored.
+This censoring is random [NOT Type I], because the metric of
+“duration” is the number of games played since the start of the season,
+and this may vary from player to player.
+(ii)
+ALTERNATIVE 1 (where censorings are assumed to occur immediately
+before events)
+D j
+D j
+1 −
+t j
+N j
+D j
+C j
+N j
+N j
+0
+2
+5
+7
+15
+13
+9
+7
+2
+1
+2
+1
+0
+3
+0
+6
+2/15
+1/13
+2/9
+1/7
+13/15
+12/13
+7/9
+6/7
+Then the Kaplan-Meier estimate of the survival function is
+^
+t S ( t )
+0≤ t < 2
+2≤ t < 5
+5≤ t < 7
+7≤ t < 12 0.8667
+0.8000
+0.6222
+0.5333
+^
+Therefore the value of the chosen statistic, S (10) is 0.5333.
+Page 9Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+ALTERNATIVE 2 (where censorings are assumed to occur immediately after
+events)
+D j
+D j
+t j
+N j
+D j
+C j
+1 −
+N j
+N j
+0
+2
+5
+7
+15
+13
+11
+7
+2
+1
+2
+1
+0
+1
+2
+6
+2/15
+1/13
+2/11
+1/7
+13/15
+12/13
+9/11
+6/7
+Then the Kaplan-Meier estimate of the survival function is
+^
+t
+S ( t )
+0≤ t < 2
+2≤ t < 5
+5≤ t < 7
+7≤ t < 12
+0.8667
+0.8000
+0.6545
+0.5610
+^
+Therefore the value of the chosen statistic, S (10) is 0.5610.
