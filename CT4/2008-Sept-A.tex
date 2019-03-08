@@ -1,0 +1,188 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+© Institute of Actuaries1
+You work for a consultancy which has created an actuarial model and is now
+preparing documentation for the client.
+List the key items you would include in the documentation on the model.
+2
+[4]
+The classification of stochastic models according to:
+•
+•
+discrete or continuous time variable
+discrete or continuous state space
+gives rise to a four-way classification.
+Give four examples, one of each type, of stochastic models which may be used to
+model observed processes, and suggest a practical problem to which each model may
+be applied.
+[4]
+3
+Compare the advantages and disadvantages of the Binomial and the multiple-state
+models in the following situations:
+(a)
+(b)
+analysing human mortality without distinguishing between causes of death
+analysing human mortality when distinguishing between causes of death
+[5]
+4
+In the village of Selborne in southern England in the year 1637 the number of babies
+born each month was as follows
+January
+February
+March
+April
+May
+June
+2
+1
+1
+2
+1
+2
+July
+August
+September
+October
+November
+December
+5
+1
+0
+2
+0
+3
+Data show that over the 20 years before 1637 there was an average of 1.5 births per
+month. You may assume that births in the village historically follow a Poisson
+process.
+An historian has suggested that the large number of births in July 1637 is unusual.
+(i) Carry out a test of the historian’s suggestion, stating your conclusion.
+(ii) Comment on the assumption that births follow a Poisson process.
+CT4 S2008—2
+[4]
+[1]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1
+Instructions on how to run the model
+Tests performed to validate the output of the model.
+Definition of input data.
+Any limitations of the model identified (e.g. potential unreliability).
+Basis on which the form of the model chosen (e.g. deterministic or stochastic)
+References to any research papers or discussions with appropriate experts.
+Summary of model results.
+Name and professional qualification.
+Purpose or objectives of the model.
+Assumptions underlying the model.
+How the model might be adapted or extended.
+2
+Discrete time, discrete state space
+Counting process, random walk, Markov chain
+No claims bonus in motor insurance.
+Continuous time, discrete state space
+Counting process, Poisson process, Markov jump process
+Healthy-sick-dead model in sickness insurance
+Discrete time, continuous state space
+General random walk, ARIMA time series model, moving average model
+Share price at end of each day
+Continuous time, continuous state space
+Compound Poisson process, Brownian motion, Ito process, white noise
+Value of claims reaching an insurance company monitored
+continuously
+Page 4Subject CT4 — Models Core Technical — September 2008 — Examiners’ Report
+3
+(a)
+Both models produce consistent and unbiased estimators.
+The estimate of q x made using the Binomial model
+will have a higher variance than that made using the
+multiple-state model, though the difference is tiny
+if the forces of mortality are small.
+If data on exact ages at entry into and exit from
+observation are available, the multiple state model is
+simpler to apply. The Binomial model requires further
+assumptions (e.g. uniform distribution of deaths).
+The Binomial model also does not use all the information
+available if exact ages at entry into and exit from
+observation are available.
+However, if the forces of mortality are small, both
+models will give very similar results.
+(b)
+The multiple state model can simply be extended
+The estimators have the same form and the same statistical
+properties as in the classic life table.
+The Binomial model is hard to extend to several causes of
+death. Although the life table as a computational tool can be
+extended, the calculations are more complex and awkward than
+those in the multiple-state model.
+4
+(i)
+Suppose that the number of births each month, B , is the outcome of a Poisson
+process with a rate λ = 1.5.
+The probability of obtaining b births per month
+exp( − 1.5).1.5 b
+is given by the formula Pr[ B = b ] =
+b !
+Therefore we have
+b Pr[ B = b ]
+0
+1
+2
+3
+4
+5
+6+ 0.223
+0.335
+0.251
+0.126
+0.047
+0.014
+0.004
+Page 5Subject CT4 — Models Core Technical — September 2008 — Examiners’ Report
+Therefore, if the number of births per month is the
+outcome of a Poisson process with a rate of 1.5 per
+month the probability of obtaining 5 or more births in
+a single month is 0.014 + 0.004 = 0.018.
+EITHER This is very small OR this is < 0.05
+which suggests that the historian may be correct
+to suspect something unusual about July 1637.
+But only July has a number of births more than 5, and at the 5% level of
+statistical significance we expect 1 month in 20 to have such a large
+number, then unless we have a prior expectation that July is unusual, we
+should be cautious before accepting the historian’s suggestion.
+(ii)
+The assumption that births follow a Poisson process is
+unlikely to be entirely realistic
+EITHER because of the occurrence of multiple births
+(twins and triplets)
+OR because births tend to occur seasonally
+OR because the process might be time inhomogeneous.
