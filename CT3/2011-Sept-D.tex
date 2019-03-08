@@ -1,7 +1,42 @@
 
-PLEASE TURN OVER7
-The total amounts y ij (in £ millions) paid out under a certain type of policy issued by
-four different companies A, B, C, D in each of six consecutive years were as follows:
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item
+7
+The total amounts y ij (in £ millions) paid out under a certain type of policy issued by four different companies A, B, C, D in each of six consecutive years were as follows:
 Company
 A
 B
@@ -37,9 +72,10 @@ Total
 17.715
 16.185
 For these data, Σ i Σ j y ij = 70.650 and Σ i Σ j y ij 2 = 208.828.
-Consider the ANOVA model Y ij = μ + τ i + e ij , i = 1, ..., 4, j = 1, ..., 6, where Y ij is the
+Consider the ANOVA model $Y ij = μ + τ i + e ij$ , i = 1, ..., 4, j = 1, ..., 6, where Y ij is the
 jth amount paid out by company i, and e ij ~ N(0, σ 2 ) are independent errors.
 The ANOVA table for these data is given below.
+
 Source
 Company (between treatments)
 Residual
@@ -55,22 +91,18 @@ SS
 MS
 0.213
 0.0106
-(i) Test the hypothesis that there are no differences in the means of the amounts
-paid out under such policies by the four companies (the company means),
-stating your conclusions clearly.
-[2]
-(ii) Comment briefly on the validity of the test performed in (i), using the plot of
-the residuals given below.
-[2]
+
+\begin{enumerate}[(i)]
+\item (i) Test the hypothesis that there are no differences in the means of the amounts paid out under such policies by the four companies (the company means), stating your conclusions clearly.
+\item 
+(ii) Comment briefly on the validity of the test performed in (i), using the plot of the residuals given below.
+\item
 (iii) (a)
-Calculate the least significant difference between pairs of company
-means using a 5% significance level.
+Calculate the least significant difference between pairs of company means using a 5% significance level.
 (b)
-List the company means in order, illustrate the non-significant pairs
-using suitable underlining, and comment briefly.
-[6]
-[Total 10]
-CT3 S2011—4
+List the company means in order, illustrate the non-significant pairs using suitable underlining, and comment briefly.
+\end{enumerate}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 8
@@ -120,9 +152,7 @@ P [0.2 ≤ λ ˆ ≤ 0.3] = P [2 ≤ 10 λ ˆ ≤ 3] ≈ P ⎢
 ⎟ − 1 = 2*F Z (0.32) − 1 = 2*0.62552 − 1 = 0.2510
 ⎝ 2.5 ⎠
 (iv)
-When compared to the exact probability in (ii) the results in (iii) (a) and (b)
-show that the continuity correction reduces the approximation error
-significantly for this small sample size.
+When compared to the exact probability in (ii) the results in (iii) (a) and (b) show that the continuity correction reduces the approximation error significantly for this small sample size.
 (v)
 0.3 − 0.25 ⎤
 ⎡ 0.2 − 0.25
@@ -144,7 +174,8 @@ Page 6
 n = 1.96
 0.5
 = 1.96, and n ≈ 384
-0.05Subject CT3 (Probability and Mathematical Statistics) — September 2011 — Examiners’ Report
+0.05
+
 (vi)
 Using the normal approximation we find:
 0.27 ± z 0.975
@@ -158,3 +189,4 @@ In part (i) independence must be mentioned for full marks in the derivation of t
 (ii) most candidates either went straight to a normal approximation, or incorrectly calculated
 the Poisson probability. In part (iii) many candidates applied the continuity correction
 wrongly.
+\end{document}
