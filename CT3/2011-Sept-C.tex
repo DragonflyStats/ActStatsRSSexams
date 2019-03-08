@@ -1,31 +1,61 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item
 The number of claims made by each policyholder in a certain class of business is
 modelled as having a Poisson distribution with mean λ.
-(i)
-Derive an expression for the probability, p, that a policyholder in this class has
-made at least one claim.
-[2]
-The claims records of 20 randomly chosen policyholders were examined and the
-number of policyholders that made at least one claim in a year, X, was recorded.
+
+\begin{enumerate}
+\item Derive an expression for the probability, p, that a policyholder in this class has made at least one claim.
+\item The claims records of 20 randomly chosen policyholders were examined and the number of policyholders that made at least one claim in a year, X, was recorded.
 (ii)
 (a) State the distribution of the random variable X and its parameters.
 (b) Derive an expression for the maximum likelihood estimator of the
 probability p given in (i) using your answer in (ii)(a).
-[4]
 (iii)
-Show that, in the case X = 5, the maximum likelihood estimate (MLE) of p is
+\item Show that, in the case X = 5, the maximum likelihood estimate (MLE) of p is
 [3]
-p ˆ = 0.25 and hence calculate the MLE of λ.
-It is now found that of the five policyholders who had made at least one claim there
-were four who had made exactly one claim and one who had made two claims.
-(iv)
-Calculate the MLE of λ given this additional information.
-CT3 S2011—3
-[4]
-[Total 13]
-
+$\hat{p} = 0.25$ and hence calculate the MLE of $\lambda$ .
+\end{enumerate}
+It is now found that of the five policyholders who had made at least one claim there were four who had made exactly one claim and one who had made two claims.
+Calculate the MLE of $\lambda$ given this additional information.
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 
 6
 (i) p = Pr( N ≥ 1) = 1 − Pr( N = 0) = 1 − e −λ .
@@ -81,11 +111,8 @@ the invariance property must be used and mentioned for full credit.
 7
 (i) F = 0.213/0.0106 = 20.094 and at the 5% significance level,
 F 3,20 (0.05) = 3.098.
-Since F = 20.094 > 3.098, there is strong evidence against the null hypothesis,
-and we conclude that there are differences in the mean amounts paid out by
-the companies.
-(ii) The variance of the residuals seems to be similar for the four companies; this
-is consistent with the assumption of constant variance in the response variable.
+Since F = 20.094 > 3.098, there is strong evidence against the null hypothesis, and we conclude that there are differences in the mean amounts paid out by the companies.
+(ii) The variance of the residuals seems to be similar for the four companies; this is consistent with the assumption of constant variance in the response variable.
 Also there are no obvious patterns or outliers. The analysis seems valid.
 (iii) (a)
 LSD = t 20 (0.025)
@@ -110,10 +137,9 @@ y 4 i = 16.185
 6
 which are given in order and underlined as
 y 4 i < y 3 i < y 1 i < y 2 i
-Amounts paid out by companies 2 and 4 are significantly different
-from those paid out by the other two companies. Company 4 seems to
-pay out significantly lower amounts, with Company 2 paying
+Amounts paid out by companies 2 and 4 are significantly different from those paid out by the other two companies. Company 4 seems to pay out significantly lower amounts, with Company 2 paying
 significantly higher.
 Parts (i) and (ii) were generally well answered. In part (iii) many candidates did not use the
 correct formula for LSD and then performed pair-wise comparisons using the wrong statistic.
 Page 5Subject CT3 (Probability and Mathematical Statistics) — September 2011 — Examiners’ Report
+\end{document}
