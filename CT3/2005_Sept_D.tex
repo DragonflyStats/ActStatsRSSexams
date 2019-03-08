@@ -34,13 +34,14 @@
 \begin{document}
 
 10
-Let X denote a random variable with a continuous uniform (0, 1000) distribution.
-Define a random variable Y as the minimum of X and 800.
+Let $X$ denote a random variable with a continuous uniform $(0, 1000)$ distribution. Define a random variable $Y$ as the minimum of X and 800.
 
-(i) Show that the conditional distribution of X given X < 800 is a continuous uniform (0, 800) distribution.
-(ii) Verify (giving clear reasons) that the expectation of the random variable Y is 480.
-(iii) Suppose that Y 1 , , Y n are independent and identically distributed, each with the same distribution as Y.
-
+\begin{enumerate}[(i)]
+\item (i) Show that the conditional distribution of X given $X < 800$ is a continuous uniform (0, 800) distribution.
+\item (ii) Verify (giving clear reasons) that the expectation of the random variable Y is 480.
+\item (iii) Suppose that Y 1 , , Y n are independent and identically distributed, each with the same distribution as Y.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In the case that n is large, determine the approximate distribution of
 1 n
 Y =
@@ -50,13 +51,11 @@ the variance of Y .)
 [1]
 (iv)
 
-Comment on the comparison of the conditional expectation of X given X < 800
-with the expectation of Y.
+Comment on the comparison of the conditional expectation of X given X < 800 with the expectation of Y.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Question 11
-Consider the following simple model for the number of claims, N, which occur in a
-year on a policy:
+Consider the following simple model for the number of claims, N, which occur in a  year on a policy:
 0
 0.55
 n
@@ -67,16 +66,15 @@ P(N = n)
 0.15
 3
 0.05
-(a) Explain how you would simulate an observation of N using a number r, an
-observation of a random variable which is uniformly distributed on (0, 1).
-(b) Illustrate your method described in (i) by simulating three observations of N
-using the following random numbers between 0 and 1:
-0.6221, 0.1472, 0.9862.
-[4]
+\begin{enumerate}[(i)]
+\item (a) Explain how you would simulate an observation of N using a number r, an observation of a random variable which is uniformly distributed on $(0, 1)$.
+\item (b) Illustrate your method described in (i) by simulating three observations of $N$ using the following random numbers between 0 and 1: 0.6221, 0.1472, 0.9862.
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-X ~ U(0,1000) , Y = min(X,800)
+$X ~ U(0,1000)$ , $Y = min(X,800)$
 (i)
+
 P ( X
 x | X
 800)
@@ -92,7 +90,7 @@ x
 for 0
 800
 x 800
-so the conditional distribution is U(0,800)
+so the conditional distribution is $U(0,800)$
 
 [other reasonable arguments were given credit, e.g. the conditional distribution is simply a scaled version of the original uniform distribution on a restricted range .]
 
@@ -113,8 +111,8 @@ Page 4
 
 (iii) Y is approximately normal with expectation 480 by Central Limit Theorem
 (iv) E[X | X < 800] = 400 whereas E[Y] = 480.
-The higher value for E[Y] results from 20% of the Y values being 800 (and
-80% being between 0 and 800).
+The higher value for E[Y] results from 20\% of the Y values being 800 (and 80\% being between 0 and 800).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 11
 (a)
 For 0 r < 0.55
