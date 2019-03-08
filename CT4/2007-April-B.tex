@@ -1,0 +1,242 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+5
+(a) Derive an expression that could be used to estimate the central exposed
+to risk using the available data. State any assumptions you make.
+(b) Use the data to estimate μ 65 . State any further assumptions that you
+make.
+[4]
+[Total 6]
+(i) Define the hazard rate, h(t), of a random variable T denoting lifetime.
+[1]
+(ii) An investigation is undertaken into the mortality of men aged between exact
+ages 50 and 55 years. A sample of n men is followed from their 50th
+birthdays until either they die or they reach their 55th birthdays.
+The hazard of death (or force of mortality) between these ages, h(t), is
+assumed to have the following form:
+h ( t ) = α + β t
+where α and β are parameters to be estimated and t is measured in years since
+the 50th birthday.
+(a) Derive an expression for the survival function between ages 50 and 55
+years.
+(b) Sketch this on a graph.
+(c) Comment on the appropriateness of the assumed form of the hazard for
+modelling mortality over this age range.
+[6]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6
+A three state process with state space {A, B, C} is believed to follow a Markov chain
+with the following possible transitions:
+A
+B
+C
+An instrument was used to monitor this process, but it was set up incorrectly and only
+recorded the state occupied after every two time periods. From these observations the
+following two-step transition probabilities have been estimated:
+2
+P AA
+= 0.5625
+2
+P AB
+= 0.125
+2
+P BA
+= 0.475
+2
+P CC
+= 0.4
+Calculate the one-step transition matrix consistent with these estimates.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 5Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
+5
+(i)
+The hazard function is defined as
+h ( t ) = lim
+dt → 0 +
+(ii)
+(a)
+1
+( Pr[ T ≤ t + dt | T > t ] ) .
+dt
+Since the survival function S(t) is given by
+⎛ t
+⎞
+S ( t ) = exp ⎜ − ∫ h ( s ) ds ⎟ ,
+⎜
+⎟
+⎝ 0
+⎠
+then
+t
+⎛ t
+⎞
+⎡
+⎡
+β s 2 ⎤
+β t 2 ⎤
+S ( t ) = exp ⎜ − ∫ ( α + β s ) ds ⎟ = exp ⎢ −α s −
+⎥ = exp ⎢ −α t −
+⎥
+⎜
+⎟
+2 ⎦ ⎥
+2 ⎦ ⎥
+⎢
+⎢
+⎣
+⎣
+⎝ 0
+⎠
+0
+where 0 ≤ t ≤ 5 .
+(b)
+A suitable plot is shown below.
+1
+0.9
+0.8
+0.7
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+0
+0
+1
+2
+3
+4
+5
+Duration since age 50 years
+Both concave and convex plots were acceptable as this depends on
+parameters, α and β.
+(c)
+If both α and β are positive, then the formula implies a force of
+mortality which increases with age, which is sensible for this age
+range.
+The parameter α measures the ‘level’ of mortality and the parameter β
+measures the rate of increase with age. Varying these permits quite a
+wide range of forms for S(t).
+So the formula seems appropriate.
+Page 6Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
+6
+Based on the given transition diagram, the one-step transition matrix must be of the
+form:
+⎛ a
+⎜
+⎜ d
+⎜ 0
+⎝
+0
+e
+h
+c ⎞
+⎟
+f ⎟
+i ⎟ ⎠
+The two-step transition matrix is given by:
+⎛ a
+⎜
+⎜ d
+⎜ 0
+⎝
+0
+e
+h
+c ⎞ ⎛ a
+⎟ ⎜
+f ⎟ * ⎜ d
+i ⎟ ⎠ ⎜ ⎝ 0
+0
+e
+h
+2
+ch
+c ( a + i ) ⎞
+c ⎞ ⎜ ⎛ a
+⎟
+⎟
+f ⎟ = ⎜ d ( a + e ) e 2 + fh cd + ef + fi ⎟
+⎜
+⎟
+i ⎟ ⎠ ⎜ dh
+h ( e + i )
+fh + i 2 ⎟
+⎝
+⎠
+2
+P AA
+= 0.5625 ⇒ a 2 = 0.5625 ⇒ a = 0.75
+Rows of transition matrix must sum to 1.
+So,
+and
+a + c = 1
+c = 0.25
+2
+P AB
+= 0.125 ⇒ ch = 0.125 ⇒ h = 0.5
+so
+h + i = 1
+i=0.5
+2
+P CC
+= 0.4 ⇒ f × 0.5 + 0.5 2 = 0.4 ⇒ f = 0.3
+2
+P BA
+= 0.475 ⇒ d (0.75 + e ) = 0.475
+Rows sum to 1 so, d + e =0.7
+Substitute for e:
+d (1.45 − d ) = 0.475 ⇒ d 2 − 1.45 d + 0.475 = 0
+Solving using standard quadratic formula:
+d =
+1.45 ± 1.45 2 − 4 × 0.475 1.45 ± 0.45
+=
+= 0.95 or 0.5
+2
+2
+0.95 is not possible because e would need to be negative
+So
+d = 0.5 and e = 0.2
+Page 7Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
+Transition matrix is:
+⎛ 0.75 0 0.25 ⎞
+⎜ 0.5 0.2 0.3 ⎟
+⎜
+⎟
+⎜ 0
+0.5 0.5 ⎟ ⎠
+⎝
+
