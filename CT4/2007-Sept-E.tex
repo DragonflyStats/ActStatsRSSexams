@@ -1,0 +1,141 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+10
+(i)
+Compare the advantages and disadvantages of fully parametric models and the
+Cox regression model for assessing the impact of covariates on survival. [3]
+You have been asked to investigate the impact of a set of covariates, including age,
+sex, smoking, region of residence, educational attainment and amount of exercise
+undertaken, on the risk of heart attack. Data are available from a prospective study
+which followed a set of several thousand persons from an initial interview until their
+first heart attack, or until their death from a cause other than a heart attack, or until 10
+years had elapsed since the initial interview (whichever of these occurred first).
+(ii) State the types of censoring present in this study, and explain how each arises.
+[2]
+(iii) Describe a criterion which would allow you to select those covariates which
+have a statistically significant effect on the risk of heart attack, when
+controlling the other covariates of the model.
+[4]
+Suppose your final model is a Cox model which has three covariates: age (measured
+in age last birthday minus 50 at the initial interview), sex (male = 0, female = 1) and
+smoking (non-smoker = 0, smoker = 1), and that the estimated parameters are:
+Age
+Sex
+Smoking
+Sex x smoking
+0.01
+-0.4
+0.5
+-0.25
+where “sex x smoking” is an additional covariate formed by multiplying the two
+covariates “sex” and “smoking”.
+(iv)
+(v)
+Describe the final model’s estimate of the effect of sex and of smoking
+behaviour on the risk of heart attack.
+[3]
+Use the results of the model to determine how old a female smoker must be at
+the initial interview to have the same risk of heart attack as a male non-smoker
+aged 50 years at the initial interview.
+[3]
+[Total 15]
+CT4 S2007—7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10
+(i)
+This is higher than 0.6 because Ben has to win at least two points in a
+row to win the game.
+Fully parametric models are good for comparing homogenous groups, as
+confidence intervals for the fitted parameters give a test of difference between
+the groups which should be better than non-parametric procedures, or semi-
+parametric procedures such as the Cox model.
+But parametric methods need foreknowledge of the form of the hazard
+function, which might be the object of the study.
+The Cox model is semi-parametric so such knowledge is not required.
+Page 14Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+The Cox model is a standard feature of many statistical packages for
+estimating survival model, but many parametric distributions are not, and
+numerical methods may be required, entailing additional programming.
+(ii)
+Type I censoring, since the investigation ends after a period which is fixed in
+advance.
+Random censoring, since death from a cause other than a heart attack is a
+random variable and may occur at any time.
+(iii)
+The likelihood ratio statistic is a common criterion.
+Suppose we fit a model with p covariates and another model with p + q
+covariates which include all the p covariates of the first model.
+Then if the maximised log-likelihoods of the two models are L p and L p + q , then
+the statistic
+− 2( L p − L p + q )
+has a chi-squared distribution with q degrees of freedom, under the hypothesis
+that the extra q covariates have no effect in the presence of the original p
+covariates.
+This statistic can be used either will full likelihoods or with partial likelihoods
+in the Cox model
+This statistic can be used to test the statistical significance of any set of q
+covariates in the presence of any other disjoint set of p covariates.
+(iv)
+Holding other factors constant,
+females have a lower risk of heart attack than males,
+and smokers have a higher risk than non-smokers,
+but the effect of smoking varies for men and women.
+The relative risks, compared with the baseline category of male non-smokers
+are as follows.
+female non-smokers
+male smokers
+female smokers
+= 0.67
+exp( - 0.4)
+exp(0.5)
+= 1.65
+exp( - 0.4+0.5 - 0.25) = 0.86
+(or any other numerical example to illustrate the previous points)
+Page 15Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+(v)
+Let the required age for the woman smoker be 50+ x .
+The hazard for this woman is
+h ( t , x ) = h 0 ( t ) exp(0.01 x – 0.4 + 0.5 – 0.25),
+The hazard for a male non-smoker aged 50 at the initial interview is simply
+h 0 ( x ), since this is the baseline category.
+Thus we have
+h 0 ( t ) exp(0.01 x – 0.4 + 0.5 – 0.25) = h 0 ( t )
+so that
+exp(0.01 x – 0.4 + 0.5 – 0.25) = 1
+or
+exp(0.01 x - 0.15) = 1
+so that
+0.01 x = 0.15
+Therefore x = 15, and the woman’s age at interview must be 65 years.
