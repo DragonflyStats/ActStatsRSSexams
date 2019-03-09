@@ -1,0 +1,187 @@
+7
+(i) Set out the four other strategies in addition to A (labelled B to E) which Liam
+could adopt.
+[4]
+(ii) Construct the payoff matrix to Tarik.
+(iii)
+ Explain whether or not there is a saddle point.
+[3]
+[2]
+[Total 9]
+Consider the following time series model:
+(1 – αB) 3 X t = ε t
+where B is the backshift operator and e t is a standard white noise process with
+variance s 2 .
+(i)
+Determine for which values of a the process X t is stationary.
+[2]
+Now assume that X t is stationary.
+(ii) Calculate the autocorrelation function for the first two lags: r 1 and r 2 , using
+the Yule-Walker equations.
+[7]
+(iii) State the formulae, in terms of r 1 and r 2 , for the first two values of the partial
+auto correlation function f 1 and f 2 .[1]
+Now assume that a = 1.
+(iv)
+
+CT6 A2018–4
+Explain how to fit the parameter of this model, given the time series
+observations X 1 , X 2 , ..., X T .[2]
+[Total 12]8
+Claim events on a portfolio of insurance policies follow a Poisson process with
+parameter l. Individual claim amounts, X, follow a Normal distribution with
+parameters m = 500 and s 2 = 200.
+The insurance company calculates premiums using a premium loading factor of 20%.
+(i)
+Show that the adjustment coefficient, r = 0.000708 to three significant figures.
+[4]
+The insurance company’s initial surplus is 5,000.
+(ii)
+Calculate an upper bound on the probability of ruin, using Lundberg’s
+inequality.[1]
+The insurance company actuary believes that claim amounts are better modelled using
+an exponential distribution. You may assume that the mean m is unchanged, and is
+now equal to the standard deviation.
+(iii) Calculate the new upper bound of the probability of ruin.
+(iv) Give a reason why claim amounts on insurance policies are not usually
+modelled using a Normal distribution, and suggest an alternative distribution,
+other than the exponential.
+[2]
+[Total 12]
+
+CT6 A2018–5 
+
+Q7
+(i) The characteristic polynomial has a triple root of B = 1 / α
+and therefore for α < 1 ensures stationarity
+(ii) Expanding the cubic sum in the initial equation we have
+( 1 − 3 α B + 3 α B
+2 2
+[1]
+[1]
+)
+− α 3 B 3 X t = ε t
+X t − 3 α X t − 1 + 3 α 2 X t − 2 − α 3 X t − 3 = ε t
+[1]
+We have an AR(3) process with parameters a 1 = 3 α , α 2 =− 3 α 2 and a 3 = α 3
+.
+[2]
+The Yule walker equations for this process are for ρ 1 :
+Page 7Subject CT6 (Statistical Methods Core Technical) – April 2018 – Examiners’ Report
+ρ 1 = a 1 + a 2 ρ 1 + a 3 ρ 2
+ρ 1 ( 1 − a 2 ) =           
+a 1 + a 3 ρ 2
+( 1 )
+[1]
+And for ρ 2 :
+ρ 2 = a 1 ρ 1 + a 2 + a 3 ρ 1
+ρ 2 =
+( a 1 + a 3 ) ρ 1 + a 2           ( 2 )
+[1]
+And therefore rearranging (1) and (2)
+a 1 + a 3 a 2
+3 α − 3 α 5
+=
+ρ 1
+=
+1 − a 2 − a 1 a 3 − a 3 2 1 + 3 α 2 − 3 α 4 − α 6
+[1]
+And
+ρ 2 =
+(iii)
+( a 1 + a 3 ) ρ 1 + a 2 =
+(
+3 α + α 3
+) 1 + 3 α
+3 α − 3 α 5
+2
+− 3 α − α
+4
+6
+− 3 α 2
+Using the definition (Tables have these too)
+ρ − ρ 2
+φ 1 =ρ 1   
+and φ 2 = 2 2 1
+1 − ρ 1
+(iv)
+[1]
+[1]
+For α = 1 , the process is not stationary but ∇ 3 X t is as it becomes a white
+noise.
+[1]
+In this case we need to fit the white noise to the T − 3 third differenced
+observations ∇ 3 X 1 , ∇ 3 X 2 ... ∇ 3 X T − 3 .
+[1]
+[Total 12]
+Many candidates scored well on this relatively straightforward time-
+series question, although a good number struggled with the algebra in
+part (ii) and only the strongest candidates were able to answer part (iv)
+correctly.
+Q8
+(i)
+r is the unique positive root of the equation:
+λ + cr = λ M X ( r )
+[1⁄2]
+c 1.2 λ E ( X ) , so the equation simplifies to
+Here =
+1 + 1.2 E ( X ) r =
+M X ( r )
+[1⁄2]
+Page 8Subject CT6 (Statistical Methods Core Technical) – April 2018 – Examiners’ Report
+M X ( r ) =
+1
+μ r + σ 2 r 2
+e 2
+(from tables)
+[1⁄2]
+E ( X ) = 500 (from question)
+So 1 + 600 r
+1
+500 r + 200 r 2
+2
+− e
+[1⁄2]
+= 0
+[1]
+At r = 0.000 7075, LHS is +0.000 03, and at r = 0.000 708 5, LHS is
+–0.000 08
+[1]
+So the adjustment coefficient must be 0.000 708 to 3sf
+− 0.000 708*5000
+=
+By Lundberg’s inequality, upper bound given
+by e − RU e =
+0.029
+(ii)
+(iii)
+λ = 0.002
+MGF is
+(iv)
+[1]
+[1⁄2]
+λ
+λ − r
+[1⁄2]
+0.002
+1 + 600 r =
+0.002 − r [1]
+(1 + 600 r )(0.002 −=
+r ) 0.002 ⇒ 1.2 r − r − 600 =
+r 2 0 [1]
+r (0.2 − 600 r ) = 0 ⇒ r = 1 [1]
+3000
+e − RU = 0.189 [1]
+Normal distributions allow the possibility of negative claim amounts [1]
+Normal distributions do not have “fat tails”, commonly observed in insurance
+claims
+[1]
+Normal distributions are not positively skewed, unlike typical claim amounts
+[1]
+[Max 1]
+Any sensible alternative (gamma, Pareto, Weibull etc.)
+[1]
+[Total 12]
+Most candidates are now familiar with the method required in part (i),
+and were able to score well throughout this question.
+Page 9Subject CT6 (Statistical Methods Core Technical) – April 2018 – Examiners’ Report
