@@ -1,0 +1,119 @@
+4
+The sample correlation coefficient for the set of data consisting of the three pairs of
+values
+(−1,−2) , (0,0) , (1,1)
+is 0.982. After the x and y values have been transformed by particular linear functions,
+the data become:
+(2,2) , (6,−4) , (10,−7).
+State (or calculate) the correlation coefficient for the transformed data.
+CT3 A2007—2
+[2]5
+The number of claims arising in one year from a group of policies follows a Poisson
+distribution with mean 12. The claim sizes independently follow an exponential
+distribution with mean £80 and they are independent of the number of claims.
+The current financial year has six months remaining.
+Calculate the mean and the standard deviation of the total claim amount which arises
+during this remaining six months.
+[4]
+6
+Consider the discrete random variable X with probability function
+f ( x ) =
+(i)
+4
+5 x + 1
+,
+x = 0, 1, 2, ...
+Show that the moment generating function of the distribution of X is given by
+M X ( t ) = 4(5 − e t ) − 1 ,
+for e t < 5.
+(ii)
+7
+[3]
+Determine E[X] using the moment generating function given in part (i).
+[3]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6
+(i)
+M X ( t ) = E [ e tx ]
+∞
+4 ⎛ 1 ⎞
+4 ∞
+= ∑ e
+=
+∑
+⎜ ⎟
+5 ⎝ 5 ⎠
+5 x = 0
+x = 0
+x
+tx
+⎛ e t
+⎜ ⎜
+⎝ 5
+x
+⎞
+⎟ ⎟ ,
+⎠
+and for e t < 5 ,
+M X ( t ) =
+(ii)
+4 1
+5 1 − e t
+(
+(
+= 4 5 − e t
+)
+− 1
+.
+5
+M '( t ) = 4 e t 5 − e t
+)
+− 2
+Mean is given by E ( X ) = M '(0)
+(
+∴ E [ X ] = 4 e 0 5 − e 0
+)
+− 2
+=
+1
+.
+4
+[OR, by expansion as a power series.]
+Page 3Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — Examiners’ Report
+7
+(i)
+Let X = the sum repaid for a single certificate.
+E ( X ) = 10(0.99) + 20(0.01) = 10.1
+E ( X 2 ) = 10 2 (0.99) + 20 2 (0.01) = 103
+∴ V ( X ) = 103 − 10.1 2 = 0.99 ∴ sd ( X ) = 0.9950
+(ii)
+Let S = the sum repaid for 200 certificates.
+∴ E ( S ) = 200(10.1) = 2020, V ( S ) = 200(0.99) = 198 ∴ sd ( X ) = 14.07
+P ( S > 2040) = P ( Z >
+2040 − 2020
+= 1.42)
+14.07
+= 1 − 0.9222 = 0.0778
+(iii)
+N ~ binomial(200, 0.01) ≈ Poisson(2)
+P ( S > 2040) = P ( N > 4)
+= 1 − P ( N ≤ 4) = 1 − 0.94735 = 0.0527
+(iv)
+Clearly the Poisson approximation to the binomial is better than the Central
+Limit Theorem approximation.
+OR:
+Since S is discrete and increases in steps of 10, one can argue for the use of a
+continuity correction in (ii) above:
+2045 − 2020 ⎞
+⎛
+P ( S > 2040 ) = P ⎜ Z ≥
+⎟ = P ( Z > 1.78 )
+14.07
+⎝
+⎠
+= 1 − 0.96246 = 0.0375
+(Either approach is acceptable for the marks.)
+Page 4Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — Examiners’ Report
+∞
