@@ -1,0 +1,227 @@
+[Total 5]
+A random sample of insurance policies of a certain type was examined for each of
+four insurance companies and the sums insured ( y ij , for companies i = 1, 2, 3, 4)
+under each policy are given in the table below (in units of £100):
+Company
+1
+2
+3
+4
+For these data,
+CT3 A2007—4
+Total
+58.2
+56.3
+50.1
+52.9
+57.2
+54.5
+54.2
+49.9
+58.4
+57.0
+55.5
+50.0
+55.8
+55.3
+51.7
+54.9
+284.5
+223.1
+159.8
+204.5
+∑ i ∑ j y ij = 871.9 and ∑ i ∑ j y ij 2 = 47, 633.53Consider the ANOVA model Y ij = μ + τ i + e ij , i = 1,..., 4, j = 1,..., n i , where Y ij is the j th
+sum insured for company i , n i is the number of responses for company i ,
+e ij ~ N (0, σ 2 ) are independent errors, and
+11
+∑ i = 1 n i τ i = 0 .
+4
+(i) Calculate estimates of the parameters μ and τ i , i = 1, 2, 3, 4 .
+(ii) Test the hypothesis that there are no differences in the means of the sums
+insured under such policies by the four companies.
+[5]
+[Total 8]
+[3]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The number of claims, X , which arise in a year on each policy of a particular class is
+to be modelled as a Poisson random variable with mean λ. Let X = ( X 1 , X 2 , ..., X n ) be
+1 n
+a random sample of size n from the distribution of X , and let X = ∑ X i .
+n i = 1
+Suppose that it is required to estimate λ , the mean number of claims on a policy.
+(i) Show that λ̂ , the maximum likelihood estimator of λ, is given by λ ˆ = X . [3]
+(ii) Derive the Cramer-Rao lower bound (CRlb) for the variance of unbiased
+estimators of λ.
+(iii)
+[4]
+(a) Show that λ̂ is unbiased for λ and that it attains the CRlb.
+(b) Explain clearly why, in the case that n is large, the distribution of λ̂ can
+be approximated by
+⎛ λ ⎞
+λ ˆ ~ N ⎜ λ , ⎟ .
+⎝ n ⎠
+[3]
+(iv)
+(a)
+Show that, in the case n = 100, an approximate 95% confidence
+interval for λ is given by
+x ± 0.196 x .
+(b)
+Evaluate the confidence interval in (iv)(a) based on a sample with the
+following composition:
+observation
+frequency
+0
+11
+1
+28
+2
+19
+3
+28
+4
+9
+5
+2
+6
+2
+7
+1
+[6]
+[Total 16]
+CT3 A2007—5
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 5Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — Examiners’ Report
+(i)
+10
+(ii)
+μ ˆ = Y .. =
+τ ˆ 1 = Y 1. − Y .. = 284.5 871.9
+−
+= 2.406
+5
+16
+τ ˆ 2 = Y 2. − Y .. = 223.1 871.9
+−
+= 1.281
+4
+16
+τ ˆ 3 = Y 3. − Y .. = 159.8 871.9
+−
+= − 1.227
+3
+16
+τ ˆ 4 = Y 4. − Y .. = 204.5 871.9
+−
+= − 3.369
+4
+16
+SS T = ∑∑ y ij 2 −
+i
+SS B =
+871.9
+= 54.494
+16
+j
+Y .. 2
+= 120.430
+n
+∑ n i ( Y i . − Y .. ) 2 = (5 × 2.406 2 ) + (4 ×1.281 2 ) + (3 × 1.227 2 ) + (4 × 3.369 2 ) = 85.425
+i
+⎛ Y 2 ⎞ Y 2
+[OR : SS B = ∑ ⎜ i . ⎟ − .. = 85.428]
+⎜
+⎟ n
+i ⎝ n i ⎠
+SS R = SS T − SS B = 35.002
+The ANOVA table is:
+Source
+DF
+SS
+MS
+F
+Company (between treatments) 3
+85.428 28.476 9.763
+Residual
+12 35.002 2.917
+Total
+15 120.430
+At the 5% significance level, F 0.05,3,12 = 3.490 (or F 0.01,3,12 = 5.953 )
+Since F = 9.763 > 3.490, there is evidence against the null hypothesis, and we
+conclude that there are differences in the mean sums insured by the
+companies.
+Page 6Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — Examiners’ Report
+11
+(i)
+L ( x ) =
+( λ ) = log L ( λ ) = − n λ + ( ∑ x i ) log λ + constant
+⇒
+⇒
+(ii)
+e − n λ λ ∑ x i
+∏ x i !
+d
+∑ x i = 0 ⇒ λ ˆ =
+= − n +
+λ
+d λ
+d 2
+d λ 2
+=−
+∑ X i = X
+n
+∑ x i
+λ 2
+⎡ d 2 ⎤ 1
+n λ n
+⇒ − E ⎢ 2 ⎥ = 2 E ⎡ ⎣ ∑ X i ⎤ ⎦ = 2 =
+λ
+λ
+⎢ ⎣ d λ ⎥ ⎦ λ
+⇒ CRlb =
+(iii)
+(a)
+λ
+.
+n
+E ⎡ ⎣ λ ˆ ⎤ ⎦ = E ⎡ ⎣ X ⎤ ⎦ = E [ X ] = λ
+V ⎡ ⎣ λ ˆ ⎤ ⎦ = V ⎡ ⎣ X ⎤ ⎦ =
+(iv)
+V [ X ]
+n
+=
+λ
+,which is CRlb.
+n
+(b) The theory of asymptotic distributions of MLEs (and in this case the
+⎛ λ ⎞
+CLT) gives λ ˆ ~ N approximately, for large n so λ ˆ ~ N ⎜ λ , ⎟ ,
+⎝ n ⎠
+approximately.
+(a) Large sample approximate 95% CI for λ is given by
+(
+( ) )
+λ ˆ ± 1.96 × s . e . λ ˆ
+i.e. x ± ( 1.96 × s . e . ( x ) )
+()
+λ
+s . e . λ ˆ =
+which we can estimate by using x to estimate λ , giving
+n
+()
+the estimated standard error e . s . e . λ ˆ =
+x
+n
+With n = 100, we get the 95% CI as
+⎛
+x ⎞
+x ± ⎜ ⎜ 1.96 ×
+⎟ i . e . x ± 0.196 x .
+100 ⎟ ⎠
+⎝
+Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — Examiners’ Report
+(b)
+x = 215 /100 = 2.15
+CI is 2.15 ± 0.196(2.15) 1/2 i.e. 2.15 ± 0.287 i.e. (1.86, 2.44)
