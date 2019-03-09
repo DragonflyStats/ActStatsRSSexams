@@ -1,0 +1,80 @@
+3
+An insurance company has collected data on the number of claims arising from
+certain risks over the last n years. The number of claims from the i th risk in the j th
+year is denoted by X ij for i = 1, 2, ..., N and j = 1, 2, ..., n.
+The distribution of X ij depends on an unknown parameter q i . The X ij are independent
+identically distributed random variables given q i .
+(i) Describe briefly what is meant by each of the following: m(q), s 2 (q), E(s 2 (q)),
+var(m(q)), and Z, when using Empirical Bayes Credibility Theory (EBCT)
+Model 1.
+[5]
+(ii) Explain how the value of Z depends on the following factors: n, E(s 2 (q)),
+var(m(q)).[5]
+[Total 10]
+
+CT6 A2018–24
+The table below shows the cumulative incurred claims by year for a portfolio of
+general insurance policies, with all figures in £m. Claims paid to date total 13.5. The
+ultimate loss ratio is expected to be in line with the 2013 accident year, and claims are
+assumed to be fully developed by the end of Development Year 3.
+Development Year
+Accident Year 0 1 2 3 Earned Premiums
+2013 3.01 3.38 3.85 4.00 4.32
+2014 3.30 3.67 4.15 2015 3.32 3.86 2016 3.74
+4.41
+4.55
+4.68
+Calculate the total reserve required to meet the outstanding claims, using the
+Bornheutter-Ferguson method.
+Q3
+(i)
+m ( θ ) is the average claim amount for each risk for a given value of θ i
+[1]
+s 2 ( θ ) is the variance of the claim amount for each risk given a value of θ i [1]
+E ( s 2 ( θ ) ) is the average variability of data values from year to year for a single
+risk, I [1]
+var( m ( θ ) ) is the variability of the average data values for different risks [1]
+Z is the credibility factor for the EBCT 1 model / weight placed on the sample
+mean
+[1]
+(ii)
+(a)
+(b)
+Z increases as n increases, since we place more weight on the data for
+that risk
+[1]
+(
+)
+As E s 2 ( θ ) increases, Z decreases since the variance of the data
+from the individual risk is high and so we place more weight on the
+collective data.
+[2]
+(c)
+(
+)
+As var m ( θ ) increases, Z increases since it implies that the means of
+the individual risks are very different, so we place more weight on the
+individual risk data compared to the collective.
+[2]
+[Total 10]
+Most candidates scored well here, although some lost marks through a
+combination of only using formulae in part (i) and giving insufficient
+explanations in part (ii).
+Page 4Subject CT6 (Statistical Methods Core Technical) – April 2018 – Examiners’ Report
+Q4
+Ultimate loss ratio = 4/4.32 = 92.5926% [1]
+DF3 = 4/3.85 = 1.03896 [1]
+DF2 = (3.85+4.15)/(3.38+3.67) = 1.134752 [1]
+DF1 = (3.38+3.67+3.86)/(3.01+3.3+3.32) = 1.132918 [1]
+Adjusted expected ultimate claim for
+AY2 = 4.15+0.925926*4.41*(1 – 1/1.03896) = 4.3031 [11⁄2]
+Adjusted expected ultimate claim for AY3
+= 3.86+0.925926*4.55*(1 – 1/(1.03896*1.134751)) = 4.4995 [11⁄2]
+Adjusted expected ultimate claim for AY4
+= 3.74+0.925926*4.68*(1–1/(1.03896*1.134751*1.132918)) = 4.8290 [11⁄2]
+So reserve = 4 + 4.3031 + 4.4995 + 4.8290 – 13.5 = 4.13m
+[1⁄2]
+[Total 9]
+Most candidates scored very well on this straightforward chain-ladder
+question, although some candidates did not appear to know the method
+required.
