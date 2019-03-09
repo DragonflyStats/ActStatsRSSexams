@@ -1,0 +1,205 @@
+5
+[9]
+For three different risks, an actuary is modelling the monthly claim numbers with
+three different Poisson distributions.
+Risk Exposure Number of claims
+Risk 1 36 months 20
+Risk 2 30 months 18
+Risk 3 24 months 16
+(i) Derive the maximum likelihood estimates of the parameter for each of the
+three individual Poisson distributions fitted.
+[5]
+(ii)
+ Test the hypothesis that the three risks have the same monthly claim rate. [5]
+[Total 10]
+CT6 A2018–3 
+PLEASE TURN OVER6
+Tarik and Liam are playing a zero-sum two-person game. From a deck of three cards
+numbered 1, 2 and 3 Tarik selects a card, making sure Liam does not know which one
+it is. Liam then proceeds to guess which card Tarik has picked. If Liam is wrong, he
+continues to guess until he has guessed correctly, at which point the game ends.
+After each guess, if Liam’s guess is lower than the number on Tarik’s card, Tarik
+says “Low”, but if Liam’s guess is higher than the number on Tarik’s card, Tarik says
+“High”.
+At the end of each game, Liam pays Tarik $1 for each guess he made.
+You should assume that Liam will never make a guess that contradicts the information
+provided by Tarik – for example, if Liam guesses “2” first, and Tarik says “Low”,
+Liam would then always guess “3”, rather than “1”.
+Consider strategy A, where Liam will guess “1” first, and then guesses “2” if 1 is not
+correct.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q5
+(i)
+For risk one, let x i , y i , z i be the numbers of claims in month i for risks one,
+two & three respectively. Let μ I , μ II , μ III be the monthly rate for these three
+risks then the likelihood function is:
+log L ( μ I , μ II , μ III ) = log L ( μ I ) + log L ( μ II ) + log L ( μ III )
+[1⁄2]
+where
+log L ( μ=
+I )
+36
+= i 1 = i 1
+30
+30
+36
+20 log μ I − 36 μ I − ∑ log x i !
+[1]
+= i 1
+30
+i ! 18log μ II − 30 μ II − ∑ log y i !
+∑ y i log μ II − ∑ μ II − ∑ log y =
+= i 1
+log L ( μ III =
+)
+36
+x i !
+∑ x i log μ I − ∑ μ I − ∑ log =
+= i 1
+30
+log L ( μ II =
+)
+36
+24
+= i 1 = i 1
+24
+= i 1
+24 24
+= i 1 = i 1 = i 1
+i ! 16 log μ III − 24 μ III − ∑ log z i !
+∑ z i log μ III − ∑ μ III − ∑ log z =
+= i 1
+After differentiating and equating to zero we have
+Page 5Subject CT6 (Statistical Methods Core Technical) – April 2018 – Examiners’ Report
+∂ log L ( μ I , μ II , μ III )
+∂μ I
+=
+− 0.36 +
+20
+μ I
+[1]
+
+Second derivative is − 20 / μ I 2 < 0
+20 5
+=
+so μ  I =
+36 9
+[1]
+[1⁄2]
+18 3  16 2
+=
+=
+, μ III =
+Similarly we can see that μ 
+II =
+3 0 5
+24 3
+[1]
+[Total 5]
+(ii)
+For testing whether the three models are the same we carry out the likelihood
+ratio test.
+We fit the same rate to the three risks using this log likelihood function
+36
+30
+24
+
+
+log L =
+( μ )   ∑ x i + ∑ y i + ∑ z i   log μ − 90 μ − ∑ log x i ! − ∑ log y i ! − ∑ log z i !
+= i 1 = i 1 = i 1
+
+
+[1]
+ˆ
+=
+and similar to the above the corresponding MLE is μ
+54 27
+=
+90 45
+[1⁄2]
+2 ( log L ( μ I , μ II , μ III ) − log L ( μ ) )
+20
+18
+16
+54
+
+
+= 2  20 log − 20 + 18log − 18 + 16 log − 16 − 54 log + 54 
+36
+30
+24
+90
+
+
+
+ 20 
+ 18 
+ 16 
+ 54  
+= 2 *  20 * log   + 18 * log   + 16 * log   − 54 * log   
+ 36 
+ 30 
+ 24 
+ 90  
+
+= 0.2930949
+[11⁄2]
+The difference in the parameters between the models is 3 – 1 = 2, therefore we
+compare this test statistics against the χ 22 which at the 5% upper level has
+critical value 5.991>. 0.2931 . Therefore there is insufficient evidence to reject
+the hypothesis that the three risks have a common rate.
+[2]
+[5]
+[Total 10]
+Page 6Subject CT6 (Statistical Methods Core Technical) – April 2018 – Examiners’ Report
+Variants of this question have been seen many times before and so
+candidates were able to score very well here, although only the
+strongest candidates were able to pick up full marks.
+Q6
+(i)
+Guess 1, then guess 2 if “Low”, then guess 3 if “Low” again. (A)
+Guess 1, then guess 3 if “Low”, then guess 2 if “High” (B)
+Guess 2, then guess 1 if “High”, or guess 3 if “Low” (C)
+Guess 3, then guess 2 if “High”, then guess 1if “High” again (D)
+Guess 3, then guess 1 if “High”, then guess 2 if “Low” (E)
+[1]
+[1]
+[1]
+[1]
+(ii)
+Tarik \ Liam
+1
+2
+3
+A
+1
+2
+3
+B
+1
+3
+2
+C
+2
+1
+2
+D
+3
+2
+1
+E
+2
+3
+1
+[3]
+(iii)
+There is no saddle point.
+[1]
+This is because there is no element in the matrix which is both the highest in
+the row and lowest in the column, and vice versa.
+[1]
+[Total 9]
+Candidates with a good understanding of the relevant theory were able
+to score very well here, although some candidates struggled to
+formulate the strategies required in part (i).
