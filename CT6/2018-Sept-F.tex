@@ -1,0 +1,101 @@
+8
+[1]
+For a portfolio of insurance policies, claims X i are independent and follow a gamma
+distribution, with parameters α = 6 and β, which is unknown.
+A random sample of n claims, X 1 ,..., X n is selected, with mean X .
+(i) Derive an expression for the estimator of β using the method of moments. [2]
+(ii) Explain what the Maximum Likelihood Estimator (MLE) of β represents. [2]
+(iii) Derive an expression for the MLE of β, commenting on the result.
+(iv) State the Moment Generating Function (MGF) of X.[1]
+[5]
+Let Y = 2n β X .
+(v)
+
+CT6 S2018–5 
+Derive the MGF of Y, and hence its distribution, including statement of
+parameters.[5]
+[Total 15]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+Q8
+(i)
+(ii)
+Mean = α
+α
+β ⇒ β = X
+[2]
+The MLE is the estimate that maximises the likelihood of having observed the
+sample data.
+[2]
+n
+L ( β ) = ∏
+i = 1
+(iii)
+β α α − 1 − β x
+x i e
+Γ ( α )
+i
+n
+[11⁄2]
+log L ( β ) ∝ n α ln β − β ∑ x i
+i = 1
+Then differentiate
+n
+n α
+0
+− ∑ x i =
+β
+i = 1
+⇒ β = α n
+= α = 6
+X
+X
+i
+∑ x
+[11⁄2]
+Check for maximum
+d 2 ln L − 6 n
+=
+< 0
+β 2
+d β 2 [1]
+In this case the MLE and method of moments lead to the same result. [1]
+Page 8Subject CT6 (Statistical Methods Core Technical) – September 2018 – Examiners’ Report
+(iv)
+(v)
+
+t 
+ 1 − 
+ β 
+− α
+[1]
+2 β t ∑ X i
+2 n β tX
+=
+( e tY ) E ( e =
+) E ( e =
+)
+M
+E =
+Y ( t )
+n
+∏ E ( e β
+2 tX i
+)
+[11⁄2]
+i = 1
+by independence
+[1⁄2]
+− α
+ 2 β t 
+− n α
+M Y ( t ) =
+( 1 − 2 t )
+∏ i   1 − β   =
+By the uniqueness property of MGFs
+This is a Chi Squared distribution with parameter 2nα
+[1]
+[1]
+[1]
+[Total 15]
+Many candidates were able to score well on this question, although again marks were
+dropped when not showing all the steps in parts (iii) & (v).
