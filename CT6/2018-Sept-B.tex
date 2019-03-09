@@ -1,0 +1,152 @@
+3
+[1]
+[Total 8]
+(i) State the fundamental difference between Bayesian estimation and Classical
+estimation.[2]
+(ii) State three different loss functions which may be used under Bayesian
+estimation, indicating for each its link to the posterior distribution.
+[3]
+The proportion, θ , of the population of a particular country who use online banking is
+being estimated. Of a sample of 500 people, 326 do use online banking.
+An actuary is estimating θ using a suitable uniform distribution as a prior.
+(iii)
+
+CT6 S2018–2
+(a) Determine the posterior distribution of θ .
+(b) Calculate an estimate of θ using the loss function that minimises the
+mean of the posterior distribution.
+[4]
+[Total 9]4
+An insurance company has a portfolio of policies, where claim amounts follow a
+Pareto distribution with parameters α = 3 and λ = 100. The insurance company has
+entered into an excess of loss reinsurance agreement with a retention of M, such that
+90% of claims are still paid in full by the insurer.
+(i) Calculate M.[4]
+(ii) Calculate the average claim amount paid by the reinsurer, on claims which
+involve the reinsurer.
+[6]
+[Total 10]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q3
+(i) Under Bayesian estimation the parameter being estimated is itself considered
+to be a random variable.
+[2]
+(ii) Quadratic loss function – the mean of the posterior distribution
+Absolute error function – the median of the posterior distribution
+All-or-nothing loss function – the mode of the posterior distribution
+A suitable prior is U(0,1), so f θ ( θ ) = 1
+Distribution of X| θ is Bin(500, θ), so the likelihood function is:
+(iii)
+=
+L ( θ )
+C 326 θ 326 (1 − θ ) 174
+500
+[1]
+[1]
+[1]
+[2]
+Apply Bayes, PDF of posterior is proportional to θ (1 − θ )
+[1]
+Hence the distribution of θ|X is beta(327,175), and the estimate of θ under
+quadratic loss is 327/(327+175) = 65.1%.
+[1]
+[4]
+[Total 9]
+326
+174
+Again many candidates were able to score well here. A few candidates tripped up by
+assuming the posterior was binomial rather than beta.
+Q4
+3
+(i)
+ 100 
+P ( X < M ) =−
+1 
+0.9
+ =
+ 100 + M 
+ 100
+
+ 100 + M
+(ii)
+[11⁄2]
+1
+1
+100 − 100 * 0.1 3
+
+3
+=
+0.1
+⇒
+M
+=
+= 115.4
+
+1
+
+0.1 3
+[21⁄2]
+Let Y be the claim amount paid by the reinsurer, so that
+X <= M
+X > M
+E ( Z )
+E ( Y | X > M ) =
+P ( X > M )
+ 0
+Y =
+ X − M
+∞
+∞
+E ( Z ) =
+∫ ( x − M ) f ( x ) dx =
+∫ ( x − M )
+M
+M
+dv
+3*100 3
+u =
+( x − M ); =
+dx (100 + x ) 4
+[1]
+3*100 3
+dx
+(100 + x ) 4
+[1]
+[1]
+Page 4Subject CT6 (Statistical Methods Core Technical) – September 2018 – Examiners’ Report
+∞
+∞
+
+100 3 
+100 3
+E ( Z ) =  − ( x − M )
+dx
+ +
+(100 + x ) 3  M M ∫ (100 + x ) 3
+
+[1]
+∞
+ − 100 3 
+
+
+100 3
+=
+0 + 
+=
+=
+10.772
+
+2 
+2 
+ 2(100 + x )  M  2(100 + M ) 
+10.772
+E ( Y | X > M =
+)
+= 107.7
+0.1
+[1]
+[1]
+[Total 10]
+Many candidates got full marks on part (i), but only the strongest candidates were able to
+score well on part (ii).
