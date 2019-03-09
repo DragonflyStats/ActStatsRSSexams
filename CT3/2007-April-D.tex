@@ -1,0 +1,86 @@
+PLEASE TURN OVER8
+A random sample of size n is taken from a distribution with probability density
+function
+α
+f ( x ) =
+(1 + x ) α+ 1
+,
+0 < x <∞
+where α is a parameter such that α > 0.
+(i)
+Show by evaluating the appropriate integral that, in the case α > 1, the mean
+1
+.
+of this distribution is given by
+α − 1
+[Hint: when integrating, write x = (1 + x ) - 1 and exploit the fact that the
+integral of a density function is unity over its full range.]
+(ii)
+9
+10
+Determine the method of moments estimator of α.
+[3]
+[2]
+[Total 5]
+Consider three random variables X , Y , and Z with the same variance σ 2 = 4. Suppose
+that X is independent of both Y and Z , but Y and Z are correlated, with correlation
+coefficient ρ YZ = 0.5.
+(i) Calculate the covariance between X and U , where U = Y+Z . [1]
+(ii) Calculate the covariance between Z and V , where V = 3 X – 2 Y . [2]
+(iii) Calculate the variance of W , where W = 3 X – 2 Y + Z .
+[2]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+8
+(i)
+Mean =
+α
+∫ x (1 + x ) α+ 1 dx
+0
+∞
+=
+∫ (1 + x )
+0
+α
+(1 + x )
+∞
+dx − ∫ 1
+α+ 1
+0
+α
+(1 + x ) α+ 1
+dx
+∞
+=
+α
+( α − 1)
+dx − 1
+∫
+α − 1 (1 + x ) ( α− 1) + 1
+0
+=
+(ii)
+α
+1
+− 1 =
+α − 1
+α − 1
+Equate population mean to sample mean:
+Solve to get α = 1 +
+9
+(i)
+1
+= x
+α − 1
+1
+1
+, so MME = 1 +
+x
+X
+Cov(X,Y+Z) = Cov(X,Y) + Cov(X,Z) = 0
+[Note: The simple statement of the answer “0” is acceptable for the single
+mark available.]
+(ii) Cov(Z, 3X - 2Y) = 3Cov(Z,X) – 2Cov(Z,Y) = 0 – 2ρ YZ σ 2
+= - 2 × 0.5 × 4 = - 4
+(iii) V[3X – 2Y + Z] = (9 + 4 + 1)σ 2 – 12Cov(X,Y) + 6Cov(X,Z) – 4Cov(Y,Z)
+= 14(4) – 4(0.5)(4) = 48
