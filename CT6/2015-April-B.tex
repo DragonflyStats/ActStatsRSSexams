@@ -39,10 +39,8 @@
 To protect itself from the risk of large claims.
 (b)
 (ii)
- Excess of loss reinsurance where the reinsurer pays any amount of
-a claim above the retention.
- Proportional reinsurance where the reinsurer pays a fixed
-proportion of any claim.
+ Excess of loss reinsurance where the reinsurer pays any amount of a claim above the retention.
+ Proportional reinsurance where the reinsurer pays a fixed proportion of any claim.
 We must first find the parameters  and  of the Pareto distribution.
  2
 
@@ -107,23 +105,41 @@ M = 
 1
 0.05 5.4145
 = 880.8
-This question was the best answered on the paper with most candidates scoring well. Some candidates were unable to manipulate the Pareto distribution.
+%This question was the best answered on the paper with most candidates scoring well. Some candidates were unable to manipulate the Pareto distribution.
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%- Question 4
+
+Let $X$ be a random variable with density $f(x) = e^{x}$ for $x > 0$.
+
+
+
+\begin{enumerate}[(i)]
+\item 
+(i) Construct an algorithm for generating random samples from X. 
+A sequence of simulated observations is required from the density function
+$h(x) = 2xe^{-x^2} x > 0.$
+\item (ii) Construct a procedure using the Acceptance-Rejection method to obtain the required observations. 
+\item (iii) Calculate the expected number of pseudo-random numbers required to generate 10 observations from h using the algorithm in part (ii). 
+\end{enumerate}
+
 4
 (i)
-X has an exponential distribution with parameter 1.
-Let u be a sample from a U(0,1) distribution.
-Then using the inverse transform method we set
+\begin{itemize}
+\item X has an exponential distribution with parameter 1.
+\item Let u be a sample from a $U(0,1)$ distribution.
+\item Then using the inverse transform method we set
 u = F(x) = 1  e x
 i.e. 1  u = e x
 i.e. x = log(1  u)
-so the algorithm is
+\item so the algorithm is
 Step 1
 Step 2
 Generate u from U(0,1).
 Set x = log(1  u).
-
+\end{itemize}
 %%--- Page 5Subject CT6 (Statistical Methods Core Technical) – April 2015 – Examiners’ Report
 (ii)
 We first find C = max
@@ -161,15 +177,13 @@ h ( x )
 = xe x  x
 2 f ( x )
 and our algorithm is
-Step 1
-Step 2
-Step 3
-Step 4
-Page 6
-Generate u from U(0,1) distribution.
-Generate x = log(1  u).
-Generate v from U(0,1).
-If v > w(x) return to step 1 else return x.
+\begin{description}
+\item[Step 1] Generate $u$ from $U(0,1)$ distribution.
+\item[Step 2] Generate $x = -log(1 - u)$.
+\item[Step 3] Generate $v$ from $U(0,1)$.
+\item[Step 4] If $v > w(x)$ return to step 1 else return $x$.
+\end{description}
+%%%%%%%%%%%%%%%%%%%%%%%
 %%--- Subject CT6 (Statistical Methods Core Technical) – April 2015 – Examiners’ Report
 (iii)
 1
@@ -178,11 +192,8 @@ If v > w(x) return to step 1 else return x.
 so on average 2 simulations are needed to
 c
 2
-return 1 value, so in this case we need 20 simulations. Each simulation
-requires 2 pseudo-random numbers so on average we will need 40 pseudo-
-random numbers.
+return 1 value, so in this case we need 20 simulations. Each simulation requires 2 pseudo-random numbers so on average we will need 40 pseudo-random numbers.
 We accept a proportion
-Most candidates were able to produce good quality answers to part (i), although the majority
-struggled with part (ii). Candidates with the confidence to apply the acceptance-rejection
-method scored well.
+% Most candidates were able to produce good quality answers to part (i), although the majority
+% struggled with part (ii). Candidates with the confidence to apply the acceptance-rejection method scored well.
 \end{document}
