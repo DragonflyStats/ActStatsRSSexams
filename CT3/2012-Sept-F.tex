@@ -1,0 +1,151 @@
+ 88 lines (72 sloc) 2.45 KB
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+\item 
+In order to compare the effectiveness of two new vaccines, A and B, for a childhood
+disease, 11 infants were immunised with vaccine A and 9 infants were immunised
+with vaccine B. One month after immunisation the concentration of the disease
+antibodies in the blood of each infant was recorded in appropriate units. The sample
+mean and variance for each group is given below.
+Vaccine A: n A = 11, x A = 4.05, s 2 A = 0.692
+Vaccine B: n B = 9, x B = 4.36, s B 2 = 0.813
+It is assumed that the distributions of the antibody concentration levels after
+immunisation with vaccine A and vaccine B are N ( \mu A , \sigma^2 A ) and N ( \mu B , \sigma^2 B )
+respectively. You may assume that the samples are independent.
+s 2 A / \sigma^2 A
+.
+(i) State the distribution of the pivotal quantity
+(ii) using the
+\sigma^2 B
+pivotal quantity in part (i). (You are not required to show the derivation of the
+interval.)
+[4]
+s B 2 / \sigma^2 B
+Calculate an equal-tailed 95\% confidence interval for the ratio
+
+\sigma^2 A
+We now assume that \sigma^2 A = \sigma^2 B = \sigma^2 . Under this assumption, you are given that the
+distribution of
+18 S 2 p
+2
+is χ 18
+, where S 2 p is the pooled variance of the two samples and
+σ
+is independent from x A and x B .
+(iii)
+2
+Explain why, under the above result, the sampling distribution of
+X A − X B − ( \mu A − \mu B )
+1 1
+S p
++
+11 9
+(iv)
+(v)
+CT3 S2012–6
+is t 18 . [4]
+Calculate an equal-tailed 95\% confidence interval for \mu A − \mu B using the
+sampling distribution in part (iii). (You are not required to show the
+derivation of the interval.) 
+Comment on your results with regard to differences between vaccine A and
+vaccine B.
+\end{enumerate}
+\newpage
+
+%%%%%%%%%%%%%%%%5
+11
+(i) This is an F distribution with 10, 8 degrees of freedom.
+(ii) ⎛ S 2 / S 2
+S 2 / S 2 ⎞
+The interval is given by ⎜ A B , A B ⎟
+⎜ F 10,8,0.025 F 10,8,0.975 ⎟
+⎝
+⎠
+From tables F 10,8,0.025 = 4.295 and F 10,8,0.975 = 1/ F 8,10,0.025 = 1/ 3.855
+(iii)
+⎛ 0.692 / 0.813
+⎞
+giving ⎜
+, (0.692 / 0.813) *3.855 ⎟ = (0.198, 3.281)
+4.295
+⎝
+⎠
+As the two samples are independent we have that
+V ( X A − X B ) =
+V ( X A ) V ( X B )
++
+= \sigma^2 (1/11 + 1 / 9)
+11
+9
+Normality of the data then gives that Z =
+X A − X B − ( \mu A −\mu B )
+~ N (0,1)
+1 1
+σ
++
+11 9
+Page 7%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – September 2012 – 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We are also given that Y =
+σ
+2
+2
+and with Z and Y being independent
+~ χ 18
+Z
+X A − X B − ( \mu A −\mu B )
+~ t 18 to obtain
+~ t 18 .
+Y / 18
+1 1
+S p
++
+11 9
+we can use that
+(iv)
+18 S 2 p
+First compute s 2 p =
+10*0.692 + 8*0.813
+= 0.74577 ⇒ s p = 0.864
+18
+Then with t 18,0.025 = 2.101 the interval is given by (4.05 – 4.36) \pm 2.101 *
+0.864 (1/11 + 1/9) 1/2 i.e. (– 1.126, 0.506).
+(v)
+The interval includes the value 0, suggesting that there is no difference in the
+mean effectiveness of the two vaccines.
+Part (iii) was problematic for many candidates. Many candidates struggled to provide a
+‘proof’ that had sufficient rigour. There were errors also in determining the endpoints of the
+CI in part (ii), often due to using the wrong percentiles of the F distribution.
+\end{document}

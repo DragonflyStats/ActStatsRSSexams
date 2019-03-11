@@ -1,0 +1,231 @@
+ 88 lines (72 sloc) 2.45 KB
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+8
+E[N] = ∑n P(N = n) = 0.3 + 0.6 + 0.6 + 0.4 = 1.9
+E[N 2 ] = ∑n 2 P(N = n) = 0.3 + 1.2 + 1.8 + 1.6 = 4.9
+V[N] = E[N 2 ] – (E[N]) 2 = 1.29
+Also E[Y] = exp( \mu + \sigma^2 / 2 ) = e 0.55 = 1.73325
+( )
+V [ Y ] = ( E [ Y ] ) 2 (exp \sigma^2 − 1 ) = 1.73325 2 * (e 0.1 – 1) = 0.31595
+Using known results
+Page 5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – September 2012 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+E[S] = E[N] E[Y] = 1.9 * 1.73325 = 3.293
+V[S] = E[N] V[Y] + V[N] (E[Y]) 2 = 0.60031 + 3.87536 = 4.476
+Some frequent errors were due to mis-interpretation of the mean and variance of the log-
+normal distribution.
+9
+(i)
+α
+= 8 = 2.8
+mean =
+(b) As claims are non-negative and the s.d. is quite large relative to the
+mean, then the distribution will be quite positively skewed.
+F ( x )
+λ 2
+1
+x
+(ii)
+α
+= 4 and s.d. =
+λ
+(a)
+1 − t
+= \int te 2 dt
+4
+0
+1
+x
+− t
+1
+= − \int td ( e 2 )
+2
+0
+1
+x
+1
+1 − t
+1 − t
+= − [ te 2 ] 0 x + \int e 2 dt
+2
+2
+0
+1
+1
+− t
+1 − x
+= − xe 2 − [ e 2 ] 0 x
+2
+1
+− x
+1
+= 1 − (1 + x ) e 2
+2
+1
+(iii)
+− x
+1
+i.e. 1 − (1 + x ) e 2 = u
+2
+(a) F ( x ) = u
+(b) This equation would have to be solved numerically
+(c) Using u = 0.66 on the vertical axis, we invert to get x = 4.5 on the
+horizontal axis.
+In part (ii) many candidates failed to integrate correctly. A lot of problems were caused by not using the correct limits for the integral. In part (iii) a popular answer was to use “trial-
+and-error”, which is not an appropriate approach here.
+Page 6%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – September 2012 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10
+(i)
+Y ij = \mu + τ i + ε ij
+with ε ij being i.i.d. N (0, \sigma^2 )
+In particular, it is assumed that the variance is the same in all groups.
+(ii)
+Source of variation
+Between regions
+Residual
+(iii)
+d.f.
+3
+16
+SS
+4.4655
+8.892
+MSS
+1.4885
+0.55575
+H_{0} : τ i = 0 for all groups i
+F = 2.6784 should be from F distribution with 3,16 d.f.
+From the tables we know that this gives a p-value of 0.086 (with
+interpolation).
+Reject at 10%, not at 5%, some but very weak evidence against H_{0}
+Mainly well answered. Care is required in calculating the p-values correctly. Also, a number
+of candidates had difficulties in writing down a sensible form of the ANOVA model in part (i).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+[7]
+PLEASE TURN OVER9
+An analyst is interested in using a gamma distribution with parameters α = 2 and
+1
+1 − x
+λ = 1⁄2, that is, with density function f ( x ) = xe 2 , 0 < x < ∞ .
+4
+(i)
+(a) State the mean and standard deviation of this distribution.
+(b) Hence comment briefly on its shape.
+
+(ii)
+Show that the cumulative distribution function is given by
+1
+− x
+1
+F ( x ) = 1 − (1 + x ) e 2 , 0 < x < ∞
+2
+(zero otherwise).
+
+The analyst wishes to simulate values x from this gamma distribution and is able to
+generate random numbers u from a uniform distribution on (0,1).
+(iii)
+(a) Specify an equation involving x and u, the solution of which will yield
+the simulated value x.
+(b) Comment briefly on how this equation might be solved.
+(c) The graph below gives F(x) plotted against x. Use this graph to obtain
+the simulated value of x corresponding to the random number u = 0.66.
+
+[Total 8]
+CT3 S2012–410
+The number of hours that people watch television per day is the subject of an
+empirical study that is carried out in four regions in a country. Five people are
+randomly selected in each of the regions and are asked about the average number of
+hours per day that they spent watching television during the last year. The results are
+shown in the following table, with the last column shows the average in each region.
+Region 1
+Region 2
+Region 3
+Region 4
+2.0
+1.2
+2.5
+1.2
+1.1
+1.0
+2.0
+1.7
+0.2
+0.9
+2.6
+1.0
+3.8
+1.1
+2.4
+1.8
+2.8
+1.6
+2.3
+1.3
+Average
+1.98
+1.16
+2.36
+1.40
+Based on the above observations the following ANOVA table was obtained:
+Source of variation
+Between regions
+Residual
+d.f.
+...
+...
+SS
+4.4655
+8.892
+MSS
+...
+...
+(i) State the mathematical model underlying the one-way analysis of variance
+together with all associated assumptions.
+
+(ii) Complete the ANOVA table.
+(iii) Carry out an analysis of variance to test the hypothesis that the region has no
+effect on the average time spent watching television. You should write down
+the null hypothesis, calculate the value of the test-statistic, state its distribution
+including any parameters, calculate the p-value approximately and state your
+conclusion.
+[4]
+[Total 8]
+CT3 S2012–5

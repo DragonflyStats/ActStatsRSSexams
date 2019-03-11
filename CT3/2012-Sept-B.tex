@@ -1,0 +1,355 @@
+ 88 lines (72 sloc) 2.45 KB
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+[Total 15]12
+An insurer has collected data about the body mass index of 200 males between the
+age of 18 and 40. The results are shown in the following table.
+Body mass index
+Observed frequency
+< 18.5
+6
+18.5–25
+114
+25–30
+62
+>30
+18
+A statistician suggests the following model for the distribution of the body mass index
+with an unknown parameter p.
+Body mass index
+Relative frequency
+< 18.5
+p
+18.5–25
+20p
+25−30
+10p
+>30
+1−31p
+(i) Estimate the parameter p using the method of maximum likelihood.
+[4]
+(ii) Perform a statistical test to decide whether the suggested distribution is
+appropriate for the observed data. You should state the null hypothesis for the
+test and your decision.
+[6]
+To improve the description of the distribution of the body mass index, it is suggested
+that the marital status of the males in this study is also recorded. The results are
+shown in the following table.
+Marital Status
+Single
+Married
+Total
+< 18.5
+5
+1
+6
+Body mass index
+18.5–25
+25–30
+98
+43
+16
+19
+114
+62
+Total
+>30
+12
+6
+18
+158
+42
+200
+A life office has considered a sample of 10,000 men aged between 18 and 40 of which
+50% are married and the other 50% are single.
+(iii) Estimate the proportion of men with a body mass index of more than 30 in this
+sample, based on the data in the above table.
+
+(iv) Determine whether the body mass index is independent of the marital status or
+not, using an appropriate statistical test. You should state the null hypothesis
+for the test, calculate the value of the test statistic and the approximate
+p-value and state your decision.
+[8]
+[Total 20]
+CT3 S2012–7
+PLEASE TURN OVER13
+The following data give the weight, in kilograms, of a random sample of 10 different
+models of similar motorcycles and the distance, in metres, required to stop from a
+speed of 20 miles per hour.
+Weight x
+Distance y
+314
+13.9
+For these data:
+317
+14.0
+320
+13.9
+326
+14.1
+331
+14.0
+339
+14.3
+346
+14.1
+354
+14.5
+361
+14.5
+369
+14.4
+∑ x = 3,377 , ∑ x 2 = 1,143,757 , \sum y = 141.7 ,
+\sum y 2 = 2, 008.39 , ∑ xy = 47,888.6
+Also: S xx = 3,344.1, S yy = 0.501, S_{xy} = 36.51
+A scatter plot of the data is shown below.
+Stopping distance against motorcycle weight
+320
+330
+340
+350
+360
+370
+Weight (kilograms)
+(i)
+(a) Comment briefly on the association between weight and stopping
+distance, based on the scatter plot.
+(b) Calculate the correlation coefficient between the two variables.
+
+(ii) Investigate the hypothesis that there is positive correlation between the weight
+of the motorcycle and the stopping distance, using Fisher’s transformation of
+the correlation coefficient. You should state clearly the hypotheses of your
+test and any assumption that you need to make for the test to be valid.
+[6]
+(iii) (a)
+Fit a linear regression model to these data with stopping distance being
+the response variable and weight the explanatory variable.
+(b)
+Calculate the coefficient of determination for this model and give its
+interpretation.
+CT3 S2012–8(c)
+Calculate the expected change in stopping distance for every additional
+10 kilograms of motorcycle weight according to the model fitted in
+part (iii)(a).
+[5]
+[Total 13]
+END OF PAPER
+CT3 S2012–9
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+12
+(i)
+Likelihood function
+L ( p ) = p 6 ( 20 p )
+114
+( 10 p ) 62 (1 − 31 p ) 18 = Cp 182 (1 − 31 p ) 18
+log L ( p ) = log C + 182log p + 18log(1 − 31 p )
+\frac{\partial}{\partial}
+182
+18
++
+log L ( p ) =
+( − 31 ) = 0
+\frac{\partial}{\partial} p
+p 1 − 31 p
+182
+558
+p 1 − 31 p
+p 31 p
+1
+31 ⎞
+⎛ 1
+=
+⇒
+=
+⇒
++
+=
+⇒ p ⎜
++
+⎟
+p 1 − 31 p
+182
+558
+182 558 558
+⎝ 182 558 ⎠
+= 1/ 558
+p ˆ = 0.02935
+Page 8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – September 2012 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(ii)
+H_{0} : The proposed distribution is the true distribution of the data with non-
+specified parameter p (it is important to mention that the parameter itself is
+not part of the null hypothesis)
+Under H_{0} and using p ˆ = 0.02935 from (i)(a) we obtain the following
+expected frequencies
+Body-Mass-Index
+Expected frequency
+Test-statistic is
+< 18.5
+5.87
+18.5–25
+117.4
+25–30
+58.7
+>30
+18.03
+0.286915
+from a Chi-square distribution with 2 d.f.
+The test statistic has a very small value, and there is no evidence against the
+null.
+(iii)
+P [ BMI > 30 ]
+= P [ BMI > 30| single ] P [ single ] + P [ BMI > 30| married ] P [ married ]
+=
+(iv)
+12
+6
+*0.5 + *0.5 = 0.1094
+158
+42
+H_{0} : Marital status is independent of BMI
+Under H_{0} we have:
+Marital Status
+Single
+Married
+Total
+Body-Mass-Index
+Total
+< 18.5 18.5–25 25–30 >30
+4.74
+90.06
+48.98 14.22 158
+1.26
+23.94
+13.02 3.78
+42
+6
+114
+62
+18
+200
+Use χ 2 test.
+2
+4
+Test-statistic: C = ∑∑
+i = 1 j = 1
+( f ij −
+f i . * f . j
+n
+f i . * f . j
+) 2
+= 8.528399
+n
+C is χ 2 -distributed with (2 − 1 )(4 − 1 ) = 3 degrees of freedom.
+p -value: P [ C > 8.528399 ] < 1 − 0.9616 = 0.0384
+Page 9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – September 2012 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Therefore, we reject H_{0} at 5% level, but not at the 1% level.
+There were errors in part (i) caused by failure to differentiate correctly. In part (iv)
+alternative solutions involving merging of adjacent categories were given full redit where
+correct. However note that merging the first and last column is not correct in this question.
+13
+(i)
+(ii)
+(a) The scatter plot suggests a positive linear association between weight
+and stopping distance.
+(b) r =
+S_{xy}
+S xx S yy
+= 0.892
+We want to test H_{0} : ρ = 0 against H 1 : ρ > 0 .
+Need to assume that data come from a bivariate normal distribution.
+Fisher’s (standardised) transformation statistic is given by
+1
+⎛ 1 + r ⎞
+log ⎜
+⎟
+2
+⎝ 1 − r ⎠ = 7 log ⎛ 1.892 ⎞ = 3.79
+⎜
+⎟
+2
+1 / ( n − 3)
+⎝ 0.108 ⎠
+and under H_{0} this should be a value from the N(0,1) distribution.
+This gives P-value = Pr( Z \geq 3.79) ≈ 0.0001 , so there is very strong evidence
+against H_{0} and we conclude that motorcycle weight and stopping distance are
+positively correlated.
+[Or by considering critical values of N(0,1) distribution.]
+(iii)
+(a)
+β ˆ =
+S_{xy}
+S xx
+=
+36.51
+= 0.01092
+3344.1
+α ˆ = y − β ˆ x = 14.17 − 0.01092*337.7 = 10.4823
+Fitted line is
+(b)
+2
+R =
+2
+S_{xy}
+S xx S yy
+y ˆ = 10.48 + 0.01092 x
+=
+36.51 2
+= 0.7956
+3344.1*0.501
+This gives the proportion of total variation explained by the model.
+(Note that R 2 can also be computed as r 2 .)
+Page 10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – September 2012 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(c)
+For every additional unit (kilogram) of weight the stopping distance is
+expected to increase by β ˆ = 0.01092 metres. So, for 10 kilograms of
+weight the distance is expected to increase by 0.109 meters.
+Generally adequately answered. Identifying the correct hypotheses in part (ii) was
+problematic in some cases, while many candidates failed to assume bivariate normality.
+END OF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 11

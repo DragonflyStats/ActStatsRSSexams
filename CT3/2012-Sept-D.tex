@@ -1,0 +1,120 @@
+ 88 lines (72 sloc) 2.45 KB
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+7
+A random sample of size n is taken from a gamma distribution with parameters α = 8
+and λ = 1/\theta. The sample mean is X and \theta is to be estimated.
+(i) Determine the method of moments estimator (MME) of \theta. 
+(ii) Find the bias of the MME determined in part (i). 
+(iii) (a) Determine the mean square error of the MME of \theta. (b) Comment on the efficiency of the MME of \theta based on your answer in
+part (iii)(a).
+
+[Total 7]
+Analyst A collects a random sample of 30 claims from a large insurance portfolio and
+calculates a 95\% confidence interval for the mean of the claim sizes in this portfolio.
+She then collects a different sample of 100 claims from the same portfolio and
+calculates a new 95\% confidence interval for the mean claim size.
+(i)
+Explain how the widths of the two confidence intervals will differ.
+
+Analyst B obtains a 95\% confidence interval for the mean claim size of this portfolio
+based on a different sample of 30 claims. She subsequently realises that one of the
+claims in the sample has an extremely large value and can be considered as an outlier.
+She decides to replace this claim with a new randomly selected one, whose size is not
+an outlier, and obtains a new 95\% confidence interval.
+(ii)
+8
+Explain how the two confidence intervals will differ in the case of Analyst B.
+
+[Total 5]
+The random variable S is given as S = Y 1 + Y 2 + ...+ Y N (with S = 0 if N = 0) where
+the random variables Y i are identically and independently distributed according to a
+lognormal distribution with parameters \mu = 0.5 and \sigma^2 = 0.1. N is also a random
+variable which is independent of Y i , and its distribution given below.
+N
+Pr(N = n)
+0
+0.1
+1
+0.3
+2
+0.3
+3
+0.2
+4
+0.1
+Calculate the mean and the variance of the random variable S.
+CT3 S2012–3
+%%%%%%%%%%%%%%%5
+6
+(i)
+Population mean = 8\theta
+So MME is solution of X = 8 \theta ⇒
+(ii)
+⎛ X
+E ⎜
+⎝ 8
+MME =
+X
+8
+⎞ 1
+1
+⎟ = E ( X ) = (8 \theta ) = \theta
+8
+⎠ 8
+⎛ X ⎞
+Bias = E ⎜ ⎟ − \theta = 0 (i.e. MME is unbiased for \theta).
+⎝ 8 ⎠
+(iii)
+௑ത ௑ത ଼ఏ మ
+଼ ଼ ଺ସ௡
+ൌ
+ఏ మ
+(a) Since MME is unbiased, ‫ܧܵܯ‬ ቀ ቁ ൌ ‫ݎܽݒ‬ ቀ ቁ ൌ
+(b) MME gets more efficient (MSE gets smaller) as sample size increases.
+଼௡
+There was a mix of quality in the answers, especially in parts (ii) and (iii). Attention to detail
+is required when determining the expected value and variance of functions of sample
+statistics (here the sample mean).
+7
+(i) With the larger sample of 100 claims the standard error of the sample mean
+will be smaller, giving a narrower confidence interval.
+(ii) The replacement of the extreme value will give a smaller sample mean, which
+means that the interval will be shifted to the left.
+The variance of the sample will also be smaller, which will again give a
+narrower interval.
+Many candidates recognised the correct effect on the interval, without being able to justify it
+properly. Note that reasonably accurate wording is important in providing the comments and
+justification required here.
