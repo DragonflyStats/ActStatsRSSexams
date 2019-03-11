@@ -1,27 +1,62 @@
-[Total 6]
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
 A charity issues a large number of certificates each costing £10 and each being
 repayable one year after issue. Of these certificates, 1% are randomly selected to
 receive a prize of £10 such that they are repaid as £20. The remaining 99% are repaid
 at their face value of £10.
-(i)
+\begin{enumerate}[(i)]
+\item (i)
 Show that the mean and standard deviation of the sum repaid for a single
 purchased certificate are £10.1 and £0.995 respectively.
 [2]
 Consider a person who purchases 200 of these certificates.
-(ii)
+\item (ii)
 Calculate approximately the probability that this person is repaid more than
 £2,040 by using the Central Limit Theorem applied to the total sum repaid.
 [3]
-(iii)
+\item (iii)
 An alternative approach to approximating the probability in (ii) above is based
 on the number of prize certificates the person is found to hold. This number
 will follow a binomial distribution.
 Use a Poisson approximation to this binomial distribution to approximate the
 probability that this person is repaid more than £2,040.
 [3]
-(iv)
+\item (iv)
 Comment briefly on the comparison of the two approximations above given
 that the exact probability using the binomial distribution is 0.0517.
-[1]
-[Total 9]
-CT3 A2007—3
+\end{enumerate}
+
+\end{document}
