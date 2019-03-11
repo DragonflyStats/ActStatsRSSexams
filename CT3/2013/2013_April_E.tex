@@ -1,0 +1,97 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+[Total 17]
+CT3 A2013–5
+PLEASE TURN OVER10
+The random variable S represents the annual aggregate claims for an insurer from
+policies covering damage due to windstorms. S is modelled as follows:
+M
+S = ∑ Y i
+i = 1
+where:
+M denotes the number of windstorms each year and has a Poisson distribution
+with mean κ
+Y i denotes the aggregate claims from the ith windstorm and is modelled as
+N i
+Y i = ∑ X ij
+j = 1
+where:
+N i denotes the number of claims from the ith
+windstorm.
+N 1 , N 2 , ... , N M are independent and identically distributed
+random variables, each with a Poisson
+distribution with rate λ.
+X ij denotes the amount of the jth claim from the
+ith windstorm.
+X ij , i = 1, ..., M, j = 1, ..., N i
+is a sequence of independent and identically
+distributed random variables, each with mean
+μ and variance \sigma 2 .
+It is assumed that the random variables M, N i and X ij are independent of each other.
+(i) Derive expressions for the mean and the variance of Y i in terms of λ, μ and \sigma.
+[2]
+(ii) Derive expressions for the mean and the variance of S in terms of κ, λ, μ
+and \sigma.
+[3]
+Now suppose that X ij has an exponential distribution with mean 1.
+(iii)
+Show that for any positive numbers x and C
+P ( X ij ≤ x + C | X ij > C ) = P ( X ij ≤ x ) .
+CT3 A2013–6
+[3]Consider the new random variable S R given as:
+M N i
+S R = ∑∑ X ij *
+i = 1 j = 1
+⎪ X ij − 2
+where: X ij * = ⎨
+⎩ 0
+if X ij ≥ 2
+otherwise
+.
+Let N i * be the number of non-zero X ij * amounts, i.e. the number of claim amounts
+from the ith windstorm that are greater than 2.
+*
+are independent and identically distributed Poisson
+Also assume that N 1 * , N 2 * , ... , N M
+random variables, with parameter λ * .
+Let κ = 4, λ = 1,000.
+(iv)
+CT3 A2013–7
+(a) Show that λ * = 135.3.
+(b) Explain why the distribution of X ij * is exponential with mean 1.
+(c) Calculate the mean and variance of S R .
+[7]
+[Total15]
