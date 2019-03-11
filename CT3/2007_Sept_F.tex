@@ -1,0 +1,182 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+[Total 19]
+CT3 S2007—613
+In a laboratory experiment a response variable (yield, y) is thought to be affected by a
+quantitative factor (percentage of catalyst, x). The experiment involved making four
+observations of y at each of four values of x, being 12%, 14%, 16% and 18%, and
+resulted in the following observed response data.
+12%
+46
+51
+47
+42
+14%
+56
+57
+63
+60
+16%
+56
+63
+60
+64
+18%
+47
+51
+54
+55
+These data are analysed by two statisticians, A and B, who use an analysis of variance
+approach and a linear regression approach, respectively.
+(i)
+Statistician A’s approach:
+You are given the following data summaries:
+sub-totals \sigma_y = 186, 236, 243 and 207 at x = 12, 14, 16 and 18,
+respectively, and overall totals \sigma_y = 872 and \sigma_y 2 = 48,196.
+(a) Apply a one-way analysis of variance to these data and obtain the
+resulting F-value for the usual test.
+(b) Show that the P-value for the test is substantially less than 0.01, by
+referring to tables of percentage points for the F distribution.
+(c) The result of part (b) above shows that there is very strong evidence of
+an effect on y due to the quantitative factor x. Suggest a suitable
+diagram that statistician A could now use to describe the effect of x on
+y. Draw this diagram and hence comment on the effect of x on y.
+(d) The graph below shows the residuals plotted against the values of x:
+Comment briefly on any implications of this graph.
+CT3 S2007—7
+[10]
+%%%%%%%%%%%%%%%%%%%%%%%%%(ii)
+Statistician B’s approach:
+You are given the following data summaries:
+\sigma x = 240 \sigma_y = 872 \sigma x 2 = 3,680 \sigma_y 2 = 48,196 \sigma xy = 13,150.
+(a) Perform a linear regression analysis on these data to show that the
+fitted line is given by y = 41.4 + 0.875x.
+(b) Perform the hypothesis test on the slope coefficient
+H 0 : \beta = 0 v H 1 : \beta ≠ 0
+showing that the P-value is greater than 0.20.
+Comment on what this implies about the relationship between x and y.
+(c)
+The graph below shows the residuals plotted against the values of x:
+Comment briefly on what this graph implies about the effect of x on y.
+(d)
+Suggest an additional analysis statistician B could now use to describe
+the effect of x on y.
+[10]
+[Total 20]
+END OF PAPER
+CT3 S2007—8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+
+13
+(i)
+(a)
+SS T = 48196 – 872 2 /16 = 48196 – 47524 = 672
+SS B = (186 2 + 236 2 + 243 2 + 207 2 )/4 – 47524 = 523.5
+SS R = 672 – 523.5 = 148.5
+F =
+523.5 / 3 174.5
+=
+= 14.10
+148.5 /12 12.375
+[or construct an ANOVA table]
+(b)
+F 3,12 (1%) = 5.953 from tables
+since 14.10 >> 5.953, P-value << 0.01
+(c)
+Statistician A could plot either the individual y values or the four
+means of y against x to see what “shape” the effect might take.
+Here is a plot of the individual y values:
+Page 8Subject CT3  — September 2007 — Examiners’ Report
+The shape of the effect seems to be curved, initially increasing, then
+decreasing.
+(d)
+(ii)
+(a)
+The implications are simply that there is nothing to invalidate the
+assumptions required for the analysis.
+240 2
+= 3680 −
+= 80
+16
+872 2
+= 48196 −
+= 672
+16
+S xx
+S yy
+[or could state it is the same as SS T from (i)]
+S xy = 13150 −
+(240)(872)
+= 70
+16
+70
+\hat{beta} =
+= 0.875 as required
+80
+\alpha ˆ =
+(b)
+1
+(872 − 0.875(240)) = 41.375 as required.
+16
+\sigma ˆ 2 =
+1
+70 2
+(672 −
+) = 43.625
+14
+80
+43.625
+= 0.7385
+s.e. ( \hat{beta} ) =
+80
+t =
+0.875 − 0
+= 1.185 on 14 d.f.
+0.7385
+P-value = 2 × P(t 14 >1.185)
+As P(t 14 >1.345) = 0.10 from tables, P-value > 2(0.10), i.e. > 0.20
+This implies that there is no evidence against H 0 , and hence that there
+is no linear relationship between x and y.
+[not that there is no “relationship”]
+(c) Residual plot suggests that there may be a curved, rather than linear,
+relationship between x and y.
+(d) Statistician B could try a quadratic regression (or some other curved
+form) of y on x.
+END OF EXAMINERS’ REPORT
+Page 9
+\end{document}

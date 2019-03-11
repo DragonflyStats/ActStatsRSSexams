@@ -1,0 +1,162 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+CT S2006
+612
+A development engineer examined the relationship between the speed a vehicle is travelling (in miles per hour, mph), and the stopping distance (in metres, m) for a new
+braking system fitted to the vehicle. The following data were obtained in a series of
+independent tests conducted on a particular type of vehicle under identical road conditions.
+Speed of vehicle (x):
+Stopping distance (y):
+x = 280
+(i)
+y = 241
+10
+5
+20
+10
+x 2 = 14,000
+0
+2
+40
+4
+50
+40
+y 2 = 11,951
+60
+54
+70
+75
+xy = 12,790
+Construct a scatterplot of the data, and comment on whether a linear
+regression is appropriate to model the relationship between the stopping
+distance and speed. [4]
+(ii) Calculate the equation of the least-squares fitted regression line. [5]
+(iii) Calculate a 95\% confidence interval for the slope of the underlying regression
+line, and use this confidence interval to test the hypothesis that the slope of the
+underlying regression line is equal to 1.
+[5]
+(iv) Use the fitted line obtained in part (ii) to calculate estimates of the stopping
+distance for a vehicle travelling at 50 mph and for a vehicle travelling at 100
+mph.
+Comment briefly on the reliability of these estimates.
+END OF PAPER
+CT S2006
+7
+[4]
+[Total 18]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+12
+(i)
+Plot of stopping distance against speed
+80
+distance
+70
+60
+50
+40
+0
+20
+10
+0
+10
+20
+0
+40
+50
+60
+70
+Speed
+There is a suggestion of a curve but linear regression might still be reasonable.
+(ii)
+n = 7
+S xx = \sigma x 2 − (\sigma x) 2 /n = 14000 − (280) 2 /7 = 2800
+S yy = \sigma_y 2 − (\sigma_y) 2 /n = 11951 − (241) 2 /7 = 65.714
+S xy = \sigma xy − (\sigma x)( \sigma_y)/n = 12790 − (280)(241)/7 = 150
+Model: E[Y] = \alpha + \betax
+Slope: \hat{\beta} =
+S xy
+S xx
+=
+150
+= 1.125
+2800
+Intercept: \alpha ˆ = y − \hat{\beta} x = 241/7 − (1.125)(280/7) = −10.571
+The equation of the least-squares fitted regression line is:
+Distance = −10.571 + 1.125 Speed
+Page 12Subject CT  — September 2006 — 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+(iii)
+\sigma ˆ 2 =
+S 2
+1 ⎛
+⎜ S yy − xy
+n − 2 ⎜
+S xx
+⎝
+s.e.( \betâ ) =
+\sigma ˆ 2
+=
+S xx
+⎞ 1 ⎛
+(150) 2 ⎞
+⎟ = ⎜ 65.714 −
+⎟ = 21.99
+⎟ 5 ⎜ ⎝
+2800 ⎟ ⎠
+⎠
+21.99
+= 0.0886
+2800
+95\% confidence interval for slope:
+\hat{\beta} \pm t n − 2 (0.025) s.e.( \betâ )
+(df = n − 2 = 5)
+= 1.125 \pm (2.571)(0.0886) = 1.125 \pm 0.228 or (0.897, 1.5)
+\beta = 1 is within this 95\% confidence interval, therefore we would not reject the
+null hypothesis \beta = 1 at the 5% significance level.
+(iv)
+When x = 50: y = −10.571 + 1.125(50) = 45.7 m
+When x = 100: y = −10.571 + 1.125(100) = 101.9 m
+The stopping distance of 45.7 m when the speed is 50 mph can be regarded as
+a reliable estimate as x = 50 is well within the range of the x data values.
+However, the stopping distance for a speed of 100 mph may be unreliable as
+x = 100 is outside the range of the data and involves extrapolation.
+END OF 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Page 1
