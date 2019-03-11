@@ -1,0 +1,414 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+%%PLEASE TURN OVER8
+\item A random sample of 10 independent claim amounts was taken from each of three
+different regions and an analysis of variance was performed to compare the mean
+level of claims in these regions. The resulting ANOVA table is given below.
+Source
+d.f.
+SS
+MSS
+2
+4,439.7
+2,219.9
+Between regions
+27 10,713.5 396.8
+Residual
+29 15,153.2
+Total
+(i)
+Perform the appropriate F test to determine whether there are significant
+differences between the mean claim amounts for the three regions. You
+should state clearly the hypotheses of the test.
+[4]
+The three sample means were:
+Region
+A
+Sample mean 147.47
+B
+C
+154.56 125.95
+It was of particular interest to compare regions A and B.
+(ii)
+9
+(a) Calculate a 95% confidence interval for the difference between the
+means for regions A and B.
+(b) Comment on your answer in part (ii)(a) given the result of the F test
+performed in part (i).
+[4]
+[Total 8]
+A behavioural scientist is observing a troop of monkeys and is investigating whether
+social status affects the amount of food that an individual takes. The monkeys are
+divided into two groups of different social rank and the scientist counts the number of
+bananas each individual takes. Each monkey can take a maximum of 7 bananas.
+Social rank
+Number of monkeys
+Total bananas taken
+(i)
+A
+6
+33
+B
+11
+37
+It is first suggested that the number of bananas taken by each individual of
+each group follows the same binomial distribution with common parameter p
+and n=7.
+(a) Use the method of moments to estimate the parameter p.
+(b) The scientist is unsure whether a common parameter is appropriate and
+wishes to compare p A and p B , the probability that a banana is taken
+by an individual in groups A and B respectively.
+Test the hypothesis that p A = p B .
+[7]
+CT3 A2013–4(ii)
+A statistician suggests an alternative model. The number of bananas taken by
+an individual still follows a binomial distribution with n=7, but for group A
+the parameter is 2\theta and for group B the parameter is \theta, where \theta < 0.5.
+(a)
+Show that the log likelihood for \theta is given by:
+33ln ( 2 \theta ) + 9 ln ( 1 − 2 \theta ) + 37 ln ( \theta ) + 40 ln ( 1 − \theta ) + constant
+(b)
+Hence calculate the maximum likelihood estimate of \theta.
+[6]
+(iii)
+(a) Compare the fit of the two suggested models in parts (i) (with common
+parameter p) and (ii) by considering the expected number of bananas
+taken in groups A and B under the two models. You are not required
+to perform a formal test.
+(b) Comment on the above comparison in relation to your answer in
+part (i)(b).
+[4]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+8
+(i)
+H 0 : The means of the claims in the 3 regions are all equal; H 1 : means are
+different for at least one pair.
+F = 5.59 on 2 and 27 d.f. From tables the 1% critical point is 5.488.
+Therefore, we have (strong) evidence against the null hypothesis, and
+conclude that there are differences in the means for the 3 regions.
+(ii)
+(a)
+95% CI for μ A − μ B is given by
+( y A − y B ) ± t 0.025, 27 \sigma ˆ
+1 1
+1 1
++
++
+giving ( 147.47 − 154.56 ) ± 2.052 396.8
+10 10
+10 10
+i.e − 7.09 ± 18.28 or (–25.37, 11.19)
+(b)
+The CI comfortably contains zero, suggesting no difference between
+the true means for regions A and B.
+The significant result of the F test clearly comes from region C mean
+being much lower than the means for regions A and B.
+Generally well answered. Some candidates failed to identify the connection between the
+conclusion of the ANOVA and that of the CI for regions A and B.
+Page 5Subject CT3 (Probability and Mathematical Statistics) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9
+(i)
+(a)
+If X i is the number of bananas for each monkey then X i ~ Bin(7, p)
+E ( X i ) = x ⇒ 7 p ˆ =
+(b)
+p̂ A =
+33 + 37
+⇒ p ˆ = 0.588
+( 6 + 11 )
+33
+37
+= 0.786, p̂ B =
+= 0.481
+6*7
+11*7
+\sigma 2 = Variance of test statistic = 0.588 * (1 − .588) * (1/42 + 1/77)
+= 0.00891
+Test statistic =
+p ˆ A − p ˆ B 0.786 − 0.481
+=
+= 3.23
+\sigma
+0.00891
+Test statistic has N(0,1) distribution so p-value is 0.00124
+i.e. reject H 0 : p A = p B
+(ii)
+(a)
+Let n i be the number of monkeys in group i and B i be the total number
+of bananas taken by group i.
+L ( b ; \theta ) = (2 \theta ) B A (1 − 2 \theta ) 7 n A − B A ( \theta ) B B (1 − \theta ) 7 n B − B B × constant
+l ( b ; \theta ) = ln L ( b ; \theta )
+= 33ln ( 2 \theta ) + (42 − 33) ln ( 1 − 2 \theta ) + 37 ln ( \theta ) + (77 − 37) ln ( 1 − \theta ) + constant
+= 33ln ( 2 \theta ) + 9ln ( 1 − 2 \theta ) + 37 ln ( \theta ) + 40ln ( 1 − \theta ) + constant
+(b)
+18
+37 40 70 18
+40
+dl 66
+= −
++ −
+= −
+−
+d\theta^2\theta 1− 2\theta \theta 1− \theta \theta 1− 2\theta 1− \theta
+Set equal to zero and solve
+(
+) (
+)
+(
+)
+70 1− 2\theta 1− \theta −18\theta 1− \theta − 40\theta(1− 2\theta)
+\theta(1− 2\theta)(1− \theta)
+= 0
+⇒ 70 − 210\theta +140\theta^2 −18\theta +18\theta^2 − 40\theta + 80\theta^2 = 0
+⇒ 238\theta^2 − 268\theta + 70 = 0
+⇒ \theta = 0.412 or 0.714
+As \theta<0.5, \thetâ = 0.412.
+Page 6Subject CT3 (Probability and Mathematical Statistics) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iii)
+(a)
+Expected values under 2 models are:
+A
+42 * 0.588 = 24.7
+42 * 2 * 0.412 = 34.6
+33
+Model in (i)
+Model in (ii)
+Observed
+B
+77 * 0.588 = 45.3
+77 * 0.412 = 31.7
+37
+Model in (ii) seems to provide a better fit as expected values are
+closer to observed.
+(b)
+In part (i)(b) we rejected p A = p B which suggests a model with a
+common value of p would not be appropriate. The comparison above
+suggests that an improved model can be used.
+There were some common errors here, mainly involving part (i)(b) where many candidates
+failed to identify an appropriate test to perform. There were also basic errors with algebraic
+and calculus operations.
+We note that in part (i)(b)an alternative solution can be given, using a chi-square test with
+1 d.f. in a 2x2 table (4 cells). This is exactly equivalent to the test presented here and full
+credit was given when completed correctly.
+10
+(i)
+Y i has a compound distribution, so
+( )
+E ( Y i ) = E ( N i ) E X ij = λμ
+( )
+V ( Y i ) = E ( N i ) V X ij + V ( N i ) E ( X ij ) 2 = λ\sigma 2 + λμ 2
+(ii)
+S also has a compound distribution.
+E ( S ) = E ( M ) E ( Y i ) = κλμ
+V ( S ) = E ( M ) V ( Y i ) + V ( M ) E ( Y i ) 2 = κλ ( \sigma 2 + μ 2 ) + κλ 2 μ 2 = κλ ( \sigma 2 + μ 2 + λμ 2 )
+(iii)
+P ( X ij ≤ x + C | X ij > C ) =
+( 1 − e
+=
+− x − C
+e
+(
+P C < X ij ≤ x + C
+− 1 + e − C
+− C
+(
+P X ij > C
+) = 1 − e
+)
+)
+− x
+= P ( X ij ≤ x )
+Page 7Subject CT3 (Probability and Mathematical Statistics) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iv)
+(
+)
+(a) λ * = 1000 × P X ij > 2 = 1000 e − 2 = 135.3
+(b) From definition of new variable and part (iii) we have that
+(
+)
+P X ij * ≤ x = P ( X ij − 2 ≤ x | X ij > 2) = P ( X ij ≤ x + 2 | X ij > 2) = P ( X ij ≤ x )
+meaning that X ij * has the same distribution as X ij , i.e. Exp(1).
+(c)
+E ( S R ) = κλ * μ = 4 × 135.3 × 1 = 541.2
+V ( S R ) = κλ * ( \sigma 2 + μ 2 + λ * μ 2 ) = 4 × 135.3 × ( 1 + 1 + 135.3 ) = 74306.8
+Most candidates found this question challenging. Answers to the memoryless property of the
+exponential distribution (amply discussed in the CR) in part (iii) were often disappointing,
+and the relevant application in part (iv) was poorly attempted. These shortcomings highlight
+the issue of being prepared to tackle questions that deviate from the form that appears in
+past papers.
+11
+(i)
+Notation: n i = number in group i; r i = number with disease in group i.
+\theta ˆ =
+(ii)
+(a)
+∑ r i = 43 = 0.43
+∑ n i 100
+Expected frequencies (in brackets) are given assuming constant
+probability of disease for all groups, independently of age:
+Disease
+Age group Yes
+No
+Total
+1
+9
+10
+20−29
+(4.30) (5.70)
+2
+13
+15
+30−34
+(6.45) (8.55)
+3
+9
+12
+35−39
+(5.16) (6.84)
+5
+10
+15
+40−44
+(6.45) (8.55)
+6
+7
+13
+45−49
+(5.59) (7.41)
+5
+3
+8
+50−54
+(3.44) (4.56)
+13
+4
+17
+55−59
+(7.31) (9.69)
+8
+2
+10
+60−69
+(4.30) (5.70)
+Total
+43
+57
+100
+Page 8Subject CT3 (Probability and Mathematical Statistics) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+χ = ∑
+2
+(b)
+( f i − e i ) 2 = ( 1 − 4.3 ) 2 + ...+ ( 2 − 5.7 ) 2
+4.3
+e i
+5.7
+= 26.6 on 7 d.f.
+2
+From tables, χ 7,
+0.01 = 18.48
+We have (strong) evidence against the hypothesis of no differences in
+probability of disease among age groups.
+Plot given below. Linear model seems appropriate for middle ages,
+but perhaps not for younger and older ages.
+(a)
+(iii)
+30
+40
+50
+60
+x
+(b)
+360 2
+= 1237.5
+8
+S xx = 17437.5 −
+S yy = 13.615 −
+( − 2.9392) 2
+= 12.535
+8
+S_{xy} = − 9.0429 −
+( 360 ) ( − 2.9392) = 123.22
+8
+Least squares estimates:
+\beta ˆ =
+S_{xy}
+S xx
+=
+123.22
+= 0.09957
+1237.5
+α ˆ = y − \beta ˆ x = − 0.3674 − 0.09957 ( 45 ) = − 4.85
+Fitted line: y ˆ = − 4.85 + 0.09957 x
+Page 9Subject CT3 (Probability and Mathematical Statistics) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(c)
+⎛
+2 ⎞
+S_{xy} 2 ⎞ ⎛
+⎜ S yy −
+⎟ ⎜ 12.535 − 123.22 ⎟
+⎜
+S xx ⎟ ⎜
+1237.5 ⎟ ⎠
+⎠ = ⎝
+\sigma ˆ 2 = ⎝
+= 0.04430
+n − 2
+6
+()
+se \beta ˆ =
+\sigma ˆ 2
+0.210
+=
+= 0.0060
+S xx
+1237. 5
+and t 6, 0.005 = 3.707
+99% CI for \betâ is given by 0.09957 ± 3.707(0.0060)
+i.e. 0.09957 ± 0.0222 or (0.0774, 0.1218)
+(d)
+In (ii) it was found that the probability of having the disease is
+different for different age groups. In part (iii)(c) it was also found that
+the probability of disease depends on age, as zero was not included in
+the interval for the slope parameter.
+The quality of the answers was mixed, with some common errors appearing in part (ii)
+where many candidates failed to produce an appropariate 8 × 2 table (both “yes” and “no”
+columns) and perform the correct chi-square test (with 7 d.f.).
+It is noted that in part (ii)(b) the chi-square test can alternatively be performed by combining
+some of the age groups (both columns) to achieve expected frequencies greater than 5, with
+no change in the conclusion of the test. Although this is not strictly required in this case, full
+credit was given to candidates that combined groups sensibly and completed the question
+correctly.
+\end{document}
