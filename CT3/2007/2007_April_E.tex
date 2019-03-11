@@ -1,3 +1,39 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
 [Total 5]
 A random sample of insurance policies of a certain type was examined for each of
 four insurance companies and the sums insured ( y ij , for companies i = 1, 2, 3, 4)
@@ -44,28 +80,24 @@ insured under such policies by the four companies.
 [3]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The number of claims, X , which arise in a year on each policy of a particular class is
-to be modelled as a Poisson random variable with mean λ. Let X = ( X 1 , X 2 , ..., X n ) be
+The number of claims, X , which arise in a year on each policy of a particular class is to be modelled as a Poisson random variable with mean λ. Let X = ( X 1 , X 2 , ..., X n ) be
 1 n
 a random sample of size n from the distribution of X , and let X = ∑ X i .
 n i = 1
 Suppose that it is required to estimate λ , the mean number of claims on a policy.
 (i) Show that λ̂ , the maximum likelihood estimator of λ, is given by λ ˆ = X . [3]
-(ii) Derive the Cramer-Rao lower bound (CRlb) for the variance of unbiased
-estimators of λ.
+(ii) Derive the Cramer-Rao lower bound (CRlb) for the variance of unbiased estimators of λ.
 (iii)
 [4]
 (a) Show that λ̂ is unbiased for λ and that it attains the CRlb.
-(b) Explain clearly why, in the case that n is large, the distribution of λ̂ can
-be approximated by
+(b) Explain clearly why, in the case that n is large, the distribution of λ̂ can be approximated by
 ⎛ λ ⎞
 λ ˆ ~ N ⎜ λ , ⎟ .
 ⎝ n ⎠
 [3]
 (iv)
 (a)
-Show that, in the case n = 100, an approximate 95% confidence
-interval for λ is given by
+Show that, in the case n = 100, an approximate 95\% confidence interval for λ is given by
 x ± 0.196 x .
 (b)
 Evaluate the confidence interval in (iv)(a) based on a sample with the
@@ -149,10 +181,9 @@ Residual
 Total
 15 120.430
 At the 5% significance level, F 0.05,3,12 = 3.490 (or F 0.01,3,12 = 5.953 )
-Since F = 9.763 > 3.490, there is evidence against the null hypothesis, and we
-conclude that there are differences in the mean sums insured by the
-companies.
-Page 6Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — Examiners’ Report
+Since F = 9.763 > 3.490, there is evidence against the null hypothesis, and we conclude that there are differences in the mean sums insured by the companies.
+% Page 6
+% Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — Examiners’ Report
 11
 (i)
 L ( x ) =
@@ -225,3 +256,4 @@ Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) — A
 (b)
 x = 215 /100 = 2.15
 CI is 2.15 ± 0.196(2.15) 1/2 i.e. 2.15 ± 0.287 i.e. (1.86, 2.44)
+\end{document}
