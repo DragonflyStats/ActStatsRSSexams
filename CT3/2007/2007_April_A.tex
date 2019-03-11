@@ -1,3 +1,38 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
 © Institute of Actuaries1
 Consider the following two random samples of ten observations which come from the
 distributions of random variables which assume non-negative integer values only.
@@ -49,8 +84,7 @@ The mean number of claims per policy is X =
 123
 = 0.82
 150
-Using the normal approximation to the Poisson distribution
-approximate 95% confidence interval for λ is X ± 1.96
+Using the normal approximation to the Poisson distribution approximate 95% confidence interval for λ is X ± 1.96
 → 0.82 ± 1.96
 0.82
 150
@@ -62,7 +96,7 @@ n
 Answer = −0.982
 (The relationship is now a negative one; the only change is the sign. An answer of
 +0.982 gets 1 mark.)
-Page 2Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — Examiners’ Report
+% Page 2Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — Examiners’ Report
 5
 Let N = number of claims in the six months
 Let X = a single claim size
@@ -71,3 +105,4 @@ Then N ~ Poisson(6)
 E ( S ) = E ( N ) E ( X ) = (6)(80) = £480
 V ( S ) = E ( N ) V ( X ) + V ( N )[ E ( X )] 2 = (6)(80 2 ) + (6)(80 2 ) = 76800
 ∴ sd ( S ) = £277
+\end{document}
