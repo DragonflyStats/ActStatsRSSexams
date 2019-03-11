@@ -1,3 +1,38 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
 7
 Let N be the number of claims arising on a group of policies in a period of one week
 and suppose that N follows a Poisson distribution with mean 60.
@@ -7,27 +42,25 @@ and standard deviation £400.
 N
 Let S   X i be the total claim amount for the period of one week.
 i  1
-(i) Determine the mean and the standard deviation of S.
-(ii) Explain why the distribution of S can be taken as approximately normal, and
-hence calculate, approximately, the probability that S is greater than £40,000.
-[3]
-[Total 5]
+\begin{enumerate}[(i)]
+\item (i) Determine the mean and the standard deviation of S.
+\item (ii) Explain why the distribution of S can be taken as approximately normal, and hence calculate, approximately, the probability that S is greater than £40,000.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%[Total 5]
 CT3 S2008—3
 [2]
 PLEASE TURN OVER8
-(i)
+\begin{enumerate}[(i)]
+\item (i)
 Use the following uniform(0,1) random numbers
 0.9236 , 0.2578
 and a suitable table of probabilities to simulate two observations of the random
-variable X, where X ~ N(200,100).
-[3]
-(ii)
+variable X, where $X \sim N(200,100)$.
+\item (ii)
 Use the following uniform(0,1) random numbers
 0.3287 , 0.9142
-to simulate two observations of the random variable Y, where Y has an
-exponential distribution with mean 100.
-[3]
-
+to simulate two observations of the random variable Y, where Y has an exponential distribution with mean 100.
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 7
@@ -38,6 +71,7 @@ V ( S ) = E ( N ) V ( X ) + V ( N )[ E ( X )] 2
 (ii)
 As S is the sum of a large number of i.i.d. variables, then the central limit
 theorem gives an approximate normal distribution for S.
+%%%%%%%%%%%%%%
 P ( S > 40000) = P ( Z >
 40000 − 30000
 = 2.016)
@@ -55,3 +89,4 @@ r = 0.3287 ⇒ y = −100log(0.6713) = 39.85
 r = 0.9142 ⇒ y = −100log(0.0858) = 245.6
 Note: We can do away with the step of subtracting r from 1 and use.
 y = −100*log(r). This gives y = 111.3, 8.971.
+\end{document}
