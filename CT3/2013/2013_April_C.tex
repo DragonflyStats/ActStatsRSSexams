@@ -1,0 +1,114 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+6
+A survey is undertaken to investigate the proportion p of an adult population that
+support a certain government policy. A random sample of 100 adults is taken and
+contains 30 who support the policy.
+(i) Calculate an approximate 95% confidence interval for p. [2]
+(ii) Comment on the validity of the interval obtained in part (i). [1]
+A different sample of 1,000 adults is taken and it contains 300 who support the policy.
+(iii)
+7
+Explain how the width of a 95% confidence interval for p in this case will
+compare to the width of the interval in part (i), without performing any
+calculations.
+[1]
+[Total 4]
+A regulator wishes to inspect a sample of an insurer’s claims. The insurer estimates
+that 10% of policies have had one claim in the last year and no policies had more than
+one claim. All policies are assumed to be independent.
+(i)
+Determine the number of policies that the regulator would expect to examine
+before finding 5 claims.
+[1]
+On inspecting the sample claims, the regulator finds that actual payments exceeded
+initial estimates by the following amounts:
+£35
+(ii)
+£120
+£48
+£200
+£76
+Find the mean and variance of these extra amounts.
+[3]
+It is assumed that these amounts follow a gamma distribution with parameters α
+and λ.
+(iii)
+CT3 A2013–3
+Estimate these parameters using the method of moments.
+[3]
+[Total 7]
+6
+(i)
+Using approximate normality, and with p ˆ = 0.3 we can calculate the interval a
+⎛
+p ˆ (1 − p ˆ )
+p ˆ (1 − p ˆ )
+, p ˆ + 1.96
+⎜ ⎜ p ˆ − 1.96
+n
+n
+⎝
+⎞
+⎟ ⎟ = (0.21, 0.39)
+⎠
+(ii) Sample size is large (or np, or np(1−p)), so normal approximation is valid.
+(iii) With larger sample size the standard error will be smaller, and therefore the
+interval will be narrower.
+This was straightforward for most candidates. However, the explanation was often not clear
+or convincing.
+Page 4Subject CT3 (Probability and Mathematical Statistics) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+(i) No of inspected policies ~ Negative binomial(5, 0.1).
+Expected no of inspected policies = 5/0.1 =50
+(ii) ∑ x = 479, ∑ x 2 = 63705
+Mean = 479/5 = 95.8
+Variance = (63705−5*95.8 2 )/4 = 4454.2
+(iii)
+α
+α
+= 95.8, V [ X ] = 2 = 4454.2
+λ
+λ
+E [ X ]
+95.8
+⇒λ=
+=
+= 0.0215
+V [ X ] 4454.2
+E [ X ] =
+⇒ α = λ E [ X ] = 0.0215*95.8 = 2.06
+Generally very well answered with no particular issues.
