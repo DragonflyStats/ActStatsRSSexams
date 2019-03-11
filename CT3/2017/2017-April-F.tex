@@ -1,0 +1,212 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+PLEASE TURN OVER10
+A geologist is trying to determine what causes sand granules to have different sizes.
+She measures the gradient of nine different beaches in degrees, g, and the diameter in
+mm of the granules of sand on each beach, d.
+0.63
+0.17
+g
+d
+0.70
+0.19
+0.82
+0.22
+0.88
+0.235
+1.15
+0.235
+1.50
+0.30
+4.40
+0.35
+7.30
+0.42
+11.30
+0.85
+ g = 28.68,  g 2 = 206.2462,  d = 2.97,  d 2 = 1.33525,  gd = 15.55855
+(i)
+Determine the linear regression equation of d on g.
+[5]
+The geologist assumes that the error terms in the linear regression are normally
+distributed.
+(ii)
+Perform a test to determine whether the slope coefficient is significantly
+different from zero.
+[4]
+(iii) Determine a 95% confidence interval for the mean estimate of d on a beach
+with a slope of exactly 3 degrees.
+[5]
+(iv) (a)
+Plot the data from the table above.
+(b)
+Comment on the plot suggesting what the geologist might do to
+improve her analysis.
+[4]
+[Total 18]
+END OF PAPER
+CT3 A2017–8
+%%%%%%%%%%%%%%%%%%%%%%%%%
+Q10
+(i)
+S gg
+
+28.68 2 
+  206.2462 
+  114.8526
+
+9  
+
+S gd  15.55855 
+ ˆ 
+S gd
+S gg
+
+2.97 * 28.68
+ 6.09415
+9
+6.09415
+ 0.05306
+114. 8526
+ ˆ  d   g 
+2.97  0.05306* 28.68
+ 0.1609
+9
+So d  0.1609  0.05306 g
+(ii)
+S dd  1.33525 
+2.97 2
+ 0.35515
+9
+[1]
+[1]
+[1]
+[1]
+[1]
+2
+S dg
+ 2 1 
+   S dd 
+7 
+S gg
+  1 
+6.09415 2 
+   0.35515 
+  0.004542
+ 7  
+114.8526  
+ [1]
+test statistic   ˆ / 
+ 2
+0.004542
+ 0.05306 /
+ 8.438
+S gg
+114. 8526 [1]
+t 7;0.975  2.365 (two sided) so reject H 0 :   0
+Page 10
+[1]
+[1]Subject CT3 (Probability and Mathematical Statistics Core Technical) – April 2017 – Examiners’ Report
+(iii)
+If g 0 =3 then d ˆ 0  0.1609  0.05306 *3  0.320 0 8
+[1]
+2 
+  1  g  g  2  
+
+0
+2  1  3  3.187  
+ˆ
+Var d 0   
+  ˆ   
+ *0.004542
+n
+S
+9
+114.8526
+gg
+ 
+ 
+ 
+ 
+ 
+= 5.060  10  4
+ 
+C.I.= d ˆ 0  t 7;0.975 * Var d ˆ 0
+[2]
+1
+2
+
+ 0.32008  2.365* 5.060  1 0  4
+
+1
+2
+ (0.267, 0.373 )
+(a)
+0.9
+0.8
+(iv)
+[2]
+0.7
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+0
+0
+2
+4
+6
+8
+10
+12
+gradient of beach (degrees)
+[2]
+(b)
+With only three observations for g>1.5, the slope is determined by a
+small amount of data. Getting more observations in that range would
+give a better analysis.
+[2]
+Page 11Subject CT3 (Probability and Mathematical Statistics Core Technical) – April 2017 – Examiners’ Report
+Alternatives (up to 2 marks total): could try a data transformation (e.g. logarithmic); other non-linear regression; more data.
+[Total 18]
+Parts (i) and (ii) were very well answered. However, a small number of
+candidates performed the regression using the wrong response and
+explanatory variables (g on d). Also in part (ii) some candidates attempted a
+test using the correlation coefficient. For full marks the equivalence of the two tests should be explicitly mentioned. In part (iii) there were some
+computational errors, while there were a few problems with the plot in part (iv)
+with inappropriate scales, missing axes labels etc.
+\end{document}
