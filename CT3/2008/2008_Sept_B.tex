@@ -1,16 +1,45 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
 5
 [3]
-The number of claims, X, arising on each policy in a certain portfolio depends on
-another random variable Y. X is considered to follow a Poisson distribution with
-mean Y. The variable Y itself is assumed to have a gamma distribution with
+The number of claims, X, arising on each policy in a certain portfolio depends on another random variable Y. X is considered to follow a Poisson distribution with mean Y. The variable Y itself is assumed to have a gamma distribution with
 parameters (a,b).
-Find expressions for the unconditional moments E[X] and E[X 2 ] using appropriate
-conditional moments.
+Find expressions for the unconditional moments E[X] and E[X 2 ] using appropriate conditional moments.
 [4]
 CT3 S2007—26
-Suppose that the time T, measured in days, until the next claim arises under a
-portfolio of non-life insurance policies, follows an exponential distribution with
-mean 2.
+Suppose that the time T, measured in days, until the next claim arises under a portfolio of non-life insurance policies, follows an exponential distribution with mean 2.
 \begin{enumerate}[(i)]
 \item Find the probability that no claim is made in the next one day period.
 \item The median of a random variable is defined as the value for which the
@@ -60,7 +89,7 @@ a a a 2
 + +
 b b 2 b 2
 %---------------------------------------------------------------%
-(i) $T ~ Exp(0.5) and therefore P ( T > 1) = e − 0.5 × 1 = 0.6065$ .
+(i) $T ~ Exp(0.5)$ and therefore $P ( T > 1) = e − 0.5 × 1 = 0.6065$ .
 (ii) The median, $M$, is such that
 M
 ∫
@@ -90,3 +119,4 @@ normal approximation as above, or get P(Y > 45) = 0.922 (approximately) by
 2
 (Yellow Book p168).]
 interpolating in tables of percentage points of χ 60
+\end{document}
