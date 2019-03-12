@@ -32,9 +32,8 @@
 
 \begin{document}
 \begin{enumerate}
-9
-The number of claims, N, arising over a period of five years for a particular policy is
-assumed to follow a “Type 2” negative binomial distribution (as in the book of
+%%--- Question 9
+\item The number of claims, N, arising over a period of five years for a particular policy is assumed to follow a “Type 2” negative binomial distribution (as in the book of
 k (1 − p )
 Formulae and Tables page 9) with mean E [ N ] =
 and variance
@@ -43,34 +42,31 @@ k (1 − p )
 .
 V [ N ] =
 p 2
-Each claim amount, X (in units of £1,000), is assumed to follow an exponential
-distribution with parameter λ independently of each other claim amount and of the
-number of claims.
+Each claim amount, X (in units of £1,000), is assumed to follow an exponential distribution with parameter $\lambda$ independently of each other claim amount and of the number of claims.
+
 Let S be the total of the claim amounts for the period of five years, in the case
-k = 2, p = 0.8 and λ = 2.
+k = 2, p = 0.8 and $\lambda=2$.
 \item 
-Calculate the mean and the standard deviation of S based on the above
-assumptions.
-[4]
+Calculate the mean and the standard deviation of $S$ based on the above assumptions.
+
 Now assume that:
-N follows a Poisson distribution with parameter μ = 0.5, that is, with the same
-mean as N above;
-X follows a gamma distribution with parameters α = 2 and λ = 4, that is, with
-the same mean as X above.
-\item 
-\item 
+\begin{itemize}
+\item  N follows a Poisson distribution with parameter $\mu = 0.5$, that is, with the same mean as N above;
+\item  X follows a gamma distribution with parameters $\alpha = 2$ and $\lambda = 4$, that is, with the same mean as X above.
+\end{itemize}
+
 10
 Calculate the mean and the standard deviation of S based on these
 assumptions.
 Compare the two sets of answers in \item  and \item  above.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item The size of claims (in units of £1,000) arising from a portfolio of house contents
-insurance policies can be modelled using a random variable X with probability density
+insurance policies can be modelled using a random variable $X$ with probability density
 function (pdf) given by:
 ac a
 f X ( x ) = a + 1 , x ≥ c
 x
-where a > 0 and c > 0 are the parameters of the distribution.
+where $a > 0$ and $c > 0$ are the parameters of the distribution.
 ac
 , for a > 1 .
 a − 1
@@ -84,7 +80,7 @@ F X ( x ) = 1 − ⎜ ⎟ ,
 CT3 A2010—4
 x ≥ c
 (and = 0 for x < c).
-[2]Suppose that for the distribution of claim sizes X it is known that c = 2.5, but a is
+[2]Suppose that for the distribution of claim sizes X it is known that $c = 2.5$, but a is
 unknown and needs to be estimated given a random sample x 1 , x 2 , ..., x n .
 \item 
 (iv)
@@ -135,11 +131,15 @@ E [ X ] = 1 1
 λ 2
 λ
 2
+%---------------------------------------%
 E [ S ] = E [ N ] E [ X ] = 0.5 × 0.5 = 0.25 , i.e. £250
+%---------------------------------------%
 V [ S ] = E [ N ] V [ X ] + V [ N ] { E [ X ] } = 0.5 × 0.25 + 0.625 × 0.5 2 = 0.28125
+%---------------------------------------%
 2
 ∴ SD [ S ] = 0.530 , i.e. £530
-Page 4Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2010 — Examiners’ Report
+%-- Page 4
+%-- Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2010 — Examiners’ Report
 (ii)
 E [ N ] = V [ N ] = μ = 0.5
 E [ X ] =
