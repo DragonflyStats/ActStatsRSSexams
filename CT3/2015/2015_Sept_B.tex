@@ -25,31 +25,26 @@
 \setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
 
 \renewcommand{\baselinestretch}{1.3}
-
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
 
 \begin{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-CT3 S2015–3 PLEASE TURN OVER
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   
-4 During a particular year, it was found that 83 claims were made in a sample of 500
-insurance policies. Policies are assumed to be independent from each other and the
-number of claims per policy is identically distributed for all policies according to a
-Poisson distribution, with parameter λ denoting the claim rate per policy per year.
-(i) Calculate an approximate 95% confidence interval for λ. [3]
-(ii) Comment on the validity of this confidence interval. [1]
-
+\item 4 During a particular year, it was found that 83 claims were made in a sample of 500 insurance policies. Policies are assumed to be independent from each other and the number of claims per policy is identically distributed for all policies according to a Poisson distribution, with parameter $\lambda$ denoting the claim rate per policy per year.
+\begin{enumerate}[(i)]
+\item (i) Calculate an approximate 95\% confidence interval for $\lambda$. 
+\item (ii) Comment on the validity of this confidence interval. 
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  
-5 An insurance company is accused of delaying payments for large claims. To
-investigate this accusation a sample of 25 claims is considered. In each case the
-claim size xi (in £) and the time yi (in days) taking to pay the claim are recorded.
-Assume that the claim size and the time taken to pay the claim are normally
-distributed. In the sample the following statistics have been observed:
+ \item  
+%%- Question 5 
+An insurance company is accused of delaying payments for large claims. To investigate this accusation a sample of 25 claims is considered. In each case the claim size xi (in £) and the time yi (in days) taking to pay the claim are recorded.
+Assume that the claim size and the time taken to pay the claim are normally distributed. In the sample the following statistics have been observed:
   2 2
 1 1
 25 25
@@ -65,23 +60,27 @@ i
 x x y y
 
     .
-(i) Calculate the correlation coefficient between the claim sizes, xi, and the times
-taken to pay the claim, yi. [1]
-(ii) Perform a statistical test of the hypothesis that the correlation between claim
-size and time until payment is zero against the alternative that the correlation
-is different from zero. [3]
+\begin{enumerate}[(i)]
+\item (i) Calculate the correlation coefficient between the claim sizes, xi, and the times taken to pay the claim, yi. [1]
+\item (ii) Perform a statistical test of the hypothesis that the correlation between claim size and time until payment is zero against the alternative that the correlation is different from zero. 
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-6 Consider a survey of alcohol consumption in three different locations in the UK. In
+\item 6 Consider a survey of alcohol consumption in three different locations in the UK. In
 each of the three locations 50 men are asked about the units of alcohol they
 consumed during the week preceding the survey. The results are summarised in the
 following table:
-  Location code A B C
+
+\begin{verbatim}
+Location code A B C
 Average number of units 26 22 27
 Sample standard deviation 7 6 9
-Perform a one-way analysis of variance test to test the hypothesis that the location has
-no impact on alcohol consumption. [6]
+\end{verbatim}
+Perform a one-way analysis of variance test to test the hypothesis that the location has no impact on alcohol consumption. [6]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
+\newpage
+
   Q4 (i) We have  
 ˆ
 N 0,1
@@ -95,12 +94,14 @@ given by
 500
 ˆ   
 i.e. 0.166 1.96 0.166 / 500 which gives (0.130, 0.202).
-Subject CT3 (Probability and Mathematical Statistics Core Technical) – September 2015 – Examiners’ Report
-Page 5
-(ii) The sample size is large here, so normal approximation is valid.
-[Equivalently nλ is large.]
-Generally well answered. Some candidates failed to properly justify the use
-of the normal approximation.
+%% Subject CT3 (Probability and Mathematical Statistics Core Technical)
+%% September 2015 – Examiners’ Report
+%% Page 5
+
+(ii) The sample size is large here, so normal approximation is valid. [Equivalently nλ is large.]
+Generally well answered. Some candidates failed to properly justify the use of the normal approximation.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Q5 (i) 2606.96 0.1470326
 5116701 61.44
 r 
@@ -115,12 +116,11 @@ r
   
  
 t has t-distribution with 23 d.f. The 95% quantile is 1.714.
-Since this is a two-sided test and 0.71 is within the interval [–1.714, 1.714] the
-null hypothesis cannot be rejected at 10% level of significance.
+Since this is a two-sided test and 0.71 is within the interval [–1.714, 1.714] the null hypothesis cannot be rejected at 10\% level of significance.
 (Note that other significance level may also be used.)
-[Alternatively, Fisher’s transformation gives z = 0.695, and conclusion is the
-  same as above.]
+[Alternatively, Fisher’s transformation gives z = 0.695, and conclusion is the   same as above.]
 Well answered. Note that the test in part (ii) is two-sided.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Q6 SSR  49 72  62  92   8,134
 26 22 27 25
 3
@@ -136,11 +136,10 @@ R
 SS
 F SS
   
-This is clearly a rather large value since the 1% point from a F2,120 distribution is
-4.787, so the null hypothesis is rejected. We conclude that alcohol consumption is
-different in different areas.
-Subject CT3 (Probability and Mathematical Statistics Core Technical) – September 2015 – Examiners’ Report
-Page 6
+This is clearly a rather large value since the 1\% point from a F2,120 distribution is
+4.787, so the null hypothesis is rejected. We conclude that alcohol consumption is different in different areas.
+%%Subject CT3 (Probability and Mathematical Statistics Core Technical) – September 2015 – Examiners’ Report
+%%Page 6
 [Alternatively, the following sums can be computed:
     1,300  yA   yB 1,100  yC 1,350  y  3,750
    y2A  36, 201  yB2  25,964  yC2  40,419  y2 102,584
@@ -149,3 +148,4 @@ Mixed answers. Candidates who were able to calculate correctly the various
 sums of squares did well. Note that the main answer provided here is
 computationally more efficient than the alternative answer (which most
                                                             candidates preferred).
+\end{document}
