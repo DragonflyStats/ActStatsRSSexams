@@ -1,10 +1,39 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
 CT3 A2014–49
-The weekly amount spent on childcare for one child is believed to depend on the age
-of the child. We denote by X the random variable describing the cost per child for a
-randomly selected child of age one year, Y being the cost for a three year old child,
-and Z the cost for a five year old child. It is assumed that X, Y, and Z are normally
-distributed and that childcare costs are independent between children. Random
-samples of children of different ages are taken and the weekly childcare costs are
+The weekly amount spent on childcare for one child is believed to depend on the age of the child. We denote by X the random variable describing the cost per child for a randomly selected child of age one year, Y being the cost for a three year old child, and Z the cost for a five year old child. It is assumed that X, Y, and Z are normally distributed and that childcare costs are independent between children. Random samples of children of different ages are taken and the weekly childcare costs are
 recorded during the year 2012. A summary of the data is given in the following table:
 Random variable
 X
@@ -19,35 +48,35 @@ Sample standard deviation
 30 30 20
 Sample size
 25 25 25
-(i)
+
+\begin{enumerate}[(i)]
+\item (i)
 Calculate the overall average weekly cost of childcare per child for the
 children in these samples.
 [1]
-(ii) Calculate a 95% confidence interval for the expected childcare cost for a child
+\item (ii) Calculate a 95% confidence interval for the expected childcare cost for a child
 aged one year.
 [2]
-(iii) Calculate a 95% confidence interval for the expected childcare cost for a child
+\item (iii) Calculate a 95% confidence interval for the expected childcare cost for a child
 aged five years.
 [2]
-(iv) Calculate a 95% confidence interval for the ratio of the variances of X and Z .
+\item (iv) Calculate a 95% confidence interval for the ratio of the variances of X and Z .
 [3]
-(v) Perform a test at 5% significance level for the null hypothesis that the
+\item (v) Perform a test at 5% significance level for the null hypothesis that the
 variances of X and Z are equal based on your answer to part (iv).
 [1]
-(vi) Calculate an approximate 95% confidence interval for the difference between
+\item (vi) Calculate an approximate 95% confidence interval for the difference between
 the average weekly childcare cost per child for children aged one and for
 children aged five. Justify any assumptions that you make and explain any
 approximate values you use.
 [5]
-(vii) Perform a test to decide if there is a difference between the expected weekly
+\item (vii) Perform a test to decide if there is a difference between the expected weekly
 childcare cost per child spent for children aged one and for children aged five
 based on your answer to part (vi).
 [1]
-(viii) Perform an analysis of variance to decide if the age of a child has an impact on
+\item (viii) Perform an analysis of variance to decide if the age of a child has an impact on
 the weekly amount spent on childcare.
-[7]
-[Total 22]
-CT3 A2014–5
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 9
@@ -107,6 +136,7 @@ and (v).
 (viii) SS R  24  30 2  30 2  20 2  52800
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Alternative solution possible
 2
 2
@@ -125,3 +155,4 @@ Generally well answered. In part (iv) calculation of the ratio of the variance o
 variance of X was given full credit. In part (viii) many candidates attempted to calculate the
 SS values using the original data, rather than the “quick” formulae given in the answer. This
 was given full marks where appropriate, but was not the best use of time in the exam.
+\end{document}
