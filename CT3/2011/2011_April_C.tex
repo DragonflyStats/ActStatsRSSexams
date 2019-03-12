@@ -33,29 +33,28 @@
 \begin{document}
 \begin{enumerate}
 5
-Let X 1 , X 2 , X 3 , X 4 , and X 5 be independent random variables, such that X i ~ gamma
+Let $X_1$ , $X_2$ , $X_3$ , $X_4$ , and $X_5$ be independent random variables, such that X i ~ gamma
 5
 with parameters i and λ for i = 1, 2, 3, 4, 5. Let S = 2 λ ∑ X i .
 i = 1
 6
-(i) Derive the mean and variance of S using standard results for the mean and
-variance of linear combinations of random variables.
-[3]
-(ii) Show that S has a chi-square distribution using moment generating functions
-and state the degrees of freedom of this distribution.
-[4]
+\begin{enumerate}[(i)]
+\item (i) Derive the mean and variance of S using standard results for the mean and variance of linear combinations of random variables.
+\item
+(ii) Show that S has a chi-square distribution using moment generating functions and state the degrees of freedom of this distribution.
+\item 
 (iii) Verify the values found in part (i) using the results of part (ii). .
-[1]
-[Total 8]
-Consider two random variables X and Y, for which the variances satisfy V[X] = 5V[Y]
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Consider two random variables X and Y, for which the variances satisfy V[X] = 5V[Y]
 and the covariance Cov[X,Y] satisfies Cov[X,Y] = V[Y].
 Let S = X + Y and D = X − Y.
-(i) Show that the covariance between S and D satisfies Cov[S,D] = 4V[Y].
-(ii) Calculate the correlation coefficient between S and D.
-CT3 A2011—3
-[3]
-[3]
-[Total 6]
+\begin{enumerate}[(i)]
+\item (i)  Show that the covariance between S and D satisfies Cov[S,D] = 4V[Y].
+\item (ii) Calculate the correlation coefficient between S and D.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 5
 (i)
 E [ S ] = 2 λ ∑
@@ -97,10 +96,13 @@ so S ~ χ 2 , with 30 df
 2
 χ 30
 has mean 30 and variance 60 , as found in part (i).
-Page 3Subject CT3 (Probability and Mathematical Statistics Core Technical) — Examiners’ Report, April 2011
+% Page 3
+%Subject CT3 (Probability and Mathematical Statistics Core Technical) — Examiners’ Report, April 2011
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 6
 (i) Cov[S,D] = Cov[X + Y , X − Y] = Cov[X,X] − Cov[X,Y] + Cov[Y,X] − Cov[Y,Y]
 = V[X] − V[Y] = 4V[Y]
 (ii) V[S] = V[X] + V[Y] + 2Cov[X,Y] = 8V[Y]
 V[D] = V[X] + V[Y] − 2Cov[X,Y] = 4V[Y]
 ⇒ Corr[S,D] = 4V[Y]/{8V[Y] × 4V[Y]} 1/2 = +1/√2 = +0.707
+\end{document}
