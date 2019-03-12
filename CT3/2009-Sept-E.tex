@@ -32,8 +32,9 @@
 
 \begin{document}
 \begin{enumerate}
-PLEASE TURN OVER11
-Three insurance company colleagues had just completed an investigation which
+%%-- PLEASE TURN OVER
+%%-- 11
+\item Three insurance company colleagues had just completed an investigation which
 involved the application of a two-sample t-test to compare two independent samples, each of size 11. They were concerned about the validity of the equal variance assumption required for this test. Their data were as follows.
 A:
 B:
@@ -60,16 +61,17 @@ B:
 30
 30
 Σ x A = 275, Σ x 2 A = 7, 033, Σ x B = 297, Σ x B 2 = 8,559
-(i)
+\begin{enumerate}[(i)]
+\item (i)
 One of the colleagues suggested a graphical approach for the comparison of the variances.
-Draw a suitable diagram to represent these data so that the variability of the samples can be compared, and comment briefly on that comparison.
+\item Draw a suitable diagram to represent these data so that the variability of the samples can be compared, and comment briefly on that comparison.
 [3]
 (ii)
 (iii)
-Another colleague suggested using an F-test for the comparison of variances.
+\item Another colleague suggested using an F-test for the comparison of variances.
 (a) Perform this F-test at the 5% level to compare the variances and express your conclusion clearly.
 (b) In addition obtain an approximate value of the P-value for this test by linearly interpolating between suitable entries in the tables.
-[6]
+\item 
 The third colleague suggested another procedure using a two-sample t-test in the following way:
 “For each sample calculate the absolute values of the deviations of the observations from the mean of that sample;
 then apply a two-sample t-test to the two sets of absolute deviations.”
@@ -79,12 +81,11 @@ data.
 (2) Perform the suggested two-sample t-test at the 5\% level stating your conclusion clearly.
 (3) Obtain, in addition, an approximate P-value for this test by linearly interpolating between suitable entries in the tables.
 [11]
-(iv)
+\item (iv)
 Comment briefly on the conclusions that may have been reached by the three
 colleagues.
-[2]
-[Total 22]
-
+\end{enumerate}
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 11
@@ -125,16 +126,17 @@ at the 5% level.
 F 10,10(2.5%) = 3.717 and F 10,10(5%) = 2.978
 So P-value is between 0.05 and 0.10
 1
-By interpolation: P-value is
+\begin{itemize}
+\item By interpolation: P-value is
 0.05
 (iii)
 (a)
 3.717 3.418
 (0.10 0.05) 0.05 (0.405)(0.05) 0.070
 3.717 2.978
-If the samples have equal variances, then the absolute deviations will be similar in size for both samples; if one sample has a larger variance than the other, then the deviations will be more extreme such that the
+\item If the samples have equal variances, then the absolute deviations will be similar in size for both samples; if one sample has a larger variance than the other, then the deviations will be more extreme such that the
 absolute deviations will be larger for that sample.
-A two-sided two-sample t-test applied to these absolute deviations will test for a difference in the means of these absolute deviations and hence for a difference in the variances in the original samples.
+\item A two-sided two-sample t-test applied to these absolute deviations will test for a difference in the means of these absolute deviations and hence for a difference in the variances in the original samples.
 (b)
 (1)
 x A
@@ -197,7 +199,7 @@ obs. t =
 2.727
 1.294
 s dp
-For the two-sided test at the 5% level, critical value is
+\item For the two-sided test at the 5% level, critical value is
 t 20(2.5%) = 2.086
 So we just reject H 0 :
 at the 5% level.
@@ -226,4 +228,5 @@ quite similar P-values.
 Graphical approach in (i) casts doubt on H 0 .
 So all three are fairly consistent.
 2
+\end{itemize}
 \end{document}
