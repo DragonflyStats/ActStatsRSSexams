@@ -36,17 +36,17 @@
 \begin{enumerate}
 \item
 The number of claims made by each policyholder in a certain class of business is
-modelled as having a Poisson distribution with mean λ.
+modelled as having a Poisson distribution with mean $\lambda$.
 
 \begin{enumerate}
-\item Derive an expression for the probability, p, that a policyholder in this class has made at least one claim.
+\item Derive an expression for the probability, $p$, that a policyholder in this class has made at least one claim.
 \item The claims records of 20 randomly chosen policyholders were examined and the number of policyholders that made at least one claim in a year, X, was recorded.
 (ii)
-(a) State the distribution of the random variable X and its parameters.
+(a) State the distribution of the random variable $X$ and its parameters.
 (b) Derive an expression for the maximum likelihood estimator of the
 probability p given in (i) using your answer in (ii)(a).
 (iii)
-\item Show that, in the case X = 5, the maximum likelihood estimate (MLE) of p is
+\item Show that, in the case $X = 5$, the maximum likelihood estimate (MLE) of p is
 [3]
 $\hat{p} = 0.25$ and hence calculate the MLE of $\lambda$ .
 \end{enumerate}
@@ -57,8 +57,8 @@ Calculate the MLE of $\lambda$ given this additional information.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-6
-(i) p = Pr( N ≥ 1) = 1 − Pr( N = 0) = 1 − e −λ .
+
+(i) \begin{eqnarray*}p &=& Pr( N \geq 1) \\ &=& 1 − \Pr( N = 0) &=& 1 − e^{−\lambda} .\end{eqnarray*}
 (ii) (a)
 X ~ Bin(20,p)
 (b)
@@ -83,10 +83,11 @@ p ˆ 2 (1 − p ˆ ) 2
 5
 = 0.25
 20
-Then, using the invariance property of the MLE:
+\begin{itemize}
+\item Then, using the invariance property of the MLE:
 ˆ
 p ˆ = 1 − e −λ ⇒ λ ˆ = − log(1 − p ˆ ) = − log(0.75) = 0.288
-Likelihood function now is:
+\item Likelihood function now is:
 (iv)
 L ( λ ) ∝ P ( X = 0) 15 × P ( X = 1) 4 × P ( X = 2)
 ( ) ( λ e ) ( λ e )
@@ -100,21 +101,25 @@ and l ′ ( λ ) = 0 ⇒ − 20 +
 Page 4
 6
 = 0 ⇒ λ ˆ = 0.3
-ˆ λSubject CT3 (Probability and Mathematical Statistics) — September 2011 — Examiners’ Report
+ˆ λ
+%%-- Subject CT3 (Probability and Mathematical Statistics) — September 2011 — Examiners’ Report
 (Also l ′′ ( λ ) = −
 6
 < 0 , hence max)
 λ ˆ 2
-Notice that part (ii)(b) requires the use of the binomial distribution from (ii)(a). In part (iii)
+\item Notice that part (ii)(b) requires the use of the binomial distribution from (ii)(a).
+\item In part (iii)
 the invariance property must be used and mentioned for full credit.
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 7
-(i) F = 0.213/0.0106 = 20.094 and at the 5% significance level,
+\begin{itemize}
+\item (i) F = 0.213/0.0106 = 20.094 and at the 5\% significance level,
 F 3,20 (0.05) = 3.098.
-Since F = 20.094 > 3.098, there is strong evidence against the null hypothesis, and we conclude that there are differences in the mean amounts paid out by the companies.
-(ii) The variance of the residuals seems to be similar for the four companies; this is consistent with the assumption of constant variance in the response variable.
-Also there are no obvious patterns or outliers. The analysis seems valid.
-(iii) (a)
+\item Since F = 20.094 > 3.098, there is strong evidence against the null hypothesis, and we conclude that there are differences in the mean amounts paid out by the companies.
+\item (ii) The variance of the residuals seems to be similar for the four companies; this is consistent with the assumption of constant variance in the response variable.
+\item Also there are no obvious patterns or outliers. The analysis seems valid.
+\item (iii) (a)
 LSD = t 20 (0.025)
 = 2.086
 (b)
@@ -122,7 +127,7 @@ LSD = t 20 (0.025)
 σ 2 ⎜ + ⎟
 ⎝ 6 6 ⎠
 0.0106 / 3 = 0.124
-The four company (treatment) means are:
+\item The four company (treatment) means are:
 y 1 i = 17.810
 18.940
 17.715
@@ -137,9 +142,11 @@ y 4 i = 16.185
 6
 which are given in order and underlined as
 y 4 i < y 3 i < y 1 i < y 2 i
-Amounts paid out by companies 2 and 4 are significantly different from those paid out by the other two companies. Company 4 seems to pay out significantly lower amounts, with Company 2 paying
+\item Amounts paid out by companies 2 and 4 are significantly different from those paid out by the other two companies. 
+\item Company 4 seems to pay out significantly lower amounts, with Company 2 paying
 significantly higher.
-Parts (i) and (ii) were generally well answered. In part (iii) many candidates did not use the
+\item Parts (i) and (ii) were generally well answered. In part (iii) many candidates did not use the
 correct formula for LSD and then performed pair-wise comparisons using the wrong statistic.
-Page 5Subject CT3 (Probability and Mathematical Statistics) — September 2011 — Examiners’ Report
+%%Page 5Subject CT3 (Probability and Mathematical Statistics) — September 2011 — Examiners’ Report
+\end{itemize}
 \end{document}
