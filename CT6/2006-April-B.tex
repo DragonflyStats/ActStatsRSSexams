@@ -1,9 +1,38 @@
+\documentclass[a4paper,12pt]{article}
 
-Based on the proposal form, an applicant for life insurance is classified as a standard
-life (1), an impaired life (2) or uninsurable (3). The proposal form is not a perfect
-classifier and may place the applicant into the wrong category.
-The decision to place the applicant in state i is denoted by d i , and the correct state for
-the applicant is i .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+
+
+\begin{document}
+
+\begin{enumerate}
+Based on the proposal form, an applicant for life insurance is classified as a standard life (1), an impaired life (2) or uninsurable (3). The proposal form is not a perfect classifier and may place the applicant into the wrong category.
+The decision to place the applicant in state i is denoted by d i , and the correct state for the applicant is i .
 The loss function for this decision is shown below:
 1
 2
@@ -17,13 +46,12 @@ d 1 d 2 d 3
 3
 0
 (i) Determine the minimax solution when assigning an applicant to a category. [1]
-(ii) Based on the application form, the correct category for a new applicant
-appears to be as an impaired life. However, of applicants which appear to be
-impaired lives, 15% are in fact standard lives and 25% are uninsurable.
+(ii) Based on the application form, the correct category for a new applicant appears to be as an impaired life. However, of applicants which appear to be impaired lives, 15% are in fact standard lives and 25% are uninsurable.
+
 Determine the Bayes solution for this applicant.
 [4]
 [Total 5]
-CT6 A2006 24
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CT6 A2006 24
 (i)
 Derive the autocovariance and autocorrelation functions of the AR(1) process
 X t = X t
@@ -33,9 +61,7 @@ where
 + e t
 < 1 and the e t form a white noise process.
 [4]
-The time series Z t is believed to follow a ARIMA(1, d, 0) process for some
-value of d. The time series Z t ( k ) is obtained by differencing k times and the
-sample autocorrelations, {r i : i = 1, , 10}, are shown in the table below for
+The time series Z t is believed to follow a ARIMA(1, d, 0) process for some value of d. The time series Z t ( k ) is obtained by differencing k times and the sample autocorrelations, {r i : i = 1, , 10}, are shown in the table below for
 various values of k.
 r 1
 r 2
