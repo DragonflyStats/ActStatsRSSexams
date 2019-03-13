@@ -1,16 +1,58 @@
+\documentclass[a4paper,12pt]{article}
 
 
-A simple procedure for incorporating a no claims discount into an annual insurance
-policy is as follows:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\usepackage{eurosym}
+
+\usepackage{vmargin}
+
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document}
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+A simple procedure for incorporating a no claims discount into an annual insurance policy is as follows:
 a premium of £400 is payable for the first year;
-if no claim is made in the first year, the premium for the second year is £400k,
+\begin{itemize}
+\item if no claim is made in the first year, the premium for the second year is £400k,
 where k is a constant such that 0 < k < 1;
-if no claim is made in the first and second years, the premium for the third
+\item if no claim is made in the first and second years, the premium for the third
 year is £400k 2 ;
-if no subsequent claims are made in future years, the premium remains as
+\item if no subsequent claims are made in future years, the premium remains as
 £400k 2 ;
-if a claim is made, the premium the following year reverts to £400 and the
+\item if a claim is made, the premium the following year reverts to £400 and the
 procedure starts again as above.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%
 (i)
 Show that the probability distribution of the premium for the fourth year, that is, for the year following the third year, is given by
 £400
@@ -43,9 +85,11 @@ population means (you may assume that the population variances are equal).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 (i) Using C for a claim, N for no claim, then
-P(premium = 400) = P(C in year 3, regardless of the first 2 years) = p
-P(premium = 400k) = P(CN in years 2/3, regardless of the first year) = p(1 p)
-P(premium = 400k 2 ) = P(NN in years 2/3, regardless of the first year) = (1 p) 2
+\begin{itemize}
+\item P(premium = 400) = P(C in year 3, regardless of the first 2 years) = p
+\item P(premium = 400k) = P(CN in years 2/3, regardless of the first year) = p(1 p)
+\item P(premium = 400k 2 ) = P(NN in years 2/3, regardless of the first year) = (1 p) 2
+\end{itemize}
 [These probabilities may be derived in other ways, such as via a tree diagram]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -60,8 +104,7 @@ then 0.1 + 0.09k + 0.81k 2 = 0.75
 k
 k
 9
-September 2005
-Examiners Report
+%%-- September 2005-- Examiners Report
 p) 2
 0.09 1.454
 1.62
