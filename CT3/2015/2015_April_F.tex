@@ -1,73 +1,37 @@
 \documentclass[a4paper,12pt]{article}
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
   
-  
-  
-  \usepackage{eurosym}
-
+ \usepackage{eurosym}
 \usepackage{vmargin}
-
 \usepackage{amsmath}
-
 \usepackage{graphics}
-
 \usepackage{epsfig}
-
 \usepackage{enumerate}
-
 \usepackage{multicol}
-
 \usepackage{subfigure}
-
 \usepackage{fancyhdr}
-
 \usepackage{listings}
-
 \usepackage{framed}
-
 \usepackage{graphicx}
-
 \usepackage{amsmath}
 
 \usepackage{chngpage}
 
-
-
 %\usepackage{bigints}
 
 \usepackage{vmargin}
-
-
-
 % left top textwidth textheight headheight
-
-
-
 % headsep footheight footskip
-
-
-
 \setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
-
-
-
 \renewcommand{\baselinestretch}{1.3}
-
-
-
 \setcounter{MaxMatrixCols}{10}
-
-
-
 \begin{document}
-
 \begin{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-11 Consider the set of paired data (x1, y1), (x2 , y2 ),,(xn , yn ) to which we fit the linear
+11 Consider the set of paired data $(x1, y1), (x2 , y2 ),,(xn , yn )$ to which we fit the linear
 regression model:
   2
 Yi ~ N(  xi , ) ,
@@ -145,19 +109,16 @@ z
 S
 
    
-i.e. the two estimators are uncorrelated which implies a better model
-for estimation.
-Subject CT3 (Probability and Mathematical Statistics) – April 2015 – Examiners’ Report
-Page 10
-(ii) There seems to be a decreasing relationship. However it is not clear if it is
-linear.
+i.e. the two estimators are uncorrelated which implies a better model for estimation.
+%%Subject CT3 (Probability and Mathematical Statistics) – April 2015 – Examiners’ Report
+%%Page 10
+(ii) There seems to be a decreasing relationship. However it is not clear if it is linear.
 (iii) (a) H0: β = 0 v. H1: β ≠ 0
 t  0.2455 / 0.1015  2.419 t  0.2455 / 0.1015  2.419
-with t8(2.5%) = 2.306 and t8(0.5%) = 3.355
-At the 5% level we would reject the null in favour of the hypothesis
-that there is linear relationship between crawling age and average
+with t8(2.5\%) = 2.306 and t8(0.5\%) = 3.355
+At the 5\% level we would reject the null in favour of the hypothesis that there is linear relationship between crawling age and average
 temperature (but we would not reject H0 at the 1% level – or any
-             level < 4.2%)
+             level < 4.2\%)
 Alternative solutions:
   Test H0: ρ = 0 v H1: ρ ≠ 0
 Use R2 = r2, giving r = – 0.65.
@@ -192,8 +153,8 @@ model does not seem good.
 yˆi  ˆ  ˆ zi  ˆ  ˆ xi  x   ˆ ˆx  ˆxi
 which is the same as yˆi ˆ  ˆ xi with ˆ  ˆ  ˆx  ˆ  ˆ  ˆx and
 ˆ  ˆ .
-Subject CT3 (Probability and Mathematical Statistics) – April 2015 – Examiners’ Report
-Page 11
+%%Subject CT3 (Probability and Mathematical Statistics) – April 2015 – Examiners’ Report
+%%Page 11
 Alternative solution:
   With zi  xi  x we have
 Szz (zi  z )2 zi2 xi  x 2  Sxx
@@ -207,10 +168,7 @@ S S
 (b) Fitted model:
   yˆi  34.5501 0.245511.2  0.2455 zi  31.8005  0.2455 zi.
 yˆi  34.5501 0.245511.2  0.2455 xi  31.8005 0.2455 xi .
-Part (i) was very poorly answered. The answers in this part can be derived using direct
-application of known results on statistics and probability that are explicitly given in the Core
-Reading, combined with basic algebraic skills. Parts (ii) and (iii) were well answered, while
-the performance in part (iv) was mixed.
+Part (i) was very poorly answered. The answers in this part can be derived using direct application of known results on statistics and probability that are explicitly given in the Core Reading, combined with basic algebraic skills. Parts (ii) and (iii) were well answered, while the performance in part (iv) was mixed.
 END OF EXAMINERS’ REPORT
 
     .
@@ -220,16 +178,15 @@ in a better model.
 A study investigated whether there is an association between babies’ first crawling
 age and the average temperature during the month they first try to crawl (about 6
                                                                           months after birth). It is thought that in colder months heavier clothing may restrict a
-baby’s movement more than in warmer months and so the age at which the baby first
-crawls would be expected to be greater. A random sample of babies was taken and the
-results of the study are given in following table:
+baby’s movement more than in warmer months and so the age at which the baby first crawls would be expected to be greater. A random sample of babies was taken and the results of the study are given in following table:
+\begin{verbatim}
   Baby 1 2 3 4 5 6 7 8 9 10
 Average temperature , C (x) 16 2 10 20 12 16 14 9 3 10
 Crawling Age, weeks (y) 32 34 34 30 31 29 29 31 33 35
-CT3 A2015–7
+\end{verbatim}
+%%--- CT3 A2015–7
 A scatterplot of the data is given below:
-  (ii) Comment on the relationship between crawling age and average temperature
-based on these observations. [2]
+  (ii) Comment on the relationship between crawling age and average temperature based on these observations. [2]
 The linear regression model 2
 Yi ~ N(  xi , ) was fitted to these data, and some of
 the results are given below:
@@ -239,8 +196,7 @@ the results are given below:
 σ 1.733
 Also, R2 = 0.4226.
 Based on these results:
-  (iii) (a) Perform a statistical test to investigate the hypothesis that there is no
-linear relationship between crawling age and average temperature.
+  (iii) (a) Perform a statistical test to investigate the hypothesis that there is no linear relationship between crawling age and average temperature.
 (b) Comment on the fit of the model. [5]
 Consider the data transformation mentioned in part (i)(c), giving the model
 2
@@ -256,3 +212,4 @@ END OF PAPER
 29 31 33 35
 temperature
 age
+\end{document}
