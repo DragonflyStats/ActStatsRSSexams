@@ -36,8 +36,7 @@
 \begin{enumerate}
 
 12
-In a genetic plant breeding experiment a total of 1,500 plants were categorised into
-one of four classes (labelled A, B, C and D) with the following results:
+In a genetic plant breeding experiment a total of 1,500 plants were categorised into one of four classes (labelled A, B, C and D) with the following results:
 class:
 frequency:
 A
@@ -63,24 +62,25 @@ A B C D
 θ
 4
 where θ is an unknown parameter such that 0 < θ < 1.
-(i)
+\begin{enumerate}
+\item (i)
 (a) Write down the likelihood for these data and determine the log-likelihood.
 (b) Show that the maximum likelihood estimate (MLE) of θ is a solution of the quadratic equation
 750 θ 2 − 256 θ − 299 = 0
 and hence that the MLE is given by θ ˆ = 0.825 .
-(ii)
+\item (ii)
 (iii)
 
-(a) Determine the second derivative of the log-likelihood and use this, evaluated at θ̂ = 0.825, to obtain an approximation for the Cramer-Rao
-lower bound for this situation.
-(b) Hence calculate an approximate 95\% confidence interval for θ, using the asymptotic distribution of the MLE.
-[5]
+(a) Determine the second derivative of the log-likelihood and use this, evaluated at θ̂ = 0.825, to obtain an approximation for the Cramer-Rao lower bound for this situation.
+(b) Hence calculate an approximate 95\% confidence interval for $\theta$, using the asymptotic distribution of the MLE.
+\item 
 An extension of the genetic model suggests that the value of θ should be equal to 0.775.
-(a) Carry out an appropriate χ 2 test to investigate the extent to which the current data support the extended model with this value of θ (you should calculate and comment on the P -value).
+(a) Carry out an appropriate $\chi^2$ test to investigate the extent to which the current data support the extended model with this value of θ (you should calculate and comment on the P -value).
 (b) Comment briefly on how this relates to your approximate confidence interval in part (ii)(b).
-[6]
-[Total 18]
-CT3 A2009—613
+\end{enumerate}
+%%====[Total 18]
+%% -CT3 A2009—6
+%%- Question 13
 The following table gives the scores (out of 100) that 10 students obtained on a midterm test ( x ) and the final examination ( y ) in a course in statistics.
 65
 44
@@ -113,18 +113,19 @@ For these data you are given: S xx = 1,760.4, S yy = 2,737.6, S xy = 1,529.8
 State (giving reasons) whether this interval will be narrower or wider than the one calculated in part (i)(c) above. (You are not asked to calculate the interval.)
 %---------------------------------------------------------------------%
 The lecturer of this course decides to assess the linear relationship between the score in the final examination and that in the midterm test, by using the sample correlation coefficient r .
-The hypothesis H 0 : ρ = 0 (where ρ denotes the population correlation coefficient) can be tested against H 1 : ρ > 0, by using the result that under H 0 the sampling distribution
+The hypothesis H 0 : ρ = 0 (where $\rho$ denotes the population correlation coefficient) can be tested against H 1 : ρ > 0, by using the result that under H 0 the sampling distribution
 of the statistic
 (ii)
 r n − 2
 1 − r 2
 is the t n-2 distribution (where n is the size of the sample).
-(a) Show algebraically, that is without referring to the specific data given here, that in general the above statistic and the statistic involving β that you used in (i)(b) produce equivalent tests.
+(a) Show algebraically, that is without referring to the specific data given here, that in general the above statistic and the statistic involving $\beta$ that you used in (i)(b) produce equivalent tests.
 (b) Calculate the value of r for the given data and hence verify numerically the result of part (ii)(a) above.
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2009 — Examiners’ Report
+%%-- Page 7
+%%-- Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2009 — Examiners’ Report
 (i)
 (a)
 The plot is given below.
@@ -135,8 +136,7 @@ The plot is given below.
 80
 90
 Midterm score
-There seems to be a positive relationship between final and midterm
-score. However it is not clear if this relationship is linear.
+There seems to be a positive relationship between final and midterm score. However it is not clear if this relationship is linear.
 [Following comment also valid: the relationship looks linear but with
 substantial scatter.]
 (b)
@@ -173,7 +173,7 @@ and under the assumption that the errors of the regression are i.i.d . N (0, σ 
 with n - 2 = 8 df.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 From statistical tables we find t 8,0.05 = 1.860 , and t 8,0.01 = 2.896 .
-We reject the hypothesis H 0 : β = 0 in favour of H 1 : β > 0 at the \5% level (but not at the 1% level).
+We reject the hypothesis H 0 : β = 0 in favour of H 1 : β > 0 at the 5\% level (but not at the 1% level).
 (c)
 The mean response, y ˆ new for x ˆ new = 75 is
 y ˆ new = 3.146 + 0.869 × 75 = 68.321 .
@@ -191,12 +191,10 @@ s.e.( y ˆ new ) = σ ˆ
 1760.4
 = 4.1998
 The 95% CI is given by y ˆ new ± t 0.025,8 × s.e.( y ˆ new ) ,
-i.e. 68.321 ± 2.306 × 4.1998 = 68.321 ± 9.6847
+i.e. $68.321 \pm ( 2.306 \times 4.1998) = 68.321 \pm 9.6847$
 or (58.636, 78.006)
 (ii)
-(d) The CI for the individual predicted score will be wider than the CI for
-the mean score in (i)(c), because the variance for the individual
-predicted value is larger.
+(d) The CI for the individual predicted score will be wider than the CI for the mean score in (i)(c), because the variance for the individual predicted value is larger.
 (a) Both statistics follow a t n - 2 distribution under the null hypothesis.
 In addition
 β ˆ − 0
