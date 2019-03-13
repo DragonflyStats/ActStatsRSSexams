@@ -1,3 +1,31 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
 CT6 S2016–4
 5 (i) (a) Explain what is meant by a sequence of independent, identically
 distributed (I.I.D.) random variables.
@@ -5,13 +33,9 @@ distributed (I.I.D.) random variables.
 [3]
 Claim amounts Xi from a portfolio of insurance policies are assumed to be I.I.D. and
 exponentially distributed, with parameter λ. In a given year there are n claims.
-(ii) Show that the total claim amounts follow a gamma distribution, specifying its
-parameters. [2]
-In practice the individual claim amounts are not I.I.D. but instead the exponential
-parameter λi varies between each claim. λi follows a gamma distribution with
-parameters α and β.
-(iii) Show that the marginal distribution of claim amounts follows a Pareto
-distribution with parameters α and β. [5]
+(ii) Show that the total claim amounts follow a gamma distribution, specifying its parameters. [2]
+In practice the individual claim amounts are not I.I.D. but instead the exponential parameter λi varies between each claim. λi follows a gamma distribution with parameters α and β.
+(iii) Show that the marginal distribution of claim amounts follows a Pareto distribution with parameters α and β. [5]
 [Total 10]
 6 Assume that the numbers of accidents for three different risks in five years are as
 follows:
@@ -20,13 +44,12 @@ Risk A 1 4 5 0 2 12
 Risk B 1 6 4 6 5 22
 Risk C 5 6 4 9 4 28
 An actuary is modelling each risk according to a Poisson distribution.
-(i) Determine the Poisson parameter for each risk using the method of maximum
-likelihood estimation. [5]
+(i) Determine the Poisson parameter for each risk using the method of maximum likelihood estimation. [5]
 (ii) Test the hypothesis that the three risks have the same claim rate, using the
 scaled deviances. [5]
 [Total 10]
 
-
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   Q5 (i) (a) Each realisation of the variable is unaffected by previous outcomes and
 in turn does not affect future outcomes. [1]
