@@ -48,34 +48,26 @@ concerned that:
 3
 he does not run out of buns during the day; and
 the number of buns left over at the end of each day is as few as possible
-(i) Describe a model which would allow you to estimate the probability that the
-baker will run out of buns. State any assumptions you make.
-[3]
-(ii) Determine the relevant expression for the probability that the baker will run
-out of buns, in terms of K, c, and B j , the number of buns bought by the day’s
-jth customer.
-[1]
-[Total 4]
-A no-claims discount system has 3 levels of discount: 0%, 25% and 50%. The rules
-for moving between discount levels are:
-• After a claim-free year, move up to the next higher level or remain at the 50%
-discount level.
-• After a year with one or more claims, move down to the next lower level or
-remain at the 0% discount level.
-The long-run probability that a policyholder is in the maximum discount level is 0.75.
-Calculate the probability that a given policyholder has a claim-free year, assuming
-that this probability is constant.
-[5]
-CT4 S2007—24
-A national mortality investigation was carried out. It was suggested that the mortality
-of the male population could be represented by the following graduated rates:
+\begin{enumerate}[(i)]
+\item (i) Describe a model which would allow you to estimate the probability that the baker will run out of buns. State any assumptions you make.
+\item 
+(ii) Determine the relevant expression for the probability that the baker will run out of buns, in terms of K, c, and B j , the number of buns bought by the day’s jth customer.
+\end{enumerate}
+
+A no-claims discount system has 3 levels of discount: 0\%, 25\% and 50\%. The rules for moving between discount levels are:
+• After a claim-free year, move up to the next higher level or remain at the 50\% discount level.
+• After a year with one or more claims, move down to the next lower level or remain at the 0\% discount level.
+The long-run probability that a policyholder is in the maximum discount level is 0.75. Calculate the probability that a given policyholder has a claim-free year, assuming that this probability is constant.
+%%-- [5]
+%%-- CT4 S2007—2
+4
+A national mortality investigation was carried out. It was suggested that the mortality of the male population could be represented by the following graduated rates:
 o
 μ x + 1 =μ s x + 2 1
 2
 2
 where μ sx is from the standard tables, ELT15(males).
-The table below shows the graduated rates for part of the age range, together with the
-exposed to risk, expected and actual deaths at each age. The squared standardised
+The table below shows the graduated rates for part of the age range, together with the exposed to risk, expected and actual deaths at each age. The squared standardised
 deviations that were calculated are also shown.
 ⎛
 ⎞
@@ -187,14 +179,12 @@ the credibility of the results output,
 the dangers of spurious accuracy,
 the ease with which the model and its results can be communicated.
 Not all these factors needed to be mentioned for full marks to be awarded.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 2
 (a)
-Assume that, during each day, customers arrive at the shop according to a
-Poisson process.
-Assume that the numbers of buns bought by each customer, the B j , are
-independent and identically distributed random variables.
-Then if X t is the total number of buns sold between the beginning of the day
-and time t, (where t is measured in hours since the shop opens), X t is a
+Assume that, during each day, customers arrive at the shop according to a Poisson process.
+Assume that the numbers of buns bought by each customer, the B j , are independent and identically distributed random variables.
+Then if $X_t$ is the total number of buns sold between the beginning of the day and time $t$, (where $t$ is measured in hours since the shop opens), $X_t$ is a
 compound Poisson process defined by
 N t
 X t = ∑ B j ,
@@ -207,7 +197,8 @@ N t
 Pr[ K + ct − ∑ B j < 0]
 j = 1
 for some t.
-Page 3Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+%% Page 3
+%% Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
 3
 The transition matrix for the chain is:
 α
@@ -271,7 +262,8 @@ Using the quadratic equation formula, this leads to
 .
 2 × 0.25
 As α > 0 , we must have α = 0.7913 .
-Page 4Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+%%-- Page 4Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 4
 (i)
 The null hypothesis is that graduated rates are the same as the true underlying
@@ -280,31 +272,22 @@ To test overall goodness-of-fit we use the chi-squared test.
 ∑ z x 2 ∼ χ 2 m , where m is the number of degrees of freedom.
 x
 In this case, we have 10 ages.
-The graduation was carried out by reference to a standard table, so we
-lose a number of degrees of freedom because of the choice of standard
-table.
+The graduation was carried out by reference to a standard table, so we lose a number of degrees of freedom because of the choice of standard table.
 So, m < 10, and let us say m = 8.
 The observed value of the test statistic is
 ∑ z x 2 = 15.8623
 x
-The critical value of the chi-squared distribution with 8 degrees of freedom at
-the 5 per cent level is 15.51.
+The critical value of the chi-squared distribution with 8 degrees of freedom at the 5 per cent level is 15.51.
 Since 15.8623 > 15.51,
 we reject the null hypothesis and conclude that the graduated rates do not
 adhere to the data.
-[Credit was given for using other values of m, say m = 7 or m = 9, provided
-candidates recognized that some degrees of freedom should be lost for the choice of
-standard table. Note that if m = 9, the null hypothesis will not be rejected.]
+[Credit was given for using other values of m, say m = 7 or m = 9, provided candidates recognized that some degrees of freedom should be lost for the choice of standard table. Note that if m = 9, the null hypothesis will not be rejected.]
 (ii)
-From the data we can see that the actual deaths are lower than those
-expected at all ages.
+From the data we can see that the actual deaths are lower than those expected at all ages.
 The graduated rates are too high; the graduation should be revisited.
-At these ages the force of mortality increases with age,
-so a suitable adjustment may be to reduce the age shift relative to the
+At these ages the force of mortality increases with age, so a suitable adjustment may be to reduce the age shift relative to the
 standard table from 2 years.
-The standardised deviations also appear to show a systematic increase
-with age, showing that departure of the graduated rates from the actual
-rates increases with age.
-There appear to be no outliers (all the z x s have absolute values below
-1.96).
-Page 5Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+The standardised deviations also appear to show a systematic increase with age, showing that departure of the graduated rates from the actual rates increases with age.
+There appear to be no outliers (all the z x s have absolute values below 1.96).
+\end{document}
+%%-- Page 5Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
