@@ -1,0 +1,217 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+PLEASE TURN OVER9
+A statistical model is used to describe the total loss, S (in pounds), experienced in a
+certain portfolio of an insurance company over a period of one year. The total loss is
+given by:
+S  X 1  X 2    X N
+where X i gives the size of the loss from claim i =1,..., N. N is a random variable
+representing the number of claims per year and follows a Poisson distribution. The
+Xi s are independent, identically distributed according to a gamma distribution with
+parameters α and λ, and are also independent of N.
+Data from previous years show that the average number of claims per year was 14,
+while the average size of claims was £500 and their standard deviation was £150.
+(i) Estimate the parameters α and λ using the method of moments.
+[4]
+(ii) Estimate the mean and the variance of the total loss S using the information
+from the data above.
+
+Now suppose that the value of parameter α is known to be equal to α* and
+n = 5 claims have been made in a particular year with average size again £500.
+(iii)
+(a) Derive an expression for the maximum likelihood (ML) estimate of
+the parameter λ in terms of α*. You should verify that your answer
+corresponds to a maximum.
+(b) Derive the asymptotic distribution of the ML estimator of the
+parameter  in terms of α*.
+(c) Comment on the validity of the distribution in part (iii)(b).
+[9]
+Now suppose that the values of both parameters α and λ are unknown and n claims
+have been made in a particular year.
+(iv)
+(a)
+Show that the ML estimate, ̂ of the parameter α needs to satisfy the
+equation:
+n
+Γ  (  ˆ )
+ log( x i )
+log(  ˆ ) 
+ log( x )  i  1
+Γ(  ˆ )
+n
+where Γ  (  ˆ ) denotes the first derivative of Γ(  ˆ ) with respect to ̂ .
+(b)
+CT3 S2016–6
+Comment on how the ML estimates of the parameters α and λ can be
+obtained in this case.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q9
+(i)
+For MME we want:
+
+
+α
+α
+E ( X ) = x   = x and V ( X ) = s 2  2 = s 2
+
+λ
+λ
+
+These give
+(ii)
+2
+ = x =500/150 2 = 0.022 and α
+ = x = 500 2 /150 2 = 11.111
+ = x λ
+λ
+s 2
+s 2 
+E(S) = E(N)E(X) = 14*500 = 7,000 
+V(S) = E(N)V(X) + V(N)E(X) 2 = 14*(150 2 + 500 2 ) = 3,815,000 
+n
+*
+ α *
+
+λ
+λ n α
+α * − 1 −λ x i 
+
+L ( λ ; x ) = ∏
+x
+e
+=
+* i
+
+ 
+*
+i = 1  Γ α
+
+ Γ α
+n
+(iii)
+(a)
+( )
+{ ( ) }
+n
+e
+−λ  x i n
+1
+*
+∏ x i α − 1
+
+1
+n
+l ( λ ) = n α log ( λ ) − λ  x i + constant 
+n
+d
+n α *
+α * α *
+l ( λ ) = 0 
+=  x i  λ ˆ =
+=
+5 00
+d λ
+x
+λ ˆ
+1 
+*
+1
+We can confirm that this is a maximum as
+(b)
+(
+Page 8
+n α *
+d λ λ 2
+l λ =−
+2 ( )
+< 0 .
+ d 2
+
+CRLB = − 1/ E  2 l ( λ )  = λ 2 / ( n α * )
+ d λ
+
+
+
+So, approximately, λ ˆ ~ N λ , λ 2 / 5 α *
+(iv)
+d 2
+
+
+)
+
+(c) The approximation of the distribution relies on a very small sample
+(n = 5) and therefore may not be valid.
+
+(a) We now have
+n n
+i = 1 i = 1
+l ( α , λ ) = n α log ( λ ) − n log ( Γ ( α ) ) + ( α − 1 )  log ( x i ) − λ  x i 
+α
+From part (iii): λ ˆ = , and
+x Subject CT3 (Probability and Mathematical Statistics Core Technical) – September 2016 – Examiners’ Report
+Γ ′ ( α ˆ ) n
+d
+l ( α , λ ) = 0  n log λ ˆ − n
++ log ( x i ) = 0
+d α
+Γ ( α ˆ ) 
+i = 1
+()
+
+Γ ′ ( α ˆ ) n
+ α ˆ 
+ n log   − n
++ log ( x i ) = 0
+Γ ( α ˆ ) 
+ x 
+i = 1
+Γ ′ ( α ˆ )
+ log ( x i )
+ log ( α ˆ ) −
+= log ( x ) − i = 1
+n
+Γ ( α ˆ )
+n
+(b)
+
+The equation for α̂ cannot be solved analytically, so a numerical
+solution is required. Then α̂ can be substituted in the equation for λ̂ .
+
+[Total 21]
+Parts (i), (ii) and (iii)(a) were very well answered, while performance in
+part (iii)(b) was mixed. In part (iii)(c) many candidates failed to comment on
+the effect of the small sample size on the approximation. Many answers to
+part (iv) were weaker. This is a maximum likelihood derivation, requiring
+moderate calculus and algebra skills.
