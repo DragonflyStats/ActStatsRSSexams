@@ -1,0 +1,285 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+PLEASE TURN OVER7
+An analyst is investigating the number of car insurance claims made by policyholders
+living in different parts of the country. Denote by X the number of claims made by
+policyholders living in large cities, Y the number of claims made by policyholders
+living in small cities, and Z the number of claims made by policyholders living in the
+countryside. For each of the three groups of policyholders consider a random sample
+of size 500 and count the number of claims made during the last calendar year.
+The following table shows the results for the three groups of policyholders:
+No claim
+One claim
+More than one claim
+Total
+Large City Small City Countryside
+370
+93
+37
+500 390
+99
+11
+500 410
+87
+3
+500
+Total
+1,170
+279
+51
+1,500
+For example, 390 of the 500 policyholders living in small cities had no claim during
+the last year, and 3 of the 500 policyholders living in the countryside had more than
+one claim during the same year.
+(i)
+Perform a  2 -test to test the null hypothesis that the number of claims per
+policy is independent of the place of living.
+[7]
+After some further analysis, an actuary has estimated that the joint distribution of the
+number of claims last year and the place of living is given by the following table:
+Large City Small City Countryside
+No claim
+One claim
+More than one claim
+0.23
+0.06
+0.04
+0.25
+0.06
+0.02
+0.27
+0.06
+0.01
+For example, the probability that a randomly selected policyholder lives in the
+countryside and made no claim last year is 0.27.
+(ii)
+CT3 S2016–4
+Determine the probability that a randomly selected policyholder:
+(a) lives in a small city.
+(b) has submitted more than one claim last year.
+(c) has submitted more than one claim last year given that the policyholder
+lives in a large city.
+(d) lives in the countryside given the policyholder submitted fewer than
+two claims last year.
+(e) lives in a city (small or large) given the policyholder made at least one
+claim last year.
+[8]
+[Total 15]8
+Ten pairs of data on a predictor variable (x) and a response variable (y) are available
+with the following summary statistics:
+x  5.93 y  7.15
+10
+ ( x i  x ) 2  81.15
+i  1
+10
+ ( x i  x )( y i  y )  89.91 .
+i  1
+A linear model of the form y = α + βx + ε is fitted to the data, where the error
+terms (ε) independently follow a N (0,  2 ) distribution with  2 being an unknown
+parameter.
+(i)
+Determine the fitted line of the regression model.
+
+A partially completed ANOVA table for this regression analysis is given below.
+Source of
+variation Degrees of
+freedom Sums of
+squares Mean
+squares
+Regression
+Residual
+Total A
+B
+9 99.61
+21.63
+121.24 C
+D
+(ii) Determine the missing values A, B, C and D in the table.
+
+(iii) Determine an estimate of the variance  2 based on the above table.
+
+(iv) (a) Give the interpretation of the coefficient of determination, R 2 , in a
+linear regression model.
+(b) Determine the value of R 2 for the regression model fitted here, using
+the above table.
+
+(v)
+CT3 S2016–5
+Perform an F test to test the null hypothesis that there is no linear relationship
+between x and y, based on the above table.
+
+[Total 13]
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q7
+(i)
+Observed frequencies:
+No claim
+One claim
+More than one claim
+Total
+Large City Small City Countryside Total
+370
+93
+37
+500 390
+99
+11
+500 410
+87
+3
+500 1,170
+279
+51
+1,500
+Page 5Subject CT3 (Probability and Mathematical Statistics Core Technical) – September 2016 – Examiners’ Report
+Expected frequencies (under independence)
+No claim
+One claim
+More than one claim
+Total
+Large City Small City Countryside Total
+390
+93
+17
+500 390
+93
+17
+500 390
+93
+17
+500 1,170
+279
+51
+1,500
+
+2
+e − f )
+(
+Values of
+e
+No claim
+One claim
+More than one claim
+:
+Large City Small City Countryside
+1.025641
+0
+23.52941 0
+0.387097
+2.117647 1.025641
+0.387097
+11.52941
+
+Test statistic:
+2
+e − f )
+(
+
+e
+= 2*1.026 + 2*0.387 + 23.53 + 2.118 + 11.53 = 40.004
+
+This compares to aχ 2 -distribution with (3−1)*(3−1) = 4 degrees of freedom.
+
+The value of the test statistic is clearly very high and the null hypothesis is
+rejected at all reasonable significance levels. We conclude that the number of
+claims depends on the place of living.
+
+(ii)
+(a) P [small city] = 0.25+0.06+0.02=0.33 
+(b) P [more than one claim]=0.04+0.02+0.01=0.07 
+(c) P [more than one claim | large city]
+0.04
+0.04
+=
+= 0.1212
+=
+0.23 + 0.06 + 0.04 0.33 
+P [countryside | no claim or one claim]
+0.27 + 0.06
+0.33
+=
+=
+= 0.3548
+0.23 + 0.25 + 0.27 + 3*0.06 0.93 
+(d)
+Page 6Subject CT3 (Probability and Mathematical Statistics Core Technical) – September 2016 – Examiners’ Report
+(e)
+P [small city or large city | one claim or more than one claim]
+2*0.06 + 0.04 + 0.02
+0.18
+=
+= 0.72
+=
+
+3*0.06 + 0.04 + 0.02 + 0.01 0.25
+[Total 15]
+Generally well answered. There were some calculation errors in part (i), while
+in part (ii) not all steps were always shown clearly.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Q8
+(i)
+β ˆ =
+S xy
+S xx
+=
+89.91
+= 1.108
+81.15
+
+a ˆ = y − β ˆ x = 7.15 − 1.108 × 5.93 = 0 .58 
+Fitted model is: y ˆ = 0.58 + 1.108 x 
+(ii) A = 1, B = 8, C = 99.61/1 = 99.61, D = 21.63/8 = 2.704 
+(iii) σ ˆ 2 = 21.63 / 8 = 2.7 0 4 
+(iv) (a) R 2 gives the proportion of the total variation of y that is explained by x.
+
+(b) R 2 = 99.61/121.24 = 0.822
+(v)
+We want to test H 0 : β= 0 v. H 1 : β ≠ 0
+
+
+Under H 0 the value MS REG / MS RES = 99.61/2.704 = 36.84 should be a value
+
+from the F 1,8 distribution.
+The 0.99 quantile of F 1,8 is 11.26
+
+We have strong evidence to reject H 0 and we conclude that there is linear
+relationship between x and y.
+
+[Total 13]
+Generally very well answered. However, many candidates struggled with the
+interpretation of the coefficient of determination in part (iv)(a) – this is an
+important (and very widely used) concept in regression analysis.
+Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) – September 2016 – Examiners’ Report
+
