@@ -1,0 +1,104 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+[Total 3]
+Consider two events A and B, such that P ( A ) = 0.3 and P ( A ∩ B ) = 0.1 .
+Find the minimum and maximum possible values of the conditional probability
+P ( A | B ) .
+CT3 A2008—2
+5
+An insurance company covers claims from four different non-life portfolios, denoted
+as G 1 , G 2 , G 3 and G 4 . The number of policies included in each portfolio is given
+below:
+G 1
+G 2
+G 3
+G 4
+Portfolio
+No. of policies 4,000 7,000 13,000 6,000
+It is estimated that the percentages of policies that will result in a claim in the
+following year in each of the portfolios are 8%, 5%, 2% and 4% respectively.
+Suppose a policy is chosen at random from the group of 30,000 policies comprising
+the four portfolios after one year and it is found that a claim did arise on this policy
+during the year. Calculate the probability that the selected policy comes from
+portfolio G 3 .
+
+%%%%%%%%%%%%%%
+4
+The median should be preferred, as it is not sensitive to the extreme observed
+claim of \$4320.
+P ( A | B ) =
+P ( A ∩ B )
+P ( B )
+Maximum value of P(B) is 0.8 in which case P ( A | B ) =
+0.1
+= 0.125
+0.8
+Minimum value of P(B) is 0.1, in the case B ⊂ A. Then P ( A | B ) = 1
+Page 2Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2008 — Examiners’ Report
+5
+Define the following events:
+C: Policy results in a claim;
+B i : Policy comes from portfolio i, i = 1, 2, 3, 4.
+Then the required probability is P(B 3 |C), and using Bayes’ theorem:
+P ( B 3 | C ) =
+P ( C | B 3 ) P ( B 3 )
+P ( C | B 3 ) P ( B 3 )
+,
+=
+P ( C )
+∑ P ( C | B i ) P ( B i )
+i
+which gives
+P ( B 3 | C ) =
+0.02 ×
+0.08 ×
+13
+30
+4
+7
+13
+6
++ 0.05 × + 0.02 × + 0.04 ×
+30
+30
+30
+30
+=
+0.26 / 30 0.26
+=
+= 0.222 .
+1.17 / 30 1.17
+[OR It is possible to argue straight to
+260/(320 + 350 + 260 + 240) = 260/1170 = 0.222
+which is correct and gets full marks.]
