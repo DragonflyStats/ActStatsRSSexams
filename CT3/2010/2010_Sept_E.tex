@@ -1,0 +1,148 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+PLEASE TURN OVER11
+A life insurance company issuing critical illness insurance wants to compare the delay
+times from the date when a claim is made until it is settled, for different causes of
+illness covered. Random samples of 12 claims associated with two types of illness (A
+and B) related to heart disease have been collected. The logarithms of the delay times
+are given below (where the original times were measured in days):
+Cause A, y A : 4.0 5.4 4.6 3.5 4.2 4.5 4.2 4.9 5.1 5.2 5.1 5.4
+Cause B, y B : 5.7 5.6 4.2 5.1 4.4 5.9 5.4 3.9 5.7 4.5 4.8 3.9
+For these data:
+∑ y A = 56.1, ∑ y 2 A = 266.33,
+∑ y B = 59.1, ∑ y B 2 = 297.03
+(i) Use a suitable t-test to investigate the hypothesis that the mean delay time is
+the same for claims related to the two causes of illness and state clearly your
+conclusion.
+[6]
+(ii) Give a possible reason why the logarithms of the original delay time
+observations are used in this analysis.
+(iii)
+
+(a) Calculate an equal-tailed 95% confidence interval for \sigma 2 A \sigma 2 B , the
+ratio of the variances of the delay times for the two causes of illness.
+(b) Comment on the validity of the test in part (i) based on this confidence
+interval.
+
+The company collects a third sample of 12 claims associated with an illness (C)
+related to brain disease, and the logarithms of the delay times are given below:
+Cause C, y c : 5.6 6.2 6.0 5.6 7.1 5.0 4.5 6.4 4.6 6.0 5.5 5.3
+For these data:
+∑ y C = 67.8, ∑ y C 2 = 389.28
+For data in all three samples:
+∑∑ y = 183.0, ∑∑ y 2 = 952.64
+(iv) Use analysis of variance to test the hypothesis that the mean delay times are
+the same for all three causes of illness.
+[6]
+(v) State the assumptions made for this analysis of variance.
+CT3 S2010—6
+Comment briefly on the validity of the test in (iv), using the plot of the
+residuals of the analysis given below.
+
+(vi)
+-1.5
+-1.0
+-0.5
+0.0
+0.5
+1.0
+1.5
+Residuals
+[Total 22]
+CT3 S2010—7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+11
+(i)
+Less accurate estimation is the penalty paid for using the randomised
+response method.
+We want to test H 0 : μ A = μ B against H 1 : μ A ≠ μ B .
+Data give: y A = 56.1/12 = 4.675 , y B = 59.1/12 = 4.925
+s 2 A = (266.33 − 56.1 2 /12) /11 = 0.36932 ,
+s B 2 = (297.03 − 59.1 2 /12) /11 = 0.54205
+Assuming that the two samples come from normal distributions with the same
+variance,
+11 s 2 A + 11 s B 2
+2
+= 0.455685
+we first compute the pooled variance as s p =
+22
+y − y B
+which gives t = A
+= − 0.907 .
+s p 2 /12
+Critical values at 5% level are t 22 (0.025) = −2.074 and t 22 (0.975) = 2.074
+so we don’t have evidence against H 0 and conclude that the mean delay time is
+the same for claims associated with the two causes of illness.
+(ii)
+(iii)
+Distribution of times can be skewed to the right, and we need a log
+transformation to normalise the data (for test to be valid).
+(a)
+CI is given by
+⎛ s 2 A / s B 2
+⎞
+, ( s A 2 / s B 2 ) * F 11,11 (0.025) ⎟
+⎜ ⎜
+⎟
+⎝ F 11,11 (0.025)
+⎠
+F 11,11 (0.025) = 3.478 (using interpolation in the tables)
+giving CI as (0.68134/3.478, 0.68134*3.478) = (0.196, 2.370).
+(b)
+(iv)
+Page 6
+The value “1” is included in the 95% CI, meaning that the assumption
+of common variance made for the test is valid.
+SS T = 952.64 – 183 2 /36 = 22.39
+SS B = (56.1 2 + 59.1 2 + 67.8 2 )/12 − 183 2 /36 = 6.155
+⇒ SS R = 22.39 − 6.155 = 16.235
+Source of variation d.f. SS MSS
+Between
+Residual
+Total 2
+33
+35 6.155
+16.235
+22.390 3.078
+0.492Subject CT3 (Probability and Mathematical Statistics Core Technical) — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+F = 3.078/0.492 = 6.256 on (2,33) degrees of freedom.
+From tables, F 2,33 (0.05) is between 3.276 and 3.295, and F 2,33 (0.01) is
+between 5.289 and 5.336.
+We have strong evidence against the null hypothesis and conclude that the
+three mean delay times are not equal.
+12
+(v) The assumptions are that the data come from normal populations with
+constant variance.
+(vi) The plot suggests that the normality assumption is reasonable and that
+variance does not depend on cause. Test seems valid.
