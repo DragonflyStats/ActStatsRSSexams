@@ -1,0 +1,159 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+5
+For each of two life insurance companies, A and B, a random sample of 150 policies
+is examined. The number of policies which have given rise to claims in the past year
+is 45 for company A and 33 for company B.
+Test the null hypothesis that the underlying proportions of policies which have given
+rise to claims in the past year are equal for the two companies.
+[4]
+6
+Let X and Y be random variables with joint probability distribution:
+  kx 2 y 2 , 0  x  y  1
+f XY ( x , y )  
+otherwise
+ 0,
+where k is a constant.
+(i) Show that k = 18. [4]
+(ii) Determine f Y (y), the marginal density function of Y. 
+(iii) Determine P(X > 0.5Y = 0.75).
+CT3 S2016–3
+
+[Total 9]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q5
+45 = 0.3
+Company A: n 1 = 150, and θ ˆ 1 = 150
+33 = 0.22
+Company B: n 2 = 150, and θ ˆ 2 = 150
+Combined:
+n = 300, and θ ˆ =
+The test statistic is:
+45 + 33
+300
+
+= 0.26
+θ ˆ 1 − θ ˆ 2
+0.3 − 0.22
+=
+= 1.58
+1 
+ 1
+θ ˆ (1 − θ ˆ ) θ ˆ (1 − θ ˆ )
++
+0.26(1 − 0.26) 
++
+
+ 150 150 
+n 1
+n 2
+
+The significance probability of the test of H 0 : θ 1 = θ 2 against a two sided alternative is
+2*P(Z> 1.58) = 2*(1 − 0.94295) = 0.114.
+
+(Or, compare with the 97.5 percentile (1.96) of the normal distribution.)
+Page 4Subject CT3 (Probability and Mathematical Statistics Core Technical) – September 2016 – Examiners’ Report
+Therefore there is insufficient evidence to reject the null hypothesis, and we conclude
+that there is no difference between the underlying proportions.
+
+[Total 4]
+Mixed performance. The question was answered competently by well
+prepared candidates, but there were errors mainly concerning the use of a
+common θ estimate in the denominator. Also, note that this is a 2-sided test.
+Q6
+ f XY
+(i)
+xy
+11
+y = 1
+1
+k
+( x , y ) dydx =  kx y dydx =    x 2 y 3   dx
+ 3
+ y = x
+0 x
+0
+2 2
+
+1
+1
+k 2 5
+k  x 3 x 6 
+k  1 1  k
+=  x − x dx =  −  =  −  =
+3
+3   3
+6  
+3  3 6  18
+0
+0 
+Want integral equal to 1  k = 18 
+y
+x = y
+f Y ( y ) =  f XY ( x , y ) dx =  18 x 2 y 2 dx =  6 x 3 y 2 
+= 6 y 5
+
+ x = 0
+(ii)
+x
+(iii)
+0
+P ( X > 0.5| Y = 0.75 ) =
+0.75
+
+0.5
+0.75
+
+f ( x | Y = 0.75 ) ( x ) dx =
+0.75
+
+f XY ( x , 0.75 ) / f Y ( 0.75 ) dx 
+0.5
+0.75
+3
+3
+ 4   x 
+=  18 x 0.75 / (6 × 0.75 ) dx = 3 ×    
+= 0.7037
+3    3  
+
+0.5
+0.5
+2
+2
+5
+
+[Total 9]
+Parts (i) and (ii) were very well answered. Dealing with the conditional
+distribution in part (iii) was problematic.
