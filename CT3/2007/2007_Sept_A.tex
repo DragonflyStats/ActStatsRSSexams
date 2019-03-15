@@ -34,9 +34,7 @@
 \begin{document}
 \begin{enumerate}
 © Institute of Actuaries1
-Data collected on claim amounts (£) for two postcode regions give the following
-values for n (the number of claims), x (the mean claim amount) and s (the sample
-standard deviation) of the claim amounts.
+Data collected on claim amounts (£) for two postcode regions give the following values for n (the number of claims), x (the mean claim amount) and s (the sample standard deviation) of the claim amounts.
 Region 1
 25
 120.2
@@ -48,16 +46,15 @@ Region 2
 18
 142.7
 62.2
-Calculate, to one decimal place, the mean and sample standard deviation of the claim
-amounts for both regions combined.
+Calculate, to one decimal place, the mean and sample standard deviation of the claim amounts for both regions combined.
 [4]
 2
 The random variable X has probability density function
-f ( x ) =
+\[f ( x ) =
 2
 x 3
 ,
-x > 1
+x > 1\]
 and cumulative distribution function
 ⎧ 0,
 ⎪
@@ -69,9 +66,10 @@ x < 1
 x ≥ 1
 .
 Use the following uniform(0,1) random numbers
-0.5719, 0.8612, 0.3028
-to simulate three observations of X, explaining your method and calculations clearly.
+\[0.5719, 0.8612, 0.3028\]
+to simulate three observations of $X$, explaining your method and calculations clearly.
 [4]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 1
 x =
 \sigma x 25(120.2) + 18(142.7) 5573.6
@@ -90,6 +88,7 @@ Using the fact that \sigma x 2 = ( n − 1) s 2 + nx 2 , then for the combined s
 42
 Method: set uniform(0,1) random number r = F ( x ) = 1 – 1/ x 2
 ⇒ simulated observation x = [1/(1 − r )] 1/2
-Here we get x = 1.528 , 2.684, 1.198.
+Here we get $x = 1.528 , 2.684, 1.198.$
 Note: We can do away with the step of subtracting r from 1 and use x = (1/ r ) 1/2 .
 This gives x = 1.322, 1.078, 1.817.
+\end{document}
