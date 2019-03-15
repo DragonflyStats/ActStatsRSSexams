@@ -1,0 +1,74 @@
+9 The following data (x) give the acidity (in appropriate units) of three different
+varieties of grape.
+Variety Mean Variance
+A 8 7 18 15 12.0 28.7
+B 90 74 200 122 121.5 3137.0
+C 897 493 812 365 641.8 64284.9
+A wine maker wants to test whether there are differences in the mean acidity level of
+the three varieties and wishes to use analysis of variance (ANOVA) methodology.
+(i) Explain why ANOVA should not be used for the data as given in the table
+above. [2]
+A statistician suggests two transformations of the original data:
+  • the natural logarithm, y = ln(x),
+• and the square root, z = x.
+These give the following summary statistics:
+  y =ln(x) z = x
+Variety Mean Variance Mean Variance
+A 2.4075 0.2136 3.3975 0.6046
+B 4.7250 0.1892 10.8200 5.9242
+C 6.4000 0.1800 24.9425 26.4567
+The wine maker then decides to use the natural logarithm transformation (y) of the
+original data.
+(ii) Justify the wine maker’s choice of data transformation for performing the
+analysis. [1]
+(iii) Perform ANOVA on the transformed data, y, to investigate possible
+differences in the mean acidity level of the three grape varieties and state your
+conclusions. [6]
+(iv) Calculate 95% confidence intervals for the mean values of each of the three
+varieties on the original scale, based on the ANOVA performed on the
+transformed values. [6]
+(v) Comment on the intervals obtained in part (iv) in relation to your conclusion
+in part (iii). [2]
+[Total 17]
+
+9 (i) The original values vary in scale among the 3 varieties, resulting in large
+differences in the variances of the 3 groups. This violates the ANOVA
+requirement that the error variance should not depend on the treatment
+concerned. [2]
+(ii) The logarithm transformation gives very similar variances for the 3 groups, as
+opposed to the square root which still produces large differences. [1]
+(iii) First calculate relevant sums:
+  2.4075 4 9.63, 2 3 0.2136 4 2.40752 23.825 yA    yA     
+4.725 4 18.9, 2 3 0.1892 4 4.7252 89.870 yB    yB     
+6.4 4 25.6, 2 3 0.18 4 6.42 164.38 yC    yC     
+SST = 23.825 + 89.87 + 164.38 – (9.63+18.9+25.6)2 / 12 = 33.9036
+SSB = (9.632 +18.92 +25.62)/4 – (9.63+18.9+25.6)2 / 12 = 32.1553
+SSR = SST – SSB = 1.7483
+ANOVA table:
+  Source of variation df SS MSS
+Between groups 2 32.1553 16.0777
+Residual 9 1.7483 0.1943
+Total 11 33.9036
+Subject CT3 (Probability and Mathematical Statistics) – September 2014 – Examiners’ Report
+Page 10
+16.0777 82.75
+0.1943
+F  on 2, 9 df
+F2,9(1%) = 8.022, so P-value << 0.01
+There is overwhelming evidence against the null hypothesis. We conclude that
+there are differences in the mean level of acidity of the three grape varieties.
+[6]
+(iv) The CIs are given by
+yi  t9,0.975 ˆ / ni witht9,0.975 2.262 and ˆ  MSSR  0.44079
+For A: 2.4075  2.262 0.44079 / 2 i.e. (1.909, 2.906)
+and on the original scale: e1.909, e2.906  = (6.75, 18.28)
+For B: 4.725  2.262 0.44079 / 2 i.e. (4.226, 5.224)
+and on the original scale (68.44, 185.68)
+For C: 6.4  2.262 0.44079 / 2 i.e. (5.901, 6.899)
+and on the original scale (365.40, 990.28) [6]
+(v) The CIs do not overlap. This agrees with the ANOVA conclusion, and in
+addition shows differences between all 3 pairs of means. [2]
+[Total 17]
+There were no problems with the ANOVA part of this question. However, the explanation in
+part (i) was often unclear. In part (iv) some candidates failed to transform back to the
+original scale.
