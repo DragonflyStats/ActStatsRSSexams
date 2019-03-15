@@ -56,7 +56,7 @@ For these data Σy = 93, Σy 2 = 865
 Let μ A , μ B , μ C denote the mean telephone holding times under recorded message A, B and C respectively.
 (i)
 (a) Perform an analysis of variance to test the hypothesis that the nature of the recorded message has no effect on the length of time that callers remain on hold. You should construct an appropriate ANOVA table and state your conclusion clearly.
-(b) Calculate a 95\% confidence interval for μ A − μ C , using information available from all three samples.
+(b) Calculate a 95\% confidence interval for $\mu_A − \mu_C$ , using information available from all three samples.
 An equivalent approach for analysing the effects of the recorded messages on holding
 time is the following:
 consider the regression model E [ Y i ] = a + b 1 x i 1 + b 2 x i 2 , i = 1, 2, ..., 15, where
@@ -113,17 +113,20 @@ SS R = 288.4
 93 /15 = 149.2
 2
 149.2 = 139.2
+\begin{verbatim}
 Source of variation
 d.f. SS MSS
 Between 2 149.2 74.6
 Residual 12 139.2 11.6
 Total 14 288.4
+\end{verbatim}
 2
 (b)
 F = 74.6/11.6 = 6.431 on (2,12) degrees of freedom. 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item From yellow tables, F 2,12 (0.05) = 3.885 and F 2,12 (0.01) = 6.927. 1
-\item We can reject the hypothesis of “no message effect” at the 5% significance level, but not at the 1% level. We have some evidence
+\item From yellow tables, $F 2,12 (0.05) = 3.885$ and $F 2,12 (0.01) = 6.927$. 1
+\item We can reject the hypothesis of “no message effect” at the 5\% significance level, but not at the 1\% level. We have some evidence
 against the “no message effect” hypothesis and conclude that there is a message effect. 1
 t 12 (0.025) = 2.179 1
 1
@@ -162,11 +165,11 @@ a
 C
 1
 1
-\item The 95% CI for A C in (i)(b) can be used for testing H 0:
+\item The 95\% CI for A C in (i)(b) can be used for testing H 0:
 0 and equivalently H 0: b 1 = 0. The interval does not include
 A
 C
-the value 0, and thus we reject H 0 at the 5% level.
+the value 0, and thus we reject H 0 at the 5\% level.
 2
 \end{itemize}
 \end{document}
