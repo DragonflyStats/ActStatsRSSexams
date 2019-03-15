@@ -1,0 +1,201 @@
+9 An analyst is interested in using a gamma distribution with parameters α = 2 and
+λ = ½, that is, with density function
+1
+( ) 1 2 , 0
+4
+x
+f x xe x
+−
+= < < ∞.
+(i) (a) State the mean and standard deviation of this distribution.
+(b) Hence comment briefly on its shape.
+[2]
+(ii) Show that the cumulative distribution function is given by
+1
+( ) 1 (1 1 ) 2 , 0
+2
+x
+F x x e x
+−
+= − + < < ∞ (zero otherwise). [3]
+The analyst wishes to simulate values x from this gamma distribution and is able to
+generate random numbers u from a uniform distribution on (0,1).
+(iii) (a) Specify an equation involving x and u, the solution of which will yield
+the simulated value x.
+(b) Comment briefly on how this equation might be solved.
+(c) The graph below gives F(x) plotted against x. Use this graph to obtain
+the simulated value of x corresponding to the random number u = 0.66.
+[3]
+[Total 8]
+CT3 S2012–5 PLEASE TURN OVER
+10 The number of hours that people watch television per day is the subject of an
+empirical study that is carried out in four regions in a country. Five people are
+randomly selected in each of the regions and are asked about the average number of
+hours per day that they spent watching television during the last year. The results are
+shown in the following table, with the last column shows the average in each region.
+Average
+Region 1 2.0 1.1 0.2 3.8 2.8 1.98
+Region 2 1.2 1.0 0.9 1.1 1.6 1.16
+Region 3 2.5 2.0 2.6 2.4 2.3 2.36
+Region 4 1.2 1.7 1.0 1.8 1.3 1.40
+Based on the above observations the following ANOVA table was obtained:
+  Source of variation d.f. SS MSS
+Between regions ... 4.4655 ...
+Residual ... 8.892 ...
+(i) State the mathematical model underlying the one-way analysis of variance
+together with all associated assumptions. [3]
+(ii) Complete the ANOVA table. [1]
+(iii) Carry out an analysis of variance to test the hypothesis that the region has no
+effect on the average time spent watching television. You should write down
+the null hypothesis, calculate the value of the test-statistic, state its distribution
+including any parameters, calculate the p-value approximately and state your
+conclusion. [4]
+[Total 8]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+  10 (i) Yij = μ + τi + εij
+with εij being i.i.d. N(0, σ2 )
+In particular, it is assumed that the variance is the same in all groups.
+(ii)
+Source of variation d.f. SS MSS
+Between regions 3 4.4655 1.4885
+Residual 16 8.892 0.55575
+(iii) H0 : τi = 0 for all groups i
+F = 2.6784 should be from F distribution with 3,16 d.f.
+From the tables we know that this gives a p-value of 0.086 (with
+                                                            interpolation).
+Reject at 10%, not at 5%, some but very weak evidence against H0
+Mainly well answered. Care is required in calculating the p-values correctly. Also, a number
+of candidates had difficulties in writing down a sensible form of the ANOVA model in part (i).
+11 (i) This is an F distribution with 10, 8 degrees of freedom.
+(ii) The interval is given by
+2 2 2 2
+10,8,0.025 10,8,0.975
+SA / SB , SA / SB
+F F
+⎛ ⎞
+⎜⎜ ⎟⎟
+⎝ ⎠
+From tables F10,8,0.025 = 4.295 and F10,8,0.975 =1/ F8,10,0.025 =1/ 3.855
+giving 0.692 / 0.813 , (0.692 / 0.813)*3.855
+4.295
+⎛ ⎞
+⎜ ⎟
+⎝ ⎠
+= (0.198, 3.281)
+(iii) As the two samples are independent we have that
+( ) ( ) ( ) 2 (1/11 1 / 9)
+11 9
+A B
+A B
+V X V X
+V X − X = + =σ +
+  Normality of the data then gives that ( ) ~ (0,1)
+1 1
+11 9
+Z X A XB A B N
+− − μ −μ
+=
+  σ +
+  Subject CT3 (Probability and Mathematical Statistics) – September 2012 – Examiners’ Report
+Page 8
+We are also given that
+2
+2
+2 18
+18
+p ~ S
+Y = χ
+σ
+and with Z and Y being independent
+we can use that ~ 18
+/18
+Z t
+Y
+to obtain ( )
+1 1
+11 9
+A B A B
+p
+X X
+S
+− − μ −μ
++
+  ~ t18.
+(iv) First compute 2 10*0.692 8*0.813 0.74577 0.864
+p 18 p s s +
+  = = ⇒ =
+  Then with t18,0.025 = 2.101 the interval is given by (4.05 – 4.36) ± 2.101 *
+  0.864 (1/11 + 1/9)1/2 i.e. (– 1.126, 0.506).
+(v) The interval includes the value 0, suggesting that there is no difference in the
+mean effectiveness of the two vaccines.
+Part (iii) was problematic for many candidates. Many candidates struggled to provide a
+‘proof’ that had sufficient rigour. There were errors also in determining the endpoints of the
+CI in part (ii), often due to using the wrong percentiles of the F distribution.
+12 (i) Likelihood function
+L( p) = p6 (20 p)114 (10 p)62 (1−31p)18 = Cp182 (1− 31p)18
+log L( p) = logC +182log p +18log(1−31p)
+log ( ) 182 18 ( 31) 0
+1 31
+L p
+p p p
+∂
+= + − =
+  ∂ −
+182 558 1 31 31 1 1 31
+1 31 182 558 182 558 558 182 558
+p p p p p
+p p
+− ⎛ ⎞ = ⇒ = ⇒ + = ⇒ ⎜ + ⎟ − ⎝ ⎠
+=1/ 558
+pˆ = 0.02935
+Subject CT3 (Probability and Mathematical Statistics) – September 2012 – Examiners’ Report
+Page 9
+(ii) H0 : The proposed distribution is the true distribution of the data with nonspecified
+parameter p (it is important to mention that the parameter itself is
+             not part of the null hypothesis)
+Under H0 and using pˆ = 0.02935 from (i)(a) we obtain the following
+expected frequencies
+Body-Mass-Index < 18.5 18.5–25 25–30 >30
+Expected frequency 5.87 117.4 58.7 18.03
+Test-statistic is 0.286915
+from a Chi-square distribution with 2 d.f.
+The test statistic has a very small value, and there is no evidence against the
+null.
+(iii) P[BMI > 30]
+= P[BMI > 30|single]P[single]+ P[BMI > 30|married]P[married]
+12 *0.5 6 *0.5 0.1094
+158 42
+= + =
+  (iv) H0 : Marital status is independent of BMI
+Under H0 we have:
+  Marital Status Body-Mass-Index Total
+< 18.5 18.5–25 25–30 >30
+Single 4.74 90.06 48.98 14.22 158
+Married 1.26 23.94 13.02 3.78 42
+Total 6 114 62 18 200
+Use χ2 test.
+Test-statistic:
+  . . 2 2 4
+1 1 . .
+*
+  ( )
+* 8.528399
+i j
+ij
+i j i j
+f f
+f
+C n f f
+n
+= =
+  −
+=ΣΣ =
+  C is χ2 -distributed with (2 −1 )(4 −1 ) = 3 degrees of freedom.
+p -value: P[C > 8.528399] < 1− 0.9616 = 0.0384
+Subject CT3 (Probability and Mathematical Statistics) – September 2012 – Examiners’ Report
+Page 10
+Therefore, we reject H0 at 5% level, but not at the 1% level.
+There were errors in part (i) caused by failure to differentiate correctly. In part (iv)
+alternative solutions involving merging of adjacent categories were given full redit where
+correct. However note that merging the first and last column is not correct in this question.
