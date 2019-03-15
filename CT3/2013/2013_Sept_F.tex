@@ -1,0 +1,86 @@
+CT3 S2012–8
+13 The following data give the weight, in kilograms, of a random sample of 10 different
+models of similar motorcycles and the distance, in metres, required to stop from a
+speed of 20 miles per hour.
+Weight x 314 317 320 326 331 339 346 354 361 369
+Distance y 13.9 14.0 13.9 14.1 14.0 14.3 14.1 14.5 14.5 14.4
+For these data: Σx = 3,377 , Σx2 =1,143,757 , Σy =141.7 ,
+Σy2 =2,008.39 , Σxy =47,888.6
+Also: Sxx = 3,344.1, Syy = 0.501, Sxy = 36.51
+A scatter plot of the data is shown below.
+(i) (a) Comment briefly on the association between weight and stopping
+distance, based on the scatter plot.
+(b) Calculate the correlation coefficient between the two variables.
+[2]
+(ii) Investigate the hypothesis that there is positive correlation between the weight
+of the motorcycle and the stopping distance, using Fisher’s transformation of
+the correlation coefficient. You should state clearly the hypotheses of your
+test and any assumption that you need to make for the test to be valid. [6]
+(iii) (a) Fit a linear regression model to these data with stopping distance being
+the response variable and weight the explanatory variable.
+(b) Calculate the coefficient of determination for this model and give its
+interpretation.
+320 330 340 350 360 370
+13.9 14.0 14.1 14.2 14.3 14.4 14.5
+Weight (kilograms)
+Stopping distance (meters)
+Stopping distance against motorcycle weight
+CT3 S2012–9
+(c) Calculate the expected change in stopping distance for every additional
+10 kilograms of motorcycle weight according to the model fitted in
+part (iii)(a).
+[5]
+[Total 13]
+END OF PAPER
+%%%%%%%%%%%%%%%%%%%
+13 (i) (a) The scatter plot suggests a positive linear association between weight
+and stopping distance.
+(b) xy 0.892
+xx yy
+S
+r
+S S
+= =
+  (ii) We want to test H0: ρ = 0 against H1: ρ > 0 .
+Need to assume that data come from a bivariate normal distribution.
+Fisher’s (standardised) transformation statistic is given by
+1 log 1
+2 1 7 log 1.892 3.79
+1/ ( 3) 2 0.108
+r
+r
+n
+⎛ + ⎞
+⎜ − ⎟ ⎛ ⎞ ⎝ ⎠ = = − ⎜ ⎟ ⎝ ⎠
+and under H0 this should be a value from the N(0,1) distribution.
+This gives P-value = Pr(Z ≥ 3.79) ≈ 0.0001, so there is very strong evidence
+against H0 and we conclude that motorcycle weight and stopping distance are
+positively correlated.
+[Or by considering critical values of N(0,1) distribution.]
+(iii) (a) ˆ 36.51 0.01092
+3344.1
+xy
+xx
+S
+S
+β = = =
+  αˆ = y −βˆ x =14.17 − 0.01092*337.7 =10.4823
+Fitted line is yˆ = 10.48 + 0.01092x
+(b) R2 =
+  2 36.512 0.7956
+3344.1*0.501
+xy
+xx yy
+S
+S S
+= =
+  This gives the proportion of total variation explained by the model.
+(Note that R2 can also be computed as r2.)
+Subject CT3 (Probability and Mathematical Statistics) – September 2012 – Examiners’ Report
+Page 11
+(c) For every additional unit (kilogram) of weight the stopping distance is
+expected to increase by βˆ = 0.01092 metres. So, for 10 kilograms of
+weight the distance is expected to increase by 0.109 meters.
+Generally adequately answered. Identifying the correct hypotheses in part (ii) was
+problematic in some cases, while many candidates failed to assume bivariate normality.
+END OF EXAMINERS’ REPORT
