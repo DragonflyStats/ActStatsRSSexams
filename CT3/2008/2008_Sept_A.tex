@@ -31,13 +31,14 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate} Institute of Actuaries1
-The mean of a sample of 30 claim amounts arising from a certain kind of insurance
+\begin{enumerate} 
+%% Institute of Actuaries1
+\item The mean of a sample of 30 claim amounts arising from a certain kind of insurance
 policy is £5,200. Six of these claim amounts have mean £8,000 while ten others have mean £3,100.
 Calculate the mean of the remaining claim amounts in this sample.
 2
 [3]
-Five years ago a financial institution issued a specialised type of investment bond and investors had the option to cash in after 1, 2, 3, 4 or 5 years. The following table gives a frequency distribution showing the numbers of those investors who cashed in
+\item Five years ago a financial institution issued a specialised type of investment bond and investors had the option to cash in after 1, 2, 3, 4 or 5 years. The following table gives a frequency distribution showing the numbers of those investors who cashed in
 at each stage.
 duration (length of time held before being cashed in)
 1 year
@@ -51,27 +52,31 @@ duration (length of time held before being cashed in)
 64
 98
 Calculate the sample mean and standard deviation of the duration of these bonds before being cashed in.
-3
+
+\item 3
 (i)
 [4]
-Let Y be the sum of two independent random variables X 1 and X 2 , that is,
+Let Y be the sum of two independent random variables $X_1$ and $X_2$ , that is,
 Y  X 1  X 2 .
 Show that the moment generating function (mgf) of Y is the product of the
 mgfs of X 1 and X 2 .
 [2]
 (ii)
-Let X 1 and X 2 be independent gamma random variables with parameters
+\item Let $X_1$ and $X_2$ be independent gamma random variables with parameters
 (  1 ,  ) and (  2 ,  ) , respectively .
 Use mgfs to show that Y  X 1  X 2 is also a gamma random variable and
 specify its parameters.
 [2]
 [Total 4]
-4
+
+\item 4
 A random sample of 15 observations is taken from a normally distributed population
 of values. The sample mean is 94.2 and the sample variance is 24.86.
-Calculate a 99% confidence interval for the population mean.
-
+Calculate a 99\% confidence interval for the population mean.
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\newpage
 1
 n = 30, x = 5200
 n 1 = 6, x 1 = 8000
@@ -107,8 +112,10 @@ variance =
 539
 540
 ∴ s.d. = 1.42 years
-M Y ( t ) = E ( e tY ) = E ( e t ( X 1 + X 2 ) )
-= E ( e tX 1 ) E ( e tX 2 ) = M X 1 ( t ) M X 2 ( t )
+\begin{eqnarray*}
+M Y ( t ) &=& E ( e tY ) \\ &=& E ( e t ( X 1 + X 2 ) )
+\\ &=& E ( e tX 1 ) E ( e tX 2 ) \\ &=& M X 1 ( t ) M X 2 ( t )\\
+\end{eqnarray*}
 (ii)
 t
 M X i ( t ) = (1 − ) −α i
@@ -124,5 +131,7 @@ t 14 (0.005) = 2.977
 Page 2
 24.86
 15
-i.e. 94.2 ± 3.83 i.e. (90.37,98.03)Subject CT3 (Probability and Mathematical Statistics Core Technical) — September2008 — Examiners’ Report
+i.e. 94.2 ± 3.83 i.e. (90.37,98.03)
+
+%Subject CT3 (Probability and Mathematical Statistics Core Technical) — September2008 — Examiners’ Report
 \end{document}
