@@ -1,315 +1,189 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%8
-Let X 1 denote the mean of a random sample of s%%--%%--(i) \item  
-item ze n from a normal populat%%--%%--(i) \item  
-item on w%%--%%--(i) \item  
-item th
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+
+8
+Let X 1 denote the mean of a random sample of size n from a normal population with
 mean
 2
 1 ,
-and var%%--%%--(i) \item  
-item ance
+and variance
 and let X 2 denote the mean of a random sample also of
-s%%--%%--(i) \item  
-item ze n from a normal populat%%--%%--(i) \item  
-item on w%%--%%--(i) \item  
-item th the same mean
-two samples are %%--%%--(i) \item  
-item ndependent.
-but w%%--%%--(i) \item  
-item th var%%--%%--(i) \item  
-item ance
+size n from a normal population with the same mean
+two samples are independent.
+but with variance
 2
 2 .
 The
-Def%%--%%--(i) \item  
-item ne W as the we%%--%%--(i) \item  
-item ghted average of the sample means
+Define W as the weighted average of the sample means
 W
 X 1 (1
 ) X 2
-(%%--%%--(i) \item  
-item ) Show that W %%--%%--(i) \item  
-item s an unb%%--%%--(i) \item  
-item ased est%%--%%--(i) \item  
-item mator of . [1]
-(%%--%%--(i) \item  
-item %%--%%--(i) \item  
-item ) Obta%%--%%--(i) \item  
-item n an express%%--%%--(i) \item  
-item on for the mean square error of W. 
-(%%--%%--(i) \item  
-item %%--%%--(i) \item  
-item %%--%%--(i) \item  
-item ) Show that the value of
-g%%--%%--(i) \item  
-item ven by
+(i) Show that W is an unbiased estimator of . [1]
+(ii) Obtain an expression for the mean square error of W. [2]
+(iii) Show that the value of
+given by
 2
 2
 2
 1
 2
 2
-for wh%%--%%--(i) \item  
-item ch W has m%%--%%--(i) \item  
-item n%%--%%--(i) \item  
-item mum mean square error %%--%%--(i) \item  
-item s
+for which W has minimum mean square error is
 ,
-and ver%%--%%--(i) \item  
-item fy that the opt%%--%%--(i) \item  
-item mum corresponds to a m%%--%%--(i) \item  
-item n%%--%%--(i) \item  
-item mum.
+and verify that the optimum corresponds to a minimum.
 9
-[]
-(%%--%%--(i) \item  
-item v) Cons%%--%%--(i) \item  
-item der the spec%%--%%--(i) \item  
-item al case when the var%%--%%--(i) \item  
-item ances of the two random samples are
-equal to a common value 2 . State (do not der%%--%%--(i) \item  
-item ve) the max%%--%%--(i) \item  
-item mum l%%--%%--(i) \item  
-item kel%%--%%--(i) \item  
-item hood
-est%%--%%--(i) \item  
-item mator of calculated from the comb%%--%%--(i) \item  
-item ned samples, and compare %%--%%--(i) \item  
-item t w%%--%%--(i) \item  
-item th the
-est%%--%%--(i) \item  
-item mator obta%%--%%--(i) \item  
-item ned %%--%%--(i) \item  
-item n (%%--%%--(i) \item  
-item %%--%%--(i) \item  
-item %%--%%--(i) \item  
-item ).
-
+[3]
+(iv) Consider the special case when the variances of the two random samples are
+equal to a common value 2 . State (do not derive) the maximum likelihood
+estimator of calculated from the combined samples, and compare it with the
+estimator obtained in (iii).
+[2]
 [Total 8]
-(%%--%%--(i) \item  
-item ) Show that for cont%%--%%--(i) \item  
-item nuous random var%%--%%--(i) \item  
-item ables X and Y:
+(i) Show that for continuous random variables X and Y:
 E[Y] = E[E(Y|X)].
-(%%--%%--(i) \item  
-item %%--%%--(i) \item  
-item )
-Suppose that a random var%%--%%--(i) \item  
-item able X has a standard normal d%%--%%--(i) \item  
-item str%%--%%--(i) \item  
-item but%%--%%--(i) \item  
-item on, and the
-cond%%--%%--(i) \item  
-item t%%--%%--(i) \item  
-item onal d%%--%%--(i) \item  
-item str%%--%%--(i) \item  
-item but%%--%%--(i) \item  
-item on of a Po%%--%%--(i) \item  
-item sson random var%%--%%--(i) \item  
-item able Y, g%%--%%--(i) \item  
-item ven the value of
-X = x, has expectat%%--%%--(i) \item  
-item on g(x) = x 2 + 1.
-Determ%%--%%--(i) \item  
-item ne E[Y] and Var[Y].
-CT S2006
-[]
+(ii)
+Suppose that a random variable X has a standard normal distribution, and the
+conditional distribution of a Poisson random variable Y, given the value of
+X = x, has expectation g(x) = x 2 + 1.
+Determine E[Y] and Var[Y].
+CT3 S2006
+[3]
 4
 [5]
 [Total 8]10
 Let (X 1 , X 2 ,
-, X n ) be a random sample of a gamma(4.5, ) random var%%--%%--(i) \item  
-item able, w%%--%%--(i) \item  
-item th
+, X n ) be a random sample of a gamma(4.5, ) random variable, with
 sample mean X .
-(%%--%%--(i) \item  
-item )
-(%%--%%--(i) \item  
-item %%--%%--(i) \item  
-item )
+(i)
+(ii)
 2
 9 n .
-(a) Us%%--%%--(i) \item  
-item ng moment generat%%--%%--(i) \item  
-item ng funct%%--%%--(i) \item  
-item ons, show that 2 nX ~
-(b) Construct a 95\% conf%%--%%--(i) \item  
-item dence %%--%%--(i) \item  
-item nterval for , based on X and the result
-%%--%%--(i) \item  
-item n (%%--%%--(i) \item  
-item )(a) above.
-(c) Evaluate the %%--%%--(i) \item  
-item nterval %%--%%--(i) \item  
-item n (%%--%%--(i) \item  
-item )(b) above %%--%%--(i) \item  
-item n the case for wh%%--%%--(i) \item  
-item ch a random
-sample of 10 observat%%--%%--(i) \item  
-item ons gave a value
-X_{%%--%%--(i) \item  
-item } 21.47
+(a) Using moment generating functions, show that 2 nX ~
+(b) Construct a 95% confidence interval for , based on X and the result
+in (i)(a) above.
+(c) Evaluate the interval in (i)(b) above in the case for which a random
+sample of 10 observations gave a value
+x i 21.47
 [9]
-(a) Show that the max%%--%%--(i) \item  
-item mum l%%--%%--(i) \item  
-item kel%%--%%--(i) \item  
-item hood est%%--%%--(i) \item  
-item mator of
-%%--%%--(i) \item  
-item s g%%--%%--(i) \item  
-item ven by
+(a) Show that the maximum likelihood estimator of
+is given by
 4.5
 .
 X
 (b)
-Show that the asymptot%%--%%--(i) \item  
-item c standard error of
+Show that the asymptotic standard error of
 4.5n
 (c)
 1/ 2
-%%--%%--(i) \item  
-item s est%%--%%--(i) \item  
-item mated by
+is estimated by
 .
-Construct a 95\% conf%%--%%--(i) \item  
-item dence %%--%%--(i) \item  
-item nterval for based on the asymptot%%--%%--(i) \item  
-item c
-d%%--%%--(i) \item  
-item str%%--%%--(i) \item  
-item but%%--%%--(i) \item  
-item on of , and evaluate th%%--%%--(i) \item  
-item s %%--%%--(i) \item  
-item nterval %%--%%--(i) \item  
-item n the case for wh%%--%%--(i) \item  
-item ch a
-random sample of 100 observat%%--%%--(i) \item  
-item ons gave a value
-X_{%%--%%--(i) \item  
-item } 225..
+Construct a 95% confidence interval for based on the asymptotic
+distribution of , and evaluate this interval in the case for which a
+random sample of 100 observations gave a value
+x i 225.3.
 [9]
 [Total 18]
-CT S2006
-5
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-8
-(%%--%%--(i) \item  
-item )
-E ( W ) = E ( \alpha X 1 + (1 − \alpha ) X 2 )
-= \alpha E ( X 1 ) + (1 − \alpha ) E ( X 2 ) = \alphaμ + (1 − \alpha ) μ = μ
-Therefore W %%--%%--(i) \item  
-item s unb%%--%%--(i) \item  
-item ased.
-(%%--%%--(i) \item  
-item %%--%%--(i) \item  
-item )
-MSE(W) = var(W) + {b%%--%%--(i) \item  
-item as(W)} 2
-W %%--%%--(i) \item  
-item s unb%%--%%--(i) \item  
-item ased
-∴ MSE(W) = var(W)
-= var( \alpha X 1 + (1 − \alpha ) X 2 )
-= \alpha 2 var( X 1 ) + (1 − \alpha ) 2 var( X 2 ) (%%--%%--(i) \item  
-item ndependent samples)
-= \alpha 2
-(%%--%%--(i) \item  
-item %%--%%--(i) \item  
-item %%--%%--(i) \item  
-item )
-\s%%--%%--(i) \item  
-item gma 1 2
-\s%%--%%--(i) \item  
-item gma 2
-+ (1 − \alpha ) 2 2
-n
-n
-\s%%--%%--(i) \item  
-item gma 2
-\s%%--%%--(i) \item  
-item gma 2
-d MSE
-= 2 \alpha 1 − 2(1 − \alpha ) 2
-d \alpha
-n
-n
-d MSE
-= 0 ⇒ ( \s%%--%%--(i) \item  
-item gma 1 2 + \s%%--%%--(i) \item  
-item gma 2 2 ) \alpha = \s%%--%%--(i) \item  
-item gma 2 2
-d \alpha
-Page 6Subject CT  — September 2006 — 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\s%%--%%--(i) \item  
-item gma 22
-∴ \alpha=
-\s%%--%%--(i) \item  
-item gma 1 2 + \s%%--%%--(i) \item  
-item gma 2 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%8
+(i)
+E ( W ) = E ( α X 1 + (1 − α ) X 2 )
+= α E ( X 1 ) + (1 − α ) E ( X 2 ) = αμ + (1 − α ) μ = μ
+Therefore W is unbiased.
+(ii)
+MSE(W) = var(W) + {bias(W)} 2
+W is unbiased
+∴ MSE(W) = var(W)
+= var( α X 1 + (1 − α ) X 2 )
+= α 2 var( X 1 ) + (1 − α ) 2 var( X 2 ) (independent samples)
+= α 2
+(iii)
+σ 1 2
+σ 2
++ (1 − α ) 2 2
+n
+n
+σ 2
+σ 2
+d MSE
+= 2 α 1 − 2(1 − α ) 2
+d α
+n
+n
+d MSE
+= 0 ⇒ ( σ 1 2 + σ 2 2 ) α = σ 2 2
+d α
+Page 6Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
+σ 22
+∴ α=
+σ 1 2 + σ 2 2
 d 2 MSE
-d \alpha 2
-(%%--%%--(i) \item  
-item v)
+d α 2
+(iv)
 = 2
-\s%%--%%--(i) \item  
-item gma 1 2
-\s%%--%%--(i) \item  
-item gma 2
-+ 2 2 > 0 ∴ m%%--%%--(i) \item  
-item n%%--%%--(i) \item  
-item mum
+σ 1 2
+σ 2
++ 2 2 > 0 ∴ minimum
 n
 n
-The max%%--%%--(i) \item  
-item mum l%%--%%--(i) \item  
-item kel%%--%%--(i) \item  
-item hood est%%--%%--(i) \item  
-item mator of μ %%--%%--(i) \item  
-item n the spec%%--%%--(i) \item  
-item al case w%%--%%--(i) \item  
-item th
-\s%%--%%--(i) \item  
-item gma 1 2 = \s%%--%%--(i) \item  
-item gma 2 2 = \s%%--%%--(i) \item  
-item gma 2 %%--%%--(i) \item  
-item s
+The maximum likelihood estimator of μ in the special case with
+σ 1 2 = σ 2 2 = σ 2 is
 μ ˆ =
 =
 nX + nX 2
-sum of observat%%--%%--(i) \item  
-item ons
+sum of observations
 = 1
-number of observat%%--%%--(i) \item  
-item ons
+number of observations
 2 n
 1
 1
 X 1 + X 2
 2
 2
-Th%%--%%--(i) \item  
-item s %%--%%--(i) \item  
-item s the same as W s%%--%%--(i) \item  
-item nce
-\alpha=
+This is the same as W since
+α=
 9
-(%%--%%--(i) \item  
-item )
-\s%%--%%--(i) \item  
-item gma 2 2
-\s%%--%%--(i) \item  
-item gma 1 2
-+ \s%%--%%--(i) \item  
-item gma 2 2
+(i)
+σ 2 2
+σ 1 2
++ σ 2 2
 =
-\s%%--%%--(i) \item  
-item gma 2
+σ 2
 2
-\s%%--%%--(i) \item  
-item gma +\s%%--%%--(i) \item  
-item gma
+σ +σ
 2
 =
 1
@@ -322,59 +196,37 @@ item gma
 E [ E ( Y | X )] = ∫ E [ Y | X = x ] f ( x ) dx
 = ∫ ∫ yf ( y | x ) dy f ( x ) dx
 = ∫ ∫ y f ( y | x ) f ( x ) dydx
-but f ( y | x ) f ( x ) = f ( x , y ), the jo%%--%%--(i) \item  
-item nt pdf of X and Y , so
+but f ( y | x ) f ( x ) = f ( x , y ), the joint pdf of X and Y , so
 E [ E ( Y | X )] = ∫ ∫ y f ( x , y ) dxdy = E [ Y ]
-(%%--%%--(i) \item  
-item %%--%%--(i) \item  
-item )
+(ii)
 E [ Y ] = E [ E ( Y | X )] = E [ X 2 + 1]
 = V [ X ] + { E [ X ]} 2 + 1 = 1 + 0 + 1 = 2
 Var [ Y ] = Var [ E ( Y | X )] + E [ Var ( Y | X )] = Var [ X 2 + 1] + E [ X 2 + 1]
 = Var [ X 2 ] + E [ X 2 ] + 1
-but Z = X 2 %%--%%--(i) \item  
-item s χ 1 2 so has var%%--%%--(i) \item  
-item ance 2 and expectat%%--%%--(i) \item  
-item on 1
+but Z = X 2 is χ 1 2 so has variance 2 and expectation 1
 Thus Var [ Y ] = 2 + 1 + 1 = 4
-Page 7Subject CT  — September 2006 — 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
 10
-(%%--%%--(i) \item  
-item )
+(i)
 (a)
-Mgf of X_{%%--%%--(i) \item  
-item } %%--%%--(i) \item  
-item s (1 – t / λ ) − 4.5 so mgf of
+Mgf of X i is (1 – t / λ ) − 4.5 so mgf of
 n
 ∏ ( 1 − t / λ )
 − 4.5
 = ( 1 − t / λ )
 n
-∑ X_{%%--%%--(i) \item  
-item }
-%%--%%--(i) \item  
-item s
-%%--%%--(i) \item  
-item  = 1
+∑ X i
+is
+i = 1
 − 4.5 n
-%%--%%--(i) \item  
-item  = 1
+i = 1
 n
-Hence mgf of 2 λ ∑ X_{%%--%%--(i) \item  
-item } = 2 λ nX_{%%--%%--(i) \item  
-item }s ( 1 − 2 λ t / λ )
+Hence mgf of 2 λ ∑ X i = 2 λ nX is ( 1 − 2 λ t / λ )
 − 4.5 n
 = ( 1 − 2 t )
 − 4.5 n
-%%--%%--(i) \item  
-item  = 1
-Th%%--%%--(i) \item  
-item s %%--%%--(i) \item  
-item s the mgf of a χ 2 var%%--%%--(i) \item  
-item able — w%%--%%--(i) \item  
-item th 9n degrees of freedom.
+i = 1
+This is the mgf of a χ 2 variable — with 9n degrees of freedom.
 (b)
 b ⎞
 ⎛ a
@@ -391,74 +243,52 @@ where a and b are such that
 P χ 9 2 n < a = 0.025 and P χ 9 2 n > b = 0.025.
 b
 ⎛ a
-so a 95% C%%--%%--(i) \item  
-item  for λ %%--%%--(i) \item  
-item s g%%--%%--(i) \item  
-item ven by ⎜
+so a 95% CI for λ is given by ⎜
 ,
 ⎝ 2 nX 2 nX
 (c)
 ⎞
 ⎟ .
 ⎠
-9 n = 90, and from tables of χ 2 w%%--%%--(i) \item  
-item th 90df we have a = 65.65, b = 118.1
+9 n = 90, and from tables of χ 2 with 90df we have a = 65.65, b = 118.1
 118.1 ⎞
 ⎛ 65.65
-C%%--%%--(i) \item  
-item  %%--%%--(i) \item  
-item s ⎜
+CI is ⎜
 ,
-⎟ = (1.5 , 2.75).
+⎟ = (1.53 , 2.75).
 ⎝ 2 × 21.47 2 × 21.47 ⎠
-(%%--%%--(i) \item  
-item %%--%%--(i) \item  
-item )
+(ii)
 (a)
 (
-L ( λ ) ∝ λ 4.5 n exp −λ ∑ X_{%%--%%--(i) \item  
-item }
+L ( λ ) ∝ λ 4.5 n exp −λ ∑ x i
 )
 so
-A ( λ ) = ( 4.5 n ) log λ − λ ∑ X_{%%--%%--(i) \item  
-item } + constant
+A ( λ ) = ( 4.5 n ) log λ − λ ∑ x i + constant
 ⇒
 d A
-= 4.5 n / λ − ∑ X_{%%--%%--(i) \item  
-item }
+= 4.5 n / λ − ∑ x i
 d λ
 d 2 A
-Sett%%--%%--(i) \item  
-item ng
+Setting
 = 4.5 n / λ 2 so s . e .( λ ˆ ) ≅
 (b) −
-(c) 95% C%%--%%--(i) \item  
-item  %%--%%--(i) \item  
-item s λ ˆ \pm 1.96 × s . e . λ ˆ
+(c) 95% CI is λ ˆ ± 1.96 × s . e . λ ˆ
 d λ
 2
 {
 λ ˆ
 ( 4.5 n ) 1/ 2
 ( ) }
-%%--%%--(i) \item  
-item n the case n = 100, \s%%--%%--(i) \item  
-item gmax = 225.,
+In the case n = 100, Σx = 225.3,
 Page 8
 4.5 n 4.5
 d A
 =
 = 0 ⇒ λ ˆ =
 d λ
-∑ X_{%%--%%--(i) \item  
-item } XSubject CT  — September 2006 — 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-4.5 / 2.25
-λ ˆ = 4.5 / 2.25 = 1.997 and s . e .( λ ˆ ) ≅
+∑ X i XSubject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
+4.5 / 2.253
+λ ˆ = 4.5 / 2.253 = 1.9973 and s . e .( λ ˆ ) ≅
 = 0.0942
 ( 450 ) 1/ 2
-so C%%--%%--(i) \item  
-item  %%--%%--(i) \item  
-item s 1.997 \pm(1.96 × 0.0942) %%--%%--(i) \item  
-item .e. (1.81 , 2.18).
+so CI is 1.9973 ±(1.96 × 0.0942) i.e. (1.81 , 2.18).
