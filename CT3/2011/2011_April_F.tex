@@ -32,9 +32,9 @@
 
 \begin{document}
 \begin{enumerate}
-%- PLEASE TURN OVER
+%- 
 % - 10
-\item A life insurance company runs a statistical analysis of mortality rates. The company considers a population of 100,000 individuals. It assumes that the number of deaths X during one year has a Poisson distribution with expectation E[X] = μ. Over four years
+\item A life insurance company runs a statistical analysis of mortality rates. The company considers a population of 100,000 individuals. It assumes that the number of deaths X during one year has a Poisson distribution with expectation E[X] = \mu. Over four years
 the company has observed the following realisations of X (number of deaths).
 1
 2
@@ -42,11 +42,11 @@ the company has observed the following realisations of X (number of deaths).
 4
 Year
 Number of deaths (per 100,000 lives) 1,140 1,200 1,170 1,190
-The maximum likelihood estimator for the parameter μ of the Poisson distribution is
+The maximum likelihood estimator for the parameter \mu of the Poisson distribution is
 given by X .
 (i)
 Obtain the maximum likelihood estimate of the parameter $\mu$ using these data.
-[1]
+
 To obtain a more realistic model, it is proposed that the number of deaths should
 depend on the age of the population. To this end the total population is divided into
 four age groups of equal size and the number of deaths in each group during the
@@ -68,7 +68,7 @@ For these data we obtain: Σ t = 160, Σ t 2 = 6,900, Σ x = 1,179, Σ x 2 = 613
 (a) Calculate the correlation coefficient between the middle age $t$ in a group and the number of deaths x in that group, and comment briefly on its value.
 (b) Perform a linear regression of the number of deaths x as a function of the middle age t of the group.
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-A statistician suggests using a Poisson distribution for the number of deaths per year in each group, where the parameter μ depends on the middle age in that group. Under the suggested model the number of deaths in the group with middle age t i is given by X i ~ Poisson(μ i ) with μ i = wt i , where t i is the middle age of the group that the individual belongs to at the time of death.
+A statistician suggests using a Poisson distribution for the number of deaths per year in each group, where the parameter \mu depends on the middle age in that group. Under the suggested model the number of deaths in the group with middle age t i is given by X i ~ Poisson(\mu i ) with \mu i = wt i , where t i is the middle age of the group that the individual belongs to at the time of death.
 (iii)
 Derive a maximum likelihood estimator for the parameter w and estimate the value of w from the data in the above table.
 \end{enumerate}
@@ -78,7 +78,7 @@ Derive a maximum likelihood estimator for the parameter w and estimate the value
 10
 (iii) Assuming a larger value of s results in a larger standard error, so a larger sample size is required to achieve the same width of confidence interval.
 
-(i) μ ˆ = X = 1,175
+(i) \mu ˆ = X = 1,175
 (ii)
 (a)
 160 2
@@ -120,7 +120,7 @@ S tt
 4
 Estimated model: x ˆ = 20.71 t − 533.65
 %% Page 7 
-%% Subject CT3 (Probability and Mathematical Statistics Core Technical) — Examiners’ Report, April 2011
+%%   — Examiners’ Report, April 2011
 (iii)
 p ( x i , w , t i ) =
 exp( − wt i )( wt i ) x i
@@ -140,7 +140,7 @@ w
 w ˆ =
 Σ x i
 Σ t i
-(Second derivative gives −∑ x i / w 2 < 0 which confirms maximum.)
+(Second derivative gives −\sum x i / w 2 < 0 which confirms maximum.)
 For the observed values we obtain w ˆ =
 1179
 = 7.36875
