@@ -38,73 +38,73 @@
 For a group of policies the probability distribution of the total number of claims, N,
 arising during a period of one year is given by
 P(N = 0) = 0.70, P(N = 1) = 0.15, P(N = 2) = 0.10, P(N = 3) = 0.05.
-Each claim amount, X (in units of £1,000), follows a gamma distribution with parameters α = 2 and λ = 0.1 independently of each other claim amount and of the number of claims.
+Each claim amount, X (in units of £1,000), follows a gamma distribution with parameters α = 2 and \lambda = 0.1 independently of each other claim amount and of the number of claims.
 Calculate the expected value and the standard deviation of the total of the claim amounts for a period of one year.
 %%------ CT3 A2009—4
-[5]
+
 
 11
-The number of claims, $X$, which arise in a year on each policy of a particular class is to be modelled as a Poisson random variable with mean λ. Let X = (X 1 , X 2 , ..., X n ) be a random sample from the distribution of X, and let X =
+The number of claims, $X$, which arise in a year on each policy of a particular class is to be modelled as a Poisson random variable with mean \lambda. Let X = (X 1 , X 2 , ..., X n ) be a random sample from the distribution of X, and let X =
 1 n
 ∑ X i .
 n i = 1
 n
-(i)
+\item (i)
 (a)
 Use moment generating functions to show that
 ∑ X i has a Poisson
 i = 1
-distribution with mean nλ.
+distribution with mean n\lambda.
 (b) State, with a brief reason, whether or not the variable 2X 1 + 5 has a Poisson distribution.
 (c) State, with a brief reason, whether or not X has a Poisson distribution in the case that n = 2.
 (d) State the approximate distribution of X in the case that n is large.
 %%-- [8]
 An actuary is interested in the level of claims being experienced and wants in particular to test the hypotheses
-H 0 : λ = 1 v H 1 : λ > 1 .
+H 0 : \lambda = 1 v H 1 : \lambda > 1 .
 He decides to use a random sample of size n = 100 and the best (most powerful) available test. You may assume that this test rejects H 0 for x > k , for some constant k.
-(ii)
+\item (ii)
 (a) Show that the value of k for the test with level of significance 0.01 is k = 1.2326.
-(b) Calculate the power of the test in part (ii)(a) in the case λ = 1.2 and then in the case λ = 1.5.
+(b) Calculate the power of the test in part \item (ii)(a) in the case \lambda = 1.2 and then in the case \lambda = 1.5.
 (c) Comment briefly on the values of the power of the test obtained in part
-(ii)(b).
+\item (ii)(b).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
 11
-(i)
+\item (i)
 (a)
 Let S = ∑ X i
 i = 1
 { (
 ) }
-M X ( t ) = exp λ e t − 1
+M X ( t ) = exp \lambda e t − 1
 { (
 ) }
 n
 { (
 ) }
 n
-⇒ M S ( t ) = { M X ( t ) } = ⎡ exp λ e t − 1 ⎤ = exp n λ e t − 1
+⇒ M S ( t ) = { M X ( t ) } = ⎡ exp \lambda e t − 1 ⎤ = exp n \lambda e t − 1
 ⎥ ⎦
 ⎣ ⎢
-⇒ S ~ Poisson(nλ)
+⇒ S ~ Poisson(n\lambda)
 (b)
 No
-One reason is that E[2X 1 + 5] = 2λ + 5, which is not equal to V[2X 1 + 5] = 4λ
+One reason is that E[2X 1 + 5] = 2\lambda + 5, which is not equal to V[2X 1 + 5] = 4\lambda
 [Note: another obvious reason is that 2X 1 + 5 can only takes values 5,
 7, 9, ... , not 0, 1, 2, 3,... ]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (c)
 No
-One reason is that E ⎣ ⎡ X ⎦ ⎤ = λ , which is not equal to V ⎡ ⎣ X ⎤ ⎦ = λ / 2
+One reason is that E ⎣ ⎡ X ⎦ ⎤ = \lambda , which is not equal to V ⎡ ⎣ X ⎤ ⎦ = \lambda / 2
 [Note: another obvious reason is that X can take values 0.5, 1.5, 2.5, ... , which a Poisson variable cannot.]
 
 (d)
-(ii)
+\item (ii)
 (a)
 (b)
-⎛ λ ⎞
-X ≈ N ⎜ λ , ⎟
+⎛ \lambda ⎞
+X ≈ N ⎜ \lambda , ⎟
 ⎝ n ⎠
 1 ⎞
 ⎛
@@ -118,19 +118,19 @@ k is such that P ( X > k | H 0 ) = 0.01 so
 = 2.3263
 0.1
 ⇒ k = 1.2326
-\[Power(λ) = P(reject H 0 |λ)\]
-\[Power(λ = 1.2) = P ( X > 1.2326 ) where X ~ N (1.2, 0.012)\]
+\[Power(\lambda) = P(reject H 0 |\lambda)\]
+\[Power(\lambda = 1.2) = P ( X > 1.2326 ) where X ~ N (1.2, 0.012)\]
 = P(Z > 0.298) = 0.383
-Power(λ = 1.5) = P ( X > 1.2326 ) where X ~ N (1.5, 0.015)
+Power(\lambda = 1.5) = P ( X > 1.2326 ) where X ~ N (1.5, 0.015)
 = P(Z > −2.183) = 0.985
 (c)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 12
-(i)
+\item (i)
 (a)
-Power of test increases as the value of λ increases further away from
-λ = 1.
+Power of test increases as the value of \lambda increases further away from
+\lambda = 1.
 1
 1
 1
@@ -159,13 +159,13 @@ equate to zero: 750 θ 2 − 256 θ − 299 = 0
 Page 6
 1
 
-256 ± 256 2 − 4(750)( − 299)
+256 \pm 256 2 − 4(750)( − 299)
 ˆ
 ∴θ =
-= 0.17067 ± 0.65406
+= 0.17067 \pm 0.65406
 2(750)
 So MLE θ ˆ = 0.82473 (or 0.825 to 3dp) as other root is negative.
-(ii)
+\item (ii)
 (a)
 d 2
 d θ
@@ -198,9 +198,9 @@ CRlb =
 = 0.0002075
 4818.4
 θ ˆ ≈ N ( θ , CRlb ) for large samples
-and so an approximate 95% CI for θ is θ ˆ ± 1.96 CRlb
-Here: 0.825 ± 1.96 0.0002075 ⇒ 0.825 ± 0.028 or (0.797, 0.853)
-(iii)
+and so an approximate 95\% CI for θ is θ ˆ \pm 1.96 CRlb
+Here: 0.825 \pm 1.96 0.0002075 ⇒ 0.825 \pm 0.028 or (0.797, 0.853)
+\item (iii)
 (a)
 With $\theta = 0.775$ the four probabilities are 0.69375, 0.05625, 0.05625, 0.19375 respectively
 and the corresponding expected frequencies are 1040.625, 84.375, 84.375, 290.625.

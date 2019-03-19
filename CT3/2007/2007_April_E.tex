@@ -68,37 +68,37 @@ Total
 204.5
 ∑ i ∑ j y ij = 871.9 and ∑ i ∑ j y ij 2 = 47, 633.53Consider the ANOVA model Y ij = μ + τ i + e ij , i = 1,..., 4, j = 1,..., n i , where Y ij is the j th
 sum insured for company i , n i is the number of responses for company i ,
-e ij ~ N (0, σ 2 ) are independent errors, and
+e ij ~ N (0, \sigma^2 ) are independent errors, and
 11
 ∑ i = 1 n i τ i = 0 .
 4
-(i) Calculate estimates of the parameters μ and τ i , i = 1, 2, 3, 4 .
-(ii) Test the hypothesis that there are no differences in the means of the sums
+\item (i) Calculate estimates of the parameters μ and τ i , i = 1, 2, 3, 4 .
+\item (ii) Test the hypothesis that there are no differences in the means of the sums
 insured under such policies by the four companies.
-[5]
+
 [Total 8]
-[3]
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The number of claims, X , which arise in a year on each policy of a particular class is to be modelled as a Poisson random variable with mean λ. Let X = ( X 1 , X 2 , ..., X n ) be
+The number of claims, X , which arise in a year on each policy of a particular class is to be modelled as a Poisson random variable with mean \lambda. Let X = ( X 1 , X 2 , ..., X n ) be
 1 n
 a random sample of size n from the distribution of X , and let X = ∑ X i .
 n i = 1
-Suppose that it is required to estimate λ , the mean number of claims on a policy.
-(i) Show that λ̂ , the maximum likelihood estimator of λ, is given by λ ˆ = X . [3]
-(ii) Derive the Cramer-Rao lower bound (CRlb) for the variance of unbiased estimators of λ.
-(iii)
-[4]
-(a) Show that λ̂ is unbiased for λ and that it attains the CRlb.
-(b) Explain clearly why, in the case that n is large, the distribution of λ̂ can be approximated by
-⎛ λ ⎞
-λ ˆ ~ N ⎜ λ , ⎟ .
+Suppose that it is required to estimate \lambda , the mean number of claims on a policy.
+\item (i) Show that \lambdâ , the maximum likelihood estimator of \lambda, is given by \hat{\lambda} = X . 
+\item (ii) Derive the Cramer-Rao lower bound (CRlb) for the variance of unbiased estimators of \lambda.
+\item (iii)
+
+(a) Show that \lambdâ is unbiased for \lambda and that it attains the CRlb.
+(b) Explain clearly why, in the case that n is large, the distribution of \lambdâ can be approximated by
+⎛ \lambda ⎞
+\hat{\lambda} ~ N ⎜ \lambda , ⎟ .
 ⎝ n ⎠
-[3]
+
 (iv)
 (a)
-Show that, in the case n = 100, an approximate 95\% confidence interval for λ is given by
-x ± 0.196 x .
+Show that, in the case n = 100, an approximate 95\% confidence interval for \lambda is given by
+x \pm 0.196 x .
 (b)
 Evaluate the confidence interval in (iv)(a) based on a sample with the
 following composition:
@@ -125,10 +125,10 @@ frequency
 CT3 A2007—5
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 5Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — Examiners’ Report
-(i)
+Page 5Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item (i)
 10
-(ii)
+\item (ii)
 μ ˆ = Y .. =
 τ ˆ 1 = Y 1. − Y .. = 284.5 871.9
 −
@@ -180,80 +180,80 @@ Residual
 12 35.002 2.917
 Total
 15 120.430
-At the 5% significance level, F 0.05,3,12 = 3.490 (or F 0.01,3,12 = 5.953 )
+At the 5\% significance level, F 0.05,3,12 = 3.490 (or F 0.01,3,12 = 5.953 )
 Since F = 9.763 > 3.490, there is evidence against the null hypothesis, and we conclude that there are differences in the mean sums insured by the companies.
 % Page 6
-% Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — Examiners’ Report
+% Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 11
-(i)
+\item (i)
 L ( x ) =
-( λ ) = log L ( λ ) = − n λ + ( ∑ x i ) log λ + constant
+( \lambda ) = log L ( \lambda ) = − n \lambda + ( ∑ x i ) log \lambda + constant
 ⇒
 ⇒
-(ii)
-e − n λ λ ∑ x i
+\item (ii)
+e − n \lambda \lambda ∑ x i
 ∏ x i !
 d
-∑ x i = 0 ⇒ λ ˆ =
+∑ x i = 0 ⇒ \hat{\lambda} =
 = − n +
-λ
-d λ
+\lambda
+d \lambda
 d 2
-d λ 2
+d \lambda 2
 =−
 ∑ X i = X
 n
 ∑ x i
-λ 2
+\lambda 2
 ⎡ d 2 ⎤ 1
-n λ n
+n \lambda n
 ⇒ − E ⎢ 2 ⎥ = 2 E ⎡ ⎣ ∑ X i ⎤ ⎦ = 2 =
-λ
-λ
-⎢ ⎣ d λ ⎥ ⎦ λ
+\lambda
+\lambda
+⎢ ⎣ d \lambda ⎥ ⎦ \lambda
 ⇒ CRlb =
-(iii)
+\item (iii)
 (a)
-λ
+\lambda
 .
 n
-E ⎡ ⎣ λ ˆ ⎤ ⎦ = E ⎡ ⎣ X ⎤ ⎦ = E [ X ] = λ
-V ⎡ ⎣ λ ˆ ⎤ ⎦ = V ⎡ ⎣ X ⎤ ⎦ =
+E ⎡ ⎣ \hat{\lambda} ⎤ ⎦ = E ⎡ ⎣ X ⎤ ⎦ = E [ X ] = \lambda
+V ⎡ ⎣ \hat{\lambda} ⎤ ⎦ = V ⎡ ⎣ X ⎤ ⎦ =
 (iv)
 V [ X ]
 n
 =
-λ
+\lambda
 ,which is CRlb.
 n
 (b) The theory of asymptotic distributions of MLEs (and in this case the
-⎛ λ ⎞
-CLT) gives λ ˆ ~ N approximately, for large n so λ ˆ ~ N ⎜ λ , ⎟ ,
+⎛ \lambda ⎞
+CLT) gives \hat{\lambda} ~ N approximately, for large n so \hat{\lambda} ~ N ⎜ \lambda , ⎟ ,
 ⎝ n ⎠
 approximately.
-(a) Large sample approximate 95% CI for λ is given by
+(a) Large sample approximate 95\% CI for \lambda is given by
 (
 ( ) )
-λ ˆ ± 1.96 × s . e . λ ˆ
-i.e. x ± ( 1.96 × s . e . ( x ) )
+\hat{\lambda} \pm 1.96 × s . e . \hat{\lambda}
+i.e. x \pm ( 1.96 × s . e . ( x ) )
 ()
-λ
-s . e . λ ˆ =
-which we can estimate by using x to estimate λ , giving
+\lambda
+s . e . \hat{\lambda} =
+which we can estimate by using x to estimate \lambda , giving
 n
 ()
-the estimated standard error e . s . e . λ ˆ =
+the estimated standard error e . s . e . \hat{\lambda} =
 x
 n
-With n = 100, we get the 95% CI as
+With n = 100, we get the 95\% CI as
 ⎛
 x ⎞
-x ± ⎜ ⎜ 1.96 ×
-⎟ i . e . x ± 0.196 x .
+x \pm ⎜ ⎜ 1.96 ×
+⎟ i . e . x \pm 0.196 x .
 100 ⎟ ⎠
 ⎝
-Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — Examiners’ Report
+Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (b)
 x = 215 /100 = 2.15
-CI is 2.15 ± 0.196(2.15) 1/2 i.e. 2.15 ± 0.287 i.e. (1.86, 2.44)
+CI is 2.15 \pm 0.196(2.15) 1/2 i.e. 2.15 \pm 0.287 i.e. (1.86, 2.44)
 \end{document}
