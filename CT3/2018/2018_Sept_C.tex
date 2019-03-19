@@ -1,0 +1,202 @@
+%%%%%%%%% 6
+A poll was conducted with respect to a future referendum, where voters will answer
+either “yes” or “no” to a question on a political issue. A random sample of 1,106
+eligible voters were asked in the poll and 608 of them answered “no”. Let p denote
+the true population proportion of “no” voters.
+We wish to predict the result of the referendum, by testing the hypotheses
+H 0 : p = 0.5 against H 1 : p > 0.5.
+(i) Perform a suitable test of these hypotheses at the 5% level of significance,
+stating your conclusion in terms of a predicted result for the referendum.  
+(ii) (a) Determine a 90% central confidence interval for p.
+(b) Explain the effect of using a larger sample on the confidence interval in
+part (ii)(a). 
+
+(a) Give the definition of the P-value of a hypothesis test.
+(b) Derive the P-value of the test in part (i) stating your conclusion in
+terms of a predicted result for the referendum.
+(c) Comment, with reference to your answers in parts (i) and (iii)(b), on
+the advantages of using a P-value approach for testing, compared with
+level.
+a fixed significance level.
+
+[Total 14]
+(iii)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+An analyst wishes to model the number of Initial Public Offerings (IPOs) on the
+local stock exchange each calendar month. Let X i be a random variable denoting the
+number of IPOs in month i, where all X i ’s are independent. The analyst wishes to
+model X i using a Poisson distribution but is aware that there is less activity during the
+summer so uses the following rates:
+{
+l,
+\lambda,
+i ≠ July, August
+\lambda
+l i =
+		
+ul,
+i = July, August
+u\lambda,
+(i)
+Write down the probability function of X i . .
+
+The analyst wishes to estimate u and \lambda using data from the last 12 months.
+(ii)
+Show that the log likelihood is given by
+l l ( ( x x ; ; \lambda , , u u ) ) = ∑ x x i i ln
+ln \lambda − (10
+(10 + 2 2 u u ) ) \lambda + ( ( x x Jul
+x Aug
+ln u u + C
+C
+Jul + x
+Aug ) ) ln
+i i
+where C is a constant, independent of u and \lambda.
+\lambda.
+
+(iii)
+
+S2018–4
+CT3 X18–4
+Derive the maximum likelihood estimators for u and \lambda. You are not required to
+function.
+confirm that these estimators maximise the likelihood function.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+Q6
+(i)
+If X denotes the “no” voters, under H 0 we have
+X ~ Binomial(1106, 0.5), or approximately X ~ N(553, 276.5)
+
+Using a continuity correction, the z statistic is given as
+zz =
+607.5−553
+√276.5
+= 3.28
+[1.5]
+Critical point for tables is z 0.05 = 1.6449.
+[0.5]
+So we reject H 0 at the 5% level in favour of H 1 ,
+which means that we have evidence of a “no” vote.
+(ii)
+pp� (1−pp� )
+(a) 90% CI is given by pp̂ ± 1.6449 �
+This gives:
+608
+(
+± 1.6449 �
+1106
+nn
+
+608
+)(1−608/1106)
+1106
+1106
+
+, i.e. (0.525, 0.574)
+
+(b) A larger sample would reduce the standard error of pp̂ and would therefore give a
+narrower interval.
+
+(iii)
+(a) The P-value is the probability, assuming H 0 is true, of observing a test statistic at
+least as “extreme” as the value observed (or, it is the lowest significance level at
+which H 0 can be rejected).
+
+(b) PP-value = PP(XX ≥ 608) = PP �ZZ >
+607.5−553
+√276.5
+� = PP(ZZ > 3.28) = 0.00052
+
+We have very strong evidence against H 0 , which means that we have very strong
+evidence of a “no” vote.
+
+(c) Using a fixed level does not provide clear detailed information on the strength of
+the evidence against H 0 , whereas using a P-value is more informative about the
+Page 6Subject CT3  – September 2018 – Examiners’ Report
+strength of this evidence.
+Here, using the P-value approach clearly tells us about how strong the evidence
+against H 0 is, which means we can put our conclusion in stronger terms.
+
+[Total 14]
+Generally well answered. Notice that a continuity correction is needed
+in this question for full marks. In part (i) many candidates mistakenly
+used the sample estimate of p in the variance.
+Q7
+(i)
+pp ii (xx) =
+(ii)
+⎧
+⎪
+\lambda\lambda xx ee −\lambda\lambda
+0, xx < 0
+, xx ≥ 0, ii ≠ JJJJJJJJ, AAAAAAAAAAAA
+xx!
+⎨ (uuuu) xx ee −uuuu
+⎪
+, xx ≥ 0, ii = JJJJJJJJ, AAAAAAAAAAAA
+⎩ xx!
+LL(xx; \lambda\lambda, uu) =
+�
+ii≠JJJJJJ,AAAAAA
+= �
+ii
+xx ii
+\lambda\lambda xx ii ee −\lambda\lambda
+xx ii !
+
+
+�
+ii=JJJJJJ,AAAAAA
+(uuuu) xx ii ee −uuuu
+xx ii !
+\lambda\lambda
+× �ee −(10+2uu)\lambda\lambda uu xx JJJJJJ +xx AAAAAA �
+xx ii !
+ll(xx; \lambda\lambda, uu) = � xx ii ln \lambda\lambda − (10 + 2uu)\lambda\lambda + �xx JJJJJJ + xx AAAAAA � ln uu + CC
+ii
+(iii)
+xx JJJJJJ + xx AAAAAA
+δδδδ
+= −2\lambda\lambda +
+=0
+δδδδ
+uu
+⟹ 2\lambda\lambda\lambda\lambda = (xx JJJJJJ + xx AAAAAA )
+
+
+
+
+
+δδδδ ΣΣxx ii
+=
+− 10 − 2uu = 0
+δδδδ
+\lambda\lambda
+⟹ ΣΣxx ii − 10\lambda\lambda = 2\lambda\lambda\lambda\lambda = (xx JJJJJJ + xx AAAAAA )
+
+Page 7Subject CT3  –September 2018 – Examiners’ Report
+⟹ \lambda\lambdâ =
+�
+ii≠JJJJJJ,AAAAAA
+xx ii /10
+
+⟹ uu� = (xx JJJJJJ + xx AAAAAA )/2\lambda\lambdâ
+= (xx JJJJJJ + xx AAAAAA )/(2
+= (xx JJJJJJ + xx AAAAAA )/(
+�
+ii≠JJJJJJ,AAAAAA
+�
+ii≠JJJJJJ,AAAAAA
+xx ii /10)
+xx ii /5)
+
+[Total 10]
+There were mixed answers in parts (i) and (ii), often with poor notation
+for the likelihood. Part (iii) was well answered.
