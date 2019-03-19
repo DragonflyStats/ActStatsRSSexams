@@ -42,7 +42,7 @@ independent tests conducted on a particular type of vehicle under identical road
 Speed of vehicle (x):
 Stopping distance (y):
 x = 280
-(i)
+\item (i)
 y = 241
 10
 5
@@ -63,25 +63,25 @@ y 2 = 11,951
 xy = 12,790
 Construct a scatterplot of the data, and comment on whether a linear
 regression is appropriate to model the relationship between the stopping
-distance and speed. [4]
-(ii) Calculate the equation of the least-squares fitted regression line. [5]
+distance and speed. 
+\item (ii) Calculate the equation of the least-squares fitted regression line. 
 (iii) Calculate a 95\% confidence interval for the slope of the underlying regression
 line, and use this confidence interval to test the hypothesis that the slope of the
 underlying regression line is equal to 1.
-[5]
-(iv) Use the fitted line obtained in part (ii) to calculate estimates of the stopping
+
+(iv) Use the fitted line obtained in part(ii) to calculate estimates of the stopping
 distance for a vehicle travelling at 50 mph and for a vehicle travelling at 100
 mph.
 Comment briefly on the reliability of these estimates.
-END OF PAPER
+
 CT S2006
 7
-[4]
+
 [Total 18]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 12
-(i)
+\item (i)
 Plot of stopping distance against speed
 80
 distance
@@ -102,15 +102,15 @@ distance
 70
 Speed
 There is a suggestion of a curve but linear regression might still be reasonable.
-(ii)
+\item (ii)
 n = 7
-S xx = \sigma x 2 − (\sigma x) 2 /n = 14000 − (280) 2 /7 = 2800
-S yy = \sigma_y 2 − (\sigma_y) 2 /n = 11951 − (241) 2 /7 = 65.714
+S_{xx} = \sigma x 2 − (\sigma x) 2 /n = 14000 − (280) 2 /7 = 2800
+S_{yy} = \sigma_y 2 − (\sigma_y) 2 /n = 11951 − (241) 2 /7 = 65.714
 S xy = \sigma xy − (\sigma x)( \sigma_y)/n = 12790 − (280)(241)/7 = 150
 Model: E[Y] = \alpha + \betax
 Slope: \hat{\beta} =
 S xy
-S xx
+S_{xx}
 =
 150
 = 1.125
@@ -122,17 +122,17 @@ Page 12Subject CT  — September 2006 —
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 (iii)
-\sigma ˆ 2 =
+\hat{\sigma} 2 =
 S 2
 1 ⎛
-⎜ S yy − xy
+⎜ S_{yy} − xy
 n − 2 ⎜
-S xx
+S_{xx}
 ⎝
 s.e.( \betâ ) =
-\sigma ˆ 2
+\hat{\sigma} 2
 =
-S xx
+S_{xx}
 ⎞ 1 ⎛
 (150) 2 ⎞
 ⎟ = ⎜ 65.714 −
