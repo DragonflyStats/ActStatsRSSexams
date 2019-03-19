@@ -31,13 +31,14 @@
 \begin{document}
 
 \begin{enumerate}
-CT3 A2008—411
-In an investigation about the duration of insurance policies of a certain type, a sample
+%%CT3 A2008—411
+\item In an investigation about the duration of insurance policies of a certain type, a sample
 of n policies is studied. All n policies have been initiated at the same time, which is
 also the time of the start of the investigation. For each policy, the time T (in months)
 until the policy expires can be modelled as an exponential random variable with
 parameter λ, independently of the times for all other policies.
-(i)
+\begin{enumerate}[(i)]
+\item %(i)
 Suppose that the investigation is terminated as soon as k policies have expired,
 where k is a known (predetermined) constant. The observed policy expiry
 times are denoted by t 1 , t 2 , ..., t k with 0 < k ≤ n and t 1 < t 2 < ... < t k .
@@ -55,10 +56,10 @@ Hence find the maximum likelihood estimate (MLE) of λ.
 Consider an investigation on 20 policies which is terminated when five
 policies have expired, giving the following observed expiry times (in
 months):
-1.03 6.67 12.70 12.88 21.54
+\[1.03 6.67 12.70 12.88 21.54\]
 Calculate the MLE of λ based on this sample.
 [9]
-(ii)
+\item (ii)
 Suppose instead that the investigation is terminated after a fixed length of time
 t 0 . The number of policies that have expired by time t 0 is considered to be a
 random variable, denoted by K.
@@ -69,8 +70,9 @@ parameters.
 months. By the time of termination five policies have expired.
 Use this information to calculate the MLE of λ in this case.
 [9]
-[Total 18]
-CT3 A2008—5
+\end{enumerate}
+\end{enumerate}
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 11
 (i)
@@ -100,7 +102,7 @@ k
 i = 1
 e − ( n − k ) λ t k
 j = k + 1
-Page 5Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2008 — Examiners’ Report
+%Page 5Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2008 — Examiners’ Report
 For the MLE:
 k
 l ( λ ) = log L ( λ ) = k log( λ ) − λ ∑ t i − ( n − k ) λ t k
@@ -164,7 +166,9 @@ n − k
 ⇒ λ ˆ = − log ⎜ 1 − ⎟
 n
 t 0
-⎝ n ⎠Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2008 — Examiners’ Report
+⎝ n ⎠S
+
+%ubject CT3 (Probability and Mathematical Statistics Core Technical) — April 2008 — Examiners’ Report
 [OR, observed proportion (k/n) is the MLE of corresponding
 proportion/probability {1 − exp(−λt 0 )}; solving for λ leads to same
 estimate as above.]
@@ -203,7 +207,9 @@ y •• = 2278,\sigmay 2 = 266,788
 SS T = 266788 – 2278 2 /20 = 7323.8
 SS B = (598 2 + 485 2 + 629 2 + 566 2 )/5 − 2278 2 /20 = 2301
 ⇒ SS R = 7324 − 2301 = 5023
-Source of variation d.f.
+
+\begin{verbatim}
+    Source of variation d.f.
 Between schools
 Residual
 Total 3
@@ -214,19 +220,25 @@ SS MSS
 5023
 7324 767
 314
+\end{verbatim}
+
 F = 767/314 = 2.44 on (3, 16) degrees of freedom
-Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2008 — Examiners’ Report
+%Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2008 — Examiners’ Report
 From Yellow Tables pages 172/3, P-value of the data is just more than
 0.1 (>10%)
-We do not have sufficiently strong evidence against the “no schools
+\begin{itemize}
+    \item We do not have sufficiently strong evidence against the “no schools
 effects” hypothesis, which can stand.
-(b) With only three schools involved, the results from one of them (School
+\item (b) With only three schools involved, the results from one of them (School
 2) are sufficiently different from those of the other two to allow us to
-detect a difference among underlying means. However, the results for
+detect a difference among underlying means.
+\item However, the results for
 the fourth school range across the results for the original three schools
 − with all four schools in the comparison, the “between schools” sum
 of squares is no longer so high relative to the residual and we fail to
 detect differences.
+\end{itemize}
+
 (c) t 16 (0.025) = 2.120
 0.5
 ⎧
@@ -240,7 +252,7 @@ i.e. 22.6 \pm 23.76 or (−1.2, 46.4)
 A clearly labelled scatterplot:
 There seems to be a positive linear relationship between blood flow and
 auricular pressure.
-Page 8Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2008 — Examiners’ Report
+%Page 8Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2008 — Examiners’ Report
 (ii)
 n = 12
 S xx = 1381.85 −
@@ -264,3 +276,4 @@ S xx
 48.3292
 1
 α ˆ = y − \beta ˆ x = (113 − 1.6758*126.5) = − 8.249
+\end{document}
