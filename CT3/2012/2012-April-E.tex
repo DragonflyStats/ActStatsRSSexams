@@ -33,14 +33,15 @@
 
 \begin{document}
 \begin{enumerate}
-11
-An experiment has three possible outcomes (A, B, C) and a model states that the
-probabilities of these outcomes are \theta, \theta^2 , and 1 – \theta – \theta^2 respectively, for some suitable
-value of \theta > 0.
+%%-- Question 11
+\item An experiment has three possible outcomes (A, B, C) and a model states that the
+probabilities of these outcomes are $\theta$, $\theta^2$ , and $1 – \theta – \theta^2$ respectively, for some suitable
+value of $\theta > 0$.
 Let n A , n B , and n C be the number of occurrences of outcomes A, B, and C respectively
 in n (= n A + n B + n C ) repetitions of the experiment. Let A ( \theta ) represent the log-
-\frac{\partial}{\partial} A ( \theta )
-likelihood function, and let U ( \theta ) =
+ 
+likelihood function, and let \[U ( \theta ) =
+\frac{\partial}{\partial} A ( \theta )\]
 .
 \frac{\partial}{\partial}\theta\]
 (i)
@@ -85,21 +86,23 @@ E ⎢ −
 The results of 100 repetitions of the experiment show that outcome A occurred
 51times, outcome B occurred 16 times, and outcome C occurred 33 times.
 (iii)
-(a) Show that the maximum likelihood estimate of \theta is \thetâ = 0.4525.
-(b) Calculate an estimate of the asymptotic standard error of \thetâ .
-(c) Find an approximate 95\% confidence interval for \theta.
-[6]
-[Total 15]
+(a) Show that the maximum likelihood estimate of $\theta$ is $\hat{\theta}= 0.4525$.
+(b) Calculate an estimate of the asymptotic standard error of $\hat{\theta}$.
+(c) Find an approximate 95\% confidence interval for $\theta$.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%10
 (i)
 (a)
 S takes values 0, 1, 2, 3, 4 and we have
-P ( S = 0 ) = 0.4
-P ( S = 1 ) = 0.4 \times 0.7 = 0.28
-P ( S = 2 ) = 0.4 \times 0.3 + 0.2 \times 0.7 2 = 0.218
-P ( S = 3 ) = 0.2 \times 2 \times 0.7 \times 0.3 = 0.084
-P ( S = 4 ) = 0.2 \times 0.3 2 = 0.018
+\begin{itemize}
+\item $ P ( S = 0 ) = 0.4 $
+\item $ P ( S = 1 ) = 0.4 \times 0.7 = 0.28 $
+\item $ P ( S = 2 ) = 0.4 \times 0.3 + 0.2 \times 0.7 2 = 0.218$
+\item $ P ( S = 3 ) = 0.2 \times 2 \times 0.7 \times 0.3 = 0.084$
+\item $ P ( S = 4 ) = 0.2 \times 0.3 2 = 0.018$
+\end{itemize}
 (b)
 Hence
 E ( S ) = 0.28 + 2 \times 0.218 + 3 \times 0.084 + 4 \times 0.018 = 1.04
@@ -132,7 +135,7 @@ n A + 2 n B n C ( 1 + 2 \theta )
 \theta
 1 − \theta − \theta^2
 Setting U(\theta) = 0 ⇒ (n A + 2n B )(1 – \theta – \theta^2 ) = n C \theta (1 + 2\theta)
-⇒ \thetâ satisfies
+⇒ \hat{\theta}satisfies
 ( n A + 2 n B + 2 n C ) \theta^2 + ( n A + 2 n B + n C ) \theta − ( n A + 2 n B ) = 0
 (ii)
 (a)
@@ -184,7 +187,7 @@ E ⎢ −
 )
 n 1 + 4 \theta − \theta^2
 2
-(a) \thetâ satisfies 149\theta^2 + 116\theta – 83 = 0 ⇒ \thetâ = 0.4525
+(a) \hat{\theta}satisfies 149\theta^2 + 116\theta – 83 = 0 ⇒ \hat{\theta}= 0.4525
 (b) Using the Cramer-Rao lower bound, estimate of asymptotic standard
 error is
 ⎡ ˆ
@@ -270,7 +273,8 @@ conclusion.
 
 [Total 8]
 CT3 S2012–5
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 11
 In order to compare the effectiveness of two new vaccines, A and B, for a childhood
 disease, 11 infants were immunised with vaccine A and 9 infants were immunised
@@ -321,3 +325,4 @@ Comment on your results with regard to differences between vaccine A and
 vaccine B.
 
 
+\end{document}

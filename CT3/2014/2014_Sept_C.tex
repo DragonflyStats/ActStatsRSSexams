@@ -1,4 +1,37 @@
+\documentclass[a4paper,12pt]{article}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
 7 Consider the following discrete distribution with an unknown parameter p for the
 distribution of the number of policies with 0, 1, 2, or more than 2 claims per year in a
 portfolio of n independent policies.
@@ -10,25 +43,26 @@ random variable X = X0 + X1 + X2 is then the number of policies with at most two
 claims.
 (i) Derive an expression for the maximum likelihood estimator ˆp of parameter p
 in terms of X and n. [5]
-(ii) Show that the estimator obtained in part (i) is unbiased. [3]
+(ii) Show that the estimator obtained in part (i) is unbiased. 
 The following frequencies are observed in a portfolio of n = 200 policies during the
 year 2012:
   number of claims 0 1 2 more than 2
 observed frequency 123 58 13 6
 A statistician proposes that the parameter p can be estimated by 􀀄p= 58/200 = 0.29
 since p is the probability that a randomly chosen policy leads to one claim per year.
-(iii) Estimate the parameter p using the estimator derived in part (i). [1]
+(iii) Estimate the parameter p using the estimator derived in part (i). 
 (iv) Explain why your answer to part (iii) is different from the proposed estimated
-value of 0.29. [2]
+value of 0.29. 
 An alternative model is proposed where the probability function has the form
 number of claims 0 1 2 more than 2
 probability p 2 p 0.25 p 1− 3.25 p
 (v) Explain how the maximum likelihood estimator suggested in part (i) needs to
-be adapted to estimate the parameter p in this new model. [1]
+be adapted to estimate the parameter p in this new model. 
 (vi) Suggest a suitable test to use to make a decision about which of the two
-models should be used based on empirical data. [1]
+models should be used based on empirical data. 
 [Total 13]
-CT3 S2014–5 PLEASE TURN OVER
+CT3 S2014–5 
+\newpage
 
 
 7 We denote by X0 the number of policies with no claims, by X1 the number of
@@ -46,7 +80,7 @@ dp p p p p p p
  
      
  
-Subject CT3 (Probability and Mathematical Statistics) – September 2014 – Examiners’ Report
+ – September 2014 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 7
 dl 0
 dp
@@ -84,23 +118,24 @@ n
  , X has Binomial dist. with parameters n and
 2 p  p  0.25 p
 EX   n2 p  p  0.25 p  3.25 pn
-and therefore E pˆ   p [3]
+and therefore E pˆ   p 
 (iii) X  194 , ˆ 194 0.2985
 3.25 200
 p 
 
-[1]
+
 (iv) The MLE in part (iii) takes the structure of the entire probability function into
 account while the estimator 58/200 only considers the number of policies with
-one claim. [2]
+one claim. 
 (v) No change required, since the MLE ˆp turns out to dependent only on the total
-number of policies with less than three claims. [1]
-(vi) 2 -test [1]
+number of policies with less than three claims. 
+(vi) 2 -test 
 [Total 13]
 The later parts of the question were well answered. However there was a considerable
 number of poor answers in parts (i) and (ii). Part (i) particularly, deals with the likelihood
 concept which is fundamental in statistics. The setting does not refer explicitly to a usual
-Subject CT3 (Probability and Mathematical Statistics) – September 2014 – Examiners’ Report
+ – September 2014 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 8
 distribution, but involves a standard model, and candidates at this level need to make sure
 that they can work with the likelihood function in a variety of standard models.a
+\end{document}
