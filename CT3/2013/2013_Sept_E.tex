@@ -1,92 +1,199 @@
-CT3 S2012–7 
-12 An insurer has collected data about the body mass index of 200 males between the
-age of 18 and 40. The results are shown in the following table.
-Body mass index < 18.5 18.5–25 25–30 >30
-Observed frequency 6 114 62 18
-A statistician suggests the following model for the distribution of the body mass index
-with an unknown parameter p.
-Body mass index < 18.5 18.5–25 25−30 >30
-Relative frequency p 20p 10p 1−31p
-(i) Estimate the parameter p using the method of maximum likelihood. 
-(ii) Perform a statistical test to decide whether the suggested distribution is
-appropriate for the observed data. You should state the null hypothesis for the
-test and your decision. [6]
-To improve the description of the distribution of the body mass index, it is suggested
-that the marital status of the males in this study is also recorded. The results are
-shown in the following table.
-Marital Status Body mass index Total
-< 18.5 18.5–25 25–30 >30
-Single 5 98 43 12 158
-Married 1 16 19 6 42
-Total 6 114 62 18 200
-A life office has considered a sample of 10,000 men aged between 18 and 40 of which
-50% are married and the other 50% are single.
-(iii) Estimate the proportion of men with a body mass index of more than 30 in this
-sample, based on the data in the above table. 
-(iv) Determine whether the body mass index is independent of the marital status or
-not, using an appropriate statistical test. You should state the null hypothesis
-for the test, calculate the value of the test statistic and the approximate
-p-value and state your decision. [8]
-[Total 20]
-
-%%
-  CT3 S2012–6
-11 In order to compare the effectiveness of two new vaccines, A and B, for a childhood
-disease, 11 infants were immunised with vaccine A and 9 infants were immunised
-with vaccine B. One month after immunisation the concentration of the disease
-antibodies in the blood of each infant was recorded in appropriate units. The sample
-mean and variance for each group is given below.
-Vaccine A: nA =11, xA = 4.05, s2A = 0.692
-Vaccine B: nB = 9, xB = 4.36, sB2 = 0.813
-It is assumed that the distributions of the antibody concentration levels after
-immunisation with vaccine A and vaccine B are N(\mu_A,\sigma2A) and N(μB,\sigma2B )
-respectively. You may assume that the samples are independent.
-(i) State the distribution of the pivotal quantity
-2 2
-2 2
-/ .
-/
-  A A
-B B
-s
-s
-\sigma
-\sigma
-
-(ii) Calculate an equal-tailed 95\%  confidence interval for the ratio
+The random variables Y A and Y B describe the number of hours per month that a
+randomly selected household in Cities A and B, respectively, uses its car. Both cities
+recently decided to introduce measures to reduce road congestion. To investigate the
+effect of these measures ten households in each city were randomly selected and
+asked about the hours per month that they use their car before and after the measures
+were introduced. The random variables Z A and Z B describe the hours of car usage
+after the measures have been introduced, and X A = Y A − Z A and X B = Y B − Z B
+denote the reduction in car usage. The following table shows the summary statistics
+for the ten households in the two cities.
+Sample size n
+City A
+10
+City B
+10
+y
+33
+29
+s Y
+7.5
+8
+z
+28.5
+28
+s Z
+7
+7
+s X
 2
-2
+2.5
+Here, y and z denote the sample means of Y and Z in the two cities, and s Y , s Z
+and s X denote the sample standard deviations for Y, Z and X respectively.
+You can assume that the random variables Y A and Y B are independent and
+approximately normally distributed
+(i)
+Perform a statistical test at a 5% significance level to test the null hypothesis
+that expected car usage in City A was the same as expected car usage in City
+B before the measures were introduced. State all other assumptions that you
+make and justify them.
+[6]
+An actuary wishes to investigate whether the measures to reduce road congestion have
+been effective.
+(ii) Perform a statistical test at the 5% significance level, where the alternative
+hypothesis is that car usage in City A has been reduced as a result of the
+measures.
+
+(iii) Calculate a 95% confidence interval for the expected reduction in car usage
+for City B.
+[3]
+To investigate further the impact of measures to reduce road congestion, a third city,
+City C, is included in the study. The following table contains the data for 10 randomly
+selected households in City C:
+Sample size n
+City C
+10
+y
+37
+s Y
+9
+z
+33
+s Z
+8
+s X
+3
+Let x ij denote the observed reduction in car usage in city i for household j .
+10
+(iv)
+Confirm that
+\sum  x Aj = 45 and
+j=1
+CT3 S2013–6
+10
+\sum  x Aj 2 = 238.5 .
+j = 1
+10
+You are also given
+\sum  x Bj = 10 ,
+j = 1
+(v)
+CT3 S2013–7
+10
+\sum  x Cj = 40 ,
+j = 1
+10
+\sum  x Bj 2 = 66.25 and
+j = 1
+10
+\sum  x Cj 2 = 241 .
+j = 1
+Perform an analysis of variance to test at a 5% significance level the null
+hypothesis that there is no difference in the mean reduction in car usage
+between the three cities.
+[6]
+[Total 21]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9
+(i)
+Sample sizes are small, therefore, we need a t -test. We need to assume that
+the variances are equal, although the sample standard deviations are different.
+Since the sample size is small we can argue that equal variances is a
+reasonable assumption.
+
+1
+1 
+Test statistic t  =  ( Y A  Y B ) /  S P
+
+  ~ t n A  n B  2 under the null
+
+n
+n
 A
-B
-\sigma
-\sigma
-using the
-pivotal quantity in part (i). (You are not required to show the derivation of the
-                               interval.) 
-We now assume that 2 2 2. $\sigma_A = \sigma_B = \sigma$ Under this assumption, you are given that the
-distribution of
+B 
+
+hypothesis that expected car usage is equal in both cities.
+Page 7Subject CT3 – September 2013 – Examiners’ Report
+S P 2  = 
+t  = 
+9 S A 2  9 S B 2 1
+ =  7.5 2  8 2  =  60.125
+18
 2
-2
-18Sp
-\sigma
-is 2
-χ18, where 2
-Sp is the pooled variance of the two samples and
-is independent from xA and xB.
-(iii) Explain why, under the above result, the sampling distribution of
-( )
-1 1
-11 9
-A B A B
-p
-X X
-S
-− − μ −μ
-+
-  is t18. 
-(iv) Calculate an equal-tailed 95\%  confidence interval for \mu_A − μB using the
-sampling distribution in part (iii). (You are not required to show the
-                                      derivation of the interval.) 
-(v) Comment on your results with regard to differences between vaccine A and
-vaccine B. 
-[Total 15]
+
+
+33  29
+ =  1.1535
+12.025
+Two sided test, critical values are −2.101 and 2.101 from t 18 .
+The null hypothesis of equal car usage is not rejected.
+(ii)
+
+X A  =  Y A  Z A ~ N  A ,  A 2
+
+H 0 :  A  0 and H 1 :  A  0 (also full marks for H 0 :  A  =  0 vs. H 1 :  A  0 )
+t  = 
+33  28.5
+4.5
+ = 
+ =  7.115
+0.6325
+2 / 10
+Critical values from t 9 at 5%: 1.833
+This is clear evidence that the null hypothesis is rejected, and therefore, car
+usage has been reduced significantly in City A.
+(iii)
+X B  =  Y B  Z B ~ N   B ,  B 2 
+CI: 29  28 
+t 9,0.025 2.5
+10
+ =  (1  2.262  0.79, 1  2.262  0.79 )  =  ( 0.788, 2.788 
+(marking: test statistic 1mark, critical value 1mark, correct answer 1mark)
+(iv)
+Let x ij be the difference in city i household j .
+10
+ x Aj  =  10  y  z   =  45,
+j  =  1
+10
+ x 2 Aj  =   10  1  2 2  10(33  28.5) 2  =  238.5
+j  =  1
+(v)
+
+10
+10 10 10
+j  =  1 j  =  1 j  =  1
+ x ij 2  =   x 2 Aj   x Bj 2   x Cj 2
+i  =  A , B , C j  =  1
+SS T  =   238.5  66.25  241  
+Page 8
+ 45  10  40  2
+10  10  10
+ =  545.75 
+95 2
+ =  244.92
+30Subject CT3 – September 2013 – Examiners’ Report
+ 45 2 10 2 40 2  95 2 3  3725  9025
+SS B  =  
+
+
+ = 
+ =  71.67
+  
+ 10 10
+10
+30
+30
+
+
+SS R  =  244.92  71.67  =  173.25
+F  = 
+71.67 / 2
+35.835
+ = 
+ =  5.58 on (2, 27) degrees of freedom
+173.25 / 27 6.417
+Critical value at 5%: 3.354
+The null hypothesis that reduction in car usage is equal in the three cities is
+rejected.
+There were no particular problems with this question. However a number of candidates
+failed to justify the assumptions in part (i), while some seemed not to understand fully the
+different test (or CI) requirements in different parts of the question.
