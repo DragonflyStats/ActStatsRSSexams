@@ -34,60 +34,135 @@
 \begin{enumerate}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-5 A large portfolio consists of 20% class A policies, 50% class B policies and 30% class
-C policies. Ten policies are selected at random from the portfolio.
-(i) Calculate the probability that there are no policies of class A among the
-randomly selected ten. 
-(ii) (a) Calculate the expected number of class B policies among the randomly
-selected ten.
-(b) Calculate the probability that there are more than five class B policies
-among the randomly selected ten.
+CT3 S2013–24
+An actuary is considering statistical models for the observed number of claims, X,
+which occur in a year on a certain class of non-life policies. The actuary only
+considers policies on which claims do actually arise. Among the considered models is
+a model for which
+P ( X = x ) = −
+1
+\theta x
+, x=1, 2, 3, ...
+log(1 − \theta ) x
+where \theta is a parameter such that 0 < \theta < 1.
+Suppose that the actuary has available a random sample X 1 , X 2 , ..., X n with sample
+mean X .
+(i)
+Show that the method of moments estimator (MME),  \theta , satisfies the equation
+(
+) (
+)
+X 1 −  \theta log 1 −  \theta +  \theta = 0 .
+(ii)
+(a)
+[3]
+Show that the log likelihood of the data is given by
+n
+l ( \theta ) ∝ − n log { − log ( 1 − \theta ) } + \sum  x i log( \theta ) .
+i = 1
+(b)
+(iii)
+5
+Hence verify that the maximum likelihood estimator (MLE) of \theta is the
+same as the MME.
 
-[Total 3]
-CT3 S2012–3 PLEASE TURN OVER
-6 A random sample of size n is taken from a gamma distribution with parameters \alpha = 8
-and \lambda = 1/θ. The sample mean is X and θ is to be estimated.
-(i) Determine the method of moments estimator (MME) of θ. 
-(ii) Find the bias of the MME determined in part (i). 
-(iii) (a) Determine the mean square error of the MME of θ.
-(b) Comment on the efficiency of the MME of θ based on your answer in
-part (iii)(a).
+Suggest two ways in which the MLE of \theta can be computed when a particular
+data set is given.
 
+[Total 8]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+Consider a random sample consisting of the random variables X 1 , X 2 ,..., X n with
+mean \mu  and variance σ 2 . The variables are independent of each other.
+(i)
+Show that the sample variance, S 2 , is an unbiased estimator of the true
+variance σ 2 .
+[3]
+Now consider in addition that the random sample comes from a normal distribution,
+( n − 1) S 2
+in which case it is known that
+~ χ n 2 − 1 .
+2
+σ
+(ii)
+CT3 S2013–3
+(a) Derive the variance of S 2 in terms of σ and n.
+(b) Comment on the quality of the estimator S 2 with respect to the sample
+size n.
 
-
-5 (i) P(none of class A) = P(all 10 of class B or C) = (0.8)10 = 0.1074
-(ii) (a) Let B = number of class B.
-Note that B ~ binomial (10, 0.5), so that E(B) = (10)(0.5) = 5
-(b) P(B > 5) = 1 – P( B ≤ 5 ) = 1 – 0.6230 = 0.3770
-[0.6230 is from tables; alternatively by evaluation]
-This was generally very well answered. A common error in part (ii) (b) was to calculate
-P(B < or = 5) instead of P(B > 5).
- – September 2012 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 5
-6 (i) Population mean = 8θ
-So MME is solution of X = 8θ ⇒ MME
-8
-= X
-(ii) 1 ( ) 1 (8 )
-8 8 8
-E X E X
-⎛ ⎞
-⎜ ⎟ = = θ = θ
-⎝ ⎠
-Bias = 0
-8
-E X
-⎛ ⎞
-⎜ ⎟ − θ =
-  ⎝ ⎠
-(i.e. MME is unbiased for θ).
-(iii) (a) Since MME is unbiased, 􀜯􀜵􀜧 􁉀􀯑􀴤
-􀬼􁉁 􀵌 􀝒􀜽􀝎 􁉀􀯑􀴤
-􀬼􁉁 􀵌 􀬼􀰏􀰮
-􀬺􀬸􀯡 􀵌 􀰏􀰮
-􀬼􀯡
-(b) MME gets more efficient (MSE gets smaller) as sample size increases.
-There was a mix of quality in the answers, especially in parts (ii) and (iii). Attention to detail
-is required when determining the expected value and variance of functions of sample
-statistics (here the sample mean).
+[Total 7]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6
+(i)
+H 0 = variances are the same, H 1 = variances are different
+S 2 / S 1 ~ F 24,24
+Test statistic = 9.21/2.86 = 3.22.
+F 24,24,0.995 = 0.337 and F 24,24,0.005 = 2.967
+i.e. reject H 0 at 1% significance level.
+(ii)
+  n  1  S 2  n  1  S 2
+Confidence interval is given by  2
+, 2
+ X 0.025, n  1 X 0.975,
+n  1
+
+
+
+
+
+2
+2
+X 0.975,24
+ =  12.40, X 0.025,24
+ =  39.36
+Confidence interval 1 = (1.74, 5.54)
+Confidence interval 2 = (5.61, 17.83)
+Page 5Subject CT3 – September 2013 – Examiners’ Report
+(iii)
+Confidence intervals don’t overlap i.e. agree with result in (i) that variances
+are different.
+Generally well answered. In part (i) some candidates worked with the S 1 /S 2 ratio, which of
+course gives the same conclusion. Part (ii) requires the calculation of two CIs, but some
+candidates attempted to provide a CI for the ratio.
+7
+(i)
+P (claim ) = P (claim| A ) P (A )  P (claim| B ) P (B )  P (claim| C ) P (C 
+= 0.15 \times 0.2  0.1 \times 0.2  0.05 \times 0.6  =  0.08
+(ii)
+P (claim \cup A )  =  P (claim| A ) P [ A ]  =  0.15 \times 0.2  =  0.03
+P (claim \cup B )  =  P (claim| B ) P [ B ]  =  0.1 \times 0.2  =  0.02
+P ( claim \cup \bar{C} )  =  0.03  0.02  =  0.05
+P ( claim | \bar{C} )  = 
+P ( claim \cup \bar{C} )
+P ( \bar{C} )
+(iii) P (A |claim last year )  = 
+(iv) P (B |claim last year )  = 
+ = 
+0.05
+ =  0.125
+0.4
+P (claim \cup A 
+P (claim 
+P (claim \cup B 
+P (claim 
+ =  0.03
+ =  0.375
+0.08
+ =  0.02
+ =  0.25
+0.08
+P (C |claim last year )  =  1  0.375  0.25  =  0.375
+(CLY means “claim last year”)
+P (claim|claim last year ) = P (claim| A ) P (A | CLY )  P (claim| C ) P (C | CLY 
+ =  0.15 \times 0.375  0.1 \times 0.25  0.05 \times 0.375  =  0.1
+(v)
+Let Y be the event that a claim is submitted in two consecutive years
+P (Y )  =  P (claim in second year|claim in first year ) P (claim in first year 
+ =  0.1 \times 0.08  =  0.008
+alternatively:
+P (Y ) = P (Y | A ) P (A )  P (Y | B ) P (B )  P (Y | C ) P (C 
+= 0.15 \times 0.15 \times 0.2  0.1 \times 0.1 \times 0.2  0.05 \times 0.05 \times 0.6  =  0.008
+This turned out to be the most challenging question for the majority of candidates, with only
+a small number of “full mark” answers. Many candidates did not attempt parts (iv) and (v) at
+Page 6Subject CT3 – September 2013 – Examiners’ Report
+all. The question deals with conditional probability concepts, starting with straightforward
+parts but building up to more complex calculations .
