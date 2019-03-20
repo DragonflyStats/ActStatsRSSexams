@@ -39,7 +39,7 @@ Q9
 f X =
 ( x )
 1
-∫ 24 x
+\int^{\infty}_{0} 24 x
 3
 (
 )
@@ -52,7 +52,7 @@ f =
 Y ( y )
 y
 y dx
-∫ 24 x =
+\int^{\infty}_{0} 24 x =
 3
 6 y 5 ,     0 < y < 1
 
@@ -62,7 +62,7 @@ E [ X ] =
 (ii)
 1
 1
-∫ xf X ( x ) dx = ∫ x 12 x ( 1 − x )
+\[\int^{\infty}_{0} xf X ( x ) dx = \int^{\infty}_{0} x 12 x ( 1 − x )\]
 3
 0
 =
@@ -81,7 +81,7 @@ dx =
 1
 y 6  
 y dy
-∫ =
+\int^{\infty}_{0} =
 5
 
 6/7
@@ -92,15 +92,16 @@ y dy
 E [ XY ]   24
 y   
 dx dy
-∫∫ xy x =
+\int^{\infty}_{0}\int^{\infty}_{0} xy x =
 00
 1
 24 7
 =
 y dy 3 / 5
-5 ∫
+5 \int^{\infty}_{0}
 0
-cov ( X , Y ) = E ( XY ) − E ( X ) E ( Y ) =
+\[cov ( X , Y ) = E ( XY ) − E ( X ) E ( Y ) \] =
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (iii)
 (iv)
 3 24 6
@@ -109,7 +110,7 @@ cov ( X , Y ) = E ( XY ) − E ( X ) E ( Y ) =
 5 35 7 245
 y
 y
-∫ xf X | Y ( x | y ) dx = ∫ x 4 x
+\[\int^{\infty}_{0} xf X | Y ( x | y ) dx = \int^{\infty}_{0} x 4 x\]
 0
 0
 3 − 4
@@ -142,7 +143,7 @@ f Y ( y )
 65
 
  1 
-P  X > | Y =  = ∫ f X | Y  x |  dx = ∫ 4 x 3 2 4 dx = 16   x 4   =
+P  X > | Y =  = \int^{\infty}_{0} f X | Y  x |  dx = \int^{\infty}_{0} 4 x 3 2 4 dx = 16   x 4   =
 
 1/3
 3
@@ -176,8 +177,8 @@ integration. Part (iii) was generally answered well. Parts (iv)-(vi) were
 not answered particularly well, while a number of candidates did not
 attempt them at all.
 Page 8
-
-[Total 17]Subject CT3  – April 2018 – Examiners’ Report
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%%[Total 17]Subject CT3  – April 2018 – Examiners’ Report
 In part (iv) many candidates did not use the correct expression, and in
 part (v) candidates struggled with the calculation and the correct limits
 of integration. In part (vi) some candidates provided a general proof of
@@ -185,30 +186,31 @@ the equation, which is not what was required here.
 Q10
 (i)
 =
-p ˆ 1
+\hat{p}_1
 36
 25
 = 0.290, =
-p ˆ 2 = 0.184
+\hat{p}_2 = 0.184
 124
 136
 
-common p ˆ = ( 36 + 25 ) / ( 124 + 136 ) = 0.23 5
+common \hat{p} = ( 36 + 25 ) / ( 124 + 136 ) = 0.23 5
 
-As the sample is large we can use a normal approximation.
-Test statistic =
-( p ˆ 1 − p ˆ 2 )
-p ˆ (1 − p ˆ ) /124 + p ˆ (1 − p ˆ ) /136
+\begin{itemize}
+\item As the sample is large we can use a normal approximation.
+\[Test statistic =
+( \hat{p}_1 − \hat{p}_2 )
+\hat{p} (1 − \hat{p} ) /124 + \hat{p} (1 − \hat{p} ) /136\]
 = ( 0.290 − 0.184 )
 0.235 ( 1 − 0.235 ) /124 + 0.235 ( 1 − 0.235 ) /136
 = 0.106
 0 .00145 + 0.00132
 = 2.014
 
-As Z 0.975 = 1.96 is less than the test statistic we reject H 0 : p 1 = p 2 at a 5%
+\item As Z 0.975 = 1.96 is less than the test statistic we reject H 0 : p 1 = p 2 at a 5%
 significance level.
 
-(ii)
+\item (ii)
 H 0 : Proportions are the same.
 Calculate totals
 Survey 1 2 3
@@ -229,7 +231,7 @@ Contingency table
 Survey 1 2 3
 Y 26.90 29.51 30.59
 87
-Page 9Subject CT3  – April 2018 – Examiners’ Report
+%%-- Page 9Subject CT3  – April 2018 – Examiners’ Report
 N
 Total
 97.10
@@ -241,7 +243,7 @@ Total
 314
 401
 
-Test statistic
+\item Test statistic
 2
 e i − a i )
 (
@@ -254,26 +256,27 @@ e i
 d.f. = (3 – 1)(2 – 1) = 2
 
 
-The 95\%  point of X 2 2 = 5.991 . As test statistic is lower, do not reject that the
+\item The 95\%  point of X 2 2 = 5.991 . As test statistic is lower, do not reject that the
 proportion of smokers is equal.
 
 (iii)
-p ˆ 3 26
+\hat{p} 3 26
 =
 /141 0 .184
 (a) =
 (b)
 
-In the first case the test rejected that the proportions were the same, but
+\item In the first case the test rejected that the proportions were the same, but
 in the second it did not reject that they were, as the proportion in the
 third survey is almost identical to that in the second.
-
+\end{itemize}
 [Total 16]
 The answers in part (i) were generally good. Common errors included not calculating a common proportion p and calculation mistakes when
 computing the test statistic. Part (ii) was also well answered in general, although there were some calculation errors. Part (iii) (a) was well
 answered by most candidates. Answers in (iii)(b) were mixed, with most candidates making the correct observation. However, many candidates
 failed to identify appropriate reasoning.
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 Q11
 (i)
 There are 100 observations for age 50 and we can therefore use the normal distribution:
@@ -381,14 +384,11 @@ S xx
 =−
 =
 y ˆ 19.337 − 0.10738 x
-Part (i) was very well answered. Answers in part (ii) were mostly correct. Some candidates used a t99 distribution with pooled variance, in which case an assumption of equal variances needs to be made and
-explicitly mentioned. Part (iii) was well answered in general. Answers
-in parts (iv)-(v) were mixed, with many students failing to state in (iv)
-that the variation was ignored. Part (vi) was not particularly well
-answered, with many candidates using the Sxy and Sxx sums from a
-previous part without further explanation regarding why they would be
-the same here.
-END OF EXAMINERS’ REPORT
-Page 12
 
-[Total 21]
+%Part (i) was very well answered. Answers in part (ii) were mostly correct. Some candidates used a t99 distribution with pooled variance, in which case an assumption of equal variances needs to be made and explicitly mentioned. Part (iii) was well answered in general. Answers in parts (iv)-(v) were mixed, with many students failing to state in (iv) that the variation was ignored. Part (vi) was not particularly well answered, with many candidates using the Sxy and Sxx sums from a previous part without further explanation regarding why they would be the same here.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%END OF EXAMINERS’ REPORT
+%Page 12
+
+%[Total 21]
+\end{document}
