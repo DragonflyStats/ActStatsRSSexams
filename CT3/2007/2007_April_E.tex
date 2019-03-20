@@ -33,9 +33,8 @@
 
 \begin{document}
 \begin{enumerate}
-
-[Total 5]
-A random sample of insurance policies of a certain type was examined for each of
+%%--- [Total 5]
+\item A random sample of insurance policies of a certain type was examined for each of
 four insurance companies and the sums insured ( y ij , for companies i = 1, 2, 3, 4)
 under each policy are given in the table below (in units of £100):
 Company
@@ -72,22 +71,25 @@ e ij ~ N (0, \sigma^2 ) are independent errors, and
 11
 ∑ i = 1 n i τ i = 0 .
 4
+
+\begin{enumerate}[(i)]
 \item (i) Calculate estimates of the parameters μ and τ i , i = 1, 2, 3, 4 .
 \item (ii) Test the hypothesis that there are no differences in the means of the sums
 insured under such policies by the four companies.
-
-[Total 8]
+\end{enumerate}
+% [Total 8]
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The number of claims, X , which arise in a year on each policy of a particular class is to be modelled as a Poisson random variable with mean \lambda. Let X = ( X 1 , X 2 , ..., X n ) be
+\item The number of claims, X , which arise in a year on each policy of a particular class is to be modelled as a Poisson random variable with mean \lambda. Let X = ( X 1 , X 2 , ..., X n ) be
 1 n
 a random sample of size n from the distribution of X , and let X = ∑ X i .
 n i = 1
 Suppose that it is required to estimate \lambda , the mean number of claims on a policy.
-\item (i) Show that \lambdâ , the maximum likelihood estimator of \lambda, is given by \hat{\lambda} = X . 
-\item (ii) Derive the Cramer-Rao lower bound (CRlb) for the variance of unbiased estimators of \lambda.
-\item (iii)
+\begin{enumerate}[(i)]
+\item Show that $\hat{\lambdâ}$, the maximum likelihood estimator of $\lambda$, is given by \hat{\lambda} = X . 
+\item Derive the Cramer-Rao lower bound (CRlb) for the variance of unbiased estimators of \lambda.
+\item 
 
 (a) Show that \lambdâ is unbiased for \lambda and that it attains the CRlb.
 (b) Explain clearly why, in the case that n is large, the distribution of \lambdâ can be approximated by
@@ -97,9 +99,10 @@ Suppose that it is required to estimate \lambda , the mean number of claims on a
 
 (iv)
 (a)
-Show that, in the case n = 100, an approximate 95\% confidence interval for \lambda is given by
+Show that, in the case n = 100, an approximate 95\% confidence interval for $\lambda$ is given by
 x \pm 0.196 x .
 (b)
+\end{enumerate}
 Evaluate the confidence interval in (iv)(a) based on a sample with the
 following composition:
 observation
@@ -121,11 +124,9 @@ frequency
 7
 1
 [6]
-[Total 16]
-CT3 A2007—5
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 5Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item (i)
 10
 \item (ii)
@@ -169,6 +170,7 @@ i
 i ⎝ n i ⎠
 SS R = SS T − SS B = 35.002
 The ANOVA table is:
+\begin{verbatim}
 Source
 DF
 SS
@@ -180,6 +182,7 @@ Residual
 12 35.002 2.917
 Total
 15 120.430
+\end{verbatim}
 At the 5\% significance level, F 0.05,3,12 = 3.490 (or F 0.01,3,12 = 5.953 )
 Since F = 9.763 > 3.490, there is evidence against the null hypothesis, and we conclude that there are differences in the mean sums insured by the companies.
 % Page 6
