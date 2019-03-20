@@ -1,4 +1,4 @@
- 88 lines (72 sloc) 2.45 KB
+
 \documentclass[a4paper,12pt]{article}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -34,15 +34,16 @@
 \begin{document}
 \begin{enumerate}
 \item 
-In order to compare the effectiveness of two new vaccines, A and B, for a childhood
-disease, 11 infants were immunised with vaccine A and 9 infants were immunised
-with vaccine B. One month after immunisation the concentration of the disease
+In order to compare the effectiveness of two new vaccines, A and B, for a childhood disease, 11 infants were immunised with vaccine A and 9 infants were immunised with vaccine B. One month after immunisation the concentration of the disease
 antibodies in the blood of each infant was recorded in appropriate units. The sample
 mean and variance for each group is given below.
+\begin{verbatim}
 Vaccine A: n A = 11, x A = 4.05, s 2 A = 0.692
 Vaccine B: n B = 9, x B = 4.36, s B 2 = 0.813
+\end{verbatim}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 It is assumed that the distributions of the antibody concentration levels after
-immunisation with vaccine A and vaccine B are N ( \mu A , \sigma^2 A ) and N ( \mu B , \sigma^2 B )
+immunisation with vaccine A and vaccine B are $N ( \mu A , \sigma^2 A )$ and $N ( \mu B , \sigma^2 B )$
 respectively. You may assume that the samples are independent.
 s 2 A / \sigma^2 A
 .
@@ -56,12 +57,14 @@ s B 2 / \sigma^2 B
 Calculate an equal-tailed 95\% confidence interval for the ratio
 
 \sigma^2 A
-We now assume that \sigma^2 A = \sigma^2 B = \sigma^2 . Under this assumption, you are given that the
+We now assume that $\sigma^2 A = \sigma^2 B = \sigma^2$. 
+
+Under this assumption, you are given that the
 distribution of
 18 s^2_p
 2
 is χ 18
-, where s^2_p is the pooled variance of the two samples and
+, where $s^2_p$ is the pooled variance of the two samples and
 \sigma
 is independent from x A and x B .
 (iii)
@@ -74,13 +77,12 @@ S p
 11 9
 (iv)
 (v)
-CT3 S2012–6
+%%CT3 S2012–6
 is t 18 . 
-Calculate an equal-tailed 95\% confidence interval for \mu A − \mu B using the
-sampling distribution in part (iii). (You are not required to show the
-derivation of the interval.) 
-Comment on your results with regard to differences between vaccine A and
-vaccine B.
+Calculate an equal-tailed 95\% confidence interval for $\mu_A − \mu_B$ using the
+sampling distribution in part (iii). (You are not required to show the derivation of the interval.) 
+
+%Comment on your results with regard to differences between vaccine A and vaccine B.
 \end{enumerate}
 \newpage
 
@@ -116,8 +118,7 @@ X A − X B − ( \mu A −\mu B )
 \sigma
 +
 11 9
-Page 7%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – September 2012 – 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We are also given that Y =
 \sigma
 2
@@ -136,16 +137,20 @@ S p
 we can use that
 (iv)
 18 s^2_p
-First compute s^2_p =
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\begin{itemize}
+\item First compute s^2_p =
 10*0.692 + 8*0.813
 = 0.74577 ⇒ s p = 0.864
 18
-Then with t 18,0.025 = 2.101 the interval is given by (4.05 – 4.36) \pm 2.101 *
+\item Then with t 18,0.025 = 2.101 the interval is given by (4.05 – 4.36) \pm 2.101 *
 0.864 (1/11 + 1/9) 1/2 i.e. (– 1.126, 0.506).
 (v)
-The interval includes the value 0, suggesting that there is no difference in the
+\item The interval includes the value 0, suggesting that there is no difference in the
 mean effectiveness of the two vaccines.
-Part (iii) was problematic for many candidates. Many candidates struggled to provide a
-‘proof’ that had sufficient rigour. There were errors also in determining the endpoints of the
+\item Part (iii) was problematic for many candidates. Many candidates struggled to provide a
+‘proof’ that had sufficient rigour.
+\item There were errors also in determining the endpoints of the
 CI in part (ii), often due to using the wrong percentiles of the F distribution.
+\end{itemize}
 \end{document}
