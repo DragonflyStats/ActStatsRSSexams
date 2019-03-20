@@ -33,11 +33,11 @@
 \begin{document}
 \begin{enumerate}
 
-[Total 5]
-7
-We consider a random sample X 1 , ..., X n from a normal distribution with expectation
+%%[Total 5]
+%%- Question 7
+\item We consider a random sample X 1 , ..., X n from a normal distribution with expectation
 1
-E [ X i ] = θ 2 and variance V(X i ) = \sigma 2 for all i.
+E [ X i ] = \hat{theta} 2 and variance $V(X i ) = \sigma^2$ for all i.
 2
 (i)
 (ii)
@@ -45,12 +45,12 @@ E [ X i ] = θ 2 and variance V(X i ) = \sigma 2 for all i.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-8
-Derive an estimator θ̂ for the unknown parameter θ using the method of
+%%--Question 8
+\item Derive an estimator $\hat{theta}$  for the unknown parameter \hat{theta} using the method of
 moments.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Estimate θ for a sample of size 200 for which
+Estimate $\hat{theta}$ for a sample of size 200 for which
 derived in part (i).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -75,10 +75,13 @@ List the assumptions required for an analysis of variance to be valid.
 
 A study involving three different types of treatment for a medical condition gave the
 following sums on a particular improvement score (y):
-n \sigma y i \sigma y i 2
+\begin{verbatim}
+    n \sigma y i \sigma y i 2
 Treatment 1 8 193.03 4,697.80
 Treatment 2 9 259.49 7,508.30
 Treatment 3 9 263.08 7,730.34
+\end{verbatim}
+
 In the above table, n denotes the number of patients receiving each of the three types
 of treatment.
 (ii)
@@ -89,9 +92,7 @@ CT3 A2018–4
 Test the hypothesis, using an analysis of variance, that the mean improvement
 score for each type of treatment is the same.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-[6]
-[Total 8]9
+\item %% - Question 9
 The random variables X and Y have joint probability density function (pdf)
 ⎧ 24 x 3 y for 0 < x < y < 1,
 f X,Y (x,y) = ⎨
@@ -118,7 +119,7 @@ it is defined.
 (vi)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\end{enumerate}
 10
 ⎛
 ⎝
@@ -145,8 +146,11 @@ Verify that E[E[X |Y ]] = E[X ] by evaluating each side of the equation.
 [Total 17]
 A large pension scheme regularly investigates the lifestyle of its pensioners using surveys. In successive surveys it draws a random sample from all pensioners in the
 scheme and it obtains the following data on whether the pensioners smoke.
-Survey 1: Of 124 pensioners surveyed, 36 were classed as smokers.
-Survey 2: Of 136 pensioners surveyed, 25 were classed as smokers.
+\begin{itemize}
+    \item Survey 1: Of 124 pensioners surveyed, 36 were classed as smokers.
+\item Survey 2: Of 136 pensioners surveyed, 25 were classed as smokers.
+\end{itemize}
+
 An actuary wants to investigate, using statistical testing at a 5\% significance level,
 whether there have been significant changes in the proportion of pensioners, p, who
 smoke in the entire pension scheme.
@@ -171,26 +175,22 @@ Calculate the proportion of smokers in the third survey.
 Comment on your answers to parts (i) and (ii).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-[Total 16]
-CT3 A2018–5 
+\end{enumerate}
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Q7
 We have X =
 (i)
 1 2
-θ
+\hat{theta}
 2
 
-and solving for θ we obtain the estimator θ ˆ = ± 2X 
+and solving for \hat{theta} we obtain the estimator \hat{theta} ˆ = ± 2X 
 only if ∑ x i ≥ 0 . 
 9
 ˆ = − 3 .
-For the given sample we obtain xx̅ = 2 and θ ˆ = 3 or θ
+For the given sample we obtain xx̅ = 2 and \hat{theta} ˆ = 3 or \hat{theta}
 (ii)
 
 n
@@ -202,16 +202,16 @@ case the estimator in part (i) is not defined.
 Part (i) was answered well by most candidates, but only a relatively
 small number achieved full marks. A common mistake was not
 including the negative solution, while only a small number of
-Page 6
+%Page 6
 
-[Total 5]Subject CT3  – April 2018 – Examiners’ Report
+%[Total 5]Subject CT3  – April 2018 – Examiners’ Report
 candidates noted that the solution was only valid for a non-negative
 sum. Parts (ii) and (iii) were answered well in general.
 Q8
 (i)
 The variances of the errors are common to all treatments.
 The errors are independently distributed
-with a N(0,\sigma 2 ) distribution.
+with a $N(0,\sigma 2 )$ distribution.
 (ii)
 
 [0.5]
@@ -261,3 +261,4 @@ Therefore reject H 0 and conclude that the means are not the same at 5% level
 [Total 8]
 Generally very well answered. There were some calculation errors in
 part (ii).
+\end{document}
