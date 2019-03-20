@@ -33,33 +33,28 @@
 
 \begin{document}
 \begin{enumerate}
-CT S2006
-Faculty of Actuaries
-Institute of Actuaries1
-A bag contains 8 black and 6 white balls. Two balls are drawn out at random, one
+%%-- CT S2006
+%%-- Faculty of Actuaries
+%%-- Institute of Actuaries1
+\item A bag contains 8 black and 6 white balls. Two balls are drawn out at random, one
 after the other and without replacement.
 Calculate the probabilities that:
-2
-(i) The second ball drawn out is black.
-(ii) The first ball drawn out was white, given that the second ball drawn out is
-black.
 
-2 
+\begin{enumerate}[(i)]
+\item The second ball drawn out is black.
+\item The first ball drawn out was white, given that the second ball drawn out is
+black.
+\end{enumerate}
+
+%% -- Question 2
+\item
 Let A and B denote independent events.
 Show that A and B , the complement of event B, are also independent events.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Question 11
-s 1 2
-s 2 2
-(which is the reciprocal
-In the part on equality of variances (part (iii)(a)) some candidates who worked with
-(= 0.607) did not know how to find the lower 2.5% point of F 7,11
-of the upper 2.5% point of F 11,7 , and is approximately
-1/4.71 = 0.212).
-
-Page Subject CT  — September 2006 — 
+\end{enumerate}
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 1
@@ -69,17 +64,30 @@ OR P (1 st B and 2 nd B ) + P (1 st W and 2 nd B )
 = (8/14) × (7/1) + (6/14) × (8/1) = 8/14
 (ii)
 
+\begin{eqnarray*}
+P (1 st W | 2 nd B ) &=& \frac{P (1 st W and 2 nd B )}{ P (2 nd B )} \\  
+&=& \frac{ (6/14) × (8/1) }{ (8/14) } \\
+&=& \frac{6}{14} \\  &=& 0.462\\
+\end{eqnarray*}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 2
-P (1 st W | 2 nd B ) = P (1 st W and 2 nd B )/ P (2 nd B ) = (6/14) × (8/1)/(8/14)
-= 6/1 = 0.462
-Since A and B are independent, P ( A ) = P ( A | B ) = P ( A | B )
+\begin{itemize}
+\item Since A and B are independent, P ( A ) = P ( A | B ) = P ( A | B )
 (
 Noting that ( B ) = B , it follows immediately that P ( A ) = P ( A | B ) = P A | ( B )
 )
 and so A and B are independent.
-[OR
+\item [OR
 Since A and B are independent P (A ∩ B) = P(A)P(B).
-Thus,
-P(A ∩ B ) = P(A) − P(A ∩ B) = P(A) − P(A)P(B) = P(A){1 − P(B)} = P(A)P( B )
-∴ A and B are independent.
+\item Thus,
+\begin{eqnarray*}
+P(A \cap B ) &=& P(A) − P(A \cap B) \\ 
+&=& P(A) − P(A)P(B) \\ &=& P(A){1 − P(B)} \\ &=& P(A)P( B )
+\\
+\end{eqnarray*}
+
+\item Therefore A and B are independent.
+\end{itemize}
+
+\end{document}
