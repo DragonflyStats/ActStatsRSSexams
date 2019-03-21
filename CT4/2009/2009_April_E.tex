@@ -1,0 +1,185 @@
+PLEASE TURN OVER11
+An investigation into mortality by cause of death used the four-state Markov model
+shown below.
+1 Alive
+\mu 12
+x + t
+2 Dead from
+heart disease
+\item (i)
+\mu 14
+x + t
+\mu 13
+x + t
+3 Dead from
+cancer
+4 Dead from
+other causes
+Show from first principles that
+\partial 12
+12
+11
+t p x = \mu x + t t p x .
+\partial t
+
+The investigation was carried out separately for each year of age, and the transition
+intensities were assumed to be constant within each single year of age.
+\item (ii)
+(a) Write down, defining all the terms you use, the likelihood for the
+transition intensities.
+(b) Derive the maximum likelihood estimator of the force of mortality
+from heart disease for any single year of age.
+
+The investigation produced the following data for persons aged 64 last birthday:
+Total waiting time in the state Alive 1,065 person-years
+Number of deaths from heart disease
+Number of deaths from cancer
+Number of deaths from other causes 34
+36
+42
+\item (iii)
+(iv)
+(a) Calculate the maximum likelihood estimate (MLE) of the force of
+mortality from heart disease at age 64 last birthday.
+(b) Estimate an approximate 95% confidence interval for the MLE of the
+force of mortality from heart disease at age 64 last birthday.
+
+Discuss how you might use this model to analyse the impact of risk factors on
+the death rate from heart disease and suggest, giving reasons, a suitable
+alternative model.
+
+[
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+11
+\item (i)
+Condition on the state occupied at t.
+We have
+t + dt
+11
+12
+12
+22
+p 12
+x = t p x dt p x + t + t p x dt p x + t .
+since it is impossible to leave states 3 and 4 once entered.
+Also,
+dt
+p x 22 + t = 1,
+since state 2 is an absorbing state.
+We now assume that, for small dt,
+dt
+12
+p 12
+x + t = \mu x + t dt + o ( dt )
+where o(dt) is the probability that a life makes two or more transitions in the
+time interval dt, and
+o ( dt )
+= 0 .
+dt → 0 dt
+lim
+Substituting for
+t + dt
+dt
+p 12
+x + t gives
+12
+11
+12
+p 12
+x = \mu x + t t p x dt + t p x + o ( dt )
+Thus
+t + dt
+12
+12
+11
+p 12
+x − t p x = \mu x + t t p x dt + o ( dt )
+and
+\partial 12
+t p x = lim +
+\partial t
+dt → 0
+\item (ii)
+(a)
+t + dt
+12
+p 12
+11
+x − t p x
+= \mu 12
+x + t t p x
+dt
+Suppose we observe d 12 deaths from heart disease, d 13 deaths from
+cancer and d 14 deaths from other causes.
+Suppose also that we observe the waiting time for each life, and that
+the total observed waiting time is V, being the sum of the waiting times
+for each life.
+Page 15Subject CT4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+Then the likelihood of the data is given by
+(
+)
+L ∝ exp ⎡ − \mu 12 + \mu 13 + \mu 14 V ⎤ ( \mu 12 ) d ( \mu 13 ) d ( \mu 14 ) d .
+⎣
+⎦
+(b)
+12
+13
+14
+The maximum likelihood estimator of \mu 12 is obtained by
+differentiating this expression (or its logarithm) with respect to \mu 12
+and setting the derivative equal to zero.
+Taking logarithms produces
+log L = − ( \mu 12 + \mu 13 + \mu 14 ) V + d 12 log \mu 12 + d 13 log \mu 13 + d 14 log \mu 14 + K
+(where K is a constant )
+Partially differentiating this with respect to \mu 12 leads to
+\partial log L
+\partial\mu 12
+= − V +
+d 12
+\mu 12
+,
+and setting the partial derivative equal to zero leads to the solution
+\mu ˆ 12 =
+d 12
+.
+V
+\partial 2 log L
+=−
+d 12
+, the second derivative is always negative
+( \partial\mu 12 ) 2
+( \mu 12 ) 2
+and so we have a maximum.
+Since
+\item (iii)
+(a) The maximum likelihood estimate of the force of mortality from heart
+disease is 34/1,065 = 0.0319249
+(b) The variance of the maximum likelihood estimator of \mu 12 is
+asymptotically
+\mu 12
+, where E[V] is the expected waiting time in the
+E [ V ]
+state “alive” and \mu 12 is the “true” population value of the force of
+mortality from heart disease.
+This may be approximated by using the observed force of mortality
+and the observed waiting time, so that an estimate of the variance is
+0.0319249
+= 0.000029976 .
+1, 065
+Page 16Subject CT4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+The estimated standard error is therefore
+0.000029976 = 0.00547507 .
+The 95% confidence interval is therefore
+0.0319249 ± (1.96)0.00547507 = 0.0319249 ± 0.0107311
+= (0.0212, 0.0427).
+(iv)
+Using the four state model, the lives in the investigation would have to be
+stratified according to the risk factors and the transition intensities estimated
+separately for each stratum.
+This is likely to run into problems of small numbers.
+Using a Cox regression model with death from heart disease as the event of
+interest and the risk factors as covariates would avoid this problem.
+Lives who died from other causes could be treated as censored at the durations
+when they died.
