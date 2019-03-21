@@ -1,4 +1,3 @@
- 88 lines (72 sloc) 2.45 KB
 \documentclass[a4paper,12pt]{article}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -34,17 +33,17 @@
 \begin{document}
 \begin{enumerate}
 
-8
-E[N] = \sumn P(N = n) = 0.3 + 0.6 + 0.6 + 0.4 = 1.9
-E[N 2 ] = \sumn 2 P(N = n) = 0.3 + 1.2 + 1.8 + 1.6 = 4.9
-V[N] = E[N 2 ] – (E[N]) 2 = 1.29
+%% - Question 8
+\[E[N] = \sumn P(N = n) = 0.3 + 0.6 + 0.6 + 0.4 = 1.9\]
+\[E[N 2 ] = \sumn 2 P(N = n) = 0.3 + 1.2 + 1.8 + 1.6 = 4.9\]
+\[V[N] = E[N 2 ] – (E[N]) 2 = 1.29\]
 Also E[Y] = exp( \mu + \sigma^2 / 2 ) = e 0.55 = 1.73325
 ( )
 V [ Y ] = ( E [ Y ] ) 2 (exp \sigma^2 − 1 ) = 1.73325 2 * (e 0.1 – 1) = 0.31595
 Using known results
-Page 5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – September 2012 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-E[S] = E[N] E[Y] = 1.9 * 1.73325 = 3.293
-V[S] = E[N] V[Y] + V[N] (E[Y]) 2 = 0.60031 + 3.87536 = 4.476
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – September 2012 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\[E[S] = E[N] E[Y] = 1.9 * 1.73325 = 3.293\]
+\[V[S] = E[N] V[Y] + V[N] (E[Y]) 2 = 0.60031 + 3.87536 = 4.476\]
 Some frequent errors were due to mis-interpretation of the mean and variance of the log-
 normal distribution.
 9
@@ -205,6 +204,7 @@ Average
 2.36
 1.40
 Based on the above observations the following ANOVA table was obtained:
+\begin{verbatim}
 Source of variation
 Between regions
 Residual
@@ -217,15 +217,17 @@ SS
 MSS
 ...
 ...
-(i) State the mathematical model underlying the one-way analysis of variance
+\end{verbatim}
+
+\begin{enumerate}[(i)]
+\item State the mathematical model underlying the one-way analysis of variance
 together with all associated assumptions.
 
-(ii) Complete the ANOVA table.
-(iii) Carry out an analysis of variance to test the hypothesis that the region has no
+\item Complete the ANOVA table.
+\item Carry out an analysis of variance to test the hypothesis that the region has no
 effect on the average time spent watching television. You should write down
 the null hypothesis, calculate the value of the test-statistic, state its distribution
 including any parameters, calculate the p-value approximately and state your
 conclusion.
-
-[Total 8]
-CT3 S2012–5
+\end{enumerate}
+\end{document}
