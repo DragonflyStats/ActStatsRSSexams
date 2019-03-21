@@ -1,0 +1,170 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+11
+A study was undertaken into the length of spells of unemployment among young
+people in a certain city. A sample of young people was monitored from the time they
+started to claim unemployment benefit until either they resumed work, or they moved
+away from the city. None of the members of the sample died during the study.
+The study investigated the impact of age, sex and educational qualifications on the
+hazard of returning to work using the following covariates:
+A a young person’s age when he or she started claiming benefit (measured in
+exact years since his or her 16th birthday)
+S a dummy variable taking the value 1 if the person was male and 0 if the person
+was female
+E a dummy variable taking the value 1 if the person had passed a school leaving
+examination in mathematics, and 0 otherwise
+with associated parameters β A , β S and β E .
+The investigators decided to use a Cox proportional hazards regression model for the
+study.
+(i) Explain what is meant by a proportional hazards model.
+
+\item (ii) Explain why the Cox model is a popular model for the analysis of survival
+data.
+
+\item (iii) (a)
+Write down the equation of the model that was estimated, defining
+the terms you use (other than those defined above).
+(b)
+List the characteristics of the young person to whom the baseline
+hazard applies.
+
+The results showed:
+• The hazard of resuming work for males who started claiming benefit aged 17
+years exact and who had passed the mathematics examination was 1.5 times the
+hazard for males who started claiming benefit aged 16 years exact but who had
+not passed the mathematics examination.
+• Females who had passed the mathematics examination were twice as likely to take
+up a new job as were males of the same age who had failed the mathematics
+examination.
+• Females who started claiming benefit aged 20 years exact and who had passed the
+mathematics examination were twice as likely to resume work as were males who
+started claiming benefit aged 16 years exact and who had also passed the
+mathematics examination.
+(iv)
+Calculate the estimated values of the parameters β A , β S and β E .
+END OF PAPER
+CT4 S2009—8
+[6]
+[Total 15]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+11
+(i) A proportional hazards (PH) model is a model which allows investigators to
+assess the impact of risk factors, or covariates, on the hazard of experiencing
+an event.
+In a PH model the hazard is assumed to be the product of two terms, one
+which depends only on duration, and the other which depends only on the
+values of the covariates.
+Under a PH model, the hazards of different lives with covariate vectors z 1 and
+z 2 are in the same proportion at all times:
+for example in the Cox model
+ ( t ; z 1 ) exp(  z 1 T )
+
+.
+ ( t ; z 2 ) exp(  z 2 T )
+Page 16  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+\item (ii) Cox‟s model ensures that the hazard is always positive. Standard software
+packages often include Cox‟s model.
+Cox‟s model allows the general “shape” of the hazard function for all
+individuals to be determined by the data, giving a high degree of flexibility
+while an exponential term accounts for differences between individuals.
+This means that if we are not primarily concerned with the precise form of the
+hazard, we can ignore the shape of the baseline hazard and estimate the effects
+of the covariates from the data directly.
+\item (iii)
+a.
+ ( t )   0 ( t ) exp(  A A   E E   S S ) , where
+ ( t )
+is the estimated
+hazard and  0 ( t ) is the baseline hazard.
+b.
+A female aged exactly 16 years when she first claimed benefit who had
+not passed the school mathematics examination.
+(iv) “The hazard of resuming work for males aged 17 years who had passed the
+mathematics examination was 1.5 times the hazard for males aged 16 years
+who had not passed the mathematics examination” implies that
+exp[(  A *1)   S   E ]
+ exp(  A   E )
+exp(  S )
+ exp(  A ) exp(  E )  1.5
+“Females who had passed the examination were twice as likely to take up a
+new job as were males of the same age who had failed” implies that
+exp(  E )
+ 2
+exp(  S )
+since the age terms cancel out.
+“Females aged 20 years who had passed the examination were twice as likely
+to resume work as were males aged 16 years who had also passed the
+examination” implies that
+exp(  A * 4)
+ 2 .
+exp(  S )
+Substituting from (2) into (1) gives
+2exp(  A ) exp(  S )  1.5
+so
+exp(  S )  0.75exp(  A ) .
+Substituting into (3) gives
+exp[  A *4)
+ 2 ,
+0.75exp(  A )
+Page 17  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+exp(5  A )  1.5
+ A 
+log e 1.5
+ 0.0811
+5
+From (1) then, we obtain
+exp(  E ) exp(0.0811)  1.5
+ E  0.0811  0.4055
+ E  0.3244 .
+Finally, from (2) we obtain
+exp(0.3244)
+ 2
+exp(  S )
+0.3244   S  log e 2  0.6931
+ S   0.3688
+This was satisfactorily answered by many candidates. Although it is still the case
+than only a minority of candidates seem to understand the essential feature of a
+proportional hazards model that the hazard can be factorised into one part depending
+on duration and another part depending on the values of covariates, many candidates
+could list some advantages of the Cox model in part \item (ii). In part \item (iii)(b) very few
+candidates spotted that the baseline person was aged 16 years when first claiming
+benefit. In part (iv) candidates who failed to write down the correct equations
+implied by the three statements in the question were given some credit for correctly
+solving the equations they did produce.
+END OF EXAMINERS‟ REPORT
+Page 18
