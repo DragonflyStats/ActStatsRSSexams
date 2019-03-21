@@ -1,4 +1,4 @@
- 88 lines (72 sloc) 2.45 KB
+
 \documentclass[a4paper,12pt]{article}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -68,7 +68,7 @@ among the randomly selected ten.
 4
 Let $F_Z( z )$ be the density o $F_Z= U + X$ .
 1
-F_Z( z ) = \int f U ( u ) F_X ( z − u ) du = \int F_X ( z − u ) du
+\[F_Z( z ) = \int f U ( u ) F_X ( z − u ) du = \int F_X ( z − u ) du\]
 u
 0
 z
@@ -84,7 +84,7 @@ function o $F_X$ .
 (i) P(none of class A) = P(all 10 of class B or C) = (0.8) 10 = 0.1074
 (ii) (a)
 Let B = number of class B.
-Note that B ~ binomial (10, 0.5), so that E(B) = (10)(0.5) = 5
+Note that B ~ binomial (10, 0.5), so that $E(B) = (10)(0.5) = 5$
 (b)
 \[P(B > 5) = 1 – P( B \leq 5 ) = 1 – 0.6230 = 0.3770\]
 [0.6230 is from tables; alternatively by evaluation]
@@ -94,12 +94,12 @@ P(B < or = 5) instead of P(B > 5).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 5
-(i) P(none of class A) = P(all 10 of class B or C) = (0.8) 10 = 0.1074
+(i) \[P(none of class A) = P(all 10 of class B or C) = (0.8)^10 = 0.1074\]
 (ii) (a)
 Let B = number of class B.
 Note that B ~ binomial (10, 0.5), so that E(B) = (10)(0.5) = 5
 (b)
-P(B > 5) = 1 – P( B ≤ 5 ) = 1 – 0.6230 = 0.3770
+\[P(B > 5) = 1 – P( B \leq 5 ) = 1 – 0.6230 = 0.3770\]
 [0.6230 is from tables; alternatively by evaluation]
 This was generally very well answered. A common error in part (ii) (b) was to calculate
 P(B < or = 5) instead of P(B > 5).
@@ -124,7 +124,7 @@ X
 8
 ⎠ 8
 ⎛ X ⎞
-Bias = E ⎜ ⎟ − \theta = 0 (i.e. MME is unbiased for \theta).
+Bias = E ⎜ ⎟ − \theta = 0 (i.e. MME is unbiased for $\theta$).
 ⎝ 8 ⎠
 (iii)
 ௑ത ௑ത ଼ఏ మ
@@ -135,14 +135,14 @@ Bias = E ⎜ ⎟ − \theta = 0 (i.e. MME is unbiased for \theta).
 (b) MME gets more efficient (MSE gets smaller) as sample size increases.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-7
+
+%% Question 7
 (i) With the larger sample of 100 claims the standard error of the sample mean
 will be smaller, giving a narrower confidence interval.
 (ii) The replacement of the extreme value will give a smaller sample mean, which
 means that the interval will be shifted to the left.
-The variance of the sample will also be smaller, which will again give a
-narrower interval.
-Many candidates recognised the correct effect on the interval, without being able to justify it
-properly. Note that reasonably accurate wording is important in providing the comments and
-justification required here.
+The variance of the sample will also be smaller, which will again give a narrower interval.
+
+%Many candidates recognised the correct effect on the interval, without being able to justify it properly. Note that reasonably accurate wording is important in providing the comments and justification required here.
+
 \end{document}
