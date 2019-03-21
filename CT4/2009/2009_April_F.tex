@@ -1,0 +1,161 @@
+Total 16]
+CT4 A2009—612
+A motor insurer operates a no claims discount system with the following levels of
+discount {0%, 25%, 50%, 60%}.
+The rules governing a policyholder’s discount level, based upon the number of claims
+made in the previous year, are as follows:
+• Following a year with no claims, the policyholder moves up one discount level, or
+remains at the 60% level.
+• Following a year with one claim, the policyholder moves down one discount level,
+or remains at 0% level.
+• Following a year with two or more claims, the policyholder moves down two
+discount levels (subject to a limit of the 0% discount level).
+The number of claims made by a policyholder in a year is assumed to follow a
+Poisson distribution with mean 0.30.
+\item (i) Determine the transition matrix for the no claims discount system. 
+\item (ii) Calculate the stationary distribution of the system, \pi . 
+\item (iii) Calculate the expected average long term level of discount. 
+The following data shows the number of the insurer’s 130,200 policyholders in the
+portfolio classified by the number of claims each policyholder made in the last year.
+This information was used to estimate the mean of 0.30.
+No claims
+96,632
+One claim
+28,648
+Two claims
+4,400
+Three claims
+476
+Four claims
+36
+Five claims
+8
+(iv) Test the goodness of fit of these data to a Poisson distribution with mean 0.30.
+
+(v) Comment on the implications of your conclusion in (iv) for the average level
+of discount applied.
+
+[Total 16]
+END OF PAPER
+CT4 A2009—7
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+12
+\item (i)
+The probability of making the relevant number of claims is:
+P[0 claims] = exp(−0.3) = 0.740818
+P[1 claim] = 0.3exp(−0.3) = 0.222245
+So P[2 or more claims] = 1 − 0.740818 − 0.222245 = 0.036936
+Therefore the transition matrix P is given by:
+0
+0
+⎛ 0.259182 0.740818
+⎞
+⎜
+⎟
+0
+0.740818
+0
+⎜ 0.259182
+⎟
+⎜ 0.036936 0.222245
+0
+0.740818 ⎟
+⎜
+⎟
+0
+0.036936 0.222245 0.740818 ⎠
+⎝
+\item (ii)
+\pi = \pi P
+\pi_1 = 0.259182 \pi_1 + 0.259182 \pi_2 + 0.036936 \pi 3
+\pi_2 = 0.740818 \pi_1 + 0.222245 \pi 3 + 0.036936 \pi 4
+\pi 3 = 0.740818 \pi_2 + 0.222245 \pi 4
+\pi 4 = 0.740818 \pi 3 + 0.740818 \pi 4
+\pi_1 + \pi_2 + \pi 3 + \pi 4 = 1
+(1)
+(2)
+(3)
+(4)
+Page 17Subject CT4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+Using (4)
+\pi 3 = [(1 − 0.740818) / 0.740818]* \pi 4 = 0.349859 \pi 4 .
+In (3)
+\pi_2 = [(0.349859 − 0.222245) / 0.740818]* \pi 4 = 0.17226 \pi 4 .
+Then in (2)
+\pi_1 = [(0.17226 − 0.036936 − 0.222245*0.349859) / 0.740818]* \pi 4 = 0.07771 \pi 4
+So
+\pi 4 = 1/ (1+0.349859+0.17226+0.07771)=0.625067
+\pi 3 = 0.218685
+\pi_2 = 0.107674
+\pi_1 = 0.048574
+\item (iii)
+Average discount =
+60%*0.625067+50%*0.218685+25%*0.107674 = 51.13%
+(iv)
+The total number of policyholders shown is 130,200.
+Number of
+claims
+0
+1
+2
+3
+4
+5
+Probability
+0.740818221
+0.222245466
+0.03333682
+0.003333682
+0.000250026
+1.50016E−05
+Expected
+Number
+96454.53
+28936.35
+4340.45
+434.05
+32.55
+1.95
+Observed
+96632
+28648
+4400
+476
+36
+8
+(O − E) 2 /E
+0.327
+2.873
+0.817
+4.054
+0.366
+18.771
+Null hypothesis: the data come from a source where the underlying
+distribution of number of claims follows a Poisson distribution with mean
+0.30.
+The test statistic z =
+∑ ( O i − E i ) 2
+i
+E i
+is distributed as chi-square
+with (6 − 1(parameter) − 5 degrees of freedom under the null hypothesis.
+This is a one-tailed test, and the upper 5% point of the chi-squared distribution
+with 5 degrees of freedom is 11.07.
+The observed value of the test statistic is 27.2.
+Page 18Subject CT4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+As 27.2 > 11.07 we reject the null hypothesis.
+(v)
+As the goodness of test fails, the discount level calculated assuming the
+Poisson distribution may be incorrect.
+The goodness-of-fit test fails due to a larger number of multiple
+claims than expected.
+Conversely a higher number of policyholders make no claims than expected
+(within the mean of 0.30), so the average discount level may be understated.
+The average discount level calculated from the data could usefully be
+compared with that estimated using the Poisson distribution.
+END OF EXAMINERS’ REPORT
+Page 19
