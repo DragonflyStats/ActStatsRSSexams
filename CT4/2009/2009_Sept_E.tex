@@ -1,0 +1,359 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+%%--- Question 9
+\item An electronics company developed a revolutionary new battery which it believed
+would make it enormous profits. It commissioned a sub-contractor to estimate the
+survival function of battery life for the first 12 prototypes. The sub-contractor
+inserted each prototype battery into an identical electrical device at the same time and
+measured the duration elapsing between the time each device was switched on and the time its battery ran out. The sub-contractor was instructed to terminate the test
+immediately after the failure of the 8th battery, and to return all 12 batteries to the
+company.
+When the test was complete, the sub-contractor reported that he had terminated the
+test after 150 days. He further reported that:
+•
+•
+•
+•
+two batteries had failed after 97 days
+three further batteries had failed after 120 days
+two further batteries had failed after 141 days
+one further battery had failed after 150 days
+However, he reported that he was only able to return 11 batteries, as one had exploded
+after 110 days, and he had treated this battery as censored at that duration when
+working out the Kaplan-Meier estimate of the survival function.
+(i) State, with reasons, the forms of censoring present in this study.
+
+\item (ii) Calculate the Kaplan-Meier estimate of the survival function based on the
+information supplied by the sub-contractor.
+
+In his report, the sub-contractor claimed that the Kaplan-Meier estimate of the
+survival function at the duration when the investigation was terminated was 0.2727.
+\item (iii)
+Explain why the sub-contractor’s Kaplan-Meier estimate would be consistent
+with him having stolen the battery he claimed had exploded.
+
+[Total 11]
+CT4 S2009—610
+An investigation into the mortality of men engaged in a hazardous occupation was
+carried out. The following is an extract from the results.
+Age x Initial
+exposed-to-risk E x
+30
+31
+32
+33
+34
+35
+36
+37
+38 950
+1,200
+1,200
+900
+1,000
+1,100
+800
+1,250
+1,400
+Observed
+deaths θ x
+12
+14
+16
+9
+11
+15
+10
+16
+17
+q ˆ x
+0.0126
+0.0117
+0.0133
+0.0100
+0.0110
+0.0136
+0.0125
+0.0128
+0.0121
+It was decided to graduate the results with reference to English Life Table 15 (males).
+o
+The formula used for the graduation was q x = 10 q x s .
+(i) Using a test of the overall fit of the graduated rates to the data, test the
+hypothesis that the underlying mortality of men in the hazardous occupation is
+in accordance with the graduation formula given above.
+[6]
+\item (ii) Test the graduation using two other tests which detect different features of the
+graduation. For each test you apply:
+(a)
+(b)
+(c)
+State the feature of the graduation it is designed to detect.
+Carry out the test.
+State your conclusion.
+[7]
+[Total 13]
+CT4 S2009—7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9
+(i) Type II censoring as the study was terminated after a pre-determined number
+of failures. Random censoring of the device which exploded.
+\item (ii) According to the information supplied by the sub-contractor, the Kaplan-
+Meier estimate of the survival function should be calculated as follows:
+Page 11
+j t j N j
+0 0 12
+1 97 12
+d j c j d j /N j 1 – d j /N j
+2 1 2/12 10/12  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+2 120 9 3 0 3/9 6/9
+3 141 6 2 0 2/6 4/6
+4 150 4 1 3 1/4 3/4
+The Kaplan-Meier estimate is then
+ d j
+S ˆ ( t )    1 
+ N j
+t j  t 
+
+
+
+
+so we have
+t S ˆ ( t )
+0  t  97 1
+97  t  120 5/6
+120  t  141 5/9
+141  t  150 10/27
+150  t 5/18 = 0.2778
+\item (iii)Since 5/18 is not equal to 0.2727, the sub-contractor‟s story is internally
+inconsistent. The Kaplan-Meier estimate of the survival function after the
+failure of the 8th battery of 0.2727 would be obtained had only 11 batteries
+been tested at the start, and no battery being censored, as shown in the
+following table.
+d j c j d j /N j 1 – d j /N j
+11 2 0 2/11 9/11
+120 9 3 0 3/9 6/9
+3 141 6 2 0 2/6 4/6
+4 150 4 1 0 1/4 3/4
++1⁄2 +1⁄2
+j t j N j
+0 0 11
+1 97 2
+The Kaplan-Meier estimate is then
+ d j
+S ˆ ( t )    1 
+ N j
+t j  t 
+
+
+
+
+so we have
+t
+Page 12
+S ˆ ( t )  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+0  t  97 1
+97  t  120 9/11
+120  t  141 6/11
+141  t  150 4/11
+150  t 3/11 = 0.2727
+Therefore the value of S ˆ (150) reported by the sub-contractor is consistent with
+him having stolen the last battery.
+Many candidates scored highly on this question. Credit was given in part (i) for other
+types of censoring provided that a sensible reason was given. In part \item (iii), for full
+credit some kind of calculation of an alternative survival function was needed,
+together with an explanation of why this provided evidence to support the suggestion
+that the sub-contractor has stolen the battery.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+10
+(i) The chi-squared test is for the overall fit of the graduated rates to the data
+The test statistic is
+ z x 2 , where
+o
+z x 
+ x  E x q x
+o
+o
+.
+E x q x (1  q x )
+o
+The calculations are shown in the table below (since q x is
+o
+small we use the approximation z x 
+ x  E x q x
+o
+.
+E x q x
+Page 13
+ x o o
+Age x q x E x q x
+30 12 0.0091 31 14 0.0094 32 16 33
+8.645
+z x
+z x 2
+1.141 1.302
+11.28 0.810 0.656
+0.0097 11.64 1.278 1.633
+9 0.0099 8.91 0.030 0.001
+34 11 0.0106 10.60 0.123 0.015
+35 15 0.0116 12.76 0.627 0.393
+36 10 0.0127 10.16 -0.050 0.003
+37 16 0.0138 17.25 -0.301 0.091  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+38
+17
+0.0149
+20.86
+-0.845
+0.714
+∑
+4.808
+The test statistic has a chi-squared distribution with degrees of freedom (d.f.)
+given by number of ages
+o
+– 1 (for parameter of function linking q x and q x s )
+– some d.f. for constraints imposed by choice of standard table
+The critical value of the chi-squared distribution is
+11.07 with 5 d.f.
+12.59 with 6 d.f.
+14.07 with 7 d.f.
+15.51 with 8 d.f.
+16.92 with 9 d.f. at the 5\% level (from tables)
+Since 4.808 < 11.07 (or 12.59 etc.) there is no evidence to reject the null
+hypothesis that the graduated rates are the true rates underlying the crude
+rates.
+\item (ii)
+EITHER
+Signs test
+a. The Signs test looks for overall bias.
+b. The number of positive signs among the z x s
+is distributed Binomial (9, 0.5).
+We observe 6 positive signs.
+The probability of obtaining 6 or more positive signs is
+(from tables)
+1 – 0.7461 = 0.2539.
+[Alternatively, candidates could calculate the probability of obtaining exactly 6
+positive signs, which is 0.1641]
+Since this is greater than 0.025 (two-tailed test)
+c. we cannot reject the null hypothesis and we conclude that the
+graduated rates are not systematically higher or lower than the crude
+rates.
+OR
+Cumulative Deviations test
+Page 14  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+a. When applied over the whole age range, the Cumulative Deviations
+test looks for overall bias
+b. The test statistic is
+
+o
+
+    x  E x q x  
+x
+o
+ Normal(0,1)
+ E x q x
+x
+o
+o
+Age x  x 30 12 31 14 11.28 2.72
+32 16 11.64 4.36
+33 9 8.91 0.09
+34 11 10.60 0.40
+35 15 12.76 2.24
+36 10 10.16 -0.16
+37 16 17.25 -1.25
+38 17 20.86 -3.86
+∑ 112.105 7.895
+E x q x
+8.645
+So the value of the test statistic is
+ x  E x q x
+3.355
+7.895
+ 0.7457
+112.105
+Using a 5\% level of significance, we see that
+1.96 < 0.7457 < 1.96
+c. We accept the null hypothesis at the 5\% level of significance and
+conclude there is no overall bias in the graduation.
+Grouping of Signs test
+a. The Grouping of Signs test looks for runs or clumps of deviations of
+the same sign OR the grouping of signs test tests for overgraduation.
+b. We have:
+9 ages in total
+6 positive deviations
+3 negative deviations
+We have 1 positive run
+Pr[1 positive run] is therefore equal to
+Page 15  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+ 5  4 
+  
+4
+4
+ 0   1  
+
+ 0.0476
+ 9 
+ 9.8.7  84
+
+
+ 
+ 3.2 
+ 6 
+Since this is less than 0.05 (using a one-tailed
+test)
+c. We reject the null hypothesis that the graduated rates are the true rates
+underlying the crude rates (OR we conclude that the graduation is
+unsatisfactory OR there is evidence of over-graduation).
+Individual Standardised Deviations test
+a. The Individual Standardised Deviations tests looks for individual large
+deviations at particular ages.
+b. If the graduated rates were the true rates underlying the observed rates
+we would expect the individual deviations to be distributed Normal (0,1) and therefore only 1 in 20 z x s should have absolute magnitudes
+greater than 1.96. Looking at the z x s we see that the largest individual
+deviation is 1.278. Since this is less in absolute magnitude than 1.96
+c. we cannot reject the null hypothesis that the graduated rates are the
+true rates underlying the crude rates.
+Answers to this question were disappointing compared with previous years. A
+common error was for candidates to misread the question and to try to compare the
+observed number of deaths with an ‘expected’ number computed on the basis of the
+^
+q x given in the question. These candidates were, in effect, examining deviations
+based solely on rounding! Candidates who made this error were penalised in part (i),
+but could gain credit for some of the alternative tests in part \item (ii) provided that they
+performed the tests correctly.
