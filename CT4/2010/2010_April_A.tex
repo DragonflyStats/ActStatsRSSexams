@@ -1,0 +1,147 @@
+© Institute of Actuaries1 List four factors often used to subdivide life insurance mortality statistics.  
+2 Write down integral equations for the mean and variance of the complete future
+lifetime at age x, T x .  
+3
+For each of the following processes:
+counting process;
+general random walk;
+compound Poisson process;
+Poisson process;
+Markov jump chain.
+(a) State whether the state space is discrete, continuous or can be either.
+(b) State whether the time set is discrete, continuous, or can be either.
+ 
+4
+A Markov Chain with state space {A, B, C} has the following properties:
+\item it is irreducible
+\item it is periodic
+\item the probability of moving from A to B equals the probability of moving from A
+to C
+(i) Show that these properties uniquely define the process.
+(ii) Sketch a transition diagram for the process.
+CT4 A2010—2
+
+ 
+[Total 5]5
+Ten years ago, a confectionery manufacturer launched a new product, the Scrummy
+Bar. The product has been successful, with a rapid increase in consumption since the
+product was first sold. In order to plan future investment in production capacity, the
+manufacturer wishes to forecast the future demand for Scrummy Bars. It has data on
+age-specific consumption rates for the past ten years, together with projections of the
+population by age over the next twenty years. It proposes the following modelling
+strategy:
+\item extrapolate past age-specific consumption rates to forecast age-specific
+consumption rates for the next 20 years
+\item apply the forecast age-specific consumption rates to the projected population by
+age to obtain estimated total consumption of the product by age for each of the
+next 20 years
+\item sum the results to obtain the total demand for each year
+Describe the advantages and disadvantages of this strategy.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+Page 3Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+1
+Sex
+Age
+Type of policy
+Smoker/non-smoker status
+Level of underwriting OR lifestyle/participation in dangerous sports
+Duration in force
+Sales channel
+Policy size
+Occupation of policyholder
+Known impairments
+Post code OR region/county/country OR address
+Marks were given for up to four factors from the list above.
+2
+E [ T x ] = e x = \int
+Var [ T x ] =
+{ \int
+\omega− x
+0
+t
+\omega− x 2
+t t
+0
+p x dt
+OR
+E [ T x ] = e x = \int
+\omega− x
+0
+t t p x \mu x + t dt
+}
+p x \mu x + t dt − e x 2
+The upper limits to the integrals can also be anything above \omega-x, for example \omega or \infty, since
+any age above \omega-x just adds zero to the summation .
+3
+Counting Process
+General Random Walk
+Compound Poisson Process
+Poisson Process
+Markov Jump Chain
+Page 4
+State Space Time Set
+Discrete
+Discrete or Continuous
+Discrete or Continuous
+Discrete
+Discrete Discrete or Continuous
+Discrete
+Continuous
+Continuous
+DiscreteSubject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+4
+(i)
+As periodic and irreducible then all states are periodic, hence
+probability of staying in any state is zero.
+By law of total probability, P AA + P AB + P AC = 1.
+But P AB = P AC and P AA = 0 so P AB = P AC = 0.5.
+To be irreducible at least one of P BA or P CA must be greater than zero.
+If P BA > 0 then to be periodic must have P CB = 0,
+and to be irreducible P CA > 0,
+and if P CA > 0 then to be periodic must have P BC = 0, and to be
+irreducible P BA > 0.
+So must have P BC = P CB = 0 and P BA = P CA = 1.
+(ii)
+1.0
+B
+0.5
+A
+0.5
+5
+C
+1.0
+Advantages
+The model is simple to understand and to communicate.
+The model takes account of one major source of variation in consumption
+rates, specifically age.
+The model is easy and cheap to implement.
+The past data on consumption rates by age are likely to be fairly accurate.
+The model can be adapted easily to different projected populations OR takes
+into account future changes in the population.
+Disadvantages
+Past trends in consumption by age may not be a good guide to future trends.
+Extrapolation of past age-specific consumption rates may be complex or
+difficult and can be done in different ways.
+Consumption of chocolate may be affected by the state of the economy,
+e.g. whether there is a recession.
+Page 5Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+Factors other than age may be important in determining consumption,
+e.g. expenditure on advertising.
+Consumption may be sensitive to pricing, which may change in the future.
+A rapid increase in consumption rates is unlikely to be sustained
+for a long period as there is likely to be an upper limit to
+the amount of Scrummy Bars a person can eat.
+The projections of the future population by age may not be accurate, as
+they depend on future fertility, mortality and migration rates.
+The proposed strategy does not include any testing of the
+sensitivity of total demand to changes in the projected population,
+or variations in future consumption trends from that used in the model.
+Unforeseen events such as competitors launching new products, or the nation
+becoming increasingly health-aware, may affect future consumption.
+The consumption of Scrummy Bars may vary with cohort rather than age, and
+the model does not capture cohort effects.
+Not all the points listed above were required for full credit. Other advantages, for example
+those related to business prospects, were also given credit.
