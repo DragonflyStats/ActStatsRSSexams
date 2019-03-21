@@ -33,14 +33,12 @@
 \begin{document}
 \begin{enumerate}
 \item 
-Consider a random sample, $\{ X_1 , \ldots, X_n\}$ , from a normal $N(\mu, \sigma^2 )$ distribution, with
-sample mean X and sample variance $S^2$.
-\begin{enumerate}[(i)]
-\item Define carefully what it means to say that $\{ X_1 , \ldots, X_n\}$ is a random sample from
-a normal distribution.
+Consider a random sample, $\{ X_1 , \ldots, X_n\}$ , from a normal $N(\mu, \sigma^2 )$ distribution, with sample mean $X$ and sample variance $S^2$.
 
-\item State what is known about the distributions of X and $S^2$ in this case,
-including the dependencies between the two statistics.
+\begin{enumerate}[(i)]
+\item Define carefully what it means to say that $\{ X_1 , \ldots, X_n\}$ is a random sample from a normal distribution.
+
+\item State what is known about the distributions of X and $S^2$ in this case, including the dependencies between the two statistics.
 
 \item
 %CT3 A2013–2
@@ -55,7 +53,7 @@ in a different country in the same year was 111. It can be assumed that each rob
 Determine an approximate 90\% confidence interval for the difference between the true yearly robbery rates in the two countries.
 
 %%%%%%%%%%%%%%%%%%5
-
+\newpage
 4
 (i)
 The random variables $\{ X_1 , \ldots, X_n\}$  are independent
@@ -70,7 +68,7 @@ X ~ N ( \mu , \sigma 2 / n )
 Page 3 – 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (iii)
-t k = N (0,1) / \chi^2k / k where N (0,1) and \chi^2k are independent
+t k = N (0,1) / \chi^2k / k where N (0,1) and $\chi^2_k$ are independent
 This result can be applied here, and we get
 X −\mu
 ~ t n − 1
@@ -80,9 +78,8 @@ S / n
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 5
 \begin{itemize}
-\item Under given assumptions $X_1 \sim Poisson(\lambda 1 )$, $X_2 \sim Poisson(\lambda 2 )$
-and approximately
-X 1 ~ N(\lambda 1 , \lambda 1 ), X 2 ~ N(\lambda 2 , \lambda 2 )
+\item Under given assumptions $X_1 \sim Poisson(\lambda 1 )$, $X_2 \sim Poisson(\lambda 2 )$ and approximately
+\[X 1 ~ N(\lambda 1 , \lambda 1 ), X 2 ~ N(\lambda 2 , \lambda 2 )\]
 giving X 1 − X 2 ~ N(\lambda 1 − \lambda 2 , \lambda 1 + \lambda 2 ), or
 X 1 − X 2 − ( \lambda 1 − \lambda 2 )
 ∼ N (0,1)
@@ -90,7 +87,7 @@ X 1 − X 2 − ( \lambda 1 − \lambda 2 )
 \item Approximate 90% interval given as
 X 1 − X 2 \pm z 0.05 \lambda ˆ 1 + \lambda ˆ 2 = X 1 − X 2 \pm z 0.05 X 1 + X 2
 = 12 \pm 1.6449 × (234) 1/2 = 12 \pm 25.1621 i.e. (−13.162, 37.162)
-\item A common error here involved the normal approximation of the difference of the two
-variables – especially its variance.
+
+\item A common error here involved the normal approximation of the difference of the two variables – especially its variance.
 \end{itemize}
 \end{document}
