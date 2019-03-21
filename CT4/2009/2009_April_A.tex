@@ -1,0 +1,184 @@
+1
+Graduation by reference to a standard table might be appropriate, if a suitable
+standard table could be found.
+However the fact that the company insures non-standard lives makes it unlikely that a
+suitable standard table would exist.
+Graphical graduation might be used if no suitable standard table can be found.
+However it is a last resort as it is difficult to obtain results which are smooth and
+which adhere to the data.
+Graduation using a parametric formula is unlikely to be appropriate as the amount of
+data in this investigation is likely to be small and it is unlikely that the company will
+want to produce a standard table.
+2
+\item (i)
+A Markov chain is a stochastic process with discrete states operating in
+discrete time in which the probabilities of moving from one state to another
+are dependent only on the present state of the process.
+EITHER
+If the transition probabilities are also independent of time.
+OR
+If the l-step transition probabilities are dependent only on the time lag, the
+chain is said to be time-homogeneous.
+\item (ii)
+(a)
+In this case the chain is irreducible if the transition probability
+out of each state is non-zero (or, equivalently, if it is possible to
+reach the other state from both states)
+So requires 0 < a ≤ 1 and 0 < b ≤ 1
+(b)
+The chain is only periodic if the chain must alternate between
+the states.
+So a = 1 and b = 1.
+Page 4Subject CT4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+3
+Benefits
+Complex systems with stochastic elements can be studied.
+Different future policies or possible actions can be compared.
+In models of complex systems we can control the experimental conditions and thus
+reduce the variance of the results without upsetting their mean values.
+Can calibrate to observed data and hence model interdependencies between
+outcomes.
+Often models are the only practicable means of answering actuarial questions.
+Systems with a long time-frame can be studied and results obtained relatively quickly.
+Limitations
+Time or cost or resources required for model development.
+In a stochastic model, many independent runs of the model are needed to obtain
+results for a given set of inputs.
+Models can look impressive and there is a danger this results in false sense of
+confidence.
+Poor or incredible data input or assumptions will lead to flawed output.
+Users need to understand the model and the uses to which it can safely be put — the
+model is not a “black box”.
+It is not possible to include all future events in a model (e.g. change in legislation).
+Interpreting the results can be a challenge.
+Any model will be an approximation.
+Models are better for comparing the impact of input variations than for optimising
+outputs.
+Page 5Subject CT4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+4
+\item (i)
+(a)
+Under UDD the number of deaths between exact ages 30 and 35 years
+is half the number of deaths between exact ages 30 and 40 years.
+So the number of deaths between exact ages 30 and 35 years is
+1⁄2(98,617 – 97,952) = 332.5
+and 5 q 30 =
+(b)
+332.5
+= 0.0033716 .
+98, 617
+Let the constant force of mortality be \mu.
+⎛ t
+⎞
+Then, since t p x = exp ⎜ − ∫ \mu x + s ds ⎟ ,
+⎜
+⎟
+⎝ 0
+⎠
+10 p 30 = exp ( − 10 \mu )
+so
+\mu=
+− log e ( 10 p 30 )
+5 q 30
+10
+=
+− log e ( 97,952 / 98, 617 )
+10
+= 0.0006766 .
+= 1 − 5 p 30 = 1 − exp( − 5 \mu )
+= 1 − exp[( − 5)(0.0006766)] = 0.0033773 .
+\item (ii)
+EITHER
+The number of survivors to exact age 35 years is
+98, 617 5 p 30 = 98, 617(1 − 5 q 30 ) ,
+so for UDD this is
+98, 617(1 − 0.0033716) = 98, 284.5 ,
+and under a constant force of mortality this is
+98, 617(1 − 0.0033773) = 98, 283.9 .
+OR
+Under UDD the number of survivors to exact age 35 years is
+(98,617 + 97,952)/2 = 98,284.5.
+Page 6Subject CT4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+Under a constant force of mortality the number of survivors to
+exact age 35 years is given by
+98, 617 *97,952 = 98, 283.9
+\item (iii)
+The actual number of survivors to exact age 35 years is higher (or,
+equivalently, mortality is lighter) than that under either the UDD or the
+constant force assumptions.
+The actual number of survivors implies that there were 258 deaths between
+ages 30 and 35 years and 407 deaths between ages 35 and 40 years.
+The actual data reveal that the force of mortality is higher between ages 35 and
+40 years than it is between ages 30 and 35 years for females in English Life
+Table 15, which suggests that the force of mortality is increasing over this age
+range.
+The assumption of UDD implies an increasing force of mortality.
+The actual force of mortality seems to be increasing even faster than is implied
+by UDD.
+A constant force of mortality is unlikely to be realistic for this age range.
+Used over a 10-year age span the assumption of UDD is unlikely to be
+appropriate, whereas used over single years of age it is acceptable.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+© Institute of Actuaries1
+A life insurance company has a small group of policies written on impaired lives and
+has conducted an investigation into the mortality of these policyholders. It is
+proposed that the crude mortality rates be graduated for use in future premium
+calculations.
+Discuss the suitability of two methods of graduation that the insurance company could
+use.
+
+2
+\item (i)
+Explain what is meant by a time-homogeneous Markov chain.
+
+Consider the time-homogeneous two-state Markov chain with transition matrix:
+a ⎞
+⎛ 1 − a
+⎜
+⎟
+⎝ b 1 − b ⎠
+\item (ii)
+Explain the range of values that a and b can take which result in this being a
+valid Markov chain which is:
+(a)
+(b)
+irreducible
+periodic
+
+[Total 5]
+3 List the benefits and limitations of modelling in actuarial work.
+4 Below is an extract from English Life Table 15 (females).
+\item (i)
+Number of survivors to
+exact age x out of
+100,000 births
+30
+40 98,617
+97,952
+Calculate 5 q 30 under each of the two following alternative assumptions:
+(a)
+(b)
+\item (ii)
+Age x
+(years)
+
+a uniform distribution of deaths (UDD) between ages 30 and 40 years
+a constant force of mortality between ages 30 and 40 years
+
+Calculate the number of survivors to exact age 35 years out of 100,000 births
+under each of the assumptions in \item (i) above.
+
+English Life Table 15 (females) was originally calculated using data classified by
+single years of age. The number of survivors to exact age 35 years was 98,359.
+\item (iii)
+Comment on the appropriateness of the assumptions of UDD and a constant
+force of mortality between ages 30 and 40 years in this example.
+
+[Total 7]
+CT4 A2009—25 Explain the basis underlying the grouping of signs test, and derive the formula for the
+probability of exactly t positive groups by considering the possible arrangements of a
+set of positive and negative signs.
