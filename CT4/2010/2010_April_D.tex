@@ -1,0 +1,178 @@
+CT4 A2010—610
+An airline runs a frequent flyer scheme with four classes of member: in ascending
+order Ordinary, Bronze, Silver and Gold. Members receive benefits according to their
+class. Members who book two or more flights in a given calendar year move up one
+class for the following year (or remain Gold members), members who book exactly
+one flight in a given calendar year stay at the same class, and members who book no
+flights in a given calendar year move down one class (or remain Ordinary members).
+Let the proportions of members booking 0, 1 and 2+ flights in a given year be p 0 , p 1
+and p 2+ respectively.
+(i)
+(a) Explain how this scheme can be modelled as a Markov chain.
+(b) Explain why there must be a unique stationary distribution for the
+proportion of members in each class.
+ 
+(ii)
+Write down the transition matrix of the process.
+ 
+The airline’s research has shown that in any given year, 40% of members book no
+flights, 40% book exactly one flight, and 20% book two or more flights.
+(iii)
+Calculate the stationary probability distribution.
+ 
+The cost of running the scheme per member per year is as follows:
+Ordinary members
+Bronze members
+Silver members
+Gold members
+\$0
+\$10
+\$20
+\$30
+The airline makes a profit of \$10 per passenger for every flight before taking into
+account costs associated with the frequent flyer scheme.
+(iv)
+Assess whether the airline makes a profit on the members of the scheme. 
+[Total 13]
+CT4 A2010—7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 13Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+10
+(i)
+(a)
+The state space is discrete (with four states: O – ordinary passenger,
+B – bronze member, S – silver member and G – gold member)
+The probability that a passenger has a particular membership
+status next year depends only on their membership status in the
+current year (i.e. the status in previous years is not relevant).
+Therefore the process is Markov.
+(b)
+The state space is finite and therefore there is at least one stationary
+probability distribution.
+Since any state can be reached from any other state, the
+Markov chain is irreducible.
+Therefore the stationary probability distribution is unique.
+(ii)
+The transition matrix P is:
+O ⎛ p 0 + p 1
+⎜
+B ⎜ p 0
+S ⎜ 0
+⎜
+G ⎝ 0
+p 2 + 0
+p 1 p 2 +
+p 0 p 1
+0 p 0
+⎞
+⎟
+0
+⎟
+p 2 + ⎟
+⎟
+p 1 + p 2 + ⎠
+0
+where the probability that a passenger books i flights in a year is p i .
+(iii)
+Let the probability that a passenger is in state j according to the stationary
+distribution be π j ( j = O , B , S , G ).
+The π j are given by the general formula
+π = π P .
+With p 0 = 0.4 , p 1 = 0.4 and p 2 + = 0.2 , we therefore have the equations
+π O = 0.8 π O + 0.4 π B
+π B = 0.2 π O + 0.4 π B + 0.4 π S
+π S = 0.2 π B + 0.4 π S + 0.4 π G
+π G = 0.2 π S + 0.6 π G
+We also know that
+π O + π B + π S + π G = 1 .
+Page 14
+(1)
+(2)
+(3)
+(4)Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+Using equation (1) we have
+0.2 π O = 0.4 π B
+so that
+π O = 2 π B .
+Substituting in equation (2) this yields
+π B = 0.2(2 π B ) + 0.4 π B + 0.4 π S ,
+so that
+0.2 π B = 0.4 π S
+and hence
+π S = 0.5 π B .
+Finally, substituting in equation (3) yields
+0.5 π B = 0.2 π B + 0.4(0.5 π B ) + 0.4 π G ,
+so that
+0.1 π B = 0.4 π G
+and hence
+π G = 0.25 π B .
+We therefore have
+2 π B + π B + 0.5 π B + 0.25 π B = 1 ,
+whence
+π B =
+1
+4
+= = 0.2667 ,
+3.75 15
+and the stationary distribution is
+π O =
+8
+= 0.5333
+15
+Page 15Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+(iv)
+π B = 4
+= 0.2667
+15
+π S = 2
+= 0.1333
+15
+π G = 1
+= 0.0667
+15
+EITHER
+The expected cost of the scheme per member per year is
+(0 \times 0.5333) + (\$10 \times 0.2667) + (\$20 \times 0.1333) + (\$30 \times 0.0667) = \$7.33
+For the scheme to be worth running, therefore, the average profit
+per member per year must exceed \$7.33.
+The profit per member is 0 for the 40% who book no flights,
+\$10 for the 40% who book one flight, and \$10 m for the 20% who
+book two or more flights, where m is the average number of flights
+booked by those in the latter category.
+For there to be a profit, we must have
+(0.4 \times 0) + (0.4 \times \$10) + (0.2 \times \$10 m ) > 7.33
+or
+4 + 2 m > 7.33
+2 m > 3.33
+m > 1.67
+This must be the case since m cannot be less than 2.
+Therefore the airline makes a profit on the members of the scheme.
+OR
+Assuming that the distribution of the number of flights taken
+is the same for all membership statuses, then for an Ordinary
+member the expected profit is
+(0.4 \times 0) + (0.4 \times 10) + (0.2 \times 20) = \$8
+Similarly for the other classes of member the expected profit
+is
+Page 16Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+Bronze: (0.4 \times –10) + (0.4 \times 0) + (0.2 \times 10)
+= \$ –2
+= \$ –12
+Silver: (0.4 \times –20) + (0.4 \times –10) + (0.2 \times 0)
+Gold:
+(0.4 \times –30) + (0.4 \times –20) + (0.2 \times –10) = \$ –22
+In any one year, the proportions of members in each category
+are given by the stationary distribution,
+so the expected profit per member is
+8
+4
+2
+1
+(\$8) + (\$ − 2) + (\$ − 12) + (\$ − 22) = \$0.667
+15
+15
+15
+15
+This assumes no member makes more than 2 flights per year, so
+is a minimum estimate of the profit.
+This minimum estimate is positive, so the airline makes a profit.
