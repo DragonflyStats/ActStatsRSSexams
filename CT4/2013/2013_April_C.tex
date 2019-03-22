@@ -1,0 +1,295 @@
+
+
+The Shining Light company has developed a new type of light bulb which it recently
+tested. 1,000 bulbs were switched on and observed until they failed, or until 500
+hours had elapsed. For each bulb that failed, the duration in hours until failure was
+noted. Due to an earth tremor after 200 hours, 200 bulbs shattered and had to be
+removed from the test before failure.
+The results showed that 10 bulbs failed after 50 hours, 20 bulbs failed after 100 hours,
+50 bulbs failed after 250 hours, 300 bulbs failed after 400 hours and 50 bulbs failed
+after 450 hours.
+(i) Calculate the Kaplan-Meier estimate of the survival function, S(t), for the light
+bulbs in the test.
+
+(ii) Sketch the Kaplan-Meier estimate calculated in part (i).
+(iii) Estimate the probability that a bulb will not have failed after each of the
+following durations: 300 hours, 400 hours and 600 hours. If it is not possible
+to obtain an estimate for any of the durations without additional assumptions,
+explain why.
+
+%% -- [Total 11]
+CT4 A2013–4
+8
+During a football match, the referee can caution players if they commit an offence by
+showing them a yellow card. If a player commits a second offence which the referee
+deems worthy of a caution, they are shown a red card, and are sent off the pitch and
+take no further part in the match. If the referee considers a particularly serious
+offence has been committed, he can show a red card to a player who has not
+previously been cautioned, and send the player off immediately.
+The football team manager can also decide to substitute one player for another at any
+point in the match so that the substituted player takes no further part in the match.
+Due to the risk of a player being sent off, the manager is more likely to substitute a
+player who has been shown a yellow card. Experience shows that players who have
+been shown a yellow card play more carefully to try to avoid a second offence.
+The rate at which uncautioned players are shown a yellow card is 1/10 per hour.
+The rate at which those players who have already been shown a yellow card are
+shown a red card is 1/15 per hour.
+The rate at which uncautioned players are shown a red card is 1/40 per hour.
+The rate at which players are substituted is 1/10 per hour if they have not been shown
+a yellow card, and 1/5 if they have been shown a yellow card.
+(i) Sketch a transition graph showing the possible transitions between states for a
+given player.
+
+(ii) Write down the compact form of the Kolmogorov forward equations,
+specifying the generator matrix.
+
+A football match lasts 1.5 hours.
+(iii) Solve the Kolmogorov equation for the probability that a player who starts the
+match remains in the game for the whole match without being shown a yellow
+card or a red card.
+
+(iv) Calculate the probability that a player who starts the match is sent off during
+the match without previously having been cautioned.
+
+Consider a match that continued indefinitely rather than ending after 1.5 hours.
+(v)
+CT4 A2013–5
+(a) Derive the probability that in this instance a player is sent off without
+previously having been cautioned.
+(b) Explain your result.
+
+%% -- [Total 12]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+(i)
+t j N j d j c j d j / N j 1 - d j / N j 0
+50
+100
+200
+250
+400
+450 1,000
+1,000
+990
+970
+770
+720
+420 10
+20
+0
+50
+300
+50 0
+0
+200
+0
+0
+370 0.0100
+0.0202 0.9900
+0.9798 or 99/100
+or 97/99
+0.0649
+0.4167
+0.1190 0.9351
+0.5833
+0.8810 or 72/77
+or 7/12
+or 37/42
+The Kaplan-Meier estimate is S ˆ ( t ) = ∏ (1 −
+t j ≤ t
+t
+d j
+n j
+)
+Kaplan-Meier estimate of S(t)
+0 ≤ t < 50
+50 ≤ t < 100
+100 ≤ t < 250
+250 ≤ t < 400
+400 ≤ t < 450
+450 ≤ t < 500
+1.0000
+0.9900
+0.9700
+0.9070
+0.5291
+0.4661
+or 1
+or 99/100
+or 97/100
+or 1,746/1,925
+or 291/550
+or 3,589/7,700
+(ii)
+1
+0.9
+0.8
+0.7
+0.6
+S(t) 0.5
+0.4
+0.3
+0.2
+0.1
+0
+0
+100
+200
+300
+400
+500
+Duration t
+Page 9Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iii)
+S(300) = 0.9070.
+S(400) = 0.5291.
+S(600) cannot be estimated without additional assumptions
+as it lies outside the range of our data.
+
+%% -- [Total 11]
+This question was very well answered, with many candidates scoring 10 or more marks out of
+a possible 11. Some of the sketches in part (ii) were very scrappy and were penalised:
+though great accuracy was not required, the sketch did need to be sufficiently clear to
+demonstrate that the candidate understood the nature of the function being plotted. In part
+(iii) some candidates suggested an assumption which would enable them to give an answer
+for S(600). Such candidates were given full credit provided they explained why the
+assumption was needed, and provided that the stated assumption was consistent with the
+numerical answer offered.
+8
+(i)
+1/40
+Uncautioned
+1/10
+1/15
+1/5
+1/10
+Substituted
+Page 10
+Booked
+/Yellow
+Sent Off
+/RedSubject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(ii)
+d
+P ( t ) = P ( t ) A
+dt
+where generator matrix
+⎛ − 9 / 40 1/10 1/ 40 1/10 ⎞
+⎜
+⎟
+0
+− 4 / 15 1/15 1/ 5 ⎟
+A = ⎜
+⎜ 0
+0
+0
+0 ⎟
+⎜
+⎟
+0
+0
+0 ⎠
+⎝ 0
+In order of states {U, Y, R, S}
+(iii)
+d
+9
+P UU ( t ) = − P UU ( t )
+dt
+40
+⎛ 9 ⎞
+⎛ 9 ⎞
+P UU ( t ) = exp ⎜ − t ⎟ + const = exp ⎜ − t ⎟ as looking for probability on
+⎝ 40 ⎠
+⎝ 40 ⎠
+pitch throughout match.
+At end t = 3/2 so require exp(−27/80) = 71.36%.
+(iv)
+Prob[sent off without being booked] =
+= ∫
+3/2
+s = 0
+exp( −
+3/2
+1
+∫ s = 0 P UU ( s ). 40 ds
+9
+1
+s ). ds
+40 40
+3/2
+1 ⎛
+⎡ 1
+⎛ 27 ⎞ ⎞
+⎛ 9 ⎞ ⎤
+= ⎢ − exp ⎜ − s ⎟ ⎥ = ⎜ 1 − exp ⎜ − ⎟ ⎟ =0.03183
+9 ⎝
+⎝ 80 ⎠ ⎠
+⎝ 40 ⎠ ⎦ 0
+⎣ 9
+(v)
+(a)
+EITHER
+The upper limit of the integral tends to infinity
+so result becomes 1/9.
+OR
+We need
+Pr[sent off directly]/Pr[leaves state U]
+=
+(b)
+1/ 40 1
+=
+9 / 40 9
+This is the ratio of the transition rate to “straight to sent off”
+Page 11Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+to the total transition rate out of state U.
+This was one of the more demanding questions on the paper, and a high proportion of
+candidates struggled to get past part (ii). In part (i) the transition rates were not required. In
+part (iii) the question asked candidates to solve an equation, so for full credit the equation
+had to be written down, and the method of solution described. In part (v) candidates who
+used the rationale in (b) to do the calculation in (a) scored full credit.
+Candidates who interpreted the question in a manner not intended, but instead combined the
+categories “sent off” and “substituted” were not penalised. This interpretation leads to a
+three state solution for parts (i) and (ii) as follows.
+(i)
+Uncautioned
+1/10
+Booked
+/Yellow
+1/15
+1/5 +
+1/15
+1/10
++
+1/40
+Not playing
+d
+P ( t ) = P ( t ) A
+dt
+(ii)
+where generator matrix
+⎛ − 9
+⎜ 40
+⎜
+A = ⎜ 0
+⎜
+⎜
+⎜ ⎜ 0
+⎝
+1
+1 ⎞
+10 8 ⎟
+⎟
+− 4 4 ⎟
+15 15 ⎟
+⎟
+0
+0 ⎟
+⎟
+⎠
+In order of states {U, Y, N}
+
+This was given full credit in parts (i), (ii) and (iii). The answer to part (iii) is the same as for
+the four-state solution. Credit was given in parts (iv) and (v) for following this alternative
+through correctly.
+Page 12Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
