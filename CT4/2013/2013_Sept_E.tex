@@ -1,0 +1,198 @@
+Outside an apartment block there is a small car park with three parking spaces. A
+prospective purchaser of an apartment in the block is concerned about how often he
+would return in his car to find that there was no empty parking space available. He
+decides to model the number of parking spaces free at any time using a time
+homogeneous Markov Jump Process where:
+• The probability that a car will arrive seeking a parking space in a short interval
+dt is A.dt + o(dt).
+• For each car which is currently parked, the probability that its owner drives the
+car away in a short interval dt is B.dt + o(dt).
+where A, B > 0.
+(i) Specify the state space for the above process. 
+(ii) Draw a transition graph of the process. 
+(iii) Write down the generator matrix for the process. 
+(iv) Derive the probability that, given all the parking spaces are full, they will
+remain full for at least the next two hours. 
+(v) Explain what is meant by a jump chain. 
+(vi) Specify the transition matrix for the jump chain associated with this process.
+
+Suppose there are currently two empty parking spaces.
+(vii)
+Determine the probability that all the spaces become full before any cars are
+driven away.
+
+(viii) Derive the probability that the car park becomes full before the car park
+becomes empty.
+(ix)
+CT4 S2013–5
+
+Comment on the prospective purchaser’s assumptions regarding the arrival
+and departure of cars.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+8
+(i)
+The state space is {0,1,2,3} where the number indicates the number of available
+spaces.
+(ii)
+0
+1
+2
+3 B
+0
+0 
+  3 B
+
+
+2 B
+0 
+ A  A  2 B
+ 0
+A
+ A  B B 
+
+
+A
+0
+ A 
+ 0
+(iii)
+where the order of the rows/columns is {0, 1, 2, 3}.
+(iv)
+d
+P 00 ( t )   3 BP 00 ( t ) (as probability of returning to state 0 not of interest)
+dt
+OR
+ t
+
+P 00 ( t )  exp    3 Bdt 
+  0
+ 
+P 00 ( t )  exp(  3 Bt )
+P 00 (2)  exp(  6 B )
+Page 14
+3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(v)
+(vi)
+If a Markov jump process X t is examined only at the times of transition, the resulting
+process is called the jump chain associated with X t.
+OR
+A jump chain is each distinct state visited in the order visited where the time set is the
+times when states are moved between.
+0
+
+
+ A A  2 B
+
+0
+
+ 
+0
+
+1
+0
+A
+0
+2 B
+A  2 B
+A  B
+0
+0
+1
+
+
+0 
+
+B
+A  B 
+
+0  
+0
+where the order of the rows/columns is {0, 1, 2, 3}.
+(vii)
+This is
+A
+A
+.
+A  B A  2 B
+(viii) Consider the paths by which the car park can become full before it becomes
+empty
+Required probability = P 21 P 10  P 21 P 12 P 21 P 10  P 21 P 12 P 21 P 12 P 21 P 10  ......
+= A
+A 
+A
+2 B
+A
+2 B
+A
+2 B
+
+.
+1 
+.
+.
+.
+
+ .... 
+
+A  B A  2 B  A  B A  2 B A  B A  2 B A  B A  2 B
+
+= A
+A
+A
+2 B 
+
+.
+/  1 
+.
+A  B A  2 B  A  B A  2 B  
+OR
+This can be done by defining a function of the probability full before empty from the
+current state, say D x
+Then D 0 = 1and D 3 =0
+and D 1  D 0 .
+D 2  D 1 .
+A
+2 B
+ D 2 .
+A  2 B
+A  2 B
+A
+B
+ D 3 .
+A  B
+A  B
+Solving these gives
+D 2 
+A
+A
+A
+2 B 
+
+.
+/  1 
+.
+A  B A  2 B  A  B A  2 B  
+Page 15%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(ix)
+A time inhomogeneous model may be more appropriate.
+Residents may come and go at particular times, for example if they drive to work.
+They are unlikely to be moving their car as regularly in the middle of the night
+Independent arrivals questionable because a family might have two cars
+arriving/leaving at the same time OR people might arrive and wait until a space
+becomes available thus leading to a queue
+The Markov assumption may not be valid because neighbours may know from at
+experience when cars are moved and time their arrival accordingly.
+The model assumes those parking cars are competent drivers, and do not park so as to
+take up 2 spaces.
+The problem can be worked in terms of the number of occupied spaces. This was not given
+full credit for part (i) as the question said “model the number of spaces free, but could gain
+full credit for the other parts. In part (ii) it was not necessary to mark the probabilities on the
+diagram. A common error was to omit the 2s and 3s in the matrix in part (iii). Part (v) was
+not as well answered as might have been expected, with many candidates writing vague
+descriptions which did not make it clear that they understood what a jump chain is.
+Overall, this question was poorly answered by many candidates. A large proportion of
+candidates did not attempt parts (iii)–(viii).
+
+\end{document}
