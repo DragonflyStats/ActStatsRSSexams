@@ -1,0 +1,152 @@
+%% -- [Total 7]5
+Population censuses in a certain country are taken each year on the President’s
+birthday, provided that the President’s astrological advisor deems the taking of a
+census favourable. Censuses record the age of every inhabitant in completed years
+(that is, curtate age). Deaths in this country are registered as they happen, and
+classified according to age nearest birthday at the time of death.
+Below are some data from the three most recent censuses.
+Age in
+completed
+years Population
+2006
+(thousands) Population
+2009
+(thousands) Population
+2010
+(thousands)
+64
+65
+66 300
+290
+280 320
+310
+300 350
+330
+320
+Between the censuses of 2006 and 2009 there were a total of 3,000 deaths to
+inhabitants aged 65 nearest birthday, and between the censuses of 2009 and 2010
+there were a total of 1,000 deaths to inhabitants aged 65 nearest birthday.
+(i)
+Estimate, stating any assumptions you make, the death rate at age 65 years for
+each of the following periods:
+•
+•
+(ii)
+CT4 A2013–3
+the period between the 2006 and 2009 censuses
+the period between the 2009 and 2010 censuses
+Explain the exact age to which your estimates apply.
+
+
+%% -- [Total 7]
+6
+(i) State the form of the hazard function for the Cox Regression Model, defining
+all the terms used.
+
+(ii) State two advantages of the Cox Regression Model.
+
+Susanna is studying for an on-line test. She has collected data on past attempts at the
+test and has fitted a Cox Regression Model to the success rate using three covariates:
+Employment Z 1 = 0 if an employee, and 1 if self-employed
+Attempt
+Z 2 = 0 if first attempt, and 1 if subsequent attempt
+Study time
+Z 3 = 0 if no study time taken, and 1 if study time taken
+Having analysed the data Susanna estimates the parameters as:
+Employment 0.4
+Attempt
+−0.2
+Study time
+1.15
+Bill is an employee. He has taken study time and is attempting the test for the second time. Ben is self-employed and is attempting the test for the first time without taking
+study time.
+(iii)
+Calculate how much more or less likely Ben is to pass, compared with Bill. 
+Susanna subsequently discovers that the effect of the number of attempts is different
+for employees and the self-employed.
+(iv)
+7
+Explain how the model could be adjusted to take this into account.
+
+%% -- [Total 9]
+
+%%%%%%%%%%%%%%%%%%%%
+5
+(i)
+We adjust the exposed to risk so that the age definition corresponds with that of the
+deaths data.
+Let the population at age 65 nearest birthday be P 65 and let the central exposed to risk
+c
+at age 65 nearest birthday be E 65
+.
+In 2006 P 65 = 0.5(300,000 + 290,000) = 295,000
+In 2009 P 65 = 0.5(320,000 + 310,000) = 315,000
+Page 6Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In 2010 P 65 = 0.5(350,000 + 330,000) = 340,000,
+assuming that birthdays are uniformly distributed across calendar time.
+Using the census approximation (trapezium method) for the period 2006-2009 then
+assuming that the population varies linearly between census dates,
+c
+= 1.5(295,000 + 315,000) = 915,000
+E 65
+and for the period 2009–2010
+c
+= 0.5(315,000 + 340,000) = 327,500.
+E 65
+Assuming that the force of mortality is constant within each year of age
+\mu 65 = 3,000
+= 0.003279 for the period 2006–2009, and
+915,000
+\mu 65 = 1,000
+= 0.003053 for the period 2009–2010.
+327,500
+We also assuming that the President doesn't change (so the birthday is on the same
+day each year), or if the President does change the new President’s birthday is the
+same as the birthday of the old President.
+(ii)
+The rate interval is the life year, starting at age x – 0.5.
+The age in the middle of the rate interval is thus x, so the estimate relates
+to exact age 65 years.
+A common error in part (i) was to use equal time periods, whereas the period 2006-2009 is three years and 2009-2010 only one year. For full credit, the assumptions had to appear in
+the script close to the relevant bit of calculation. Candidates who listed many assumptions, both necessary and unnecessary, in a block at the end of the answer were penalised. In part
+(i), some candidates calculated q x rather than \mu x . Full credit was given for this provided that the initial exposed-to-risk was used as the denominator. In part (ii) the age to which q x
+applies is 64.5 years (i.e. the age at the start of the rate interval), and for full credit the answers to parts (i) and (ii) had to be consistent.
+Page 7Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6
+(i)
+\lambda(t:Z i ) = \lambda 0 (t) exp (\beta Z iT )
+Where:
+\lambda(t:Z i) is the hazard at time t
+\lambda 0 (t) is the baseline hazard
+Z i is a vector of covariates
+\beta is a vector of regression parameters
+(ii)
+It ensures the hazard is always positive.
+The log-hazard is linear.
+You can ignore the shape of the baseline hazard and calculate the effect of covariates
+directly from the data.
+It is widely available in standard computer packages OR is a popular, well-established
+model.
+(iii)
+Ben, self-employed, first attempt, no study has hazard \lambda 0 (t) exp(0.4)
+Bill, employee, re-sit, study leave has hazard \lambda 0 (t) exp (0.95)
+So Ben is only exp(−0.55) = 57.7% as likely to pass as Bill OR 42.3% less likely to
+pass than Bill.
+OR
+Bill is 73% more likely to pass than Ben
+(iv)
+The model could be adjusted by including a covariate measuring the interaction
+between the number of attempts and employment status.
+The covariate would be equal to Z 1 Z 2 and would take the value 1 for a self-employed
+person on his or her second or subsequent attempt, and 0 otherwise.
+The effect of the number of attempts for an employee would be equal to exp(\beta 2 ),
+where \beta 2 is the parameter related to Z 2 , For a self-employed person, the effect of the
+number of attempts would be equal to exp(\beta 2 + \beta 3 ), where \beta 3 is the parameter related
+to the interaction term.
+This question was well answered by many candidates. In part (iii) the question asked
+candidates to “calculate” so the correct numerical answer scored full credit. However a
+common error was to use ambiguous or incorrect wording in the final comparison (e.g. Bill
+Page 8Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+is 57.7 per cent less likely to pass than Ben). In part (iv) no credit was given for the addition
+of covariates with no bearing on the interaction term. However redundant parameters were
+not penalised provided the modification to the model allowed the interaction to be quantified.
