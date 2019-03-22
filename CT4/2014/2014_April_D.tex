@@ -1,0 +1,204 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}[(i)]
+%% - Question 8
+(i)
+(ii)
+\item Describe what is meant by censoring in the context of a mortality
+investigation.
+[1]
+\item Explain what right-censoring, left-censoring and interval censoring are, giving an example of each.
+[3]
+\medskip A toy manufacturer is testing the lifetime of its new electric children’s toy. 500 are set going at 9 a.m. one morning on test rigs plugged into the electricity supply and are run until 5 p.m. the next day or until they fail, whichever comes first. Unfortunately the cleaner unplugged a test rig on which 17 toys were still working at 7 p.m. on the
+first evening in order to plug his floor polisher in. Then, as he left work three hours later, he took three of the still working toys for his children to play with. Of the other 480 toys it was found that 12 failed after four hours, 25 failed after 11 hours and a further 8 failed after 31 hours.
+\item Explain which forms of censoring are present in this investigation. 
+\item Calculate the Nelson-Aalen estimate of the survival function. 
+\item Sketch a graph of the Nelson-Aalen estimate of the survival function, labelling the axes.
+
+\item  Comment on the length of time for which a new toy has a 60\% probability ofsurviving.
+\end{enumerate}
+% [1]
+% [Total 14]
+% CT4 A2014–7
+% PLEASE TURN OVER
+
+\newapge
+
+8
+(i)
+EITHER
+Censoring is the mechanism which prevents us from knowing when an
+individual entered the investigation or the exact date of death.
+OR
+We do not know the exact duration for an individual, only that it lies within
+some range.
+(ii)
+\begin{itemize}
+\item Right-censoring cuts short the investigation in progress so we do not know exactly when the event of interest happened, we only know it happened after a
+certain date.
+\item An example of this might be in a mortality investigation conducted over a period of one year, all those still alive at the end of the year will die some time after the end of the investigation, but we do not know when.
+\item Left-censoring prevents us from knowing when entry into the state which we
+wish to observe took place.
+\item An example arises in medical studies in which patients are subject to regular
+examinations. Discovery of a condition tells us only that the onset fell in the period since the previous examination, the time elapsed since onset has been left censored.
+\item Interval-censoring happens if we can only say that an event of interest fell
+within some interval of time, rather than exactly when it happened.
+\item For example in a mortality investigation when we only know the calendar year
+of death rather than the precise date of death.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iii)
+\begin{itemize}
+\item Right-censoring is present as the observation was cut short while in progress
+for those toys which were unplugged, taken and which remained working at
+the end of the trial.
+\item Type I censoring is present as the trial ended at a predetermined time, so all
+those toys still working were Type I censored.
+\item The censoring is likely to be non-informative censoring. The toys which were
+unplugged and taken are unlikely to have any special features such as working
+for longer or shorter overall than the rest of the toys in the trial.
+\item Random censoring is present as the action of the cleaner censored the toys at
+times which were random.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 12Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
+(iv)
+Rearranging the data:
+Hour
+Toys in trial
+No. of exits
+Reason for exit
+0
+500
+0
+4
+500
+12
+fail
+10
+488
+17
+unplugged
+11
+471
+25
+fail
+13
+446
+3
+taken
+31
+443
+8
+fail
+d
+∑ n j j .
+The Nelson-Aalen estimate for Λ is Λ t =
+x j ≤ x
+t j n j d j c j
+0
+4
+10
+11
+13
+31 500
+500
+488
+471
+446
+443 0
+12
+0
+25
+0
+8 0
+0
+17
+0
+3
+0
+d j /n j Λ t
+12/500 0.024000
+25/471 0.077079
+8/443 .095137
+Since S ( t ) = exp ( −Λ t ) we have:
+t S(t)
+0 ≤ t < 4
+4 ≤ t < 11
+11≤ t < 31
+31 ≤ t < 32 1
+0.976286
+0.925817
+0.909248
+(v)
+1
+0.99
+0.98
+0.97
+0.96
+S(t) 0.95
+0.94
+0.93
+0.92
+0.91
+0.9
+0
+5
+10
+15
+20
+25
+30
+35
+Duration t
+(vi)
+\begin{itemize}
+\item We do not know the length of time for which a new toy has a 60\% chance of
+surviving, only that it is some time in excess of 32 hours.
+\item Answers to part (i) were very disappointing. Many candidates said that censoring was when
+individuals were removed from the investigation for reasons other than death. This was
+%Page 13
+%Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
+given no credit as it is not a definition. 
+\item Most candidates scored better on part (ii), though
+fewer could define and explain left and interval censoring than were able to define right
+censoring, and many candidates could have scored more highly by giving more precise
+definitions. 
+\item Most candidates scored highly on part (iii) and the calculation in part (iv). A
+common error in part (iv) was to suggest that S(t) remained constant for an indeterminate
+time after 31 hours. As we have no information after 32 hours, the upper limit of the range
+for which S(t) is estimated should be 32 hours. Only a minority of candidates answered part
+(vi) correctly.
+\end{itemize}
+\end{document}
