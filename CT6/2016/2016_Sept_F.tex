@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+10 Claims on portfolio of insurance policies arise as a Poisson process with parameter
+λ = 125. Individual claim amounts, Xi follow a gamma distribution with parameters
+α = 20 and β = 0.5.
+The insurance company calculates premiums using a premium loading factor of 15%
+and has an initial surplus of 300.
+\begin{enumerate}[(i)]
+\item (i) Define the adjustment coefficient R. [1]
+\item (ii) Show that for this portfolio the value of R is 0.00648 correct to three
+significant figures. [5]
+\item (iii) (a) Calculate an upper bound for Ψ(300).
+(b) Calculate an estimate of Ψ1(300,1), using a Normal approximation. [5]
+The parameter β now reduces to 0.4.
+\item (iv) Explain what would happen to the estimate of Ψ1(300,1), without carrying out
+any further calculations. [2]
+\item (v) Propose two ways in which the insurance company could reduce Ψ1(300,1).
+\end{enumerate}
+%%[Total 15]
+%%END OF PAPER
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 12
+Q10 (i) The adjustment coefficient is the unique positive root of the equation
+λMX (R) = λ + cR [1]
+(ii) 125* 20 *1.15 5750
+0.5
+c =   =
+   
+and
+( ) ( ) 20 1 2 X M R R− = − [1]
+So R is the root of
+f (R) =1 25(1− 2R)−20 −125−5750R = 0 [1½]
+\begin{enumerate}
+\item When R is 0.006475 then f (R) = −0.00282
+\item When R is 0.006485 then f (R) = 0.005433 [1½]
+\item Since the function changes sign between 0.006475 and 0.006485 the unique
+positive root must lie between these values hence R is 0.00648 to 3 sf [1]
+\item (iii) By Lundberg’s inequality Ψ(300) < exp(−300*.00648) = 0.143 [2]
+\item Total claims have a mean claim amount of 125 * 40 = 5000 [½]
+And variance 125*(80 + 402 ) = 210 000 [½]
+\item So approximately
+Ψ1 (300) = P(300 + 5750 − N (5000, 210000) < 0 )
+(0,1) 6050 5000
+210000
+\end{enumerate}
+P N −  =  > 
+ 
+[1]
+= P(N (0,1) > 2.291) = 0.011 [1]
+(iv) The probability would increase, since both the mean and variance of claim
+amounts are higher. [2]
+%%Subject CT6 (Statistical Methods Core Technical) – September 2016 – Examiners’ Report
+%%Page 13
+(v) They could use a higher initial surplus or a higher premium loading. [2]
+[Total 15]
+This question was typically answered very well. Candidates who struggled
+with part (ii) should note the method used in the answer. Most candidates
+were able to give good explanations for parts (iv) and (v) and therefore scored
+well.
+END OF EXAMINERS’ REPORT
+\end{document}
