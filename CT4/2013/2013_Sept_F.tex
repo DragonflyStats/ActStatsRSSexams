@@ -1,0 +1,330 @@
+%%--------------17]
+9
+(i)
+(a) State three different methods of graduating crude mortality data.
+(b) Give, for each method, one advantage and one disadvantage.
+
+An insurance company has graduated the experience of one block of its life business
+against a standard table, the following is an extract of the data.
+Age x Exposed to
+risk Observed
+deaths Graduated
+rates
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39 36,254
+37,259
+28,057
+31,944
+30,005
+28,389
+36,124
+28,152
+24,001
+30,448 26
+20
+23
+23
+26
+12
+31
+22
+25
+31 0.000590
+0.000602
+0.000617
+0.000636
+0.000660
+0.000689
+0.000724
+0.000765
+0.000813
+0.000870
+(ii) Carry out a test for overall goodness of fit.
+(iii) Carry out two other statistical tests to check the validity of the graduation. 
+(iv) Discuss, with reference to the tests you have performed, whether it would be
+reasonable for the company to use the graduated rates to price life insurance
+policies.
+
+%%--------------19]
+END OF PAPER
+CT4 S2013–6
+
+
+%%%%%%%%%%%%%%%%%%
+
+9
+(i)
+Graduation by parametric formula.
+Advantage: If a small number of parameters is used the resultant rates are
+automatically smooth;
+OR sometimes when comparing several investigations it is useful to fit the same
+parametric formula to all of them;
+OR the approach is well suited to the production of standard tables from large
+amounts of data.
+Disadvantage: It can be difficult to find a suitable curve which fits the experience at
+all ages;
+OR care is needed when extrapolating from ages where there is most data.
+Graduation by reference to a standard table.
+Advantage: Provided a simple function is chosen the resultant rates are automatically
+smooth;
+OR it can be useful to fit relatively small data sets when a suitable standard table
+exists;
+Page 16%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+OR the standard table can be very good at deciding the shape of the graduation at
+extreme ages where data are sparse.
+Disadvantage: It can be difficult to find a suitable standard table for the data;
+OR it is not suitable for the preparation of standard tables.
+Graphical graduation.
+Advantage: It can be used for small data where no suitable standard table exists;
+OR can allow for known features of the experience for example the accident hump.
+Disadvantage: It is hard to achieve accuracy;
+OR it takes a skilled practitioner;
+OR it is very difficult to achieve adequate smoothness.
+(ii)
+To test for overall goodness of fit we use the χ 2 test.
+The null hypothesis is that the graduated rates are the underlying rates of the
+experience.
+The test statistic  z x 2   2 m where m is the degrees of freedom.
+x
+Age Exposed
+to risk Observed
+deaths Table
+Rates Expected
+deaths z x z x 2
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39 36,254
+37,259
+28,057
+31,944
+30,005
+28,389
+36,124
+28,152
+24,001
+30,448 26
+20
+23
+23
+26
+12
+31
+22
+25
+31 0.000590
+0.000602
+0.000617
+0.000636
+0.000660
+0.000689
+0.000724
+0.000765
+0.000813
+0.000870 21.38986
+22.42992
+17.31117
+20.31638
+19.80330
+19.56002
+26.15378
+21.53628
+19.51281
+26.48976 0.9968
+0.5131
+1.3673
+0.5954
+1.3925
+1.7094
+0.9476
+0.0999
+1.2422
+0.8763 0.9936
+0.2632
+1.8695
+0.3545
+1.9390
+2.9220
+0.8980
+0.0100
+1.5430
+0.7679
+Total 5.2956 11.5608
+The observed test statistic is 11.56
+The number of age groups is 10, but we lose some degrees of freedom for the choice
+of the standard table and one degree of freedom for each parameter in the link
+function. So m < 10.
+The critical value of the chi-squared distribution with 9 degrees of freedom at the 5%
+level is 16.92 (or with 8 d.f. is 15.51, or with 7 is 14.07).
+Page 17%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Since 11.56 < 16.92 (or 15.51, or 14.07), we do not reject the null hypothesis at 95%
+level of significance.
+(iii)
+Any two from:
+Individual Standardised Deviations Test
+Under the null hypothesis that the graduated rates are the true rates underlying the
+observed data
+we should expect individual deviations to be distributed Normal (0,1).
+Only 1 in 20 of the z x s should lie above 1.96 in absolute value;
+OR
+none should lie above 3 in absolute value;
+OR
+table showing split of deviations, actual versus expected as below.
+Range ∞, 2 2, 1 1, 0 0, 1 1, 2 2, +∞
+Expected
+Actual 0
+0 1.4
+1 3.4
+1 3.4
+5 1.4
+3 0
+0
+The largest deviation we have here is 1.71,
+which is within the range 1.96 to 1.96,
+therefore we have no reason to reject the null hypothesis at the 95% level of
+significance.
+Signs Test
+Under the null hypothesis that the graduated rates are the true rates underlying the
+observed data
+the number of positive signs amongst the z x is distributed
+Binomial (10, 1⁄2).
+We observe 8 positive signs.
+The probability of observing 8 or more positive signs in 10 observations is 0.0547
+OR the probability of observing exactly 8 positive signs is 0.044.
+This implies that Pr[observing 8 or more] > 0.025 (a two-tailed test),
+so we have insufficient evidence to reject the null hypothesis at the 95% level.
+Page 18%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Cumulative Deviations Test
+Under the null hypothesis that the graduated rates are the true rates underlying the
+observed data, the test statistic
+ (Observed deaths  Expected deaths)
+x
+~ Normal(0,1).
+ Expected deaths
+x
+So, calculating as follows:
+Age x Observed deaths Expected deaths Observed minus
+expected deaths
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39 26
+20
+23
+23
+26
+12
+31
+22
+25
+31 21.38986
+22.42992
+17.31117
+20.31638
+19.80330
+19.56002
+26.15378
+21.53628
+19.51281
+26.48976 4.6101
+2.4299
+5.6888
+2.6836
+6.1967
+7.5600
+4.8462
+0.4637
+5.4872
+4.5102
+214.5033 24.4967
+Totals
+The value of the test statistic is
+24.50
+ 1.6726 .
+214.50
+Since – 1.96 < test statistic < +1.96 ,
+we have insufficient evidence to reject the null hypothesis at the 95% level.
+Grouping of Signs Test
+Under the null hypothesis that the graduated rates are the true rates underlying the
+observed data
+G = Number of groups of positive deviations = 3
+m = number of deviations = 10
+n 1 = number of positive deviations = 8
+n 2 = number of negative deviations = 2
+Page 19%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+THEN EITHER
+We want k * the largest k such
+ n 1  1  n 2  1 
+k 
+
+
+ t  1  t 
+that
+ m 
+t  1
+ 
+ n 1 
+
+ 0.05
+The test fails at the 5% level if G ≤ k *.
+From the Gold Book there is no entry for k *.
+So we have insufficient evidence to reject the null hypothesis at the 95% level.
+OR
+For t = 3
+ n 1  1   7 
+ n 2  1   3 
+
+     21 and 
+     1
+ t  1   2 
+ t   3 
+ m   10 
+and       45 .
+ n 1   8 
+So Pr[ t = 3] if the null hypothesis is true is 21/45 = 0.467, which is greater than 5% .
+We have insufficient evidence reject the null hypothesis at the 95% level.
+(iv)
+
+\begin{itemize}
+\item The chi-squared test suggests that the graduated rates adhere satisfactorily overall to
+the crude rates which gave rise to the observed deaths.
+\item The Signs Test suggests that small but consistent bias is not a problem.
+The shape of the graduated rates is not significantly different from the crude rates, as
+evidenced by the result of the Grouping of Signs Test.
+\item The shape of the graduated rates is not significantly different from the crude rates, as
+evidenced by the result of the Cumulative Deviations Test.
+There are no individual ages with suspiciously large deviations between the crude
+rates and the graduated rates.
+\item Therefore it would seem reasonable for the company to use the graduated rates to
+price life insurance policies for this particular block of businesses.
+\end{itemize}
+
+In part (iii) there were 3 marks available for each test. ANY two of the tests described above were allowed, even if they are testing for effectively the same thing, but the test for
+smoothness was not given credit as the graduation had been carried out with reference to a standard table. Credit was also given for the serial correlations test, and one or two
+candidates attempted this (none especially successfully). Candidates who carried out more than two tests, were credited with the marks for their two highest-scoring. In part (iv) many
+candidates made vague statements that the graduation “passed all the tests”. This was given only limited credit. For full credit, details of the aspects of the graduation that each test
+focuses on were required. Also in part (iv) some candidates (despite finding no small bias in the data) decided that the presence of eight out of ten positive deviations merited further
+investigation, or that since observed deaths were generally higher than expected deaths, life products should be priced cautiously. Credit was given for these sensible comments.
+
+
+\end{document}
