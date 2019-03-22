@@ -1,0 +1,214 @@
+[Total 10]9
+(i)
+List four factors other than age and smoker status by which life insurance
+mortality statistics are often subdivided.
+
+Two offices in different towns of the same life insurance company write 25-year term
+assurance policies. Below are data from these two offices relating to policyholders of
+the same age. Both deaths and policies in force are on an age last birthday basis.
+Gasperton
+Policies in force on 1 January 2009
+Policies in force on 1 January 2010
+Deaths in calendar year 2009
+(ii)
+2,000
+2,100
+25
+Great Hawking
+1,770
+1,674
+21
+Calculate the central death rate for the calendar year 2009 at this age for the
+offices in Gasperton and Great Hawking.
+
+A detailed examination of the records shows that 50% of the policyholders in
+Gasperton at both censuses were smokers, and 20% of policyholders in Great
+Hawking at both censuses were smokers. National death rates at this age for smokers
+in 2009 were 40% higher than those for non-smokers.
+(iii)
+Estimate the central death rates for smokers and non-smokers in Gasperton
+and Great Hawking.
+
+The life insurance company charges policyholders in Gasperton and Great Hawking
+the same premiums for the 25-year term assurance policies. It charges smokers in
+both towns 40% more than non-smokers.
+(iv)
+CT4 A2012–5
+Comment on the company’s pricing structure in the light of your results from
+parts (ii) and (iii) above.
+
+[Total 11]
+PLEASE TURN OVER10
+An investigation was conducted into the effect marriage has on mortality and a model
+was constructed with three states: 1 Single, 2 Married and 3 Dead. It is assumed that
+transition rates between states are constant.
+(i) Sketch a diagram showing the possible transitions between states.
+
+(ii) Write down an expression for the likelihood of the data in terms of transition
+rates and waiting times, defining all the terms you use.
+
+The following data were collected from information on males and females in their
+thirties.
+Years spent in Married state
+Years spent in Single state
+Number of transitions from Married to Single
+Number of transitions from Single to Dead
+Number of transitions from Married to Dead
+11
+40,062
+10,298
+1,382
+12
+9
+(iii) Derive the maximum likelihood estimator of the transition rate from Single to
+Dead.
+
+(iv) Estimate the constant transition rate from Single to Dead and its variance. 
+
+
+%%%%%%%%%%%%%%%%%%5
+
+9
+(i)
+Gender
+Type of policy
+Level of underwriting
+Duration in force
+Sales channel
+Policy size
+Occupation
+Known impairments
+Postcode/geographical area
+Education
+Socio-economic class / income
+Marital status
+(ii)
+For Gasperton we have, using the census formula central death rate
+=
+25
+1
+(2, 000 + 2,100)
+2
+= 0.0122 .
+For Great Hawking we have central death rate
+=
+(iii)
+21
+1
+(1, 770 + 1, 674)
+2
+= 0.0122 .
+Let the death rate for smokers in Gasperton be γ s , and that for non-smokers be γ n .
+We therefore have
+0.5 γ s + 0.5 γ n = 0.0122
+γ s = 1.4 γ n
+Page 11Subject CT4 (Models) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+and hence
+0.5(1.4) γ n + 0.5 γ n = 0.0122
+γ n = 0.0122
+= 0.0102
+1.2
+γ s = 0.0122(1.4)
+= 0.0142
+1.2
+Let the death rate for smokers in Great Hawking be ζ s , and that for
+non-smokers be ζ n .
+We therefore have
+0.2 ζ s + 0.8 ζ n = 0.0122
+ζ s = 1.4 ζ n
+and hence
+0.2(1.4) ζ n + 0.8 ζ n = 0.0122
+(iv)
+ζ n = 0.0122
+= 0.0113
+1.08
+ζ s = 0.0122(1.4)
+= 0.0158
+1.08
+The company would do better to vary the premiums on the basis of geographical area,
+as it is clear that death rates in Great Hawking for both smokers and non-smokers are
+higher than those in Gasperton.
+If the company does not differentiate its prices on the basis of geographical area, it
+may lose business in Gasperton to a rival company which does differentiate;
+converselY_in Great Hawking it may attract new business from rival companies, but
+will underprice the product and hence risk its life assurance fund becoming insolvent.
+There are relatively little data, so it might be worth adopting a “wait and see”
+approach.
+Page 12Subject CT4 (Models) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+1.4 times the death rate will not translate as 1.4 times the premium. The difference
+may me relatively small, (although it is a 25 year term assurance so it probablY_is
+pretty significant).
+Most candidates scored highly on parts (i) and (ii). Part (iii) was very poorly answered. A
+large number of candidates misinterpreted the question as meaning that the ratio of the
+numbers of deaths to smokers and non-smokers was 1.4. This works for Gasperton because
+there are equal numbers of smokers and non-smokers in the exposed-to-risk, but for Great
+Hawking it produces incorrect results. Only a minority of candidates made a serious attempt
+at part (iv). Credit was given for any sensible comments in part (iv) which were consistent
+with the answers given to parts (ii) and (iii).
+10
+(i)
+1. Single
+2. Married
+3. Dead
+(ii)
+{ (
+12
+13
+L ∝ exp −μ − μ
+) ν } exp { ( −μ
+1
+23
+−μ
+21
+) ν } ( μ ) ( μ ) ( μ ) ( μ )
+2
+12
+d 12
+21
+d 21
+13
+d 13
+23
+d 23
+where
+μ ij is the transition intensity from state i to state j
+ν i is the total observed waiting time in state i
+d ij is the number of transitions from state i to state j
+Page 13Subject CT4 (Models) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+(iii)
+Taking the logarithm of the likelihood we get
+log e ( L ) = −μ 13 ν 1 + d 13 log e ( μ 13 ) + terms not involving μ 13 .
+13
+Differentiate with respect to μ
+d ln( L )
+d μ 13
+1
+= −ν +
+d 13
+μ 13
+.
+Setting this to zero we obtain
+μ ˆ 13 =
+d 13
+ν 1
+.
+To check it is a maximum differentiate again giving
+d 2 log e ( L )
+( d μ 13 ) 2
+(iv)
+=−
+d 13
+( μ 13 ) 2
+which is always negative.
+The maximum likelihood estimate of μ 13 is 12/10,298 = 0.001165.
+The variance is
+− 1
+d 2 ln( L )
+( d μ 13 ) 2
+= 12
+10, 298 2
+= 1.13 x 10 -7 .
+This was the best answered question on the paper, with most candidates scoring at least 9 of
+the 11 marks available. In part (ii) many candidates omitted the constant of proportionality.
+In part (iv) the question says “estimate”, so we needed some indication of where the answers
+came from for full marks.
