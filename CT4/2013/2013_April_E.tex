@@ -1,0 +1,154 @@
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10
+(i)
+The future development of the process depends only on the state currently occupied
+and not on any previous history.
+OR
+P [ X t ∈ A ⏐ X s 1 = x 1 , X s 2 = x 2 , ..., X s n = x n , X s = x ] = P [ X t ∈ A ⏐ X s = x ]
+for all times s 1 < s 2 < ... < s n < s < t , all states x 1 , x 2 , ..., x n , x in S and all subsets A of
+S.
+(ii)
+Condition on the state occupied at x + t , using the Markov assumption:
+t + dt
+11
+12
+12
+22
+p 12
+x = t p x dt p x + t + t p x dt p x + t
+But by Law of Total Probability dt p x 22 + t = 1 − dt p x 21 + t , so
+t + dt
+11
+12
+12
+21
+p 12
+x = t p x dt p x + t + t p x (1 − dt p x + t ) .
+Page 15Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Now, since by assumption, for small dt ,
+o ( dt )
+where lim
+= 0 ,
+dt → 0 dt
+dt
+p ij x + t = \mu ij x + t dt + o ( dt ) ,
+we can substitute to give
+t + dt
+11 12
+12
+21
+p 12
+x = t p x \mu x + t dt + t p x (1 − \mu x + t dt ) + o ( dt )
+12
+12
+12 21
+= t p 11
+x \mu x + t dt + t p x − t p x \mu x + t dt + o ( dt )
+so that
+t + dt
+12
+11 12
+12 21
+p 12
+x − t p x = t p x \mu x + t dt − t p x \mu x + t dt + o ( dt ) .
+Dividing by dt and taking limits gives
+12
+12 21
+⎡
+⎡ t p 11
+⎤
+p 12 − p 12 ⎤ d 12
+x \mu x + t dt
+t p x \mu x + t dt o ( dt )
+lim ⎢ t + dt x t x ⎥ =
+=
+−
++
+lim
+p
+⎢
+⎥
+t x
+dt → 0 ⎢
+dt → 0 ⎢
+dt
+dt
+dt
+dt ⎦ ⎥
+⎣
+⎣
+⎦ ⎥ dt
+12
+12 21
+= t p 11
+x \mu x + t − t p x \mu x + t .
+(iii)
+State 1 to state 2: \mu 12 = 4,330/21,650 = 0.2.
+State 2 to state 1: \mu 21 = 4,160/5,200 = 0.8.
+d 12
+11 12
+12 21
+12
+12
+12 21
+t p x = t p x \mu − t p x \mu = \mu (1 − t p x ) − t p x \mu
+dt
+(iv)
+and substituting the values from the answer to part (iii) gives
+d 12
+12
+12
+12
+t p x = 0.2(1 − t p x ) − 0.8 t p x = 0.2 − t p x .
+dt
+d
+12
+12
+t p x + t p x = 0.2
+dt
+d
+⎡ d 12 ⎤ t
+12 t
+12 t
+t
+⎢ ⎣ dt t p x ⎥ ⎦ e + t p x e = dt ( t p x e ) = 0.2 e
+t
+t
+t
+p 12
+x e = 0.2 e + C
+Since 0 p 12
+x = 0
+Page 16Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+C = − 0.2
+− t
+and t p 12
+x = 0.2 − 0.2 e .
+− 3
+For t = 3 days, t p 12
+= 0.1900 .
+x = 0.2 − 0.2 e
+In part (ii) minor variations on the exact derivation given above were permitted, but all the
+steps were required for full credit. In part (iii) some candidates attempted a solution using
+integral equations. A relatively common example argued that the required probability could
+be obtained from:
+3 3 3
+0 0 0
+12
+− 0.2 w
+.0.2. e − 0.8(3 − w ) dw = 0.2 ∫ e − 2.4 e 0.6 w dw = 0.2 e − 2.4 ∫ e 0.6 w dw .
+3 p 0 = ∫ e
+Evaluating this integral produces 3 p 0 12 =
+0.2 − 2.4 0.6 w 3 0.2 − 0.6 − 2.4
+e ⎡ ⎣ e ⎤ ⎦ =
+( e − e ) = 0.1527 .
+0
+0.6
+0.6
+This is incorrect as it ignores the possibility that lives might oscillate between states 1and 2
+between t = 0 and t = 3. It only considers those lives who move between states 1 and 2 with
+exactly one transition and do not return to state 1. However, this alternative shows
+considerable understanding of the process, and was given some credit.
