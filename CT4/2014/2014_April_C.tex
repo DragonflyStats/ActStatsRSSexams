@@ -51,14 +51,17 @@ d
 x + t + t p x μ x + t .
 dt
 [5]
-An empirical investigation using data for persons aged between 60 and 70 years
-produces the following results:
+An empirical investigation using data for persons aged between 60 and 70 years produces the following results:
 Waiting time in state “Alive, without condition” is 2,046 person-years
 Waiting time in state “Alive, with condition” is 1,139 person-years
-10 deaths from heart disease to persons “Alive, without condition”
-30 deaths from other causes to persons “Alive, without condition”
-25 deaths from heart disease to persons “Alive, with condition”
-20 deaths from other causes to persons “Alive, with condition”
+\begin{itemize}
+\item 10 deaths from heart disease to persons “Alive, without condition”
+\item 30 deaths from other causes to persons “Alive, without condition”
+\item 25 deaths from heart disease to persons “Alive, with condition”
+\item 20 deaths from other causes to persons “Alive, with condition”
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 (iii)
 CT4 A2014–6
 Show that there is a statistically significant difference (at the 95% confidence
@@ -129,20 +132,17 @@ The total length of time exposed to risk is thus 180 minutes, or 3 hours.
 During this time, 4 buses arrived.
 The maximum likelihood estimate is thus 4/3 = 1.33 buses per hour.
 (iii)
-The Poisson model normally assumes a fixed exposed-to-risk for each person,
-but in this investigation the waiting times vary with the student.
-This is not a problem provided we can regard the students as identical, and we
-replace each student who catches a bus with an identical student at the moment
-the bus leaves.
-But in this study the students were not replaced.
-In the investigation above, there are gaps when no student was at the bus stop
-(e.g. between 4.50 and 4.55 p.m.). Buses may have arrived during these gaps.
-Page 8Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
+\begin{itemize}
+\item The Poisson model normally assumes a fixed exposed-to-risk for each person, but in this investigation the waiting times vary with the student.
+\item This is not a problem provided we can regard the students as identical, and we replace each student who catches a bus with an identical student at the moment the bus leaves.
+\item But in this study the students were not replaced.
+\item In the investigation above, there are gaps when no student was at the bus stop (e.g. between 4.50 and 4.55 p.m.). Buses may have arrived during these gaps.
+\item 
 Had we observed these buses, our estimate of the rate may have been different.
 The assumption that the arrival of buses follows a Poisson process may not be
-valid as arrival times may not be independent due to traffic conditions, and/or
+\item valid as arrival times may not be independent due to traffic conditions, and/or
 they may not be random due to timetabling.
-Answers to this question were very disappointing, with a substantial minority of candidates
+\item Answers to this question were very disappointing, with a substantial minority of candidates
 making only token attempts. In part (i) many candidates wrote answers in terms of a general
 Poisson parameter λ, rather than μ E . This attracted a modest penalty. Full credit could be
 n
@@ -150,6 +150,8 @@ obtained in part (i) for candidates who used the total number of deaths, ∑ d i
 i = 1
 n
 ∑ d i
+\end{itemize}
+%%%%%%%%%%%%%%%%%%
 the sum of n independent Poisson variables is Poisson, so the likelihood L = e − n μ E ( n μ E ) i = 1 .
 Many candidates obtained credit for proceeding to derive a maximum likelihood estimator
 where the expression for the likelihood was incorrect.
@@ -173,7 +175,7 @@ causes
 With the state numbers in the diagram above we can write:
 EITHER
 Using the Markov assumption
-Page 9Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
+%% Page 9Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
 OR
 The Chapman Kolmogorov equation is
 dt + t 22
@@ -234,19 +236,21 @@ The MLE of the death rate from heart disease for persons without the
 condition is
 = 0.00489.
 2, 046
-An estimate of the variance of the maximum likelihood estimator of the death
+\begin{itemize}
+\item An estimate of the variance of the maximum likelihood estimator of the death
 rate from heart disease for persons with the condition is
 0.02195
 = 0.000019271 .
 1,139
-Page 10Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
-An estimate of the variance of the maximum likelihood estimator of the death
+% Page 10
+% Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
+\item An estimate of the variance of the maximum likelihood estimator of the death
 rate from heart disease for persons without the condition is
 0.00489
 = 0.00000239.
 2, 046
-The null hypothesis H 0 is that there is no difference between the means.
-The variance of the difference between the two estimates is therefore:
+\item The null hypothesis H 0 is that there is no difference between the means.
+\item The variance of the difference between the two estimates is therefore:
 0.000019271 + 0.00000239 = 0.000021659.
 THEN EITHER
 A 95% confidence interval around the difference is therefore:
@@ -258,13 +262,13 @@ which does not include zero
 OR
 Under the null hypothesis the difference ~ Normal (0, 0.000021659).
 Our observed value of the difference is 0.021949 - 0.004888 = 0.01706
-A z-score for the actual difference of 0.01706 is therefore
+\item A z-score for the actual difference of 0.01706 is therefore
 (0.01706/√0.000021659) = 3.67
 and since this is greater than 1.96 we reject the null hypothesis at the 95%
 level
 THEN
 so the difference is statistically significantly different from zero
-Most candidates scored highly on part (i), though attempts at part (ii) were more variable.
+\item Most candidates scored highly on part (i), though attempts at part (ii) were more variable.
 For part (iii) most candidates correctly computed the estimated rates and a smaller (though
 substantial) number computed the correct variances. Few candidates, however, attempted a
 formal test of the statistical significance of the difference.
@@ -273,3 +277,5 @@ argued that since these do not overlap, the difference between the two estimates
 statistically significant. This approach will not always produce the same conclusion as
 testing the difference directly (because √X + √Y ≠ √(X + Y). It was given partial credit.
 Page 11Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
+\end{itemize}
+\end{document}
