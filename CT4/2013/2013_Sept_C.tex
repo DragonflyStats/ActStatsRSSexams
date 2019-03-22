@@ -1,0 +1,158 @@
+6
+(i)
+Explain what is meant by censoring in the context of a mortality investigation.
+
+A trial was conducted on the effectiveness of a new cream to treat a skin condition.
+100 sufferers applied the cream daily for four weeks or until their symptoms
+disappeared if this happened sooner. Some of the sufferers left the trial before their
+symptoms disappeared.
+(ii)
+Describe two types of censoring that are present and state to whom they apply.
+
+The following data were collected.
+7
+Number of
+sufferers Day symptoms
+disappeared Number of
+sufferers Day they left
+the trial
+2
+1
+1
+2 6
+7
+10
+14 3
+1
+3 2
+10
+13
+(iii) Calculate the Nelson-Aalen estimate of the survival function for this trial. 
+(iv) Sketch the survival function, labelling the axes.
+(v) Estimate the probability that a person using the cream will still have symptoms
+of the skin condition after two weeks.
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+6
+(i) Censoring is the mechanism which prevents us from knowing when an individual
+entered the investigation or the exact date of death.
+(ii) Right Censoring. The trial is cut short after four weeks when some patients had still
+not recovered.
+OR
+The trial is cut short when some patients left the trial before their symptoms
+disappeared.
+Type I Censoring. Censoring times are known in advance for all those patients still
+not recovered at the end of the trial.
+Random Censoring. The time at which patients left the trial before their symptoms
+disappeared is a random variable.
+Non-Informative Censoring. There is no reason to believe that those who left the trial
+had more or less chance of being cured by the cream than those who remained.
+(iii)
+Rearranging the data:
+Day
+People in trial
+No of exits
+Reason for exit
+0
+100
+0
+2
+100
+3
+Left
+6
+97
+2
+cured
+The Nelson-Aalen estimate is  t 
+t j
+0
+2
+6
+7
+10
+13
+14
+n j
+100
+100
+97
+95
+94
+92
+89
+d j
+0
+0
+2
+1
+1
+0
+2
+7
+95
+1
+cured
+
+10
+94
+1
+cured
+d j
+x j  x
+n j
+c j
+0
+3
+0
+0
+1
+3
+0
+d j /n j \lambda t
+2/97
+1/95
+1/94 .020619
+.031145
+.041783
+2/89 .064255
+Since S ( t )  exp   t  we have
+t
+0 ≤ t < 6
+6 ≤ t < 7
+7 ≤ t < 10
+10 ≤ t < 14
+14 ≤ t < 28
+Page 10
+10
+93
+1
+left
+S(t)
+1
+0.97959
+0.96934
+0.95908
+0.93777
+13
+92
+3
+left
+14
+89
+2
+cured%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iv)
+(v)
+The survival probability at t = 14 is 0.93777, so there is approximately a 94% chance
+of still having symptoms after two weeks.
+Many candidates answered this question well. In part (ii) Informative Censoring was
+acceptable if a sensible argument was made for it, for example those who left may be allergic
+to the cream and therefore less likely to be cured by it than those who remain. In part (ii)
+some candidates did not answer both parts of the question (that is, both describing the
+censoring and stating to whom it applied). In part (iii) and part (iv) it was expected that
+candidates would recognise that no information about what happened after 28 days could be
+gained from the data. In part (v) the answer given should be consistent with the S(t) estimated
+in part (iii).
+\end{document}
