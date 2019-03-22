@@ -28,8 +28,8 @@
 \begin{document}
 
 \begin{enumerate}
-% 10
-A bicycle wheel manufacturer claims that its products are virtually indestructible in
+% Question 10
+\item A bicycle wheel manufacturer claims that its products are virtually indestructible in
 accidents and therefore offers a guarantee to purchasers of pairs of its wheels. There
 are 250 bicycles covered, each of which has a probability p of being involved in an
 accident (independently). Despite the manufacturer’s publicity, if a bicycle is
@@ -49,23 +49,19 @@ M S ( t ) = ⎢
 (ii)
 250
 .
-\item Show that E ( S ) = 5, 000 p and Var ( S ) = 550, 000 p − 100, 000 p 2
-[4]
-[6]
-Suppose instead that the manufacturer models the cost of replacement wheels
-as a random variable T based on a portfolio of 500 wheels, each of which
-(independently) has a probability of 0.1p of requiring replacement.
+\item Show that $E ( S ) = 5, 000 p$ and $Var ( S ) = 550, 000 p − 100, 000 p^2$
+%%%%%%%%%%%%%%%%%%%%%%%
+Suppose instead that the manufacturer models the cost of replacement wheels as a random variable T based on a portfolio of 500 wheels, each of which (independently) has a probability of 0.1p of requiring replacement.
 \item (iii) Derive expressions for E(T) and Var(T) in terms of p.
 \item (iv) Suppose p = 0.05.
-(a)
-(b)
-(b)
-Calculate the mean and variance of S and T.
-Calculate the probabilities that S and T exceed £500.
-Comment on the differences.
+(a) Calculate the mean and variance of S and T.
+(b) Calculate the probabilities that S and T exceed £500.
+(b) Comment on the differences.
+
+
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-10
+\item %%- Question 10
 (i)
 Let N denote the annual number of accidents. Then $N \sim B (250, p )$ and (from the tables) $M N ( t ) = ( pe t + 1 − p ) 250$
 If there is an accident, then the total cost of replacement wheels, X , has the following distribution:
@@ -81,12 +77,14 @@ Probability
 2
 £200
 0.01
-And M X ( t ) = 0.01 e 200 t + 0.18 e 100 t + 0.81 .
+And $M X ( t ) = 0.01 e 200 t + 0.18 e 100 t + 0.81$.
 So
-M S ( t ) = M N (log M X ( t ))
-= ( pe log M X ( t ) + 1 − p ) 250
-= ( pM X ( t ) + 1 − p ) 250
-= ( p (0.01 e 200 t + 0.18 e 100 t + 0.81) + 1 − p ) 250
+\begin{eqnarray*}
+M S ( t ) &=& M N (log M X ( t ))\\
+&=& ( pe log M X ( t ) + 1 − p ) 250\\
+&=& ( pM X ( t ) + 1 − p ) 250\\
+&=& ( p (0.01 e 200 t + 0.18 e 100 t + 0.81) + 1 − p ) 250\\
+\end{eqnarray*}
 ⎛ pe 200 t + 18 pe 100 t + 81 p
 ⎞
 = ⎜
@@ -165,9 +163,9 @@ Var ( T ) &=& Var (100 W ) \\
 (iv)
 (a)
 If p = 0.05 then
-E ( S ) = E ( T ) = 250.
-Var ( S ) = 550 , 000 × 0 . 05 − 100 , 000 × 0 . 05 × 0 . 05 = 27 , 250 = 165 . 08 2
-Var ( T ) = 500 , 000 × 0 . 05 × 0 . 995 = 24 , 875 = 157 . 72 2
+\[E ( S ) = E ( T ) = 250.\]
+\[Var ( S ) = 550 , 000 × 0 . 05 − 100 , 000 × 0 . 05 × 0 . 05 = 27 , 250 = 165 . 08 2\]
+\[Var ( T ) = 500 , 000 × 0 . 05 × 0 . 995 = 24 , 875 = 157 . 72 2\]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (b)
 And so assuming both can be approximated by a normal distribution, and allowing for a continuity correction
@@ -191,5 +189,4 @@ wheels being replaced, whereas under T only one wheel can be
 damaged per accident.
 Comment: This was a challenging question with many students scoring well here and
 some trying to fudge the answers for (i).
-END OF EXAMINERS’ REPORT
-Page 12
+\end{document}
