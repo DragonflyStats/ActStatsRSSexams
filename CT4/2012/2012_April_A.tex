@@ -1,0 +1,137 @@
+© Institute and Faculty of Actuaries1
+2
+(i) Define a general random walk.
+(ii) State the conditions under which a general random walk would become a
+simple random walk.
+
+[Total 2]
+(i) Explain the reasons why data are subdivided when conducting mortality
+investigations.
+(ii)
+3
+
+Describe the problems which can arise with subdividing data.
+
+
+[Total 4]
+A graduation of a set of crude mortality rates is tested for goodness-of-fit using a
+chi-squared test.
+Discuss the factors to be considered in determining the number of degrees of freedom
+to use for the test statistic.
+
+4
+A new drug treatment for patients suffering from a chronic skin disease with visible
+symptoms was tested. The drug was administered through a daily dose for the
+duration of the trial. As soon as the drug regime started, the symptoms disappeared in
+all patients, but after some time had a tendency to reappear as the agent causing the
+disease developed resistance to the drug. The trial lasted for six months.
+The data below show the number of patients experiencing a return of their symptoms
+in each month after the drug regime started.
+Month Number of patient-months
+exposed to risk Number of patients experiencing
+a return of their symptoms
+1
+2
+3
+4
+5
+6 200
+190
+175
+150
+135
+125 5
+8
+15
+10
+6
+3
+(i)
+Calculate the hazard of symptoms returning in each month.
+
+As part of the investigation, it is desired to assess the impact of certain risk factors on
+the hazard of symptoms returning. It is suggested that to achieve this, the hazard
+could be modelled using either a Gompertz model or a semi-parametric model.
+(ii)
+CT4 A2012–2
+Comment on the use of each of these models in this situation.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1
+n
+(i)
+X n = ∑ Y j
+j = 1
+where the Y j are i.i.d. random variables and X 0 = 0
+(ii)
+Is simple random walk when Y j can have values +1 and −1 only
+In part (i) few candidates gave the initial condition that X 0 =0. Many candidates were
+confused as to the definitions of general, simple, and symmetric random walks (for example
+defining a simple random walk in part (i) and then stating for part (ii) that the probabilities
+of Y j being +1 and -1 were both equal to 0.5).
+2
+(i)
+Users of data require rates subdivided by age and other criteria.
+Models are based on the assumption that we can observe groups of identical lives.
+Therefore it is important that we analyse groups of lives which are homogenous (or
+have the same mortality).
+This can, for example, help avoid anti-selection.
+(ii)
+Small numbers in some sub-groups leading to scanty data and non-
+credible rates or a large variance.
+Sometimes relevant factors cannot be used because the relevant information cannot be
+collected on the proposal form because questions are unlikely to be answered
+honestly,
+or because the key questions are intrusive or impractical for marketing or
+administrative reasons or make the questionnaire too long, or cannot be asked by law.
+Can be difficult to ensure that events data and exposed-to-risk data are subdivided in
+the same way, leading to the principle of correspondence being violated.
+Answers to this question were disappointing, even though not all the points listed above were
+required for full credit. In part (ii), many candidates made only the first point, about sparse
+data. Some candidates approached this question as practitioners or users of data rather than
+giving the general principles for which the question was asking. Nevertheless, if good points
+were made, this approach could earn full credit.
+Page 3Subject CT4 (Models) – April 2012 – Examiners’ Report
+3
+To work out the number of degrees of freedom (d.f.) we start with the number of age groups.
+We reduce the d.f. because of the constraints imposed by the graduation process.
+The reduction varies according to the graduation method:
+parametric formula – one d.f. lost for each parameter estimated;
+standard table – one d.f. lost for each parameter fitted and a further reduction due to the
+constraints imposed by the choice of standard table;
+graphical – two or three d.f. lost for about every 10 ages graduated.
+This question was generally well answered. Common errors were to suppose that only one
+d.f. is lost for the choice of standard table, and that for graphical graduation, two or three
+d.f. were lost in total, regardless of the number of ages being graduated.
+4
+(i) Month 1
+Month 2
+Month 3
+Month 4
+Month 5
+Month 6
+5/200 = 0.025
+8/190 = 0.042
+15/175 = 0.086
+10/150 = 0.067
+6/135 = 0.044
+3/125 = 0.024
+(ii) To assess the impact of risk factors, a proportional hazards model would be useful
+because of its simple interpretation or because it allows the effect of each individual
+risk factor to be assessed.
+The Gompertz model can be framed as a proportional hazards model, as can a semi-
+parametric model (such as the Cox model).
+The Gompertz model would not be appropriate here, as it has a monotonically
+increasing or decreasing hazard,
+whereas it is clear from part (i) that the hazard of symptoms returning first rises and
+then falls with duration.
+A semi-parametric model allows the shape of the hazard to be determined by the data.
+The semi-parametric model would be better than the Gompertz in this case.
+In part (i) a minority of candidates subtracted half the deaths from the exposed-to-risk.
+Partial credit was given for this. Part (ii) was a higher skills question, and was poorly
+attempted by many candidates. Only a small proportion related their answers to the data
+Page 4Subject CT4 (Models) – April 2012 – Examiners’ Report
+given and spotted that the empirical hazard calculated in part (i) was non-monotonic and so
+the Gompertz model would be a poor fit. Hardly any candidates pointed out that the
+Gompertz model can be framed as a proportional hazards model.
