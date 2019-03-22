@@ -1,0 +1,180 @@
+%%--------------11]
+(i) Explain why the Gompertz model is commonly used in investigations of
+human mortality.
+
+
+The following model of mortality was used in an investigation of the effects of where
+someone lives and income on the risk of death.
+log e \mu x = \alpha + \beta 0 x + \beta 1 U + \beta 2 I ,
+where \mu x is the force of mortality at age x, U takes the value 1 if the person lives in an
+urban area and 0 if the person lives in a rural area, I is annual income in US dollars,
+and \alpha, \beta 0 , \beta 1 and \beta 2 are parameters.
+(ii)
+Show that the model is both a Gompertz model and a proportional hazards
+model.
+
+The estimates of the parameters were \alpha = −9.0 \beta 0 = 0.09, \beta 1 = 0.3 and \beta 2 = −0.0001.
+(iii) Calculate the predicted force of mortality for an urban resident aged 40 years
+with an annual income of $20,000.
+
+(iv) Calculate the additional income that an urban resident must have in order to
+have the same force of mortality as a rural resident of the same age.
+
+CT4 S2013–48
+(v) Calculate the 10-year survival probability for an urban resident aged 40 years
+whose annual income is $20,000.
+
+(vi) Determine the age of a rural resident with the same income as an urban
+resident aged 40 years, who has the same chance of surviving for the next 10
+years.
+
+%%--------------14]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+7
+(i)
+The Gompertz model is simple to understand and to apply, having only two
+parameters.
+It also fits human mortality at older ages well (e.g. 30–85 years).
+(ii)
+log e  x     0 x   1 U  2 I
+So  x  exp(    0 x  1 U   2 I )  exp(  0 x )exp(   1 U   2 I )
+This is equal to Bc x where B  exp(    1 U  2 I ) and c = exp \beta 0 , hence Gompertz.
+ x  exp(    0 x  1 U   2 I )  exp(   0 x )exp(  1 U   2 I )
+Page 11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+EITHER
+Hence the force of mortality factorises into a term exp(\alpha+  0 x) depending
+on age x but not the covariates, and a term exp(  1 U   2 I ) depending on
+the covariates but not x, SO proportional hazards.
+OR
+Consider any two individuals, i and j, with values of the covariates U i and I i ,
+and U j and I j respectively. Then the hazards for individuals i and j at age x are
+ x , i  exp(    0 x )exp(  1 U i   2 I i )
+and
+ x , j  exp(    0 x ) exp(  1 U j   2 I j )
+The ratio between the hazards is thus
+ x , i
+ x , j
+
+exp(    0 x ) exp(  1 U i   2 I i )
+exp(  1 U i   2 I i )
+
+,
+exp(    0 x ) exp(  1 U j   2 I j ) exp(  1 U j   2 I j )
+which does not depend on x, hence proportional hazards.
+(iii)
+log e  40   9  0.09(40)  0.3  0.0001(20,000)   7.1
+so \mu 40 = 0.000825.
+(iv)
+ x  exp(   0 x  1 U  2 I )
+Let the income of the urban resident be I U and that of the rural resident be I R .
+exp(  ) exp(  0 x ) exp(  1   2 I U )  exp(  ) exp(  0 x ) exp(  2 I R )
+exp(  1   2 I U )  exp(  2 I R )
+exp(0.3  0.0001 I U )  exp(  0.0001 I R )
+0.3  0.0001 I U   0.0001 I R
+3, 000  I U  I R
+So the difference is $3,000.
+Page 12%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Survival probability is
+  0.09 s  50
+
+ e
+ 0.00002254(90.017  36.598) 
+ 9 0.3  0.0001(20,000) 
+exp   
+e
+e
+e
+
+  exp  
+ 
+0.09
+
+    0.09   40
+ 
+ exp(  0.01338)  0.9867.
+(vi)
+ x  t
+
+Since S x ( t )  exp     s ds  ,
+  x
+ 
+then if the rural resident is a years older than the urban resident we have
+ x  t
+
+ x  a  t
+
+0.09 s   1  2 I
+exp    e
+e e e ds   exp    e 0.09 s e  e  2 I ds 
+  x
+ 
+  x  a
+ 
+Therefore
+  2 I
+e e
+x  a  t
+
+e
+0.09 s
+  2 I
+x  t
+ds  e e
+x  a
+x  a  t
+
+e
+0.09 s
+ 1 0.09 s
+ e
+e
+ds
+x
+x  t
+ds 
+x  a
+ 1 0.09 s
+ e
+e
+ds
+x
+x  a  t
+ e 0.09 s 
+
+
+  0.09   x  a
+x  t
+ e  1 e 0.09 s 
+
+
+  0.09   x
+e 0.09( x  a  t )  e 0.09( x  a )  e  1 ( e 0.09( x  t )  e 0.09 x )
+e 0.09 x e 0.09 a ( e 0.09 t  1)  e  1 e 0.09 x ( e 0.09 t  1)
+e 0.09a  e  1
+a   1 / 0.09  0.3 / 0.09  3.33
+So the rural dweller is aged 40 + 3.33 = 43.33 years.
+In part (i) very few candidates made the point that the Gompertz model is simple and
+convenient to use. Part (ii) was very poorly answered. When demonstrating that the model
+was a proportional hazards (PH) model, many candidates simply factorised the expression as
+\mu x,i = exp(\alpha)exp(\beta 0 x + \beta 1 U i + \beta 2 I i ) and said that therefore exp(\alpha) was the baseline hazard.
+This is incorrect because the second term includes both duration and the covariates. It was
+Page 13%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+acceptable in part (ii) only to break up the equation once as long as the argument was
+developed further for both the Gompertz and the PH cases. A common error in part (v) was
+to assume that the hazard was constant at its value at age 40 years. This produced a survival
+probability of 0.99178. In part (vi) the derivation shown in above was not required for full
+credit. Candidates who spotted that, if 40+a is the age of the rural dweller in years,
+then e 0.09a = e \beta 1 , scored full credit.
+Since the question was missing a comma after "were \alpha =  9.0"a small number of candidates
+interpreted the parameters differently i.e. \alpha = 0.09, \beta 0 =  0.01, \beta 1 =0.3 and \beta 3 =  0.0001.
+This interpretation was given full credit, if followed through correctly.
+
+  B  
+In part (vi) the approach using t p x   exp 
+ 
+ log c  
+
+c x ( c t  1)
+was acceptable.
