@@ -1,0 +1,216 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+[Total 15]
+A pet shop has four glass tanks in which snakes for sale are held. The shop can stock
+at most four snakes at any one time because:
+• if more than one snake were held in the same tank, the snakes would attempt to
+eat each other and
+• having snakes loose in the shop would not be popular with the neighbours
+The number of snakes sold by the shop each day is a random variable with the
+following distribution:
+Number of Snakes Potentially Sold
+in Day (if stock is sufficient) Probability
+None
+One
+Two 0.4
+0.4
+0.2
+If the shop has no snakes in stock at the end of a day, the owner contacts his snake
+supplier to order four more snakes. The snakes are delivered the following morning
+before the shop opens. The snake supplier makes a charge of C for the delivery.
+(i) Write down the transition matrix for the number of snakes in stock when the
+shop opens in a morning, given the number in stock when the shop opened the
+previous day.
+
+(ii) Calculate the stationary distribution for the number of snakes in stock when
+the shop opens, using your transition matrix in part (i).
+[4]
+(iii) Calculate the expected long term average number of restocking orders placed
+by the shop owner per trading day.
+
+CT4 S2010—6If a customer arrives intending to purchase a snake, and there is none in stock, the sale
+is lost to a rival pet shop.
+(iv)
+Calculate the expected long term number of sales lost per trading day.
+
+The owner is unhappy about losing these sales as there is a profit on each sale of P.
+He therefore considers changing his restocking approach to place an order before he
+has run out of snakes. The charge for the delivery remains at C irrespective of how
+many snakes are delivered.
+(v) Evaluate the expected number of restocking orders, and number of lost sales
+per trading day, if the owner decides to restock if there are fewer than two
+snakes remaining in stock at the end of the day.
+
+(vi) Explain why restocking when two or more snakes remain in stock cannot
+optimise the shop’s profits.
+
+The pet shop owner wishes to maximise the profit he makes on snakes.
+(vii)
+Derive a condition in terms of C and P under which the owner should change
+from only restocking where there are no snakes in stock, to restocking when
+there are fewer than two snakes in stock.
+
+[Total 19]
+END OF PAPER
+CT4 S2010—7
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Question 12
+( i)
+Start
+previous
+day
+1
+2
+3
+4
+(ii)
+Start morning
+1
+2
+0.4
+0.4
+0.2
+0
+If stationary distribution is π = ( π 1 π 2
+0
+0.4
+0.4
+0.2
+π 3
+3 4
+0
+0
+0.4
+0.4 0.6
+0.2
+0
+0.4
+π 4 )
+Then π A = π where A is the matrix in (i)
+0.4 π 1 + 0.4 π 2 + 0.2 π 3 = π 1
+0.4 π 2 + 0.4 π 3 + 0.2 π 4 = π 2
+0.4 π 3 + 0.4 π 4 = π 3
+0.6 π 1 + 0.2 π 2 + 0.4 π 4 = π 4
+(a)
+(b)
+(c)
+(d)
+From (c) π 3 = 0.666666 π 4
+From (b) π 2 = 0.7778 π 4
+From (a) π 1 = 0.7407 π 4
+π 1 + π 2 + π 3 + π 4 = 1 = (0.7407 + 0.7778 + 0.6666 + 1) π 4
+Implies π 1 = 0.2325 , π 2 = 0.2442 , π 3 = 0.2093 , π 4 = 0.31395
+OR π 1 =
+(iii)
+10
+21
+9
+27
+, π 2 =
+, π 3 = , π 4 =
+.
+43
+86
+43
+86
+Probability of restocking is 0.6 if in π 1 and 0.2 if in π 2
+So long term rate = 0.6 * 0.2325 + 0.2 * 0.2442 = 0.1884 per trading day
+(iv)
+Probability of losing a sale is 0.2 if in π 1
+So expected lost sales per day = 0.2 * 0.2325 = 0.0465
+Page 17 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+(v)
+If restock when fewer than two in stock then transition matrix changes to:
+Start previous
+day
+2
+3
+4
+Start morning
+2
+3
+0.4
+0.4
+0.2
+0
+0.4
+0.4
+4
+0.6
+0.2
+0.4
+Label stationary distribution \lambda . Then
+0.4 \lambda 2 + 0.4 \lambda 3 + 0.2 \lambda 4 = \lambda 2
+0.4 \lambda 3 + 0.4 \lambda 4 = \lambda 3
+0.6 \lambda 2 + 0.2 \lambda 3 + 0.4 \lambda 4 = \lambda 4
+(b1)
+(c1)
+(d1)
+From (c1) \lambda 3 = 0.666666 \lambda 4
+From (b1) \lambda 2 = 0.7778 \lambda 4
+\lambda 2 = 0.3182 OR 7/22
+\lambda 3 = 0.2727 OR 3/11
+1
+\lambda 4 =
+= 0.4091 OR 9/22
+(1 + 2 / 3 + 7 / 9)
+As no more than two snakes sell per day,
+there are no lost sales.
+Probability of restocking 0.6 if in \lambda 2 and 0.2 in \lambda 3 = 0.2455
+(vi)
+Restocking at two or more snakes would not result in fewer lost sales than restocking
+at 1.
+Because the probability of selling more than 2 snakes is zero.
+It would, however, result in more restocking charges than restocking at 1.
+Therefore it must result in lower profits than restocking at 1 so is not optimal.
+Page 18 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+(vii)
+Costs if restock at 0
+0.1884C + 0.0465 P
+Costs if restock at 1
+0.24546 C
+So should change restocking approach if
+0.24546 C < 0.1884 C + 0.0465 P
+C < 0.8148 P
+In this question, many candidates answered (i) and (ii), but made no further progress.
+Candidates who wrote down the wrong matrix in (i) but evaluated the stationary distribution
+correctly for the matrix they had written down were given full credit for (ii), and gained
+credit in (iii) and (iv) if these parts were answered correctly given the matrix which had been
+written down in (i). A common error was to write down a five-state model in (i). Few
+candidates attempted the later sections of this question.
+END OF 
+Page 19
