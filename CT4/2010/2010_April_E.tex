@@ -1,54 +1,79 @@
+\documentclass[a4paper,12pt]{article}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-11
-A reinsurance policy provides cover in respect of a single occurrence of a specified
-catastrophic event. If such an event occurs, future cover is suspended. However if a
-reinstatement premium is paid within one time period of occurrence of the event then
-the insurance coverage is reinstated. If a second specified event occurs it is not
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+%%- Question 11
+\item A reinsurance policy provides cover in respect of a single occurrence of a specified catastrophic event. If such an event occurs, future cover is suspended. However if a
+reinstatement premium is paid within one time period of occurrence of the event then the insurance coverage is reinstated. If a second specified event occurs it is not
 permitted to reinstate the cover and the policy will lapse.
-The transition rate for the hazard of the specified event is a constant 0.1. Whilst
-policies are eligible for reinstatement, the transition rate for resumption of cover
+The transition rate for the hazard of the specified event is a constant 0.1. Whilst policies are eligible for reinstatement, the transition rate for resumption of cover
 through paying a reinstatement premium is 0.05.
-(i) Explain whether a time homogeneous or time inhomogeneous model would be
+\begin{enumerate}[(i)]
+\item (i) Explain whether a time homogeneous or time inhomogeneous model would be
 more appropriate for modelling this situation.
  
-(ii) (a)
+\item (ii) (a)
 Explain why a model with state space {Cover In Force, Suspended,
 Lapsed} does not possess the Markov property.
 (b)
 Suggest, giving reasons, additional state(s) such that the expanded
 system would possess the Markov property.
  
-(iii) Sketch a transition diagram for the expanded system.  
-(iv) Derive the probability that a policy remains in the Cover In Force state
+\item (iii) Sketch a transition diagram for the expanded system.  
+\item (iv) Derive the probability that a policy remains in the Cover In Force state
 continuously from time 0 to time t.  
 (v)
-Derive the probability that a policy is in the Suspended state at time t > 1 if it
+\item Derive the probability that a policy is in the Suspended state at time t > 1 if it
 is in state Cover In Force at time 0.
- 
-[Total 14]
-
-
+\end{enumerate}
+\end{enumerate}
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 11
 (i)
 A time inhomogeneous model should be used.
-Because transition probabilities out of the “Suspended” state between
-times s and t may depend not only on the time difference t – s but on the
+Because transition probabilities out of the “Suspended” state between times s and t may depend not only on the time difference t – s but on the
 the duration s the policy has been in that state (e.g. the probability of
-remaining in the suspended state for t = 0.75 and s = 0.25 is exp(–0.025), but
-the probability for t = 1.25 and s = 0.75 is 0.
+remaining in the suspended state for t = 0.75 and s = 0.25 is exp(–0.025), but the probability for t = 1.25 and s = 0.75 is 0.
 (ii)
 (a)
-A model with this state space would not satisfy the
-Markov property because a policy can only be reinstated once,
+A model with this state space would not satisfy the Markov property because a policy can only be reinstated once,
 so if in state Cover in Force we would need to know if the
 policy has previously been Suspended.
 (b)
-A Markov model could be obtained by expanding the state space
-to {Cover In Force, Suspended, Reinstated, Lapsed}.
-In this case the future transitions will depend only on the state
-currently occupied and duration, irrespective of previous states.
+A Markov model could be obtained by expanding the state space to {Cover In Force, Suspended, Reinstated, Lapsed}.
+In this case the future transitions will depend only on the state currently occupied and duration, irrespective of previous states.
 (iii)
 Cover In
 Force
@@ -105,10 +130,8 @@ P CS (0, t ) = − 2 exp( − 0.05 t )(exp( − 0.05 t ) − exp( − 0.05 t ).e
 OR
 0.1025exp(–0.1 t)
 ALTERNATIVELY
-This assumes that can remain in state ‘Suspended’ for more than 1 time period
-(after which permanently suspended)
-To be in S at time t, must have remained in state C until some time w,
-then transitioned to S at time w, then remained in state S until t time.
+This assumes that can remain in state ‘Suspended’ for more than 1 time period (after which permanently suspended)
+To be in S at time t, must have remained in state C until some time w, then transitioned to S at time w, then remained in state S until t time.
 (or express in terms of conditioning)
 Probabilities are P CC (0, w ) , 0.1dw, and P SS ( w , t ) respectively.
 Integrating over the possible values of w:
@@ -132,9 +155,9 @@ t − 1
 P CS ( 0 , t ) = − 2 exp( − 0 . 05 t ) exp( − 0 . 05 w ) t − 1 − exp( − 0 . 05 ) exp( − 0 . 1 w ) 0
 P CS ( 0 , t ) = − 2 exp( − 0 . 05 t )(exp( − 0 . 05 t ) − exp( − 0 . 05 t ). exp( 0 . 05 )) + exp( 0 . 05 ) − exp( 0 . 05 ). exp( − 0 . 1 t )
 = (exp( 0 . 05 ) − 2 ) exp( − 0 . 1 t ) + exp( − 0 . 05 )
-Page 19Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
-In part (iii) the label on the arrow going directly from “Suspended” to “Lapsed” is not
-needed, provided that the label on the arrow going from the “Suspended” to “Reinstated”
-indicates that the rate of 0.05 only applies if the duration is less than 1. If the label on the
-arrow going from “Suspended” to “Reinstated” does not indicate this, then we need an
-indication that movement from “Suspended” to “Lapsed” is automatic if duration = 1
+%%Page 19Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+
+%% In part (iii) the label on the arrow going directly from “Suspended” to “Lapsed” is not needed, provided that the label on the arrow going from the “Suspended” to “Reinstated”
+%% indicates that the rate of 0.05 only applies if the duration is less than 1. If the label on the arrow going from “Suspended” to “Reinstated” does not indicate this, then we need an
+%% indication that movement from “Suspended” to “Lapsed” is automatic if duration = 1
+\end{document}

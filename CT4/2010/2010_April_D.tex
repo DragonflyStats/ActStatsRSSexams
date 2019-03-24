@@ -35,10 +35,8 @@
 
 %%%-- Question 10
 %% CT4 A2010—610
-An airline runs a frequent flyer scheme with four classes of member: in ascending
-order Ordinary, Bronze, Silver and Gold. Members receive benefits according to their
-class. Members who book two or more flights in a given calendar year move up one
-class for the following year (or remain Gold members), members who book exactly
+An airline runs a frequent flyer scheme with four classes of member: in ascending order Ordinary, Bronze, Silver and Gold. Members receive benefits according to their
+class. Members who book two or more flights in a given calendar year move up one  class for the following year (or remain Gold members), members who book exactly
 one flight in a given calendar year stay at the same class, and members who book no
 flights in a given calendar year move down one class (or remain Ordinary members).
 Let the proportions of members booking 0, 1 and 2+ flights in a given year be p 0 , p 1
@@ -79,14 +77,11 @@ Page 13 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Repor
 The state space is discrete (with four states: O – ordinary passenger,
 B – bronze member, S – silver member and G – gold member)
 The probability that a passenger has a particular membership
-status next year depends only on their membership status in the
-current year (i.e. the status in previous years is not relevant).
+status next year depends only on their membership status in the current year (i.e. the status in previous years is not relevant).
 Therefore the process is Markov.
 (b)
-The state space is finite and therefore there is at least one stationary
-probability distribution.
-Since any state can be reached from any other state, the
-Markov chain is irreducible.
+The state space is finite and therefore there is at least one stationary probability distribution.
+Since any state can be reached from any other state, the Markov chain is irreducible.
 Therefore the stationary probability distribution is unique.
 \item (ii)
 The transition matrix P is:
@@ -111,59 +106,59 @@ p 1 + p 2 + ⎠
 where the probability that a passenger books i flights in a year is p i .
 \item (iii)
 Let the probability that a passenger is in state j according to the stationary
-distribution be π j ( j = O , B , S , G ).
-The π j are given by the general formula
-π = π P .
+distribution be \pi j ( j = O , B , S , G ).
+The \pi j are given by the general formula
+\pi = \pi P .
 With p 0 = 0.4 , p 1 = 0.4 and p 2 + = 0.2 , we therefore have the equations
-π O = 0.8 π O + 0.4 π B
-π B = 0.2 π O + 0.4 π B + 0.4 π S
-π S = 0.2 π B + 0.4 π S + 0.4 π G
-π G = 0.2 π S + 0.6 π G
+\pi O = 0.8 \pi O + 0.4 \pi_B
+\pi_B = 0.2 \pi O + 0.4 \pi_B + 0.4 \pi S
+\pi S = 0.2 \pi_B + 0.4 \pi S + 0.4 \pi G
+\pi G = 0.2 \pi S + 0.6 \pi G
 We also know that
-π O + π B + π S + π G = 1 .
+\pi O + \pi_B + \pi S + \pi G = 1 .
 Page 14
 (1)
 (2)
 (3)
 (4) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
 Using equation (1) we have
-0.2 π O = 0.4 π B
+0.2 \pi O = 0.4 \pi_B
 so that
-π O = 2 π B .
+\pi O = 2 \pi_B .
 Substituting in equation (2) this yields
-π B = 0.2(2 π B ) + 0.4 π B + 0.4 π S ,
+\pi_B = 0.2(2 \pi_B ) + 0.4 \pi_B + 0.4 \pi S ,
 so that
-0.2 π B = 0.4 π S
+0.2 \pi_B = 0.4 \pi S
 and hence
-π S = 0.5 π B .
+\pi S = 0.5 \pi_B .
 Finally, substituting in equation (3) yields
-0.5 π B = 0.2 π B + 0.4(0.5 π B ) + 0.4 π G ,
+0.5 \pi_B = 0.2 \pi_B + 0.4(0.5 \pi_B ) + 0.4 \pi G ,
 so that
-0.1 π B = 0.4 π G
+0.1 \pi_B = 0.4 \pi G
 and hence
-π G = 0.25 π B .
+\pi G = 0.25 \pi_B .
 We therefore have
-2 π B + π B + 0.5 π B + 0.25 π B = 1 ,
+2 \pi_B + \pi_B + 0.5 \pi_B + 0.25 \pi_B = 1 ,
 whence
-π B =
+\pi_B =
 1
 4
 = = 0.2667 ,
 3.75 15
 and the stationary distribution is
-π O =
+\pi O =
 8
 = 0.5333
 15
 Page 15 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
 (iv)
-π B = 4
+\pi_B = 4
 = 0.2667
 15
-π S = 2
+\pi S = 2
 = 0.1333
 15
-π G = 1
+\pi G = 1
 = 0.0667
 15
 EITHER
