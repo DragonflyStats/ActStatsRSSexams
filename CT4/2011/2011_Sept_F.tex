@@ -1,0 +1,207 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+PLEASE TURN OVER11
+An actuary walks from his house to the office each morning, and walks back again
+each evening. He owns two umbrellas. If it is raining at the time he sets off, and one
+or both of his umbrellas is available, he takes an umbrella with him. However if it is
+not raining at the time he sets off he always forgets to take an umbrella.
+Assume that the probability of it raining when he sets off on any particular journey is
+a constant p, independent of other journeys.
+This situation is examined as a Markov Chain with state space {0,1,2} representing
+the number of his umbrellas at the actuary’s current location (office or home) and
+each time step representing one journey.
+(i)
+Explain why the transition graph for this process is given by:
+p
+1
+Zero
+Two
+1 − p
+One
+p
+1 − p
+
+(ii) Derive the transition matrix for the number of umbrellas at the actuary’s house
+before he leaves each morning, based on the number before he leaves the
+previous morning.
+
+(iii) Calculate the stationary distribution for the Markov Chain.
+(iv) Calculate the long run proportion of journeys (to or from the office) on which the actuary sets out in the rain without an umbrella.
+
+
+The actuary considers that the weather at the start of a journey, rather than being independent of past history, depends upon the weather at the start of the previous journey. He believes that if it was raining at the start of a journey the probability of it
+raining at the start of the next journey is r (0 < r <1), and if it was not raining at the
+start of a journey the probability of it raining at the start of the next journey is
+s (0 < s < 1, r \neq s).
+(v) Write down the transition matrix for the Markov Chain for the weather.
+(vi) Explain why the process with three states {0,1,2}, being the number of his umbrellas at the actuary’s current location, would no longer satisfy the
+Markov property.
+
+(vii) Describe the additional state(s) needed for the Markov property to be satisfied, and draw a transition diagram for the expanded system.
+
+[Total 18]
+END OF PAPER
+CT4 S2011—8
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Question 11
+(i)
+Transitions from state “Zero”
+No umbrellas to take so must be two at the other location.
+Transitions from state “One”
+If it does not rain, then there remains one at each location, probability 1 − p .
+If it does rain, both umbrellas end up at the next destination, probability p .
+Transitions from state “Two”
+If it does not rain, then forgets to take an umbrella so none is at the next location,
+probability 1 − p .
+If it does rain, takes one of the umbrellas to the other location, probability p .
+(ii)
+One step transition matrix is:
+0
+⎛ 0
+⎜
+1 − p
+⎜ 0
+⎜ 1 − p
+p
+⎝
+1 ⎞
+⎟
+p ⎟
+0 ⎟ ⎠
+Seeking the two-step transition matrix as the square of this matrix:
+0
+⎛ 0
+⎜
+1 − p
+⎜ 0
+⎜ 1 − p
+p
+⎝
+(iii)
+0
+⎛ 0
+⎜
+1 − p
+\pi ⎜ 0
+⎜ 1 − p
+p
+⎝
+1 ⎞ ⎛ 0
+0
+⎟ ⎜
+p ⎟ . ⎜ 0
+1 − p
+⎟
+⎜
+p
+0 ⎠ ⎝ 1 − p
+1 ⎞
+⎟
+p ⎟ = \pi
+0 ⎟ ⎠
+(1 − p ) \pi 3 = \pi 1
+(1 − p ) \pi 2 + p \pi 3 = \pi 2 or \pi 2 = \pi 3
+\pi 1 + p \pi 2 = \pi 3
+and
+\pi 1 + \pi 2 + \pi 3 = 1
+((1 − p ) + 1 + 1) \pi 3 = 1
+Page 18
+p
+0
+⎞
+1 ⎞ ⎛ 1 − p
+⎟
+⎟ ⎜
+p ⎟ = ⎜ p (1 − p ) (1 − p ) 2 + p 2
+p (1 − p ) ⎟
+⎟
+0 ⎟ ⎠ ⎜ 0
+p (1 − p )
+1 − p + p 2 ⎠
+⎝
+(I)
+(II)
+(III)
+(IV)%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
+\pi 2 = \pi 3 =
+\pi 1 =
+(iv)
+1
+3 − p
+1 − p
+3 − p
+He gets wet if it rains on a journey when he is state “Zero”.
+So the long run probability is p . \pi 1 =
+(v)
+Denoting R = raining, NR = not raining
+From / To R
+R
+NR
+(vi)
+p (1 − p )
+.
+3 − p
+r
+NR
+1 − r
+s 1 − s
+This would not satisfy the Markov property because (in states “One” and “Two”)
+would need to know, in addition, whether it was raining or not on the last journey to
+determine the future evolution of the process.
+e.g. if in state “Two”, probability of next moving to “Zero” is 1- r if it rained on the
+last journey and 1 − s if it did not. As r does not equal s the Markov property is not
+satisfied.
+(vii)
+If we expand the states to include information about whether it rained on the last
+journey, then the Markov property is satisfied.
+Five states are needed, as cannot be in position with zero umbrellas when it rained on
+last journey,
+so the state space is {Zero, One Rained, One Did Not Rain, Two Rained, Two Did
+Not Rain}
+Page 19%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
+Many candidates scored highly on parts (i)–(iii) of this question, but a much smaller
+proportion made a solid effort at parts (iv)–(vii). In part (vi), candidates who simply said that
+the process would not satisfy the Markov property because it depended on the “past history”
+scored only limited credit. For full credit, it was necessary to say that what matters is
+whether it was raining or not on the last journey, and to give an example of transitions with
+differing probabilities. In part (vii), some candidates produced four-state solutions, splitting
+either of states One or Two, but not both. These candidates were given credit for diagrams
+correct for the solution they were offering.
+END OF EXAMINERS’ REPORT
+Page 20
