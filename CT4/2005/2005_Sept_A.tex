@@ -1,0 +1,182 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+Institute of Actuaries103 Questions
+A1
+An insurance company has a block of in-force business under which policyholders
+have been given options and investment-related guarantees. A stochastic model has
+been developed which projects option and guarantee costs. You have used the model
+to estimate, for the Company Board, the probability of the insurance company having
+insufficient assets to honour the payouts under the policies. A Board member has
+asked whether there are any factors which could cause this probability to be
+inaccurate.
+Outline the items you would mention in your response.
+A2
+(i)
+In the context of a stochastic process denoted by {X t : t
+(a)
+(b)
+(c)
+
+J}, define:
+state space
+time set
+sample path
+
+(ii)
+Stochastic process models can be placed in one of four categories according to
+whether the state space is continuous or discrete, and whether the time set is
+continuous or discrete. For each of the four categories:
+(a) State a stochastic process model of that type.
+(b) Give an example of a problem an actuary may wish to study using a
+model from that category.
+
+[Total 6]
+A3
+A die is rolled repeatedly. Consider the following two sequences:
+I
+II
+B n is the largest number rolled in the first n outcomes.
+C n is the number of sixes rolled in the first n outcomes.
+For each of these two sequences:
+(a)
+(b)
+(c)
+(d)
+(e)
+CT4 S2005
+Explain why it is a Markov chain.
+Determine the state space of the chain.
+Derive the transition probabilities.
+Explain whether the chain is irreducible and/or aperiodic.
+Describe the equilibrium distribution of the chain.
+2
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+103 Part
+A1
+Items to be mentioned include:
+Models will be chosen which it is felt give a reasonable reflection of the underlying
+real world processes, but this may not turn out to be the case. (Model error.)
+The model may be very sensitive to parameters chosen, and the parameters are
+estimates because the true underlying parameters cannot be observed. (Parameter
+error.)
+Sampling error may result from running insufficient simulations. (It should be
+possible to give a confidence interval for the error that could result from this source.)
+The management actions assumed may not match what would happen in extreme
+circumstances.
+Policyholder behaviour, such as take-up rates for options, may differ in practice.
+There may be future events, such as legislative changes which affect the
+interpretation of the policy conditions, which have not been anticipated in the
+modelling.
+There may be errors in the coding of the model. The model is likely to be complex
+and difficult to verify completely.
+The model relies on input data, which may be grouped rather than being able to run
+every policy. Any errors in the data could cause the output to be inaccurate.
+Page 4Subject CT4
+Models
+September 2005
+Examiners Report
+A2
+(i)
+(ii)
+(a) The state space is the set of values which it is possible for each random
+variable X t to take.
+(b) The time set is the set J, the times at which the process contains a random
+variable X t .
+(c) A sample path is a joint realisation of the variables X t for all t in J, that is a set
+of values for X t (at each time in the time set) calculated using the previous
+values for X t in the sample path.
+Discrete State Space, Discrete Time
+(a) Simple random walk, Markov chain, or any other suitable example
+(b) Any reasonable example. For example: No Claims Discount systems, Credit
+Rating at end of each year
+Discrete State Space, Continuous Time
+(a) Poisson process, Markov jump process, for example
+(b) Any reasonable example. For example: Claims received by an insurer, Status
+of pension scheme member
+Continuous State Space, Discrete Time
+(a) General random walk, time series, for example
+(b) Any reasonable example. For example: Share prices at end of each trading
+day, Inflation index
+Continuous State Space, Continuous Time
+(a) Brownian motion, diffusion or Itô process, for example.
+Compound Poisson process if the defined state space is continuous.
+(b) Any reasonable example. For example: Share prices during trading period,
+Value of claims received by insurer
+Page 5Subject CT4 Models
+A3 (a) Given the current state (the largest outcome or the number of sixes) up to the
+nth roll, no additional information is required to predict the status of the chain
+after the next roll. Therefore both B n and C n have the Markov property.
+(b) B n has state space {1, 2, 3, 4, 5, 6},
+the state space for C n is the set of non-negative integers.
+(c) For B n , and 1
+and
+September 2005
+i, j
+6,
+P B n 1 j | B n i i
+6 for j = i,
+P B n 1 j | B n i 1
+6 for each j >i
+P B n 1 j | B n i 0 for i > j
+For C n , and for k = 0,1,2,
+and
+(d)
+Examiners Report
+,
+1
+,
+6
+P C n 1 k 1| C n
+k
+P C n 1 k | C n k 5
+,
+6
+P C n 1 j | C n k 0 for all other j k , k 1
+The chain B n is clearly aperiodic; if currently at state i, it can remain there if
+the next outcome is at most i.
+It is not irreducible, as it cannot be reached from j for i < j.
+C n is again aperiodic; if currently at state i, it can remain there if the next
+outcome is not a 6.
+It is not irreducible; state k cannot be reached from m if k < m.
+(e)
+In the long run, B n will reach state 6 and will remain there; hence in
+equilibrium P(B n = 6) = 1 for sufficiently large n.
+C n cannot decrease and has an infinite state space; therefore, it is certain that it
+will escape to infinity with probability one.
+Page 6Subject CT4 Models
+
