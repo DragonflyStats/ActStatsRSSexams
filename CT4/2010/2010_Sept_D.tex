@@ -1,0 +1,270 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+
+[Total 7]
+A researcher is reviewing a study published in a medical journal into survival after a
+certain major operation. The journal only gives the following summary information:
+• the study followed 16 patients from the point of surgery
+• the patients were studied until the earliest of five years after the operation, the end
+of the study or the withdrawal of the patient from the study
+• the Nelson-Aalen estimate, S(t), of the survival function was as follows:
+Duration since operation t (years) S(t)
+0\leqt<1
+1\leqt<3
+3\leqt<4
+4\leqt<5 1
+0.9355
+0.7122
+0.6285
+(i) Describe the types of censoring which are present in the study.
+(ii) Calculate the number of deaths which occurred, classified by duration since
+the operation.
+[6]
+(iii) Calculate the number of patients who were censored.
+CT4 S2010—4
+
+
+[Total 9]10
+11
+A study is undertaken of marriage patterns for women in a country where bigamy is
+not permitted. A sample of women is interviewed and asked about the start and end
+dates of all their marriages and where the marriages had ended, whether this was due
+to death or divorce (all other reasons can be ignored). The investigators are interested
+in estimating the rate of first marriage for all women and the rate of re-marriage
+among widows.
+(i) Draw a diagram illustrating a multiple-state model which the investigators
+could use to make their estimates, using the four states: “Never married”,
+“Married”, “Widowed” and “Divorced”.
+
+(ii) Derive from first principles the Kolmogorov differential equation for first
+marriages.
+
+(iii) Write down the likelihood of the data in terms of the waiting times in each
+state, the numbers of transitions of each type, and the transition intensities,
+assuming the transition intensities are constant.
+[3]
+(iv) Derive the maximum likelihood estimator of the rate of first marriage.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+
+Question 9
+(i)
+Type I (right censoring) of patients who survive to duration 5 years.
+Random censoring of patients who withdraw from the study.
+(ii)
+⎛ d j
+Since S(t) = exp(−\lambda t ) where \lambda t = ∑ ⎜
+⎜
+t j \leq t ⎝ n j
+\lambda t = −ln [S(t)]
+Page 10
+⎞
+⎟
+⎟
+⎠ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+So
+Duration since operation t (years)
+0 \leq t < 1
+1 \leq t < 3
+3 \leq t < 4
+4 \leq t < 5
+S(t) \lambda t
+1
+0.9355
+0.7122
+0.6285 0
+0.0667
+0.3394
+0.4644
+Let d j and n j be the number of deaths and the number in the risk set at the jth point at
+which events occur.
+Consider t = 1
+d 1
+= 0 . 0667
+n 1
+Since there can be no more than 16 patients at risk at t = 1, the only possible
+combination is d 1 = 1 and n 1 = 15
+Consider t = 3 (the second point at which events occur)
+d 2
+= 0.3394 – 0.0667=0.2727
+n 2
+Recognising this as 3/11, and that there are at most 14 patients at risk, this implies that
+d 2 = 3 and n 2 = 11.
+Consider t = 4 (the third point at which events occur)
+d 3
+= 0.4644-0.0667 − 0.2727 = 0.125
+n 3
+Recognising this as 1/8, and that there are at most 11 patients at risk, this implies that
+d 3 = 1 and n 3 = 8.
+So the answer is:
+1 death at duration
+3 deaths at duration
+1 death at duration
+1 year
+3 years
+4 years
+Page 11 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+(iii)
+Patients either die or are censored. As the total number of patients is 16 and 5 die the
+number censored is 16 − 5 = 11.
+This was the best answered question on the examination paper. In (i) “right” censoring was
+awarded credit, as was some explanation of whether the censoring was informative or non-
+informative. In (ii) a common error was to state the durations as ranges (i.e. 1 death at
+durations between 1 and 3 years, 3 deaths at durations between 3 and 4 years, and 1 death at
+durations over 4 years). This reveals a misunderstanding of the estimator, and was penalised
+by the loss of 1 mark. Candidates who calculated an incorrect number of deaths in (ii) were
+given credit for (iii) if their answer to (iii) was consistent with their answer to (ii).
+Question 10
+(i)
+(ii)
+1 Never married 2 Married
+3 Widowed 4 Divorced
+Using the numbering of the states above, let the probability that a women who is in
+state i at time x will be in state j at time x + t be t p ij x .
+Using the Markov property, and conditioning on the state occupied
+at time x + t,
+and noting that for first marriages return from the widowed or
+divorced state is not possible, we can write
+t + dt
+11
+12
+12
+22
+p 12
+x = t p x dt p x + t + t p x dt p x + t
+Using the law of total probability,
+dt
+p x 22 + t = 1 − dt p x 23 + t − dt p x 24 + t ,
+so that
+t + dt
+11
+12
+12
+23
+24
+p 12
+x = t p x dt p x + t + t p x (1 − dt p x + t − dt p x + t )
+Let the transition rate from state i to state j at time x+t be \mu ijx + t .
+Assume that
+Page 12
+dt
+p ij x + t = \mu ij x + t dt + o ( dt ) , i ≠ j %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+o ( dt )
+= 0 .
+dt → 0 + dt
+where lim
+Substituting for the
+t + dt
+t
+p ij x in the equation above produces
+11 12
+12
+23
+24
+p 12
+x = t p x \mu x + t dt + t p x (1 − \mu x + t dt − \mu x + t dt ) + o ( dt )
+Therefore
+t + dt
+12
+11 12
+12 23
+12 24
+p 12
+x − t p x = t p x \mu x + t dt − t p x \mu x + t dt − t p x \mu x + t dt + o ( dt )
+and, taking limits, we have
+lim
+dt → 0 +
+t + dt
+12
+p 12
+12
+12 23
+12 24
+x − t p x
+= t p 11
+x \mu x + t − t p x \mu x + t − t p x \mu x + t
+dt
+So
+d 12
+11
+12
+12 23
+12 24
+t p x = t p x \mu x + t − t p x \mu x + t − t p x \mu x + t
+dt
+(iii)
+Let the waiting time in state i be v i ,
+and the number of transitions from state i to state j be d ij
+and the transition intensity from state i to state j is \mu ij
+Then the likelihood, L, may be written
+L = K exp[ − v 1 \mu 12 − v 2 ( \mu 23 + \mu 24 ) − v 3 \mu 32 − v 4 \mu 42 ] \mu 12 d 12 \mu 23 d 23 \mu 24 d 24 \mu 32 d 32 \mu 42 d 42 .
+(iv)
+The logarithm of the likelihood is
+log e L = log e K − v 1 \mu 12 − v 2 ( \mu 23 + \mu 24 ) − v 3 \mu 32 − v 4 \mu 42
++ d 12 log e \mu 12 + d 23 log e \mu 23 + d 24 log e \mu 24 + d 32 log e \mu 32 + d 42 log e \mu 42
+Differentiating with respect to \mu 12 gives
+d
+\partial L
+= − v 1 + 12 .
+\partial\mu 12
+\mu 12
+Page 13 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+Setting this equal to 0 and solving for \mu 12 gives
+^
+\mu 12 =
+d 12
+.
+v 1
+This is a maximum because
+\partial 2 L
+\partial\mu 12
+2
+=−
+d 12
+\mu 12 2
+which is negative.
+Answers to (i), (iii) and (iv) were generally good. In (i) the arrows from Widowed to Married
+and Divorced to Married were not required for full marks, as the question is about first
+marriages. Answers to (ii) were more disappointing, with many candidates omitting steps in
+32
+14 42
+the argument. In (ii), some candidates included the extra terms + t p 13
+x \mu x + t + t p x \mu x + t . Since it
+is just about possible to interpret the question in a way such that these should be included,
+this was not heavily penalised.
