@@ -1,0 +1,209 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+[Total 11]
+At a certain airport, taxis for the city centre depart from a single terminus. The taxis
+are all of the same make and model, and each can seat four passengers (not including
+the driver). The terminus is arranged so that empty taxis queue in a single line, and
+passengers must join the front taxi in the line. As soon as it is full, each taxi departs.
+A strict environmental law forbids any taxi from departing unless it is full. Taxis are
+so numerous that there is always at least one taxi waiting in line.
+Customers arrive at the terminus according to a Poisson process with a rate \beta per
+minute.
+(i) Explain how that the number of passengers waiting in the front taxi can be
+modelled as a Markov jump process.
+
+(ii) Write down, for this process:
+(a)
+(b)
+the generator matrix
+Kolmogorov’s forward equations in component form
+[4]
+(iii)
+Calculate the expected time a passenger arriving at the terminus will have to
+wait until his or her taxi departs.
+[4]
+CT4 S2010—5
+PLEASE TURN OVERThe four-passenger taxis were highly polluting, and the government instituted a
+“scrappage” scheme whereby taxi drivers were given a subsidy to replace their old
+four-passenger taxis with new “greener” models. Two such models were on the
+market, one of which had a capacity of three passengers and the other of which had a
+capacity of five passengers (again, not including the driver in each case). Half the
+taxis were replaced with three-passenger models, and half with five-passenger
+models.
+Assume that, after the replacement, three-passenger and five-passenger models arrive
+randomly at the terminus.
+12
+(iv) Write down the transition matrix of the Markov jump chain describing the
+number of passengers in the front taxi after the vehicle replacement.
+
+(v) Calculate the expected waiting time for a passenger arriving at the terminus
+after the vehicle scrappage scheme and compare this with your answer to part
+(iii).
+[3]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+Question 11
+(i)
+A Markov jump process is a continuous-time Markov process with a discrete state
+space.
+For a process to be Markov, the future development of the process must depend only
+on its current state.
+This is the case here, as the future of the process depends only on the number of
+passengers currently in the front taxi.
+The number of passengers in the front taxi also has a discrete state space {0, 1, 2, 3}.
+(Note that immediately a fourth passenger arrives the taxi will depart so the front taxi
+in the queue will never have four passengers in it.)
+(ii)
+(a)
+The generator matrix A is
+0 ⎞
+⎛ −\beta \beta 0
+⎜
+⎟
+⎜ 0 −\beta \beta 0 ⎟
+⎜ 0
+0 −\beta \beta ⎟
+⎜
+⎟
+0 −\beta ⎠
+⎝ \beta 0
+(b)
+Kolmogorov’s forward equations can be written in compact form as
+d
+P ( t ) = P ( t ) A ,
+dt
+Which are, for j = 0
+d
+p i 0 ( t ) = \beta p i 3 ( t ) − \beta p i 0 ( t )
+dt
+Page 14 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+and, for j = 1,2,3
+d
+p ij ( t ) = \beta p i , j − 1 ( t ) − \beta p ij ( t ) .
+dt
+(iii)
+Since the waiting times under a Poisson process are exponential the expected waiting
+1
+time between the arrival of passengers at the terminus is minutes.
+\beta
+Successive waiting times are independent, therefore the expected waiting time for a
+passenger arriving at the terminus is
+3
+E [ t ] = ∑ p i
+i = 0
+3 − i
+,
+\beta
+where p i is the probability that the front taxi has exactly i previous passengers waiting
+in it when the passenger arrives.
+Since the p i s are all equal for i = 0, 1, 2, 3
+⎛ 3 2 1 0 ⎞ 3
+E [ t ] = 0.25 ⎜ + + + ⎟ =
+minutes.
+⎝ \beta \beta \beta \beta ⎠ 2 \beta
+(iv)
+The transition matrix, P , is
+⎛ 0 1 0
+⎜
+⎜ 0 0 1
+⎜ 1
+0 0
+⎜
+2
+⎜
+⎜ 0 0 0
+⎜ 1 0 0
+⎝
+(v)
+0 0 ⎞
+⎟
+0 0 ⎟
+⎟
+1
+0 ⎟ .
+2
+⎟
+0 1 ⎟
+0 0 ⎟ ⎠
+The expected waiting time if the front taxi is a three-passenger model is
+2
+E [ t | 3 − passenger model] = ∑ p i
+i = 0
+2 − i 1 ⎛ 2 1 0 ⎞ 1
+= ⎜ + + ⎟ =
+3 ⎝ \beta \beta \beta ⎠ \beta
+\beta
+The expected waiting time if the front taxi is a five-passenger model is
+4
+E [ t | 5 − passenger model] = ∑ p i
+i = 0
+4 − i 1 ⎛ 4 3 2 1 0 ⎞ 2
+= ⎜ + + + + ⎟ = .
+\beta
+5 ⎝ \beta \beta \beta \beta \beta ⎠ \beta
+Page 15 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+But 5-passenger models must expect to wait
+5
+times as long at the front of the queue
+3
+than do 3-passenger models.
+5
+of the time the taxi at the front of the
+8
+3
+queue will be a five-passenger model and only of the time will is be a three-
+8
+passenger model.
+So when a passenger arrives at the terminus,
+So the overall expected waiting time in minutes is
+3
+5
+13
+.
+( E [ t | 3 − passenger model]) + ( E [ t | 5 − passenger model]) =
+8
+8
+8 \beta
+As this is longer than
+3
+, the service provided to the passengers has deteriorated.
+2\beta
+Many candidates struggled with this question. A common error in (ii) was to draw a matrix
+with five states rather than four, failing to recognise that taxis with four passengers in do not
+wait at the front of the queue, but depart as soon as the fourth passenger arrives. Most
+candidates who attempted (iv) wrote down a generator matrix, whereas the question asked
+for a transition matrix.
+Page 16 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
