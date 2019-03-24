@@ -39,9 +39,9 @@ Explain what is meant by a time inhomogeneous Markov chain and give an
 example of one.
 
 A No Claims Discount system is operated by a car insurer. There are four levels of
-discount: 0%, 10%, 25% and 40%. After a claim-free year a policy holder moves up
+discount: 0\%, 10\%, 25% and 40%. After a claim-free year a policy holder moves up
 one level (or remains at the 40% level). If a policy holder makes one claim in a year
-he or she moves down one level (or remains at the 0% level). A policy holder who
+he or she moves down one level (or remains at the 0\% level). A policy holder who
 makes more than one claim in a year moves down two levels (or moves to or remains
 at the 0% level). Changes in level can only happen at the end of each year.
 (ii) Describe, giving an example, the nature of the boundaries of this process. 
@@ -67,13 +67,13 @@ CT4 A2013–7
 
 11
 (i)
-A Markov chain is a discrete time, discrete space Markov process
-For a time-inhomogeneous Markov chain, the transition probabilities depend on the
-absolute values of time, rather than just the time difference.
-The value of “time” can be represented by many factors, for example the time of year,
+\begin{itemize}
+\item A Markov chain is a discrete time, discrete space Markov process
+For a time-inhomogeneous Markov chain, the transition probabilities depend on the absolute values of time, rather than just the time difference.
+\item The value of “time” can be represented by many factors, for example the time of year,
 age or duration.
-An example might be a No Claims Discount scheme where the probability of a claim
-reflects trends in accident frequency over time.
+\item An example might be a No Claims Discount scheme where the probability of a claim reflects trends in accident frequency over time.
+\end{itemize}
 (ii)
 Both boundaries are mixed as policyholders can either stay in that state for
 consecutive periods or move back to another state.
@@ -81,7 +81,7 @@ E.g. When at the maximum 40% level, a policyholder who makes no claim will stay
 there the next year, whereas one who makes one claim will drop to the 25% level and
 one who makes more than one claim will drop to the 10% level.
 %%-- Page 17
-%%-- Subject CT4 
+%%--  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (iii)
 Four states are required: 0%, 10%, 25% and 40%.
@@ -102,8 +102,8 @@ Prob [more than one claim in a year] = 1 – (0.6127 + 0.3064) = 0.0809
 0
 0.6127
 0 ⎟
-\pi ⎜
-=\pi
+\pi_⎜
+=\pi_
 ⎜ 0.0809 0.3064
 0
 0.6127 ⎟
@@ -111,24 +111,24 @@ Prob [more than one claim in a year] = 1 – (0.6127 + 0.3064) = 0.0809
 ⎟
 0.0809 0.3064 0.6127 ⎠
 ⎝ 0
-\pi 1 = 0.3873 \pi 1 + 0.3873 \pi 2 + 0.0809 \pi 3 (1)
-\pi 2 = 0.6127 \pi 1 + 0.3064 \pi 3 + 0.0809 \pi 4
-\pi 3 = 0.6127 \pi 2 + 0.3064 \pi 4 (2)
+\pi_1 = 0.3873 \pi_1 + 0.3873 \pi_2 + 0.0809 \pi_3 (1)
+\pi_2 = 0.6127 \pi_1 + 0.3064 \pi_3 + 0.0809 \pi_4
+\pi_3 = 0.6127 \pi_2 + 0.3064 \pi_4 (2)
 (3)
-\pi 4 = 0.6127 \pi 3 + 0.6127 \pi 4 (4)
-\pi 1 + \pi 2 + \pi 3 + \pi 4 = 1 . (5)
-From (4) \pi 4 ( 1 − 0.6127 ) = 0.6127 \pi 3
-so \pi 4 = 1.5820 \pi 3
-From (3) \pi 2 = \pi 3 ( 1 − 0.3064 × 1.5820 ) / 0.6127
-so \pi 2 = 0.8411 \pi 3
-and (1) gives \pi 1 = \pi 3 (0.0809 + 0.3873 × 0.8411) / (1 − 0.3837)
+\pi_4 = 0.6127 \pi_3 + 0.6127 \pi_4 (4)
+\pi_1 + \pi_2 + \pi_3 + \pi_4 = 1 . (5)
+From (4) \pi_4 ( 1 − 0.6127 ) = 0.6127 \pi_3
+so \pi_4 = 1.5820 \pi_3
+From (3) \pi_2 = \pi_3 ( 1 − 0.3064 × 1.5820 ) / 0.6127
+so \pi_2 = 0.8411 \pi_3
+and (1) gives \pi_1 = \pi_3 (0.0809 + 0.3873 × 0.8411) / (1 − 0.3837)
 so
 Page 18
-\pi 1 = 0.6637 \pi 3Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Using (5) we get \pi 3 ( 0.6637 + 0.8411 + 1 + 1.5820 ) = 1
-so \pi 3 = 0.2447
-so \pi 4 = 1.5820 × 0.2447
-\pi 4 = 0.3871
+\pi_1 = 0.6637 \pi_3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Using (5) we get \pi_3 ( 0.6637 + 0.8411 + 1 + 1.5820 ) = 1
+so \pi_3 = 0.2447
+so \pi_4 = 1.5820 × 0.2447
+\pi_4 = 0.3871
 In the long run 24.47% of policyholders are at the 25% level.
 (v)
 Equal probability of an accident in every month is pretty unlikely.
@@ -149,5 +149,6 @@ answer that just under 4 per cent of policyholders were at the 25 per cent level
 who made this error were penalised for using incorrect probabilities, but were given full
 credit for solving the equations to obtain the steady-state probabilities. In part (v) sensible
 suggestions other than those listed were given credit.
-END OF EXAMINERS’ REPORT
+
 Page 19
+\end{document}
