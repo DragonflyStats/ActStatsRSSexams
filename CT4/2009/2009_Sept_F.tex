@@ -32,8 +32,8 @@
 
 \begin{document}
 \begin{enumerate}
-11
-A study was undertaken into the length of spells of unemployment among young people in a certain city. A sample of young people was monitored from the time they
+%% -- Question 11
+\item A study was undertaken into the length of spells of unemployment among young people in a certain city. A sample of young people was monitored from the time they
 started to claim unemployment benefit until either they resumed work, or they moved
 away from the city. None of the members of the sample died during the study.
 
@@ -41,10 +41,12 @@ The study investigated the impact of age, sex and educational qualifications on 
 A a young person’s age when he or she started claiming benefit (measured in exact years since his or her 16th birthday)
 S a dummy variable taking the value 1 if the person was male and 0 if the person was female
 E a dummy variable taking the value 1 if the person had passed a school leaving examination in mathematics, and 0 otherwise
-with associated parameters \beta A , \beta S and \beta E .
+with associated parameters $\beta_A$ , $\beta_S$ and $\beta_E$ .
 The investigators decided to use a Cox proportional hazards regression model for the
 study.
-(i) Explain what is meant by a proportional hazards model.
+
+\begin{enumerate}[(i)]
+\item (i) Explain what is meant by a proportional hazards model.
 
 \item (ii) Explain why the Cox model is a popular model for the analysis of survival
 data.
@@ -55,7 +57,8 @@ the terms you use (other than those defined above).
 (b)
 List the characteristics of the young person to whom the baseline
 hazard applies.
-
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The results showed:
 \item The hazard of resuming work for males who started claiming benefit aged 17 years exact and who had passed the mathematics examination was 1.5 times the
 hazard for males who started claiming benefit aged 16 years exact but who had not passed the mathematics examination.
@@ -67,7 +70,7 @@ mathematics examination were twice as likely to resume work as were males who
 started claiming benefit aged 16 years exact and who had also passed the
 mathematics examination.
 (iv)
-Calculate the estimated values of the parameters \beta A , \beta S and \beta E .
+Calculate the estimated values of the parameters $\beta_A$ , $\beta_S$ and $\beta_E$ .
 
 CT4 S2009—8
 
@@ -77,11 +80,9 @@ CT4 S2009—8
 \newpage
 
 11
-(i) A proportional hazards (PH) model is a model which allows investigators to
-assess the impact of risk factors, or covariates, on the hazard of experiencing
+(i) A proportional hazards (PH) model is a model which allows investigators to assess the impact of risk factors, or covariates, on the hazard of experiencing
 an event.
-In a PH model the hazard is assumed to be the product of two terms, one
-which depends only on duration, and the other which depends only on the
+In a PH model the hazard is assumed to be the product of two terms, one which depends only on duration, and the other which depends only on the
 values of the covariates.
 Under a PH model, the hazards of different lives with covariate vectors z 1 and
 z 2 are in the same proportion at all times:
@@ -91,13 +92,10 @@ for example in the Cox model
 .
  ( t ; z 2 ) exp(  z 2 T )
 16  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
-\item (ii) Cox‟s model ensures that the hazard is always positive. Standard software
-packages often include Cox‟s model.
-Cox‟s model allows the general “shape” of the hazard function for all
-individuals to be determined by the data, giving a high degree of flexibility
+\item (ii) Cox‟s model ensures that the hazard is always positive. Standard software packages often include Cox‟s model.
+Cox‟s model allows the general “shape” of the hazard function for all individuals to be determined by the data, giving a high degree of flexibility
 while an exponential term accounts for differences between individuals.
-This means that if we are not primarily concerned with the precise form of the
-hazard, we can ignore the shape of the baseline hazard and estimate the effects
+This means that if we are not primarily concerned with the precise form of the hazard, we can ignore the shape of the baseline hazard and estimate the effects
 of the covariates from the data directly.
 \item (iii)
 a.
@@ -106,23 +104,19 @@ a.
 is the estimated
 hazard and  0 ( t ) is the baseline hazard.
 b.
-A female aged exactly 16 years when she first claimed benefit who had
-not passed the school mathematics examination.
+A female aged exactly 16 years when she first claimed benefit who had not passed the school mathematics examination.
 (iv) “The hazard of resuming work for males aged 17 years who had passed the
-mathematics examination was 1.5 times the hazard for males aged 16 years
-who had not passed the mathematics examination” implies that
+mathematics examination was 1.5 times the hazard for males aged 16 years who had not passed the mathematics examination” implies that
 exp[(  A *1)   S   E ]
  exp(  A   E )
 exp(  S )
  exp(  A ) exp(  E )  1.5
-“Females who had passed the examination were twice as likely to take up a
-new job as were males of the same age who had failed” implies that
+“Females who had passed the examination were twice as likely to take up a new job as were males of the same age who had failed” implies that
 exp(  E )
  2
 exp(  S )
 since the age terms cancel out.
-“Females aged 20 years who had passed the examination were twice as likely
-to resume work as were males aged 16 years who had also passed the
+“Females aged 20 years who had passed the examination were twice as likely to resume work as were males aged 16 years who had also passed the
 examination” implies that
 exp(  A * 4)
  2 .
