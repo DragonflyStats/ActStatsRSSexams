@@ -36,7 +36,7 @@ PLEASE TURN OVER8
 (i)
 Describe the difference between the central exposed to risk and the initial
 exposed to risk.
-[2]
+
 The following data come from an investigation of the mortality of participants in a
 dangerous sport during the calendar year 2005.
 Age x
@@ -57,7 +57,7 @@ birthday at death
 25
 Estimate the initial exposed to risk at ages 22 and 23.
 Hence estimate q 22 and q 23 .
-[4]
+
 Suppose that in this investigation, instead of aggregate data we had individual-level
 data on each person’s date of birth, date of death, and date of exit from observation (if
 exit was for reasons other than death).
@@ -65,7 +65,7 @@ exit was for reasons other than death).
 9
 Explain how you would calculate the initial exposed-to-risk for lives aged 22
 years last birthday.
-[4]
+
 [Total 10]
 In a game of tennis, when the score is at “Deuce” the player winning the next point
 holds “Advantage”. If a player holding “Advantage” wins the following point that
@@ -81,50 +81,44 @@ Chain, specifying both:
 (ii)
 the state space; and
 the transition matrix
-[3]
+
 State, with reasons, whether the chain is:
 (a)
 (b)
 irreducible; and
 aperiodic
-[2]
+
 (iii) Calculate the number of points which must be played before there is more than
 a 90% chance of the game having been completed.
-[3]
+
 (iv) (a)
 (b)
 CT4 S2007—6
 Calculate the probability that Andrew wins the game.
 Comment on your answer.
-[4]
+
 [Total 12]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 8
 (i)
-The central exposed to risk at age x , E x c , is the observed waiting time in a
-multiple-state or a Poisson model. It is the sum of the times spent under
+The central exposed to risk at age x , E x c , is the observed waiting time in a multiple-state or a Poisson model. It is the sum of the times spent under
 observation by each life at age x .
-In aggregate data, the central exposed to risk is an estimate of the number of
-lives exposed to risk at the mid-point of the rate interval.
-The initial exposed to risk requires adjustments for those lives who die, whom
-we continue observing until the end of the rate interval.
-It may be approximated as E x c + 0.5 d x , where d x is the number of deaths to
-persons aged x .
+In aggregate data, the central exposed to risk is an estimate of the number of lives exposed to risk at the mid-point of the rate interval.
+The initial exposed to risk requires adjustments for those lives who die, whom we continue observing until the end of the rate interval.
+It may be approximated as E x c + 0.5 d x , where d x is the number of deaths to persons aged x .
 (ii)
-The age definition used for both deaths and exposed to risk is the same, so no
-adjustment is necessary.
-Using the census formula, and assuming that the population aged 22 and 23
-years changes linearly over the year, we have, for the central exposed to risk:
+The age definition used for both deaths and exposed to risk is the same, so no adjustment is necessary.
+Using the census formula, and assuming that the population aged 22 and 23 years changes linearly over the year, we have, for the central exposed to risk:
 1
-E x c = ∫ P x , t dt ,
+E x c = \int P x , t dt ,
 0
 so that
 E x c =
 1
 ( P x ,0 + P x ,1 ) .
 2
-Page 10Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+Page 10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
 The initial exposed to risk, E x , is then obtained using the approximation
 E x c + 0.5 d x .
 This assumes that deaths are uniformly distributed across each year of age.
@@ -169,10 +163,10 @@ and a i is the latest of
 the date of person i ’s 22nd birthday
 the start of the calendar year 2005
 the date of person i ’s entry into observation.
-The initial exposed to risk is then calculated by adding on to the central
-exposed to risk a quantity equal to 1 − b i for all lives who died aged 22 last
+The initial exposed to risk is then calculated by adding on to the central exposed to risk a quantity equal to 1 − b i for all lives who died aged 22 last
 birthday during the calendar year 2005.
-Page 11Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+
+Page 11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
 ALTERNATIVE 2
 The initial exposed to risk is calculated as
 ∑ ( b i − a i ) ,
@@ -227,21 +221,20 @@ B
 0.4
 0
 1
-The chain is Markov because the probability of moving to the next state does
-not depend on history prior to entering that state (because the probability of
+The chain is Markov because the probability of moving to the next state does not depend on history prior to entering that state (because the probability of
 each player winning a point is constant)
 (ii)
 The chain is reducible because it has two absorbing states Game A and
 Game B.
 States Game A and Game B are absorbing so have no period. The other three
 states each have a period of 2 so the chain is not aperiodic.
-Page 12Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+Page 12%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
 (iii)
 The game either ends after 2 points or it returns to Deuce.
 The probability of it returning to Deuce after two points is:
-Prob A wins 1 st point × Prob B wins 2 nd point
-+ Prob B wins 1 st point × Prob A wins 2 nd point
-= 0.6 × 0.4 + 0.4 × 0.6 = 0.48.
+Prob A wins 1 st point \times  Prob B wins 2 nd point
++ Prob B wins 1 st point \times  Prob A wins 2 nd point
+= 0.6 \times  0.4 + 0.4 \times  0.6 = 0.48.
 [This can also be obtained by calculating the square of the transition matrix.]
 Need to find number of such cycles N such that:
 0.48 N < 1 − 0.9 ,
@@ -259,18 +252,18 @@ the current state is X .
 We require A Deuce .
 By definition A Game A = 1 and A Game B = 0.
 Conditioning on the first move out of state Adv A:
-A Adv A = 0.6 × A Game A + 0.4 × A Deuce = 0.6 + 0.4 × A Deuce .
+A Adv A = 0.6 \times  A Game A + 0.4 \times  A Deuce = 0.6 + 0.4 \times  A Deuce .
 Similarly:
-A Adv B = 0.6 × A Deuce ,
+A Adv B = 0.6 \times  A Deuce ,
 and
-A Deuce = 0.6 × A Adv A + 0.4 × A Adv B = 0.6 × A Adv A + 0.24 × A Deuce .
-Page 13Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+A Deuce = 0.6 \times  A Adv A + 0.4 \times  A Adv B = 0.6 \times  A Adv A + 0.24 \times  A Deuce .
+Page 13%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
 So,
 A Deuce =
 0.6
 A Adv A ,
 0.76
-A Adv A = 0.6 + 0.4 ×
+A Adv A = 0.6 + 0.4 \times 
 0.6
 A Adv A ,
 0.76
@@ -293,3 +286,4 @@ i =1
 = 0.36/(1-0.48) as a geometric progression
 = 0.6923
 (b)
+\end{document}

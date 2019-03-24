@@ -63,20 +63,22 @@ y 2 = 11,951
 xy = 12,790
 Construct a scatterplot of the data, and comment on whether a linear
 regression is appropriate to model the relationship between the stopping
-distance and speed. [4]
-(ii) Calculate the equation of the least-squares fitted regression line. [5]
-(iii) Calculate a 95% confidence interval for the slope of the underlying regression
+distance and speed. 
+\begin{enumerate}[(i)]
+\item (ii) Calculate the equation of the least-squares fitted regression line. 
+\item (iii) Calculate a 95\% confidence interval for the slope of the underlying regression
 line, and use this confidence interval to test the hypothesis that the slope of the
 underlying regression line is equal to 1.
-[5]
+\item 
 (iv) Use the fitted line obtained in part (ii) to calculate estimates of the stopping
 distance for a vehicle travelling at 50 mph and for a vehicle travelling at 100
 mph.
 Comment briefly on the reliability of these estimates.
-END OF PAPER
+\end{enumerate}
+
 CT3 S2006
 7
-[4]
+
 [Total 18]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -104,33 +106,33 @@ Speed
 There is a suggestion of a curve but linear regression might still be reasonable.
 (ii)
 n = 7
-S xx = Σx 2 − (Σx) 2 /n = 14000 − (280) 2 /7 = 2800
-S yy = Σy 2 − (Σy) 2 /n = 11951 − (241) 2 /7 = 3653.714
-S xy = Σxy − (Σx)( Σy)/n = 12790 − (280)(241)/7 = 3150
-Model: E[Y] = α + βx
-Slope: β ˆ =
+S_{xx}= \sigma x 2 − (\sigma x) 2 /n = 14000 − (280) 2 /7 = 2800
+S_{yy} = \sigma y 2 − (\sigma y) 2 /n = 11951 − (241) 2 /7 = 3653.714
+S xy = \sigma xy − (\sigma x)( \sigma y)/n = 12790 − (280)(241)/7 = 3150
+Model: E[Y] = \alpha + \betax
+Slope: \beta ˆ =
 S xy
-S xx
+S_{xx}
 =
 3150
 = 1.125
 2800
-Intercept: α ˆ = y − β ˆ x = 241/7 − (1.125)(280/7) = −10.571
+Intercept: \hat{\alpha} = y − \beta ˆ x = 241/7 − (1.125)(280/7) = −10.571
 The equation of the least-squares fitted regression line is:
 Distance = −10.571 + 1.125 Speed
-Page 12Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
+Page 12Subject CT3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2006 — Examiners’ Report
 (iii)
-σ ˆ 2 =
+\hat{\sigma } 2 =
 S 2
 1 ⎛
-⎜ S yy − xy
+⎜ S_{yy} − xy
 n − 2 ⎜
-S xx
+S_{xx}
 ⎝
-s.e.( β̂ ) =
-σ ˆ 2
+s.e.( \betâ ) =
+\hat{\sigma } 2
 =
-S xx
+S_{xx}
 ⎞ 1 ⎛
 (3150) 2 ⎞
 ⎟ = ⎜ 3653.714 −
@@ -141,11 +143,11 @@ S xx
 21.99
 = 0.0886
 2800
-95% confidence interval for slope:
-β ˆ ± t n − 2 (0.025) s.e.( β̂ )
+95\% confidence interval for slope:
+\beta ˆ \pm t n − 2 (0.025) s.e.( \betâ )
 (df = n − 2 = 5)
-= 1.125 ± (2.571)(0.0886) = 1.125 ± 0.228 or (0.897, 1.353)
-β = 1 is within this 95% confidence interval, therefore we would not reject the null hypothesis β = 1 at the 5% significance level.
+= 1.125 \pm (2.571)(0.0886) = 1.125 \pm 0.228 or (0.897, 1.353)
+\beta = 1 is within this 95\% confidence interval, therefore we would not reject the null hypothesis \beta = 1 at the 5% significance level.
 (iv)
 When x = 50: y = −10.571 + 1.125(50) = 45.7 m
 When x = 100: y = −10.571 + 1.125(100) = 101.9 m

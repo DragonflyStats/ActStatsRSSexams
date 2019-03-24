@@ -71,7 +71,7 @@ since last contact
 5
 0
 Calculate the Nelson-Aalen estimate of the survival function.
-[5]
+
 A previous investigation found that the probability that a prisoner would be
 reconvicted within 6 months of release was 0.2.
 (iii)
@@ -88,17 +88,17 @@ PLEASE TURN OVERn
 ∂ t t 35
 13
 p 13
-x = −μ x + t . t p x
+x = −\mu x + t . t p x
 ∂ t t 45
 14
 p 14
-x = −μ x + t . t p x
+x = −\mu x + t . t p x
 ∂ t t 35
 13
 45
 14
 p 15
-x = μ x + t . t p x + μ x + t . t p x
+x = \mu x + t . t p x + \mu x + t . t p x
 EITHER
 The hazard rate at duration x is given by
 Pr[ X ≤ x + dt | X > x ]
@@ -107,15 +107,15 @@ dt → 0
 dt
 lim
 OR
-In discrete time, the hazard rate at duration x is given by, Pr[ X = x | X ≥ x ] .
+In discrete time, the hazard rate at duration x is given by, $Pr[ X = x | X \geq  x ]$ .
 OR
 The hazard rate at duration x is given by h ( x ) = −
 1 d
 [ S ( x )] ,
 S ( x ) dx
-where S(x) is the survival function defined as Pr[X > x].
+where S(x) is the survival function defined as $Pr[X > x]$.
 (ii)
-The integrated hazard, Λ x , is estimated as follows:
+The integrated hazard, \lambda x , is estimated as follows:
 x j
 n j
 d j
@@ -144,7 +144,7 @@ c j
 80
 d j
 n j
-Λ x =
+\lambda x =
 d j
 ∑ n j
 x j ≤ x
@@ -160,8 +160,8 @@ x j ≤ x
 0.0754
 0.1343
 0.1343
-Page 12Subject CT4 — Models Core Technical — September 2008 — Examiners’ Report
-The survival function S ( x ) is given by exp( − Λ x ), so that we have
+Page 12%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2008 — Examiners’ Report
+The survival function S ( x ) is given by exp( − \lambda x ), so that we have
 (iii)
 x S ( x )
 0 ≤ x < 3
@@ -174,7 +174,7 @@ x S ( x )
 Confidence intervals around the integrated hazard may
 be estimated using the formula
 ~
-Var [ Λ x ] =
+Var [ \lambda x ] =
 ∑
 d j ( n j − d j )
 n 3 j
@@ -228,16 +228,16 @@ n 3 j
 hazard at duration 6 can therefore be computed as
 ^
 ^
-Λ 6 ± 1.96 var Λ 6
-= 0.1343 ± 1.96 0.001434
+\lambda 6 \pm 1.96 var \lambda 6
+= 0.1343 \pm 1.96 0.001434
 = (0.1343 – 0.0742, 0.1343 + 0.0742)
 = (0.0601, 0.2085).
-Page 13Subject CT4 — Models Core Technical — September 2008 — Examiners’ Report
+Page 13%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2008 — Examiners’ Report
 THEN EITHER
 ^
 The estimated survival function, S ( x ) is given
 ^
-by exp( − Λ x ) ,
+by exp( − \lambda x ) ,
 ^
 so that the 95 per cent confidence interval for S ( x ) is
 [exp( −0.0601), exp(−0.2085)]
@@ -255,8 +255,9 @@ OR
 In the previous investigation the probability that a
 prisoner would not be reconvicted within 6 months
 of release was 1 – 0.2 = 0.8 – i.e. S (6) = 0.8
-Since S ( x ) = exp(−Λ x ), the value of Λ 6 corresponding to S (6) = 0.8 is
-Λ 6 = −log e (0.8) = 0.2231.
+Since S ( x ) = exp(−\lambda x ), the value of \lambda 6 corresponding to S (6) = 0.8 is
+\lambda 6 = −log e (0.8) = 0.2231.
 Since this is higher than the upper limit in the range (0.0601, 0.2085) we
 conclude that the rate of reconviction has declined since the previous
 investigation.
+\end{document}

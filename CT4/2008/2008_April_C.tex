@@ -32,8 +32,8 @@
 
 \begin{document}
 \begin{enumerate}
-CT4 A2008—26
-An investigation was carried out into mortality rates among a certain class of female
+%%CT4 A2008—26
+\item An investigation was carried out into mortality rates among a certain class of female
 pensioners. Crude mortality rates were estimated by single years of age from ages
 65–89 years last birthday inclusive. The investigators decided to ask an actuary to
 compare the crude rates with a standard table. They calculated the relevant
@@ -53,8 +53,8 @@ out on the basis of the information received.
 [1]
 (ii) Carry out both tests. For each test, state what feature of the experience it is
 specifically testing, and give your conclusion.
-[10]
-[Total 11]
+
+\item 
 In a certain small country all listed companies are required to have their accounts
 audited on an annual basis by one of the three authorised audit firms (A, B and C).
 The terms of engagement of each of the audit firms require that a minimum of two
@@ -67,22 +67,24 @@ changing auditors a company is equally likely to choose either of the alternativ
 A company has just changed auditors to firm A. Calculate the expected
 number of audits which will be undertaken before the company changes
 auditors again.
-[2]
+
 Formulate a Markov chain which can be used to model the audit firm used by
 a company, specifying:
 (a)
 (b)
 the state space
 the transition matrix
-[4]
+
 (iii)
 Calculate the expected proportion of companies using each audit firm in the
 long term.
-[5]
-[Total 11]
+\end{enumerate}
+
+
+%%-- [Total 11]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Page 10Subject CT4 — Models Core Technical — April 2008 — Examiners’ Report
+Page 10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2008 — Examiners’ Report
 7
 (i)
 Required number
@@ -144,42 +146,42 @@ of future transitions is independent of history
 prior to arrival in current state (Markov property).
 (iii)
 Need to find stationary distribution
-π which by definition satisfies:
-π = π A
-0.15 π B + 0.05 π C = π A L (1)
-π A L + 0.8 π A = π A (2)
-0.1 π A + 0.05 π C = π B L (3)
-π B L + 0.7 π B = π B (4)
-0.1 π A + 0.15 π B = π C L (5)
-π C L + 0.9 π C = π C (6)
-Page 11Subject CT4 — Models Core Technical — April 2008 — Examiners’ Report
+\pi which by definition satisfies:
+\pi = \pi A
+0.15 \pi B + 0.05 \pi C = \pi A L (1)
+\pi A L + 0.8 \pi A = \pi A (2)
+0.1 \pi A + 0.05 \pi C = \pi B L (3)
+\pi B L + 0.7 \pi B = \pi B (4)
+0.1 \pi A + 0.15 \pi B = \pi C L (5)
+\pi C L + 0.9 \pi C = \pi C (6)
+Page 11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2008 — Examiners’ Report
 Combining (1) and (2), (3) and (4), and (5) and (6)
-0.15 π B + 0.05 π C = 0.2 π A (1A)
-0.1 π A + 0.05 π C = 0.3 π B (3A)
-0.1 π A + 0.15 π B = 0.1 π C (5A)
+0.15 \pi B + 0.05 \pi C = 0.2 \pi A (1A)
+0.1 \pi A + 0.05 \pi C = 0.3 \pi B (3A)
+0.1 \pi A + 0.15 \pi B = 0.1 \pi C (5A)
 (1A) – (3A) gives
-π A = 1.5 π B
+\pi A = 1.5 \pi B
 (3A) – (5A) produces
-π C = 3 π B
+\pi C = 3 \pi B
 ∑
-π i = 1 implies
+\pi i = 1 implies
 i
-(1.5 + 0.3 + 1 + 0.3 + 3 + 0.3) π B = 1
-⎛ π A L ⎞ ⎛ 0.046875 ⎞
+(1.5 + 0.3 + 1 + 0.3 + 3 + 0.3) \pi B = 1
+⎛ \pi A L ⎞ ⎛ 0.046875 ⎞
 ⎜
 ⎟
-⎜ π A ⎟ ⎜ ⎜ 0.234375 ⎟ ⎟
+⎜ \pi A ⎟ ⎜ ⎜ 0.234375 ⎟ ⎟
 ⎜
 ⎟ ⎜
-π
+\pi
 0.046875 ⎟
 So ⎜ B L ⎟ = ⎜
-⎜ π ⎟ ⎜ 0.15625 ⎟ ⎟
+⎜ \pi ⎟ ⎜ 0.15625 ⎟ ⎟
 ⎜ B ⎟ ⎜
-⎜ π C L ⎟ ⎜ 0.046875 ⎟ ⎟
+⎜ \pi C L ⎟ ⎜ 0.046875 ⎟ ⎟
 ⎜ ⎜
 ⎟ ⎟ ⎜ 0.46875 ⎟ ⎠
-⎝ π C ⎠ ⎝
+⎝ \pi C ⎠ ⎝
 And proportions using (A,B,C) are
 (0.28125, 0.203125, 0.515625).
-Page 12Subject CT4 — Models Core Technical — April 2008 — Examiners’ Report
+Page 12%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2008 — Examiners’ Report
