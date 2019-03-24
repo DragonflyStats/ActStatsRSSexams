@@ -1,0 +1,240 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+B1 Describe the advantages and disadvantages of graduating a set of observed mortality
+rates using a parametric formula.
+
+B2 A lecturer at a university gives a course on Survival Models consisting of 8 lectures.
+50 students initially register for the course and all attend the first lecture, but as the
+course proceeds the numbers attending lectures gradually fall.
+Some students switch to another course. Others intend to sit the Survival Models
+examination but simply stop attending lectures because they are so boring. In this
+university, students who decide not to attend a lecture are not permitted to attend any
+subsequent lectures.
+The table below gives the number of students switching courses and stopping
+attending lectures after each of the first 7 lectures of the course.
+Lecture
+number Number of students
+switching courses Number of students ceasing to
+attend lectures but remaining
+registered for Survival Models
+1
+2
+3
+4
+5
+6
+7 5
+3
+2
+0
+0
+0
+0 1
+0
+3
+1
+2
+1
+0
+The university s Teaching Quality Monitoring Service has devised an Index of
+Lecture Boringness. This index is defined as the Kaplan-Meier estimate of the
+proportion of students remaining registered for the course who attend the final lecture.
+In calculating the Index, students who switch courses are to be treated as censored
+after the last lecture they attend.
+(i) Calculate the Index of Lecture Boringness for the Survival Models course. 
+(ii) Explain whether the censoring in this example is likely to be non-informative.
+
+[Total 6]
+CT4 S2005
+5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%55B3
+A mortality investigation has been carried out over the three calendar years, 2002,
+2003 and 2004.
+The deaths during the period of investigation,
+date of death, where
+x = calendar year of death
+x ,
+have been classified by age x at the
+calendar year of birth.
+Censuses of the numbers alive on 1 January in each of the years 2002, 2003, 2004 and
+2005 have been tabulated and denoted by
+P x (2002), P x (2003), P x (2004) and P x (2005)
+respectively, where x is the age last birthday at the date of each census.
+(i) State the rate year implied by the classification of deaths, and give the ages of
+the lives at the beginning of the rate year.
+
+(ii) Derive an expression for the exposed to risk in terms of the P x (t) (t = 2002,
+2003, 2004, 2005) which corresponds to the deaths data and which may be
+used to estimate the force of mortality, x+f at age x + f.
+
+(iii) Determine the value of f, stating any assumptions you make.
+CT4 S2005
+6
+
+[Total 9]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+September 2005
+Examiners Report
+104 Part
+B1
+Advantages:
+The graduated rates will progress smoothly provided the number of parameters is
+small.
+Good for producing standard tables.
+Can easily be extended to more complex formulae, provided optimisation can be
+achieved.
+Can fit the same formula to different experiences and compare parameter values to
+highlight differences between them.
+Disadvantages:
+It can be hard to find a formula to fit well at all ages without having lots of
+parameters.
+Care is required when extrapolating: the fit is bound to be best at ages where we have
+lots of data, and can often be poor at extreme ages.
+Page 13Subject CT4 Models
+B2 The table below gives the relevant calculations.
+(i)
+September 2005
+Lecture n j
+d j c j j
+1
+0
+3
+1
+2
+1
+0 5
+3
+2
+0
+0
+0
+0 1/50
+0
+3/41
+1/36
+2/35
+1/33
+0
+Examiners Report
+1
+j
+S(j)
+j
+1
+2
+3
+4
+5
+6
+7
+8
+50
+44
+41
+36
+35
+33
+32
+32
+49/50
+1
+38/41
+35/36
+33/35
+32/33
+1
+0.980
+0.980
+0.908
+0.883
+0.833
+0.807
+0.807
+The Index of Lecture Boringness is therefore equal to 0.807.
+(ii)
+Censoring in this case is unlikely to be non-informative.
+This is because the students who switched courses were probably less
+interested in the subject matter of Survival Models than those who remained
+registered.
+Therefore they would have been more likely, had they not switched courses,
+to cease attending lectures than those who did not switch.
+Page 14Subject CT4 Models
+B3 The classification of deaths implies a calendar year rate interval.
+(i)
+September 2005
+Examiners Report
+A person who dies will be aged x on the birthday in the calendar year of death,
+which implies that he or she will be aged x next birthday on 1 January in the
+calendar year of death.
+Since 1 January is the start of the rate interval, the age range at the start is x
+1 to x.
+(ii)
+A census of those aged x next birthday on 1 January in each year would
+correspond to the classification of deaths.
+But we have lives classified by age x last birthday.
+However, the number alive aged x next birthday on any date is equal to the
+number alive aged x 1 last birthday.
+The number alive aged x
+P x 1 (t).
+1 last birthday on 1 January in year t is given by
+At the end of year t this cohort will be aged x last birthday.
+Thus, using the trapezium rule, the correct exposed to risk at age x in year t is
+given by
+1
+P x 1 ( t ) P x ( t 1) .
+2
+Over the three calendar years 2002, 2003 and 2004, we have, therefore,
+exposed to risk =
+1
+P x 1 (2002) P x (2003)
+2
+1
+P x 1 (2003) P x (2004)
+2
+1
+P x 1 (2004) P x (2005) .
+2
+(iii)
+Assuming birthdays are uniformly distributed over the calendar year, the
+average age at the start of the rate interval will be x 1⁄2.
+Therefore the average age in the middle of the rate interval is x.
+Assuming a constant force of mortality between x
+f = 0.
+1⁄2 and x + 1⁄2, therefore,
+Page 15Subject CT4 Models
+
