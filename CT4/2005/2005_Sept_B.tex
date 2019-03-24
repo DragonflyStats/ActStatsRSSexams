@@ -1,0 +1,229 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+A4
+A life insurance company prices its long-term sickness policies using a three-state
+Markov model in continuous time. The states are healthy (H), ill (I) and dead (D). The
+forces of transition in the model are HI = , IH = , HD = , ID = v and they are
+assumed to be constant over time.
+For a group of policyholders observed over a 1-year period, there are:
+23 transitions from State to State ;
+15 transitions from State to State ;
+3 deaths from State ;
+5 deaths from State .
+The total time spent in State H is 652 years and the total time spent in State I is 44
+years.
+A5
+(i) Write down the likelihood function for these data. 
+(ii) Derive the maximum likelihood estimate of . 
+(iii) Estimate the standard deviation of
+, the maximum likelihood estimator of .
+
+[Total 7]
+Claims arrive at an insurance company according to a Poisson process with rate
+week.
+per
+Assume time is expressed in weeks.
+(i) Show that, given that there is exactly one claim in the time interval [t, t + s],
+the time of the claim arrival is uniformly distributed on [t, t + s].
+
+(ii) State the joint density of the holding times T 0 , T 1 ,
+claims.
+(iii) Show that, given that there are n claims in the time interval [0, t], the number
+of claims in the interval [0, s] for s < t is binomial with parameters n and s/t.
+
+[Total 7]
+CT4 S2005
+3
+, T n between successive
+[1]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+A4 The likelihood is
+(i)
+September 2005
+L K exp( 652(
+(ii)
+)) exp( 44(
+l = ln L = 652 +23 ln
+))
+23 15 3 5
++ constant with respect to
+Differentiating with respect to
+l
+Examiners Report
+gives
+23
+652
+and setting equal to zero gives
+0
+23
+652
+23
+652
+0.0353 p.a.
+Differentiating again gives
+2
+therefore
+l 23
+2 2
+0
+is the maximum likelihood estimate
+2
+(iii)
+The variance of
+is
+1
+l
+2
+2
+23
+,
+2
+which we can estimate by
+23
+.
+Therefore the estimated standard deviation of
+is
+23
+0.00736.
+Page 7Subject CT4 Models
+A5 Let N t denote the number of claims up to time t. Since the Poisson process has
+stationary increments, we may take t = 0, so that the required conditional
+distribution is
+(i)
+September 2005
+P T 0
+y | N s
+P T 0
+1
+Examiners Report
+y , N s
+P N s
+P
+N y
+1
+1
+1, N s
+P N s
+N y
+0
+1
+But N s N y is independent of N y
+and has the same distribution as N s y .
+Thus the right hand side above equals
+( ye
+y
+( s y )
+) e
+y
+,
+s
+s
+se
+which is the cdf of the uniform distribution on [0, s].
+(ii)
+Since holding times are independent, each having an exponential distribution,
+their joint density is
+n
+(iii)
+e
+t 1 t 2 ... t n
+1 t , t
+1 2 ,..., t n
+0.
+We have, as in part (i),
+P N s
+k | N t
+n
+P N s
+k , N t
+P N t
+P
+N s
+n
+n
+k , N t N s
+P N t n
+n k
+Using again that the Poisson process has stationary and independent
+increments, and that the number of claims in an interval [0, t] is Poisson ( t),
+we derive from above that
+Page 8Subject CT4
+Models
+September 2005
+s
+( s ) k e
+k !
+e
+P N s
+k | N t
+n
+Examiners Report
+( t s ) n k
+e
+( t s ) n
+( n k )!
+t
+t n k
+s ( t s ) n
+k !( n k )!
+e
+( t ) n
+n !
+k
+n !
+k
+s
+t
+k
+s
+1
+t
+t n n
+e
+n !
+s k ( t s ) n
+k !( n k )!
+t k t n k
+n
+k
+t
+k
+n k
+which is binomial with parameters n and s/t.
+Page 9Subject CT4 Models
