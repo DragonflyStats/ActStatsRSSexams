@@ -1,0 +1,214 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+ Institute and Faculty of Actuaries1
+2
+For a simple random walk:
+(i) Define the process.
+[2]
+(ii) Write down the nature of the state space and time space in which it operates.
+[1]
+(iii) Describe an example of a practical application of the process.
+[1]
+[Total 4]
+The mortality of a rare form of flying beetle is being studied. It has been discovered
+that beetles kept in a protected environment have a constant force of mortality, μ, but
+that those in the wild have a force of mortality which is 50% higher. It has been
+proven that the beetles revert immediately to the higher rate of mortality if they are
+released from the protected environment.
+A beetle born and always living in the wild has a 58% chance of living for eight days.
+Calculate the probability of living the same length of time for:
+3
+4
+(a) a beetle born and reared in the protected environment.
+(b) a beetle born in the protected environment which is scheduled to be released
+into the wild after six days.
+[4]
+(i) Explain what is meant by a proportional hazards model.
+(ii) Outline three reasons why the Cox proportional hazards model is widely used
+in empirical work.
+[3]
+[Total 6]
+(i) List the stages you would go through in creating a model.
+(ii) Discuss, for three of these stages, the specific issues that could arise when
+creating a model to price a new sickness benefit product.
+[3]
+[Total 7]
+CT4 A2015–2
+[3]
+[4]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1
+(i)
+This is defined as X n = Y 1 + Y 2 +... Y n
+where the random variables Y j (the steps of the walk) are mutually
+independent with the common probability distribution:
+Pr[Y j = 1] = p,
+Pr[Y j = 1] = 1  p.
+(ii) It operates in discrete time with a discrete state space.
+(iii) Any reasonable practical application
+e.g. cumulative results of the Oxford vs Cambridge boat race (net lead
+of Cambridge over Oxford) measured annually.
+OR how much a gambler has won or lost if he wins or loses
+£1 on every bet.
+OR number of cars in a car park controlled by a single entry/exit
+barrier measured after each time the barrier goes up.
+Most candidates answered parts (i) and (ii) well, though many missed the point about the Y t
+being independent. Some of the examples in part (iii) were rather contrived.
+2
+(a)
+A beetle in the wild has a force of mortality equal to 3μ/2.
+So for a beetle in the wild
+we have S (8)  exp[  8(3  / 2)]  exp(  12  )  0.58
+Hence
+12μ = 0.5447
+μ = 0.0454.
+Therefore a beetle reared in the protected environment will have an 8 day
+survival probability of
+exp(8*0.0454) = 0.6955.
+Page 3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – April 2015 – Examiners’ Report
+(b)
+A beetle in the protected environment has a probability of surviving 6 days
+equal to
+exp(6*0.0454) = 0.7616,
+and a probability of surviving 2 days in the wild of
+exp (2*1.5*0.0454) = 0.8727
+Therefore this beetle’s probability of surviving 8 days is
+0.7615 × 0.8727 = 0.6646.
+This was the best answered question on the entire paper, with many candidates scoring full
+marks. The most common error was to assume the rate in the wild was twice, rather than 1.5
+times, the rate in the protected environment in part (a). If this was carried through correctly
+into the rest of the answer then credit was given for subsequent calculations.
+3
+(i)
+In a proportional hazards model the hazard of experiencing an event
+may be factorised into two components:
+one depending only on duration since some start event, which is known as the
+baseline hazard, and the other depending only on a set of covariates and
+associated parameters.
+Thus the ratio between the hazards for any two individuals with different
+values of the covariates is constant across all durations.
+The baseline hazard applies to an individual with the value zero on all
+covariates.
+(ii)
+The proportionality of the hazards makes estimating the impact of
+covariates on the hazard straightforward (through partial likelihood).
+Widely available statistical software packages have built-in routines for the
+Cox model.
+The Cox model is semi-parametric so the baseline hazard does not
+need to be specified, and can be determined by the data (as with a Kaplan-
+Meier hazard).
+It ensures that the hazard is always positive.
+It is easy to communicate.
+There were some good attempts at this question. However, many candidates seemed to think
+that the Cox model and the proportional hazards (PH) model were the same thing. In fact,
+the Cox model is just one of a class of PH models. In part (i) we looked for knowledge of the
+attractive characteristics of PH models in general, whereas in part (ii) we gave credit for
+advantages of the Cox model in particular, as well as for general attributes of PH models
+Page 4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – April 2015 – Examiners’ Report
+which are useful in practice. In part (i) some candidates simply wrote down a formula for a
+PH model. If all the terms were defined, partial credit was given for this.
+4
+(i)
+Develop a well-defined set of objectives which need to be met by the
+modelling process.
+Plan the modelling process and how the model will be validated.
+Collect and analyse the necessary data.
+Define the parameters for the model and consider appropriate parameter
+values.
+Define the model initially by capturing the essence of the real world
+system (refining the level of detail in the model can come at a later stage).
+Involve experts on the real world system you are trying to imitate so as to get
+feedback on the validity of the conceptual model.
+Decide on whether a simulation package or a general purpose language is
+appropriate for the implementation of the model.
+Choose a statistically reliable random number generator that will perform
+adequately in the context of the complexity of the model.
+Write the computer program for the model.
+Debug the program to make sure it performs the intended operations in the
+model definition.
+Test the reasonableness of the output of the model.
+Review and carefully consider the appropriateness of the model in the light of
+small changes in input parameters.
+Analyse the output from the model.
+Ensure that any relevant professional guidance has been complied with.
+Communicate and document the results of the model.
+(ii)
+Objectives.
+Is a single pricing table needed for a defined set of cover/deferred
+period/definition of sickness?
+Is a range of prices needed for different cover levels?
+Is a simple price needed, or a confidence interval around profitability etc.?
+Page 5 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – April 2015 – Examiners’ Report
+Data.
+Look at national industry data and possibly international data on sickness and
+recovery rates.
+Take care as to the definitions of sickness.
+Look at trends.
+Is recovery rate affected by reduction in benefits?
+Might future trends change due to economic influences, medical
+developments, change in government policy to state benefits?
+What might the likely level of expenses be? This will depend on expected
+sales volumes (and commission levels).
+It is a new product so perhaps the company has no experience of claim
+monitoring. Look at industry data and in house data for new product launches.
+Modelling process.
+Start with a simple model reflecting sickness and recovery rates.
+Build in expenses and reserving later.
+Define the model.
+Type of model will be determined by the objectives, deterministic for a simple
+set of premium rates, stochastic if confidence intervals required.
+Reasonableness of output.
+Look at the premium rates generated and compare them with competitors in
+the market.
+Are they roughly where you would expect them to be?
+Sensitivity to changes in input parameters.
+Change each important parameter slightly; sickness rates, recovery rates,
+expenses and ensure that the impact on the premium rates is not huge.
+If it is, review the product design.
+Can risk be reduced by introducing, say, annually reviewable premium rates.
+Compliance with professional guidance and regulatory environment.
+Look at professional guidance and legislative requirements, might
+Solvency II impact the cost of capital to make the product uncompetitive or
+uneconomic?
+Part (i) was well answered by most candidates. In part (ii) other suggestions scored credit
+provided they related to one of the stages identified in the answer to part (i) and dealt with a
+model to price a new sickness benefit. No credit was given for comments which were not
+specifically related to the pricing of a new sickness benefit product (many candidates made
+general points which were applicable to any model). Note that the level of detail given above
+is well in excess of that the Examiners required for full credit. Nevertheless, many
+candidates gave responses which were too brief and vague to gain much credit for this part.
+Page 6 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – April 2015 – Examiners’ Report
