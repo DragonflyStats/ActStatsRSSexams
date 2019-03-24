@@ -1,0 +1,177 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+(i) List the factors which should be considered in assessing the suitability of a
+model for a particular exercise.
+[3]
+(ii) Assess the suitability of a multiple state model with three states: Healthy, Sick
+and Dead, for estimating the transition intensities in an analysis of claims for
+sickness benefit, in the light of your answer to (i).
+[4]
+[Total 7]
+CT4 S2011—3
+[2]
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+Question 5
+(i) Objectives of the modelling exercise.
+Validity of the model for the purpose to which it is to be put.
+Validity of the data to be used.
+Possible errors associated with the model or parameters used not being a perfect
+representation of the real world situation being modelled.
+Impact of correlations between the random variables that “drive” the model.
+Extent of correlations between the results produced from the model.
+Current relevance of models written and used in the past.
+Credibility of the data input.
+Credibility of the results output.
+Dangers of spurious accuracy.
+Ease with which the model and its results can be communicated.
+The time and cost of constructing and maintaining the model.
+(ii) The model is capable of meeting the objective, specifically the estimation of transition
+intensities.
+The model is valid for this purpose.
+Page 5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
+The data required are the total waiting times in each of the states Healthy and Sick for
+the lives in the investigation during the period of the investigation, together with the
+number of transitions from Healthy to Sick, from Sick to Healthy, from Healthy to Dead and from Sick to Dead.
+Provided these data are available, the data will be valid for the application of the
+model.
+The model is as good a representation of the real world process as we can obtain.
+The model requires that we estimate constant intensities. The results will be credible provided we estimate the intensities separately for short age intervals, over which the
+assumption of constant transition intensities is credible.
+The concept of transition intensities is not intuitively easy for non-specialists to understand.
+The results can be made easier to understand and the results clearer by converting the
+transition intensities to probabilities – e.g. the probability that a Healthy life aged x will make a sickness claim before he or she is aged x+t years.
+Some candidates scored well on part (i), which was standard bookwork, but a disappointing
+number did not. Answers to part (ii) were variable. To score highly, the points made in part
+(ii) should relate to those made in part (i). Within this general criterion, sensible points other
+than those listed above were given credit. Full marks could be obtained for less than is given
+in the model solution above.
+Question 6
+(i)
+(a)
+EITHER
+The parameters are the rate of leaving state i , \lambda i , for each i , and the jump-chain
+transition probabilities, r ij , for j \neq i , where r ij is the conditional probability that
+the next transition is to state j given the current state is i .
+OR
+If the rate of leaving state i , is \lambda i , and r ij is the conditional probability that the
+next transition is to state j given the current state is i .
+The parameters are μ ij, where, for i = j , μ ii = -\lambda i and, for i \neq j , μ ij = \lambda i r ij .
+Page 6%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
+OR
+The parameters are the six transition rates from state i to state j ( i \neq j ):
+μ AB
+μ AC
+μ BA
+μ BC
+μ CA
+μ CB
+(b)
+The assumptions are as follows.
+EITHER The holding time in each state is exponentially distributed
+OR The transition intensities from each state are not time-dependent.
+The parameter of this distribution varies only by state i , so that the distribution
+is independent of anything that happened prior to the arrival in current state i .
+The destination of the jump on leaving state i is independent of holding time,
+and of anything that happened prior to the current arrival in state i .
+(ii)
+(a)
+The estimator [it is the maximum likelihood estimator (MLE)
+but this need not be stated] of \lambda i , \hat{\lambda} i , is the inverse of the
+average duration of each visit to state i .
+^
+so \hat{\lambda} A = 3 per hour, \hat{\lambda} B = 1/2 per hour, \lambda C = 1/3 per hour
+The estimator [it is the MLE but this need not be stated]
+of r ij , r ˆ ij , is the proportion of observed jumps out of
+state i to state j .
+r ˆ AB = 60/105=4/7
+r ˆ AC = 45/105=3/7
+r ˆ BA =50/75=2/3
+r ˆ BC =25/75=1/3
+r ˆ CA =55/70=11/14
+r ˆ CB =15/70=3/14
+Page 7%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
+(b)
+The estimated generator matrix (in hr −1 ) is:
+9 ⎞
+⎛ − 3 12
+7
+7 ⎟
+⎜
+⎜ 1
+1 ⎟
+− 1
+2
+6 ⎟
+⎜ 3
+⎜ ⎜ 11
+1
+− 1 ⎟ ⎟
+14
+3 ⎠
+⎝ 42
+(iii)
+EITHER Binomial, with mean n.r ij and variance n.r ij .(1 – r ij ), n being the number of
+transitions out of state i .
+OR Binomial ( n , r ij ) n being the number of transitions out of state i .
+This was a relatively straightforward question, so the Examiners were looking for accurate
+and incisive answers. In part (i)(b) many candidates offered vague statements about the process not depending on past history. These candidates scored only limited credit for this
+part. In part (ii)(a) candidates who simply wrote down the values of the transition intensities,
+viz:
+μ AB = 12 / 7
+μ AC = 9 / 7
+μ BA = 1/ 3
+μ BC = 1/ 6
+μ CA = 11/ 42
+μ CB = 1/14
+scored partial credit. Some candidates combined parts (ii)(a) and (b) by simply writing down
+the generator matrix. If this was correct, they were awarded most of the marks for this part,
+but for full marks some indication of how they arrived at the numbers in the generator matrix
+was needed. It was extremely disappointing how few candidates were able to state the
+distribution in part (iii): this seems to indicate a gap in knowledge of the subject.
