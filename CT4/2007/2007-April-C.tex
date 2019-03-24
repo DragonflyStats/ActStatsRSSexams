@@ -45,11 +45,11 @@ disease and is known as a haemophiliac.
 A medical researcher wishes to study the progress of the disease through the first born
 child in each generation, starting with a female carrier.
 You may assume:
-• every parent has a equal chance of passing either of their chromosomes to their
+\item every parent has a equal chance of passing either of their chromosomes to their
 children
-• the partner of each person in the study does not carry a defective X chromosome;
+\item the partner of each person in the study does not carry a defective X chromosome;
 and
-• no new genetic defects occur
+\item no new genetic defects occur
 (i)
 Show that the expected progress of the disease through the generations may be
 modelled as a Markov chain and specify carefully:
@@ -57,18 +57,18 @@ modelled as a Markov chain and specify carefully:
 (b)
 the state space; and
 the transition diagram
-[5]
+
 (ii)
 State, with reasons, whether the chain is:
 (a)
 (b)
 irreducible; and
 aperiodic
-[2]
+
 (iii)
 Calculate the stationary distribution of the Markov chain.
 CT4 A2007—5
-[3]
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 7
@@ -86,14 +86,14 @@ or XY
 or X*Y
 Using the assumption that there is an equal chance of either chromosome
 being inherited:
-• A female non-carrier will lead to a female non-carrier or male non-carrier.
-• A female carrier may produce:
+\item A female non-carrier will lead to a female non-carrier or male non-carrier.
+\item A female carrier may produce:
 X*X, XX, X*Y, XY all with equal probability.
-• A male non-sufferer will lead to female non-carrier or male non-carrier.
-• A male haemophiliac may produce:
+\item A male non-sufferer will lead to female non-carrier or male non-carrier.
+\item A male haemophiliac may produce:
 X*X or XY (because his partner must provide an X) with equal
 probability.
-Page 8Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
+8 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2007 — Examiners’ Report
 The transition diagram is therefore:
 0.5
 0.25
@@ -134,15 +134,16 @@ MN (2) 0.5
 0.5 0.5
 0
 MH (3)
-Page 9Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
-The stationary distribution π must satisfy:
-π 0 = 0.5 π 0 + 0.25 π 1 + 0.5 π 2
-π 1 = 0.25 π 1 + 0.5 π 3
-π 2 = 0.5 π 0 + 0.25 π 1 + 0.5 π 2 + 0.5 π 3
-π 3 = 0.25 π 1
+9 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2007 — Examiners’ Report
+The stationary distribution \pi must satisfy:
+\pi 0 = 0.5 \pi 0 + 0.25 \pi_1 + 0.5 \pi_2
+\pi_1 = 0.25 \pi_1 + 0.5 \pi_3
+\pi_2 = 0.5 \pi 0 + 0.25 \pi_1 + 0.5 \pi_2 + 0.5 \pi_3
+\pi_3 = 0.25 \pi_1
 So,
-π 1 = 0.25 π 1 + 0.5 × 0.25 π 1
-⇒ π 1 = π 3 = 0
-⇒ π 0 = π 2 = 0.5
+\pi_1 = 0.25 \pi_1 + 0.5 \times0.25 \pi_1
+⇒ \pi_1 = \pi_3 = 0
+⇒ \pi 0 = \pi_2 = 0.5
 An alternative solution combines the states FN and MN to give a 3-state model. This
 was given credit.
+\end{document}

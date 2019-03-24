@@ -35,12 +35,12 @@
 6
 State an appropriate method of graduation for each of the three classes of lives
 and, for each class, briefly explain your choice.
-[3]
+
 [Total 6]
 A study of the mortality of a certain species of insect reveals that for the first 30 days
 of life, the insects are subject to a constant force of mortality of 0.05. After 30 days,
 the force of mortality increases according to the formula:
-μ 30 + x = 0.05exp(0.01 x ) ,
+\mu 30 + x = 0.05exp(0.01 x ) ,
 where x is the number of days after day 30.
 7
 (i) Calculate the probability that a newly born insect will survive for at least 10
@@ -48,17 +48,17 @@ days.
 [1]
 (ii) Calculate the probability that an insect aged 10 days will survive for at least a
 further 30 days.
-[3]
+
 (iii) Calculate the age in days by which 90 per cent of insects are expected to have
 died.
-[4]
+
 [Total 8]
 (i) Define a counting process.
-[2]
+
 For each of the following processes:
-•
-•
-•
+\item
+\item
+\item
 (ii)
 simple random walk
 compound Poisson
@@ -67,11 +67,11 @@ Markov chain
 continuous or can be either.
 (b) Give an example of an application which may be useful to a
 shopkeeper selling dried fruit and nuts loose.
-[6]
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-
-Question 6
+\newpage
+%%--- Question 6
 (i)
 The probability that an insect will survive for 10 days, 10 p 0 , is given by the formula
 ⎛ 10
@@ -80,19 +80,19 @@ The probability that an insect will survive for 10 days, 10 p 0 , is given by th
 ⎟ .
 =
 −
-μ
+\mu
 p
 exp
 dx
 10 0
-⎜ ∫ x ⎟
+⎜ \int x ⎟
 ⎝ 0
 ⎠
 Since the force of mortality is constant up to age 30 days at a value of 0.05,
 ⎛ 10
 ⎞
 10
-10 p 0 = exp ⎜ − ∫ 0.05 dx ⎟ = exp − [ 0.05 x ] 0 = exp ( − 0.5 ) = 0.6065 .
+10 p 0 = exp ⎜ − \int 0.05 dx ⎟ = exp − [ 0.05 x ] 0 = exp ( − 0.5 ) = 0.6065 .
 ⎜
 ⎟
 ⎝ 0
@@ -104,7 +104,7 @@ The probability that an insect 10 days old will survive for a further 30 days (t
 exact age 40 days) is given by
 ⎛ 40
 ⎞
-⎜ − ∫ μ x dx ⎟ .
+⎜ − \int \mu x dx ⎟ .
 p
 =
 exp
@@ -120,7 +120,7 @@ Since
 ⎞
 ⎛ 10
 ⎞
-exp ⎜ − ∫ 0.05 dx ⎟ exp ⎜ − ∫ 0.05exp(0.01 x ) dx ⎟
+exp ⎜ − \int 0.05 dx ⎟ exp ⎜ − \int 0.05exp(0.01 x ) dx ⎟
 ⎜
 ⎟
 ⎜
@@ -141,7 +141,7 @@ exp(0.01 x ) ⎥ ⎟
 )
 (
 = e − (1.5 − 0.5) e − (5exp(0.1) − 5exp(0))
-= e − 1 e − 0.5258 = 0.3679 × 0.5911 = 0.2174.
+= e − 1 e − 0.5258 = 0.3679 \times0.5911 = 0.2174.
 (iii)
 If the required age is 30+a, then we have
 30 + a
@@ -151,16 +151,16 @@ p 0 . a p 30 = 0.1 .
 Now
 ⎡ 30
 ⎤
-30 p 0 = exp ⎢ − ∫ 0.05 dx ⎥ = exp( − 1.5) = 0.2231 .
+30 p 0 = exp ⎢ − \int 0.05 dx ⎥ = exp( − 1.5) = 0.2231 .
 ⎣ 0
 ⎦
 So
-Page 6
+6
 a
 p 30 =
 0.1
 = 0.4483 .
-0.2231Subject CT4 (Models Core Technical) — Examiners’ Report, April 2011
+0.2231Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
 Using the result from part (ii), we have
 ⎛ ⎡ 0.05 0.01 x ⎤ a ⎞
 ⎛ ⎡ 0.05 0.01 a 0.05 ⎤ ⎞
@@ -193,7 +193,9 @@ Therefore the required age is 14.88+30 = 44.88 days.
 Most candidates answered part (i) of this question correctly. Part (ii) was less well answered,
 and only a minority of candidates managed to obtain the correct answer to part (iii). A
 common error was to use the limits 40 and 30 when integrating 0.05exp(0.01x).
-Question 7
+\newpage
+
+%% Question 7
 (i)
 It is a stochastic process in discrete or continuous time.
 The state space is all the natural numbers {0, 1, 2, ... }
@@ -211,7 +213,7 @@ Either
 Discrete Discrete
 Continuous
 Discrete
-Page 7Subject CT4 (Models Core Technical) — Examiners’ Report, April 2011
+7Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
 (b)
 Process Application
 Simple random walk The number of customers in the
@@ -230,3 +232,4 @@ one example IN TOTAL, whereas the question asked for an example FOR EACH PROCESS
 In part (ii)(b) other examples were given credit. The criterion used to award credit were
 whether the example COULD be modelled using the relevant process and how USEFUL to
 the shopkeeper such a model might be!
+\end{document}

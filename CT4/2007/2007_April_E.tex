@@ -43,7 +43,7 @@ be 1 January 1997 to 31 December 2006.
 showing possible transitions between the three states.
 (b) State any assumptions implied by the diagram you have drawn and
 comment on their appropriateness.
-[3]
+
 \item (ii)
 (a) State what data would be required in order to estimate the transition
 intensity of moving from state (1) to state (2) for employees aged 30
@@ -73,21 +73,21 @@ assumptions you make.
 (i)
 (a)
 A suitable diagram is shown below.
-μ 21
+\mu 21
 x + t
 1 Fully qualified but
 not yet a partner
 2 Fully qualified
 and a partner
-μ 12
+\mu 12
 x + t
-μ 13
+\mu 13
 x + t
-μ 31
+\mu 31
 x + t
-μ 32
+\mu 32
 x + t
-μ 23
+\mu 23
 x + t
 3 Working for
 another company
@@ -101,15 +101,14 @@ Credit was given for models based on alternative assumptions, provided these wer
 (a)
 Assume we have data on N individuals (i = 1, ..., N).
 We should need to know for each individual:
-• the total waiting time during the calendar years 1997–2006 in state
+\item the total waiting time during the calendar years 1997–2006 in state
 (1) when aged 30 last birthday
-• whether or not the individual was made a partner between exact ages 30 and 31 years during the calendar years 1997–2006 while
-remaining in the company.
-%%---- Page 15Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
+\item whether or not the individual was made a partner between exact ages 30 and 31 years during the calendar years 1997–2006 while remaining in the company.
+%%---- 15 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2007 — Examiners’ Report
 (b)
 The likelihood of the data is:
 N
-L = ∏ K exp[ − ( μ 13 + μ 12 ) v i ]( μ 12 ) d i
+L = \product K exp[ − ( \mu 13 + \mu 12 ) v i ]( \mu 12 ) d i
 i = 1
 where
 v i is the waiting time at age 30 last birthday in state (1) for
@@ -117,29 +116,29 @@ individual i.
 d i is an indicator variable such that d i = 1 if individual i was made a
 partner while aged 30 last birthday during the period of the
 investigation and d i = 0 otherwise.
-K is a constant denoting terms that do not depend on μ 12 .
+K is a constant denoting terms that do not depend on \mu 12 .
 (c)
 The logarithm of the likelihood is
 N
-log e L = ∑ log e K − ( μ 12 + μ 13 ) v i + d i log e μ 12
+log e L = ∑ log e K − ( \mu 12 + \mu 13 ) v i + d i log e \mu 12
 i = 1
-Differentiating this with respect to μ 12 we obtain
+Differentiating this with respect to \mu 12 we obtain
 N
-∂ log e L
+\partial log e L
 12
-∂μ
+\partial\mu
 N
 = − ∑ v i +
 i = 1
 ∑ d i
 i = 1
 12
-μ
+\mu
 ,
-and setting this equal to zero and solving for μ 12 gives
+and setting this equal to zero and solving for \mu 12 gives
 N
 12
-μ ˆ
+\mu ˆ
 =
 ∑ d i
 i = 1
@@ -149,16 +148,16 @@ N
 i = 1
 This is the maximum likelihood estimate, as can be seen by noting that
 N
-∂ 2 log e L
+\partial 2 log e L
 12 2
-( ∂μ )
-Page 16
+( \partial\mu )
+16
 =−
 ∑ d i
 i = 1
 12 2
-( μ )
-which must be negative.Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
+( \mu )
+which must be negative. — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2007 — Examiners’ Report
 (iii)
 The data on becoming a partner are classified by age last birthday, which is
 the same classification as used in the company’s own investigation, therefore

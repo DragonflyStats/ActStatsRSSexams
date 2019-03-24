@@ -33,19 +33,15 @@
 \begin{document}
 \begin{enumerate}
 11
-A study was undertaken into the length of spells of unemployment among young
-people in a certain city. A sample of young people was monitored from the time they
+A study was undertaken into the length of spells of unemployment among young people in a certain city. A sample of young people was monitored from the time they
 started to claim unemployment benefit until either they resumed work, or they moved
 away from the city. None of the members of the sample died during the study.
-The study investigated the impact of age, sex and educational qualifications on the
-hazard of returning to work using the following covariates:
-A a young person’s age when he or she started claiming benefit (measured in
-exact years since his or her 16th birthday)
-S a dummy variable taking the value 1 if the person was male and 0 if the person
-was female
-E a dummy variable taking the value 1 if the person had passed a school leaving
-examination in mathematics, and 0 otherwise
-with associated parameters β A , β S and β E .
+
+The study investigated the impact of age, sex and educational qualifications on the hazard of returning to work using the following covariates:
+A a young person’s age when he or she started claiming benefit (measured in exact years since his or her 16th birthday)
+S a dummy variable taking the value 1 if the person was male and 0 if the person was female
+E a dummy variable taking the value 1 if the person had passed a school leaving examination in mathematics, and 0 otherwise
+with associated parameters \beta A , \beta S and \beta E .
 The investigators decided to use a Cox proportional hazards regression model for the
 study.
 (i) Explain what is meant by a proportional hazards model.
@@ -61,22 +57,20 @@ List the characteristics of the young person to whom the baseline
 hazard applies.
 
 The results showed:
-• The hazard of resuming work for males who started claiming benefit aged 17
-years exact and who had passed the mathematics examination was 1.5 times the
-hazard for males who started claiming benefit aged 16 years exact but who had
-not passed the mathematics examination.
-• Females who had passed the mathematics examination were twice as likely to take
+\item The hazard of resuming work for males who started claiming benefit aged 17 years exact and who had passed the mathematics examination was 1.5 times the
+hazard for males who started claiming benefit aged 16 years exact but who had not passed the mathematics examination.
+\item Females who had passed the mathematics examination were twice as likely to take
 up a new job as were males of the same age who had failed the mathematics
 examination.
-• Females who started claiming benefit aged 20 years exact and who had passed the
+\item Females who started claiming benefit aged 20 years exact and who had passed the
 mathematics examination were twice as likely to resume work as were males who
 started claiming benefit aged 16 years exact and who had also passed the
 mathematics examination.
 (iv)
-Calculate the estimated values of the parameters β A , β S and β E .
-END OF PAPER
+Calculate the estimated values of the parameters \beta A , \beta S and \beta E .
+
 CT4 S2009—8
-[6]
+
 [Total 15]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,7 +90,7 @@ for example in the Cox model
 
 .
  ( t ; z 2 ) exp(  z 2 T )
-Page 16  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+16  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
 \item (ii) Cox‟s model ensures that the hazard is always positive. Standard software
 packages often include Cox‟s model.
 Cox‟s model allows the general “shape” of the hazard function for all
@@ -141,7 +135,7 @@ Substituting into (3) gives
 exp[  A *4)
  2 ,
 0.75exp(  A )
-Page 17  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+17  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
 exp(5  A )  1.5
  A 
 log e 1.5
@@ -157,14 +151,13 @@ exp(0.3244)
 exp(  S )
 0.3244   S  log e 2  0.6931
  S   0.3688
-This was satisfactorily answered by many candidates. Although it is still the case
-than only a minority of candidates seem to understand the essential feature of a
-proportional hazards model that the hazard can be factorised into one part depending
-on duration and another part depending on the values of covariates, many candidates
-could list some advantages of the Cox model in part \item (ii). In part \item (iii)(b) very few
-candidates spotted that the baseline person was aged 16 years when first claiming
-benefit. In part (iv) candidates who failed to write down the correct equations
-implied by the three statements in the question were given some credit for correctly
-solving the equations they did produce.
-END OF EXAMINERS‟ REPORT
-Page 18
+
+% This was satisfactorily answered by many candidates. Although it is still the case than only a minority of candidates seem to understand the essential feature of a
+% proportional hazards model that the hazard can be factorised into one part depending on duration and another part depending on the values of covariates, many candidates
+% could list some advantages of the Cox model in part (ii). In part (iii)(b) very few candidates spotted that the baseline person was aged 16 years when first claiming
+% benefit. In part (iv) candidates who failed to write down the correct equations implied by the three statements in the question were given some credit for correctly
+% solving the equations they did produce.
+
+%%END OF EXAMINERS‟ REPORT
+%%18
+\end{document}

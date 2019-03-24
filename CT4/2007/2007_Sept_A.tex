@@ -36,15 +36,15 @@
 2
 List the factors you would consider when assessing the suitability of an actuarial
 model for its purpose.
-[4]
+
 A particular baker’s shop in a small town sells only one product: currant buns. These
 currant buns are delicious and customers travel many miles to buy them.
 Unfortunately, the buns do not keep fresh and cannot be stored overnight.
 The baker’s practice is to bake a certain number of buns, K, before the shop opens
 each morning, and then during the day to continue baking c buns per hour. He is
 concerned that:
-•
-•
+\item
+\item
 3
 he does not run out of buns during the day; and
 the number of buns left over at the end of each day is as few as possible
@@ -55,28 +55,28 @@ the number of buns left over at the end of each day is as few as possible
 \end{enumerate}
 
 A no-claims discount system has 3 levels of discount: 0\%, 25\% and 50\%. The rules for moving between discount levels are:
-• After a claim-free year, move up to the next higher level or remain at the 50\% discount level.
-• After a year with one or more claims, move down to the next lower level or remain at the 0\% discount level.
+\item After a claim-free year, move up to the next higher level or remain at the 50\% discount level.
+\item After a year with one or more claims, move down to the next lower level or remain at the 0\% discount level.
 The long-run probability that a policyholder is in the maximum discount level is 0.75. Calculate the probability that a given policyholder has a claim-free year, assuming that this probability is constant.
-%%-- [5]
+%%-- 
 %%-- CT4 S2007—2
 4
 A national mortality investigation was carried out. It was suggested that the mortality of the male population could be represented by the following graduated rates:
 o
-μ x + 1 =μ s x + 2 1
+\mu x + 1 =\mu s x + 2 1
 2
 2
-where μ sx is from the standard tables, ELT15(males).
+where \mu sx is from the standard tables, ELT15(males).
 The table below shows the graduated rates for part of the age range, together with the exposed to risk, expected and actual deaths at each age. The squared standardised
 deviations that were calculated are also shown.
 ⎛
 ⎞
 c o
-⎜ θ x − E x ⋅μ x + 12 ⎟
+⎜ θ x − E x ⋅\mu x + 12 ⎟
 ⎠
 The standardised deviations were calculated as z x = ⎝
 o
-E x c ⋅μ x + 1
+E x c ⋅\mu x + 1
 2
 Age Graduated
 rates
@@ -85,7 +85,7 @@ to risk Expected
 deaths Deaths Squared
 standardised
 deviations
-x μ x+ 1 E x c E x c ⋅μ x + 1 o θ x z x 2
+x \mu x+ 1 E x c E x c ⋅\mu x + 1 o θ x z x 2
 0.00549
 0.00610
 0.00679
@@ -148,23 +148,23 @@ o
 (i) Test this graduation for overall goodness-of-fit.
 (ii) Comment on your findings in (i).
 CT4 S2007—3
-[5]
-[2]
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 1
 Factors to be considered include:
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
-•
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
 the objectives of the modelling exercise,
 the validity of the model for the purpose to which it is to be put,
 the validity of the data to be used,
@@ -197,72 +197,72 @@ N t
 Pr[ K + ct − ∑ B j < 0]
 j = 1
 for some t.
-%% Page 3
-%% Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+%% 3
+%%  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
 3
 The transition matrix for the chain is:
-α
-⎛ 1 − α
+\alpha
+⎛ 1 − \alpha
 ⎞
 ⎜
 ⎟
-α ⎟ .
-⎜ 1 − α
+\alpha ⎟ .
+⎜ 1 − \alpha
 ⎜
-1 − α α ⎟ ⎠
+1 − \alpha \alpha ⎟ ⎠
 ⎝
-To determine the long-run probability, we need to solve the equation π P = π , which
+To determine the long-run probability, we need to solve the equation \pi P = \pi , which
 reads:
-(I) π 1 = ( 1 − α ) π 1 + ( 1 − α ) π 2
-(II) π 2 =
-(III) π 3 =
-+ ( 1 − α ) π 3
-απ 1
-απ 2
+(I) \pi_1 = ( 1 − \alpha ) \pi_1 + ( 1 − \alpha ) \pi_2
+(II) \pi_2 =
+(III) \pi_3 =
++ ( 1 − \alpha ) \pi_3
+\alpha\pi_1
+\alpha\pi_2
 +
-απ 3 .
+\alpha\pi_3 .
 The probabilities must also satisfy:
 (IV)
-π 1 + π 2 + π 3 = 1 .
-⎛ 1− α ⎞
-(III) gives π 2 = ⎜
-⎟ π 3 .
-⎝ α ⎠
+\pi_1 + \pi_2 + \pi_3 = 1 .
+⎛ 1− \alpha ⎞
+(III) gives \pi_2 = ⎜
+⎟ \pi_3 .
+⎝ \alpha ⎠
 2
-⎛ 1− α ⎞
-Substituting in (I) gives π 1 = ⎜
-⎟ π 3 ,
-⎝ α ⎠
-⎛ ⎛ 1 − α ⎞ 2 ⎛ 1 − α ⎞ ⎞
+⎛ 1− \alpha ⎞
+Substituting in (I) gives \pi_1 = ⎜
+⎟ \pi_3 ,
+⎝ \alpha ⎠
+⎛ ⎛ 1 − \alpha ⎞ 2 ⎛ 1 − \alpha ⎞ ⎞
 and so (IV) leads to ⎜ ⎜
 +
-+ 1 ⎟ π = 1 .
-⎜ ⎝ α ⎟ ⎠ ⎜ ⎝ α ⎟ ⎠ ⎟ 3
++ 1 ⎟ \pi = 1 .
+⎜ ⎝ \alpha ⎟ ⎠ ⎜ ⎝ \alpha ⎟ ⎠ ⎟ 3
 ⎝
 ⎠
-We know that π 3 = 0.75 , which leads to:
-⎛ ( 1 − α ) 2 + α ( 1 − α ) + α 2 ⎞
+We know that \pi_3 = 0.75 , which leads to:
+⎛ ( 1 − \alpha ) 2 + \alpha ( 1 − \alpha ) + \alpha 2 ⎞
 ⎜
-⎟ × 0.75 = 1 ,
+⎟ \times0.75 = 1 ,
 2
 ⎜
 ⎟
-α
+\alpha
 ⎝
 ⎠
 ( (
 ) (
 )
 )
-⇒ 0.75 1 − 2 α + α 2 + α + α 2 + α 2 = α 2 ,
-⇒ 0.25 α 2 + 0.75 α − 0.75 = 0 .
+⇒ 0.75 1 − 2 \alpha + \alpha 2 + \alpha + \alpha 2 + \alpha 2 = \alpha 2 ,
+⇒ 0.25 \alpha 2 + 0.75 \alpha − 0.75 = 0 .
 Using the quadratic equation formula, this leads to
-α=
-− 0.75 ± 0.75 2 + 4 × 0.25 × 0.75
+\alpha=
+− 0.75 \pm 0.75 2 + 4 \times0.25 \times0.75
 .
-2 × 0.25
-As α > 0 , we must have α = 0.7913 .
-%%-- Page 4Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+2 \times0.25
+As \alpha > 0 , we must have \alpha = 0.7913 .
+%%-- 4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 4
 (i)
@@ -290,4 +290,4 @@ standard table from 2 years.
 The standardised deviations also appear to show a systematic increase with age, showing that departure of the graduated rates from the actual rates increases with age.
 There appear to be no outliers (all the z x s have absolute values below 1.96).
 \end{document}
-%%-- Page 5Subject CT4 — Models Core Technical — September 2007 — Examiners’ Report
+%%-- 5 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report

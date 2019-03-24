@@ -40,25 +40,25 @@ devised the following “discount” scheme.
 He has a Base price, B of £8 per bale. Then he has three levels of discount: Good
 price, G , is a 10% discount, Loyalty price, L is a 20% discount and Super price, S , is a
 25% discount on the Base price.
-• Customers who increase their order compared with last year move to one higher
+\item Customers who increase their order compared with last year move to one higher
 discount level, or remain at level S .
-• Customers who maintain their order from last year stay at the same discount level.
-• Customers who reduce their order from last year drop one level of discount or
+\item Customers who maintain their order from last year stay at the same discount level.
+\item Customers who reduce their order from last year drop one level of discount or
 remain at level B provided that they maintained or increased their order the
 previous year.
-CT4 A2011—6•
+CT4 A2011—6\item
 Customers who reduce their order from last year drop two levels of discount if
 they also reduced their order last year, subject to remaining at the lowest level B .
 (i) Explain why a process with the state space of { B , G , L , S } does not display the
 Markov property.
-[2]
+
 (ii) (a)
 Define any additional state(s) required to model the system
 with the Markov property.
 (b)
 Construct a transition graph of this Markov process clearly labelling
 all the states.
-[3]
+
 Farmer Giles thinks that each year customers have a 60% likelihood of increasing
 their order and a 30% likelihood of reducing it, irrespective of the discount level they
 are currently in.
@@ -70,10 +70,10 @@ hay.
 [8]
 (iv) Calculate the probability that a customer who is currently paying the Loyalty
 price, L , will be paying L in two years’ time.
-[3]
+
 (v) Suggest reasons why the assumptions Farmer Giles has made about his
 customers’ behaviour may not be valid.
-[3]
+
 [Total 19]
 END OF PAPER
 CT4 A2011—7
@@ -113,7 +113,7 @@ B
 G
 L +
 L –
-π 1 π 2 π 3 π 4
+\pi_1 \pi_2 \pi_3 \pi_4
 0
 ⎛ 0.4 0.6 0
 ⎜
@@ -125,9 +125,9 @@ L –
 0
 0 0.3
 ⎝
-Page 22
+22
 S
-π 5
+\pi_5
 0 ⎞
 ⎟
 0 ⎟
@@ -135,55 +135,55 @@ S
 ⎟
 0.6 ⎟
 0.7 ⎟ ⎠
-0.6Subject CT4 (Models Core Technical) — Examiners’ Report, April 2011
+0.6Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
 (b)
-π = π P
-π 1
-π 2
-π 3
-π 4
-π 5
-π 1
-= 0.4 π 1 + 0.3 π 2 + 0.3 π 4
-= 0.6 π 1 + 0.1 π 2 + 0.3 π 3
-= 0.6 π 2 + 0.1 π 3 + 0.1 π 4
-= 0.3 π 5
-= 0.6 π 3 + 0.6 π 4 + 0.7 π 5
-+ π 2 + π 3 + π 4 + π 5 = 1
+\pi = \pi P
+\pi_1
+\pi_2
+\pi_3
+\pi_4
+\pi_5
+\pi_1
+= 0.4 \pi_1 + 0.3 \pi_2 + 0.3 \pi_4
+= 0.6 \pi_1 + 0.1 \pi_2 + 0.3 \pi_3
+= 0.6 \pi_2 + 0.1 \pi_3 + 0.1 \pi_4
+= 0.3 \pi_5
+= 0.6 \pi_3 + 0.6 \pi_4 + 0.7 \pi_5
++ \pi_2 + \pi_3 + \pi_4 + \pi_5 = 1
 (1)
 (2)
 (3)
 (4)
 (5)
-= 0.3 π 5
-(4) gives π 4
-(5) gives 0.6π 3 = 0.3 π 5 – 0.6(0.3π 5 )
-= 0.12 π 5
-= 0.2 π 5
-π 3
-(3) gives 0.6 π 2 =
+= 0.3 \pi_5
+(4) gives \pi_4
+(5) gives 0.6\pi_3 = 0.3 \pi_5 – 0.6(0.3\pi_5 )
+= 0.12 \pi_5
+= 0.2 \pi_5
+\pi_3
+(3) gives 0.6 \pi_2 =
 =
 =
 =
-π 2
-(2) gives 0.6 π 1 = 0.9 π 2 – 0.3 π 3
-= 0.9(0.25) π 5 – 0.3(0.2) π 5
-= 0.225 π 5 – 0.06 π 5
-= 0.165 π 5
-= 0.275 π 5
-π 1
-0.9 π 3 – 0.1 π 4
-0.18 π 5 – 0.03 π 5
-0.15 π 5
-0.25 π 5
-π 5 (0.275 + 0.25 + 0.2 + 0.3 + 1) = 1
-π 5 = 1 / 2.025
+\pi_2
+(2) gives 0.6 \pi_1 = 0.9 \pi_2 – 0.3 \pi_3
+= 0.9(0.25) \pi_5 – 0.3(0.2) \pi_5
+= 0.225 \pi_5 – 0.06 \pi_5
+= 0.165 \pi_5
+= 0.275 \pi_5
+\pi_1
+0.9 \pi_3 – 0.1 \pi_4
+0.18 \pi_5 – 0.03 \pi_5
+0.15 \pi_5
+0.25 \pi_5
+\pi_5 (0.275 + 0.25 + 0.2 + 0.3 + 1) = 1
+\pi_5 = 1 / 2.025
 = 0.49382716
-π 1 = 0.13580
-π 2 = 0.12346
-π 3 = 0.09877
-π 4 = 0.14815
-π 5 = 0.49383
+\pi_1 = 0.13580
+\pi_2 = 0.12346
+\pi_3 = 0.09877
+\pi_4 = 0.14815
+\pi_5 = 0.49383
 (c)
 )
 ) 0.24692
@@ -198,9 +198,9 @@ OR
 12/81
 40/81
 Average price for a bale of hay is
-£8 × (1 × 0.1358 + 0.9 × 0.12346 + 0.8 × (0.09877 + .14815) + 0.75 ×.49383 )
+£8 \times(1 \times0.1358 + 0.9 \times0.12346 + 0.8 \times(0.09877 + .14815) + 0.75 ×.49383 )
 = £6.5181
-Page 23Subject CT4 (Models Core Technical) — Examiners’ Report, April 2011
+23Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
 (iv)
 0
 0 ⎞
@@ -281,7 +281,7 @@ in L in two years’ time.
 A constant figure takes no account of the amount of hay which Farmer Giles has to
 sell: for example a drought year could produce very little which one large customer
 may buy in its entirety.
-Page 24Subject CT4 (Models Core Technical) — Examiners’ Report, April 2011
+24Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
 The amount of hay in the local market is important.
 Another supplier may try a heavy discounted year to get into the market.
 Customers’ behaviour may depend on the discount level they are at.
@@ -300,4 +300,4 @@ overall answer on the grounds that they do not know the proprotions in states L 
 were only given credit if they presented a reasoned argument with evidence.
 In part (v) credit was given for other sensible suggestions.
 END OF EXAMINERS’ REPORT
-Page 25
+25

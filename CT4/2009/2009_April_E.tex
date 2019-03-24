@@ -1,4 +1,40 @@
-PLEASE TURN OVER11
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+
+%%--- Question 11
 An investigation into mortality by cause of death used the four-state Markov model
 shown below.
 1 Alive
@@ -25,8 +61,7 @@ t p x = \mu x + t t p x .
 The investigation was carried out separately for each year of age, and the transition
 intensities were assumed to be constant within each single year of age.
 \item (ii)
-(a) Write down, defining all the terms you use, the likelihood for the
-transition intensities.
+(a) Write down, defining all the terms you use, the likelihood for the transition intensities.
 (b) Derive the maximum likelihood estimator of the force of mortality
 from heart disease for any single year of age.
 
@@ -41,7 +76,7 @@ Number of deaths from other causes 34
 (iv)
 (a) Calculate the maximum likelihood estimate (MLE) of the force of
 mortality from heart disease at age 64 last birthday.
-(b) Estimate an approximate 95% confidence interval for the MLE of the
+(b) Estimate an approximate 95\% confidence interval for the MLE of the
 force of mortality from heart disease at age 64 last birthday.
 
 Discuss how you might use this model to analyse the impact of risk factors on
@@ -116,7 +151,7 @@ cancer and d 14 deaths from other causes.
 Suppose also that we observe the waiting time for each life, and that
 the total observed waiting time is V, being the sum of the waiting times
 for each life.
-Page 15Subject CT4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+15Subject CT4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
 Then the likelihood of the data is given by
 (
 )
@@ -168,11 +203,11 @@ and the observed waiting time, so that an estimate of the variance is
 0.0319249
 = 0.000029976 .
 1, 065
-Page 16Subject CT4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+16Subject CT4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
 The estimated standard error is therefore
 0.000029976 = 0.00547507 .
-The 95% confidence interval is therefore
-0.0319249 ± (1.96)0.00547507 = 0.0319249 ± 0.0107311
+The 95\% confidence interval is therefore
+0.0319249 \pm (1.96)0.00547507 = 0.0319249 \pm 0.0107311
 = (0.0212, 0.0427).
 (iv)
 Using the four state model, the lives in the investigation would have to be
@@ -183,3 +218,4 @@ Using a Cox regression model with death from heart disease as the event of
 interest and the risk factors as covariates would avoid this problem.
 Lives who died from other causes could be treated as censored at the durations
 when they died.
+\end{document}

@@ -34,7 +34,7 @@
 \begin{enumerate}
 12
 (i) Explain the meaning of the rates of mortality usually denoted q x and m x , and the relationship between them.
-[3]
+
 (ii) Write down a formula for t q x , $0 \leq t \leq 1$ , under each of the following assumptions about the distribution of deaths in the age range $[x, x+1]$:
 (a)
 (b)
@@ -42,15 +42,15 @@
 uniform distribution of deaths
 constant force of mortality
 the Balducci assumption
-[2]
+
 %%%%%%%%%%%%%%
 A group of animals experiences a mortality rate q x = 0.1.
 (iii) Calculate m x under each of the assumptions (a) to (c) above.
 (iv) Comment on your results in part (iii).
-END OF PAPER
+
 CT4 S2008—9
 [8]
-[3]
+
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 12
@@ -61,7 +61,7 @@ They are related by:
 m x =
 q x
 1
-∫ t p x dt
+\int t p x dt
 0
 (ii)
 (a)
@@ -72,7 +72,7 @@ Constant force of mortality (CFM)
 t q x
 (c)
 = t * q x
-= 1 − e −μ * t
+= 1 − e −\mu * t
 Balducci assumption
 1 − t q x + t
 (iii)
@@ -95,7 +95,7 @@ t
 dt
 =
 −
-∫ t x ∫
+\int t x \int
 ⎢ ⎣ 2 ⎥ ⎦
 0
 0
@@ -107,28 +107,28 @@ under UDD)
 m x = 0.1/0.95 = 0.105263
 (b)
 CFM
-μ given by:
-1 − e −μ = 0.1
-μ = − ln 0.9 = 0.1053605
-%%------- Page 18Subject CT4 — Models Core Technical — September 2008 — Examiners’ Report
+\mu given by:
+1 − e −\mu = 0.1
+\mu = − ln 0.9 = 0.1053605
+%%------- 18Subject CT4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2008 — Examiners’ Report
 EITHER
 If force of mortality constant over [x, x+1] then
-central rate must be equal to the force μ
+central rate must be equal to the force \mu
 so m x = 0.1053605
 OR
 1 1
 0 0
-∫ t p x dt = ∫ (1 − (1 − e
-−μ t
+\int t p x dt = \int (1 − (1 − e
+−\mu t
 1
 1
 1
-−μ t
+−\mu t
 ⎤
 )) dt = − ⎡ e
-= (1 − e −μ ) = 0.949122
-μ ⎣
-⎦ 0 μ
+= (1 − e −\mu ) = 0.949122
+\mu ⎣
+⎦ 0 \mu
 m x = 0.1/0.949122=0.1053605
 (c)
 Balducci
@@ -148,13 +148,15 @@ p x + t
 1 − 1 − t q x + t 0.9 + 0.1 t
 0.9
 0.9
-∫ t p x dt = ∫ 0.9 + 0.1 t dt = 0.1 [ ln(0.9 + 0.1 t ) ] 0 = − 9 ln 0.9 = 0.9482446
+\int t p x dt = \int 0.9 + 0.1 t dt = 0.1 [ ln(0.9 + 0.1 t ) ] 0 = − 9 ln 0.9 = 0.9482446
 1
 So m x = 0.1/0.9482446=0.1054580
 (iv)
-The Balducci assumption implies a decreasing mortality rate over [x, x+1] and UDD
+\begin{itemize}
+\tiem The Balducci assumption implies a decreasing mortality rate over [x, x+1] and UDD
 an increasing mortality rate. CFM is obviously constant For a given number of deaths over the period,
 the estimated exposure would be highest if we assumed an increasing mortality rate.
-We would expect the central rate to be highest for that with the lowest estimate exposure, hence
+\item We would expect the central rate to be highest for that with the lowest estimate exposure, hence
 Balducci > CFM > UDD is the expected order.
+\end{itemize}
 \end{document}

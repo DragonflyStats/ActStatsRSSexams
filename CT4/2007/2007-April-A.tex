@@ -47,11 +47,11 @@ calculations.
 (i)
 (a) Suggest, with reasons, a suitable method of graduation in this case.
 (b) Describe how you would graduate the crude rates.
-[3]
+
 (ii)
 Comment on any further considerations that the company should take into
 account before using the graduated rates for premium calculations.
-[2]
+
 [Total 5]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 3
@@ -61,7 +61,7 @@ future mortality.
 Outline the stages you would go through in identifying an appropriate model.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 4
-[6]
+
 The actuary to a large pension scheme carried out an investigation of the mortality of
 the scheme’s pensioners over the two years from 1 January 2005 to 1 January 2007.
 (i)
@@ -132,47 +132,51 @@ calculations.
 (b)
 (ii)
 Assuming graduation by reference to a standard table:
-• Select a suitable table, based on a similar group of lives.
-• Plot the crude rates against q x s from the standard table to identify a
+\item Select a suitable table, based on a similar group of lives.
+\item Plot the crude rates against q x s from the standard table to identify a
 simple relationship.
-• Find the best-fit parameters, using maximum likelihood or least
+\item Find the best-fit parameters, using maximum likelihood or least
 squares estimates.
-• Test the graduation for goodness of fit. If the fit is not adequate,
+\item Test the graduation for goodness of fit. If the fit is not adequate,
 the process should be repeated.
 Considerations include:
-•
+\item
 As the premiums are for annuity policies, it is important not to
 overestimate the mortality rates, as the premiums would be too low.
-Page 3Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
 3
-• The rates will be based on current mortality; the company should also take
+%%----Subject CT4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2007 — Examiners’ Report
+3
+\item The rates will be based on current mortality; the company should also take
 into account expected future changes, especially any reductions in
 mortality rates.
-• Premiums charged by other insurer: if rates are too high the company will
+\item Premiums charged by other insurer: if rates are too high the company will
 fail to attract business; if too low, it may attract too much, unprofitable
 business.
-Clarify the purpose of the exercise. Why does the government want forecasts of
+\begin{itemize}
+\item Clarify the purpose of the exercise. Why does the government want forecasts of
 mortality? What is the period for which the forecast is wanted? Is it short (e.g. 5–10
 years) or long (e.g. 50–70 years).
-Consult the existing literature on models for forecasting mortality, and speak to
+\item Consult the existing literature on models for forecasting mortality, and speak to
 experts in this field of application. Consider using or adapting existing models which
 are employed in other countries.
-Establish what data are available (e.g. on past mortality trends in the country,
+\item Establish what data are available (e.g. on past mortality trends in the country,
 preferably with deaths classified by age and cause of death).
 On the basis of what data are available, define the model you propose to use. If the
 data are simple and not detailed, then a complex model is not justified. Will a
 deterministic or a stochastic model be appropriate in this case?
-Identify suitable computer software to implement the model, or, if none exists, write a
+\item Identify suitable computer software to implement the model, or, if none exists, write a
 bespoke program.
-Debug the program or, if existing software is used, check that it performs the
+\item Debug the program or, if existing software is used, check that it performs the
 operations you intend it to do.
-Run the model and test the reasonableness of the output. Consider, for example, the
+\item Run the model and test the reasonableness of the output. Consider, for example, the
 forecast values of quantities such as the expectation of life at birth.
-Test the sensitivity of the results to changes in the input parameters.
+\item Test the sensitivity of the results to changes in the input parameters.
 Analyse the output.
-Write a report documenting the results and the model and communicate the results
+\item Write a report documenting the results and the model and communicate the results
 and the output to the government of the small country.
-Page 4Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
+\end{itemize}
+
+Subject CT4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2007 — Examiners’ Report
 4
 (i)
 For each pensioner in the investigation, the actuary would need:
@@ -185,7 +189,7 @@ Date of exit from the investigation
 The central exposed to risk of pensioners aged x nearest birthday is
 given by
 2
-E x c = ∫ P x , t
+E x c = \int P x , t
 0
 1
 ≈ ∑ 1 2 ( P x , t + P x , t + 1 ) =
@@ -198,17 +202,17 @@ t , measured from 1 January 2005.
 This assumes that P x , t is linear over the calendar year.
 (b)
 This is a life year rate interval, from age x - 1⁄2 to x +1⁄2. The age in the
-middle of the rate interval is x , so μ̂ estimates μ x , assuming a constant
+middle of the rate interval is x , so \mû estimates \mu x , assuming a constant
 force of mortality over the life year.
-The estimate of μ x is therefore given by:
-μ ˆ 65 =
+The estimate of \mu x is therefore given by:
+\mu ˆ 65 =
 =
 d 65,2005 + d 65,2006
 c
 E 65
 (
 16 + 23
-1 × 1678 + 1720 + 1 × 1622
+1 \times1678 + 1720 + 1 \times1622
 2
 2
 )
