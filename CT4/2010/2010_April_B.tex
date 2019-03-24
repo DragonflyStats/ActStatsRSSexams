@@ -1,4 +1,39 @@
-6
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+%%-- Question 6
  
 An oil company has discovered a vast deposit of oil in an equatorial swamp.
 The area is extremely unhealthy and inhabited by venomous spiders. There is
@@ -33,12 +68,12 @@ during quarter
 25
 30
 40
-(i)
-(ii)
+\item (i)
+\item (ii)
 Estimate the quarterly rate of being bitten by a spider for each quarter of
 2008, stating any assumptions you make.
  
-Suggest reasons why the assumptions you made in (i) might not be valid.  
+Suggest reasons why the assumptions you made in \item (i) might not be valid.  
 [Total 8]
 CT4 A2010—3
 7
@@ -50,9 +85,9 @@ secondary examination and are given driving status Restricted. Those who score 5
 or below on the primary examination remain as Learners. Restricted drivers who pass
 the secondary examination become Qualified, but those who fail revert back to
 Learner status and are obliged to start again.
-(i) Sketch a diagram showing the possible transitions between the states.
+\item (i) Sketch a diagram showing the possible transitions between the states.
  
-(ii) Write down the likelihood of the data, assuming transition rates between states
+\item (ii) Write down the likelihood of the data, assuming transition rates between states
 are constant over time, clearly defining all terms you use.
  
 Figures over the first year of the new system based on those who applied for a
@@ -63,7 +98,7 @@ Number of transitions from Learner to Restricted
 Number of transitions from Restricted to Learner
 Number of transitions from Restricted to Qualified
 Number of transitions from Learner to Qualified
-(iii)
+\item (iii)
 1,161
 1,940
 382
@@ -82,7 +117,7 @@ Restricted to Learner.
 
 
 6
-(i)
+\item (i)
 A central exposed to risk for each quarter in person-quarters can be
 constructed as follows.
 In the first quarter there are 90 employees in the first three months of their six-
@@ -176,7 +211,7 @@ being bitten
 = 0.176
 Page 7Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
 We assume that all spider bites are treated.
-(ii)
+\item (ii)
 The assumption that there are no deaths apart from accidental deaths is
 unlikely to be true, and probably the company would have data on these
 which could be included in the calculations.
@@ -252,7 +287,7 @@ In part (ii) credit was only given if the points made related to one of the assu
 the answer to part (i).
 Page 8Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
 7
-(i)
+\item (i)
 Learner
 P
 α
@@ -261,7 +296,7 @@ P
 Restricted
 Qualified
 Q
-(ii)
+\item (ii)
 R
 \beta
 Let α be the transition rate R to P
@@ -275,7 +310,7 @@ b be the number of transitions from Restricted to Qualified
 c be the number of transitions from Learner to Qualified
 d be the number of transitions from Learner to Restricted
 L ∝ exp { ( −δ − γ ) P } exp { ( −α − \beta ) R } α a \beta b γ c δ d
-(iii)
+\item (iii)
 Take the logarithm of the likelihood
 log e L = k − P ( δ + γ ) − R ( α + \beta ) + a ln α + b ln \beta + c ln γ + d ln δ
 Differentiate with respect to α

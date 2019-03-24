@@ -35,52 +35,52 @@
 
 
 11
-Consider the random variable defined by X n =
-∑ Y i with each Y i mutually
+Consider the random variable defined by X_n =
+∑ Y_i with each Y_i mutually
 i = 1
 independent with probability:
-P[Y i = 1] = p, P[Y i = -1] = 1- p
+P[Y_i = 1] = p, P[Y_i = -1] = 1- p
 0 < p < 1
-(i) Write down the state space and transition graph of the sequence X n .
-(ii) State, with reasons, whether the process:
+\item (i) Write down the state space and transition graph of the sequence X_n .
+\item (ii) State, with reasons, whether the process:
 (a)
 (b)
 (c)
 is aperiodic.
 is reducible.
 admits a stationary distribution.
-[2]
-[3]
+
+
 Consider j > i > 0.
-(iii) Derive an expression for the number of upward movements in the sequence X n
+\item (iii) Derive an expression for the number of upward movements in the sequence X_n
 between t and (t + m) if X t = i and X t+m = j.
-[2]
+
 (iv) Derive expressions for the m-step transition probabilities p ij ( m ) .
-(v) Show how the one-step transition probabilities would alter if X n was restricted
-to non-negative numbers by introducing:
+(v) Show how the one-step transition probabilities would alter if X_n was restricted
+to non-negative numbers bY_introducing:
 (a)
 (b)
-[3]
+
 a reflecting boundary at zero.
 an absorbing boundary at zero.
-[2]
+
 (vi)
 For each of the examples in part (v), explain whether the transition
 probabilities p ij ( m ) would increase, decrease or stay the same.
 (Calculation of the transition probabilities is not required.)
 CT4 S2008—8
-[3]
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555
-Page 14Subject CT4 — Models Core Technical — September 2008 — Examiners’ Report
+Page 14 — Models Core Technical — September 2008 — Examiners’ Report
 11
-(i)
+\item (i)
 State space is the set of integers Ζ .
 Transition graph:
 p
 -2
 -1
 1- p
-(ii)
+\item (ii)
 (a)
 p
 p
@@ -97,10 +97,10 @@ for example, starting from an even number the
 process is only even after an even number of steps
 (b)
 The process is irreducible
-as the probabilities of X n increasing and decreasing by 1 are both
+as the probabilities of X_n increasing and decreasing by 1 are both
 non-zero so any state can be reached.
 (c)
-(iii)
+\item (iii)
 No stationary distribution will exist because the state space is infinite.
 Suppose there are u upward movements.
 Then there must be m − u downward movements,
@@ -111,15 +111,15 @@ m + j − i
 .
 2
 The maximum number of upward steps is m so the
-transition probability is zero if j – i > m .
+transition probabilitY_is zero if j – i > m .
 As the chain is periodic with period 2, it can only occupy
 state j after m steps if m + j − i is even.
-If m + j − i is even and j – i ≤ m then there must be u
+If m + j − i is even and $j– i \leq m$ then there must be u
 upward jumps and ( m − u ) downward jumps.
 ⎛ m ⎞
 These can be ordered in ⎜ ⎟ ways.
 ⎝ u ⎠
-Page 15Subject CT4 — Models Core Technical — September 2008 — Examiners’ Report
+Page 15 — Models Core Technical — September 2008 — Examiners’ Report
 So the transition probabilities are:
 p ij ( m )
 (v)
@@ -130,15 +130,15 @@ p (1 − p ) m − u
 ⎪
 0
 ⎩
-if j − i ≤ m and m + j − i even
+if j − i \leq m and m + j − i even
 otherwise
 EITHER
 In both cases the transition probabilities
-are unaltered unless X i = 0.
-(a) Reflecting boundary implies
-P[X i+1 = 1│X i = 0] = 1 (or p 01(1) = 1)
-(b) Absorbing boundary implies
-P[X i+1 = 0│X i = 0] = 1 (or p 00(1) = 1)
+are unaltered unless X_i = 0.
+(a) Reflecting boundarY_implies
+P[X_i+1 = 1│X_i = 0] = 1 (or p 01(1) = 1)
+(b) Absorbing boundarY_implies
+P[X_i+1 = 0│X_i = 0] = 1 (or p 00(1) = 1)
 OR
 A matrix solution for the transition probabilities is acceptable
 Reflecting:
@@ -227,7 +227,7 @@ p
 ⎝ :
 OR
 A diagrammatic solution is also acceptable:
-Page 16Subject CT4 — Models Core Technical — September 2008 — Examiners’ Report
+Page 16 — Models Core Technical — September 2008 — Examiners’ Report
 Reflecting
 1
 0
@@ -258,4 +258,4 @@ So the m-step transition probabilities would increase.
 In (b) any sample path which reaches zero would
 no longer be able to access state j
 so the transition probabilities would decrease.
-Page 17Subject CT4 — Models Core Technical — September 2008 — Examiners’ Report
+Page 17 — Models Core Technical — September 2008 — Examiners’ Report

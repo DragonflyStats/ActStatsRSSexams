@@ -1,12 +1,46 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
 CT4 A2010—812
-(i)
+\item (i)
 State three different methods of graduating raw mortality data and
-for each method give an example of a situation when the method would be
+for each method give an example of a situation wheN_the method would be
 appropriate.
  
 A life insurance company last priced its whole of life contract 30 years ago using a
 standard mortality table. The company wishes to establish whether recent mortality
-experience in the portfolio of business is in line with the pricing basis. These are the
+experience iN_the portfolio of business is in line with the pricing basis. These are the
 data:
 Recent Experience
 Extract from the standard table
@@ -15,7 +49,7 @@ Age last
 birthday Exposed to
 Risk during
 2009 Deaths during
-2009 x Number of
+2009 X_number of
 survivors to age
 x
 50
@@ -66,12 +100,12 @@ x
 30,795
 30,435
 30,039
-(ii) Test the goodness of fit of these data with the pricing basis and comment on
+\item (ii) Test the goodness of fit of these data with the pricing basis and comment on
 your results.
 [8]
-(iii) (a)
+\item (iii) (a)
 State, with reasons, one further test which you would deem appropriate
-to perform on these data.
+to perform oN_these data.
 (b)
 Carry out that test.
 
@@ -81,13 +115,13 @@ CT4 A2010—9
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 12
-(i)
+\item (i)
 By reference to a standard table – appropriate if data are scanty or a table of
 similar lives exists.
 Graphical graduation – appropriate if a “quick and dirty” result needed OR
 for scanty data where no other method is appropriate
 By parametric formula, if the experience is large.
-(ii)
+\item (ii)
 Standard table data
 Age x
 Number of survivors p x q x
@@ -203,9 +237,9 @@ E(1-q)
 0.3212
 0.3011
 Total 3.8356 3.8606
-Page 20Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+Page 20 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
 The null hypothesis is that the data come from a population where the
-mortality is that represented by the standard table.
+mortalitY_is that represented by the standard table.
 The test statistic
 ∑
 ( O − E ) 2
@@ -220,7 +254,7 @@ The upper 5\% point of the \chi^2 with 10 degrees of freedom is 18.31.
 The observed test statistic is 3.84.
 Since 3.84 < 18.31.
 We have insufficient evidence to reject the null hypothesis.
-(iii)
+\item (iii)
 ALTERNATIVE 1
 (a) The data easily pass the chi squared test, but there does seem to be a
 gradual drift of ( O – E ) figures from strongly positive to strongly
@@ -243,9 +277,9 @@ t = 1
 ⎝ n 1 ⎠
 ∑
 < 0.05
-The test fails at the 5\% level if G ≤ k *.
+The test fails at the 5\% level if G \leq k *.
 From the Gold Book k * = 1, so we reject the null hypothesis.
-Page 21Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+Page 21 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
 OR
 For t = 1
 ⎛ m ⎞ ⎛ 10 ⎞
@@ -262,9 +296,9 @@ So Pr[ t = 1] if the null hypothesis is true is 6/252 = 0.0238, which is less th
 ALTERNATIVE 2
 (a) The data easily pass the chi squared test, but there does seem to be
 a gradual drift of ( O – E ) figures from strongly positive to strongly
-negative. I would do a serial correlation test to see if the data displays
+negative. I would do a serial correlatioN_test to see if the data displays
 runs or clumps” of deviations of the same sign.
-(b) The calculations are shown in the table below
+(b) The calculations are shown iN_the table below
 x z x
 z x +1
 A = z x − z
@@ -362,7 +396,7 @@ ALTERNATIVE 3
 Page 22
 (a) Do the signs test to detect overall bias.
 (b) Under the null hypothesis, the number of positive signs
-amongst the z x s is distributed Binomial (10, 1⁄2 ).Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+amongst the z x s is distributed Binomial (10, 1⁄2 ). %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
 We observe 5 positive signs.
 The probability of obtaining 5 or more positive signs is 0.623
 OR
@@ -438,9 +472,9 @@ So the value of the test statistic is
 = 0.09846 .
 269.38
 Using a 5\% level of significance,
-we see that − 1.96 < 0.09846 < 1.96.
+we see that $− 1.96 < 0.09846 < 1.96$.
 We do not reject the null hypothesis.
-Page 23Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+Page 23 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
 ALTERNATIVE 5
 (a) To check for outliers we do the individual standardised
 deviations test.
@@ -451,7 +485,7 @@ we would expect the individual deviations to be distributed Normal
 and therefore only 1 in 20 z x s should have absolute magnitudes
 greater than 1.96
 OR
-none should lie outside the range (–3, +3)
+none should lie outside the range $(–3, +3)$
 OR
 or diagram showing split of deviations actual versus expected.
 Looking at the z x s we see that the largest individual deviation
@@ -460,8 +494,8 @@ Since this is less in absolute magnitude than 1.96 we cannot reject the
 null hypothesis.
 In part (ii) credit was only given for the null hypothesis if the wording used by the candidate
 indicates that (s)he understands that it is the mortality underlying the observed data that is
-not significantly different from that in the standard table, or that the standard table
-“represents” the mortality in the observed data. The null hypothesis is not that the mortality
-in the observed data is the same as that in the standard table – as it will normally not be.
+not significantly different from that iN_the standard table, or that the standard table
+“represents” the mortalitY_iN_the observed data. The null hypothesis is not that the mortality
+iN_the observed data is the same as that iN_the standard table – as it will normally not be.
 END OF EXAMINERS’ REPORT
 Page 24
