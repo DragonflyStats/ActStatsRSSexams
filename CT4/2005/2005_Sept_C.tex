@@ -1,0 +1,229 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%55A6
+A Markov jump process X t with state space S = {0, 1, 2,
+transition rates:
+ii
+=
+i,i+1
+ij
+=
+= 0
+for 0 i N 1
+for 0 i N 1
+, N} has the following
+otherwise
+(i) Write down the generator matrix and the Kolmogorov forward equations (in
+component form) associated with this process.
+
+(ii) Verify that for 0
+p ij ( t ) = e
+i
+t
+N
+1 and for all j
+i, the function
+( t ) j i
+( j i )!
+is a solution to the forward equations in (i).
+(iii)
+A7
+
+Identify the distribution of the holding times associated with the jump process.
+
+[Total 7]
+A time-inhomogeneous Markov jump process has state space {A, B} and the
+transition rate for switching between states equals 2t, regardless of the state currently
+occupied, where t is time.
+The process starts in state A at t = 0.
+(i)
+(ii)
+Calculate the probability that the process remains in state A until at least
+time s.
+Show that the probability that the process is in state B at time T, and that it is
+in the first visit to state B, is given by T 2 exp
+(iii)
+
+T 2
+.
+
+(a) Sketch the probability function given in (ii).
+(b) Give an explanation of the shape of the probability function.
+(c) Calculate the time at which it is most likely that the process is in its
+first visit to state B.
+
+[Total 11]
+CT4 S2005
+4104 Questions
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+A6 The generator matrix is
+(i)
+September 2005
+Examiners Report
+0
+.
+.
+.
+A
+.
+.
+,
+.
+0
+0
+all other entries being zero
+The Kolmogorov equations are P ( t )
+P ( t ) A .
+In a component form the forward equations read
+(ii)
+p ii ( t ) p ii ( t )
+p ij ( t ) p ij ( t )
+p iN ( t ) p i , N 1 ( t ).
+for 0 i
+N 1
+for i < j < N
+p i , j 1 ( t )
+Differentiating the function given in the question, we get first for i = j,
+p ii ( t )
+e t ,
+while for i < j
+p ij ( t )
+N,
+e
+t
+( t ) j i
+( j i )!
+e
+t
+( t ) j i 1
+( j i 1)!
+We can then check that the above satisfy the forward equations.
+(iii)
+For i = j(<N), the solution in (ii) implies that p ii ( t ) e
+distribution of the holding times T 0 , T 1 ,..., T N
+.
+1
+t
+, so that the
+is exponential with parameter
+For i = N, this is obviously not true; once the chain reaches state N, it stays
+there forever.
+Page 10Subject CT4
+A7
+(i)
+Models
+September 2005
+d
+P ( t )
+dt AA
+2 t P AA ( t )
+d
+ln P AA ( t )
+dt
+2 t
+s 2
+ln P AA ( s )
+constant
+We know P AA (0) 1 , hence constant
+Hence, P AA ( s ) exp
+(ii)
+Examiners Report
+0
+s 2
+P(in first visit to B at time T in state A at t = 0)
+T
+0
+P (remains in A to time s )
+P(transition to B in time s, s + ds)
+P(remains in B to time T) ds
+T
+P AA ( s ) 2 s P BB ( s , T ) ds
+s 0
+Using the result from part (i) and the similar result for P BB with boundary
+condition P BB (s, s) = 1, this gives us:
+T
+e
+s 2
+2 s e
+T 2 s 2
+ds
+s 0
+T
+2 s e
+T 2
+ds
+s 0
+e
+T 2
+T 2
+Page 11Subject CT4
+(a)
+September 2005
+Examiners Report
+The sketch should be shaped like:
+(iii)
+Models
+Time
+(b)
+Commentary:
+Initially probability increases from 0 at T = 0, and
+accelerates as the transition rate from A to B increases.
+However, as transitions increase, it becomes more likely that the
+process has already visited state B and jumped back to A.
+Therefore the probability of being in the first visit to B tends
+(exponentially) to zero.
+(c)
+Differentiate to find turning point:
+d
+e
+dt
+t 2
+t 2
+2 t e
+t 2
+2 t 3 e
+t 2
+set derivative equal to zero
+e
+t 2
+2 t (1 t 2 ) 0
+implies t = 1 for a positive solution
+and, from above analysis, this is clearly a maximum.
+Page 12Subject CT4
+Models
