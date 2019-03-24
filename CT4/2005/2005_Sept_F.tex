@@ -1,0 +1,191 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+B6
+Studies of the lifetimes of a certain type of electric light bulb have shown that the
+probability of failure, q 0 , during the first day of use is 0.05 and after the first day of
+use the force of failure , x , is constant at 0.01.
+(i) Calculate the probability that a light bulb will fail within the first 20 days. 
+(ii) Calculate the complete expectation of life (in days) of:
+(a)
+(b)
+a one-day old light bulb
+a new light bulb
+
+(iii)
+Comment on the difference between the complete expectations of life
+calculated in (ii) (a) and (b).
+
+[Total 11]
+END OF PAPER
+CT4 S2005
+9
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+B6 Let the probability of failure within the first 20 days be 20 q 0 .
+(i)
+September 2005
+Examiners Report
+We have:
+20 q 0
+1
+20 p 0
+1 (1
+1
+1 p 0 . 19 p 1
+1 q 0 ) exp(
+19 )
+1 0.95exp( 19 0.01)
+1 0.95exp( 0.19)
+1 0.95(0.82696)
+which is 0.21439.
+(ii)
+(a)
+The complete expectation of life of a one-day old light bulb, e 1 is
+given by
+e 1
+t p 1 dt
+0
+e
+0.01 t
+dt
+0
+Integrating, this gives
+1
+e
+0.01
+e 1
+1
+0 1
+0.01
+0.01 t
+0
+= 100 days.
+(b)
+The complete expectation of life of a new light bulb, e 0 is given by
+1
+e 0
+t p 0 dt
+0
+t p 0 dt
+0
+t p 0 dt .
+(*)
+1
+Alternative 1
+Assume a uniform distribution of failure times between exact ages 0
+and 1,
+the first term in (*) is equal to
+Page 19Subject CT4
+Models
+September 2005
+1
+1 1 p 0
+2
+1
+1 (1
+2
+Examiners Report
+1 q 0 )
+1
+(1 0.95)
+2
+0.975
+The second term is equal to
+1 p 0
+t p 1 dt
+0.95(100)
+0
+(using the result from part (i) above).
+Therefore:
+e 0 0.975 100 0.95 95.975 days.
+Alternative 2
+Assume a constant force of failure between exact ages 0 and 1
+Let this constant force be .
+Then
+1
+1 p 0
+exp
+ds
+exp(
+)
+0
+1
+1 q 0
+0.95.
+So that
+exp(
+) 0.95
+and
+log(0.95) 0.0513.
+Thus the first term on the right-hand side of (*) is
+Page 20Subject CT4
+Models
+September 2005
+1
+Examiners Report
+1
+t p 0 dt
+0
+exp( 0.0513 t ) dt
+0
+1
+1
+exp( 0.0513 t ) 0
+0.0513
+1
+exp( 0.0513) 1
+0.0513
+0.97478,
+and the second term is equal to
+1 p 0
+t p 1 dt
+0.95(100)
+0
+(using the result from part (i) above).
+So that
+e 0
+(iii)
+0.97478 100 0.95 95.97478 days.
+The complete expectation of life of a light bulb at any age is an average of the
+future lifetimes of all bulbs which have not failed before that age.
+The value of e 0 is lower than e 1 because the average e 0 includes the very
+short lifetimes of the relatively large proportion of bulbs which fail in the first
+day, which deflate the average, whereas e 1 excludes these.
+END OF EXAMINERS REPORT
+Page 21
