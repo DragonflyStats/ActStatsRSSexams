@@ -1,0 +1,462 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+CT4 S2011—610
+(i)
+Describe three shortcomings of the χ 2 test for comparing crude estimates
+of mortality with a standard table and why they may occur.
+
+The following table gives an extract of data from a mortality investigation conducted
+in the rural highlands of a developed country. The raw data have been graduated by
+reference to a standard mortality table of assured lives.
+(ii)
+Expected
+deaths Observed
+deaths z x z x 2
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70 36.15
+28.92
+31.34
+38.01
+26.88
+37.59
+33.85
+26.66
+22.37
+18.69
+18.24 35
+24
+27
+35
+32
+36
+34
+32
+26
+33
+22 –0.191
+–0.915
+–0.775
+–0.488
+0.988
+–0.259
+0.026
+1.034
+0.767
+3.310
+0.880 0.037
+0.837
+0.601
+0.238
+0.975
+0.067
+0.001
+1.070
+0.589
+10.956
+0.775
+For each of the three shortcomings you described in (i):
+(a)
+(b)
+(iii)
+Age
+x
+name a test that would detect that shortcoming.
+carry out the test on the data above.
+Comment on your results from (ii).
+CT4 S2011—7
+[12]
+
+[Total 18]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Question 10
+(i)
+Outliers. Since all the information is summarised in one number, a few large
+deviations may be offset or hidden by a large number of small deviations.
+Small bias. Since the squares of the differences are used, the sign of the differences
+are lost, hence small but consistent bias above or below may not be noticed.
+Clumps or runs. Again because the squares of the differences are used, the sign of the
+differences are lost, so significant groups of (clumps or runs) of bias over ranges of
+the data may not be detected.
+(ii)
+(a)
+A few large deviations or outliers – Individual Standardised Deviations Test.
+Small but consistent bias – Signs Test OR Cumulative Deviations Test.
+Clumps or runs of bias over ranges of the data - Grouping of Signs Test OR
+Serial Correlations Test.
+(b)
+Individual Standardised Deviations Test
+Under the null hypothesis that the standard table rates OR graduated
+rates are the true rates underlying the observed data
+we would expect individual deviations to be distributed Normal (0,1).
+EITHER only 1 in 20 z x should lie above 1.96 in absolute value
+OR none should lie above 3 in absolute value
+OR table (see below) showing split of deviations, actual versus expected.
+Expected
+Observed
+( −∞ , − 2) ( −2, −1) (−1, 0) (0, 1) (1, 2) ( 2, +∞ )
+0.22
+1.54 3.74 3.74 1.54
+0.22
+0
+0
+5
+4
+1
+1
+The largest deviation we have here is 3.31.
+This is well outside the range −1.96 to 1.96 so we have reason to reject the
+null hypothesis.
+Page 13%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
+EITHER Signs Test OR Cumulative Deviations Test
+Signs Test
+Under the null hypothesis that the standard table rates OR graduated
+rates are the true rates underlying the observed data
+The number of positive signs amongst the z x is distributed Binomial (11, 1⁄2 )
+We observe 6 positive signs.
+EITHER the probability of observing 6 or more positive signs in 11
+observations is 0.5
+OR the probability of observing exactly 6 positive signs is 0.2256.
+which implies that Pr[observing 6 or more] > 0.025 (a two-tailed test),
+so we have no evidence to reject the null hypothesis.
+Cumulative Deviations Test
+Under the null hypothesis that the standard table rates OR graduated
+rates are the true rates underlying the observed data,
+the test statistic
+∑ (Observed deaths - Expected deaths)
+x
+∑ Expected deaths
+~ Normal(0,1)
+x
+The calculations are shown in the table below.
+Age x
+Page 14
+Expected deaths
+Observed – expected
+deaths
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70 36.15
+28.92
+31.34
+38.01
+26.88
+37.59
+33.85
+26.66
+22.37
+18.69
+18.24 − 1.15
+− 4.92
+− 4.34
+− 3.01
+5.12
+− 1.59
+0.15
+5.34
+3.63
+14.31
+3.76
+Totals 318.70 17.30%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
+The value of the test statistic is
+17.30
+= 0.969
+318.70
+and, since – 1.96 < test statistic < +1.96 we have insufficient evidence to
+reject the null hypothesis.
+EITHER Grouping of Signs Test OR Serial Correlations Test
+Grouping of Signs Test
+Under the null hypothesis that the standard table rates OR the graduated rates
+are the true rates underlying the observed data
+G = Number of groups of positive deviations = 2
+m = number of deviations = 11
+n 1 = number of positive deviations = 6
+n 2 = number of negative deviations = 5
+THEN EITHER
+We want k * the largest k such that
+⎛ n 1 − 1 ⎞⎛ n 2 + 1 ⎞
+k ⎜
+⎟⎜
+⎟
+⎝ t − 1 ⎠⎝ t ⎠
+⎛ m ⎞
+t = 1
+⎜ ⎟
+⎝ n 1 ⎠
+∑
+< 0.05
+The test fails at the 5% level if G ≤ k *.
+From the Gold Book k * = 1.
+So we have insufficient evidence to reject the null hypothesis.
+OR
+For t = 2
+⎛ n 1 − 1 ⎞ ⎛ 5 ⎞
+⎛ n 2 + 1 ⎞ ⎛ 6 ⎞
+⎜
+⎟ = ⎜ ⎟ = 5 and ⎜
+⎟ = ⎜ ⎟ = 15
+⎝ t − 1 ⎠ ⎝ 1 ⎠
+⎝ t ⎠ ⎝ 2 ⎠
+⎛ m ⎞ ⎛ 11 ⎞
+and ⎜ ⎟ = ⎜ ⎟ = 462
+⎝ n 1 ⎠ ⎝ 6 ⎠
+So Pr[ t = 2] if the null hypothesis is true is 75/462 = 0.162, which is greater
+than 5% so we have insufficient evidence reject the null hypothesis.
+Page 15%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
+Serial Correlations Test (lag 1)
+Under the null hypothesis that the standard table rates OR graduated
+rates are the true rates underlying the observed data.
+The calculations are shown in the tables below.
+EITHER USING SEPARATE MEANS FOR THE z x AND z x + 1
+Age z x z x A = z x − z
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70 –0.191
+–0.915
+–0.775
+–0.488
+0.988
+–0.259
+0.026
+1.034
+0.767
+3.310
+0.880 –0.915
+–0.775
+–0.488
+0.988
+–0.259
+0.026
+1.034
+0.767
+3.310
+0.880 –0.541
+–1.264
+–1.125
+–0.838
+0.638
+–0.609
+–0.324
+0.685
+0.418
+2.960
+0.531
+z 0.350 0.457
+B = z x + 1 − z
+AB
+A 2 B 2
+–1.372
+–1.232
+–0.945
+0.531
+–0.716
+–0.431
+0.577
+0.311
+2.853
+0.424 0.742
+1.558
+1.063
+–0.445
+–0.457
+0.262
+–0.187
+0.213
+1.192
+1.254 0.293
+1.599
+1.265
+0.702
+0.407
+0.371
+0.105
+0.469
+0.175
+8.764 1.881
+1.518
+0.893
+0.282
+0.513
+0.186
+0.333
+0.097
+8.141
+0.179
+Average 0.520 1.415 1.402
+0.520/√(1.415*1.402) = 0.369.
+Test 0.369 (√11) = 1.223 against Normal (0,1), and, since 1.223 < 1.645, we
+do not reject the null hypothesis.
+OR USING THE FORMULA IN THE GOLD BOOK
+Page 16
+Age z x z x A = z x − z
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70 –0.191
+–0.915
+–0.775
+–0.488
+0.988
+–0.259
+0.026
+1.034
+0.767
+3.310
+0.880 –0.915
+–0.775
+–0.488
+0.988
+–0.259
+0.026
+1.034
+0.767
+3.310
+0.880 –0.589
+–1.313
+–1.173
+–0.886
+0.590
+–0.657
+–0.372
+0.636
+0.370
+2.912
+0.483
+z 0.350 0.457
+B = z x + 1 − z
+–1.313
+–1.173
+–0.886
+0.590
+–0.657
+–0.372
+0.636
+0.370
+2.912
+0.483
+Sum
+AB
+A 2
+0.773
+1.540
+1.039
+–0.523
+–0.388
+0.245
+–0.237
+0.235
+1.076
+1.405 0.347
+1.723
+1.376
+0.785
+0.348
+0.432
+0.138
+0.432
+0.137
+8.481
+0.233
+0.517 1.310%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
+1
+(5.617)
+10
+= 0.395 .
+1
+(14.405)
+11
+Test 0.395 (√11) = 1.309 against Normal (0,1), and, since 1.309 < 1.645, we
+do not reject the null hypothesis.
+(iii)
+The result of the Individual Standard Deviation test suggests outliers in the data.
+The actual and expected deaths are relatively low, suggesting that the population in
+the rural area is not very large.
+The ages under consideration are also high, exacerbating this scarcity of data.
+However there are at least five (actual/expected) deaths in each age group, so the data are adequate.
+So this is unlikely to account for the outlier at age 69 years, which should be investigated further.
+The period of the observation is not stated and could affect the results, as, for example
+if the observation only covered one winter a particularly bad influenza epidemic may
+have caused more deaths than usual (although this would likely impact all ages in this
+range similarly).
+Both the signs and grouping of signs test suggest no bias over the whole or part of the
+data.
+However there does seem to be a drift towards the number of observed deaths
+exceeding the expected at higher ages, and the number observed being smaller than
+expected at younger ages.
+Perhaps if a larger extract from the investigation were considered or the
+table in its entirety, bias may be observed.
+Answers to this question were disappointing. Too many answers to part (i) were sketchy and
+failed to explain WHY the chi-squared test sometimes fails to detect small bias, outliers or
+“runs” of deviations of the same sign. In part (ii) some candidates failed to relate the tests they were performing to the deficiencies of the chi-squared test identified in part (i); other
+candidates performed two tests for the same deficiency (only the higher scoring of which
+received credit). Many candidates lost marks for vagueness in the execution of the tests.
+Although not all the points listed above were required in part (iii) for full credit, the number
+of marks available indicated that candidates were expected to go beyond the basic results of
+the tests. Disappointingly few did this.
+Page 17%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
