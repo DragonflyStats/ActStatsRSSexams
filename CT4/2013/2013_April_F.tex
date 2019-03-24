@@ -1,3 +1,38 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
 CT4 A2013–611
 (i)
 Explain what is meant by a time inhomogeneous Markov chain and give an
@@ -21,7 +56,7 @@ most one claim can be made per month and claims are independent.
 level.
 
 (v) Discuss the appropriateness of the model.
-END OF PAPER
+
 CT4 A2013–7
 
 %% -- [Total 15]
@@ -67,8 +102,8 @@ Prob [more than one claim in a year] = 1 – (0.6127 + 0.3064) = 0.0809
 0
 0.6127
 0 ⎟
-π ⎜
-=π
+\pi ⎜
+=\pi
 ⎜ 0.0809 0.3064
 0
 0.6127 ⎟
@@ -76,24 +111,24 @@ Prob [more than one claim in a year] = 1 – (0.6127 + 0.3064) = 0.0809
 ⎟
 0.0809 0.3064 0.6127 ⎠
 ⎝ 0
-π 1 = 0.3873 π 1 + 0.3873 π 2 + 0.0809 π 3 (1)
-π 2 = 0.6127 π 1 + 0.3064 π 3 + 0.0809 π 4
-π 3 = 0.6127 π 2 + 0.3064 π 4 (2)
+\pi 1 = 0.3873 \pi 1 + 0.3873 \pi 2 + 0.0809 \pi 3 (1)
+\pi 2 = 0.6127 \pi 1 + 0.3064 \pi 3 + 0.0809 \pi 4
+\pi 3 = 0.6127 \pi 2 + 0.3064 \pi 4 (2)
 (3)
-π 4 = 0.6127 π 3 + 0.6127 π 4 (4)
-π 1 + π 2 + π 3 + π 4 = 1 . (5)
-From (4) π 4 ( 1 − 0.6127 ) = 0.6127 π 3
-so π 4 = 1.5820 π 3
-From (3) π 2 = π 3 ( 1 − 0.3064 × 1.5820 ) / 0.6127
-so π 2 = 0.8411 π 3
-and (1) gives π 1 = π 3 (0.0809 + 0.3873 × 0.8411) / (1 − 0.3837)
+\pi 4 = 0.6127 \pi 3 + 0.6127 \pi 4 (4)
+\pi 1 + \pi 2 + \pi 3 + \pi 4 = 1 . (5)
+From (4) \pi 4 ( 1 − 0.6127 ) = 0.6127 \pi 3
+so \pi 4 = 1.5820 \pi 3
+From (3) \pi 2 = \pi 3 ( 1 − 0.3064 × 1.5820 ) / 0.6127
+so \pi 2 = 0.8411 \pi 3
+and (1) gives \pi 1 = \pi 3 (0.0809 + 0.3873 × 0.8411) / (1 − 0.3837)
 so
 Page 18
-π 1 = 0.6637 π 3Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Using (5) we get π 3 ( 0.6637 + 0.8411 + 1 + 1.5820 ) = 1
-so π 3 = 0.2447
-so π 4 = 1.5820 × 0.2447
-π 4 = 0.3871
+\pi 1 = 0.6637 \pi 3Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Using (5) we get \pi 3 ( 0.6637 + 0.8411 + 1 + 1.5820 ) = 1
+so \pi 3 = 0.2447
+so \pi 4 = 1.5820 × 0.2447
+\pi 4 = 0.3871
 In the long run 24.47% of policyholders are at the 25% level.
 (v)
 Equal probability of an accident in every month is pretty unlikely.

@@ -1,36 +1,77 @@
-Outside an apartment block there is a small car park with three parking spaces. A
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+\item Outside an apartment block there is a small car park with three parking spaces. A
 prospective purchaser of an apartment in the block is concerned about how often he
 would return in his car to find that there was no empty parking space available. He
 decides to model the number of parking spaces free at any time using a time
 homogeneous Markov Jump Process where:
-• The probability that a car will arrive seeking a parking space in a short interval
+\begin{itemize}
+\item The probability that a car will arrive seeking a parking space in a short interval
 dt is A.dt + o(dt).
-• For each car which is currently parked, the probability that its owner drives the
+\item For each car which is currently parked, the probability that its owner drives the
 car away in a short interval dt is B.dt + o(dt).
-where A, B > 0.
-(i) Specify the state space for the above process. 
-(ii) Draw a transition graph of the process. 
-(iii) Write down the generator matrix for the process. 
-(iv) Derive the probability that, given all the parking spaces are full, they will
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where $A, B > 0$.
+\begin{enumerate}[(i)]
+\item (i) Specify the state space for the above process. 
+\item (ii) Draw a transition graph of the process. 
+\item (iii) Write down the generator matrix for the process. 
+\item (iv) Derive the probability that, given all the parking spaces are full, they will
 remain full for at least the next two hours. 
-(v) Explain what is meant by a jump chain. 
-(vi) Specify the transition matrix for the jump chain associated with this process.
+\item (v) Explain what is meant by a jump chain. 
+\item (vi) Specify the transition matrix for the jump chain associated with this process.
 
 Suppose there are currently two empty parking spaces.
-(vii)
+\item (vii)
 Determine the probability that all the spaces become full before any cars are
 driven away.
-
+\item
 (viii) Derive the probability that the car park becomes full before the car park
 becomes empty.
-(ix)
+\item (ix)
 CT4 S2013–5
 
 Comment on the prospective purchaser’s assumptions regarding the arrival
 and departure of cars.
+\end{enumerate}
+\end{enumerate}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 8
 (i)
 The state space is {0,1,2,3} where the number indicates the number of available
@@ -179,10 +220,8 @@ Page 15%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 A time inhomogeneous model may be more appropriate.
 Residents may come and go at particular times, for example if they drive to work.
 They are unlikely to be moving their car as regularly in the middle of the night
-Independent arrivals questionable because a family might have two cars
-arriving/leaving at the same time OR people might arrive and wait until a space
-becomes available thus leading to a queue
-The Markov assumption may not be valid because neighbours may know from at
+Independent arrivals questionable because a family might have two cars arriving/leaving at the same time OR people might arrive and wait until a space
+becomes available thus leading to a queue The Markov assumption may not be valid because neighbours may know from at
 experience when cars are moved and time their arrival accordingly.
 The model assumes those parking cars are competent drivers, and do not park so as to
 take up 2 spaces.

@@ -1,3 +1,38 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
 A bus route in a large town has one bus scheduled every 15 minutes. Traffic
 conditions in the town are such that the arrival times of buses at a particular bus stop
 may be assumed to follow a Poisson process.
@@ -23,27 +58,21 @@ a particular purpose.
 A city has care homes for the elderly. When an elderly person in the city is no longer
 able to cope alone at home they can move into a care home where they will be looked
 after until they die.
-The city council runs some of the care homes and is reviewing the number of rooms it
-needs in all the council-run care homes. The following model has been proposed.
-The age distribution of the city population over the age of 60 is taken from the latest
-census. Statistics from the national health service on the average age of entry into a
-care home and the proportion of elderly who go into council-run care homes are
-applied to the current population to give the rate at which people enter care homes. A
-recent national mortality table is then applied to give the rate at which care home
-residents die.
+The city council runs some of the care homes and is reviewing the number of rooms it needs in all the council-run care homes. The following model has been proposed.
+The age distribution of the city population over the age of 60 is taken from the latest census. Statistics from the national health service on the average age of entry into a
+care home and the proportion of elderly who go into council-run care homes are applied to the current population to give the rate at which people enter care homes. A
+recent national mortality table is then applied to give the rate at which care home residents die.
 (ii)
 5
 Discuss the suitability of this model.
 
 %%--------------9]
-A motor insurer offers a No Claims Discount scheme which operates as follows. The
-discount levels are {0%, 25%, 50%, 60%}. Following a claim-free year a
-policyholder moves up one discount level (or stays at the maximum discount). After
-a year with one or more claims the policyholder moves down two discount levels (or
-moves to, or stays in, the 0% discount level).
+A motor insurer offers a No Claims Discount scheme which operates as follows. The discount levels are $\{0\%,25\%, 50\%, 60\%\}$. Following a claim-free year a
+policyholder moves up one discount level (or stays at the maximum discount). After a year with one or more claims the policyholder moves down two discount levels (or
+moves to, or stays in, the 0\% discount level).
+
 The probability of making at least one claim in any year is 0.2.
-(i) Write down the transition matrix of the Markov chain with state space {0%,
-25%, 50%, 60%}.
+(i) Write down the transition matrix of the Markov chain with state space $\{0\%,25\%, 50\%, 60\%\}$.
 
 (ii) State, giving reasons, whether the process is:
 (a)
@@ -52,12 +81,11 @@ irreducible.
 aperiodic.
 
 (iii)
-Calculate the proportion of drivers in each discount level in the stationary
-distribution.
+Calculate the proportion of drivers in each discount level in the stationary distribution.
 
-The insurer introduces a “protected” No Claims Discount scheme, such that if the
-60% discount is reached the driver remains at that level regardless of how many
+The insurer introduces a “protected” No Claims Discount scheme, such that if the 60\% discount is reached the driver remains at that level regardless of how many
 claims they subsequently make.
+
 (iv)
 CT4 S2013–3
 Explain, without doing any further calculations, how the answers to parts (ii)
@@ -127,7 +155,7 @@ and the proportion of drivers at each level is
 20/109 = 0.18349
 16/109 = 0.14679
 64/109 = 0.58716.
-The 60% discount level becomes an absorbing state and so it is no longer irreducible.
+The 60\% discount level becomes an absorbing state and so it is no longer irreducible.
 However it is still aperiodic because you cannot get out of the absorbing state 60%
 and the other states still have no period.
 The process would now be stationary when all drivers are in the absorbing 60%
