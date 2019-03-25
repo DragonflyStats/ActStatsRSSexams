@@ -35,8 +35,8 @@
 \begin{enumerate}
 
 
-8
-Let X 1 denote the mean of a random sample of size n from a normal population with
+%%--- Question 8
+\item Let $X_1$ denote the mean of a random sample of size n from a normal population with
 mean
 2
 1 ,
@@ -52,9 +52,10 @@ Define W as the weighted average of the sample means
 W
 X 1 (1
 ) X 2
-(i) Show that W is an unbiased estimator of . [1]
-(ii) Obtain an expression for the mean square error of W. [2]
-(iii) Show that the value of
+\begin{enumerate}[(i)]
+\item (i) Show that W is an unbiased estimator of . [1]
+\item (ii) Obtain an expression for the mean square error of W. [2]
+\item (iii) Show that the value of
 given by
 2
 2
@@ -66,25 +67,26 @@ for which W has minimum mean square error is
 ,
 and verify that the optimum corresponds to a minimum.
 9
-[3]
+\item 
 (iv) Consider the special case when the variances of the two random samples are
 equal to a common value 2 . State (do not derive) the maximum likelihood
 estimator of calculated from the combined samples, and compare it with the
 estimator obtained in (iii).
-[2]
-[Total 8]
-(i) Show that for continuous random variables X and Y:
-E[Y] = E[E(Y|X)].
-(ii)
+\end{enumerate}
+
+\item 
+
+\begin{enumerate}[(i)]
+\item (i) Show that for continuous random variables X and Y:
+\[E[Y] = E[E(Y|X)].\]
+\item (ii)
 Suppose that a random variable X has a standard normal distribution, and the
 conditional distribution of a Poisson random variable Y, given the value of
 X = x, has expectation g(x) = x 2 + 1.
-Determine E[Y] and Var[Y].
-CT3 S2006
-[3]
+Determine $E[Y]$ and $Var[Y]$.
+\end{enumerate}
 4
-[5]
-[Total 8]10
+\item %%-- Queation 10
 Let (X 1 , X 2 ,
 , X n ) be a random sample of a gamma(4.5, ) random variable, with
 sample mean X .
@@ -92,13 +94,15 @@ sample mean X .
 (ii)
 2
 9 n .
-(a) Using moment generating functions, show that 2 nX ~
-(b) Construct a 95% confidence interval for , based on X and the result
+\begin{enumerate}[(i)]
+\item (a) Using moment generating functions, show that 2 nX ~
+\item (b) Construct a 95% confidence interval for , based on X and the result
 in (i)(a) above.
-(c) Evaluate the interval in (i)(b) above in the case for which a random
+\item (c) Evaluate the interval in (i)(b) above in the case for which a random
 sample of 10 observations gave a value
 x i 21.47
-[9]
+\end{enumerate}
+%%%%%%%%%%%%%%
 (a) Show that the maximum likelihood estimator of
 is given by
 4.5
@@ -120,47 +124,54 @@ x i 225.3.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%8
 (i)
-E ( W ) = E ( α X 1 + (1 − α ) X 2 )
-= α E ( X 1 ) + (1 − α ) E ( X 2 ) = αμ + (1 − α ) μ = μ
+\begin{eqnarray*}
+E ( W ) &=& E ( \alpha X 1 + (1 − \alpha ) X 2 )\\
+&=& \alpha E ( X 1 ) + (1 − \alpha ) E ( X 2 ) \\ &=& \alphaμ + (1 − \alpha ) μ \\ &=& μ\\
+\end{eqnarray*}
+
 Therefore W is unbiased.
 (ii)
 MSE(W) = var(W) + {bias(W)} 2
 W is unbiased
-∴ MSE(W) = var(W)
-= var( α X 1 + (1 − α ) X 2 )
-= α 2 var( X 1 ) + (1 − α ) 2 var( X 2 ) (independent samples)
-= α 2
+\begin{eqnarray*} 
+MSE(W) &=& var(W)\\
+&=& var( \alpha X 1 + (1 − \alpha ) X 2 )\\
+&=& \alpha 2 var( X 1 ) + (1 − \alpha ) 2 var( X 2 ) (independent samples)\\
+&=& \alpha 2
+\end{eqnarray*}
+
+
 (iii)
-σ 1 2
-σ 2
-+ (1 − α ) 2 2
+\sigma 1 2
+\sigma 2
++ (1 − \alpha ) 2 2
 n
 n
-σ 2
-σ 2
+\sigma 2
+\sigma 2
 d MSE
-= 2 α 1 − 2(1 − α ) 2
-d α
+= 2 \alpha 1 − 2(1 − \alpha ) 2
+d \alpha
 n
 n
 d MSE
-= 0 ⇒ ( σ 1 2 + σ 2 2 ) α = σ 2 2
-d α
-Page 6Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
-σ 22
-∴ α=
-σ 1 2 + σ 2 2
+= 0 ⇒ ( \sigma 1 2 + \sigma 2 2 ) \alpha = \sigma 2 2
+d \alpha
+%%---Page 6Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
+\sigma 22
+∴ \alpha=
+\sigma 1 2 + \sigma 2 2
 d 2 MSE
-d α 2
+d \alpha 2
 (iv)
 = 2
-σ 1 2
-σ 2
+\sigma 1 2
+\sigma 2
 + 2 2 > 0 ∴ minimum
 n
 n
 The maximum likelihood estimator of μ in the special case with
-σ 1 2 = σ 2 2 = σ 2 is
+\sigma 1 2 = \sigma 2 2 = \sigma 2 is
 μ ˆ =
 =
 nX + nX 2
@@ -174,16 +185,16 @@ X 1 + X 2
 2
 2
 This is the same as W since
-α=
+\alpha=
 9
 (i)
-σ 2 2
-σ 1 2
-+ σ 2 2
+\sigma 2 2
+\sigma 1 2
++ \sigma 2 2
 =
-σ 2
+\sigma 2
 2
-σ +σ
+\sigma +\sigma
 2
 =
 1
@@ -193,27 +204,34 @@ This is the same as W since
 2
 2
 2
-E [ E ( Y | X )] = ∫ E [ Y | X = x ] f ( x ) dx
-= ∫ ∫ yf ( y | x ) dy f ( x ) dx
-= ∫ ∫ y f ( y | x ) f ( x ) dydx
+E [ E ( Y | X )] = \int E [ Y | X = x ] f ( x ) dx
+= \int \int yf ( y | x ) dy f ( x ) dx
+= \int \int y f ( y | x ) f ( x ) dydx
 but f ( y | x ) f ( x ) = f ( x , y ), the joint pdf of X and Y , so
-E [ E ( Y | X )] = ∫ ∫ y f ( x , y ) dxdy = E [ Y ]
+\[E [ E ( Y | X )] = \int \int y f ( x , y ) dxdy = E [ Y ]\]
 (ii)
-E [ Y ] = E [ E ( Y | X )] = E [ X 2 + 1]
-= V [ X ] + { E [ X ]} 2 + 1 = 1 + 0 + 1 = 2
+\begin{eqnarray*}
+E [ Y ] &=& E [ E ( Y | X )] \\
+= E [ X 2 + 1]\\
+= V [ X ] + { E [ X ]} 2 + 1 \\
+= 1 + 0 + 1 \\
+= 2\\
+\end{eqnarray*}
+
 Var [ Y ] = Var [ E ( Y | X )] + E [ Var ( Y | X )] = Var [ X 2 + 1] + E [ X 2 + 1]
 = Var [ X 2 ] + E [ X 2 ] + 1
 but Z = X 2 is χ 1 2 so has variance 2 and expectation 1
 Thus Var [ Y ] = 2 + 1 + 1 = 4
-Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
-10
+%%---Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
+\newpage
+%%--- Question10
 (i)
 (a)
-Mgf of X i is (1 – t / λ ) − 4.5 so mgf of
+Mgf of X i is (1 – t / \lambda ) − 4.5 so mgf of
 n
-∏ ( 1 − t / λ )
+∏ ( 1 − t / \lambda )
 − 4.5
-= ( 1 − t / λ )
+= ( 1 − t / \lambda )
 n
 ∑ X i
 is
@@ -221,7 +239,7 @@ i = 1
 − 4.5 n
 i = 1
 n
-Hence mgf of 2 λ ∑ X i = 2 λ nX is ( 1 − 2 λ t / λ )
+Hence mgf of 2 \lambda ∑ X i = 2 \lambda nX is ( 1 − 2 \lambda t / \lambda )
 − 4.5 n
 = ( 1 − 2 t )
 − 4.5 n
@@ -230,8 +248,8 @@ This is the mgf of a χ 2 variable — with 9n degrees of freedom.
 (b)
 b ⎞
 ⎛ a
-<λ<
-P ( a < 2 λ nX < b ) = 0.95 ⇒ P ⎜
+<\lambda<
+P ( a < 2 \lambda nX < b ) = 0.95 ⇒ P ⎜
 ⎟ = 0.95
 2 nX ⎠
 ⎝ 2 nX
@@ -243,7 +261,7 @@ where a and b are such that
 P χ 9 2 n < a = 0.025 and P χ 9 2 n > b = 0.025.
 b
 ⎛ a
-so a 95% CI for λ is given by ⎜
+so a 95% CI for \lambda is given by ⎜
 ,
 ⎝ 2 nX 2 nX
 (c)
@@ -260,35 +278,36 @@ CI is ⎜
 (ii)
 (a)
 (
-L ( λ ) ∝ λ 4.5 n exp −λ ∑ x i
+L ( \lambda ) ∝ \lambda 4.5 n exp −\lambda ∑ x i
 )
 so
-A ( λ ) = ( 4.5 n ) log λ − λ ∑ x i + constant
+A ( \lambda ) = ( 4.5 n ) log \lambda − \lambda ∑ x i + constant
 ⇒
 d A
-= 4.5 n / λ − ∑ x i
-d λ
+= 4.5 n / \lambda − ∑ x i
+d \lambda
 d 2 A
 Setting
-= 4.5 n / λ 2 so s . e .( λ ˆ ) ≅
+= 4.5 n / \lambda 2 so s . e .( \hat{\lambda}) ≅
 (b) −
-(c) 95% CI is λ ˆ ± 1.96 × s . e . λ ˆ
-d λ
+(c) 95% CI is \hat{\lambda}\pm 1.96 × s . e . \lambda ˆ
+d \lambda
 2
 {
-λ ˆ
+\lambda ˆ
 ( 4.5 n ) 1/ 2
 ( ) }
-In the case n = 100, Σx = 225.3,
+In the case n = 100, \sigmax = 225.3,
 Page 8
 4.5 n 4.5
 d A
 =
-= 0 ⇒ λ ˆ =
-d λ
-∑ X i XSubject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
+= 0 ⇒ \hat{\lambda}=
+d \lambda
+∑ X i X
+%%---- Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
 4.5 / 2.253
-λ ˆ = 4.5 / 2.253 = 1.9973 and s . e .( λ ˆ ) ≅
+\hat{\lambda}= 4.5 / 2.253 = 1.9973 and s . e .( \hat{\lambda}) ≅
 = 0.0942
 ( 450 ) 1/ 2
-so CI is 1.9973 ±(1.96 × 0.0942) i.e. (1.81 , 2.18).
+so CI is 1.9973 \pm(1.96 × 0.0942) i.e. (1.81 , 2.18).
