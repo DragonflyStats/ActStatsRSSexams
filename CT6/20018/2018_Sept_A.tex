@@ -25,8 +25,10 @@
 \setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
 \renewcommand{\baselinestretch}{1.3}
 \setcounter{MaxMatrixCols}{10}
-\begin{document} © Institute and Faculty of Actuaries1
-An actuary is simulating claim sizes, X, for a particular insurance policy. X follows
+\begin{document} 
+%%© Institute and Faculty of Actuaries1
+\begin{enumerate}
+\item An actuary is simulating claim sizes, X, for a particular insurance policy. X follows
 an exponential distribution with varying parameter λ, where λ can take one of three
 possible values.
 The table shows the distribution function of this external factor, and its impact on λ.
@@ -37,7 +39,8 @@ Probability
 Set out an algorithm to generate samples from X, using the inverse transform method.
 [5]
 2
-(i)
+\begin{enumerate}
+\item (i)
 State the three main components of a generalised linear model.
 [3]
 Consider the discrete random variable Y, with the following probability density
@@ -53,13 +56,14 @@ ny
 1 2
 y = 0, , ,...,1
 n n
-Show that Y belongs to the exponential family of distributions, specifying each
+\item Show that Y belongs to the exponential family of distributions, specifying each
 component.[4]
-(iii)
+\item (iii)
 State the canonical link function in this case.
-	
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Solutions
+\newpage 
+\noindent \textbf{Solutions}
 Q1
 For a given λ, we know that one can sample from X as
 1
@@ -89,8 +93,9 @@ U 1 ∈ ( 0.6,1 ]
 log U 2
 [1⁄2]
 [Total 5]
-This question was generally well answered, but a disappointing number of candidates used
-the probability density function, rather than the cumulative density function.
+
+%%This question was generally well answered, but a disappointing number of candidates used the probability density function, rather than the cumulative density function.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Q2
 (i)
 (ii)
@@ -125,9 +130,7 @@ a ( φ ) =
 (iii)
 [1]
 [1]
-[1]
-[1]
-[1]
+
 [1⁄2]
 [1⁄2]
 b =
@@ -140,9 +143,9 @@ Link function: g ( μ ) = ln 
 
  1 − μ  [1]
 [Total 8]
-Page 3Subject CT6 (Statistical Methods Core Technical) – September 2018 – Examiners’ Report
 Well prepared candidates were able to score highly here, although many candidates gave
 insufficiently detailed answers in part (i), and didn’t give expressions in part (ii) as a function
 of the correct variable e.g. leaving b(theta) as a function of mu.
 
 
+\end{document}
