@@ -37,11 +37,9 @@
 k (1 − p )
 Formulae and Tables page 9) with mean E [ N ] =
 and variance
-p
-k (1 − p )
+\[p^k (1 − p )\]
 .
-V [ N ] =
-p 2
+\[V [ N ] =p^2\]
 Each claim amount, X (in units of £1,000), is assumed to follow an exponential distribution with parameter $\lambda$ independently of each other claim amount and of the number of claims.
 
 Let S be the total of the claim amounts for the period of five years, in the case
@@ -52,13 +50,13 @@ Calculate the mean and the standard deviation of $S$ based on the above assumpti
 Now assume that:
 \begin{itemize}
 \item  N follows a Poisson distribution with parameter $\mu = 0.5$, that is, with the same mean as N above;
-\item  X follows a gamma distribution with parameters $\alpha = 2$ and $\lambda = 4$, that is, with the same mean as X above.
+\item  X follows a gamma distribution with parameters $\alpha = 2$ and $\lambda = 4$, that is, with the same mean as $X$ above.
 \end{itemize}
 
 10
 Calculate the mean and the standard deviation of S based on these
 assumptions.
-Compare the two sets of answers in \item  and \item  above.
+Compare the two sets of answers  above.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item The size of claims (in units of £1,000) arising from a portfolio of house contents
 insurance policies can be modelled using a random variable $X$ with probability density
@@ -77,7 +75,7 @@ a
 ⎛ c ⎞
 F X ( x ) = 1 − ⎜ ⎟ ,
 ⎝ x ⎠
-CT3 A2010—4
+%%--- CT3 A2010—4
 x ≥ c
 (and = 0 for x < c).
 [2]Suppose that for the distribution of claim sizes X it is known that $c = 2.5$, but a is
@@ -91,22 +89,22 @@ a ˆ = n
 ⎛ x i ⎞
 ∑ log ⎜ ⎝ 2.5 ⎟ ⎠
 i = 1
-Derive the asymptotic variance of the MLE â , and hence determine its
+\item Derive the asymptotic variance of the MLE â , and hence determine its
 approximate asymptotic distribution.
-[3]
-[4]
-Consider a sample of 30 observations from this distribution, for which:
+
+
+\item Consider a sample of 30 observations from this distribution, for which:
 30
 ∑ log( x i ) = 32.9 .
 i = 1
 (v)
-Calculate the MLE â in this case, together with an approximate 95%
+\item Calculate the MLE â in this case, together with an approximate 95%
 confidence interval for a.
 
 In the current year, claim sizes are assumed to follow the distribution of X with a = 6,
 c = 2.5. Inflation for the following year is expected to be 5%.
 (vi)
-Calculate the probability that the size of a claim arising from this portfolio in
+\item Calculate the probability that the size of a claim arising from this portfolio in
 the following year will exceed £4,000.
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -284,22 +282,22 @@ i = 1
 %--------------------------%
 Using the asymptotic normal distribution given above, an approximate 95% CI
 is given by
-a ˆ ± 1.96
+a ˆ \pm 1.96
 a 2
 a ˆ
-= a ˆ ± 1.96
+= a ˆ \pm 1.96
 n
 n
-i.e. 5.544 ± 1.96
+i.e. 5.544 \pm 1.96
 (vi)
 5.544
-, giving (3.560, 7.528).
+, giving $(3.560, 7.528)$.
 30
 Size of claim in the following year will be given by 1.05X
 4 ⎞
 ⎛
 ⎛ 4 ⎞
-So we want P (1.05 X > 4) = P ⎜ X >
+So we want $P (1.05 X > 4)$ = P ⎜ X >
 ⎟ = 1 − F X ⎜
 ⎟
 1.05 ⎠
@@ -315,3 +313,4 @@ P (1.05 X > 4) = ⎜
 ⎠
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
