@@ -4,16 +4,10 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   
-  
-  
-  \usepackage{eurosym}
-
+\usepackage{eurosym}
 \usepackage{vmargin}
-
 \usepackage{amsmath}
-
 \usepackage{graphics}
-
 \usepackage{epsfig}
 
 \usepackage{enumerate}
@@ -57,37 +51,35 @@
 \begin{document}
 
 \begin{enumerate}
-5 (i) Show that the following discrete distribution belongs to the exponential family
-of distributions.
+\item %% - Question 5 
+\begin{enumerate}[(i)]
+\item Show that the following discrete distribution belongs to the exponential family of distributions.
 ( ; ) n ny (1 )n ny 0, 1 , 2 , .,1
 f y y
 ny n n
   −
 μ =  μ −μ = …
  
-[4]
-(ii) Derive expressions for the mean and variance of the distribution, E(y) and
-Var(y), using your answer to part (i). [4]
-[Total 8]
+\item
+(ii) Derive expressions for the mean and variance of the distribution, E(y) and Var(y), using your answer to part (i). 
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 6 Model A is a stationary AR(1) model, which follows the equation:
   yt = μ + αyt−1 + εt
 where εt is a standard white noise process.
-(i) State two approaches for estimating the parameters in Model A. [2]
+\begin{enumerate}[(i)]
+\item (i) State two approaches for estimating the parameters in Model A. [2]
 Mary, an actuarial student, wishes to revise Model A such that the error terms εt no
 longer follow a Normal distribution.
-(ii) Explain which of the approaches in part (i) she should now use for parameter
-estimation. [2]
-(iii) Propose a method by which Mary will be able to calculate estimates of the
-parameters α and σ2, with reference to any relevant equations. [3]
-Mary, has now constructed Model B. She has done this by multiplying both sides of
-the equation above by (1 − cB), where B is the backshift operator, so that Model B
-follows the equation:
-  yt (1− cB) = (αyt−1 + εt )(1− cB) .
-(iv) Explain why Model A and Model B are identical. [2]
-(v) Explain for which values of c Model B is stationary. [2]
-[Total 11]
-CT6 A2017–4
-
+\item (ii) Explain which of the approaches in part (i) she should now use for parameter estimation. [2]
+\item (iii) Propose a method by which Mary will be able to calculate estimates of the parameters α and σ2, with reference to any relevant equations.
+Mary, has now constructed Model B. She has done this by multiplying both sides of the equation above by (1 − cB), where B is the backshift operator, so that Model B follows the equation:
+  \[yt (1− cB) = (αyt−1 + εt )(1− cB) .\]
+\item (iv) Explain why Model A and Model B are identical. [2]
+\item (v) Explain for which values of c Model B is stationary. [2]
+\end{itemize}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 Q5 (i) From the definition
 f  y,   exp  log 1 log1  log
 n
@@ -135,7 +127,7 @@ e
        
 
 [2]
-Subject CT6 (Statistical Methods Core Technical) – April 2017 – Examiners’ Report
+%%---- Subject CT6 (Statistical Methods Core Technical) – April 2017 – Examiners’ Report
 Page 6
 Var     ''  1 '
 1
@@ -160,6 +152,8 @@ Most candidates were able to make some progress, but only the better
 candidates were able to obtain the precise specification. Most candidates
 knew the standard results from the theory for part (ii), but then struggled to
 apply it in this particular case.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Q6 (i) The method of moments (or method of least squares) and maximum likelihood
 estimation. [2]
 (ii) The method of moments (or method of least squares) does not make any
@@ -175,6 +169,5 @@ difference equation of the other. [2]
 stationary regardless of the value of c. [2]
 [Total 11]
 Candidates familiar with the theory were able to score well on parts (i) to (iii).
-Unfortunately there was a typo in the introduction to part (iv), since the mu
-was excluded, so marks were awarded generously where there was any
-evidence this had caused confusion in the answers to parts (iv) and (v).
+Unfortunately there was a typo in the introduction to part (iv), since the mu was excluded, so marks were awarded generously where there was any evidence this had caused confusion in the answers to parts (iv) and (v).
+\end{document}
