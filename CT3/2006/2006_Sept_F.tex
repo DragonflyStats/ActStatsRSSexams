@@ -33,16 +33,15 @@
 
 \begin{document}
 \begin{enumerate}
+%5T S2006
+%-- 12
 
-CT S2006
-612
-A development engineer examined the relationship between the speed a vehicle is travelling (in miles per hour, mph), and the stopping distance (in metres, m) for a new
+\item A development engineer examined the relationship between the speed a vehicle is travelling (in miles per hour, mph), and the stopping distance (in metres, m) for a new
 braking system fitted to the vehicle. The following data were obtained in a series of
 independent tests conducted on a particular type of vehicle under identical road conditions.
 Speed of vehicle (x):
 Stopping distance (y):
 x = 280
-\item (i)
 y = 241
 10
 5
@@ -61,11 +60,12 @@ y 2 = 11,951
 70
 75
 xy = 12,790
-Construct a scatterplot of the data, and comment on whether a linear
+\begn{enumerate}
+\item Construct a scatterplot of the data, and comment on whether a linear
 regression is appropriate to model the relationship between the stopping
 distance and speed. 
 \item (ii) Calculate the equation of the least-squares fitted regression line. 
-(iii) Calculate a 95\% confidence interval for the slope of the underlying regression
+\item (iii) Calculate a 95\% confidence interval for the slope of the underlying regression
 line, and use this confidence interval to test the hypothesis that the slope of the
 underlying regression line is equal to 1.
 
@@ -74,13 +74,14 @@ distance for a vehicle travelling at 50 mph and for a vehicle travelling at 100
 mph.
 Comment briefly on the reliability of these estimates.
 
-CT S2006
-7
+\end{enumerate}
+\end{enumerate}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 12
+\begin{itemize}
 \item (i)
 Plot of stopping distance against speed
 80
@@ -104,32 +105,32 @@ Speed
 There is a suggestion of a curve but linear regression might still be reasonable.
 \item (ii)
 n = 7
-S_{xx} = \sigma x 2 − (\sigma x) 2 /n = 14000 − (280) 2 /7 = 2800
-S_{yy} = \sigma_y 2 − (\sigma_y) 2 /n = 11951 − (241) 2 /7 = 65.714
-S xy = \sigma xy − (\sigma x)( \sigma_y)/n = 12790 − (280)(241)/7 = 150
-Model: E[Y] = \alpha + \betax
-Slope: \hat{\beta} =
-S xy
-S_{xx}
-=
-150
-= 1.125
-2800
-Intercept: \alpha ˆ = y − \hat{\beta} x = 241/7 − (1.125)(280/7) = −10.571
+\[S_{xx} = \sigma x 2 − (\sigma x) 2 /n = 14000 − (280) 2 /7 = 2800\]
+\[S_{yy} = \sigma_y 2 − (\sigma_y) 2 /n = 11951 − (241) 2 /7 = 65.714\]
+\[S xy = \sigma xy − (\sigma x)( \sigma_y)/n = 12790 − (280)(241)/7 = 150\]
+\begin{itemize}
+    \item 
+
+Model: $E[Y] = \alpha + \beta x$
+\item Slope: \[\hat{\beta} =
+\frac{S_{xy}}{S_{xx}} = \frac{150}{2800} = 1.1125\]
+
+\item Intercept: $\hat{\alpha} = y − \hat{\beta} x = 241/7 − (1.125)(280/7) = −10.571$
+\end{itemize}
 The equation of the least-squares fitted regression line is:
 Distance = −10.571 + 1.125 Speed
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 (iii)
-\hat{\sigma} 2 =
+\[\hat{\sigma} 2 =
 S 2
 1 ⎛
 ⎜ S_{yy} − xy
 n − 2 ⎜
 S_{xx}
-⎝
-s.e.( \betâ ) =
+⎝\]
+\[s.e.( \betâ ) =
 \hat{\sigma} 2
 =
 S_{xx}
@@ -142,21 +143,23 @@ S_{xx}
 ⎠
 21.99
 = 0.0886
-2800
+2800\]
+
 95\% confidence interval for slope:
-\hat{\beta} \pm t n − 2 (0.025) s.e.( \betâ )
+\[\hat{\beta} \pm t n − 2 (0.025) s.e.( \betâ )
 (df = n − 2 = 5)
-= 1.125 \pm (2.571)(0.0886) = 1.125 \pm 0.228 or (0.897, 1.5)
-\beta = 1 is within this 95\% confidence interval, therefore we would not reject the
+= 1.125 \pm (2.571)(0.0886) = 1.125 \pm 0.228 or (0.897, 1.5)\]
+$\beta = 1$ is within this 95\% confidence interval, therefore we would not reject the
 null hypothesis $\beta = 1$ at the 5\% significance level.
 (iv)
-When x = 50: y = −10.571 + 1.125(50) = 45.7 m
-When x = 100: y = −10.571 + 1.125(100) = 101.9 m
-The stopping distance of 45.7 m when the speed is 50 mph can be regarded as
+\begn{itemize}
+\item When x = 50: y = −10.571 + 1.125(50) = 45.7 m
+\item When x = 100: y = −10.571 + 1.125(100) = 101.9 m
+\item The stopping distance of 45.7 m when the speed is 50 mph can be regarded as
 a reliable estimate as x = 50 is well within the range of the x data values.
-However, the stopping distance for a speed of 100 mph may be unreliable as
+\item However, the stopping distance for a speed of 100 mph may be unreliable as
 x = 100 is outside the range of the data and involves extrapolation.
-END OF 
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
