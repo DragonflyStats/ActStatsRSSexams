@@ -1,26 +1,47 @@
-CT6 A2016–6
-10 (i) State the general expression of the exponential families of distributions and
-use this to derive the relevant expressions for the mean and the variance of
-these distributions. [6]
-(ii) Extend the result in (i) to obtain an expression for the third central moment.
-[4]
-(iii) Show that the following density function belongs to the exponential family
-of distributions: [4]
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+%%--- CT6 A2016–6
+10 
+\begin{enumerate}[(i)]
+\item (i) State the general expression of the exponential families of distributions and use this to derive the relevant expressions for the mean and the variance of
+these distributions. 
+\item (ii) Extend the result in (i) to obtain an expression for the third central moment.
+\item (iii) Show that the following density function belongs to the exponential family
+of distributions:
 f(x) = 1 .
 ( )
 x x e
 
-  
+\item   
 
 
   
 (iv) Using the results in (i) and (ii) obtain the second and third central moments
-for this distribution. [4]
-[Total 18]
-END OF PAPER
+for this distribution.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Q10 (i) The general form for the
+Q10 (i) 
+\begin{itemize}
+\item The general form for the
 f(x) =
   exp ( ) ( , )
 ( )
@@ -30,7 +51,7 @@ a
 [1]
 where a, b, c, are functions and θ and ϕ are called the natural and scale
 parameters respectively.
-Since
+\item Since
 1 =  f (x)dx = exp ( )( ) ( , )
 x b c x dx a
  θ − θ + ϕ   ϕ  
@@ -45,7 +66,7 @@ a
 
 = a(1 ) (x b ( )) f (x)dx
 − ′ θ ϕ  = 0. [2]
-Hence E(X) =  xf (x)dx = b′(θ) f (x)dx = b′(θ). [1]
+\item Hence E(X) =  xf (x)dx = b′(θ) f (x)dx = b′(θ). [1]
 Similarly differentiating again w.r.t. θ both sides of (x −b′(θ)) f (x)dx = 0 we
 have
 a(1 ) (x b ( ))2 b ( ) f (x)dx
@@ -53,7 +74,7 @@ a(1 ) (x b ( ))2 b ( ) f (x)dx
 hence
 (x −b′(θ))2 f (x)dx = Var(X) = a(ϕ) b′′(θ) f (x)dx = a(ϕ)b′′(θ). [1]
 [Total 6]
-Subject CT6 (Statistical Methods Core Technical) – April 2016 – Examiners’ Report
+%%-------Subject CT6 (Statistical Methods Core Technical) – April 2016 – Examiners’ Report
 Page 11
 (ii) Differentiating further w.r.t. θ both sides of this identity
 a(1 ) (x b ( ))2 b ( ) f (x)dx
@@ -66,6 +87,8 @@ a(1 ) a(1 ) (x b ( ))2 b ( ) (x b ( )) f (x)dx
 Since
 (x −b′(θ)) f (x)dx = 0 = b′′(θ)(x −b′(θ)) f (x)dx
 3
+\end{itemize}
+\end{document}
 2
 1 ( ()) ()
 ( )
