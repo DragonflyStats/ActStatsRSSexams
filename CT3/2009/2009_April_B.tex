@@ -53,8 +53,8 @@ Calculate an approximate value for the probability that at least 240 of these ne
 \item The variables $X_1 , X_2 , ..., X_{40}$ give the size (in units of \$100) of each of 40 claims in a random sample of claims arising from damage to cars by vandals. The size of each claim is assumed to follow a gamma distribution with parameters $\alpha = 4$ and $\lamnda = 0.5$.
 %%%%%%%%%%%%%%%%%%%%%%%%%
 1 40
-and each is independent of all others. Let X =
-\sigma X i be the random variable
+and each is independent of all others. Let $\bar{X} =
+\sum X i$ be the random variable
 40 i = 1
 giving the mean size of such a sample.
 \begin{enumerate}[(i)]
@@ -71,11 +71,11 @@ Determine approximately the median of $X$ .
 (i)
 2
 $E [ Y i ] = 2$, $Var [ Y i ] = 4$
-Therefore E [ Y 1 + Y 2 ] = 4 and (since Y 1 , Y 2 independent) $Var [ Y 1 + Y 2 ] = 8$.
+Therefore $E [ Y_1 + Y_2 ] = 4$ and (since Y_1 , Y_2 independent) $Var [ Y_1 + Y_2 ] = 8$.
 So, for total loss, mean = \$4,000 and variance = 8 ×10 6 (\$ 2 ).
-(OR from Y 1 + Y 2 ~ χ 2 4 )
+(OR from Y_1 + Y_2 ~ χ 2 4 )
 (ii)
-For the total loss we have Y 1 + Y 2 ~ χ 4 2 , so we want a constant k
+For the total loss we have $Y_1 + Y_2 ~ χ 4 2$ , so we want a constant k
 (
 )
 2
@@ -89,7 +89,7 @@ From tables of the χ 24 distribution P χ 24 > 0 . 7107 = 0.95.
 5
 Let X be the number still in employment after one year.
 ∴ X ~ bin (280, 0.82) ≈ N (229.6, 6.43 2 )
-P ( X ≥ 240) = P ( X > 239.5) applying a continuity correction
+\[P ( X \geq 240) = P ( X > 239.5)\] applying a continuity correction
 = P ( Z >
 6
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -97,13 +97,17 @@ P ( X ≥ 240) = P ( X > 239.5) applying a continuity correction
 239.5 − 229.6
 ) = P ( Z > 1.54) = 1 − 0.93822 = 0.062
 6.43
-E[X i ] = 4/0.5 = 8 and Var[X i ] = 4/0.5 2 = 16 (or by noting X i ~ χ 8 2 ).
-Var [ X i ] ⎞
-\sigma X i ⎛
+
+\begin{itemize}
+
+
+\item $E[X_i ] = 4/0.5 = 8$ and $Var[X_i ] = 4/0.5^2 = 16$ (or by noting X i ~ χ 8 2 ).
+\[Var [ X i ] ⎞
+\sigma X i ⎛\]
 X = i = 1 ≈ N E [ X ],
 , i.e. N(8, 0.4)
 40
-Using the CLT:
+\item Using the CLT:
 ⎜
 ⎝
 40
@@ -112,8 +116,9 @@ i
 ⎟
 ⎠
 approximately.
-[Note: The exact distribution of X is Gamma(160,20)]
+\item [Note: The exact distribution of X is Gamma(160,20)]
 (ii)
-The symmetry of the distribution gives: median ⎡ ⎣ X ⎤ ⎦ = mean ⎡ ⎣ X ⎤ ⎦ = 8,
+\item The symmetry of the distribution gives: median ⎡ ⎣ X ⎤ ⎦ = mean ⎡ ⎣ X ⎤ ⎦ = 8,
 i.e. \$800.
+\end{itemize}
 \end{document}
