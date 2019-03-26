@@ -48,25 +48,26 @@ Now suppose that $n=5$ and that total claims over the five years were 3,400.
 6
 Calculate the posterior probability that θ is greater than 600.
 %---------------------------------------------------------------------------------%
-A proportion p of packets of a rather dull breakfast cereal contain an exciting toy (independently from packet to packet). An actuary has been persuaded by his children to begin buying packets of this cereal. His prior beliefs about p before
+\item A proportion p of packets of a rather dull breakfast cereal contain an exciting toy (independently from packet to packet). An actuary has been persuaded by his children to begin buying packets of this cereal. His prior beliefs about p before
 opening any packets are given by a uniform distribution on the interval [0,1]. It turns out the first toy is found in the n 1 th packet of cereal.
-(i)
-Specify the posterior distribution of p after the first toy is found.
+
+\begin{enumerate}[(i)]
+\item Specify the posterior distribution of p after the first toy is found.
 
 A further toy was found after opening another n 2 packets, another toy after opening
 another n 3 packets and so on until the fifth toy was found after opening a grand total
 of n 1 + n 2 + n 3 + n 4 + n 5 packets.
-(ii) Specify the posterior distribution of p after the fifth toy is found.
-(iii) Show the Bayes’ estimate of p under quadratic loss is not the same as the
+\item (ii) Specify the posterior distribution of p after the fifth toy is found.
+\item (iii) Show the Bayes’ estimate of p under quadratic loss is not the same as the
 maximum likelihood estimate and comment on this result.
-
-[Total 10]
-CT6 A2012–3
+\end{itemize}
+%%------ [Total 10]
+%%------ CT6 A2012–3
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 5
 (i)
 The posterior distribution of θ is Normal with variance given by
@@ -125,8 +126,8 @@ And so
 50 2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 
-Which is in the form of a credibility estimate with 600 being the prior mean,
-x being the observed sample mean and Z being the credibility factor.
+Which is in the form of a credibility estimate with 600 being the prior mean, x being the observed sample mean and Z being the credibility factor.
+
 (iii)
 In this case we have
 \sigma * 2 =
@@ -184,8 +185,7 @@ well.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 6
 (i)
-The posterior distribution has a likelihood given by
-f ( p n 1 ) ∝ f ( n 1 p ) f ( p )
+The posterior distribution has a likelihood given by f ( p n 1 ) ∝ f ( n 1 p ) f ( p )
 ∝ (1 − p ) n 1 − 1 p \times 1
 Which is the pdf of a Beta distribution with parameters \alpha = 2 and \beta = n 1 .
 (ii)
@@ -196,16 +196,14 @@ f ( p n 1 , n 2 , ... , n 5 ) ∝ f ( n 1 , n 2 , ... , n 5 p ) f ( p )
 Which is the pdf of a Beta distribution with parameters \alpha = 6 and
 \beta = n 1 + n 2 + " + n 5 − 4 .
 (iii)
-Under squared error loss the Bayes estimate is given by the mean of the
-posterior distribution which in this case is
+Under squared error loss the Bayes estimate is given by the mean of the posterior distribution which in this case is
 p ˆ =
 \alpha
 6
 =
 \alpha + \beta n 1 + n 2 + " + n 5 + 2
-The maximum likelihood estimate is given by maximising the likelihood
-which is
-L ∝ (1 − p ) n 1 + n 2 + " + n 5 − 5 \times p 5
+The maximum likelihood estimate is given by maximising the likelihood which is
+\[L ∝ (1 − p ) n 1 + n 2 + " + n 5 − 5 \times p 5\]
 The log-likelihood is given by
 \[l = log L = log C + ( n 1 + " + n 5 − 5 ) log(1 − p ) + 5log p\]
 And so
@@ -225,13 +223,9 @@ i.e. p̂ =
 5
 n 1 + " + n 5
 So the two estimates are not the same. This is perhaps a little surprising given
-that we started with an uninformative prior, but arises because the estimates
-are calculated in two different ways – i.e. one maximises the likelihood and
-the other minimises the expected squared error. If we wanted the two to be the
-same we should use an “all-or-nothing” loss function.
-A reasonably well answered question. Weaker candidates failed to identify the geometric
-distribution in part (i). Stronger candidates demonstrated a good understanding of loss
-functions in part (iii).
+that we started with an uninformative prior, but arises because the estimates are calculated in two different ways – i.e. one maximises the likelihood and the other minimises the expected squared error. If we wanted the two to be the same we should use an “all-or-nothing” loss function.
+
+%A reasonably well answered question. Weaker candidates failed to identify the geometric distribution in part (i). Stronger candidates demonstrated a good understanding of loss functions in part (iii).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 \end{document}
