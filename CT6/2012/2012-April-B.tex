@@ -15,7 +15,7 @@
 \usepackage{framed}
 \usepackage{graphicx}
 \usepackage{amsmath}
-\usepackage{chngpage}
+\usepackage{chng%%-- Page}
 
 %\usepackage{bigints}
 \usepackage{vmargin}
@@ -52,7 +52,7 @@ Use a normal approximation to estimate how many policies the insurer must sell s
 The likelihood function is given by:
 6
 3
-L = D × ∏ 3 cx i 2 e − cx i × e − 4 × 50
+L = D \times ∏ 3 cx i 2 e − cx i \times e − 4 \times 50
 3
 c
 i = 1
@@ -60,18 +60,18 @@ where D is a constant.
 Where the x i are the claims below the retention.
 6
 6
-l = log L = log D + ∑ log 3 cx i − c ∑ x i 3 − 4 × 50 3 c
+l = log L = log D + ∑ log 3 cx i − c ∑ x i 3 − 4 \times 50 3 c
 2
 i = 1
 i = 1
 6 6
 i = 1 i = 1
-= log D + 6 log 3 + 6 log c + ∑ log x i 2 − c ∑ x i 3 − 4 × 50 3 c
+= log D + 6 log 3 + 6 log c + ∑ log x i 2 − c ∑ x i 3 − 4 \times 50 3 c
 Differentiating we get
 dl 6 6 3
 = − ∑ x i − 500000
 dc c i = 1
-Page 4
+%%-- Page 4
 %%%%%%%%%%%%%%%%%%%%%%%%%
 % (Statistical Methods) – April 2012 – Examiners’ Report
 So our estimate is given by
@@ -81,7 +81,7 @@ c ˆ =
 ∑ i = 1 x 1 3 + 500000
 =
 6
-= 8.8775 × 10 − 6
+= 8.8775 \times 10 − 6
 175868 + 500000
 % This question was answered well.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -89,21 +89,21 @@ c ˆ =
 Let the individual total claim costs be denoted by X. 
 Then $X=Y+Z$ where Y is the cost of the claim and Z is the claim handling expense.
 Then
-\[E ( X ) = E ( Y ) + E ( Z ) = 100 + 0.3 × 30 = 109\]
+\[E ( X ) = E ( Y ) + E ( Z ) = 100 + 0.3 \times 30 = 109\]
 And
 ( ) (
 ) ( )
 E X 2 = E Y 2 + 2 YZ + Z 2 = E Y 2 + 2 E ( Y ) E ( Z ) + E ( Z 2 )
 Using the independence of Y and Z. Now
 ( )
-E Y 2 = 2 E ( Y ) 2 = 2 × 100 2 = 20000
+E Y 2 = 2 E ( Y ) 2 = 2 \times 100 2 = 20000
 and
 ( )
-E Z 2 = 0.3 × 30 2 = 270
+E Z 2 = 0.3 \times 30 2 = 270
 So that
 ( )
-E X 2 = 20000 + 2 × 100 × 9 + 270 = 22070 = 148.56 2
-Now if there are n policies in the portfolio, total claim amounts S will have an approximately Normal distribution with mean 0.2 × n × 109 = 21.8 n and variance 0.2 × n × 148.56 2 .
+E X 2 = 20000 + 2 \times 100 \times 9 + 270 = 22070 = 148.56 2
+Now if there are n policies in the portfolio, total claim amounts S will have an approximately Normal distribution with mean 0.2 \times n \times 109 = 21.8 n and variance 0.2 \times n \times 148.56 2 .
 The premium income will be 35n.
 
 We need to solve for n in the following equation:
@@ -118,7 +118,7 @@ P ⎜ N ( 0,1 ) >
 ⎟ < 0.05
 66.44 n ⎠
 ⎝
-% Page 5
+% %%-- Page 5
 %%%%%%%%%%%%%%%%%%%%%%%%%
 % (Statistical Methods) – April 2012 – Examiners’ Report
 So

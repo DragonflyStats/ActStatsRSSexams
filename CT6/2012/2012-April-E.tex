@@ -15,7 +15,7 @@
 \usepackage{framed}
 \usepackage{graphicx}
 \usepackage{amsmath}
-\usepackage{chngpage}
+\usepackage{chng%%-- Page}
 
 %\usepackage{bigints}
 \usepackage{vmargin}
@@ -36,23 +36,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \item 9
 Consider the time series model
-(1 − α B ) 3 X t = e t
+(1 − \alpha B ) 3 X t = e t
 where B is the backwards shift operator and e t is a white noise process with variance
-σ 2 .
+\sigma 2 .
 (i)
-Determine for which values of α the process is stationary.
-[2]
-Now assume that α = 0.4.
+Determine for which values of \alpha the process is stationary.
+
+Now assume that \alpha = 0.4.
 (ii)
 (iii)
 10
 (a) Write down the Yule-Walker equations.
 (b) Calculate the first two values of the auto-correlation function ρ 1 and
 ρ 2 .
-[7]
+
 Describe the behaviour of ρ k and the partial autocorrelation function φ k as
 k →∞ .
-[3]
+
 [Total 12]
 \item Let X 1 and X 2 be random variables with moment generating functions M X 1 ( t ) and
 M X 2 ( t ) respectively. A new random variable Y is formed by choosing a sample
@@ -63,13 +63,13 @@ Show that the moment generating function of Y is given by
 M Y ( t ) = pM X 1 ( t ) + ( 1 − p ) M X 2 ( t )
 
 A portfolio of insurance policies consists of two different types of policy. Claims on
-type 1 policies arrive according to a Poisson process with parameter λ 1 and claim
+type 1 policies arrive according to a Poisson process with parameter \lambda 1 and claim
 amounts have a distribution X 1 . Claims on type 2 policies arrive according to a
-Poisson process with parameter λ 2 and claim amounts have a distribution X 2 .
+Poisson process with parameter \lambda 2 and claim amounts have a distribution X 2 .
 \item 
 Show that aggregate claims on the whole portfolio follow a compound Poisson
 distribution, specifying the claim rate and the claim size distribution.
-Now suppose that λ 1 = 10 and λ 2 = 15 and that the claim sizes are exponentially
+Now suppose that \lambda 1 = 10 and \lambda 2 = 15 and that the claim sizes are exponentially
 distributed with mean 50 for type 1 policies and mean 70 for type 2 policies.
 \item 
 CT6 A2012–5
@@ -77,87 +77,87 @@ Construct an algorithm for simulating total claims on the whole portfolio.
 \end{enumerate}
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-\newpage 
+\new%%-- Page 
 9
 (i)
-The characteristic polynomial is (1 − α Y ) 3 = 0 .
+The characteristic polynomial is (1 − \alpha Y ) 3 = 0 .
 This has a triple root at 1
-α
+\alpha
 and so the process is stationary when
-i.e. α < 1 .
+i.e. \alpha < 1 .
 (ii)
 Expanding the cubic equation and rearranging gives:
-X t − 3 α X t − 1 + 3 α 2 X t − 2 − α 3 X t − 3 = e t
+X t − 3 \alpha X t − 1 + 3 \alpha 2 X t − 2 − \alpha 3 X t − 3 = e t
 So the Yule-Walker equations give:
-ρ 0 − 3 αρ 1 + 3 α 2 ρ 2 − α 3 ρ 3 = σ 2
-ρ 1 − 3 α + 3 α 2 ρ 1 − α 3 ρ 2 = 0 (A)
-ρ 2 − 3 αρ 1 + 3 α 2 − α 3 ρ 1 = 0 (B)
-ρ 3 − 3 αρ 2 + 3 α 2 ρ 1 − α 3 ρ 0 = 0
+ρ 0 − 3 \alphaρ 1 + 3 \alpha 2 ρ 2 − \alpha 3 ρ 3 = \sigma 2
+ρ 1 − 3 \alpha + 3 \alpha 2 ρ 1 − \alpha 3 ρ 2 = 0 (A)
+ρ 2 − 3 \alphaρ 1 + 3 \alpha 2 − \alpha 3 ρ 1 = 0 (B)
+ρ 3 − 3 \alphaρ 2 + 3 \alpha 2 ρ 1 − \alpha 3 ρ 0 = 0
 (
 )
-So re-writing we have from (A) ρ 1 1 + 3 α 2 − 3 α = α 3 ρ 2
+So re-writing we have from (A) ρ 1 1 + 3 \alpha 2 − 3 \alpha = \alpha 3 ρ 2
 And substituting into (B) gives
 (
 )
-ρ 1 1 + 3 α 2 − 3 α
-α
+ρ 1 1 + 3 \alpha 2 − 3 \alpha
+\alpha
 i.e.
-Page 12
+%%-- Page 12
 3
-− 3 αρ 1 + 3 α 2 − α 3 ρ 1 = 0
-ρ 1 (1 + 3 α 2 − 3 α 4 − α 6 )
-α 3
+− 3 \alphaρ 1 + 3 \alpha 2 − \alpha 3 ρ 1 = 0
+ρ 1 (1 + 3 \alpha 2 − 3 \alpha 4 − \alpha 6 )
+\alpha 3
 =
-3 α − 3 α 5
-α 3
+3 \alpha − 3 \alpha 5
+\alpha 3
 1
 > 1
-αSubject CT6 (Statistical Methods) – April 2012 – Examiners’ Report
+\alphaSubject CT6 (Statistical Methods) – April 2012 – Examiners’ Report
 i.e.
 ρ 1 =
-3 α (1 − α 4 )
-(1 + 3 α 2 − 3 α 4 − α 6 )
+3 \alpha (1 − \alpha 4 )
+(1 + 3 \alpha 2 − 3 \alpha 4 − \alpha 6 )
 = 0.83573487
 And so
 ρ 2 =
 (
 )
-3 α 1 − α 4 (1 + 3 α 2 )
+3 \alpha 1 − \alpha 4 (1 + 3 \alpha 2 )
 2
 4
 6
-(1 + 3 α − 3 α − α ) α
+(1 + 3 \alpha − 3 \alpha − \alpha ) \alpha
 3
 −
 3
-α 2
+\alpha 2
 = 0.576368876
 Alternative solution:
 Express the Yule-Walker equations in terms of the covariances:
 X t = 1.2 X t − 1 − 0.48 X t − 2 + 0.064 X t − 3 + e t
-γ 0 = 1.2 γ 1 − 0.48 γ 2 + 0.064 γ 3 + σ 2
-γ 1 = 1.2 γ 0 − 0.48 γ 1 + 0.064 γ 2
-γ 2 = 1.2 γ 1 − 0.48 γ 0 + 0.064 γ 1
-γ 3 = 1.2 γ 2 − 0.48 γ 1 + 0.064 γ 0
+\gamma 0 = 1.2 \gamma 1 − 0.48 \gamma 2 + 0.064 \gamma 3 + \sigma 2
+\gamma 1 = 1.2 \gamma 0 − 0.48 \gamma 1 + 0.064 \gamma 2
+\gamma 2 = 1.2 \gamma 1 − 0.48 \gamma 0 + 0.064 \gamma 1
+\gamma 3 = 1.2 \gamma 2 − 0.48 \gamma 1 + 0.064 \gamma 0
 Or in general:
-γ 0 = 1.2 γ 1 − 0.48 γ 2 + 0.064 γ 3 + σ 2
-γ k = 1.2 γ k − 1 − 0.48 γ k − 2 + 0.064 γ k − 3 k ≥ 1
+\gamma 0 = 1.2 \gamma 1 − 0.48 \gamma 2 + 0.064 \gamma 3 + \sigma 2
+\gamma k = 1.2 \gamma k − 1 − 0.48 \gamma k − 2 + 0.064 \gamma k − 3 k ≥ 1
 Simplifying the second and third equations:
-148 γ 1 = 1.2 γ 0 + 0.064 γ 2 ⇒ γ 1 =
-30 γ
+148 \gamma 1 = 1.2 \gamma 0 + 0.064 \gamma 2 ⇒ \gamma 1 =
+30 \gamma
 37 0
-8 γ
+8 \gamma
 + 185
 2
-γ 2 = 1.264 γ 1 + 0.064 γ 1
+\gamma 2 = 1.264 \gamma 1 + 0.064 \gamma 1
 To obtain:
-γ 2 =
-200 γ
+\gamma 2 =
+200 \gamma
 347 0
-λ 1 =
-290 γ
+\lambda 1 =
+290 \gamma
 347 0
-Dividing both by γ 0 gives the same solutions as above.
+Dividing both by \gamma 0 gives the same solutions as above.
 (iii)
 The series is an AR(3) series. The asymptotic behaviour is therefore that ρ k
 decays exponentially to zero
@@ -166,8 +166,8 @@ The latter parts of this question were not particularly well answered. Candidate
 showed an understanding of how to solve the problem, but made a number of arithmetic and
 algebraic slips.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-\newpage
-%%% Page 13Subject CT6 (Statistical Methods) – April 2012 – Examiners’ Report
+\new%%-- Page
+%%% %%-- Page 13Subject CT6 (Statistical Methods) – April 2012 – Examiners’ Report
 10
 (i)
 ( )
@@ -181,42 +181,42 @@ respectively, and let N 1 , N 2 denote the number of claims from type 1 and type
 2 policies respectively. Let S = S 1 + S 2 denote the aggregate claims on the
 combined portfolio. We know that S 1 , S 2 follow compound Poisson processes
 and so
-M S i ( t ) = M N i (log M X i ( t )) = exp( λ i ( M X i ( t ) − 1))
+M S i ( t ) = M N i (log M X i ( t )) = exp( \lambda i ( M X i ( t ) − 1))
 Now
 M S ( t ) = M S 1 + S 2 ( t ) = M S 1 ( t ) M S 2 ( t )
 ( (
 ) )
-= exp λ 1 M X 1 ( t ) − 1 exp( λ 2 ( M X 2 ( t ) − 1))
+= exp \lambda 1 M X 1 ( t ) − 1 exp( \lambda 2 ( M X 2 ( t ) − 1))
 ⎡
-⎛ λ 1
+⎛ \lambda 1
 ⎞ ⎤
-λ 2
-= exp ⎢ ( λ 1 + λ 2 ) ⎜
+\lambda 2
+= exp ⎢ ( \lambda 1 + \lambda 2 ) ⎜
 M X ( t ) +
 M X ( t ) − 1 ⎟ ⎥
 1
 2
-λ 1 + λ 2
-⎝ λ 1 + λ 2
+\lambda 1 + \lambda 2
+⎝ \lambda 1 + \lambda 2
 ⎠ ⎦
 ⎣
-= exp(( λ 1 + λ 2 )( pM X 1 ( t ) + ( 1 − p ) M X 2 ( t ) − 1) where p =
-λ 1
-λ 1 + λ 2
-= exp(( λ 1 + λ 2 )( M Y ( t ) − 1))
+= exp(( \lambda 1 + \lambda 2 )( pM X 1 ( t ) + ( 1 − p ) M X 2 ( t ) − 1) where p =
+\lambda 1
+\lambda 1 + \lambda 2
+= exp(( \lambda 1 + \lambda 2 )( M Y ( t ) − 1))
 Where Y is defined as in part (i). This is of the form M N ( logM Y ( t ) ) where N
-is a Poisson distribution with parameter λ 1 + λ 2 . Hence S has a compound
-Poisson distribution with rate λ 1 + λ 2 and where individual claim amounts are
-λ 1
+is a Poisson distribution with parameter \lambda 1 + \lambda 2 . Hence S has a compound
+Poisson distribution with rate \lambda 1 + \lambda 2 and where individual claim amounts are
+\lambda 1
 taken from distribution X 1 with probability p =
 and from distribution
-λ 1 + λ 2
-λ 2
+\lambda 1 + \lambda 2
+\lambda 2
 X 2 with probability 1 − p =
 .
-λ 1 + λ 2
+\lambda 1 + \lambda 2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 14Subject CT6 (Statistical Methods) – April 2012 – Examiners’ Report
+%%-- Page 14Subject CT6 (Statistical Methods) – April 2012 – Examiners’ Report
 (iii)
 Step 1
 We first begin by generating a random sample from N ~ P ( 25 ) as follows:

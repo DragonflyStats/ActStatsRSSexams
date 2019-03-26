@@ -15,7 +15,7 @@
 \usepackage{framed}
 \usepackage{graphicx}
 \usepackage{amsmath}
-\usepackage{chngpage}
+\usepackage{chng%%-- Page}
 
 %\usepackage{bigints}
 \usepackage{vmargin}
@@ -96,48 +96,48 @@ the portfolio.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 7
 (i)
-Suppose that the Poisson rate for risk i is λ i for =1,2,3.
+Suppose that the Poisson rate for risk i is \lambda i for =1,2,3.
 For the first risk, the likelihood is given by:
-L = e − 4 λ 1
-(4 λ 1 ) 10
+L = e − 4 \lambda 1
+(4 \lambda 1 ) 10
 10!
 And so the log-likelihood is given by
-l = log L = − 4 λ 1 + 10 log 4 λ 1 + Constants
+l = log L = − 4 \lambda 1 + 10 log 4 \lambda 1 + Constants
 Differentiating gives
 dl
 10
 = − 4 +
-d λ 1
-λ 1
+d \lambda 1
+\lambda 1
 And setting this equal to zero gives a maximum likelihood estimate of
 10
-λ ˆ 1 =
+\hat{\lambda} 1 =
 = 2. 5
 4
 Since
 d 2 l
-d λ
+d \lambda
 2
 =−
 10
-λ i 2
+\lambda i 2
 < 0 we do have a maximum.
 17
 2 4
-In the same way λ ˆ 2 =
+In the same way \hat{\lambda} 2 =
 = 6 .
-= 4.25 and λ ˆ 3 =
+= 4.25 and \hat{\lambda} 3 =
 4
 4
-Page 9
+%%-- Page 9
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 (ii)
-Under the assumption that these risks share the same rate i.e. λ 1 = λ 2 = λ 3 = λ
+Under the assumption that these risks share the same rate i.e. \lambda 1 = \lambda 2 = \lambda 3 = \lambda
 then the mle for this is simply
 51
 = 4.25
-λ ˆ =
+\hat{\lambda} =
 12
 
 \begin{itemize}
@@ -147,7 +147,7 @@ these models and use the chi-squared test.
 distribution with 3−1=2 degrees of freedom.
 \end{itemize}
 %%%%%%%%%%%%
-2 ( log L 1 + log L 2 + log L 3 − log L ) = 10 log λ ˆ 1 − 4 λ ˆ 1 + 17 log λ ˆ 2 − 4 λ ˆ 2 + 24log λ ˆ 3 − 4 λ ˆ 3 − 51log λ ˆ + 12 λ ˆ
+2 ( log L 1 + log L 2 + log L 3 − log L ) = 10 log \hat{\lambda} 1 − 4 \hat{\lambda} 1 + 17 log \hat{\lambda} 2 − 4 \hat{\lambda} 2 + 24log \hat{\lambda} 3 − 4 \hat{\lambda} 3 − 51log \hat{\lambda} + 12 \hat{\lambda}
 With the
 4 4 4
 i = 1 i = 1 i = 1
@@ -172,10 +172,10 @@ This value is below 5.991 which is the critical value at the upper 5% level and
 therefore there is not a significant improvement by considering different rates
 for each risk.
 Part (i) was answered very well. Most candidates struggled with part (ii).
-Page 10
+%%-- Page 10
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %% (Statistical Methods) – April 2012 – Examiners’ Report
-\newpage
+\new%%-- Page
 %%-- Question 8
 The claims uplifted to 2011 prices are as follows:
 Underwriting
@@ -273,7 +273,7 @@ Development Year
 46.70
 51.79
 45.09
-Page 11
+%%-- Page 11
 %%%%%%%%%%%%%%%%%%%%%%%%%
 % (Statistical Methods) – April 2012 – Examiners’ Report
 Inflating for future claims growth gives:
