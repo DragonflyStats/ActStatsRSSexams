@@ -1,0 +1,223 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+[Total 9]9
+The table below sets out incremental claims data for a portfolio of insurance policies.
+Accident year
+2011
+2012
+2013
+Development year
+0
+1
+2
+1,403
+1,718
+1,912
+535
+811
+142
+Past and projected future inflation is given by the following index (measured to the
+mid point of the relevant year).
+Year Index
+2011
+2012
+2013
+2014
+2015 100
+107
+110
+113
+117
+Estimate the outstanding claims using the inflation adjusted chain ladder technique.
+[9]
+10
+For a certain portfolio of insurance policies the number of claims on the i th policy in
+the j th year of cover is denoted by Y ij . The distribution of Y ij is given by
+P(Y ij = y) = \theta ij (1 − \theta ij ) y
+y = 0, 1, 2, ...
+where 0 ≤ \theta ij ≤ 1 are unknown parameters with i = 1, 2, ..., k and j = 1, 2, ..., l.
+(i) Derive the maximum likelihood estimate of \theta ij given the single observed data
+point y ij .
+
+(ii) Write P(Y ij = y) in exponential family form and specify the parameters.
+(iii) Describe the different characteristics of Pearson and deviance residuals.
+
+[Total 10]
+CT6 A2014–5
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+9
+Incremental claims in mid 2013 prices are given by:
+Accident year
+0
+2011
+2012
+2013
+Development year
+1
+1543.3
+1766.17
+1912
+550
+811
+2
+142
+Cumulative claims in mid 2013 prices:
+Accident year
+0
+2011
+2012
+2013
+Development year
+1
+1543.3
+1766.17
+1912
+2093.3
+2577.17
+2
+2235.3
+DF 0,1 = (2093.3 + 2577.17) / (1543.3 + 1766.17) = 1.4112441
+DF 1,2 = 2235.3 / 2093.3 = 1.067835
+Page 9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – April 2014 – 
+Completed cumulative claims
+Accident year
+0
+Development year
+1
+2011
+2012
+2013
+2698.30
+2
+2751.99
+2881.34
+Incremental claims (mid 2013 prices)
+Accident year
+0
+Development year
+1
+2011
+2012
+2013
+786.30
+2
+174.82
+183.04
+And projecting for inflation, outstanding claims = (174.82 + 786.30) ×
++ 183.04 ×
+117
+= 1182.02
+110
+This question was well answered, with many candidates scoring full marks.
+10
+(i)
+The likelihood is given by
+L = \theta ij (1 − \theta ij )
+y ij
+Taking logs gives
+l = log L = log \theta ij + y ij log(1 − \theta ij )
+Differentiating with respect to \theta ij gives
+y ij
+1
+∂ l
+=
+−
+∂\theta ij \theta ij (1 − \theta ij )
+and setting
+∂ l
+= 0 we have
+∂\theta ij
+y ij
+1
+=
+\theta ˆ ij 1 − \theta ˆ ij
+Page 10
+113
+110%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – April 2014 – 
+so 1 − \theta ˆ ij = y ij \theta ˆ ij
+so 1 = (1 + y ij ) \theta ˆ ij
+i.e. \theta ˆ ij =
+and since
+1
+1 + y ij
+∂ 2 l
+∂\theta ij 2
+=−
+1
+\theta ij 2
+−
+y ij
+(1 − \theta ij ) 2
+< 0
+(since y ij > 0)
+we do have a maximum.
+(ii)
+P ( Y ij = y ) = \theta ij (1 − \theta ij ) y
+= exp[log\theta ij + y log(1 − \theta ij )]
+= exp[ y log(1 − \theta ij )] + log\theta ij ]
+⎡ y \theta − b ( \theta )
+⎤
+= exp ⎢
++ c ( y , \phi ) ⎥
+⎣ a ( \phi )
+⎦
+where \theta
+= log(1 − \theta ij ) is the natural parameter
+b (\theta) = −log\theta ij = −log[1 − e \theta ]
+\phi = 1
+a (\phi) = 1
+c ( y , \phi) = 0
+(iii)
+The Pearson residuals are often skewed for non normal data which makes the
+interpretation of residual plots difficult.
+Deviance residuals are usually more likely to be symmetrically distributed and
+are preferred for actuarial applications.
+This question was, for the most part, answered well. A common mistake in part (i) was to try
+to sum across either years or policies when the question specifically referred to a single data
+point.
