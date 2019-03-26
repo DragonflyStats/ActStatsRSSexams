@@ -32,15 +32,15 @@
 
 \begin{enumerate}
 3
-(i) X and Y are independent Poisson random variables with mean λ. Derive the moment generating function of X, and hence show that X + Y also has a Poisson distribution.
-[4]
+(i) X and Y are independent Poisson random variables with mean \lambda. Derive the moment generating function of X, and hence show that X + Y also has a Poisson distribution.
+
 (ii) An insurer has a portfolio of 100 policies. Annual premiums of 0.2 units per policy are payable annually in advance. Claims, which are paid at the end of the year, are for a fixed sum of 1 unit per claim. Annual claims numbers on each policy are Poisson distributed with mean 0.18.
 
 Calculate how much initial capital is needed in order to ensure that the probability of ruin at the end of the year is less than 1%.
 %-----------------------------------------------------------------------%
 4
-Y 1 , Y 2 , ..., Y n are independent observations from a normal distribution with E[Y i ] = μ i
-and Var[Y i ] = σ 2 .
+Y 1 , Y 2 , ..., Y n are independent observations from a normal distribution with E[Y i ] = \mu i
+and Var[Y i ] = \sigma 2 .
 \begin{enumerate}[(i)]
 \item  Write the density of Y i in the form of an exponential family of distributions. 
 \item Identify the natural parameter and derive the variance function.
@@ -51,29 +51,29 @@ and Var[Y i ] = σ 2 .
 (i)
 M X ( t ) = E ( e tX )
 ∞
-= ∑ e kt e −λ
+= ∑ e kt e −\lambda
 k = 0
 ∞
-= ∑ e −λ
+= ∑ e −\lambda
 k = 0
-= e −λ e λ e
-λ k
+= e −\lambda e \lambda e
+\lambda k
 k !
-( λ e t ) k
+( \lambda e t ) k
 k !
 t
-= e λ ( e − 1)
+= e \lambda ( e − 1)
 t
 Hence
 M X + Y ( t ) = E ( e t ( X + Y ) )
 = E ( e tX ) E ( e tY )
 = M X ( t ) M Y ( t )
-= e λ ( e − 1) e λ ( e − 1)
+= e \lambda ( e − 1) e \lambda ( e − 1)
 t
 t
-= e 2 λ ( e − 1)
+= e 2 \lambda ( e − 1)
 t
-which is the MGF of a Poisson distribution with parameter 2λ. Hence X + Y is
+which is the MGF of a Poisson distribution with parameter 2\lambda. Hence X + Y is
 Poisson distributed.
 (ii)
 Using the result above, aggregate claims on the portfolio over the year have a Poisson distribution with parameter 18.
@@ -90,60 +90,60 @@ Comment: Many candidates struggled with (ii) here.
 4
 (i)
 f(y i ) =
-⎧ ⎪ ( y − μ ) 2 ⎫ ⎪
+⎧ ⎪ ( y − \mu ) 2 ⎫ ⎪
 exp ⎨ − i 2 i ⎬
-2 σ
-2 πσ 2
+2 \sigma
+2 \pi\sigma 2
 ⎩ ⎪
 ⎭ ⎪
 1
 2
-logf = − 1⁄2 log(2 πσ ) −
+logf = − 1⁄2 log(2 \pi\sigma ) −
 =
-y i μ i − 1⁄2 μ i 2
-σ 2
-( y i 2 − 2 y i μ i + μ i 2 )
-2 σ 2
-− 1⁄2 log(2 πσ 2 ) − 1⁄2
+y i \mu i − 1⁄2 \mu i 2
+\sigma 2
+( y i 2 − 2 y i \mu i + \mu i 2 )
+2 \sigma 2
+− 1⁄2 log(2 \pi\sigma 2 ) − 1⁄2
 y i 2
-σ 2
+\sigma 2
 which is the form of an exponential family of distributions.
 (ii)
-The natural parameter is μ i
-θ i = μ i
-b(θ i ) = 1⁄2 μ i 2 = 1⁄2 θ i 2
-b ′ ( θ i ) = θ i
-b ′′ ( θ i ) = 1
-Hence V(μ i ) = 1
+The natural parameter is \mu i
+\theta i = \mu i
+b(\theta i ) = 1⁄2 \mu i 2 = 1⁄2 \theta i 2
+b ′ ( \theta i ) = \theta i
+b ′′ ( \theta i ) = 1
+Hence V(\mu i ) = 1
 (iii)
 The scaled deviance is
 ⎡ ( y − y ) 2
 ⎤
-( y − μ ˆ ) 2
-2 ∑ ⎢ − i 2 i − 1⁄2 log(2 πσ 2 ) + i 2 i + 1⁄2 log(2 πσ 2 ) ⎥
-2 σ
-2 σ
+( y − \hat{\mu} ) 2
+2 ∑ ⎢ − i 2 i − 1⁄2 log(2 \pi\sigma 2 ) + i 2 i + 1⁄2 log(2 \pi\sigma 2 ) ⎥
+2 \sigma
+2 \sigma
 ⎣ ⎢
 ⎦ ⎥
 =
 Page 4
 ∑
-( y i − μ ˆ i ) 2
-σ 2
+( y i − \hat{\mu} i ) 2
+\sigma 2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Hence the deviance residual is
-( y i − μ ˆ i ) 2
-y i − μ ˆ i
-σ
-σ
-y − μ ˆ i
-y − μ ˆ
+( y i − \hat{\mu} i ) 2
+y i − \hat{\mu} i
+\sigma
+\sigma
+y − \hat{\mu} i
+y − \hat{\mu}
 The Pearson residual is i
 = i
-σ V ( μ ˆ i )
-σ
-sign( y i − μ ˆ )
+\sigma V ( \hat{\mu} i )
+\sigma
+sign( y i − \hat{\mu} )
 2
 =
 Comment: This was a relatively easy question and many scored full marks in (i) and

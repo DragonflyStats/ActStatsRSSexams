@@ -30,7 +30,7 @@
 
 5
 The following table shows the claim payments for an insurance company in units of
-£5,000:
+\$5,000:
 Development year
 Accident
 year
@@ -57,21 +57,23 @@ The future inflation from 2007 is estimated to be 8\% per annum.
 Claims are fully run-off at the end of the development year 3.
 Calculate the amount of outstanding claims arising from accidents in year 2007, using the inflation adjusted chain ladder method.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-6
+%%-- Question 6
 A portfolio of general insurance policies is made up of two types of policies. The policies are assumed to be independent, and claims are assumed to occur according to a Poisson process. The claim severities are assumed to have exponential distributions.
-For the first type of policy, a total of 65 claims are expected each year and the expected size of each claim is £1,200.
-For the second type of policy, a total of 20 claims are expected each year and the expected size of each claim is £4,500.
-(i)
-Calculate the mean and variance of the total cost of annual claims, S, arising from this portfolio.
-[3]
-The risk premium loading is denoted by θ, so that the annual premium on each policy is (1+θ)×expected annual claims on each policy. The initial reserve is denoted by u.
+For the first type of policy, a total of 65 claims are expected each year and the expected size of each claim is \$1,200.
+For the second type of policy, a total of 20 claims are expected each year and the expected size of each claim is \$4,500.
+\begin{enumerate}[(i)]
+\item Calculate the mean and variance of the total cost of annual claims, S, arising from this portfolio.
+
+The risk premium loading is denoted by $\theta$, so that the annual premium on each policy is $(1+\theta)$ × expected annual claims on each policy. The initial reserve is denoted by u.
 A normal approximation is used for the distribution of S, and the initial reserve is set by ensuring that
 P(S < u + annual premium income) = 0.975.
-(ii)
-(a) Derive an equation for u in terms of θ.
+\item
+(a) Derive an equation for u in terms of $\theta$.
 (b) Determine the annual premium required in order that no initial reserve
 is necessary.
+\end{enumerate}
 
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 5
 Multiply the claim payments with the corresponding inflation factors given below:
@@ -123,9 +125,9 @@ The development factors are 2.4989, 1.1688, 1.0490.
 For the answer we only need to work with the projected values at the last row as:
 (2853.75 - 1142.00)*1.08+(3335.38 - 2853.75)*1.08 2 +(3498.88 - 3335.38)*1.08 3
 = 2616.43
-2616.43 * 5000 = £13,082,150
-Comment: Many candidates scored full marks here. Some missed the conversion of
-the final figure from units to pounds (i.e. multiplying by £5000).
+2616.43 * 5000 = \$13,082,150
+%Comment: Many candidates scored full marks here. Some missed the conversion of the final figure from units to pounds (i.e. multiplying by \$5000).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 6
 (i)
 E[S]
@@ -135,7 +137,7 @@ Var[S] = 65 × 2 × 1200 2 + 20 × 2 × 4500 2
 = 997,200,000
 (ii)
 (a)
-c = annual premium income = (1 + θ) E[S]
+c = annual premium income = (1 + \theta) E[S]
 ⎛ u + c − E [ S ] ⎞
 P(S < u + c)  Φ ⎜
 ⎜ Var[ S ] ⎟ ⎟
@@ -145,13 +147,13 @@ P(S < u + c)  Φ ⎜
 u + c − E [ S ]
 = 1.96
 Var[ S ]
-u + θE[S] = 1.96 Var[ S ]
-u = 1.96 Var[ S ] - θE[S]
-= 61893.8 - 168000θ
+u + \thetaE[S] = 1.96 Var[ S ]
+u = 1.96 Var[ S ] - \thetaE[S]
+= 61893.8 - 168000\theta
 (b)
-61893.8 - 168000θ = 0
-θ = 0.3684
-No initial reserve is required if θ ≥ 0.3684. i.e. when the premium $ \geq \$229,894$.
+61893.8 - 168000\theta = 0
+\theta = 0.3684
+No initial reserve is required if $\theta \leq 0.3684$. i.e. when the premium $ \geq \$229,894$.
 Comment: There were some mixed answers for the second part of this question.
 Numerical figures varied in (b) due to the rounding of the square root of the
 Var(S).
