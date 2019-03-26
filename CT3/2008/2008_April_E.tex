@@ -32,20 +32,14 @@
 
 \begin{enumerate}
 %%CT3 A2008—411
-\item In an investigation about the duration of insurance policies of a certain type, a sample
-of n policies is studied. All n policies have been initiated at the same time, which is
-also the time of the start of the investigation. For each policy, the time T (in months)
-until the policy expires can be modelled as an exponential random variable with
-parameter λ, independently of the times for all other policies.
+\item In an investigation about the duration of insurance policies of a certain type, a sample of n policies is studied. All n policies have been initiated at the same time, which is also the time of the start of the investigation. For each policy, the time T (in months)
+until the policy expires can be modelled as an exponential random variable with parameter λ, independently of the times for all other policies.
 \begin{enumerate}[(i)]
 \item %(i)
-Suppose that the investigation is terminated as soon as k policies have expired,
-where k is a known (predetermined) constant. The observed policy expiry
-times are denoted by t 1 , t 2 , ..., t k with 0 < k ≤ n and t 1 < t 2 < ... < t k .
-(a) Show that the probability that any randomly selected policy is still in
-force at the time of the termination of the investigation is e −λ t k .
-(b) Show that the likelihood function of the parameter λ, using information
-from all n policies, is given by
+Suppose that the investigation is terminated as soon as k policies have expired, where k is a known (predetermined) constant. The observed policy expiry times are denoted by t 1 , t 2 , ..., t k with 0 < k ≤ n and t 1 < t 2 < ... < t k .
+(a) Show that the probability that any randomly selected policy is still in force at the time of the termination of the investigation is e −λ t k .
+
+(b) Show that the likelihood function of the parameter λ, using information from all n policies, is given by
 k
 L ( λ ) = λ k e
 −λ ∑ t i
@@ -53,16 +47,13 @@ i = 1
 e − ( n − k ) λ t k .
 Hence find the maximum likelihood estimate (MLE) of λ.
 (c)
-Consider an investigation on 20 policies which is terminated when five
-policies have expired, giving the following observed expiry times (in
+Consider an investigation on 20 policies which is terminated when five policies have expired, giving the following observed expiry times (in
 months):
 \[1.03 6.67 12.70 12.88 21.54\]
 Calculate the MLE of λ based on this sample.
 [9]
 \item (ii)
-Suppose instead that the investigation is terminated after a fixed length of time
-t 0 . The number of policies that have expired by time t 0 is considered to be a
-random variable, denoted by K.
+Suppose instead that the investigation is terminated after a fixed length of time t 0 . The number of policies that have expired by time t 0 is considered to be a random variable, denoted by K.
 (a) Explain clearly why the distribution of K is binomial and determine its
 parameters.
 (b) Hence find the MLE of λ in this case.
@@ -138,8 +129,7 @@ k
 i = 1
 (ii)
 (a)
-We have n policies with independent durations, and each will have
-expired by the time of termination with probability
+We have n policies with independent durations, and each will have expired by the time of termination with probability
 p = P ( T ≤ t 0 ) = 1 − e −λ t 0 ,
 or will have not expired with probability 1 - p.
 (
@@ -188,11 +178,8 @@ t 0
 (i)
 (a)
 F = 1149/289 = 3.98 on (2, 12) degrees of freedom
-From Yellow Tables pages 172/3, P-value of the data is between 0.05
-and 0.025.
-We can reject H 0 (the “no schools effects” hypothesis) at the 5% level
-of testing but not at the 1% level. We have some evidence against the
-“no schools effects” hypothesis − and conclude that there are school
+From Yellow Tables pages 172/3, P-value of the data is between 0.05 and 0.025.
+We can reject H 0 (the “no schools effects” hypothesis) at the 5\% level of testing but not at the 1% level. We have some evidence against the “no schools effects” hypothesis − and conclude that there are school
 effects (i.e. differences among the underlying means).
 (b)
 School 1 mean = 598/5 = 119.6
@@ -227,16 +214,10 @@ F = 767/314 = 2.44 on (3, 16) degrees of freedom
 From Yellow Tables pages 172/3, P-value of the data is just more than
 0.1 (>10%)
 \begin{itemize}
-    \item We do not have sufficiently strong evidence against the “no schools
-effects” hypothesis, which can stand.
-\item (b) With only three schools involved, the results from one of them (School
-2) are sufficiently different from those of the other two to allow us to
-detect a difference among underlying means.
-\item However, the results for
-the fourth school range across the results for the original three schools
-− with all four schools in the comparison, the “between schools” sum
-of squares is no longer so high relative to the residual and we fail to
-detect differences.
+    \item We do not have sufficiently strong evidence against the “no schools effects” hypothesis, which can stand.
+\item (b) With only three schools involved, the results from one of them (School 2) are sufficiently different from those of the other two to allow us to detect a difference among underlying means.
+\item However, the results for the fourth school range across the results for the original three schools
+− with all four schools in the comparison, the “between schools” sum of squares is no longer so high relative to the residual and we fail to detect differences.
 \end{itemize}
 
 (c) t 16 (0.025) = 2.120
@@ -250,17 +231,17 @@ i.e. 22.6 \pm 23.76 or (−1.2, 46.4)
 13
 (i)
 A clearly labelled scatterplot:
-There seems to be a positive linear relationship between blood flow and
-auricular pressure.
+There seems to be a positive linear relationship between blood flow and auricular pressure.
 %Page 8Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2008 — Examiners’ Report
 (ii)
-n = 12
-S xx = 1381.85 −
-S yy = 1251 −
+\begin{itemize}
+\item n = 12
+\item S xx = 1381.85 −
+\item S yy = 1251 −
 113 2
 = 186.9167
 12
-S xy = 1272.2 −
+\item S xy = 1272.2 −
 \beta ˆ =
 S xy
 S xx
@@ -275,5 +256,6 @@ S xx
 = 1.676
 48.3292
 1
-α ˆ = y − \beta ˆ x = (113 − 1.6758*126.5) = − 8.249
+\item α ˆ = y − \beta ˆ x = (113 − 1.6758*126.5) = − 8.249
+\end{itemize}
 \end{document}
