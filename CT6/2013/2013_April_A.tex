@@ -1,0 +1,132 @@
+CT6 A2013
+© Institute and Faculty of Actuaries1 Use the U(0,1) random numbers 0.238 and 0.655 to generate two observations from
+the Weibull distribution with parameters c = 0.002 and γ = 1.1 .
+
+2 Claims on a certain type of insurance policy are believed to follow an exponential
+distribution. The upper quartile claim size is 240.
+Calculate the mean claim size.
+3
+
+An actuary has a tendency to be late for work. If he gets up late then he arrives at
+work X minutes late where X is exponentially distributed with mean 15. If he gets up
+on time then he arrives at work Y minutes late where Y is uniformly distributed on
+[0,25]. The office manager believes that the actuary gets up late one third of the time.
+Calculate the posterior probability that the actuary did in fact get up late given that he
+arrives more than 20 minutes late at work.
+
+4
+(i)
+Explain what is meant by a two player zero-sum game.
+
+Sally and Fiona agree to play a game. The rules of the game are as follows:
+•
+•
+•
+•
+Each player chooses either the number 10 or the number 40.
+Neither player knows the other player’s choice before selecting her number.
+If both players choose the same number, Fiona pays Sally the sum of the numbers.
+If the players choose differently, Sally pays Fiona the sum of the numbers.
+Sally decides to adopt a randomised strategy where she chooses 10 with probability p
+and 40 with probability 1 − p.
+(ii)
+(a) Determine the value of p for which Sally’s expected payoff is the same
+regardless of what Fiona chooses.
+(b) Explain why this strategy is optimal for Sally.
+(c) Calculate Sally’s expected payout each time the game is played,
+assuming that she follows this strategy.
+
+[Total 6]
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1
+Using the inverse transform method we need to set:
+γ
+u = 1 − e − cx .
+i.e.
+− cx γ = log(1 − u ).
+i.e.
+1
+⎛ log(1 − u ) ⎞ γ
+x =⎜
+⎟ .
+− c
+⎝
+⎠
+Using the equation above with the parameters c = 0.002 and γ = 1.1 we get:
+u = 0.238 gives x = 86.96
+u = 0.655 gives x = 300.73
+This routine question was well answered, although a few candidates struggled with the
+algebra.
+2
+We need to solve:
+1 − e − 240 \lambda = 0.75
+e − 240 \lambda = 0.25
+so
+\lambda=
+log(0.25)
+= 0.005776
+− 240
+and so the mean is
+1
+= 173.12.
+0.005776
+This straightforward question was well answered.
+Page 3Subject %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – April 2013 – Examiners’ Report
+3
+Let L be the state getting up late and let M be the state of getting up on time.
+Let Z be the number of minutes late.
+According to Bayes’ theorem:
+P ( L Z > 20) =
+P ( Z > 20 L ) P ( L )
+P ( Z > 20)
+but
+P ( Z > 20 L ) = e
+−
+20
+15
+= 0.263597138
+and
+P ( Z > 20 ) = P ( Z > 20 L ) P ( L ) + P ( Z > 20 M ) P ( M )
+= 0.263597138 × 1 + 0.2 × 2 = 0.221199046
+3
+3
+and so
+P ( L Z > 20) =
+0.263597138 × 1
+3 = 0.3972 .
+0.221199046
+This question was well answered by most candidates however weaker candidates were unable
+to apply Bayes' Theorem.
+4
+(i) A game with 2 players where whatever one player loses in the game the other
+player wins, and vice versa.
+(ii) (a)
+Value to Sally
+Fiona
+10
+40
+Sally
+10
+40
+20
+−50
+−50 80
+Sally chooses 10 with probability p.
+Page 4Subject %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – April 2013 – Examiners’ Report
+Then for the expected payoffs to be equal regardless of Fiona’s choice
+we must have:
+20 p − 50 ( 1 − p ) = − 50 p + 80 ( 1 − p )
+so
+so
+200 p = 130
+p = 0.65
+(b) This strategy is optimal for Sally because it produces the same
+expected payoff regardless of what Fiona does. Under any other
+randomized strategy Fiona can adopt a strategy that minimizes Sally’s
+expected payoff.
+(c) Value = 20 * 0.65 – 50 * 0.35 = −4.5.
+This question was generally well answered, although a few candidates were thrown by a less
+familiar application of decision theory.

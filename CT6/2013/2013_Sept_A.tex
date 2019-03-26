@@ -1,0 +1,123 @@
+
+
+© Institute and Faculty of Actuaries1
+An insurance company has a portfolio of n policies. The probability of a claim in a
+given year on each policy is p independently from policy to policy, and the possibility
+of more than one claim can be ignored. Prior beliefs about p are specified by a Beta
+distribution with parameters \alpha and \beta. In one year the insurance company has a total
+of k claims on the portfolio.
+Calculate the posterior estimate of p under all or nothing loss and show that it can be
+written in the form of a credibility estimate.
+
+[You may use without proof the fact that the mode of a Beta distribution with
+\alpha − 1
+.]
+parameters \alpha and \beta is
+\alpha +\beta− 2
+2
+Claim amounts on a certain type of insurance policy follow an exponential
+distribution with mean 100. The insurance company purchases a special type of
+reinsurance policy so that for a given claim X the reinsurance company pays
+0
+0.5 X − 40
+X − 120
+if 0 < X < 80;
+if 80 ≤ X < 160;
+if X ≥ 160.
+Calculate the expected amount paid by the reinsurance company on a randomly
+chosen claim.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1
+The posterior distribution of p is given by
+f ( p k claims)  f ( k claims p )  f ( p )
+ p k ( 1  p ) n  k p  1 ( 1  p )  1
+ p  k  1 (1  p )  n  k  1
+which is the pdf of a Beta distribution with parameters   k and   n  k .
+Using the fact given in the questions, the mode of the posterior distribution (which is
+the estimate of p under all or nothing loss is given by:
+p̂ =
+=
+  k  1
+  k  1
+
+ k  n  k  2  n  2
+  1
+ 2
+k
+n
+
+ 
+ 2  n  2 n  n  2
+= (1  Z ) 
+where Z
+=
+  1
+k
+ Z 
+n
+ 2
+n
+.
+ n  2
+This is in the form of a credibility estimate since
+under all or nothing loss and k
+n
+  1
+is the prior estimate of p
+ 2
+is the estimate of p derived from the data.
+The first part of this question was answered well. Most candidates didn’t recognise the need
+to base the prior estimate on the mode of the prior distribution and therefore didn’t manage
+to express the posterior estimate as a credibility estimate.
+Page 3Subject CT6 (Statistical Methods Core Technical) – September 2013 – Examiners’ Report
+2
+The mean amount paid by the reinsurance company is given by:
+
+160
+ 1
+
+ 0.01 x
+ 0.01 x
+   2 x  40    0.01 e dx   ( x  120)  0.01 e dx .
+80
+160
+The first integral is (using integration by parts):
+160
+  1
+  0.01 x 
++
+   2 x  40  e
+
+
+ 
+ 80
+160
+
+80
+1  0.01 x
+e
+dx
+2
+160
+=  40 e  1.6   50 e  0.01 x 
+
+ 80
+= 50 e  0.8  90 e  1.6  4.2957.
+The second integral is:
+
+  ( x  120) e  0.01 x 
++
+
+ 160
+
+ e
+ 0.01 x
+dx
+160
+= 40 e  1.6  1 00 e  1.6
+= 28.26551.
+So total mean claim = 4.29576 + 28.26551 = 32.56.
+This question was generally answered well. Weaker candidates could not integrate by parts
+accurately.

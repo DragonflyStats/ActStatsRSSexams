@@ -1,0 +1,101 @@
+3
+[6]
+Andy is a famous weight lifter who will be competing at the Olympic Games. He has
+taken out special insurance which pays out if he is injured. If the injury is so serious
+that his career is ended the policy pays $1m and is terminated. If he is injured but
+recovers the insurance payment is $0.1m and the policy continues.
+The insurance company’s underwriters believe that the probability of an injury in any
+year is 0.2, and that the probability of more than one injury in a year can be ignored.
+If Andy is injured, there is a 75% chance that he will recover.
+Annual premiums are paid in advance, and the insurance company pays claims at the
+end of the year. Assume that this is the only policy that the insurance company
+writes, and that it has an initial surplus of $0.1m.
+(i) Define what is meant by ψ ($0.1m,1) and ψ ($0.1m).
+(ii) Calculate the annual premium charged assuming the insurance company uses a
+premium loading of 30%.
+
+(iii) Determine ψ ($0.1m, 2).
+CT6 S2013–2
+
+
+[Total 8]4
+The table below shows the probability distribution of a discrete random variable X.
+Value
+Probability
+(i)
+1
+0.3
+2
+0.3
+3
+0.4
+Construct an algorithm to generate random samples from X.
+
+The random variable Z takes values from X with probability 0.2 and values from an
+exponential distribution Y with probability 0.8. The upper quartile point of the
+distribution of Y is 2.5.
+5
+(ii) Calculate the expected value of Y.
+[3]
+(iii) Extend the algorithm in part (i) to generate random samples from Z.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3
+(i)
+If U  t   U  ct  S  t  where U  U  0   $0.1 m then
+Ψ  $0.1 m ,1   Pr  U  t   0 for some t   0,1  given U  0   $0.1 m 
+and
+Ψ  $0.1 m   Pr( U  t   0 for some t  0 given U  0   $0.1 m )
+(ii)
+The premium charged will be:
+1.3  0.2  (0.25  $1m  0.75  $0.1m)  $0.0845m.
+Page 4Subject CT6 (Statistical Methods Core Technical) – September 2013 – Examiners’ Report
+(iii)
+The possibilities are tabulated below, where N means not injured, R means
+injured but recovered and X means injured but career ending:
+Year 1 Year 2 Probability Ruin?
+N N 0.8  0.8 =0.64 No
+N R 0.8  0.15 = 0.12 No
+N X 0.8  0.05 = 0.04 Yes
+R N 0.15  0.8 = 0.12 No
+R R 0.15  0.15 = 0.0225 No
+R X 0.15  0.05 = 0.0075 Yes
+X N/A 0.05 Yes
+Summing the cases where ruin occurs we have:
+ ($0.1m, 2)  0.04  0.0075  0.05  0.0975
+Many candidates lost marks in part (i) by not giving a sufficiently precise definition to score
+full marks. For part (iii) candidates who worked through the possibilities methodically
+generally scored well. A number of candidates unnecessarily used approximate methods in
+part (iii).
+4
+(i)
+The algorithm is as follows:
+Step 1 Generate u from the uniform distribution on [0,1].
+Step 2 If 0 < u < 0.3 set X = 1.
+If 0.3 <= u < 0.6 set X = 2.
+Otherwise set X = 3.
+(ii)
+We need to solve P ( Y  2.5)  0.75
+but
+P ( Y  2.5)  1  e  2.5 
+so 1  e  2.5   0.75
+so e  2.5   0.25
+so 
+log(0.25)
+ 0.554517744 and the mean of Y is 1.803368801.
+ 2.5
+Page 5Subject CT6 (Statistical Methods Core Technical) – September 2013 – Examiners’ Report
+(iii)
+The extended algorithm is:
+Step 1 Generate v from the uniform distribution on [0,1].
+Step 2 If v< 0.2 then generate a sample from X as in (i) and finish,
+otherwise go to step 3.
+Step 3 Generate u from the uniform distribution on [0,1].
+Step 4 Set 1  e  x  u
+i.e. x 
+log(1  u )
+ 0.55451744
+This question was answered well.
+
+

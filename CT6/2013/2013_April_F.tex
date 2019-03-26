@@ -1,0 +1,140 @@
+
+PLEASE TURN OVER11
+An actuary is considering the time series model defined by
+X t = \alpha X t − 1 + e t
+where e t is a sequence of independent Normally distributed random variables with
+mean 0 variance \sigma 2 . The series begins with the fixed value X 0 = 0.
+(i)
+Show that the conditional distribution of X t given X t − 1 is Normal and hence
+show that the likelihood of making observations x 1 , x 2 , ... , x n from this model
+is:
+n
+L ∝ ∏
+i = 1
+1
+e
+2 π\sigma
+−
+( x i −\alpha x i − 1 ) 2
+2 \sigma 2
+.
+
+(ii) Show that the maximum likelihood estimate of \alpha can also be regarded as a
+least squares estimate.
+
+(iii) Find the maximum likelihood estimates of \alpha and \sigma 2 .
+(iv) Derive the Yule-Walker equations for the model and hence derive estimates of
+\alpha and \sigma 2 based on observed values of the autocovariance function.
+
+(v) Comment on the difference between the estimates of \alpha in parts (iii) and (iv).
+
+[Total 15]
+END OF PAPER
+CT6 A2013–8
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+Page 12Subject %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – April 2013 – Examiners’ Report
+11
+(i)
+X t − \alpha X t − 1 = e t ~ N ( 0 , \sigma 2 ) .
+So X t X t − 1 ~ N ( \alpha X t − 1 , \sigma 2 )
+and so the likelihood is given by:
+n
+L ∝ ∏ P ( X i = x i x i − 1 ) × P ( x 0 )
+i = 1
+n
+1
+e
+2 π\sigma
+L ∝ ∏
+i = 1
+(ii)
+−
+( x i −\alpha x i − 1 ) 2
+2 \sigma 2
+× 1
+We can see that maximising the likelihood with respect to \alpha is the same as
+minimising the expression:
+∑ i = 1 ( x i −\alpha x i − 1 ) 2
+n
+L ∝ \sigma − n e
+−
+2 \sigma 2
+n
+∑ ( x i − \alpha x i − 1 ) 2 .
+i = 1
+(iii)
+The log-likelihood is given by:
+l = logL = − n log \sigma −
+n
+1
+2 \sigma
+2
+∑ ( x i − \alpha x i − 1 ) 2 + Constant
+i = 1
+Differentiating with respect to \alpha gives:
+\partial  l
+1
+= 2
+\partial \alpha 2 \sigma
+and setting
+n
+∑ 2 x i − 1 ( x i − \alpha x i − 1 )
+i = 1
+=
+1
+\sigma
+2
+n
+\alpha
+n
+∑ x i x i − 1 − \sigma 2 ∑ x i 2 − 1
+i = 1
+i = 1
+\partial  l
+= 0 we have:
+\partial \alpha
+∑ x i x i − 1 .
+\hat{\alpha} = i = n 1
+∑ i = 1 x i 2 − 1
+n
+Page 13Subject %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – April 2013 – Examiners’ Report
+Differentiating with respect to \sigma we have:
+\partial  l
+n 1 n
+= − + 3 ∑ ( x i − \alpha x i − 1 ) 2 .
+\partial \sigma
+\sigma \sigma i = 1
+Setting this expression equal to zero we have:
+\sigma ˆ 2 =
+(iv)
+1 n
+( x i − \hat{\alpha} x i − 1 ) 2 .
+∑
+n i = 1
+The Yule Walker equations are:
+γ 0 = cov (\alpha X t−1 + e t , X t ) = \alpha cov(X t−1 , X t ) + cov (e t , X t ) = \alpha γ 1 + \sigma 2
+γ 1 = cov (\alpha X t−1 + e t , X t−1 ) = \alpha cov(X t−1 , X t − 1 ) + cov (e t , X t−1 ) = \alpha γ 0
+Using these to estimate the parameters we get:
+\sigma ˆ 2 = γ ˆ 0 − \hat{\alpha} γ ˆ 1 .
+n
+(v)
+γ ˆ
+\hat{\alpha} = 1 =
+γ ˆ 0
+∑ ( x i − x ) ( x i − 1 − x )
+i = 1
+n
+∑ ( x i − x )
+.
+2
+i = 1
+The difference between them is that in the second approach we need to
+centralise the data around the mean x .
+This question was relatively well answered for a time series question. It was clear that some
+candidates had learnt the bookwork, but struggled with this more unfamiliar application of
+time series. In particular only the best candidates accurately completed the differentiation
+needed in part (iii).
+END OF EXAMINERS’ REPORT
+Page 14
