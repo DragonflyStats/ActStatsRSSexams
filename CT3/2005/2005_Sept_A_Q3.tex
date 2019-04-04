@@ -1,0 +1,95 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{enumerate}
+
+\item 
+3 Claim amounts on a certain type of policy are modelled as following a gamma
+distribution with parameters = 120 and = 1.2.
+Calculate an approximate value for the probability that an individual claim amount
+exceeds 120, giving a reason for the approach you use.
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Gamma(120, 1.2) has mean
+115.5 123.75
+68.0625
+1
+( 1)
+120
+120
+100 and variance
+1.2
+1.2 2
+(1) 0.841
+83.333
+X N (100,9.129 2 ) by the Central Limit theorem (since the gamma variable is the
+sum of 120 independent gamma(1,1.2) variables)
+P X
+4
+120
+P Z
+120 100
+9.129
+2.191
+1 0.98578 0.0142
+
+
+\end{document}
+\begin{framed}
+Mean 
+
+\[\displaystyle \operatorname {E} [X]={\frac {\alpha }{\beta }}}  \]
+
+
+Variance
+\[{\displaystyle \operatorname {Var} (X)={\frac {\alpha }{\beta ^{2}}}}  \]
+
+\end{framed}
+
+A random variable X that is gamma-distributed with shape α and rate \beta is denoted 
+\[ {\displaystyle X\sim \Gamma (\alpha ,\beta )\equiv \operatorname {Gamma} (\alpha ,\beta )}  {\displaystyle X\sim \Gamma (\alpha ,\beta )\equiv \operatorname {Gamma} (\alpha ,\beta )}\]
+
+
+
+
+a shape parameter $\alpha$
+a rate parameter $\beta$
+
+
+
+For large k the gamma distribution converges to normal distribution with mean μ = kθ and variance σ2 = kθ2.
