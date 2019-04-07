@@ -32,6 +32,28 @@
 
 \begin{document}
 \begin{enumerate}
+
+%%-- April 2010 -- Question 4 --%
+Let $\{X_1, X_2, \ldots X_n\}$ be a random sample of size $n$ from a population with mean $\mu$ and
+variance $\sigma^2$.
+Let the sample mean be $\bar{X}$ and the sample variance be 
+\[S^2 = \frac{1}{n-1} \left( \sum X^2_i - n \bar{X}^2 right).\]
+
+You may assume that $E[\bar{X}] = \mu$ and
+$\operatorname{Var}[\bar{X}] = \frac{\sigma^2}{n}$.
+Show that $E[S^2]= \sigma^2$ .
+
+%===============%
+
+\begin{eqnarray*}
+E[S^2]
+&=& \frac{1}{n-1} \left[ \sum E(X_i^2) - n E(bar{X}^2) \right]\\
+&=& \frac{1}{n-1} \left[ \sum (\sigma^2 + \mu^2) - n E(\frac{\sigma^2}{n} + \mu^2) \right]\\
+&=& \frac{1}{n-1} \left[ n (\sigma^2 + \mu^2) - \sigma^2 - n \mu^2 \right]\\
+&=& \frac{1}{n-1} \left[ (n-1) \sigma^2 \right]\\
+&=& \sigma^2
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% Question 4
 4
 [3]
@@ -63,24 +85,7 @@ Justify the fact that 2n λ X has a χ 2 k distribution, where X is the mean of 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 4
 1
-E ⎡ S 2 ⎤ =
-{ Σ E ( X i 2 ) − nE ( X 2 )}
-⎣ ⎦
-n − 1
-σ 2
-1
-=
-{ Σ ( σ 2 + μ 2 ) − n ( + μ 2 )}
-n − 1
-n
-1
-{ n ( σ 2 + μ 2 ) − σ 2 − n μ 2 }
-=
-n − 1
-1
-{( n − 1) σ 2 } = σ 2
-=
-n − 1
+
 Approximate 95% CI for λ m − λ f is ( x m − x f ) ± 1.96
 ⇒ (0.24 − 0.15) ± 1.96
 x m x f
