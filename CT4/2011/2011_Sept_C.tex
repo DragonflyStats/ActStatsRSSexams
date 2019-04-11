@@ -32,7 +32,8 @@
 
 \begin{document}
 \begin{enumerate}
-PLEASE TURN OVER6
+%% PLEASE TURN OVER
+%% Question 6
 A recording instrument is set up to observe a continuous time process, and stores the
 results for the most recent 250 transitions. The data collected are as follows:
 State
@@ -65,25 +66,30 @@ Write down the estimated generator matrix of the model.
 
 (iii)
 7
-Specify the distribution of the number of transitions from state i to state j,
-given the number of transitions out of state i.
-
+Specify the distribution of the number of transitions from state $i$ to state $j$,
+given the number of transitions out of state $i$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%
 [Total 9]
-A study is made of the impact of regular exercise and gender on the risk of
-developing heart disease among 50–70 year olds. A sample of people is followed from
-exact age 50 years until either they develop heart disease or they attain the age of 70
+\newpage
+
+
+A study is made of the impact of regular exercise and gender on the risk of developing heart disease among 50–70 year olds. A sample of people is followed from exact age 50 years until either they develop heart disease or they attain the age of 70
 years. The study uses a Cox regression model.
+
 (i)
-List reasons why the Cox regression model is a suitable model for analyses of
-this kind.
+
+List reasons why the Cox regression model is a suitable model for analyses of this kind.
 
 The investigator defined two covariates as follows:
-•
-•
-Z 1 = 1 if male, 0 if female.
-Z 2 = 1 if takes regular exercise, 0 otherwise.
-CT4 S2011—4The investigator then fitted three models, one with just gender as a covariate, a second
-with gender and exercise as covariates, and a third with gender, exercise and the interaction between them as covariates. The maximised log-likelihoods of the three
+
+\begin{itemize}
+\item $Z_1 = 1$ if male, 0 if female.
+\item $Z_2 = 1$ if takes regular exercise, 0 otherwise.
+\end{itemize} 
+% - CT4 S2011—4
+
+The investigator then fitted three models, one with just gender as a covariate, a second with gender and exercise as covariates, and a third with gender, exercise and the interaction between them as covariates. The maximised log-likelihoods of the three
 models and the maximum likelihood estimates of the parameters in the third model
 were as follows:
 null model
@@ -104,10 +110,8 @@ Interaction 0.2
 Show that the interaction term is required in the model by performing a
 suitable statistical test.
 Interpret the results of the model.
-CT4 S2011—5
-
-
-[Total 11]
+%% CT4 S2011—5
+%% Total 11]
 
 
 
@@ -119,32 +123,34 @@ CT4 S2011—5
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
 Question 7
 (i)
 Cox’s model ensures that the hazard is always positive.
 Standard software packages often include Cox’s model.
-Cox’s model allows the general “shape” of the hazard function for all individuals to
-be determined by the data, giving a high degree of flexibility,
-The data in this investigation are censored, and Cox’s model can handle censored
-data.
-Page 8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
+Cox’s model allows the general “shape” of the hazard function for all individuals to be determined by the data, giving a high degree of flexibility, The data in this investigation are censored, and Cox’s model can handle censored data.
+
+%%Page 8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
 In Cox’s model the hazards of individuals with different values of the covariates are proportional, meaning that they bear the same ratio to one another at all ages.
 If we are not primarily concerned with the precise form of the hazard, we can ignore
 the shape of the baseline hazard and estimate the effects of the covariates from
 the data directly.
 (ii)
-A suitable statistical test is that using the likelihood ratio statistic.
+\begin{itemize}
+\item A suitable statistical test is that using the likelihood ratio statistic.
 We compare the model with gender + exercise with the model with gender + exercise +
 the interaction.
-If the log-likelihood for these two models are L and L interaction respectively, then the test
+\item If the log-likelihood for these two models are L and L interaction respectively, then the test
 statistic is −2( L − L interaction ).
-This is equal to −2{−1,250 – (−1,246)} = −2(−4) = 8.
-Under the null hypothesis that the parameter on the interaction term is zero, this statistic has a chi-squared distribution with one degree of freedom (since the interaction term
+\item This is equal to −2{−1,250 – (−1,246)} = −2(−4) = 8.
+\item Under the null hypothesis that the parameter on the interaction term is zero, this statistic has a chi-squared distribution with one degree of freedom (since the interaction term
 involves one parameter).
-Since 8 > 7.879, the critical value of the chi-squared distribution at the 0.5% level (or 8
-> 3.84 for the 5% level),
-we reject the null hypothesis even at the 99.5% level (or 95% level) and conclude that
+\item Since $8 > 7.879$, the critical value of the chi-squared distribution at the 0.5\% level (or 8
+> 3.84 for the 5\% level),
+we reject the null hypothesis even at the 99.5\% level (or 95\% level) and conclude that
 the interaction term is required in the model.
+\end{itemize}
 (iii)
 The baseline category is females who do not take regular exercise.
 The hazards of developing heart disease in the other three categories, relative to the
@@ -158,16 +164,18 @@ Yes
 exp(0.2) = 1.22
 exp(0.2 – 0.3 – 0.35) = 0.64
 exp(−0.3) = 0.74
-Males who do not take regular exercise are more likely to develop heart disease than
+\begin{itemize}
+\item Males who do not take regular exercise are more likely to develop heart disease than
 females.
-Regular exercise decreases the risk of heart disease for both males and females.
-The effect of regular exercise in reducing the risk of heart disease is greater for males
+\item Regular exercise decreases the risk of heart disease for both males and females.
+\item The effect of regular exercise in reducing the risk of heart disease is greater for males
 than for females, so much so that among those who take regular exercise, males have a
 lower risk of developing heart disease than females.
-There was a wide variation of performance among candidates on this question. Answers to part (i) suffered from wordiness and lack of precision, giving general descriptions of the
-model rather than focusing on its attractive qualities. Part (ii) was very well answered by
-Page 9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
-many candidates. In part (iii) many candidates seemed not to understand the interpretation of
-the interaction term. For example, it was common to read that males had a higher risk of
-heart disease than females. However, this is only true for persons who do not take regular exercise. Among persons who do take regular exercise, females have a higher risk of heart
-disease than males.
+\end{itemize}
+
+%%There was a wide variation of performance among candidates on this question. Answers to part (i) suffered from wordiness and lack of precision, giving general descriptions of the model rather than focusing on its attractive qualities. Part (ii) was very well answered by
+%% Page 9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
+%many candidates. In part (iii) many candidates seemed not to understand the interpretation of
+%the interaction term. For example, it was common to read that males had a higher risk of
+%heart disease than females. However, this is only true for persons who do not take regular exercise. Among persons who do take regular exercise, females have a higher risk of heart disease than males.
+\end{document}
