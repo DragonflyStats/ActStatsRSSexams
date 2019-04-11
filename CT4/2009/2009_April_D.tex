@@ -80,27 +80,28 @@ for estimating the parameters from a set of crude mortality rates.
 [Total 9]
 CT4 A2009—4
 10
-Let T x be a random variable denoting future lifetime after age x, and let T be
+Let $T_x$ be a random variable denoting future lifetime after age x, and let T be
 another random variable denoting the lifetime of a new-born person.
 \item (i)
 \item (ii)
-(a) Define, in terms of probabilities, S_x(t) , which represents the survival
-function of T x .
-(b) Derive an expression relating S_x(t) to S ( t ) , the survival function of T.
+(a) Define, in terms of probabilities, $S_x(t)$ , which represents the survival
+function of $T_x$ .
+(b) Derive an expression relating $S_x(t)$ to $S ( t )$ , the survival function of $T$.
 
 Define, in terms of probabilities involving T x , the force of mortality, \mu x + t .
 
 The Weibull distribution has a survival function given by
-(
-)
+
+\[
 S_x(t) = exp − ( \lambda t ) \beta ,
-where \lambda and \beta are parameters (\lambda, \beta > 0).
+\]
+where $\lambda$ and $\beta$ are parameters ($\lambda, \beta > 0$).
 \item (iii)
-Derive an expression for the Weibull force of mortality in terms of \lambda and \beta.
+Derive an expression for the Weibull force of mortality in terms of $\lambda$ and $\beta$.
 
 (iv)
-Sketch, on the same graph, the Weibull force of mortality for 0 ≤ t ≤ 5 for the
-following pairs of values of \lambda and \beta:
+Sketch, on the same graph, the Weibull force of mortality for $0 \leq t \leq 5$ for the
+following pairs of values of $\lambda$ and $\beta$:
 \lambda = 1, \beta = 0.5
 \lambda = 1, \beta = 1.0
 \lambda = 1, \beta = 1.5
@@ -200,16 +201,19 @@ This could be done by weighted least squares or maximum likelihood.
 Page 12%%%%%%%%%%%%%%%%%%%%%%%%%%%— %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
 The more general graduation process allows the fitting of more complex
 models from the Gompertz-Makeham family which have the form
-\mu x = polynomial(1) + exp(polynomial(2))
+\[\mu x = polynomial(1) + exp(polynomial(2))\]
 the parameters of which cannot always so easily be estimated by the method
 used in part \item (ii).
+
 10
 \item (i)
-(a) S_x(t) = Pr[ T x > t ]
+(a) $S_x(t) = Pr[ T x > t ]$
 (b) EITHER
-Since Pr[ T x > t ] = Pr[ T > x + t | T > x ] =
-Pr[ T > x + t ]
+Since 
+\begin{eqnarray*} Pr[ T x > t ] &=& Pr[ T > x + t | T > x ] \\ &=&
+Pr[ T > x + t ] \times
 Pr[ T > x ]
+\end{eqnarray*}
 and S ( t ) = Pr[ T > t ] ,
 then S_x(t) =
 S ( x + t )
@@ -241,7 +245,7 @@ h → 0
 ( Pr[ T x ≤ t + h | T x > t )
 h
 EITHER
-If the density function of T x is f x ( t ) , then we can write
+If the density function of T x is $f_x ( t )$ , then we can write
 f x ( t ) = S_x(t) \mu x + t = −
 d
 S_x(t)
@@ -253,7 +257,7 @@ S_x(t)
 S_x(t) dt
 (
 )
-If S_x(t) = exp − ( \lambda t ) \beta , therefore, we have
+If $S_x(t) = exp − ( \lambda t ) \beta$ , therefore, we have
 \mu x + t = −
 \mu x + t = −
 (
@@ -298,3 +302,4 @@ Page 14
 \beta
 \beta− 1%%%%%%%%%%%%%%%%%%%%%%%%%%%— %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
 
+\end{document}
