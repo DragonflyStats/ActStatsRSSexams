@@ -35,29 +35,39 @@
 PLEASE TURN OVERA5
 A No-Claims Discount system operated by a motor insurer has the following four
 levels:
-Level 1:
-Level 2:
-Level 3:
-Level 4:
-0% discount
-25% discount
-40% discount
-60% discount
+\begin{itemize}
+\item Level 1: 0\% discount
+\item Level 2: 25\% discount
+\item Level 3: 40\% discount
+\item Level 4: 60\% discount
+\end{itemize}
+
+
+
+
+
 The rules for moving between these levels are as follows:
-Following a year with no claims, move to the next higher level, or remain at
+
+\begin{itemize}
+    \item Following a year with no claims, move to the next higher level, or remain at
 level 4.
-Following a year with one claim, move to the next lower level, or remain at
+\item Following a year with one claim, move to the next lower level, or remain at
 level 1.
-Following a year with two or more claims, move back two levels, or move to
+\item Following a year with two or more claims, move back two levels, or move to
 level 1 (from level 2) or remain at level 1.
+\end{itemize}
 For a given policyholder the probability of no claims in a given year is 0.85 and the
 probability of making one claim is 0.12.
 X(t) denotes the level of the policyholder in year t.
 (i)
-(a)
-(b)
+
+\begin{enumerate}[(i)]
+\item
 Explain why X(t) is a Markov chain.
+\item
 Write down the transition matrix of this chain.
+\end{enumerate}
+
 [2]
 (ii)
 Calculate the probability that a policyholder who is currently at level 2 will be
@@ -87,11 +97,15 @@ exponential distribution with the following annualised frequencies, :
 If the machine has not suffered any previous breakdown.
 If the machine has broken down once previously.
 If the machine has broken down on two or more occasions.
-As soon as a breakdown occurs an engineer is despatched. It can be assumed that the
+\begin{itemize}
+    \item As soon as a breakdown occurs an engineer is despatched. \item It can be assumed that the
 repair is made immediately, and that it is always possible to repair the machine.
-The washing machine has never broken down at the start of the year (time t = 0).
-P i (t) is the probability that the machine has suffered i breakdowns by time t.
+\item The washing machine has never broken down at the start of the year (time t = 0).
+\item $P i (t)$ is the probability that the machine has suffered i breakdowns by time t.
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
 A5
 (i)(a) It is clear that X(t) is a Markov chain; knowing the present state, any
 additional information about the past is irrelevant for predicting the next
@@ -125,7 +139,7 @@ Page 8
 Models
 April 2005
 Examiners report
-The required probability is 0.1275 + 0.102 = 0.2295
+\newpage The required probability is 0.1275 + 0.102 = 0.2295
 Alternatively
 The second order transition matrix is
 P 2 =
@@ -172,20 +186,27 @@ Alternatively
 The relevant entry from the third-order transition matrix equals
 0.15 0.1275 0.85 0.051 0.062475.
 (iii)
-The chain is irreducible as
+\begin{itemize}
+    \item The chain is irreducible as
 any state is reachable from any other.
-It is also aperiodic;
-If currently at either state 1 or 4, it can remain there. This is not true for states
+\item It is also aperiodic;
+\item If currently at either state 1 or 4, it can remain there. 
+\item This is not true for states
 2 and 3, however these are also aperiodic states since the chain may return e.g.
 to state 2 after 2 or 3 transitions.
-Page 9Subject CT4
+\end{itemize}
+
+%%-- Page 9
+%%-- Subject CT4
 (iv)
-Models
-April 2005
-Examiners report
+%% Models
+%% April 2005
+%% Examiners report
+\begin{itemize}
+    \item 
 In matrix form, the equation we need to solve is P = ,
 where is the vector of equilibrium probabilities.
-This reads
+\item This reads
 0.15 1
 0.85 1
 0.15
@@ -207,15 +228,15 @@ This reads
 4
 4
 i 1 i
-Discard the first of these equations and use also that
+\item Discard the first of these equations and use also that
 obtain first from (4) that 0.85
-Substituting in (3) this gives
+\item Substituting in (3) this gives
 17
 0.85 2 0.12
 3
 3
 3
-(2) now yields that
+\ite (2) now yields that
 0.85 p 1 p 2 0.12 p 3
 3
 4
@@ -229,6 +250,7 @@ or, that
 1
 p 3
 2.65625
+\end{itemize}
 so that finally we get
 0.15
 3
@@ -238,7 +260,8 @@ so that finally we get
 0.17 p 3
 0.0865 p 3 ,
 0.10173 3 .
-Using now that the probabilities must add up to one, we obtain
+\begin{itemize}
+    \item Using now that the probabilities must add up to one, we obtain
 1
 2
 3
@@ -246,13 +269,17 @@ Using now that the probabilities must add up to one, we obtain
 or that
 3
 0.13996.
-Solving back for the other variables we get that
+\item Solving back for the other variables we get that
 1 0.01424,
 2 0.05269,
 4 0.79311
-The long-run probability that the motorist is in discount level 2 is therefore
+\item The long-run probability that the motorist is in discount level 2 is therefore
 0.05269.
-Page 10Subject CT4
+\end{itemize}
+
+\newpage
+%%Page 10 - Subject CT4
+
 A6
 Models
 April 2005
@@ -292,12 +319,14 @@ d
 ln P 0 ( t )
 dt
 10
-Hence, using the boundary condition P 0 (0) 1
+
+\begin{itemize}
+    \item Hence, using the boundary condition P 0 (0) 1
 P 0 ( t )
 (b)
 t
 e 10
-Substitute into the second equation above to obtain
+\item Substitute into the second equation above to obtain
 P 1 ( t )
 1
 e
@@ -308,7 +337,7 @@ t
 * P 1 ( t )
 5
 t
-Using an integrating factor e 5 , we get
+\item Using an integrating factor e 5 , we get
 t
 e 5
 1
@@ -344,9 +373,10 @@ const
 const e
 t
 5
-Page 11Subject CT4
-Models
-April 2005
+\end{itemize}
+% Page 11Subject CT4
+% Models
+% April 2005
 P 1 ( t )
 t
 10
@@ -357,11 +387,13 @@ t
 5
 using boundary condition P 1 (0)
 0
-Alternatively
+
+\begin{itemize}
+    \item Alternatively
 Differentiate the suggested solution and verify it obeys the second equation.
-And that the boundary condition is satisfied.
-(iv)
-Proceeding in a similar way with the equation for P 2 ( t )
+\item And that the boundary condition is satisfied.
+
+\item (iv) Proceeding in a similar way with the equation for P 2 ( t )
 P 2 ( t )
 1
 exp
@@ -397,7 +429,7 @@ P 2 ( t )
 4
 [exp
 3
-Expected Claims
+\item Expected Claims
 1
 t
 t 8
@@ -435,7 +467,7 @@ P 2 (1)
 exp
 1/ 5
 3 exp
-Substituting these values gives:
+\item Substituting these values gives:
 Expected Claims = 0.1049
 Page 12
 3
@@ -447,3 +479,7 @@ Page 12
 4 ]
 0.00832896Subject CT4
 Models
+\end{itemize}
+
+
+\end{document}
