@@ -36,38 +36,38 @@
 State an appropriate method of graduation for each of the three classes of lives
 and, for each class, briefly explain your choice.
 
-[Total 6]
+%%-- [Total 6]
 A study of the mortality of a certain species of insect reveals that for the first 30 days
 of life, the insects are subject to a constant force of mortality of 0.05. After 30 days,
 the force of mortality increases according to the formula:
-\mu 30 + x = 0.05exp(0.01 x ) ,
+\[\mu 30 + x = 0.05exp(0.01 x ) ,\]
 where x is the number of days after day 30.
 7
-(i) Calculate the probability that a newly born insect will survive for at least 10
+\begin{enumerate}[(a)]
+\item (i) Calculate the probability that a newly born insect will survive for at least 10
 days.
-[1]
+\item 
 (ii) Calculate the probability that an insect aged 10 days will survive for at least a
 further 30 days.
-
-(iii) Calculate the age in days by which 90 per cent of insects are expected to have
+\item  Calculate the age in days by which 90 per cent of insects are expected to have
 died.
-
-[Total 8]
+\end{enumerate}
+%% [Total 8]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (i) Define a counting process.
 
 For each of the following processes:
-\item
-\item
-\item
-(ii)
-simple random walk
-compound Poisson
-Markov chain
-(a) State whether each of the state space and the time set is discrete,
+\begin{itemize}
+\item simple random walk
+\item compound Poisson
+\item Markov chain
+\end{itemize}
+\begin{itemize}
+\item (a) State whether each of the state space and the time set is discrete,
 continuous or can be either.
-(b) Give an example of an application which may be useful to a
+\item (b) Give an example of an application which may be useful to a
 shopkeeper selling dried fruit and nuts loose.
-
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \newpage
@@ -100,8 +100,7 @@ Since the force of mortality is constant up to age 30 days at a value of 0.05,
 (
 (ii)
 )
-The probability that an insect 10 days old will survive for a further 30 days (that is to
-exact age 40 days) is given by
+The probability that an insect 10 days old will survive for a further 30 days (that is to exact age 40 days) is given by
 ⎛ 40
 ⎞
 ⎜ − \int \mu x dx ⎟ .
@@ -190,19 +189,23 @@ e 0.01 a = 1.1605
 0.01 a = 0.1488
 a = 14.88
 Therefore the required age is 14.88+30 = 44.88 days.
-Most candidates answered part (i) of this question correctly. Part (ii) was less well answered,
-and only a minority of candidates managed to obtain the correct answer to part (iii). A
-common error was to use the limits 40 and 30 when integrating 0.05exp(0.01x).
+
+%Most candidates answered part (i) of this question correctly. Part (ii) was less well answered, and only a minority of candidates managed to obtain the correct answer to part (iii). A common error was to use the limits 40 and 30 when integrating 0.05exp(0.01x).
+
 \newpage
 
 %% Question 7
 (i)
-It is a stochastic process in discrete or continuous time.
-The state space is all the natural numbers {0, 1, 2, ... }
-The value of the process X(t) is a non-decreasing (OR an increasing) function of
+\begin{itemize}
+\item It is a stochastic process in discrete or continuous time.
+\item The state space is all the natural numbers {0, 1, 2, ... }
+\item The value of the process X(t) is a non-decreasing (OR an increasing) function of
 time t
 OR
-the value of the process goes up one at a time.
+
+\item the value of the process goes up one at a time.
+\end{itemize}
+
 (ii)
 (a)
 Process State space Time set
@@ -226,10 +229,8 @@ the day
 Markov chain
 The number of customers owning
 loyalty cards at the end of each week.
-In part (i), it was not sufficient just to say “discrete state space”. The fact the state space is
-all natural numbers should be indicated for credit. In part (ii)(B), some candidates only gave
-one example IN TOTAL, whereas the question asked for an example FOR EACH PROCESS.
-In part (ii)(b) other examples were given credit. The criterion used to award credit were
-whether the example COULD be modelled using the relevant process and how USEFUL to
-the shopkeeper such a model might be!
+
+
+%In part (i), it was not sufficient just to say “discrete state space”. The fact the state space is all natural numbers should be indicated for credit. In part (ii)(B), some candidates only gave one example IN TOTAL, whereas the question asked for an example FOR EACH PROCESS.
+% In part (ii)(b) other examples were given credit. The criterion used to award credit were whether the example COULD be modelled using the relevant process and how USEFUL to the shopkeeper such a model might be!
 \end{document}
