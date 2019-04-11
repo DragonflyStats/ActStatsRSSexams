@@ -35,34 +35,26 @@
 
 9
 10
-A life office compared the mortality of its policyholders in the age range 30 to 60
-years inclusive with a set of mortality rates prepared by the Continuous Mortality
-Investigation (CMI). The mortality of the life office policyholders was higher than
-the CMI rates at ages 30–35, 38–41, 45–50 and 54–59 years inclusive, and lower than
-the CMI rates at all other ages in the age range.
-(i) Perform two tests of the null hypothesis that the underlying mortality of the
-life office policyholders is represented by the CMI rates.
-[7]
-(ii) Comment on your results from part (i).
-(ii) Explain the problem which duplicate policies cause in the context of the CMI
-mortality investigations.
-
+A life office compared the mortality of its policyholders in the age range 30 to 60 years inclusive with a set of mortality rates prepared by the Continuous Mortality Investigation (CMI). The mortality of the life office policyholders was higher than
+the CMI rates at ages 30–35, 38–41, 45–50 and 54–59 years inclusive, and lower than the CMI rates at all other ages in the age range.
+\begin{enumerate}[(i)]
+\item (i) Perform two tests of the null hypothesis that the underlying mortality of the life office policyholders is represented by the CMI rates.
+\item (ii) Comment on your results from part (i).
+\item (ii) Explain the problem which duplicate policies cause in the context of the CMI mortality investigations.
+\end{itemize}
 %% -- [Total 12]
 (i) State the Markov property.
 
 
-A certain non-fatal medical condition affects adults. Adults with the condition suffer
-frequent episodes of blurred vision. A study was carried out among a group of adults
-known to have the condition. The study lasted one year, and each participant in the
-study was asked to record the duration of each episode of blurred vision. All
-participants remained under observation for the entire year.
+A certain non-fatal medical condition affects adults. Adults with the condition suffer frequent episodes of blurred vision. A study was carried out among a group of adults known to have the condition. The study lasted one year, and each participant in the
+study was asked to record the duration of each episode of blurred vision. All participants remained under observation for the entire year.
 The data from the study were analysed using a two-state Markov model with states:
 1.
 2.
 not suffering from blurred vision.
 suffering from blurred vision.
-Let the transition rate from state i to state j at time x+t be \mu ijx + t , and let the probability
-that a person in state i at time x will be in state j at time x+t be t p ij x .
+Let the transition rate from state $i$ to state $j$ at time x+t be \mu ijx + t , and let the probability
+that a person in state i at time x will be in state $j$ at time $x+t$ be t p ij x .
 (ii)
 Derive from first principles the Kolmogorov forward equation for the
 transition from state 1 to state 2.
@@ -113,22 +105,23 @@ OR Using a continuity correction
 = 2.16
 2.78
 7.75
-Using a 2-tailed test, we reject the null hypothesis at the 5% level of
+\begin{itemize}
+\item Using a 2-tailed test, we reject the null hypothesis at the 5% level of
 significance if | z |>1.96.
-The z -score corresponding to 22 is
-Since 2.33 (or 2,16) > 1.96 we reject the null hypothesis.
+\item The z -score corresponding to 22 is
+\item Since 2.33 (or 2,16) > 1.96 we reject the null hypothesis.
 OR ALTERNATIVE 2 (EXACT CALCULATION)
-In this case we have 22 positive deviations.
-The probability of observing exactly 22 positive deviations is 0.009388
+\item In this case we have 22 positive deviations.
+\item The probability of observing exactly 22 positive deviations is 0.009388
 OR
-The probability of observing ≥ 22 positive deviations is 0.014725
-Using a 2-tailed test, we reject the null hypothesis at the 5% level of significance if
-the probability is <0.025
-Since 0.014725 < 0.025 we reject the null hypothesis.
-Grouping of Signs Test
+\item The probability of observing ≥ 22 positive deviations is 0.014725
+\item Using a 2-tailed test, we reject the null hypothesis at the 5% level of significance if the probability is <0.025
+\item Since 0.014725 < 0.025 we reject the null hypothesis.
+\item Grouping of Signs Test
 Define the test statistic:
 G = Number of groups of positive deviations.
-Page 13 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%--- Page 13 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{itemize}
 THEN EITHER ALTERNATIVE 1 (NORMAL APPROXIMATION)
 Since m = 31 (which is ≥ 20), we can use a Normal approximation as follows:
 ⎛ n 1 ( n 2 + 1) ( n 1 n 2 ) 2 ⎞
@@ -151,9 +144,12 @@ Using a 1-tailed test, we reject the null hypothesis at the 5% level of signific
 < −1.645.
 Since −2.70 < −1.645 we reject the null hypothesis.
 OR ALTERNATIVE 2 USING TABLE IN GOLD BOOK
-m = total number of deviations = 31
-n 1 = number of positive deviations = 22
-n 2 = number of negative deviations = 9
+\begin{itemize}
+\item m = total number of deviations = 31
+\item n 1 = number of positive deviations = 22
+\item n 2 = number of negative deviations = 9
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We want k * the largest k such that
 x
 ⎛ n − 1 ⎞⎛ n + 1 ⎞ ⎛ n + n ⎞
@@ -165,11 +161,9 @@ The test fails at the 5% level if G ≤ k *
 From the table in the Gold Book k * = 4
 Since G is not greater than this, we reject the null hypothesis
 (ii)
-The life office’s rates are, overall, different from the CMI rates (actually they are
-higher).
-Additional tests are needed to examine the magnitude of the difference between the
-two sets of rates.
-Page 14 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The life office’s rates are, overall, different from the CMI rates (actually they are higher).
+Additional tests are needed to examine the magnitude of the difference between the two sets of rates.
+%%%---- Page 14 ----- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The shape of the life office’s mortality rates is also rather different from the CMI
 schedule, and this might require further investigation,
 OR
@@ -177,15 +171,14 @@ The Grouping of Signs test suggests clumping of the deviations.
 It is possible that the difference between the shape of the two sets of rates is so small
 in magnitude as to be negligible.
 (iii)
-We can no longer be sure that we are observing a collection of independent claims.
-It is quite possible that two distinct death claims are the result of the death of the same
+\begin{itemize}
+\item We can no longer be sure that we are observing a collection of independent claims.
+\item It is quite possible that two distinct death claims are the result of the death of the same
 life.
-The effect of this is to increase the variance of the number of claims,
+\item The effect of this is to increase the variance of the number of claims,
 by a factor which may depend on age.
-This may affect tests based on standardised deviations.
-Answers to this question were very disappointing, especially part (i) . The two tests were
-often performed in a rather cursory way, with important steps being missed out. In part (i)
-the null hypothesis only needed stating once. Common errors were to work with only 30 ages
-or, more seriously, to use eight ages (i.e. to treat each run of consecutive ages of the same
-sign as a single age).
+\item This may affect tests based on standardised deviations.
+\end{itemize}
+%%Answers to this question were very disappointing, especially part (i) . The two tests were often performed in a rather cursory way, with important steps being missed out. In part (i) the null hypothesis only needed stating once. Common errors were to work with only 30 ages or, more seriously, to use eight ages (i.e. to treat each run of consecutive ages of the same sign as a single age).
 
+\end{document}
