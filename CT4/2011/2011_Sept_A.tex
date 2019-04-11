@@ -61,7 +61,8 @@ the initial rate of mortality, q x .
 Describe how a strictly stationary stochastic process differs from a weakly stationary
 stochastic process.
 
-CT4 S2011—24
+%%CT4 S2011—24
+Question 4
 A new weedkiller was tested which was designed to kill weeds growing in grass. The
 weedkiller was administered via a single application to 20 test areas of grass. Within
 hours of applying the weedkiller, the leaves of all the weeds went black and died, but
@@ -70,25 +71,31 @@ The test lasted for 12 months, but after six months five of the test areas were
 accidentally ploughed up and so the trial on these areas had to be discontinued. None
 of these five areas had shown any weed re-growth at the time they were ploughed up.
 5
-• Ten of the remaining 15 areas experienced a re-growth of weeds at the following
-durations (in months): 1, 2, 2, 2, 5, 5, 8, 8, 8, 8.
-• Five areas still had no weed re-growth when the trial ended after 12 months.
-(i) Describe, giving reasons, the types of censoring present in the data.
-(ii) Estimate the probability that there is no re-growth of weeds nine months after application of the weedkiller using either the Kaplan-Meier or the Nelson-
+\begin{itemize}
+\item Ten of the remaining 15 areas experienced a re-growth of weeds at the following
+durations (in months): \[\{1, 2, 2, 2, 5, 5, 8, 8, 8, 8.\}\]
+\item  Five areas still had no weed re-growth when the trial ended after 12 months.
+\end{itemize}
+\begin{enumerate}[(i)]
+\item Describe, giving reasons, the types of censoring present in the data.
+\item (ii) Estimate the probability that there is no re-growth of weeds nine months after application of the weedkiller using either the Kaplan-Meier or the Nelson-
 Aalen estimator.
-
-[Total 6]
-(i) List the factors which should be considered in assessing the suitability of a
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%% [Total 6]
+\begin{enumerate}[(i)]
+\item (i) List the factors which should be considered in assessing the suitability of a
 model for a particular exercise.
 
-(ii) Assess the suitability of a multiple state model with three states: Healthy, Sick
+\item (ii) Assess the suitability of a multiple state model with three states: Healthy, Sick
 and Dead, for estimating the transition intensities in an analysis of claims for
 sickness benefit, in the light of your answer to (i).
 
-[Total 7]
-CT4 S2011—3
-
+%% [Total 7]
+%% CT4 S2011—3
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 Question 1
 (a) A
 B
@@ -100,8 +107,9 @@ B
 C Yes, period is 2
 No, not periodic.
 No, not periodic.
-This question was well answered, although many candidates failed to identify that C was
-aperiodic.
+
+% This question was well answered, although many candidates failed to identify that C was aperiodic.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Question 2
 (i)
 m x is the probability that a life alive between exact ages x and x dies
@@ -111,7 +119,7 @@ between exact ages x and x
 q x is the probability that a life alive at exact age x dies before exact age x
 (ii)
 
-m x and μ x are equal when the force of mortality μ x+t is constant for 0 ≤ t < 1.
+$m_x$ and $μ_x$ are equal when the force of mortality μ x+t is constant for 0 ≤ t < 1.
 Answers to this question were disappointing. In part (i) some candidates defined m x as
 q x
 For full credit, candidates who did this were required to explain what this
@@ -120,29 +128,40 @@ For full credit, candidates who did this were required to explain what this
 0
 expression means (e.g. by stating that t p x is the expected amount of time spent alive between
 x and x+1 by a life alive at age x).
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%
 Question 3
-A stochastic process is said to be strictly stationary if the joint distributions of
-X t 1 , X t 2 ,..., X t n and X t + t 1 , X t + t 2 ,..., X t + t n are identical for all t , t 1 , t 2 ,..., t n in the time set J and
+\begin{itemize}
+\item A stochastic process is said to be strictly stationary if the joint distributions of
+X t 1 , X t 2 ,..., X t n and X t + t 1 , X t + t 2 ,..., X t + t n are identical for all t , $t 1 , t 2 ,..., t n$ in the time set J and
 for all integers n .
-This means that the statistical properties of the process remain unchanged as time elapses.
-Weak stationarity requires that the mean of the process, m ( t ) = E ( X t ) , is constant, and
-Page 3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
-EITHER that the covariance of the process E [( X s − m ( s ))( X t − m ( t ))] depends only on the
-time difference t – s .
-OR Cov( X ( t 1 ), X ( t 2 )) = Cov( X ( t 1 + h ), X ( t 2 + h ) for all t 1 , t 2 and h > 0.
+\item This means that the statistical properties of the process remain unchanged as time elapses.
+Weak stationarity requires that the mean of the process, $m ( t ) = E ( X t )$ , is constant, and
+
+%%Page 3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
+\item EITHER that the covariance of the process $E [( X s − m ( s ))( X t − m ( t ))]$ depends only on the
+time difference $t – s$ .
+\end{itemize}
+OR \[Cov( X ( t 1 ), X ( t 2 )) = Cov( X ( t 1 + h ), X ( t 2 + h )\] for all t 1 , t 2 and h > 0.
 Strict stationarity is a stringent condition which is hard to test, weak stationarity is a less
 stringent condition but easier to test in practice.
 This question was well answered. The last sentence was not required for full credit.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 Question 4
 (i)
-Right censoring: some areas never developed new weeds.
+\begin{itemize}
+\item Right censoring: some areas never developed new weeds.
 Type I censoring as the study lasts for a pre-determined time.
-Random censoring as the accidental ploughing happened at a time which was not pre-
+\item Random censoring as the accidental ploughing happened at a time which was not pre-
 determined.
-Interval censoring as we do not know exactly when in each month the weed re-growth
+\item Interval censoring as we do not know exactly when in each month the weed re-growth
 happened.
-Non-informative censoring as the fact that an area was ploughed up tells us nothing
+\item Non-informative censoring as the fact that an area was ploughed up tells us nothing
 about the duration to weed re-growth in any of the remaining areas.
+\end{itemize}
 (ii)
 EITHER
 Kaplan-Meier estimator
@@ -234,8 +253,8 @@ N
 j ⎠
 ⎝
 which is exp(−0.7773) = 0.4596.
-Many candidates scored highly on this question. In part (i) the reason was needed for credit.
-Just mentioning the type of censoring without giving a reason was not awarded any marks.
-In part (ii) some indication of how the estimate was arrived at (normally a statement of the
-formula being applied) was needed for full credit. An impressive proportion of candidates
-performed the calculations correctly.
+
+% Many candidates scored highly on this question. In part (i) the reason was needed for credit.
+% Just mentioning the type of censoring without giving a reason was not awarded any marks.
+% In part (ii) some indication of how the estimate was arrived at (normally a statement of the formula being applied) was needed for full credit. An impressive proportion of candidates performed the calculations correctly.
+\end{document}
