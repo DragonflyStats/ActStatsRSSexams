@@ -33,39 +33,45 @@
 \begin{document}
 \begin{enumerate}
 
-A4
+%%-- -A4
 A life insurance company prices its long-term sickness policies using a three-state
 Markov model in continuous time. The states are healthy (H), ill (I) and dead (D). The
 forces of transition in the model are HI = , IH = , HD = , ID = v and they are
 assumed to be constant over time.
 For a group of policyholders observed over a 1-year period, there are:
-23 transitions from State to State ;
-15 transitions from State to State ;
-3 deaths from State ;
-5 deaths from State .
+\begin{itemize}
+\item 23 transitions from State to State ;
+\item 15 transitions from State to State ;
+\item 3 deaths from State ;
+\item 5 deaths from State .
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The total time spent in State H is 652 years and the total time spent in State I is 44
 years.
 A5
-(i) Write down the likelihood function for these data. 
-(ii) Derive the maximum likelihood estimate of . 
-(iii) Estimate the standard deviation of
+\begin{enumerate}[(i)]
+\item (i) Write down the likelihood function for these data. 
+\item (ii) Derive the maximum likelihood estimate of . 
+\item (iii) Estimate the standard deviation of
 , the maximum likelihood estimator of .
+\end{enumerate}
 
-[Total 7]
+%%--- [Total 7]
 Claims arrive at an insurance company according to a Poisson process with rate
 week.
 per
 Assume time is expressed in weeks.
-(i) Show that, given that there is exactly one claim in the time interval [t, t + s],
-the time of the claim arrival is uniformly distributed on [t, t + s].
+\begin{enumerate}[(i)]
+\item (i) Show that, given that there is exactly one claim in the time interval $[t, t + s]$,
+the time of the claim arrival is uniformly distributed on $[t, t + s]$.
 
-(ii) State the joint density of the holding times T 0 , T 1 ,
+\item (ii) State the joint density of the holding times T 0 , T 1 ,
 claims.
-(iii) Show that, given that there are n claims in the time interval [0, t], the number
+\item (iii) Show that, given that there are n claims in the time interval $[0, t]$, the number
 of claims in the interval [0, s] for s < t is binomial with parameters n and s/t.
-
-[Total 7]
-CT4 S2005
+\end{enumerate}
+%%[Total 7]
+%%CT4 S2005
 3
 , T n between successive
 [1]
@@ -75,7 +81,7 @@ CT4 S2005
 
 A4 The likelihood is
 (i)
-September 2005
+%%September 2005
 L K exp( 652(
 (ii)
 )) exp( 44(
@@ -85,7 +91,7 @@ l = ln L = 652 +23 ln
 + constant with respect to
 Differentiating with respect to
 l
-Examiners Report
+%%Examiners Report
 gives
 23
 652
@@ -121,17 +127,19 @@ Therefore the estimated standard deviation of
 is
 23
 0.00736.
-Page 7Subject CT4 Models
-A5 Let N t denote the number of claims up to time t. Since the Poisson process has
+%%Page 7
+%%Subject CT4 Models
+\newpage
+A5 Let $N_t$ denote the number of claims up to time t. Since the Poisson process has
 stationary increments, we may take t = 0, so that the required conditional
 distribution is
 (i)
-September 2005
+%September 2005
 P T 0
 y | N s
 P T 0
 1
-Examiners Report
+%Examiners Report
 y , N s
 P N s
 P
@@ -183,9 +191,11 @@ n k
 Using again that the Poisson process has stationary and independent
 increments, and that the number of claims in an interval [0, t] is Poisson ( t),
 we derive from above that
-Page 8Subject CT4
-Models
-September 2005
+
+%%-- Page 8
+%%-- Subject CT4
+%%-- Models
+%%-- September 2005
 s
 ( s ) k e
 k !
@@ -193,7 +203,8 @@ e
 P N s
 k | N t
 n
-Examiners Report
+
+%%-- Examiners Report
 ( t s ) n k
 e
 ( t s ) n
@@ -226,4 +237,6 @@ t
 k
 n k
 which is binomial with parameters n and s/t.
-Page 9Subject CT4 Models
+%%Page 9
+%%Subject CT4 Models
+\end{document}
