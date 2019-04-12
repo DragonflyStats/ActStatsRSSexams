@@ -1,0 +1,188 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+CT4 S2014–6
+7 
+\begin{enumerate}
+    \item (i) Define a Poisson process. [2]
+\ite (ii) Prove the memoryless property of the exponential distribution. [2]
+Suppose there are three independent exponential distributions:
+  X with parameter x
+Y with parameter y
+Z with parameter z
+\item (iii) (a) Demonstrate that min(X,Y,Z) is also an exponential distribution.
+(b) Give the parameter of this exponential distribution. [2]
+The arrivals of different types of vehicles at a toll bridge are assumed to follow
+Poisson processes whereby:
+  Type of Vehicle Rate
+Motorcycle 2 per minute
+Car 5 per minute
+Goods vehicle 1.5 per minute
+The toll for a motorcycle is £1, for a car £2 and for a goods vehicle £5.
+\item (iv) State the name of the stochastic process that describes the total value of tolls
+collected. 
+\item (v) Calculate the expected value of tolls collected per hour. [1]
+On the advice of a structural engineer, no more than two goods vehicles are allowed
+across the bridge in any given minute. If more than two goods vehicles arrive then
+some goods vehicles have to wait to go across.
+\item (vi) Calculate the probability that more than two goods vehicles arrive in any given
+minute. 
+\item (vii) Calculate the probability that exactly £4 in tolls is collected in a given minute.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%CT4 S2014–7 PLEASE TURN OVER
+\newpge
+Page 13
+7 (i) A Poisson process is a counting process in continuous time{Nt ,t 0}, where
+Nt records the number of occurrences of a type of event within the time
+interval from 0 to t.
+Events occur singly and may occur at any time;
+the probability that an event occurs during the short time interval from time t
+to time t + h is approximately equal to λh for small h, where the parameter λ is
+the rate of the Poisson process.
+OR
+A Poisson process is an integer valued process in continuous time{Nt ,t 0},
+where
+Pr[Nth Nt 1| Ft ]ho(h)
+Pr[Nth Nt 0| Ft ]1ho(h)
+Pr[Nth Nt  0,1| Ft ]o(h)
+and o(h) is such that
+0
+lim ( ) 0
+h
+o h
+ h
+ .
+OR
+A Poisson process with rate  is a continuous-time integer-valued process
+Nt , t  0, with the following properties:
+  N0 0
+Nt has independent increments
+Nt has Poisson distributed stationary increments
+     
+, , 0,1,...
+!
+  n t s
+t s
+t s e
+P N N n s t n
+n
+            [2]
+
+%% Subject CT4 (Models Core Technical) 
+%% September 2014 – Examiners’ Report
+%% Page 14
+(ii) Consider the exponential distribution X with parameter x
+( | ) ( , )
+( )
+P X t s X s P X t s X s
+P X s
+  
+   
+
+( ) exp( ( ))
+( ) exp( )
+P X t s xt s
+P X s xs
+   
+ 
+ 
+ exp(xt)  P(X  t)
+Which is the memoryless property. [2]
+(iii) (a) P(min(X ,Y, Z )  t)  P(X  t,Y  t, Z  t)
+P(min(X ,Y, Z )  t)  exp(xt) exp( yt) exp(zt)
+P(min(X ,Y , Z )  t)  exp((x  y  z)t)
+(b) Which is an exponential distribution with parameter (x + y + z) [2]
+(iv) Compound Poisson process [1]
+(v) Motorcycles 60 * 2 * £1 = £120
+Cars 60 * 5 * £2 = £600
+Goods Vehicles 60 * 1.5 * £5 = £450
+Total £1,170 [1]
+(vi) Prob of n goods vehicles arriving
+.exp( )
+!
+  n
+n
+ 
+ where  1.5
+The probability of more than 2 arriving is
+= 1 – Prob (zero) – Prob (one) – Prob (two)
+0 1 2
+1 e 1.5 1.5 1.5 1.5
+1 1 2
+  
+     
+ 
+= 0.19115 [2]
+%%Subject CT4 (Models Core Technical) – September 2014 – Examiners’ Report Page 15
+(vii) The combinations which give rise to collect exactly £4 in tolls being collected
+are:
+  Motorcycles
+Cars Goods Vehicles
+4 0 0
+2 1 0
+0 2 0
+Probabilities of each event are:
+  Motorcycles Cars Goods Vehicles Combined
+probability
+24 2 0.09022
+4!
+  e
+
+50 5 0.006738
+0!
+  e
+ e1.5  0.22313 0.00014
+22 2 0.27067
+2!
+  e
+
+51 5 0.03369
+1!
+  e
+ e1.5  0.22313 0.00203
+20 2 0.13534
+0!
+  e
+
+52 5 0.08422
+2!
+  e
+ e1.5  0.22313 0.00254
+Total probability 0.004714 [4]
+[Total 14]
+
+%%Overall, this was the least successfully answered question on the paper, with an average mark of between 4 and 5 out of 14. Very few candidates attempted part (ii) and attempts at part (iii) were very disappointing. In part (v) a common error was to use rates of 1/2, 1/5 and 1/1.5 per minute for motorcycles, cars and goods vehicles respectively, which gave an answer of £254. In part (vi) many candidates misread the question and incorrectly calculated the probability of two or more goods vehicles arriving. In part (vii) most candidates correctly identified the combinations of vehicles which could provide exactly £4 in tolls. A common error in the calculation was to omit the probabilities of observing zero vehicles of a particular type. This led to a final probability of 0.18357.
+
+\end{document}
+\end{document}
