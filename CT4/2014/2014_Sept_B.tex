@@ -1,0 +1,133 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+
+[Total 7]
+3 
+\begin{enumerate}
+\item (i) Explain the census approximation for calculating the exposed to risk between
+any two census dates. 
+A mortality investigation bureau has collected the following information on number
+of policies in-force each year from different companies.
+\begin{verbatim}
+  Age and year Year Company A Company B Company C
+Age 54 2011 3,400 1,250 5,780
+2012 3,350 1,450 5,500
+2013 3,000 1,500 6,010
+Age 55 2011 3,250 1,190 6,000
+2012 3,390 1,300 5,960
+2013 3,100 1,440 6,030
+Age 56 2011 3,270 1,150 5,950
+2012 3,020 1,300 5,980
+2013 2,950 1,500 5,990  
+\end{verbatim}
+
+• Company A has provided in-force policy data as at the beginning of each calendar
+year using age nearest birthday.
+CT4 S2014–3 PLEASE TURN OVER
+• Company B has provided in-force policy data as at the financial year closing date
+(which was 31 March in each year) using age last birthday.
+• Company C has provided in-force policy data as at the end of each calendar year
+using age next birthday.
+\item (ii) Calculate the contribution to central exposed to risk for lives aged 55 last
+birthday for the calendar year 2012 for each of the companies. 
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\newpage
+3 (i) In survival investigations, population counts will only be available at census
+dates.
+Define Px,t to be the number of lives under observation, aged x last birthday, at
+any time t and suppose that we have the values of Px,t only if t is a census date.
+We require the exposed to risk, c
+Ex , over the interval between the first census
+and the last.
+This is
+2
+1
+,
+t
+c
+x x s
+t
+E   P ds , where t1 and t2 are the two census dates.
+To evaluate this, we usually assume that Px,s is linear between census dates.
+%%Subject CT4 (Models Core Technical) – September 2014 – Examiners’ Report
+%%Page 5
+If the censuses are one year apart this leads to the trapezium approximation:
+  , 1 , 2
+1( )
+2
+c
+Ex  Px t  Px t . [(ii) 
+\begin{itemize}
+    \item Company A
+Assume birthdays evenly distributed across calendar years.
+Age 55 last = 0.5 * age 55 nearest + 0.5 * age 56 nearest.
+The required exposed to risk is
+1 (3,390 3,100 3,020 2,950) 3,115.
+4
+   
+\item Company B
+Data are based on age last birthday so no age adjustment needed.
+Assuming population varies linearly between census dates, then
+population on 1 January 2012 = 31,300 11,190 1,272.5
+4 4
+ 
+population on 1 January 2013 = 31,440 11,300 1,405
+4 4
+ 
+The required exposed to risk is then
+3 1 (1,272.5 1,300) 9 1 1,300 1,405 1,335.9375
+12 2 12 2
+   
+\item Company C
+Age 55 last birthday is equivalent to age 56 next birthday.
+Assume that data for 31 December in year t apply to 1 January in
+year t + 1.
+The required exposed to risk is then
+1 (5,950 5,980) 5,965.
+2
+  [6]
+[Total 8]
+In part (i) equations were not required, explanations and diagrams are acceptable instead.
+\end{itemize}
+%% Candidates’ answers to this question varied considerably. Partial %% credit was given in part (ii) for a range of alternative 
+%% approximations. A common error in part (ii) was to use the wrong %% age when averaging (in particular supposing that age 55 last 
+%% could be obtained by averaging age 54 nearest and age 55 nearest).
+
+%% - Subject CT4 (Models Core Technical) 
+%% – September 2014 – Examiners’ Report
+%% - Page 6
+\end{document}
