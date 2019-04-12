@@ -1,0 +1,123 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+[Total 10]
+CT4 S2014–4
+5 A sports league has two divisions {1,2} with Division 1 being the higher. 
+\begin{itemize}
+    \item Each
+season the bottom team in Division 1 is relegated to Division 2, and the top team in
+Division 2 is promoted to Division 1.
+\item Analysis of the movements of teams between divisions indicates that the probabilities
+of finishing top or bottom of a division differs if a team has just been promoted or
+relegated, compared with the probabilities in subsequent seasons.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The probabilities are as follows:
+  Finishing
+position
+If promoted
+previous season
+If relegated
+previous season
+If neither promoted
+nor relegated
+previous season
+Top 0.1 0.25 0.15
+Bottom 0.3 0.25 0.15
+Other 0.6 0.5 0.7
+\begin{itemize}
+\item (i) Write down the minimum number of states required to model this as a Markov
+chain. 
+\item (ii) Draw a transition graph for the Markov chain. 
+\item (iii) Write down the transition matrix for the Markov chain. 
+\item (iv) Explain whether the Markov chain is:
+  (a) irreducible.
+(b) aperiodic. 
+Team A has just been promoted to Division 1.
+\item (v) Calculate the minimum number of seasons before there is at least a 60%
+probability of Team A having been relegated to Division 2. 
+\end{itemize}
+%% [Total 11]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Subject CT4 (Models Core Technical) – September 2014 – Examiners’ Report
+Page 12
+Substituting p = 0.25 gives 2  0.071006
+2
+3 4 2
+0.75 0.75
+0.25
+        
+ 
+ 32
+Thus the proportion of people at the 25% discount level is 0.213018. [6]
+(iii) (a) Six states are now required
+because the probability of a person in discount level 1 moving to
+discount level 2 depends upon whether a claim was made the previous
+year or not.
+Hence discount level 1 must be split into
+1+ = no claim made previous year and
+1 = claim made previous year
+(b) Let the probability of a claim in any year if there was a claim in the
+previous year be r(epeat) and the probability of a claim in any year if
+there was not a claim in the previous year be n(ew), then the new
+transition matrix is
+1 0 0 0 0
+0 0 1 0 0
+0 0 1 0 0
+0 0 0 0 1
+0 0 0 0 1
+0 0 0 0 1
+r r
+n n
+r r
+n n
+r r
+n n
+  
+    
+  
+ 
+  
+  
+    
+where the levels are ordered 0, 1+, 1, 2+, 2, 3. [4]
+[Total 13]
+
+%%Most candidates worked out that five states were required, identified the correct state space and drew the correct diagram. Many also produced a correct matrix in part (ii) but few were able to solve the equations. Attempts at part (iii) were patchy, and only a minority of candidates attempted to write down the expanded matrix in part (iii)(b).
+
+%Subject CT4 (Models Core Technical) – September 2014 – Examiners’ Report
+
+\end{document}
