@@ -1,0 +1,296 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}9 A life insurance company is developing a new class of annuity business. It has
+conducted a study of mortality among lives it believes represent this new business. It
+wishes to graduate the data so that they are suitable for use in financial calculations.
+It decides to use a standard table as a basis for graduation and the function:
+s 0.01
+μx = μx + 􀁄
+where x μ
+􀁄
+are the graduated rates and s
+μx are the rates from the standard table.
+The table below gives some results from the graduation.
+Age x Crude rates Graduated rates Exposed to risk
+ˆ x μ x μ
+􀁄
+70 0.0167 0.022661 1,200
+71 0.0209 0.024783 1,194
+72 0.0236 0.027204 973
+73 0.0324 0.029956 956
+74 0.0362 0.033072 912
+75 0.0402 0.036587 845
+76 0.0561 0.040357 820
+77 0.0623 0.044962 369
+78 0.0552 0.049899 489
+79 0.0640 0.055390 500
+(i) Carry out an overall test of the goodness-of-fit of this graduation to the crude
+rates. [6]
+(ii) List three defects of a graduation which the test you conducted in (i) may not
+detect. [3]
+(iii) Perform, for each of two of the defects listed in (ii), an additional test which
+can detect the defect. [6]
+(iv) Comment on the results of the tests carried out in parts (i) and (iii). [2]
+[Total 17]
+END OF PAPER
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+9 (i) To test for overall goodness of fit we use the 2 test.
+The null hypothesis is that the graduated rates are the same as the true
+underlying rates applying to the new class of business.
+The test statistic 2 2
+x m
+x
+z   where m is the degrees of freedom.
+The calculations are shown in the table below.
+Age x Crude rates
+Graduated
+rates
+Exposed
+to risk
+Observed
+deaths
+Expected
+deaths zx 2
+zx
+70 0.0167 0.022661 1,200 20 27.193 1.379 1.903
+71 0.0209 0.024783 1,194 25 29.591 0.844 0.712
+72 0.0236 0.027204 973 23 26.469 0.674 0.455
+73 0.0324 0.029956 956 31 28.638 0.441 0.195
+74 0.0362 0.033072 912 33 30.162 0.517 0.267
+75 0.0402 0.036587 845 34 30.916 0.555 0.308
+76 0.0561 0.040357 820 46 33.093 2.244 5.034
+77 0.0623 0.044962 369 23 16.591 1.573 2.476
+78 0.0552 0.049899 489 27 24.401 0.526 0.277
+79 0.0640 0.055390 500 32 27.695 0.818 0.669
+The observed test statistic is 12.295
+The number of age groups is 10, but we lose some degrees of freedom
+because of the process of graduation
+one for the parameter of the function linking the graduated rates to the
+standard table rates, and at least one more for the choice of standard table, so
+m = 7 or 8, say.
+%%Subject CT4 (Models Core Technical) – September 2014 – Examiners’ Report
+% Page 19
+The critical value of the chi-squared distribution with 7 degrees of
+
+freedom at the 5\% level is 14.07, and with 8 degrees of freedom is 15.51.
+Since 12.295 < 14.07 (or 15.51)
+we do not reject the null hypothesis at the 95\% confidence level. [6]
+(ii) 
+\begin{itemize}
+    \item There may be one or two large deviations at individual ages, the effect of
+which are insufficient to raise the chi-squared value above the critical level.
+\item Small but consistent bias across the whole of the age range.
+\item The graduation might be the wrong shape, in that the graduated rates might be
+higher than the crude rates in one part of the age range, and systematically
+lower in another part of the age range.
+\item This will lead to runs or clumps of
+deviations of the same sign.
+\end{itemize}
+The rates may not progress smoothly from age to age.
+[Only three of these were required for full credit] [3]
+(iii) Large deviations
+For large deviations, use the Individual Standardised Deviations test.
+The null hypothesis is the same as in part (i), that the graduated rates are the
+true underlying rates for the new class of business.
+We would expect the individual deviations to be distributed Normal (0,1)
+and therefore only 1 in 20 zxs should have absolute magnitude greater than
+1.96 (or none should be outside 3 to +3)
+OR table showing split of deviations, actual versus expected
+as below
+Range –∞,–2 –2,–1 –1,0 0,1 1,2 2,+∞
+Expected 0.2 1.4 3.4 3.4 1.4 0.2
+Actual 0 1 2 5 1 1
+\begin{itemize}
+    \item Looking at the zxs we see that the largest one is 2.24 and the next is 1.57.
+\item This test is therefore inconclusive (1 deviation out of 10 ages is greater
+than 1.96).
+\item Small but consistent bias
+\item For small but consistent bias use the Signs test or the Cumulative Deviations
+test.
+%%Subject CT4 (Models Core Technical) – September 2014 – Examiners’ Report
+%%Page 20
+\item The null hypothesis is the same as in part (i), that the graduated rates are the
+true underlying rates for the new class of business.
+\end{itemize}
+
+EITHER SIGNS TEST
+Under the null hypothesis, the number of positive signs amongst the zx is
+distributed Binomial (10, ½ )
+We observe 7 positive signs.
+The probability of observing 7 or more positive signs in 10 observations is
+0.1719
+OR
+the probability of observing exactly 7 positive signs is 0.1172.
+either of which implies that Pr[observing 6 or more] > 0.025 (a two-tailed
+test),
+so we have no evidence to reject the null hypothesis
+OR CUMULATIVE DEVIATIONS TEST
+Under the null hypothesis
+the test statistic
+(Observed deaths Expected deaths)
+Expected deaths
+x
+x
+ 
+
+~ Normal(0,1)
+So, using the results in the table in the solution to part (a) the value of the test
+statistic is
+294 274.75 1.16
+274.75
+
+
+Since –1.96 < test statistic < +1.96
+we have insufficient evidence to reject the null hypothesis.
+Shape of graduation/runs or clumps
+For the existence of runs or clumps of deviations of the same sign, we use the
+Grouping of Signs test or the Serial Correlations Test
+The null hypothesis is the same as before, that the graduated rates are the true
+underlying rates for the new class of business.
+%%Subject CT4 (Models Core Technical) – September 2014 – Examiners’ Report Page 21
+EITHER GROUPING OF SIGNS TEST
+\begin{itemize}
+    \item G = Number of groups of positive deviations = 1
+    \item m = number of deviations = 10
+    \item n1 = number of positive deviations = 7
+    \item n2 = number of negative deviations = 3
+\end{itemize}
+
+THEN EITHER
+We want k* the largest k such that
+1 2
+1
+1 1
+1
+1
+0.05
+n n
+k
+t t
+m
+t n
+    
+      
+ 
+  
+ 
+ 
+The test fails at the 5% level if G ≤ k*.
+From the Gold Book k* = 1, so we reject the null hypothesis.
+OR
+For t = 1
+1 2 1 6 1 4
+1 and 4
+1 0 1
+n n
+t t
+         
+                     1
+10
+and 120
+7
+m
+n
+   
+     
+   
+So Pr[t = 1] if the null hypothesis is true is
+4/120 = 0.0333, which is less than 5% so we reject the null hypothesis.
+OR SERIAL CORRELATIONS TEST
+The calculations are shown in the table below.
+Age zx zx+1 A = zx – z'x B = zx+1 – z'x+1 AB A2 B2
+70 –1.379 –0.844 –1.708 –1.417 2.420 2.917 2.008
+71 –0.844 –0.674 –1.173 –1.247 1.462 1.375 1.555
+72 –0.674 0.441 –1.003 –0.132 0.132 1.006 0.017
+73 0.441 0.517 0.112 –0.056 –0.006 0.013 0.003
+74 0.517 0.555 0.188 –0.018 –0.003 0.035 0.000
+75 0.555 2.244 0.226 1.671 0.378 0.051 2.793
+76 2.244 1.573 1.915 1.000 1.915 3.668 1.000
+77 1.573 0.526 1.244 –0.047 –0.058 1.548 0.002
+78 0.526 0.818 0.194 0.245 0.048 0.039 0.060
+z' 0.329 0.573 Sums 6.288 10.652 7.438
+6.288/√(10.652*7.438) = 0.706
+Subject CT4 (Models Core Technical) – September 2014 – Examiners’ Report
+Page 22
+Test 0.706 (√10) = 2.232 against Normal (0,1), and, since
+2.232 > +1.645, we have sufficient evidence to reject the null hypothesis (NB
+one-sided test)
+Smoothness of the graduated rates
+To check the smoothness of the graduated rates we do the Third Differences
+test.
+Graduated rates First difference Second
+difference
+Third Difference
+0.022661 0.002122 0.000299 0.000032
+0.024783 0.002421 0.000331 0.000033
+0.027204 0.002752 0.000364 0.000034
+0.029956 0.003116 0.000399 –0.000144
+0.033072 0.003515 0.000255 0.000580
+0.036587 0.003770 0.000835 –0.000503
+0.040357 0.004605 0.000332 0.000222
+0.044962 0.004937 0.000554
+0.049899 0.005491
+0.055390
+These should be small in magnitude compared with the rates themselves and
+progress regularly which does not seem to be the case here.
+So we conclude that the graduated rates are not sufficiently smooth. [6]
+(iv) Although the overall fit of the graduated rates to the crude rates is
+acceptable,
+EITHER
+The result of the grouping of signs/serial correlation test suggests that the
+graduated rates are the wrong shape: too high at younger ages and too low at
+older ages.
+OR
+The results of the individual standardised deviation test indicate that there
+might be an outlier at age 76
+The graduation should be carried out again with either a different standard
+table or a different link functions
+It seems a multiplicative function such as s
+x  ax  might be better than just
+adding a constant to the s
+x s.
+Subject CT4 (Models Core Technical) – September 2014 – Examiners’ Report
+Page 23
+IF SMOOTHNESS TEST NOT DONE
+The graduated rates should be sufficiently smooth to use for financial
+calculations.
+OR, IF SMOOTHNESS TEST DONE
+The graduated rates do not seem to be especially smooth.
+Because the shape of the graduated rates seems incorrect, the company
+would be unwise to use these rates for financial calculations. [2]
+[Total 17]
+
+% In part (i) the null hypothesis was often vaguely expressed. Statements that the graduated rates are “a good fit”, “consistent with”, “similar to” or “representative of” the underlying rates were not given full credit. In part (iii) it was acceptable if candidates did not use whole numbers of actual deaths but obtained the actual deaths as the result of multiplying the (rounded) crude rates by the exposed to risk. In part (iii) the null hypothesis should be stated for each test, but candidates could obtain credit by a statement that the null hypotheses for each test are the same as than in part (i). To obtain credit, the comments in part (iv) had to reflect the tests actually carried out by the candidate. Many candidates scored highly on parts (i) and (ii). Performance on part (iii) was less convincing. In part (iv) few candidates made comments beyond noting the immediate implications of the test results (i.e. that although the overall fit is satisfactory the graduation failed the Grouping of Signs test or that there was “clumping of signs”).
+END OF EXAMINERS’ REPORT
+\end{document}
