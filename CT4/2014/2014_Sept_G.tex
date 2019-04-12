@@ -1,0 +1,185 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+8 An investigation was undertaken into the length of post-operative stay in hospital after
+a particular type of surgery. 
+\begin{itemize}
+    \item All patients undergoing this surgery between 1 January
+and 31 January 2013 were observed until either they left the hospital, died, or
+underwent a second operation. 
+\item The event of interest was leaving the hospital.
+\item Patients who died or underwent a second operation during the period of investigation
+were treated as censored at the date of death or second operation respectively. 
+\item The
+investigation ended on 28 February 2013, and patients who were still in the hospital at
+that time were treated as censored.
+\end{itemize}
+(i) State, with reasons, whether the following types of censoring are present in
+this investigation:
+  • right
+• Type I
+• Type II
+• random
+[4]
+(ii) Comment on whether censoring in this investigation is likely to be
+informative. [2]
+The following data relate to 11 patients included in the investigation.
+Date of operation Date observation Reason that
+ended observation
+ended
+2 January 30 January Second operation
+5 January 7 January Died
+10 January 24 January Left hospital
+12 January 12 February Left hospital
+15 January 29 January Left hospital
+20 January 4 February Left hospital
+20 January 21 January Died
+23 January 28 February End of investigation
+24 January 31 January Second operation
+27 January 20 February Left hospital
+31 January 14 February Left hospital
+\begin{itemize}
+\ite[(iii)] Calculate the Kaplan-Meier estimate of the survivor function for remaining in
+the hospital.
+\item[(iv)] Sketch the Kaplan-Meier estimate of the survivor function, labelling the axes.
+
+\item[(v)] Comment on the results of the investigation. 
+\end{itemize}
+%% [Total 16]
+%% CT4 S2014–8
+
+\newpage
+%%%%
+  8 (i) Right censoring
+Yes, of patients not experiencing the event of interest before 28 February
+either because they died, or because they had a second operation, or because
+they remained in the hospital until 28 February, each of which outcomes cut
+short observations in progress.
+Type I censoring
+Yes, of those patients remaining in hospital on 28 February, since this date
+was fixed in advance of the investigation.
+Subject CT4 (Models Core Technical) – September 2014 – Examiners’ Report
+Page 16
+Type II censoring
+No, as the end of the investigation was determined by time, not by the number
+of patients who had left hospital.
+Random censoring
+Yes, of patients who died or who had a second operation, the times of which
+were not known in advance of the investigation and can be considered as
+random variables. [4]
+(ii) Censoring is likely to be informative.
+Those patients who died or who underwent a second operation were
+probably recovering less well than patients who left hospital.
+Had they not died or undergone a second operation, they would probably
+have remained in hospital for longer than those patients who were not
+censored. [2]
+(iii) We re-write the data as follows:
+  Patient Duration (days) Experienced the event (1)
+or censored (0)
+1 28 0
+2 2 0
+3 14 1
+4 31 1
+5 14 1
+6 15 1
+7 1 0
+8 36 0
+9 7 0
+10 24 1
+11 14 1
+The Kaplan-Meier estimate uses the table below:
+  tj Nj dj cj dj/Nj j
+j
+d
+1
+N
+
+0 11 0 3 0 0
+14 8 3 0 0.375 0.625
+15 5 1 0 0.2 0.8
+24 4 1 1 0.25 0.75
+31 2 1 1 0.5 0.5
+%%Subject CT4 (Models Core Technical) – September 2014 – Examiners’ Report
+%%Page 17
+The Kaplan-Meier estimate is then given by
+ˆ( ) 1 . j
+j
+t t
+j
+d
+S t
+ N
+ 
+    
+ 
+This produces
+\begin{verbatim}
+    t S(ˆt)
+0 ≤ t < 14 1.0000
+14 ≤ t < 15 0.6250
+15 ≤ t < 24 0.5000
+24 ≤ t < 31 0.3750
+31 ≤ t < 36 0.1875 [6]
+\end{verbatim}
+
+(iv) See the sketch below.
+[2]
+(v) Deaths occur soon after the operation.
+There is a high hazard of leaving the hospital after 14 days.
+It may be that clinical protocols regard 14 days as the minimum period for
+which patients who have had this operation should remain in hospital, no
+matter how well they seem to be recovering.
+The fact that censoring is informative is likely to bias the estimate.
+The results may not be credible or may have a large variance because the
+sample size is very small.
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+0 5 10 15 20 25 30 35 40
+S(t)
+Duration t
+
+The data only allow us to make estimates of “survival” up to a duration of 36
+days. [2]
+[Total 16]
+
+%% Most candidates correctly identified and described the types of censoring present in this investigation, although most candidates also thought that the censoring was likely to be informative. Explanations of why this was the case were often vague and woolly. Part (iii) was reasonably well answered. Full credit was given in part (iv) for plots which were correct given the answer to part (iii). Answers to part (v) were disappointing, but good candidates noticed the tendency for patients to be discharged from hospital after 14 days, and for deaths to occur soon after surgery.
+\end{document}
