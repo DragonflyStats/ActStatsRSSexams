@@ -38,8 +38,9 @@ currently resident in the United Kingdom (UK) and aged over 50 years. It conside
 the impact of three covariates: age at the start of the investigation, weekly alcohol
 consumption and previous residence in a tropical country.
 The investigation used a Cox regression model for the hazard of developing the
-disease, h(t), with three parameters, β A , β C , and β T , as follows:
-h ( t ) = h 0 ( t ) exp( β A A + β C C + β T T ).
+disease, $h(t)$, with three parameters, \beta A , \beta C , and \beta T , as follows:
+\[h ( t ) = h 0 ( t ) exp( \beta A A + \beta C C + \beta T T ).\]
+
 A was defined as exact age at the start of the investigation less 50 years.
 C represented weekly alcohol consumption, and took the value 1 if the person
 consumed more than the recommended maximum per week (a heavy drinker) and 0
@@ -62,7 +63,7 @@ who had not previously lived in a tropical country.
 12 months than for a person of the same age and drinking habits who had always
 lived in the UK.
 (ii)
-Calculate β A , β C , and β T .
+Calculate \beta A , \beta C , and \beta T .
 [5]
 The probability of a person aged 50 years exact at the start of the investigation, who
 does not drink heavily and has always lived in the UK remaining free of the disease
@@ -72,20 +73,20 @@ CT4 A2014–4
 Show that the probability of a person of the same age and drinking habits, who
 has lived for more than 12 months in a tropical country, remaining free of the
 disease for 10 years is slightly over one half.
-[4]
+
 [Total 10]6
 In the Poisson model, if the average number of events occurring to each member of a
-population in a given period of time is λ, then the probability of observing exactly d
+population in a given period of time is \lambda, then the probability of observing exactly d
 events occurring to any one individual in the same period of time is:
-exp( −λ ) λ d
+exp( −\lambda ) \lambda d
 Pr[ D = d ] =
 .
 d !
 (i)
 Derive the maximum likelihood estimator under the Poisson model of the
-average rate at which events occur, μ, in a population where the exposed to
+average rate at which events occur, $\mu$, in a population where the exposed to
 risk for each person i is E.
-[4]
+
 A university runs a bus service between its teaching campus and its student halls of
 residence. Traffic conditions mean that the arrival of buses at the bus stop on the
 teaching campus can be considered to follow a Poisson process.
@@ -135,18 +136,21 @@ arrive at the bus stop, using the Poisson estimator, and assuming that only one
 bus arrived at any given time.
 [3]
 (iii) Comment on the use of the Poisson model for this investigation.
-CT4 A2014–5
-[3]
-[Total 10]
-PLEASE TURN OVER
+
+%% CT4 A2014–5
+%% [3]
+%% [Total 10]
+%% PLEASE TURN OVER
 
 \newpage
 
 4
-(i) A life alive at time t should be included in the exposed-to-risk at age x at time
+
+\begin{enumerate}
+\item (i) A life alive at time t should be included in the exposed-to-risk at age x at time
 if and only if, were that life to die immediately, he or she would be included
 in the deaths data d x at age x.
-(ii) The death rate at age 45 relates to the deaths reported aged 46 next.
+\item (ii) The death rate at age 45 relates to the deaths reported aged 46 next.
 Dealing with the exposure in country A first. Census data are at age last, so
 census data at age x correspond to the age next deaths data for age x+1.
 E x c
@@ -157,7 +161,11 @@ P x , t dt
 1/1/12
 Let P An be the population aged 45 last in country A on the census date in
 year n.
-Page 4Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
+\end{enumerate}
+%% Page 4
+%% Subject CT4 (Models Core Technical) 
+%% April 2014 – Examiners’ Report
+
 Assuming the population varies linearly between census dates the central
 exposed to risk aged 45 last in the calendar year 2012 can be approximated by:
 1/12 * 1/2 * (P A 12 + (P A 11 + 11/12*(P A 12 − P A 11 ))) +
@@ -171,9 +179,12 @@ Assuming that birthdays are spread uniformly over the calendar year, half of
 those aged 45 last will be aged 45 nearest and half will be aged 46 nearest.
 Let P Bn be the population of country B aged 45 last at the census date in year
 n then:
-P B 11 = 0.5 (374,000 + 354,000) = 364,000
-P B 12 = 0.5 (381,000 + 372,000) = 376,500
-P B 13 = 0.5 (385,000 + 375,000) = 380,000
+\begin{itemize}
+\item P B 11 = 0.5 (374,000 + 354,000) = 364,000
+\item P B 12 = 0.5 (381,000 + 372,000) = 376,500
+\item P B 13 = 0.5 (385,000 + 375,000) = 380,000
+\end{itemize}
+
 Assuming the population varies linearly between census dates the central
 exposed to risk aged 45 last in the calendar year 2012 is:
 7/12 * 1/2 * (P B 12 + (P B 11 +5/12*(P B 12 - P B 11 ))) +
@@ -182,23 +193,30 @@ exposed to risk aged 45 last in the calendar year 2012 is:
 = 217,498.2 + 157,178.8
 = 374,677.
 Assuming the force of mortality is constant within each year of age
-μ 45 =
+\mu 45 =
 (iii)
 4,800
 = 0.006338 for the calendar year 2012.
 382, 656 + 374, 677
-The rate interval is the life year starting at age 45 exact.
-The estimate relates to the age in the middle of the rate interval, which is 45.5
+
+
+\begin{itemize}
+\item The rate interval is the life year starting at age 45 exact.
+\item The estimate relates to the age in the middle of the rate interval, which is 45.5
 years.
-In part (i) the phrase “if and only if” was required for the full mark. Part (ii) was
+\item In part (i) the phrase “if and only if” was required for the full mark. Part (ii) was
 demanding, and candidates struggled to obtain many marks. For full credit, the assumptions
 needed to be stated at the correct place in the argument, and not just listed at the end. In
 part (ii) full credit could be obtained for estimates of q 45 , provided the initial exposed to risk
 was used.
-A common error was to use the wrong age (i.e. 44 years last birthday). This was penalised in
+\item A common error was to use the wrong age (i.e. 44 years last birthday). This was penalised in
 part (ii), but full credit could be scored for part (iii) if the answer to part (iii) was consistent
-with the age used in part (ii), and whether q 45 or μ 45 were estimated in part (ii).
-Page 5Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
+with the age used in part (ii), and whether q 45 or \mu 45 were estimated in part (ii).
+\end{itemize}
+%%-- Page 5
+%%-- Subject CT4 (Models Core Technical) 
+%%-– April 2014 – Examiners’ Report
+
 A (slightly simpler) alternative answer to the exposed to risk for country A was:
 1/12 * 1/2 * (P A11 + P A12 ) + 11/12 * 1/2 * (P A12 + P A13 )
 = 1/24 (374,000 + 381,000) + 11/24 * (381,000 + 385,000)
@@ -211,31 +229,36 @@ and for country B the corresponding was:
 = 373,583,
 giving a final answer of 0.00635. Because it is slightly simpler than the correct solution it
 did not score full credit.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 5
 (i) A person who is aged 50 years at the start of the investigation, is not a heavy
 drinker,
 and has not lived for 12 months or more in a tropical country.
 (ii) From the third result we have:
-exp( β T ) = 3 ,
+exp( \beta T ) = 3 ,
 so that
-β T = log e 3 = 1.099.
+\beta T = log e 3 = 1.099.
 From the second result we have:
-exp( β C + β T ) = exp( β C )exp( β T ) = 4 ,
+exp( \beta C + \beta T ) = exp( \beta C )exp( \beta T ) = 4 ,
 hence
-exp( β C ) =
+exp( \beta C ) =
 4
 ,
 3
 and
-β C = log e
+\beta C = log e
 4
 = 0.2877.
 3
 Finally, using the first result we have:
-exp( β C + 10 β A ) = exp( β C ) exp(10 β A ) = 2 ,
-Page 6Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
-hence exp(10 β A ) =
-and β A =
+exp( \beta C + 10 \beta A ) = exp( \beta C ) exp(10 \beta A ) = 2 ,
+%% Page 6
+%% Subject CT4 (Models Core Technical) 
+%% April 2014 – Examiners’ Report
+hence exp(10 \beta A ) =
+and \beta A =
 (iii)
 6
 ,
@@ -259,17 +282,20 @@ more than 12 months in a tropical country remaining free of the disease for 10
 years is therefore:
 ⎛ 10
 ⎞
-β T
-S T = 1 (10) = exp ⎜ − ∫ h 0 ( t ) e β T dt ⎟ = 0.8 e = 0.8 3 = 0.512.
+\beta T
+S T = 1 (10) = exp ⎜ − ∫ h 0 ( t ) e \beta T dt ⎟ = 0.8 e = 0.8 3 = 0.512.
 ⎜
 ⎟
 ⎝ 0
 ⎠
-Many candidates scored highly on this question, particularly on part (ii). In part (i) very few
-candidates wrote that the baseline hazard referred to a person aged 50 at the start of the
-investigation. Candidates who missed this important point were penalised. In part (iii) full
-10
-credit was given to answers that evaluated − ∫ h 0 ( t ) dt , though this was not necessary.
-0
-However, candidates who assumed that the baseline hazard was constant were penalised, as
-this assumption is neither necessary nor correct for the Cox regression model.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Many candidates scored highly on this question, particularly on part (ii). In part (i) very few
+% candidates wrote that the baseline hazard referred to a person aged 50 at the start of the
+% investigation. Candidates who missed this important point were penalised. In part (iii) full
+% 10
+% credit was given to answers that evaluated − ∫ h 0 ( t ) dt , though this was not necessary.
+% 0
+% However, candidates who assumed that the baseline hazard was constant were penalised, as
+% this assumption is neither necessary nor correct for the Cox regression model.
+\end{document}
