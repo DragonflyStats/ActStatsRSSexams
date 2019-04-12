@@ -1,3 +1,27 @@
+
+$ \begin{bmatrix}
+a_1 & a_2 & a_3 \\
+b_1 & b_2 & b_3 \\
+c_1 & c_2 & c_3 
+\end{bmatrix}  $
+
+%%%%%%%%%%%%%%%%%%%%%
+
+$ \begin{bmatrix}
+a_1 & a_2 & a_3 & a_4 \\
+b_1 & b_2 & b_3 & b_4 \\
+c_1 & c_2 & c_3 & c_4 \\
+d_1 & d_2 & d_3 & d_4 
+\end{bmatrix}  $
+
+
+$ \begin{bmatrix}
+a_1 \\
+b_1 \\
+c_1 \\
+d_1 
+\end{bmatrix}  $
+
 \documentclass[a4paper,12pt]{article}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -33,16 +57,96 @@
 \begin{document}
 \begin{enumerate}
 1 State the benefits of modelling in actuarial work.
-2 (i) Explain why data are subdivided into homogeneous groups when mortality
+
+1
+Systems with long time frames, such as the operation of a pension fund, can be
+studied in compressed time.
+Complex systems with stochastic elements, such as the operation of a life insurance
+company, can be studied by simulation modelling when mathematical or logical
+models cannot describe them in ways which are easy to interpret.
+Different future policies of possible actions can be compared to see which best suits
+the requirements or constraints of a user OR to test the sensitivity of profits under
+different scenarios.
+In a model of complex systems we can usually get control over experimental
+conditions so that we can reduce the variance of the results from the model without
+upsetting their mean values.
+Alternative suggestions were also given credit, for example “to improve competitiveness by
+testing out new underwriting approaches based on postcodes”, or “to help understand the
+correlation between actions and decisions”, or “to allow the user to understand better the
+potential impact of changes over which he or she may have little control”. Most candidates
+scored fairly well on this question.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\newpage
+
+2 
+\begin{enumerate}[(i)]
+\item (i) Explain why data are subdivided into homogeneous groups when mortality
 investigations are conducted.
-[2]
+\item 
 (ii) List four factors, other than age and sex, by which mortality statistics are often
 subdivided.
-[2]
-[Total 4]
+\end{enumerate}
+2
+(i)
+All our models and analyses are based on the assumption that we can observe
+groups of identical lives (or at least, lives whose mortality characteristics are
+the same).
+Although in practice, this is never possible.
+We can at least subdivide our data according to characteristics known, from
+experience, to have a significant effect on mortality.
+This ought to reduce the heterogeneity of each class so formed.
+(ii)
+Type of policy (which often reflects the reason for insuring)
+Smoker/non-smoker status
+Level of underwriting
+Duration in force
+Sales channel
+Policy size
+Occupation of policyholder OR socio-economic class
+Known impairments
+Postcode/geographical location
+Marital status
+Answers to part (i) were often unconvincing. The question asked specifically about the
+conduct of mortality investigations: many candidates wrote about the problems of selection in
+heterogeneous data, and this was not given credit. Most candidates scored full marks on
+part (ii).
+% Page 3
+% Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\newpage
 3
 [4]
 Explain what a stochastic model is and how it differs from a deterministic model. [4]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+3
+A stochastic model is one which recognises the random nature of the input
+components, whereas a deterministic model does not contain any random
+components.
+In a stochastic model the output of each run is one value from a distribution. By
+contrast, in a deterministic model, the output is determined once the set of fixed inputs
+and the relationships between them have been defined.
+In a stochastic model, several independent runs are required for each set of inputs so
+that statistical theory can be used to help study the implications of a set of inputs. A
+deterministic model only requires one run.
+Running a stochastic model many times will produce a distribution of results for
+possible scenarios, whereas a deterministic model will produce results for a single
+scenario. Thus a deterministic model can be seen as a special case of a stochastic
+model.
+For many stochastic models, it is necessary to use numerical approximations in order
+to integrate functions or solve differential equations. The results for a deterministic
+model can often be obtained by direct calculations.
+Monte Carlo simulation is an example of a stochastic model: a collection of
+deterministic models each with an associated probability.
+Most candidates made a reasonable attempt at this question. Some candidates wrote
+answers that repeated the same point using different words. Credit was only given once for
+each point. Comments that stochastic models are more costly or harder to interpret than
+deterministic models were not given any credit as they do not explain what a stochastic
+model is.
+%%%%%%%%%%%%%%%%%%%%%%
 CT4 A2014–24
 (i)
 State the principle of correspondence as it relates to mortality investigations.
@@ -104,76 +208,8 @@ CT4 A2014–3
 Estimate the death rate at age 45 years last birthday for the two countries
 combined.
 Explain the exact age to which your estimate relates.
-[6]
-[1]
-[Total 8]
-PLEASE TURN OVER
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-
-1
-Systems with long time frames, such as the operation of a pension fund, can be
-studied in compressed time.
-Complex systems with stochastic elements, such as the operation of a life insurance
-company, can be studied by simulation modelling when mathematical or logical
-models cannot describe them in ways which are easy to interpret.
-Different future policies of possible actions can be compared to see which best suits
-the requirements or constraints of a user OR to test the sensitivity of profits under
-different scenarios.
-In a model of complex systems we can usually get control over experimental
-conditions so that we can reduce the variance of the results from the model without
-upsetting their mean values.
-Alternative suggestions were also given credit, for example “to improve competitiveness by
-testing out new underwriting approaches based on postcodes”, or “to help understand the
-correlation between actions and decisions”, or “to allow the user to understand better the
-potential impact of changes over which he or she may have little control”. Most candidates
-scored fairly well on this question.
-2
-(i)
-All our models and analyses are based on the assumption that we can observe
-groups of identical lives (or at least, lives whose mortality characteristics are
-the same).
-Although in practice, this is never possible.
-We can at least subdivide our data according to characteristics known, from
-experience, to have a significant effect on mortality.
-This ought to reduce the heterogeneity of each class so formed.
-(ii)
-Type of policy (which often reflects the reason for insuring)
-Smoker/non-smoker status
-Level of underwriting
-Duration in force
-Sales channel
-Policy size
-Occupation of policyholder OR socio-economic class
-Known impairments
-Postcode/geographical location
-Marital status
-Answers to part (i) were often unconvincing. The question asked specifically about the
-conduct of mortality investigations: many candidates wrote about the problems of selection in
-heterogeneous data, and this was not given credit. Most candidates scored full marks on
-part (ii).
-Page 3Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
-3
-A stochastic model is one which recognises the random nature of the input
-components, whereas a deterministic model does not contain any random
-components.
-In a stochastic model the output of each run is one value from a distribution. By
-contrast, in a deterministic model, the output is determined once the set of fixed inputs
-and the relationships between them have been defined.
-In a stochastic model, several independent runs are required for each set of inputs so
-that statistical theory can be used to help study the implications of a set of inputs. A
-deterministic model only requires one run.
-Running a stochastic model many times will produce a distribution of results for
-possible scenarios, whereas a deterministic model will produce results for a single
-scenario. Thus a deterministic model can be seen as a special case of a stochastic
-model.
-For many stochastic models, it is necessary to use numerical approximations in order
-to integrate functions or solve differential equations. The results for a deterministic
-model can often be obtained by direct calculations.
-Monte Carlo simulation is an example of a stochastic model: a collection of
-deterministic models each with an associated probability.
-Most candidates made a reasonable attempt at this question. Some candidates wrote
-answers that repeated the same point using different words. Credit was only given once for
-each point. Comments that stochastic models are more costly or harder to interpret than
-deterministic models were not given any credit as they do not explain what a stochastic
-model is.
+% [6]
+% [1]
+% [Total 8]
+% PLEASE TURN OVER
+\end{document}
