@@ -32,23 +32,30 @@
 
 \begin{document}
 \begin{enumerate}
-7
+\item %%-- Question 7
 A team of medical researchers is interested in assessing the effect of a certain
 condition on mortality. The condition is, in itself, non-fatal and is curable, but is
 believed to increase the risk of death from heart disease. The team proposes to use a
-model with four states: (1) “Alive, without condition”, (2) “Alive, with condition”,
-(3) “Dead from heart disease” and (4) “Dead from other causes”.
-(i)
+model with four states: 
+\begin{itemize}
+\item[(1)] “Alive, without condition”, 
+\item[(2)] “Alive, with condition”,
+\item[(3)] “Dead from heart disease” 
+\item[(4)] “Dead from other causes”.
+\end{itemize}
+
+\begin{enumerate}
+\item (i)
 Draw a diagram showing the possible transitions between the four states.
-[2]
-Let the transition intensity between state i and state j at time x+t be μ ijx + t . Let the
+
+Let the transition intensity between state i and state j at time x+t be \mu ijx + t . Let the
 probability that a person in state i at time x will be in state j at time x+t be t p ij x .
-(ii)
+\item (ii)
 Show, from first principles, that
 d
 22 24
-( t p x 24 ) = t p x 21 μ 14
-x + t + t p x μ x + t .
+( t p x 24 ) = t p x 21 \mu 14
+x + t + t p x \mu x + t .
 dt
 [5]
 An empirical investigation using data for persons aged between 60 and 70 years produces the following results:
@@ -62,39 +69,43 @@ Waiting time in state “Alive, with condition” is 1,139 person-years
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-(iii)
-CT4 A2014–6
+\item (iii)
+%%% CT4 A2014–6
 Show that there is a statistically significant difference (at the 95% confidence
 level) between the death rates from heart disease for persons with and without
 the condition.
-[5]
 
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 6
 (i)
 Suppose we observe n individuals (i = 1,...,n), for a period E and the number
 of events observed to happen to individual i is d i .
 Then the Poisson likelihood is:
-( μ E ) d i e ( −μ E )
+( \mu E ) d i e ( −\mu E )
 ∏ d i ! .
 i = 1
 n
 Taking logarithms of the likelihood we have:
+
 n n n n
 i = 1 i = 1 i = 1 i = 1
-log e L = ∑ d i log μ + ∑ d i log E − ∑ E μ − ∑ log e ( d i !).
-Page 7Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
-Differentiating with respect to μ we obtain:
+log e L = ∑ d i log \mu + ∑ d i log E − ∑ E \mu − ∑ log e ( d i !).
+
+%%-- Page 7
+%%-- Subject CT4 (Models Core Technical) 
+%% – April 2014 – Examiners’ Report
+Differentiating with respect to $\mu$ we obtain:
 n
 ∂ (log e L )
 =
-∂μ
+∂\mu
 ∑ d i
 i = 1
-μ
+\mu
 − nE .
 n
-Setting this to zero and solving gives μ ˆ =
+Setting this to zero and solving gives \mu ˆ =
 ∑ d i
 i = 1
 nE
@@ -104,7 +115,7 @@ Since the second derivative −
 (ii)
 ∑ d i
 i = 1
-μ 2
+\mu 2
 is negative, we have a maximum.
 The number of minutes exposed to risk for each student is given in the table
 below.
@@ -144,7 +155,7 @@ The assumption that the arrival of buses follows a Poisson process may not be
 they may not be random due to timetabling.
 \item Answers to this question were very disappointing, with a substantial minority of candidates
 making only token attempts. In part (i) many candidates wrote answers in terms of a general
-Poisson parameter λ, rather than μ E . This attracted a modest penalty. Full credit could be
+Poisson parameter \lambda, rather than \mu E . This attracted a modest penalty. Full credit could be
 n
 obtained in part (i) for candidates who used the total number of deaths, ∑ d i , and noted that
 i = 1
@@ -152,16 +163,21 @@ n
 ∑ d i
 \end{itemize}
 %%%%%%%%%%%%%%%%%%
-the sum of n independent Poisson variables is Poisson, so the likelihood L = e − n μ E ( n μ E ) i = 1 .
-Many candidates obtained credit for proceeding to derive a maximum likelihood estimator
-where the expression for the likelihood was incorrect.
-A very common error in part (ii) was to assume that six buses had arrived rather than four,
-two buses having arrived at 4.35 p.m. and two at 4.50 p.m. This was penalised, as the
-question explicitly stated that “only one bus arrived at any given time”. Less common, but
-still present in too many scripts, was the serious error of only including exposure for students
-who caught the bus, and omitting the exposure for those who were censored. In part (iii)
-most candidates’ comments were restricted to the appropriateness of the assumption that the
-arrival of buses followed a Poisson process.
+the sum of n independent Poisson variables is Poisson, so the likelihood L = e − n \mu E ( n \mu E ) i = 1 .
+
+
+% Many candidates obtained credit for proceeding to derive a maximum likelihood estimator
+% where the expression for the likelihood was incorrect.
+% A very common error in part (ii) was to assume that six buses had arrived rather than four,
+% two buses having arrived at 4.35 p.m. and two at 4.50 p.m. This was penalised, as the
+% question explicitly stated that “only one bus arrived at any given time”. Less common, but
+% still present in too many scripts, was the serious error of only including exposure for students
+% who caught the bus, and omitting the exposure for those who were censored. In part (iii)
+% most candidates’ comments were restricted to the appropriateness of the assumption that the
+% arrival of buses followed a Poisson process.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\newpage
 7
 (i)
 1. Alive, without
@@ -200,7 +216,7 @@ p x 24 = t p x 21 dt p 14
 x + t + t p x dt p x + t + t p x .
 Assuming that, for small dt
 dt
-p ij x + t = μ ij x + t dt + o ( dt )
+p ij x + t = \mu ij x + t dt + o ( dt )
 o ( dt )
 = 0 ,
 dt → 0 dt
@@ -209,34 +225,35 @@ then substituting, we have
 dt + t
 22 24
 24
-p x 24 = t p x 21 μ 14
-x + t dt + t p x μ x + t dt + t p x + o ( dt )
+p x 24 = t p x 21 \mu 14
+x + t dt + t p x \mu x + t dt + t p x + o ( dt )
 so that
 dt + t
 and hence
 (iii)
 22 24
-p x 24 − t p x 24 = t p x 21 μ 14
-x + t dt + t p x μ x + t dt + o ( dt )
+p x 24 − t p x 24 = t p x 21 \mu 14
+x + t dt + t p x \mu x + t dt + o ( dt )
 p 24 − p 24
 d
 22 24
-( t p x 24 ) = lim t + dt x t x = t p x 21 μ 14
-x + t + t p x μ x + t .
+( t p x 24 ) = lim t + dt x t x = t p x 21 \mu 14
+x + t + t p x \mu x + t .
 dt → 0
 dt
 dt
-The maximum likelihood estimate (MLE) of the death rate from heart disease
+\begin{itemize}
+\item The maximum likelihood estimate (MLE) of the death rate from heart disease
 25
 for persons with the condition is
 = 0.02195 .
 1,139
-The MLE of the death rate from heart disease for persons without the
+\item The MLE of the death rate from heart disease for persons without the
 10
 condition is
 = 0.00489.
 2, 046
-\begin{itemize}
+
 \item An estimate of the variance of the maximum likelihood estimator of the death
 rate from heart disease for persons with the condition is
 0.02195
@@ -253,11 +270,15 @@ rate from heart disease for persons without the condition is
 \item The variance of the difference between the two estimates is therefore:
 0.000019271 + 0.00000239 = 0.000021659.
 THEN EITHER
-A 95% confidence interval around the difference is therefore:
-(0.02195 – 0.00489) ± 1.96√0.000021659
-= 0.01706 ± 1.96*0.004654
-= 0.01706 ± 0.009122
-= (0.007938, 0.026182)
+
+A 95% confidence interval around the difference is 
+therefore:
+\begin{eqnarray*}
+(0.02195 – 0.00489) \pm 1.96\sqrt{0.000021659}
+&=& 0.01706 \pm 1.96\times 0.004654 \\
+&=& 0.01706 \pm 0.009122\\
+&=& (0.007938, 0.026182)\\
+\end{eqnarray*}
 which does not include zero
 OR
 Under the null hypothesis the difference ~ Normal (0, 0.000021659).
@@ -268,14 +289,19 @@ and since this is greater than 1.96 we reject the null hypothesis at the 95%
 level
 THEN
 so the difference is statistically significantly different from zero
-\item Most candidates scored highly on part (i), though attempts at part (ii) were more variable.
-For part (iii) most candidates correctly computed the estimated rates and a smaller (though
-substantial) number computed the correct variances. Few candidates, however, attempted a
-formal test of the statistical significance of the difference.
-In part (iii) some candidates calculated 95% confidence intervals around each estimate and
-argued that since these do not overlap, the difference between the two estimates is
-statistically significant. This approach will not always produce the same conclusion as
-testing the difference directly (because √X + √Y ≠ √(X + Y). It was given partial credit.
-Page 11Subject CT4 (Models Core Technical) – April 2014 – Examiners’ Report
+
+%% \item Most candidates scored highly on part (i), though attempts at part (ii) were more variable.
+%% For part (iii) most candidates correctly computed the estimated rates and a smaller (though
+%% substantial) number computed the correct variances. Few candidates, however, attempted a
+%% formal test of the statistical significance of the difference.
+%% In part (iii) some candidates calculated 95% confidence intervals around each estimate and
+%% argued that since these do not overlap, the difference between the two estimates is
+%% statistically significant. This approach will not always produce the same conclusion as
+%% testing the difference directly (because √X + √Y ≠ √(X + Y). It was given partial credit.
+
+
+%%--- Page 11
+%%--- Subject CT4 (Models Core Technical) 
+%%--– April 2014 – Examiners’ Report
 \end{itemize}
 \end{document}
