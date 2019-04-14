@@ -37,8 +37,8 @@
 \item A reinsurance policy provides cover in respect of a single occurrence of a specified catastrophic event. If such an event occurs, future cover is suspended. However if a
 reinstatement premium is paid within one time period of occurrence of the event then the insurance coverage is reinstated. If a second specified event occurs it is not
 permitted to reinstate the cover and the policy will lapse.
-The transition rate for the hazard of the specified event is a constant 0.1. Whilst policies are eligible for reinstatement, the transition rate for resumption of cover
-through paying a reinstatement premium is 0.05.
+The transition rate for the hazard of the specified event is a constant 0.1. Whilst policies are eligible for reinstatement, the transition rate for resumption of cover through paying a reinstatement premium is 0.05.
+
 \begin{enumerate}[(i)]
 \item (i) Explain whether a time homogeneous or time inhomogeneous model would be
 more appropriate for modelling this situation.
@@ -69,8 +69,7 @@ remaining in the suspended state for t = 0.75 and s = 0.25 is exp(–0.025), but
 (ii)
 (a)
 A model with this state space would not satisfy the Markov property because a policy can only be reinstated once,
-so if in state Cover in Force we would need to know if the
-policy has previously been Suspended.
+so if in state Cover in Force we would need to know if the policy has previously been Suspended.
 (b)
 A Markov model could be obtained by expanding the state space to {Cover In Force, Suspended, Reinstated, Lapsed}.
 In this case the future transitions will depend only on the state currently occupied and duration, irrespective of previous states.
@@ -124,9 +123,24 @@ P CS (0, t ) = 0.1exp( − 0.05 t ) \int exp( − 0.05 w ) dw
 t − 1
 t
 P CS (0, t ) = − 2 exp( − 0.05 t ) exp( − 0.05 w ) t − 1
-Page 18Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
-P CS (0, t ) = − 2 exp( − 0.05 t )(exp( − 0.05 t ) − exp( − 0.05 t ).exp(0.05))
-= 2(exp(0.05) − 1) exp( − 0.1 t )
+%%-- Page 18
+%%-- Subject CT4 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%-- Examiners’ Report
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{eqnarray*}
+\[P_{CS}(0,t) &=& \int^{t}_{t-1}exp(-0.1w) \times 0.1 \times exp(-0.05(t-w)))dw \\
+&=& 0.1 exp(-0.05t) \int^{t}_{t-1}exp(-0.1w)
+\end{eqnarray*}
+
+\begin{eqnarray*}
+P_{CS}(0,t) &=& -2exp(-0.05t)(exp(-0.05t) - exp(-0.05t).exp(0.05))\\
+&=& 2(exp(0.05) -1) exp(-0.1t)\\
+\end{eqnarray*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 OR
 0.1025exp(–0.1 t)
 ALTERNATIVELY
