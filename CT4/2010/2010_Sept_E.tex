@@ -89,27 +89,36 @@ in the queue will never have four passengers in it.)
 (ii)
 (a)
 The generator matrix A is
-0 ⎞
-⎛ −\beta \beta 0
-⎜
-⎟
-⎜ 0 −\beta \beta 0 ⎟
-⎜ 0
-0 −\beta \beta ⎟
-⎜
-⎟
-0 −\beta ⎠
-⎝ \beta 0
-(b)
-Kolmogorov’s forward equations can be written in compact form as
-d
-P ( t ) = P ( t ) A ,
-dt
-Which are, for j = 0
-d
-p i 0 ( t ) = \beta p i 3 ( t ) − \beta p i 0 ( t )
-dt
-Page 14 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+(a) The generator matrix A is
+\[
+\begin{pmatrix}
+-\beta & \beta & 0 & 0 \\
+0 & -\beta & \beta &  0 \\
+0 &  0 & -\beta & \beta  \\
+\beta & 0 &  0 & -\beta    \\
+\end{pmatrix}
+\]
+
+
+(b) Kolmogorov’s forward equations can be written in compact form as
+
+\[\frac{d}{dt} P(t)  =P(t)A\]
+Which are, for $j = 0$
+\[\frac{d}{dt} p_{i0}(t)  = \beta p_{i3}(t) - \beta p_{i0}(t)\]
+and, for j = 1,2,3
+\[\frac{d}{dt} p_{ij}(t)  = \beta p_{i,j-1}(t) - \beta p_{i,j}(t)\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Since the $p_i$s are all equal for $i = 0, 1, 2, 3$.
+
+\[E(t) = 0.25 \left( \frac{3}{\beta} + \frac{2}{\beta} + \frac{1}{\beta} + \frac{0}{\beta} \right)  = \frac{3}{2\beta} \mbox{
+minutes}.\]
+
+
+
+
+
 and, for j = 1,2,3
 d
 p ij ( t ) = \beta p i , j − 1 ( t ) − \beta p ij ( t ) .
@@ -136,28 +145,16 @@ minutes.
 ⎝ \beta \beta \beta \beta ⎠ 2 \beta
 (iv)
 The transition matrix, P , is
-⎛ 0 1 0
-⎜
-⎜ 0 0 1
-⎜ 1
-0 0
-⎜
-2
-⎜
-⎜ 0 0 0
-⎜ 1 0 0
-⎝
-(v)
-0 0 ⎞
-⎟
-0 0 ⎟
-⎟
-1
-0 ⎟ .
-2
-⎟
-0 1 ⎟
-0 0 ⎟ ⎠
+(iv) The transition matrix, P, is
+\[\begin{pmatrix}
+0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 \\
+\frac{1}{2} &  0 & 0 & \frac{1}{2} & 0\\
+0 & 0 & 0 & 0 & 1 \\
+1 & 0 & 0 &  0 & 0 \\
+\end{pmatrix}.
+\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 The expected waiting time if the front taxi is a three-passenger model is
 2
 E [ t | 3 − passenger model] = ∑ p i
@@ -166,6 +163,7 @@ i = 0
 = ⎜ + + ⎟ =
 3 ⎝ \beta \beta \beta ⎠ \beta
 \beta
+%%%%%%%%%%%%%%%%%%%%%%%%
 The expected waiting time if the front taxi is a five-passenger model is
 4
 E [ t | 5 − passenger model] = ∑ p i
@@ -201,9 +199,7 @@ As this is longer than
 3
 , the service provided to the passengers has deteriorated.
 2\beta
-Many candidates struggled with this question. A common error in (ii) was to draw a matrix
-with five states rather than four, failing to recognise that taxis with four passengers in do not
-wait at the front of the queue, but depart as soon as the fourth passenger arrives. Most
-candidates who attempted (iv) wrote down a generator matrix, whereas the question asked
-for a transition matrix.
-Page 16 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+
+% Many candidates struggled with this question. A common error in (ii) was to draw a matrix5 with five states rather than four, failing to recognise that taxis with four passengers in do not wait at the front of the queue, but depart as soon as the fourth passenger arrives. Most candidates who attempted (iv) wrote down a generator matrix, whereas the question asked for a transition matrix.
+%%Page 16 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+\end{document}
