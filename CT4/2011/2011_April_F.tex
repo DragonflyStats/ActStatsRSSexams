@@ -49,9 +49,10 @@ previous year.
 CT4 A2011—6\item
 Customers who reduce their order from last year drop two levels of discount if
 they also reduced their order last year, subject to remaining at the lowest level B .
-(i) Explain why a process with the state space of { B , G , L , S } does not display the
+\begin{enumerate}[(i)]
+\item (i) Explain why a process with the state space of { B , G , L , S } does not display the
 Markov property.
-
+\item 
 (ii) (a)
 Define any additional state(s) required to model the system
 with the Markov property.
@@ -62,22 +63,18 @@ all the states.
 Farmer Giles thinks that each year customers have a 60% likelihood of increasing
 their order and a 30% likelihood of reducing it, irrespective of the discount level they
 are currently in.
-(iii)
+\item (iii)
 (a) Write down the transition matrix for the Markov process.
 (b) Calculate the stationary distribution.
 (c) Hence calculate the long run average price he will get for each bale of
 hay.
 [8]
-(iv) Calculate the probability that a customer who is currently paying the Loyalty
+\item (iv) Calculate the probability that a customer who is currently paying the Loyalty
 price, L , will be paying L in two years’ time.
-
-(v) Suggest reasons why the assumptions Farmer Giles has made about his
+\item (v) Suggest reasons why the assumptions Farmer Giles has made about his
 customers’ behaviour may not be valid.
-
-[Total 19]
-END OF PAPER
-CT4 A2011—7
-
+\end{enumerate}
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Question 12
 (i)
@@ -136,71 +133,50 @@ S
 0.6 ⎟
 0.7 ⎟ ⎠
 0.6Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
-(b)
-\pi = \pi P
-\pi_1
-\pi_2
-\pi_3
-\pi_4
-\pi_5
-\pi_1
-= 0.4 \pi_1 + 0.3 \pi_2 + 0.3 \pi_4
-= 0.6 \pi_1 + 0.1 \pi_2 + 0.3 \pi_3
-= 0.6 \pi_2 + 0.1 \pi_3 + 0.1 \pi_4
-= 0.3 \pi_5
-= 0.6 \pi_3 + 0.6 \pi_4 + 0.7 \pi_5
-+ \pi_2 + \pi_3 + \pi_4 + \pi_5 = 1
-(1)
-(2)
-(3)
-(4)
-(5)
-= 0.3 \pi_5
-(4) gives \pi_4
-(5) gives 0.6\pi_3 = 0.3 \pi_5 – 0.6(0.3\pi_5 )
+(b) \[ \pi_ = \pi_P \]
+
+\pi_1 = 0.4 \pi_1 + 0.3 \pi_2 + 0.3 \pi_4 (1)
+\pi_2 = 0.6 \pi_1 + 0.1 \pi_2 + 0.3 \pi_3 (2)
+\pi_3 = 0.6 \pi_2 + 0.1 \pi_3 + 0.1 \pi_4 (3)
+\pi_4 = 0.3 \pi_5 (4)
+\pi_5 = 0.6 \pi_3 + 0.6 \pi_4 + 0.7 \pi_5 (5)
+
+\[ \pi_1 + \pi_2 + \pi_3 + \pi_4 + \pi_5 = 1\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(4) gives \pi_4 = 0.3 \pi_5
+(5) gives 0.6\pi_3 = 0.3 \pi_5 – 0.6(0.3\pi_5)
 = 0.12 \pi_5
-= 0.2 \pi_5
-\pi_3
-(3) gives 0.6 \pi_2 =
-=
-=
-=
-\pi_2
+\pi_3 = 0.2 \pi_5
+(3) gives 
+
+\begin{eqnarray*}
+0.6 \pi_2 = 0.9 \pi_3 – 0.1 \pi_4
+= 0.18 \pi_5 – 0.03 \pi_5
+= 0.15 \pi_5
+\end{eqnarray*}
+
+Simplifying ( by multiplying by 5/3) 
+\[\pi_2 = 0.25 \pi_5\]
+
 (2) gives 0.6 \pi_1 = 0.9 \pi_2 – 0.3 \pi_3
 = 0.9(0.25) \pi_5 – 0.3(0.2) \pi_5
 = 0.225 \pi_5 – 0.06 \pi_5
 = 0.165 \pi_5
-= 0.275 \pi_5
-\pi_1
-0.9 \pi_3 – 0.1 \pi_4
-0.18 \pi_5 – 0.03 \pi_5
-0.15 \pi_5
-0.25 \pi_5
+\pi_1 = 0.275 \pi_5
 \pi_5 (0.275 + 0.25 + 0.2 + 0.3 + 1) = 1
 \pi_5 = 1 / 2.025
 = 0.49382716
-\pi_1 = 0.13580
-\pi_2 = 0.12346
-\pi_3 = 0.09877
-\pi_4 = 0.14815
-\pi_5 = 0.49383
-(c)
-)
-) 0.24692
-OR
-OR
-OR
-OR
-OR
-11/81
-10/81
-8/81
-12/81
-40/81
-Average price for a bale of hay is
-£8 \times(1 \times0.1358 + 0.9 \times0.12346 + 0.8 \times(0.09877 + .14815) + 0.75 ×.49383 )
+\pi_1 = 0.13580 OR 11/81
+\pi_2 = 0.12346 OR 10/81
+\pi_3 = 0.09877 ) OR 8/81
+\pi_4 = 0.14815 ) 0.24692 OR 12/81
+\pi_5 = 0.49383 OR 40/81
+(c) Average price for a bale of hay is
+£8 × (1 × 0.1358 + 0.9 × 0.12346 + 0.8 × (0.09877 + .14815) + 0.75 ×.49383 )
 = £6.5181
-23Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
+
+%% 23
+%% Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
 (iv)
 0
 0 ⎞
@@ -281,23 +257,18 @@ in L in two years’ time.
 A constant figure takes no account of the amount of hay which Farmer Giles has to
 sell: for example a drought year could produce very little which one large customer
 may buy in its entirety.
-24Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
+%%-- 24
+%%-- Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
 The amount of hay in the local market is important.
 Another supplier may try a heavy discounted year to get into the market.
 Customers’ behaviour may depend on the discount level they are at.
 There may be national trends in the demand for hay e.g. a sudden trend towards
 vegetarianism.
-A 60% chance of increasing may be implausible, as field space is likely to be limited,
+A 60\% chance of increasing may be implausible, as field space is likely to be limited,
 so a constant increase in numbers unlikely.
+
 Customers’ behaviour may depend on the amount of hay they typically purchase.
-A common error in part (ii) was to split state G into two states as well as splitting state L.
-This is not required to model the system with the Markov property and so was penalised.
-However, candidates who split state G and then followed through with a correct matrix in
-part (iii)(a) and correct solutions in part (iii)(b) were not penalised again. Note that splitting
-state G should produce the same answer to part (iii)(b), though more work will be needed!
-In part (iv) candidates who adopted ALTERNATIVE 4, in which they declined to give an
-overall answer on the grounds that they do not know the proprotions in states L + and L ― ,
-were only given credit if they presented a reasoned argument with evidence.
-In part (v) credit was given for other sensible suggestions.
-END OF EXAMINERS’ REPORT
-25
+
+% A common error in part (ii) was to split state G into two states as well as splitting state L. This is not required to model the system with the Markov property and so was penalised. However, candidates who split state G and then followed through with a correct matrix in part (iii)(a) and correct solutions in part (iii)(b) were not penalised again. Note that splitting state G should produce the same answer to part (iii)(b), though more work will be needed!
+% In part (iv) candidates who adopted ALTERNATIVE 4, in which they declined to give an overall answer on the grounds that they do not know the proprotions in states L + and L ― , were only given credit if they presented a reasoned argument with evidence. In part (v) credit was given for other sensible suggestions.
+\end{document}
