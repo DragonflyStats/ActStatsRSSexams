@@ -104,80 +104,73 @@ p 2 + ⎟
 p 1 + p 2 + ⎠
 0
 where the probability that a passenger books i flights in a year is p i .
-\item (iii)
-Let the probability that a passenger is in state j according to the stationary
-distribution be \pi j ( j = O , B , S , G ).
-The \pi j are given by the general formula
-\pi = \pi P .
-With p 0 = 0.4 , p 1 = 0.4 and p 2 + = 0.2 , we therefore have the equations
-\pi O = 0.8 \pi O + 0.4 \pi_B
-\pi_B = 0.2 \pi O + 0.4 \pi_B + 0.4 \pi S
-\pi S = 0.2 \pi_B + 0.4 \pi S + 0.4 \pi G
-\pi G = 0.2 \pi S + 0.6 \pi G
+\item (iii) Let the probability that a passenger is in state $j$ according 
+to the stationary distribution be $\pi_j$ where $ j = (O, B, S,G )$.
+The p j are given by the general formula
+$\pi = \pi P $
+
+With $p_0 = 0.4$ , $p_1 = 0.4$ and $p_2 = 0.2$ , we therefore 
+have the equations
+
+\begin{itemize}
+\item[(1)] \pi_O = 0.8\pi_O + 0.4\pi_B 
+\item[(2)] \pi_B = 0.2\pi_O + 0.4\pi_B + 0.4\pi_S 
+\item[(3)] \pi_S = 0.2\pi_B + 0.4\pi_S + 0.4\pi_G 
+\item[(4)] \pi_G = 0.2\pi_S + 0.6\pi_G 
+\end{itemize} 
 We also know that
-\pi O + \pi_B + \pi S + \pi G = 1 .
-Page 14
-(1)
-(2)
-(3)
-(4) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+\[\pi_O + \pi_B + \pi_S + \pi_G =1.\]
+
 Using equation (1) we have
-0.2 \pi O = 0.4 \pi_B
+\[0.2\pi_O = 0.4\pi_B\]
 so that
-\pi O = 2 \pi_B .
+\[\pi_O = 2\pi_B .\]
 Substituting in equation (2) this yields
-\pi_B = 0.2(2 \pi_B ) + 0.4 \pi_B + 0.4 \pi S ,
+\[\pi_B = 0.2(2\pi_B ) + 0.4\pi_B + 0.4\pi_S ,\]
 so that
-0.2 \pi_B = 0.4 \pi S
+\[0.2\pi_B = 0.4\pi_S\]
 and hence
-\pi S = 0.5 \pi_B .
+
+\[\pi_S = 0.5\pi_B .\]
 Finally, substituting in equation (3) yields
-0.5 \pi_B = 0.2 \pi_B + 0.4(0.5 \pi_B ) + 0.4 \pi G ,
+\[0.5\pi_B = 0.2\pi_B + 0.4(0.5\pi_B ) + 0.4\pi_G ,\]
 so that
-0.1 \pi_B = 0.4 \pi G
+\[0.1\pi_B = 0.4\pi_G\]
 and hence
-\pi G = 0.25 \pi_B .
+\[\pi_G = 0.25\pi_B .\]
 We therefore have
-2 \pi_B + \pi_B + 0.5 \pi_B + 0.25 \pi_B = 1 ,
+\[2\pi_B + \pi_B + 0.5\pi_B + 0.25\pi_B =1,\]
 whence
-\pi_B =
-1
-4
-= = 0.2667 ,
-3.75 15
+${ \displaystyle \pi_{B} \;=\; \frac{4}{15} \;=\; 0.2667}$
 and the stationary distribution is
-\pi O =
-8
-= 0.5333
-15
-Page 15 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
-(iv)
-\pi_B = 4
-= 0.2667
-15
-\pi S = 2
-= 0.1333
-15
-\pi G = 1
-= 0.0667
-15
-EITHER
-The expected cost of the scheme per member per year is
-(0 \times 0.5333) + (\$10 \times 0.2667) + (\$20 \times 0.1333) + (\$30 \times 0.0667) = \$7.33
-For the scheme to be worth running, therefore, the average profit
+
+\begin{itemize}
+\item ${ \displaystyle \pi_{O} \;=\; \frac{8}{15} \;=\; 0.5333}$
+\item ${ \displaystyle \pi_{B} \;=\; \frac{4}{15} \;=\; 0.2667}$
+\item ${ \displaystyle \pi_{S} \;=\; \frac{2}{15} \;=\; 0.1333}$
+\item ${ \displaystyle \pi_{G} \;=\; \frac{1}{15} \;=\; 0.0667}$
+\end{itemize} 
+
+(iv) EITHER
+\begin{itemize}
+\item The expected cost of the scheme per member per year is
+\[(0 \times 0.5333) + (\$10 \times 0.2667) + (\$20 \times 0.1333) + (\$30 \times 0.0667) = \$7.33\]
+\item For the scheme to be worth running, therefore, the average profit
 per member per year must exceed \$7.33.
-The profit per member is 0 for the 40% who book no flights,
+\item The profit per member is 0 for the 40% who book no flights,
 \$10 for the 40\% who book one flight, and \$10 m for the 20\% who
 book two or more flights, where m is the average number of flights
 booked by those in the latter category.
-For there to be a profit, we must have
-(0.4 \times 0) + (0.4 \times \$10) + (0.2 \times \$10 m ) > 7.33
+\item For there to be a profit, we must have
+\[(0.4 \times 0) + (0.4 \times \$10) + (0.2 \times \$10 m ) > 7.33\]
 or
 4 + 2 m > 7.33
 2 m > 3.33
 m > 1.67
-This must be the case since m cannot be less than 2.
-Therefore the airline makes a profit on the members of the scheme.
+\item This must be the case since m cannot be less than 2.
+\item Therefore the airline makes a profit on the members of the scheme.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%
 OR
 Assuming that the distribution of the number of flights taken
 is the same for all membership statuses, then for an Ordinary
@@ -207,3 +200,4 @@ so the expected profit per member is
 This assumes no member makes more than 2 flights per year, so
 is a minimum estimate of the profit.
 This minimum estimate is positive, so the airline makes a profit.
+\end{document}
