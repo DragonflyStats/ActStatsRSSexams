@@ -51,31 +51,28 @@ Stopped studying
 4, 5, 8, 11, 14
 The remaining seven students were still studying for the examinations at the end of
 2009.
-(i) Determine the median number of sessions taken to qualify for those students
+\begin{enumerate}[(i)]
+\item (i) Determine the median number of sessions taken to qualify for those students
 who qualified during the period of observation.
- 
+\item  
 (ii) Calculate the Kaplan-Meier estimate of the survival function, S(t), for the
 “hazard” of qualifying, where t is the number of sessions of examinations
 since 1 January 2003.
- 
+\item  
 (iii) Hence estimate the median number of sessions to qualify for the students of
 this employer.
- 
+\item  
 (iv) Explain the difference between the results in (i) and (iii) above.
-CT4 A2010—5
- 
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 [Total 11]
 9
 (i)
-Write down the hazard function for the Cox proportional hazards
-model defining all the terms that you use.
+Write down the hazard function for the Cox proportional hazards model defining all the terms that you use.
  
-A farmer is concerned that he is losing a lot of his birds to a predator, so he decides to
-build a new enclosure using taller fencing. This fencing is expensive and he cannot
-afford to build a large enough area for all his birds. He therefore decides to put half
-his birds in the new enclosure and leave the others in the existing enclosure. He is
-convinced that the new enclosure is an improvement, but has asked an actuarial
-student to determine whether the new enclosure will result in an increase in the life
+A farmer is concerned that he is losing a lot of his birds to a predator, so he decides to build a new enclosure using taller fencing. This fencing is expensive and he cannot afford to build a large enough area for all his birds. He therefore decides to put half
+his birds in the new enclosure and leave the others in the existing enclosure. He is convinced that the new enclosure is an improvement, but has asked an actuarial student to determine whether the new enclosure will result in an increase in the life
 expectancy of his birds. The student has fitted a Cox proportional hazards model to
 data on the duration until a bird is killed by a predator and calculated the following
 figures relating to the regression parameters:
@@ -207,11 +204,15 @@ and associated ranges of t scored full marks.
 
 9
 (i)
-h ( z , t ) = h 0 ( t ) exp (\beta z iT )
-h ( z , t ) is the hazard at time t (or just h ( t ) is OK)
-h 0 ( t ) is the baseline hazard
-z i are covariates
-\beta is a vector of regression parameters
+\[ h(z,t) = h_0(t) \mbox{exp}(\beta Z_i^{T})\]
+
+\begin{itemize}
+\item $h(z,t)$ is the hazard at time $t$ ( simplifed as $h(t)$).
+\item $h_0(t)$ is the baselines hazard.
+\item $z_i$ are the covariates.
+\item $\beta$ is a vector of regression parameters
+\end{itemize}
+
 (ii) The baseline hazard refers to a female chicken in the old enclosure
 (iii) The 95 per cent confidence interval for a parameter \beta is given by
 the formula
@@ -238,26 +239,30 @@ so at the 95\% level the deterioration is statistically significant.
 ALTERNATIVE 1
 Hazard for a Male, Goose in the Old enclosure is
 h 0 ( t ) exp (0.2 + 0.075 + 0) = h 0 ( t ) exp (0.275)
+%-------------------------------------------------------%
+
+Hazard for a Male, Goose in the Old enclosure is
+
+\[h_0 (t) exp(0.2 + 0.075 + 0) = h_0 (t) exp(0.275)\]
 Therefore the probability of still being alive in 6 months is
-6
-S Goose = exp ⎡ ⎢ − \int h 0 ( t ) exp ( 0.275 ) dt ⎤ ⎥
-⎣ 0
-⎦
-6
-= exp ⎡ ⎢ − 1.31653 \int h 0 ( t ) dt ⎤ ⎥
-0
-⎣
-⎦
+\begin{eqnarray*}
+S_{\mbox{Goose}}
+&=& exp \left[-\int^{6}_{0} h_{0}(t) exp(0.275) dt \\
+&=& exp \left[-1.31653\int^{6}_{0} h_{0}(t) dt \\
+\end{eqnarray*}
+
 This is equal to 0.9 so
-ln 0.9
-1.31653
-6
-= − \int h 0 ( t ) dt
-0
-6
-\int 0 h 0 ( t ) dt = 0.080028951
+
+\[  frac{\ln 0.9}{1.31653} = - \int^{6}_{0} h_{0}(t) dt\
+
+
+\[ \int^{6}_{0} h_{0}(t) dt = 0.080028951\]
+
 Hazard of a Female, Duck in the New enclosure is
-h 0 ( t ) exp(0 − 0.210 + 0.125) = h 0 ( t ) exp( − 0.085)
+
+\[h_0 (t) exp(0 - 0.210 + 0.125) = h_0 (t) exp(-0.085)\]
+
+
 So, the probability she is alive after 6 months is
 6
 S Duck = exp ⎡ ⎢ − \int h 0 ( t ) exp ( − 0.085 ) dt ⎤ ⎥
@@ -319,3 +324,4 @@ log e 0.9[exp( − 0.085)]
 exp(0.275)
 So S Duck = 0.929129
 So the probability she’s dead is 0.07087
+\end{document}
