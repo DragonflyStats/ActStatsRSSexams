@@ -1,0 +1,99 @@
+
+
+
+
+
+6 (i) Define the stationary distribution of a Markov chain. 
+A baseball stadium hosts a match each evening. As matches take place in the
+evening, floodlights are needed. The floodlights have a tendency to break down. If
+the floodlights break down, the game has to be abandoned and this costs the stadium
+$10,000. If the floodlights work throughout one match there is a 5% chance that they
+will fail and lead to the abandonment of the next match.
+The stadium has an arrangement with the Floodwatch repair company who are
+brought in the morning after a floodlight breakdown and charge $1,000 per day. There
+is a 60% chance they are able to repair the floodlights such that the evening game can
+take place and be completed without needing to be abandoned. If they are still broken
+the repair company is used (and paid) again each day until the lights are fixed, with
+the same 60% chance of fixing the lights each day.
+(ii) Write down the transition matrix for the process which describes whether the
+floodlights are working or not. 
+(iii) Derive the long run proportion of games which have to be abandoned. [3]
+The stadium manager is unhappy with the number of games being abandoned, and
+contacts the Light Fantastic repair company who are estimated to have an 80% chance
+of repairing floodlights each day. However Light Fantastic will charge more than
+Floodwatch.
+
+(iv) Calculate the maximum amount the stadium should be prepared to pay Light
+Fantastic to improve profitability. 
+[Total 10]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+6
+(i) Let S be the state space. We say that {π j | j∈S} is a stationary probability
+distribution for a Markov chain with transition matrix P if the following
+hold for all j∈S :
+j i ij
+i S
+p
+∈
+π =Σπ , OR π = π P
+j 1
+j∈S
+Σπ = .
+πi ≥ 0
+(ii) With state space {Working, Broken}
+Transition matrix A =
+0.95 0.05
+0.6 0.4
+⎛ ⎞
+⎜ ⎟
+⎝ ⎠
+(iii) This requires the stationary distribution π which satisfies
+πA = π
+0.95πW + 0.6πB = πW
+0.05πW + 0.4πB = πB
+and πW + πB =1
+πW =12πB
+πW =12 /13
+πB =1/13
+Subject CT4 (Models) – September 2012 – Examiners’ Report
+Page 10
+So 1 in 13 games is cancelled.
+OR
+The average number of games for which the lights work before breaking
+down is 1/0.05 = 20 games.
+Once they have broken down the expected number of games for which
+they will be out of action is 1/0.6 = 5/3 games.
+Therefore the proportion of games for which the lights are out of action
+is
+5 / 3 5 1
+20 (5 / 3) 65 13
+= =
++
+So 1 in 13 games is cancelled.
+(iv) First we need to find the new stationary probabilities.
+Transition matrix A′ =
+0.95 0.05
+0.8 0.2
+⎛ ⎞
+⎜ ⎟
+⎝ ⎠
+0.95πW′ + 0.8πB′ = πW′
+and πW′ + πB′ =1
+Giving πW′ =16 /17 πB′ =1/17
+Lost income (including fees to repair company):
+with Floodwatch: ($10,000 + $1,000)*1/13
+with Light Fantastic: ($10,000 + X)*1/17 where X is fee to be negotiated.
+So need: 11000/13 = (10000 + X)/17
+X = $4,384.62 per day.
+In part (i) no credit was given for wordy description of “what happens in the long run”.
+In part (iii) the question said “derive”, so we needed an explanation of where the answer
+came from: only limited credit was given for writing down a numerical answer (even if
+correct) without explanation. Moreover, in part (iii) calculating the stationary distribution
+was not sufficient for full credit: we were looking for the correct element to be identified and
+its value indicated i.e. an explicit statement that “1 in 13 games is cancelled”. Parts (i), (ii)
+and (iii) of this question were well answered, and many candidates also evaluated the
+proportion of games that would be cancelled under the new floodlight regime in part (iv).
+Few were able to compute the daily saving, however.
+Subject CT4 (Models) – September 2012 – Examiners’ Report
+Page 11
