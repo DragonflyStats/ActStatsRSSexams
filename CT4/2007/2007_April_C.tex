@@ -31,8 +31,8 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
-7
+
+%% Question 7
 Every person has two chromosomes, each being a copy of one of the chromosomes
 from one of their parents. There are two types of chromosomes labelled X and Y. A
 child born with an X and a Y chromosome is male and a child with two X
@@ -45,12 +45,16 @@ disease and is known as a haemophiliac.
 A medical researcher wishes to study the progress of the disease through the first born
 child in each generation, starting with a female carrier.
 You may assume:
+\begin{itemize}
 \item every parent has a equal chance of passing either of their chromosomes to their
 children
 \item the partner of each person in the study does not carry a defective X chromosome;
 and
 \item no new genetic defects occur
-(i)
+\end{itemize}
+
+\begin{enumerate}[(a)]
+\item (i)
 Show that the expected progress of the disease through the generations may be
 modelled as a Markov chain and specify carefully:
 (a)
@@ -58,19 +62,21 @@ modelled as a Markov chain and specify carefully:
 the state space; and
 the transition diagram
 
-(ii)
+\item (ii)
 State, with reasons, whether the chain is:
-(a)
-(b)
+\begin{enumerate}[(i)]
+\item 
 irreducible; and
-aperiodic
+\item aperiodic
+\end{enumerate}
 
-(iii)
+\item  (iii)
 Calculate the stationary distribution of the Markov chain.
-CT4 A2007—5
+\end{enumerate}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 7
 (i)
 Consider the sequence of the status of the first born child in each generation.
@@ -86,6 +92,7 @@ or XY
 or X*Y
 Using the assumption that there is an equal chance of either chromosome
 being inherited:
+\begin{itemize}
 \item A female non-carrier will lead to a female non-carrier or male non-carrier.
 \item A female carrier may produce:
 X*X, XX, X*Y, XY all with equal probability.
@@ -93,7 +100,8 @@ X*X, XX, X*Y, XY all with equal probability.
 \item A male haemophiliac may produce:
 X*X or XY (because his partner must provide an X) with equal
 probability.
-8 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2007 — Examiners’ Report
+\end{itemize}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2007 — Examiners’ Report
 The transition diagram is therefore:
 0.5
 0.25
@@ -109,6 +117,9 @@ MN
 MH
 0.5
 0.5
+
+
+
 Each of the transition probabilities depends only on state currently occupied,
 so the process possesses the Markov property.
 (ii)
@@ -134,16 +145,25 @@ MN (2) 0.5
 0.5 0.5
 0
 MH (3)
+$$\bordermatrix{ &c_1&c_2&\ldots &c_n\cr
+                r_1&a_{11} &  0  & \ldots & a_{1n}\cr
+                r_2& 0  &  a_{22} & \ldots & a_{2n}\cr
+                r_4& 0  &   0       &\ldots & a_{nn}}$$
 9 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2007 — Examiners’ Report
-The stationary distribution \pi must satisfy:
-\pi 0 = 0.5 \pi 0 + 0.25 \pi_1 + 0.5 \pi_2
-\pi_1 = 0.25 \pi_1 + 0.5 \pi_3
-\pi_2 = 0.5 \pi 0 + 0.25 \pi_1 + 0.5 \pi_2 + 0.5 \pi_3
-\pi_3 = 0.25 \pi_1
+The stationary distribution $\pi$ must satisfy:
+\begin{itemize}
+    \item ${\displaystyle \pi 0 = 0.5 \pi 0 + 0.25 \pi_1 + 0.5 \pi_2 }$
+    \item ${\displaystyle \pi_1 = 0.25 \pi_1 + 0.5 \pi_3}$
+    \item ${\displaystyle \pi_2 = 0.5 \pi 0 + 0.25 \pi_1 + 0.5 \pi_2 + 0.5 \pi_3}$
+    \item ${\displaystyle \pi_3 = 0.25 \pi_1}$
+\end{itemize}
+
 So,
-\pi_1 = 0.25 \pi_1 + 0.5 \times0.25 \pi_1
-⇒ \pi_1 = \pi_3 = 0
-⇒ \pi 0 = \pi_2 = 0.5
+${\displaystyle \pi_1 = 0.25 \pi_1 + 0.5 \times0.25 \pi_1}$
+⇒ 
+${\displaystyle \pi_1 = \pi_3 = 0}$
+⇒ 
+${\displaystyle \pi 0 = \pi_2 = 0.5}$
 An alternative solution combines the states FN and MN to give a 3-state model. This
 was given credit.
 \end{document}
