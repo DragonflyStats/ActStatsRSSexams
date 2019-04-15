@@ -39,16 +39,19 @@ A motor insurer operates a no claims discount system with the following levels o
 discount {0%, 25\% , 50%, 60%}.
 The rules governing a policyholder’s discount level, based upon the number of claims
 made in the previous year, are as follows:
-• Following a year with no claims, the policyholder moves up one discount level, or
+\begin{itemize}
+\item Following a year with no claims, the policyholder moves up one discount level, or
 remains at the 60% level.
-• Following a year with one claim, the policyholder moves down one discount level,
+\item Following a year with one claim, the policyholder moves down one discount level,
 or remains at 0% level.
-• Following a year with two or more claims, the policyholder moves down two
-discount levels (subject to a limit of the 0% discount level).
+\item Following a year with two or more claims, the policyholder moves down two
+discount levels (subject to a limit of the 0\% discount level).
+\end{itemize}
 The number of claims made by a policyholder in a year is assumed to follow a
 Poisson distribution with mean 0.30.
+\begin{enumerate}
 \item (i) Determine the transition matrix for the no claims discount system. 
-\item (ii) Calculate the stationary distribution of the system, \pi_ . 
+\item (ii) Calculate the stationary distribution of the system, $\pi$ . 
 \item (iii) Calculate the expected average long term level of discount. 
 The following data shows the number of the insurer’s 130,200 policyholders in the
 portfolio classified by the number of claims each policyholder made in the last year.
@@ -65,14 +68,12 @@ Four claims
 36
 Five claims
 8
-(iv) Test the goodness of fit of these data to a Poisson distribution with mean 0.30.
+\item (iv) Test the goodness of fit of these data to a Poisson distribution with mean 0.30.
 
-(v) Comment on the implications of your conclusion in (iv) for the average level
+\item (v) Comment on the implications of your conclusion in (iv) for the average level
 of discount applied.
 
-[Total 16]
-END OF PAPER
-CT4 A2009—7
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -81,8 +82,8 @@ CT4 A2009—7
 12
 \item (i)
 The probability of making the relevant number of claims is:
-P[0 claims] = exp(−0.3) = 0.740818
-P[1 claim] = 0.3exp(−0.3) = 0.222245
+\[P[0 claims] = exp(−0.3) = 0.740818\]
+\[P[1 claim] = 0.3exp(−0.3) = 0.222245\]
 So P[2 or more claims] = 1 − 0.740818 − 0.222245 = 0.036936
 Therefore the transition matrix P is given by:
 0
@@ -109,31 +110,36 @@ Therefore the transition matrix P is given by:
 
 \begin{eqnarray*}
 \pi_1 &=& 0.259182 \pi_1 + 0.259182 \pi_2 + 0.036936 \pi_3\\
-\pi_2 &=& 0.740818 \pi_1 + 0.222245 \pi_3 + 0.036936 \pi_ 4\\
-\pi_3 &=& 0.740818 \pi_2 + 0.222245 \pi_ 4\\
-\pi_4 &=& 0.740818 \pi_3 + 0.740818 \pi_ 4\\
+\pi_2 &=& 0.740818 \pi_1 + 0.222245 \pi_3 + 0.036936 \pi_{4}\\
+\pi_3 &=& 0.740818 \pi_2 + 0.222245 \pi_{4}\\
+\pi_4 &=& 0.740818 \pi_3 + 0.740818 \pi_{4}\\
 \end{eqnarray*}
 
-\[\pi_1 + \pi_2 + \pi_3 + \pi_ 4 = 1\]
+\[\pi_1 + \pi_2 + \pi_3 + \pi_{4} = 1\]
 (1)
 (2)
 (3)
 (4)
 Page 17%%%%%%%%%%%%%%%%%%%%%%%%%%%— %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
 Using (4)
-\pi_3 = [(1 − 0.740818) / 0.740818]* \pi_ 4 = 0.349859 \pi_ 4 .
+\pi_3 = [(1 − 0.740818) / 0.740818]* \pi_{4} = 0.349859 \pi_{4} .
 In (3)
-\pi_2 = [(0.349859 − 0.222245) / 0.740818]* \pi_ 4 = 0.17226 \pi_ 4 .
+\[\pi_2 = [(0.349859 − 0.222245) / 0.740818]* \pi_{4} = 0.17226 \pi_{4} .\]
 Then in (2)
-\pi_1 = [(0.17226 − 0.036936 − 0.222245*0.349859) / 0.740818]* \pi_ 4 = 0.07771 \pi_ 4
+\begin{eqnarray*}
+\pi_1 &=& [(0.17226 − 0.036936 − 0.222245*0.349859) / 0.740818]* \pi_{4} \\ &=& 0.07771 \pi_{4}
+\end{eqnarray*}
 So
-\pi_ 4 = 1/ (1+0.349859+0.17226+0.07771)=0.625067
-\pi_3 = 0.218685
-\pi_2 = 0.107674
-\pi_1 = 0.048574
+\begin{itemize}
+    \item ${\displaystyle     \pi_4 = 1/ (1+0.349859+0.17226+0.07771)=0.625067 }$
+    \item ${\displaystyle \pi_3 = 0.218685 }$
+    \item ${\displaystyle \pi_2 = 0.107674 }$
+    \item ${\displaystyle \pi_1 = 0.048574 }$
+\end{itemize}
+
 \item (iii)
-Average discount =
-60%*0.625067+50%*0.218685+25\% *0.107674 = 51.13%
+\[Average discount =
+60%*0.625067+50%*0.218685+25\% *0.107674 = 51.13%\]
 (iv)
 The total number of policyholders shown is 130,200.
 Number of
@@ -173,28 +179,35 @@ Observed
 4.054
 0.366
 18.771
-Null hypothesis: the data come from a source where the underlying
+\begin{itemize}
+    \item Null hypothesis: the data come from a source where the underlying
 distribution of number of claims follows a Poisson distribution with mean
 0.30.
-The test statistic z =
+    \item The test statistic z =
 ∑ ( O i − E i ) 2
 i
 E i
 is distributed as chi-square
 with (6 − 1(parameter) − 5 degrees of freedom under the null hypothesis.
-This is a one-tailed test, and the upper 5\%  point of the chi-squared distribution
+    \item This is a one-tailed test, and the upper 5\%  point of the chi-squared distribution
 with 5 degrees of freedom is 11.07.
-The observed value of the test statistic is 27.2.
-Page 18%%%%%%%%%%%%%%%%%%%%%%%%%%%— %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
-As 27.2 > 11.07 we reject the null hypothesis.
+    \item The observed value of the test statistic is 27.2.
+    \item As 27.2 > 11.07 we reject the null hypothesis.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 (v)
-As the goodness of test fails, the discount level calculated assuming the
+\begin{itemize}
+    \item As the goodness of test fails, the discount level calculated assuming the
 Poisson distribution may be incorrect.
-The goodness-of-fit test fails due to a larger number of multiple
+    \item The goodness-of-fit test fails due to a larger number of multiple
 claims than expected.
-Conversely a higher number of policyholders make no claims than expected
+    \item Conversely a higher number of policyholders make no claims than expected
 (within the mean of 0.30), so the average discount level may be understated.
-The average discount level calculated from the data could usefully be
+    \item The average discount level calculated from the data could usefully be
 compared with that estimated using the Poisson distribution.
-END OF EXAMINERS’ REPORT
-Page 19
+\end{itemize}
+
+\end{document}
