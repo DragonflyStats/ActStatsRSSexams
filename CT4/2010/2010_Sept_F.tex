@@ -94,6 +94,52 @@ day
 2
 3
 4
+
+(ii) One step transition matrix is:
+\[
+\begin{pmatrix}
+0 & 0 & 1\\
+0 & 1-p & p \\
+1-p & p & 0 \\
+\end{pmatrix}
+\]
+Seeking the two-step transition matrix as the square of this matrix:
+\[
+\begin{pmatrix}
+0 & 0 & 1\\
+0 & 1-p & p \\
+1-p & p & 0 \\
+\end{pmatrix}\begin{pmatrix}
+0 & 0 & 1\\
+0 & 1-p & p \\
+1-p & p & 0 \\
+\end{pmatrix} = \begin{pmatrix}
+1-p & p & 0\\
+p(1-p) & (1-p)^2 + p^2 & p(1-p) \\
+0 & p(1-p) & 1-p+p^2 \\
+\end{pmatrix} 
+\]
+
+(iii)
+\[ \Pi 
+\begin{pmatrix}
+0 & 0 & 1\\
+0 & 1-p & p \\
+1-p & p & 0 \\
+\end{pmatrix}  = \Pi\]
+
+\[ \Pi 
+\begin{pmatrix}
+(0 \times \pi_1) & (0 \times ) & (1 \times )\\
+(0 \times ) & (1-p \times ) & (p \times ) \\
+(1-p \times ) & (p \times ) & (0 \times ) \\
+\end{pmatrix}  = \Pi\]
+
+
+(1- p)p3 = p1 (I)
+(1- p)p2 + pp3 = p2 or p2 = p3 (II)
+p1 + pp2 = p3 (III)
+
 (ii)
 Start morning
 1
