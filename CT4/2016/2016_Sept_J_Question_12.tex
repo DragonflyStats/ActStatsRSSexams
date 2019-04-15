@@ -1,0 +1,258 @@
+PLEASE TURN OVER12
+A large life insurance company is conducting an investigation into the mortality of its
+policyholders to see if this has changed since the previous investigation ten years ago.
+Below is a sample of the results:
+Age
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+Current investigation
+Exposed to risk Observed deaths
+5,842
+5,630
+4,281
+3,955
+3,879
+3,550
+4,006
+4,150
+3,520
+3,057
+3,666
+150
+132
+126
+98
+142
+149
+162
+173
+158
+150
+200
+Previous investigation
+mortality rates
+0.0267
+0.0278
+0.0301
+0.0325
+0.0356
+0.0387
+0.0396
+0.0410
+0.0433
+0.0458
+0.0490
+(i) Explain how many degrees of freedom would be used to conduct a chi-squared
+test for goodness of fit on these data.
+[2]
+(ii) Carry out a chi-squared test on these data.
+[5]
+(iii) Perform a test to determine whether the shape of the mortality rates has
+changed over the age range.
+[3]
+(iv) Comment on your results to parts (ii) and (iii).
+[2]
+(v) Suggest reasons why the mortality experience may have changed over the past
+ten years.
+[2]
+[Total 14]
+END OF PAPER
+CT4 S2016–10
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+Q12
+(i)
+There are 11 age groups:
+
+EITHER
+no parameters have been fitted and no table has been chosen
+OR
+we are not comparing our data with a set of graduated rates derived from our data [1]
+so the number of degrees of freedom is 11.
+(ii)
+
+The null hypothesis is that the old rates are the true rates underlying the observed data.
+
+Age ETR Deaths Mortality Expected
+Deaths z z 2
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65 5,842
+5,630
+4,281
+3,955
+3,879
+3,550
+4,006
+4,150
+3,520
+3,057
+3,666 150
+132
+126
+98
+142
+149
+162
+173
+158
+150
+200 0.0267
+0.0278
+0.0301
+0.0325
+0.0356
+0.0387
+0.0396
+0.0410
+0.0433
+0.0458
+0.0490 155.981
+156.514
+128.858
+128.538
+138.092
+137.385
+158.638
+170.150
+152.416
+140.011
+179.634 −0.479
+−1.959
+−0.252
+−2.694
+0.333
+0.991
+0.267
+0.218
+0.452
+0.844
+1.520 0.229
+3.840
+0.063
+7.255
+0.111
+0.982
+0.071
+0.048
+0.205
+0.713
+2.309
+Total
+The observed test statistic is 15.825.
+%% ---  Page  20
+15.825
+[3]Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – September 2016 – 
+The critical value of the chi squared distribution at the 5% level with 11 degrees of
+freedom is 19.68.
+
+(iii)
+Since 15.85 < 19.68 
+we do not reject the null hypothesis. 
+To test whether the shape of the mortality rates has changed over the age range we use
+the Grouping of Signs Test.
+Under the null hypothesis that the old rates are the true rates underlying
+the observed data, 
+G = Number of groups of positive deviations = 1,
+m = number of deviations = 11,
+n 1 = number of positive deviations = 7, and
+n 2 = number of negative deviations = 4 
+EITHER
+We want k * the largest k such that
+ n 1 − 1  n 2 + 1 
+k 
+
+
+ t − 1  t 
+ m 
+t = 1
+ 
+ n 1 
+
+< 0.05 .
+The test fails at the 5% level if G \leq k * . 
+From the Gold Book the value of k * is 1. 
+Since, therefore, G = k * in this case 
+we have sufficient evidence to reject the null hypothesis at the 5% level. 
+OR
+ 6  5 
+  
+0 1
+5
+Pr[t = 1] =    =
+= 0.015152
+330
+ 11 
+ 
+ 7 
+Pr[t = 0] = 0 [1]
+So Pr[t <= 1] < 0.05 
+Hence we have evidence to reject the null hypothesis at the 5% level. 
+%% ---  Page  21Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 –September 2016 – 
+(iv)
+The Chi-Squared Test shows that overall the data are a good fit to the previous
+investigation. 
+However, the Grouping of Signs Test shows that the shape of the mortality has
+changed, 
+with the current investigation showing lower mortality at the lower end of the age
+range and higher mortality at the higher end.
+
+This change in shape was not picked up by the Chi-Squared test as it uses the square
+of the standard deviations, and therefore has no regard for the direction of the
+deviations.
+
+(v)
+Mortality may have improved/worsened due to changes in medical science, health
+care provision, the environment or the standard of living.
+
+This could have affects at all ages, for example when a new “cure all” drug is found,
+or over particular age ranges if a procedure or drug is discovered which most notably
+affects a certain age range of the population.
+
+The composition of the lives may have changed (e.g. a different mix of nationalities,
+or a different weighting between males and females)
+[1]
+There may be more underwritten lives in one investigation than the other.
+
+One of the investigations could have included a period when an epidemic occurred.
+OR There could be an error in one of the investigations.
+
+There could be a general change in lifestyle or diet.
+
+Underwriting practices may have changed for example a new “preferred lives”
+category may have been created.
+[1]
+[Max 2]
+[Total 14]
+Answers to part (i) of this question were the weakest of any part of the
+examination paper. The Core Reading clearly states that “[i]f we are
+comparing an experience with a standard table, then [the test statistic] can be
+assumed to have a χ 2 distribution with m degrees of freedom [where] m is just
+the number of age groups”. It matters not how the previous table was
+constructed. In this case, indeed, there is no standard table as such, just the
+results of a previous investigation. Provided the current investigation is
+independent of the previous investigation, then we do not need to deduct any
+degrees of freedom for the “choice of standard table”. In part (iii) many
+candidates incorrectly interpreted the question as referring to the “shape of
+the distribution of the mortality rates” rather than the shape of the rates
+themselves. Many candidates made sensible comments in part (v). Only a
+subset of the points mentioned above was required for full credit.
+END OF 
+%% ---  Page  22

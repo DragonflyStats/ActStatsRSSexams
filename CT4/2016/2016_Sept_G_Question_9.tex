@@ -1,0 +1,159 @@
+[Total 11]9
+(i)
+Describe how transition rates can be estimated under multiple state models
+with constant transition rates, including a statement of the data required. [3]
+A specialist insurance policy provides cover only for the theft of valuable items (such
+as jewellery) stored in safety deposit boxes in a bank vault. The premium for cover
+for an item worth £C is paid in advance. If a claim is made, the cover ceases.
+Claims are modelled using a two state model as follows, where \mu is a constant
+transition rate:
+\mu
+Active
+policy
+Theft
+claim
+(ii) Give Kolmogorov’s forward equations for this process.
+(iii) Determine the expected cost of claims incurred by time T.
+[1]
+[2]
+If the item is no longer stored in the safety deposit box (for example, if the item is
+sold) then the insurance cover lapses. The transition rate for lapses of such policies is
+a constant O.
+(iv) Draw a transition diagram for a revised process allowing for lapses.
+(v) Derive the revised expected cost of claims incurred by time T.
+CT4 S2016–7
+[2]
+[3]
+[Total 11]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q9
+(i)
+The maximum likelihood estimate of the transition intensity from state i to state j is
+the number of transitions from state i to state j divided by the total waiting time in
+state i.
+[1]
+To estimate the transition intensities exactly we therefore need
+(ii)
+the total time spent in each state
+OR
+entry and exit times for each individual for each state, [1]
+and the total number of transitions of each type made. [1]
+Define p AA ( s , t ) to be the probability of being in state Active at time s+t if Active at
+time s.
+Then EITHER
+\partial
+p AA ( s , t ) = − p AA ( s , t ) \mu
+\partial t 
+\partial
+p AT ( s , t ) = p AA ( s , t ) \mu ,
+\partial t 
+%% ---  Page  13Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 –September 2016 – 
+OR
+\partial
+p ( s , t ) = p ( s , t ) M
+\partial t 
+ −\mu \mu 
+where M = 
+ in order Active, Theft,
+ 0 0  
+OR
+Integrated forward equations:
+t
+p AA ( s , t ) = exp   −  \mu du  
+ u = s
+
+p AT ( s , t ) = 
+t
+u = 0
+(iii)
+p AA ( s , u ). \mu .1 du .
+
+
+Measure from time zero i.e. s = 0 and drop s from notation.
+EITHER
+\partial
+p AA ( t ) = −\mu .
+p AA ( t ) \partial t
+1
+\partial
+(ln( p AA ( t ))) = −\mu ,
+\partial t
+
+hence p AA ( t ) = exp( −\mu t + C ) .
+As p AA (0) = 1 , C = 0, so
+p AA ( t ) = exp( −\mu t )
+
+A claim occurs with cost £C if moves to state “Theft Claim”.
+Hence the expected cost is C (1 − exp( −\mu T ))
+[1]
+OR
+Solving for p AT , we have
+\partial
+p AT ( t ) = p AA ( t ) \mu = (1 − p AT ( t )) \mu (as the model has only two states).
+\partial t
+%% ---  Page  14
+Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – September 2016 – 
+Using an integrating factor, we can write
+\partial
+[exp( \mu t ) p AT ( t )) = \mu exp( \mu t ) ,
+\partial t
+
+exp( \mu t ) p AT ( t ) = exp( \mu t ) − 1 ,
+p AT ( t ) = 1 − exp( −\mu t ) ,
+and hence the expected cost is C (1 − exp( −\mu T )) .
+[1]
+OR
+Solving the integrated forward equation
+P AT ( T ) = 
+T
+s = 0
+T
+exp ( −\mu s ) \mu ds = [ − exp( \mu s ) ] 0 = 1 − exp( −\mu T ) ,
+and hence the expected cost is C (1 − exp( −\mu T )) .
+[1]
+[1]
+(iv)
+\mu
+Active
+policy
+Theft
+claim
+\lambda
+Lapsed
+[2]
+(v)
+We now have
+\partial
+p AA ( t ) = − p AA ( t )( \mu + \lambda ) .
+\partial t
+
+So p AA ( t ) = exp( − ( \mu + \lambda ) t ) .
+We want
+
+\partial
+p AT ( t ) = p AA ( t ) \mu = \mu exp( − ( \mu + \lambda ) t )) .
+\partial t
+−\mu
+Solving this produces p AT ( t ) =
+exp( − ( \mu + \lambda ) t ))
+( \mu + \lambda )
+
+T
+=
+0
+\mu
+(1 − exp( − ( \mu + \lambda ) T )) .
+\mu+\lambda
+[1]
+%% ---  Page  15Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 –September 2016 – 
+So claims become
+\mu
+C (1 − exp( − ( \mu + \lambda ) T )) .
+\mu+\lambda
+
+[Total 11]
+Answers to this question were often weak. In part (i) a substantial minority of
+candidates seemed not to have read the part of the question about a
+statement of the data required, and so lost marks. Parts (iii) and (v) were
+poorly answered, with part (v) not being attempted by many candidates.

@@ -1,0 +1,49 @@
+4
+An insurance company’s business consists only of policies covering a specified event
+and which pay a sum assured of £Z immediately on occurrence of this event. Claims
+on the portfolio of policies are considered to occur in accordance with a Poisson
+process with annual rate O.
+The insurance company currently has assets of £S (£Z > £S). It charges a premium
+which is to be 50% more than the expected outgo. Premiums can be assumed to be
+received continuously. The insurance company’s expenses are small and can be
+ignored.
+(i) Derive the total annual premium charged by the insurance company on the
+portfolio.
+[1]
+(ii) Show that the probability that the insurance company has insufficient assets to
+pay the next claim made is given by:
+a 1 § S · o
+1  exp « 
+ ̈ 1   ̧ »
+¬ 1.5 © Z 1 1⁄4
+[3]
+[Total 4]
+Q4
+(i)
+(ii)
+The expected annual outgo is \lambda Z . 
+The premium is 50% more than this, hence 1.5 \lambda Z . 
+Suppose the next claim happens at time T.
+Then the company is unable to pay the claim if:
+S + 1.5 \lambda ZT < Z .
+[1]
+This implies that
+T <
+Z − S
+1  S 
+=
+ 1 −  .
+1.5 \lambda Z 1.5 \lambda  Z 
+
+%% ---  Page  5Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 –September 2016 – 
+We are told claims arrive in accordance with a Poisson process so
+ 1  S  
+P( t \leq T ) = 1 − exp( −\lambda T ) = 1 − exp  −
+ 1 −   , as required.
+ 1.5  Z  
+[11⁄2]
+[Total 4]
+This was an unfamiliar application of a Poisson process. Many candidates
+did not attempt this question. Of those that did, most only scored credit for
+part (i). Few candidates seemed to know how to attempt part (ii), especially
+the idea of examining the time of the next claim.

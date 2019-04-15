@@ -1,0 +1,164 @@
+[Total 6]
+PLEASE TURN OVER6
+Brian worked in a large open-plan office with a communal kitchen in which the
+workers made coffee. Each worker supplied his or her own coffee cup. For several
+years Brian was annoyed by his coffee cups being taken away by colleagues and
+never returned to the kitchen, so he decided to do an experiment. He brought into the
+kitchen 20 cups which were distinguishable from the other cups in the kitchen. At the
+end of each day for 15 days he counted the number of his 20 cups which remained.
+The results were as follows:
+Day Number of cups Day Number of cups
+1
+2
+3
+4
+5
+6
+7
+8 20
+19
+18
+18
+17
+17
+17
+16 9
+10
+11
+12
+13
+14
+15 15
+15
+15
+15
+13
+12
+10
+Brian noted that:
+x the cup that “disappeared” during day 2 was taken home by Brian to be used by
+his mother.
+x the two cups that “disappeared” during day 13 were accidentally broken by Brian
+when doing his daily check.
+Let h(x) be the hazard that each of Brian’s cups is taken by colleagues during day x
+and not returned, and let S(x) be the corresponding survival function.
+(i)
+(ii)
+CT4 S2016–4
+Determine an estimate of S(x) for Brian’s cups using the Nelson-Aalen
+estimator.
+Sketch a chart for your estimated S(x).
+[6]
+[2]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Q6
+(i)
+The calculations are shown in the table below.
+t j N j d j c j d j / N j  ( d j / N j )
+2
+3
+5
+8
+9
+13
+14
+15 20
+19
+18
+17
+16
+15
+13
+12 0
+1
+1
+1
+1
+0
+1
+2 1
+0
+0
+0
+0
+2
+0
+0 0
+1/19
+1/18
+1/17
+1/16
+0
+1/13
+2/12 0
+0.0526
+0.1082
+0.1670
+0.2295
+0.2295
+0.3064
+0.4731
+[31⁄2]
+^
+
+d
+The Nelson-Aalen estimator of S(x) is S ( x ) = exp  −  j
+ t \leq x N j
+ j
+
+  .
+
+
+%% ---  Page  7Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 –September 2016 – 
+So we have
+(ii)
+^
+Range S ( x )
+0 \leq x < 3
+3 \leq x < 5
+5 \leq x < 8
+8 \leq x < 9
+9 \leq x < 14
+14 \leq x < 15
+x = 15 1.0000
+0.9487
+0.8974
+0.8462
+0.7949
+0.7361
+0.6231
+[2]
+A suitable sketch is shown below.
+1
+0.9
+0.8
+0.7
+0.6
+S(x) 0.5
+0.4
+0.3
+0.2
+0.1
+0
+0
+2
+4
+6
+8
+10
+12
+14
+Duration x
+[2]
+[Total 8]
+Many candidates scored highly on this straightforward application of the
+Nelson-Aalen estimator of the survival function. Some candidates assumed
+that events happened at the beginning of each day rather than the end.
+These candidates could score full credit (the only change to the solution
+above is that the t j s for the events should be 2, 4, 7, 8, 13 and 14). A
+common error was to quote the estimated S(t) for a duration more than 15
+days. This is incorrect because we have no information about what happened
+after 15 days.
+%% ---  Page  8Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – September 2016 – 

@@ -1,0 +1,111 @@
+PLEASE TURN OVER10
+A researcher is investigating the contributing factors to the speed at which patients
+recover from a common minor surgical procedure undertaken in hospitals across the
+country. He has the questionnaires which each patient completed before the surgery
+and the length of time the patient remained in hospital after surgery and is attempting
+to fit a Cox proportional hazards model to the data.
+He has fitted a model with what he assumes are the most common contributing factors
+and has calculated the parameters as shown in the table below:
+(i)
+Covariate Category Parameter
+Gender Male
+Female 0
+0.065
+Smoker Non Smoker
+Smoker 0.035
+0
+Drinker Non Drinker
+Moderate Drinker
+Heavy Drinker 0.06
+0
+0.085
+Give the hazard function for this Cox proportional hazards model, defining all
+the terms and covariates.
+[4]
+A male moderate drinker who does not smoke has a hazard of leaving hospital after
+three days of 0.6.
+(ii)
+Calculate the probability that a female heavy drinker who smokes and who is
+still in hospital after three days is NOT discharged at that point.
+[3]
+A colleague suggests that, in his experience, gender has no material impact on the
+length of time in hospital after surgery.
+(iii)
+Explain how the researcher could test this suggestion statistically.
+[2]
+Another colleague suggests that the original model is good, but could be improved by
+including an additional factor as to whether a patient is married or not.
+(iv)
+CT4 S2016–8
+Set out how the researcher could establish whether an additional factor
+representing marital status would improve the model.
+[4]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Q10
+(i)
+\lambda(t:Z i ) = \lambda 0 (t) exp (0.065Z 1 – 0.035Z 2 – 0.06Z 3 + 0.085Z 4 ).
+[2]
+Here
+\lambda(t:Z i ) is the hazard of being discharged at time t,
+\lambda 0 (t) is the baseline hazard,
+
+and
+Z 1 is the gender covariate = 1 if the patient is female and 0 if the patient is male.
+Z 2 is the smoker covariate = 1 if the patient is a non-smoker and 0 if the patient is a
+smoker.
+Z 3 is the non-drinker covariate = 1 if the patient does not drink and 0 if the patient
+drinks.
+Z 4 is the heavy drinker covariate = 1 if the patient is a heavy drinker and 0 otherwise.
+[11⁄2]
+(ii)
+A male moderate drinker who does not smoke has hazard of leaving after 3 days of
+\lambda 0 (3) exp (0 – 0.035 + 0 + 0). 
+So 0.6 = \lambda 0 (3) exp (−0.035). 
+A female heavy drinker who smokes has a hazard of leaving of
+\lambda 0 (3) exp (0.065 + 0 + 0 + 0.085) = \lambda 0 (3) exp (0.15)
+So the probability that the female is discharged is 0.6
+%% ---  Page  16
+[1]
+exp(0.15)
+= 0.7219,
+exp( − 0.035)
+Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – September 2016 – 
+(iii)
+(iv)
+and the probability she is not discharged is 1 − 0.7219 = 0.2781 or 28%. 
+The colleague’s null hypothesis is that the gender parameter is actually zero. 
+From the data calculate the variance of the estimate of the parameter for gender. 
+The 95% confidence interval is then the parameter ± 1.96 * standard deviation. 
+If this range does not include 0, we can be 95% confident that the gender has a
+material impact and we can reject the null hypothesis. 
+A suitable statistical test is the log likelihood test. 
+The null hypothesis is that the coefficient of the marital status term is zero. 
+We compare the model with and without the extra parameter. 
+If the log-likelihoods for the two models are L with and L without respectively, then the
+test statistic is −2(L without − L with ).
+
+This statistic has a chi-squared distribution with one degree of freedom (since the
+marital status term involves one parameter).
+
+If the test statistic is greater than 3.84 (the chi-squared critical value at 95% with 1
+degree of freedom), we reject the null hypothesis
+[1]
+and conclude that the marital status term does improve the model.
+
+
+[Total 13]
+In part (i) some candidates incorrectly defined the dummy variables Z 3 and Z 4
+for drinking behaviour as “0 if the patient drinks and 1 if the patient is a
+moderate drinker” and “0 if the patient is a heavy drinker and 1 if the patient is
+a moderate drinker” respectively. This is incorrect as it leaves no category for
+the heavy drinkers and the non-drinkers respectively. Other candidates failed
+to mention the numerical values of the parameter estimates, which were
+required for full credit as the question said “this ... model”. In part (ii) many
+candidates interpreted the question as referring to a survival probability rather
+than a hazard. Credit was given to all reasonable interpretations of the
+question. In part (iii) it is, of course, possible to test the significance of the
+gender covariate using the likelihood ratio test, and full credit was given for
+this if fully explained.
+%% ---  Page  17Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 –September 2016 – 
