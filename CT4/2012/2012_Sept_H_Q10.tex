@@ -1,0 +1,342 @@
+
+
+
+10 On a small distant planet lives a race of aliens. The aliens can die in one of two ways,
+either through illness, or by being sacrificed according to the ancient custom of the
+planet. Aliens who die from either cause may, some time later, become zombies.
+(i) Draw a multiple-state diagram with four states illustrating the process by
+which aliens die and become zombies, labelling the four states and the
+possible transitions between them. 
+(ii) Write down the likelihood of the process in terms of the transition intensities,
+the numbers of events observed and the waiting times in the relevant states,
+clearly defining all the terms you use. 
+(iii) Derive the maximum likelihood estimator of the death rate from illness. [3]
+The aliens take censuses of their population every ten years (where the year is an
+“alien year”, which is the length of time their planet takes to orbit their sun). On
+1 January in alien year 46,567, there were 3,189 live aliens in the population. On 1
+January in alien year 46,577 there were 2,811 live aliens in the population. During
+the intervening ten alien years, a total of 3,690 aliens died from illness and 2,310 were
+sacrificed, and the annual death rates from illness and sacrifice were constant and the
+same for each alien.
+(iv) Estimate the annual death rates from illness and from sacrifice over the ten
+alien years between alien years 46,567 and 46,577. 
+The rate at which aliens who have died from either cause become zombies is 0.1 per
+alien year.
+(v) Calculate the probabilities that an alien alive in alien year 46,567 will, ten
+alien years later:
+(a) still be alive
+(b) be dead but not a zombie
+[7]
+[Total 18]
+END OF PAPER
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+Subject CT4 (Models) – September 2012 – Examiners’ Report
+Page 17
+10
+(i)
+(ii) Let the states be labelled as follows:
+Alive, A
+Dead from illness, I
+Dead from sacrifice, C
+Zombie, Z
+Let the number of transitions observed between states i and j be dij
+and let the transition rate between states i and j be μij .
+Let the observed waiting time in state i be vi
+The likelihood of the data can be written as follows:
+exp[( ) ]exp( ) exp( )( ) ( ) ( ) ( ) L ∝ −μAI − μAC vA −μCZ vC −μIZ vI μAI d AI μAC d AC μCZ dCZ μIZ d IZ
+(iii) Taking logarithms of the likelihood we have:
+log AI A AI log( AI ) terms not depending on AI
+e L = −μ v + d μ + μ .
+Differentiating this with respect to μAI gives:
+(log ) AI
+e A
+AI AI
+d L v d
+d
+= − +
+μ μ
+,
+and setting the derivative equal to zero produces the maximum likelihood estimate of
+μAI :
+ˆ
+AI
+AI
+A
+d
+v
+μ = .
+μCZ
+μAC μIZ
+μAI
+Dead from illness
+Alive
+Zombie
+Dead from sacrifice
+Subject CT4 (Models) – September 2012 – Examiners’ Report
+Page 18
+This is a maximum as the second derivative
+2
+2 2
+(log )
+( ) ( )
+AI
+e
+AI AI
+d L d
+d
+= −
+μ μ
+is necessarily negative.
+(iv) Using the census formula, we estimate vA as follows
+0.5( 0 10 ) 0.5(3,189 2,811) 3,000 vA = P + P = + = .
+assuming the population of aliens varies linearly over the ten years between the
+censuses.
+The estimated annual death rate from illness is therefore
+369 0.123
+3000
+= ,
+and the estimated rate of death through sacrifice over the ten years is
+231 0.077.
+3000
+=
+(v) (a) The probability that an alien is still alive in ten years’ time
+is given by the formula
+10
+10
+0
+AA exp ( AI AC ) exp[ (0.077 0.123)10]
+px du
+⎡ ⎤
+= ⎢− μ + μ ⎥ = − +
+⎢⎣ ⎥⎦
+∫
+= exp(−2) = 0.135.
+(b) Since we are only interested in whether the alien is dead, not what cause (s)he
+died from,
+and since the rate at which aliens become zombies does not depend on cause
+of death, we can combine the two states “Dead from illness” and “Dead from
+sacrifice”, into a single state “Dead”.
+For an alien to be Dead in 10 years time (s)he must have survived for u
+alien years (0 < u < 10), died at time u, and then survived in the Dead state (i.e.
+not become a Zombie) for a duration equal to 10-u alien years.
+Subject CT4 (Models) – September 2012 – Examiners’ Report
+Page 19
+The probability density of this happening for any given value of u is
+exp [−0.2u] survival Alive for a period u
+×
+0.2 du (here we ignore o(du))
+×
+exp[−0.1(10−u)] survival Dead for a period 10 – u
+which is
+0.2*exp[−(1+ 0.1u)]du = 0.2*exp(−1) exp(−0.1u)du
+= 0.0736exp(−0.1u)du
+The required probability is obtained by integrating this expression over
+all values of u from 0 to 10.
+This is
+[ ]
+10
+10
+0
+0
+0.0736exp( 0.1 ) 0.0736 exp( 0.1 )
+0.1
+− u du = − u
+∫ −
+= 0.0736 [1 0.3678)] 0.465
+0.1
+− =
+Parts (i), (ii) and (iii) of this question were well answered by most candidates, but there were
+few good attempts at parts (iv), (v) and (vi). A minority of candidates produced an
+alternative transition diagram in part (i) as follows:
+μDZ
+μSH
+μ μCZ HD μSD
+μHS
+Sick
+Healthy
+Zombie
+Dead
+Subject CT4 (Models) – September 2012 – Examiners’ Report
+Page 20
+Full credit was given for this, and for answers to parts (ii) and (iii) which were consistent
+with it. In part (iii) some candidates derived the maximum likelihood estimate by applying
+the correct method to the wrong transition. In part (v)(b) it was possible to write the integral
+as follows:
+( ) ( )
+10
+0
+∫exp[−0.2 10 − w ]*0.2*exp −0.1w dw.
+The evaluation is:
+( ) ( )
+10
+0
+0.2* ∫ exp −2 + 0.2w exp −0.1w dw
+= ( )
+10
+0
+0.2∫ exp −2 + 0.1w dw
+= ( )
+10
+0
+0.2exp(−2)∫ exp 0.1w dw
+= 0.2 exp( 2)[exp(1) exp(0)]
+0.1
+− −
+=2*0.1353*(2.718−1) = 0.465
+END OF EXAMINERS’ REPORT
+Subject CT4 (Models) – September 2012 – Examiners’ Report
+Page 17
+10
+(i)
+(ii) Let the states be labelled as follows:
+Alive, A
+Dead from illness, I
+Dead from sacrifice, C
+Zombie, Z
+Let the number of transitions observed between states i and j be dij
+and let the transition rate between states i and j be μij .
+Let the observed waiting time in state i be vi
+The likelihood of the data can be written as follows:
+exp[( ) ]exp( ) exp( )( ) ( ) ( ) ( ) L ∝ −μAI − μAC vA −μCZ vC −μIZ vI μAI d AI μAC d AC μCZ dCZ μIZ d IZ
+(iii) Taking logarithms of the likelihood we have:
+log AI A AI log( AI ) terms not depending on AI
+e L = −μ v + d μ + μ .
+Differentiating this with respect to μAI gives:
+(log ) AI
+e A
+AI AI
+d L v d
+d
+= − +
+μ μ
+,
+and setting the derivative equal to zero produces the maximum likelihood estimate of
+μAI :
+ˆ
+AI
+AI
+A
+d
+v
+μ = .
+μCZ
+μAC μIZ
+μAI
+Dead from illness
+Alive
+Zombie
+Dead from sacrifice
+Subject CT4 (Models) – September 2012 – Examiners’ Report
+Page 18
+This is a maximum as the second derivative
+2
+2 2
+(log )
+( ) ( )
+AI
+e
+AI AI
+d L d
+d
+= −
+μ μ
+is necessarily negative.
+(iv) Using the census formula, we estimate vA as follows
+0.5( 0 10 ) 0.5(3,189 2,811) 3,000 vA = P + P = + = .
+assuming the population of aliens varies linearly over the ten years between the
+censuses.
+The estimated annual death rate from illness is therefore
+369 0.123
+3000
+= ,
+and the estimated rate of death through sacrifice over the ten years is
+231 0.077.
+3000
+=
+(v) (a) The probability that an alien is still alive in ten years’ time
+is given by the formula
+10
+10
+0
+AA exp ( AI AC ) exp[ (0.077 0.123)10]
+px du
+⎡ ⎤
+= ⎢− μ + μ ⎥ = − +
+⎢⎣ ⎥⎦
+∫
+= exp(−2) = 0.135.
+(b) Since we are only interested in whether the alien is dead, not what cause (s)he
+died from,
+and since the rate at which aliens become zombies does not depend on cause
+of death, we can combine the two states “Dead from illness” and “Dead from
+sacrifice”, into a single state “Dead”.
+For an alien to be Dead in 10 years time (s)he must have survived for u
+alien years (0 < u < 10), died at time u, and then survived in the Dead state (i.e.
+not become a Zombie) for a duration equal to 10-u alien years.
+Subject CT4 (Models) – September 2012 – Examiners’ Report
+Page 19
+The probability density of this happening for any given value of u is
+exp [−0.2u] survival Alive for a period u
+×
+0.2 du (here we ignore o(du))
+×
+exp[−0.1(10−u)] survival Dead for a period 10 – u
+which is
+0.2*exp[−(1+ 0.1u)]du = 0.2*exp(−1) exp(−0.1u)du
+= 0.0736exp(−0.1u)du
+The required probability is obtained by integrating this expression over
+all values of u from 0 to 10.
+This is
+[ ]
+10
+10
+0
+0
+0.0736exp( 0.1 ) 0.0736 exp( 0.1 )
+0.1
+− u du = − u
+∫ −
+= 0.0736 [1 0.3678)] 0.465
+0.1
+− =
+Parts (i), (ii) and (iii) of this question were well answered by most candidates, but there were
+few good attempts at parts (iv), (v) and (vi). A minority of candidates produced an
+alternative transition diagram in part (i) as follows:
+μDZ
+μSH
+μ μCZ HD μSD
+μHS
+Sick
+Healthy
+Zombie
+Dead
+Subject CT4 (Models) – September 2012 – Examiners’ Report
+Page 20
+Full credit was given for this, and for answers to parts (ii) and (iii) which were consistent
+with it. In part (iii) some candidates derived the maximum likelihood estimate by applying
+the correct method to the wrong transition. In part (v)(b) it was possible to write the integral
+as follows:
+( ) ( )
+10
+0
+∫exp[−0.2 10 − w ]*0.2*exp −0.1w dw.
+The evaluation is:
+( ) ( )
+10
+0
+0.2* ∫ exp −2 + 0.2w exp −0.1w dw
+= ( )
+10
+0
+0.2∫ exp −2 + 0.1w dw
+= ( )
+10
+0
+0.2exp(−2)∫ exp 0.1w dw
+= 0.2 exp( 2)[exp(1) exp(0)]
+0.1
+− −
+=2*0.1353*(2.718−1) = 0.465
+END OF EXAMINERS’ REPORT
