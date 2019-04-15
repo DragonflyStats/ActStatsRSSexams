@@ -1,0 +1,140 @@
+7 The volatility of equity prices is classified as being High (H) or Low (L) according to
+whether it is above or below a particular level. The volatility status is assumed to
+follow a Markov jump process with constant transition rates ϕLH = μ and ϕHL = ρ.
+(i) Write down the generator matrix of the Markov jump process. 
+(ii) State the distribution of holding times in each state. 
+A history of equity price volatility is available over a representative time period.
+(iii) Explain how the parameters μ and ρ can be estimated. 
+Let ij
+t ps be the probability that the process is in state j at time s+t given that it was in
+state i at time s (i, j = H, L), where t ≥ 0. Let
+__
+ii
+t ps be the probability that the process
+remains in state i from time s to time s+t .
+CT4 S2012–5 PLEASE TURN OVER
+(iv) Write down Kolmogorov’s forward equations for LL
+t Ps
+t
+∂
+∂
+, LL
+t Ps
+t
+∂
+∂
+and
+LH
+t Ps
+t
+∂
+∂
+. 
+Equity price volatility is Low at time zero.
+(v) Derive an expression for the time after which there is a greater than 50%
+chance of having experienced a period of high equity price volatility. 
+(vi) Solve the Kolmogorov equation to obtain an expression for 0
+LL
+t P . 
+[Total 12]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+
+7
+(i) With state space {L, H} we have generator matrix
+A
+⎛ −μ μ ⎞
+= ⎜ ⎟ ⎝ ρ −ρ⎠
+(ii) The holding times are exponentially distributed with parameter μ in state L and ρ in
+state H.
+(iii) EITHER
+The time spent in state L before the next visit to H has mean 1/μ.
+Therefore a reasonable estimate for μ is the reciprocal of the mean length of each
+visit:
+= (Number of transitions from L to H) / (Total time spent in state L)
+Similarly estimate for ρ is the reciprocal of the mean length of each visit:
+= (Number of transitions from H to L) / (Total time spent in state H)
+OR
+Using the maximum likelihood estimator for μ, we have:
+(Number of transitions from L to H)/Total time spent in state L).
+Similarly, the MLE of ρ is
+(Number of transitions from H to L)/Total time spent in state H).
+(iv) LL LL
+t Ps t Ps
+t
+∂
+= −μ
+∂
+LL LL LH
+t Ps t Ps t Ps
+t
+∂
+= −μ + ρ
+∂
+LH LL LH
+t Ps t Ps t Ps
+t
+∂
+= μ − ρ
+∂
+(v) LL LL
+t Ps t Ps
+t
+∂
+= −μ
+∂
+so 0LL exp( )
+t P = −μt
+Subject CT4 (Models) – September 2012 – Examiners’ Report
+Page 12
+Looking for time when 0LL 1/ 2
+t P =
+1/ 2 = exp(−μT )
+T = ln(2) / μ
+(vi) Observe that 0LL 0LH 1
+t P + t P =
+so, substituting, we have
+0LL 0LL (1 0LL )
+t P t P t P
+t
+∂
+= −μ + ρ −
+∂
+exp(( ) ) 0LL exp(( ) )
+t t P t
+t
+∂ ⎡ ⎤ ⎣ μ + ρ ⎦ = ρ μ + ρ ∂
+exp(( ) ) 0LL exp(( ) ) constant
+t t P t
+ρ
+μ + ρ = μ + ρ +
+μ + ρ
+And in state L at time zero so const
+μ
+=
+μ + ρ
+0LL exp( ( ) )
+tP t
+ρ μ
+= + −μ+ρ
+μ + ρ μ + ρ
+Few candidates scored highly on this question. In particular, very few made a serious
+attempt at parts (v) and (vi). In part (iv), there was confusion among some candidates
+between 0
+LL
+t p and 0
+LL
+t p
+−−
+and
+a common error was to write down LL exp( ).
+t Ps t
+t
+∂
+= −μ
+∂
+Many candidates did not attempt part (v) even though is is relatively straightforward.
+In part (vi) working through with tP0
+LH then at the end taking one minus the answer is a valid
+approach .
+
