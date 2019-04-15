@@ -1,0 +1,230 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+11
+An energy provider is worried about the number of its customers who transfer to other
+companies within the first two years of their contract and is trying to direct its
+advertising towards the most loyal section of the population.
+The company has looked at its records over recent years and has fitted a Cox
+proportional hazards model to those who have transferred within the first two years
+using the factors which appear to have the most impact on early transfer rates.
+The following figures have been derived from the data:
+Factor
+Gender
+Volume of energy
+consumed
+Area of Residence
+Male
+Female
+High
+Low
+City Centre
+City (not centre)
+Rural
+Parameter
+Estimate
+0.25
+0
+0.32
+0
+0.19
+0
+0.35
+Variance
+0.015
+0
+0.008
+0
+0.012
+0
+0.005
+(i) Give the hazard function for this Cox proportional hazard model defining all
+the terms and covariates.
+
+(ii) State the features of the person to whom the baseline hazard applies.
+(iii) Calculate symmetric 95% confidence intervals for the parameters based on the
+standard errors.
+
+(iv) Test the suggestion that women change energy providers more frequently than
+men.
+
+
+There is a 70% probability that a male customer who is a low consumer of energy and
+lives in a rural area has transferred providers before the end of two years.
+(v) Calculate the probability that a male customer who is a high consumer of
+energy and lives in a city centre remains with the company for at least two
+years.
+
+(vi) Set out how you would determine whether the effect of any of the factors
+depends upon any of the other factors.
+
+[Total 17]
+END OF PAPER
+%%  ---  CT4 A2016–9
+
+
+
+Q11 (i)
+h ( t , z i ) = h 0 ( t ) exp ( \beta_ 1 z 1 + \beta_ 2 z 2 + \beta_ 3 z 3 + \beta_ 4 z 4 ) , where 
+h(t, z i ) is the hazard at time t; 
+h 0 (t) is the baseline hazard; 
+\beta_ 1 ... \beta_ 4 are regression parameters; 
+z 1 is a covariate which takes the value 1 if the client is Male, 0 otherwise;
+z 2 is a covariate which takes the value 1 if energy consumption is high, 0
+otherwise;
+z 3 is a covariate which takes the value 1 if the area of residence is City Centre,
+0 otherwise; and
+z 4 is a covariate which takes the value 1 if the area of residence is Rural, 0
+otherwise.
+
+[Max 3]
+(ii) The baseline hazard refers to a female with low energy consumption who lives
+in a city but not in the city centre.
+[Total 1]
+(iii) The 95% confidence interval for \beta_ is \beta_ ± 1.96 Var( \beta_ ) so the intervals are:
+Male
+Female
+High consumption
+Low consumption
+City Centre
+City (not centre)
+Rural
+−0.4900, −0.0100
+0
+0.1447, 0.4953
+0
+−0.0247, 0.4047
+0
+−0.4886, −0.2114
+[1⁄2 for each correct interval]
+%% --- Page 24
+[Max 2]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5(Models Core Technical) – April 2016 – Examiners’ Report
+(iv)
+The parameter associated with males is −0.25 so for two otherwise identical
+clients, the transfer rates for males is exp (−0.25) = 0.7788
+OR
+The hazard ratio between the transfer rates for women and men is
+1/exp(−0.25) =1.284.
+
+Therefore women do seem to transfer more than men (or men less than
+women).
+
+The 95% confidence interval for the parameter does not span zero
+OR
+the z-score for the parameter is 0.25/√0.015 = 2.04, and this is greater than
+1.96.
+
+So at the 95% confidence level we can state that women do switch providers
+more frequently than men.
+
+[Total 3]
+(v)
+ALTERNATIVE 1
+For the rural male, the probability that he has transferred is 0.7, the sum of the
+
+parameters is −0.25 + 0 − 0.35 = –0.6 and the hazard is h 0 ( t ) exp( − 0.6) .
+So the probability that the contract is still in force is
+2
+  2
+ 
+ 
+ 
+0.3 = exp  −  h 0 ( t ) exp( − 0.6) dt  = exp  − 0.5488  h 0 ( t ) dt  .
+  0
+ 
+ 
+0
+ 
+2
+So
+ln 0.3
+ h 0 ( t ) dt = 0.5488
+
+
+0
+For the City Centre male, the sum of the parameters is 0.26. 
+  2
+ 
+ln 0.3 
+
+So we want exp  −  h 0 ( t ) exp(0.26) dt  = exp  − 1.2969*
+
+0.5488 
+
+  0
+  
+= 0.058124. 
+OR ALTERNATIVE 2
+{ 0.3 }
+e 0.6
+e 0.26
+= 0.058124,
+= 0.3 e
+0.86
+[21⁄2]
+
+%% --- Page 25%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5(Models Core Technical) – April 2016 – Examiners’ Report
+which is the probability that he is still with the company.
+[Max 3]
+(vi)
+For each pair of covariates z i and z j :
+
+fit a model with the original covariates plus the interaction between the pair as
+an extra covariate.
+OR
+fit a model with the original covariates and a term z i * z j .
+
+If the log-likelihood for each of the models are L original and L with interaction , 
+then the test statistic is −2(L original − L with interaction ). 
+The null hypothesis is that the parameter for the interaction term is zero. 
+The test statistic has a chi-squared distribution with one degree of freedom. 
+If the test statistic is greater than 3.84 (at the 5% level of significance)
+OR
+If the 95% confidence interval around the interaction parameter does not
+include zero,
+
+we can reject the null hypothesis and conclude that the interaction term is
+needed.
+
+[Max 5]
+[TOTAL 17]
+Most candidates successfully wrote down the equation in part (i) and defined
+the covariates. Most candidates also correctly identified the characteristics of
+the person whose hazard was equal to the baseline in part (ii). Common
+errors in part (iii) were failure to multiply by 1.96 or to take the square root of
+the variance. Parts (iv) and (v) were disappointingly answered. In part (vi)
+several candidates knew that a likelihood ratio test was required but were
+rather vague about the details. These candidates were given limited credit.
+END OF EXAMINERS’ REPORT
+%% --- Page 26
