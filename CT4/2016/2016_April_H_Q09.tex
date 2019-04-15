@@ -1,0 +1,288 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%% --- Page}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+9
+Orange trees are susceptible to the disease Citrus Greening. There is no known cure
+for this disease and, although trees often survive for some time with the disease, it can
+ultimately be fatal.
+A researcher decides to model the progression of the disease using a time-
+homogeneous continuous-time Markov model with the following state space:
+{Healthy (i.e. not infected with Citrus Greening);
+Infected with Citrus Greening;
+Dead (caused by Citrus Greening);
+Dead (other causes)}.
+The researcher chooses to label the transition rate parameters as follows:
+
+
+
+
+a mortality rate from the Healthy state, 
+a rate of infection with Citrus Greening, 
+a total mortality rate from the Infected state, 
+a mortality rate caused by Citrus Greening, 
+(i) Draw a transition diagram for the chosen model, including the transition rates.
+
+(ii) Determine Kolmogorov’s forward equations governing the transitions,
+specifying the generator matrix.
+
+Infected trees display clear symptoms of the disease. This has enabled the researcher
+to record the following data on trees in the area of his study:
+Tree-months in Healthy State
+1,200
+Tree-months in Infected State
+600
+Total number of deaths of trees
+40
+Number of deaths of Healthy trees
+10
+Number of deaths from Citrus Greening
+30
+(iii) Give the likelihood of these data. 
+(iv) Derive the maximum likelihood estimator of the mortality rate caused by
+Citrus Greening, . 
+(v)
+%%  ---  CT4 A2016–7
+Estimate .
+
+[Total 12]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Q9
+(i)
+σ
+Infected
+Healthy
+\tau
+Dead
+(Citrus
+Greening)
+ρ – \tau
+μ
+Dead
+(other
+causes)
+[Total 2]
+(ii)
+Forward equations are:
+d
+P ( t ) = P ( t ) A ,
+dt
+
+where A is the generator matrix:
+μ 
+ −σ − μ σ 0
+
+
+−ρ \tau ρ − \tau 
+0
+A = 
+,
+ 0
+0 0
+0 
+
+
+0 0
+0 
+ 0
+with the order of states being
+{Healthy, Infected, Dead (caused by Citrus Greening),
+Dead (other causes)}.
+%% --- Page 18
+[11⁄2]
+
+[Total 3]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5(Models Core Technical) – April 2016 – Examiners’ Report
+(iii)
+ALTERNATIVE 1
+To estimate \tau we re-parameterise so that a new parameter ξ = ρ − \tau is the death
+rate from other causes of infected trees.
+
+The likelihood of the data can then be written
+L ∝ exp  ( −μ − σ ) ν H  exp  ( −ξ − \tau ) ν I  ( σ ) d
+
+
+
+
+HI
+( μ ) d
+HDOC
+( \tau ) d
+IDCG
+( ξ ) d
+IDOC
+
+where v H and v I are the waiting times in the Healthy and Infected states
+respectively,
+d HI is the number of transitions from Healthy to Infected,
+d HDOC is the number of transitions from Healthy to Dead from Other Causes
+d IDCG is the number of transitions from Infected to Dead from Citrus
+Greening
+and d IDOC is the number of transitions from Infected to Dead from Other
+Causes.
+
+OR ALTERNATIVE 2
+L ∝ exp  ( −μ − σ ) ν H  exp  −\tau − ( ρ − \tau ) ν I  ( σ ) d
+
+
+
+
+HI
+( μ ) d
+HDOC
+( \tau ) d
+IDCG
+( ρ − \tau ) d
+IDOC
+
+which equals
+L ∝ exp  ( −μ − σ ) ν H  exp  −ρν I  ( σ ) d
+
+
+
+
+HI
+( μ ) d
+HDOC
+( \tau ) d
+IDCG
+( ρ − \tau ) d
+IDOC
+,
+
+where v H and v I are the waiting times in the Healthy and Infected states
+respectively,
+d HI is the number of transitions from Healthy to Infected,
+d HDOC is the number of transitions from Healthy to Dead from Other Causes
+d IDCG is the number of transitions from Infected to Dead from Citrus
+Greening
+%% --- Page 19
+,%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5(Models Core Technical) – April 2016 – Examiners’ Report
+and d IDOC is the number of transitions from Infected to Dead from Other
+Causes.
+
+OR ALTERNATIVE 3
+Since we have 40 deaths in total, 10 of healthy trees and 30 from Citrus
+Greening, then no infected tree dies from a cause other than Citrus Greening.
+
+Hence ρ = \tau and the likelihood of the data can be written
+L ∝ exp [ 1200( −μ − σ ) ] exp [ − 600 \tau ) ] ( σ ) d
+HI
+( μ ) 10 ( \tau ) 30 ,
+
+where
+d HI is the number of transitions from Healthy to Infected.
+(iv)
+
+[Max 3]
+Taking logarithms of the likelihood we have:
+log e L = −\tauν I + d IDCG log e ( \tau ) + terms not dependent on \tau.
+
+Partially differentiating with respect to \tau gives:
+d (log e L )
+d IDCG
+I
+= −ν +
+.
+\tau
+d \tau 
+Setting the derivative to zero 
+we obtain the maximum likelihood estimator:
+\tau ˆ =
+d IDCG
+ν I
+.
+
+The second derivative of the log likelihood is
+d 2 (log e L )
+( d \tau ) 2
+=−
+d IDCG
+( \tau ) 2
+,
+which is negative, so this is a maximum.
+%% --- Page 20
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5(Models Core Technical) – April 2016 – Examiners’ Report
+OR ALTERNATIVE 2
+Taking logarithms of the likelihood we have:
+log e L = d IDCG log e ( \tau ) + d IDOC log e ( ρ − \tau ) + terms not dependent on \tau.
+
+Partially differentiating with respect to \tau gives:
+d (log e L ) d IDCG d IDOC
+=
+−
+.
+d \tau
+\tau
+ρ−\tau 
+Setting the derivative to zero 
+we obtain the maximum likelihood estimator:
+\tau ˆ =
+ρ d IDCG
+d IDOC + d IDCG
+.
+
+The second derivative of the log likelihood:
+d 2 (log e L )
+( d \tau ) 2
+=−
+d IDCG
+( \tau ) 2
+−
+d IDOC
+( ρ − \tau ) 2
+,
+
+is negative, therefore this is a maximum.
+(v)
+30/600 = 0.05 (per tree-month).
+
+[Max 3]
+[Total 1]
+[TOTAL 12]
+Several candidates tried to write the Kolmogorov equations in part (ii) in
+component form. Credit was given for this if the resulting equations were
+correct. ALTERNATIVE 1 in part (iv) follows from ALTERNATIVES 1 and 3 in
+part (iii). ALTERNATIVE 2 in part (iv) follows from ALTERNATIVE 2 in part
+(iii). To obtain a numerical estimate of \tau from ALTERNATIVE 2 in part (iv) it
+was necessary also to differentiate the logarithm of the likelihood with respect
+to ρ, set this derivative to zero, and solve the resulting simultaneous
+equations. A few candidates did this, but it was not required for full credit.
+Credit was given in part (v) for the correct numerical answer even if this did
+not follow from the answers to previous sections.
+%% --- Page 21%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5(Models Core Technical) – April 2016 – Examiners’ Report
