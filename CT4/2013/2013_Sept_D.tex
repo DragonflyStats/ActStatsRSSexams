@@ -37,6 +37,80 @@ years.
 The Gompertz model is simple to understand and to apply, having only two
 parameters.
 It also fits human mortality at older ages well (e.g. 30–85 years).
+(i) The Gompertz model is simple to understand and to apply, having only two
+parameters.
+It also fits human mortality at older ages well (e.g. 30–85 years).
+(ii) loge \mu_{x}\;=\; \alpha \; + \;\beta_{0}x \; + \;\beta_1U \; + \;\beta_2I
+So \mu_{x}\;=\; \operatorname{exp}(\alpha \; + \;\beta_{0}x \; + \;\beta_1U \; + \;\beta_2I) \;=\; \operatorname{exp}(\beta_{0}x)\operatorname{exp}(\alpha \; + \;\beta_1U \; + \;\beta_2I)
+This is equal to $Bc^x$ where B \;=\; \operatorname{exp}(\alpha \; + \;\beta_1U \; + \;\beta_2I) and c = exp ß0, hence Gompertz.
+\mu_{x}\;=\; \operatorname{exp}(\alpha \; + \;\beta_{0}x \; + \;\beta_1U \; + \;\beta_2I) \;=\; \operatorname{exp}(\alpha \; + \;\beta_{0}x)\operatorname{exp}(\beta_1U \; + \;\beta_2I)
+
+
+EITHER
+Hence the force of mortality factorises into a term \operatorname{exp}(a+\beta_0x) depending
+on age x but not the covariates, and a term \operatorname{exp}(\beta_1U + \beta_2I) depending on
+the covariates but not x, SO proportional hazards.
+OR
+Consider any two individuals, i and j, with values of the covariates U_{i} and Ii,
+and U_{j} and Ij respectively. Then the hazards for individuals i and j at age x are
+\mu_{x,i} \;=\; \operatorname{exp}(\alpha\;+\;\beta_0x)\operatorname{exp}(\beta_1U_{i} + \beta_2Ii )
+and
+\mu_{x, j} \;=\; \operatorname{exp}(\alpha\;+\;\beta_0x)\operatorname{exp}(\beta_1U_{j} + \beta_2I j )
+The ratio between the hazards is thus
+
+\begin{eqnarray*}
+\frac{\mu_{x,i} }{  \mu_{x, j} } &=& 
+\frac{\operatorname{exp}(\alpha\;+\;\beta_0x)\operatorname{exp}(\beta_1U_{i} + \beta_2Ii )
+}{\operatorname{exp}(\alpha\;+\;\beta_0x)\operatorname{exp}(\beta_1U_{j} + \beta_2I j )} \\
+ &=& \frac{\operatorname{exp}(\beta_1U_{i} + \beta_2Ii )  }{\operatorname{exp}(\beta_1U_{j} + \beta_2I j )}} \\
+\end{eqnarray*}
+
+
+which does not depend on $x$, hence proportional hazards.
+(iii) \[\log_e \mu_40 \;=\; -9+ 0.09(40) + 0.3- 0.0001(20,000) \;=\; -7.1\]
+so $\mu_{40} = 0.000825$.
+(iv) ${ \displaystyle \mu_x \;=\; \operatorname{exp}(\alpha\;+\;\beta_0x + \beta_1U + \beta_2I)}$
+
+Let the income of the urban resident be IU and that of the rural resident be IR.
+
+\[\operatorname{exp}( \alpha) \operatorname{exp}(\beta_0x ) \operatorname{exp}( \beta_1U + \beta_2I) =  \operatorname{exp}(\alpha ) \operatorname{exp}(\beta_0x ) \operatorname{exp}(\beta_2_R )\]
+
+
+\[\operatorname{exp}( \beta_1U + \beta_2I) =   \operatorname{exp}(\beta_2_R )\]
+
+
+\[\operatorname{exp}(0.3 -  0.0001 I_U ) = \operatorname{exp}( -0.0001 I_R )\]
+\[0.3 - 0.0001I_U = -0.0001 I_R\]
+
+\[3000 = I_U -I_R\]
+So the difference is \$3,000.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Survival probability is
+\begin{eqnarray*}
+exp \left( - \left[ \frac{e^{0.09s}}{0.09} \right]^{50}_{40} e^{-9} e^{0.3} e{-0.0001(20,000)}\\ 
+&=& exp \left ( \frac{0.00002254(90.017 \;-\; 36.598)}{0.09} \right)\\ 
+&=& exp(-0.01338) \\ 
+&=& 0.9867.\\
+\end{eqnarray*}
+
+(vi) Since 
+
+\[ S_x(t) =  exp \left[ -\int^{x+t}_{x} \mu_s ds \right]  ,\]
+then if the rural resident is $a$ years older than the urban resident we have
+
+
+\[  exp \left[ -\int^{x+t}_{x} e^{0.09s}e^{\alpha}e^{\beta_1}e^{\beta_2I} ds \right]  ,\]
+ = 
+exp \left[ -\int^{x+a+t}_{x+a} e^{0.09s}e^{\alpha}e^{\beta_1}e^{\beta_2I} ds \right]  ,\]
+\]
+Therefore
+
+\[ e^{\alpha}e^{\beta_2I} \int^{x+a+t}_{x+a} e^{0.09s}ds = 
+e^{\alpha}e^{\beta_2I} \int^{x+t}_{x} e^{\beta_1} e^{0.09s}ds 
+\]
+\newpage
 (ii)
 log e  x     0 x   1 U  2 I
 So  x  exp(    0 x  1 U   2 I )  exp(  0 x )exp(   1 U   2 I )
