@@ -1,0 +1,123 @@
+5 A no claims discount system operates with three levels of discount, 0%, 15% and
+40%. If a policyholder makes no claim during the year he moves up a level of
+discount (or remains at the maximum level). If he makes one claim during the year he
+moves down one level of discount (or remains at the minimum level) and if he makes
+two or more claims he moves down to, or remains at, the minimum level.
+The probability for each policyholder of making two or more claims in a year is 25%
+of the probability of making only one claim.
+The long-term probability of being at the 15% level is the same as the long-term
+probability of being at the 40% level.
+(i) Derive the probability of a policyholder making only one claim in a given
+year. 
+(ii) Determine the probability that a policyholder at the 0% level this year will be
+at the 40% level after three years. 
+(iii) Estimate the probability that a policyholder at the 0% level this year will be at
+the 40% level after 20 years, without calculating the associated transition
+matrix. [3]
+[Total 9]
+CT4 S2012-4
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+5
+(i) Let 5
+4
+x = c
+where c is the probability of exactly one claim in a year and x is the probability of one
+or more claims in a year.
+The transition matrix is
+1 0
+0 1
+1
+4
+x x
+x x
+c c x
+??? ???
+??? ??? ???
+??? ???
+??? ??? ???
+??? ???
+??? ??? ???
+??? ???
+Using ?? = ??P we get
+1 1 2 4 3
+?? = x?? + x?? + c ??
+??2 = (1??? x)??1 + c??3
+??3 = (1??? x)??2 + (1??? x)??3
+The equation for ??3 gives
+??2 (1??? x) = ??3 {1??? (1??? x)} = ??3x
+2 31
+x
+x
+?? = ??
+???
+Subject CT4 (Models) - September 2012 - Examiners' Report
+Page 8
+So x = 1 ??? x from which x = 0.5 and c = 0.4
+So the probability of exactly one claim in any given year is 0.4.
+(ii) EITHER
+Using the transition matrix
+M =
+0.5 0.5 0
+0.5 0 0.5
+0.1 0.4 0.5
+??? ???
+??? ???
+??? ???
+??? ???
+??? ???
+2
+0.5 0.5 0 0.5 0.5 0 0.5 0.25 0.25
+= 0.5 0 0.5 0.5 0 0.5 0.3 0.45 0.25
+0.1 0.4 0.5 0.1 0.4 0.5 0.3 0.25 0.45
+M
+??? ?????? ??? ??? ???
+??? ?????? ??? = ??? ??? ??? ?????? ??? ??? ???
+??? ?????? ??? ??? ???
+??? ?????? ??? ??? ???
+The required probability is therefore
+(0.5 × 0.25) + (0.5 × 0.25) + (0 × 0.45) = 0.25
+OR
+We require the probability of no claims in either of years 2 and 3 (since only this will
+leave the policyholder at the 40% level at the end of year 3).
+The probability of one or more claims is 0.5 (from the solution to part (i)).
+So the probability of no claims is 0.5, and the probability of no claims in years 2 and 3
+is 0.5 × 0.5 = 0.25.
+(iii) After 20 years the probabilities of being at any level will be close to the
+stationary probability distribution
+From part (i) we know that 2 3 ?? =?? .
+Using ?? = ??P we get
+1 2 3 1 0.5?? + 0.5?? + 0.1?? =?? ,
+so 2 1
+5
+6
+?? = ?? .
+Since 1 2 3 1 ?? +?? +?? = , +½
+we have 1
+3
+8
+?? = , 2 3
+5
+16
+?? =?? = .
+Subject CT4 (Models) - September 2012 - Examiners' Report
+Page 9
+So the probability of being at the 40% level after 20 years is estimated as 0.3125.
+This question proved more difficult for candidates that the Examiners had envisaged, and
+answers were disappointing. Various alternative specifications of the matrix in part (i) were
+acceptable. In all three parts of this question some indication of how each result was
+obtained was required. Candidates who just wrote down the numerical answers did not
+score full credit. The solution to part (ii) could be found by drawing a diagram and tracing
+the possible routes through: this is perfectly valid and is arguably the quickest way to the
+correct answer. In part (iii) some indication that the answer is an estimate was required.
+This could be provided by saying, for example, that after 20 years the probabilities of being
+at any level will be close to the stationary probability distribution.
+
+
+
+
+
+
+
+
+
