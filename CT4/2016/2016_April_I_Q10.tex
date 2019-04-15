@@ -1,0 +1,224 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%% --- Page}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+PLEASE TURN OVER10
+In a small country there are only four authorised insurance companies, A, B, C and D.
+The law in this country requires homeowners to take out buildings insurance from an
+authorised insurance company. All policies provide cover for a period of one year.
+Based on analysis of the compliance database used to check that every home is
+insured, the probabilities of a homeowner transferring between the four companies at
+the end of each year are considered to be described by the following transition matrix:
+A  0 . 5
+
+B  0 . 2
+C  0 . 3
+
+D   0
+0 . 2
+0 . 6
+0 . 2
+0 . 2
+0 . 2
+0 . 1
+0 . 4
+0 . 2
+0 . 1 
+
+0 . 1 
+0 . 1 
+
+0 . 6  
+Yolanda has just bought her policy from Company C for the first time.
+(i)
+Calculate the probability that Yolanda will be covered by Company C for at
+least five years before she changes provider.
+
+Zachary took out a policy with Company A in January 2013. Unfortunately,
+Zachary’s house burnt down on 12 March 2015.
+(ii) Calculate the probability that Company A does NOT cover Zachary’s home at
+the time of the fire.
+
+(iii) Calculate the expected proportions of homeowners who are covered by each
+insurance company in the long run.
+
+Company A makes an offer to buy Company D. It bases its purchase price on the
+assumption that homeowners who would previously have purchased policies from
+Company A or Company D would now buy from the combined company, to be called
+Addda.
+(iv)
+(v)
+%%  ---  CT4 A2016–8
+Determine the transition matrix which will apply after the takeover if
+Company A’s assumption about homeowners’ behaviour is correct.
+Comment on the appropriateness of Company A’s assumption.
+
+
+[Total 12]
+
+
+Q10 (i)
+To provide cover for at least five years before she changes provider, Yolanda
+must renew her policy at least four times.
+
+The probability of renewing four times is 0.4 4 = 0.0256 (or 16/625).
+(ii)
+
+[Total 2]
+The company covering the house on 12 March 2015 will be that securing
+Zachary’s business at the second renewal.
+
+The second order transition matrix is:
+ 0 . 5
+
+ 0 . 2
+ 0 . 3
+
+ 0
+
+0 . 2
+0 . 6
+0 . 2
+0 . 2
+0 . 2
+0 . 1
+0 . 4
+0 . 2
+0 . 1   0 . 5
+ 
+0 . 1   0 . 2
+*
+0 . 1   0 . 3
+ 
+0 . 6     0
+0 . 2
+0 . 6
+0 . 2
+0 . 2
+0 . 2
+0 . 1
+0 . 4
+0 . 2
+0 . 1   0 . 35
+ 
+0 . 1   0 . 25
+=
+0 . 1   0 . 31
+ 
+0 . 6     0 . 1
+0 . 28
+0 . 44
+0 . 28
+0 . 28
+0 . 22 0 . 15 
+
+0 . 16 0 . 15 
+0 . 26 0 . 15 
+
+0 . 22 0 . 4  
+
+So the probability of being with Company A is 0.35,
+and hence the probability of not being with Company A is 0.65.
+(iii)
+The long run probabilities satisfy
+\piP = \pi
+
+0.5\pi A + 0.2\pi B + 0.3\pi C = \pi A (1) 0.2\pi A + 0.6\pi B + 0.2\pi C + 0.2\pi D = \pi B (2) 0.2\pi A + 0.1\pi B + 0.4\pi C + 0.2\pi D = \pi C (3) 0.1\pi A + 0.1\pi B + 0.1\pi C + 0.6\pi D = \pi D (4) 
+and \pi A + \pi B + \pi C + \pi D = 1. (5) 
+(4) gives (using (5))
+0.1\pi A + 0.1\pi B + 0.1\pi C + 0.1\pi D = 0.5\pi D = 0.1,
+so
+\pi D =
+%% --- Page 22
+
+[Total 2]
+1
+.
+5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5(Models Core Technical) – April 2016 – Examiners’ Report
+(3)–(2) gives
+0.5\pi B + 0.2\pi C = \pi C
+so \pi B =
+8
+\pi C .
+5
+(1) gives
+\pi A =
+31
+\pi C
+25
+ 31 40 
+so  + + 1  \pi C + 0.2 = 1.
+ 25 25 
+
+Hence \pi A = 31/120, \pi B = 1/3, \pi C = 5/24, and \pi D = 1/5.
+So the long run probabilities are 0.2583, 0.3333, 0.2083 and 0.2
+for companies A, B, C and D respectively.
+(iv)
+
+
+[Total 4]
+The matrix would be:
+Addda  0.6 0.2 0.2 
+
+
+B  0.3 0.6 0.1 
+C   0.4 0.2 0.4  
+[Total 2]
+(v)
+There may be reasons customers of Company D do not want to use
+Company A. 
+Observe that currently the rate of customers going from Company D to
+Company A is zero. 
+Addda might merge its pricing system. This would change the relative pricing
+of an individual’s cover from the different companies. To the extent that
+pricing is a driver of the likelihood of customers moving this might change the
+probabilities.
+
+To the extent that customer service is a driver, it is not clear what the customer
+service of Addda would be relative to Company A or Company D. This might
+change the probabilities.
+
+Reduction in competition might encourage a new entrant.
+
+%% --- Page 23%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5(Models Core Technical) – April 2016 – Examiners’ Report
+It might be a valid assumption that customer behaviour continues unaltered
+after the merger.
+
+[Max 2]
+[TOTAL 12]
+Answers to this question were disappointing, particularly parts (i) and (ii). In
+part (i), a very large number of candidates did not spot that five years’
+continuous cover with the same provides only requires the decision not to
+change to be made four times.
