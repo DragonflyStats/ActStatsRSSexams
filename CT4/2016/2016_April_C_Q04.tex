@@ -1,0 +1,203 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%% --- Page}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+The manager of a life insurance company wishes to revise the premiums for term
+assurance policies. He has asked a trainee to compare the latest mortality estimates
+from the Continuous Mortality Investigation (CMI) for ages 40–64 years inclusive
+with the estimates the company has been using in its premium calculations, using a
+95% significance level.
+The trainee says: “I've done the Signs Test and we just pass – one more positive sign
+and we would have failed!”.
+(i)
+Calculate the number of ages for which the company's mortality estimate was
+higher than that produced by the CMI.
+[3]
+Ten minutes later the trainee says: “ I tried the Grouping of Signs test and we just fail.
+We needed one more positive run!”.
+(ii)
+CT4 A2016–2
+Determine the number of runs of positive signs in the company’s data.
+[3]
+[Total 6]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+Q4
+(i)
+The null hypothesis is that the company’s schedule and that of the Continuous
+Mortality Investigation (CMI) are the same.
+
+THEN ALTERNATIVE 1
+With 25 ages we can use the Normal approximation.
+If p is the number of positive signs, a z-score can be computed as
+z =
+p − 12.5
+.
+6.25
+Hence
+p = 12.5 + ( 6.25) z .
+
+We reject the null hypothesis if the number of positive signs is too few OR too
+many such that z > 1.96 .
+
+This is true if p > 17.4 or if p < 7.6.
+%% --- Page 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5(Models Core Technical) – April 2016 – Examiners’ Report
+Since we are told by the trainee that one more positive sign would lead to
+“failure” (i.e. rejection of the null hypothesis)
+
+we must have 17 positive signs.
+
+OR ALTERNATIVE 2
+Define k* as the smallest value of k such that
+k
+ 25  25
+ 0.5 ≥ 0.025 .
+j 
+j = 0
+  
+We have
+7
+ 25  25
+ 0.5 = 0.000000 + 0.000001 + 0.000009 + 0.000069
+j
+
+j = 0
+  
++ 0.000377 + 0.001583 + 0.005278 + 0.014326 = 0.021643
+and
+8
+ 25  25 7  25  25
+   j   0.5 =    j   0.5 + 0.032233 = 0.053876 .
+j = 0
+j = 0
+
+We reject the null hypothesis if the number of positive signs is too few or too
+many.
+
+k* = 8, so we reject the null hypothesis if we have 7 or fewer positive signs, or
+if we have 18 or more positive signs.
+
+Since we are told by the trainee that one more positive sign would lead to
+“failure” (i.e. rejection of the null hypothesis),
+
+we must have 17 positive signs.
+
+[Max 3]
+(ii)
+With 17 positive signs we have 8 negative signs.
+
+The null hypothesis is that the company’s schedule and that of the CMI are the
+same
+
+THEN ALTERNATIVE 1
+Using the table on p. 189 of the Golden Book,
+the critical value is 3.
+
+
+The critical value gives the highest number of runs which is incompatible with
+the null hypothesis at the 95% level.
+
+%% --- Page 7%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5(Models Core Technical) – April 2016 – Examiners’ Report
+We reject the null hypothesis with 3 or fewer runs of positive signs.
+
+Since the trainee considered that with one more positive run we would not
+have rejected the null hypothesis, there must be 3 runs of positive signs. 
+OR ALTERNATIVE 2
+Using the formula we have
+ 16   9 
+  
+2 3
+(120)(84)
+for 3 positive runs,     =
+= 0.0093 << 0.05,
+1, 081,575
+ 25 
+ 
+ 17  
+ 16   9 
+  
+3 4
+(560)(126)
+and for 4 positive runs     =
+= 0.065 > 0.05.
+1, 081,575
+ 25 
+ 
+ 17  
+At the 95% level we reject the null hypothesis with 3 or fewer runs of positive
+signs but do not reject it with 4 or more runs.
+
+Since the trainee considered that with one more positive run we would not
+have rejected the null hypothesis, there must be 3 runs of positive signs. 
+OR ALTERNATIVE 3
+Using the Normal approximation we have
+ 17(9) [(17)(8)] 2 
+,
+Number of positive runs ~Normal  
+ , which is Normal(6.12,
+25 3  
+ 25
+1.18).
+
+z-scores for smaller numbers of positive runs are:
+5 positive runs: 5 − 6.12
+= − 1.031 ,
+1.18
+4 positive runs: 4 − 6.12
+= − 1.952 , and
+1.18
+3 positive runs: 3 − 6.12
+= − 2.872 .
+1.18
+Using a one-tailed test, we are looking for z = − 1.645 at the 95% level.
+%% --- Page 8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5(Models Core Technical) – April 2016 – Examiners’ Report
+We reject the null hypothesis with 4 or fewer runs of positive signs.
+
+Since the trainee considered that with one more positive run we would not
+have rejected the null hypothesis, there must be 4 runs of positive signs. 
+[Max 3]
+[TOTAL 6]
+This question tested a standard application using an unfamiliar context. In
+part (i) candidates divided into those who used their conceptual
+understanding to work out what was needed, and who scored close to full
+marks; and candidates who were unable to make much of an attempt. A
+common error was to use the “wrong end” of the distribution to produce the
+answer 7 positive runs. Most candidates who obtained a numerical answer to
+part (i) were able to use this to answer part (ii). Where candidates had an
+incorrect answer to part (i) full credit could still be gained for part (ii) if the
+answer to part (i) was followed through correctly.
