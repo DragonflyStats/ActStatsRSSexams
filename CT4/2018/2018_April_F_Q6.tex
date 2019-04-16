@@ -1,0 +1,194 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+PLEASE TURN OVER6
+The National Statistics Office of a small, low income country wants to estimate recent
+death rates. A death registration system has allowed the National Statistics Office to
+estimate deaths by age nearest birthday for the ten-year period 1 January 2005 –
+31 December 2014.
+Censuses of this country are infrequent. A successful census was completed on
+1 January 2015, but the previous reliable census was on 1 January 2002. Both
+censuses collected data on the population aged x last birthday by single years of age.
+(i)
+Explain why the National Statistics Office should adjust the age definition in
+the census data to correspond with that of the deaths data.
+
+Let the census population at age x last birthday on 1 January in year t be P x,t .
+(ii) Derive an expression, in terms of the P x,t , for the exposed to risk for the period
+covering the years 2005 to 2014 inclusive which the National Statistics Office
+could use to estimate the overall death rate at age x nearest birthday.
+[5]
+(iii) Set out any assumptions you make in your derivation in part (ii), indicating
+where in the derivation they are needed.
+
+The death registration system in this country is being maintained, but the next census
+is not planned until 2025.
+(iv)
+
+CT4 A2018–4
+Discuss how you might estimate death rates at age x nearest birthday for the
+calendar years 2015 and 2016.
+
+
+
+Q6
+(i)
+To ensure that they follow the principle of correspondence, 
+which states that a life alive time t should be included in the exposure
+at age x at time t if and only if, were that life to die immediately, he
+or she would be counted in the death data at age x. 
+The deaths data “carry most information” when mortality rates are small,
+so we adjust the census data not the deaths data.
+
+[Total for part (i): max. 2]
+Page 9
+(ii)
+*
+Let P x , t be the population in the census aged x nearest birthday at
+time t.
+
+Then
+=
+P x *, t
+1
+( P x , t + P x − 1, t ) .
+2
+
+The required exposed-to-risk is then given by
+t 2
+exposed-to-risk =
+10
+*
+*
+∫ P x , u du OR ∫ P x , u du
+t 1
+
+0
+Where t 1 and t 2 are the start and end times.
+We require the exposed to risk for a period in which t 1 = 2005 and
+t 2 = 2015. 
+Using the trapezium rule 
+we can approximate these exposed-to-risks as
+10 *
+( P x ,2005 + P x * ,2015 ) .
+2
+
+Applying the same rule for the inter-censal period 2002–2015 we have
+=
+P x * ,2005
+10 *
+3
+P x ,2002 + P x * ,2015 .
+13
+13
+
+Hence the exposed-to-risk for x last birthday or the period 2005-2014 is:
+10  10 *
+3 *
+16 *
+ 10  10 *
+
+*
+=
+ P x ,2002 + P x ,2015 + P x ,2015
+
+ P x ,2002 + P x ,2015  .
+2  13
+13
+13
+ 2  13
+
+
+So the required exposed-to-risk for x nearest birthday for the period
+2005–2014 is:
+5  10
+16
+
+ ( P x ,2002 + P x − 1,2002 ) + ( P x ,2015 + P x − 1,2015 )  .
+2  13
+13
+
+
+[Total for part (ii): 5]
+(iii)
+When adjusting the age data
+we need to assume that births are uniformly distributed across the
+Page 10
+
+calendar year. 
+To use the trapezium rule 
+we must assume that the population varies linearly between census
+dates. 
+We assume that the population enumerated in the census of 1 January
+2015 can be taken to be the population at the end of the calendar year
+2014.
+
+[Total for part (iii): max. 2]
+(iv)
+The deaths data are available for the years 2015 and 2016 and will
+not need adjusting. 
+The exposed-to-risk will still need adjusting from an age last
+birthday basis to an age nearest birthday basis. 
+To compute the population aged x last birthday in each of the
+calendar years 2015 and 2016 some kind of forecasting/modelling
+will be required. 
+Extrapolation of the linear change at each age x between
+1 January 2002 and 1 January 2015 is one option. 
+Better might be to use the deaths in 2015 to estimate an adjusted
+population aged x last birthday for 1 January 2016 and to use this
+to estimate the exposed-to-risk at age nearest birthday for the
+calendar year 2015. 
+The procedure could then be iterated to produce an exposed-to-risk
+for the calendar year 2016. 
+This should be fairly accurate for the first two years immediately
+following a census. 
+Data could be gathered on births or migration in and out to improve the
+estimate of the exposed to risk.
+
+[Total for part (iv): max. 3]
+[Total 12]
+Answers to part (i) of this question were generally satisfactory,
+though only a minority of candidates pointed out that the deaths
+data “carry most information” when mortality rates are small.
+Most candidates had a general idea of how to approach part (ii)
+but only a minority had the details of the estimation of the
+population in 2005 correct. Credit was given for part (iii) where
+candidates had included the assumptions in their answers to part
+Page 11
+(ii) at the appropriate point in their argument. Few candidates
+offered extensive answers to part (iv). Most were content to say
+that some kind of modelling or extrapolation of the population
+would be required. In parts (iii) and (iv) full credit could be
+obtained for somewhat less than is written in this Examiners;
+Report.
