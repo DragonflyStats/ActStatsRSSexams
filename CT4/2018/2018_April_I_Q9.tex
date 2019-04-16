@@ -1,0 +1,256 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}[Total 12]9
+In a three-state model where the states are:
+1. Healthy
+2. Sick
+3. Dead
+let t p xij be the probability that a person in state i at age x is in state j at age x + t ,
+and let\mu ij x + t be the transition intensity from state i to state j at age x + t.
+(i)
+Show from first principles that:
+d 13
+11 13
+12 23
+
+t p x = t p x\mu x + t + t p x\mu x + t
+dt
+
+Doctors have been investigating the incidence of a sickness called Wadles. This
+sickness is debilitating and can last for many years. It can sometimes kill the patient,
+but not always. Doctors have established that if a patient recovers from Wadles they
+are immune to further infection from this sickness.
+(ii)
+Sketch a diagram showing the states required for this sickness to be modelled
+as a Markov process and the possible transitions between the states.
+
+During the investigation, the doctors collected data on a sample of people. The data
+included the total length of time each person was under investigation, and the length
+of time each person was observed to be afflicted with Wadles. The doctors also
+recorded each occasion on which a person contracted Wadles, recovered from Wadles
+and died, noting whether the death was caused by Wadles or another reason.
+(iii)
+(iv)
+
+Express the likelihood for the transition intensities in terms of the data
+collected, defining all the terms you use.
+
+Derive the maximum likelihood estimator of the death rate from Wadles. 
+[Total 12]
+CT4 A2018–7 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Q9
+(i)
+Using the Markov assumption or from the Chapman-Kolmogorov
+equations we can write
+dt + t 11
+13
+12
+23
+13
+33
+p 13
+x = t p x dt p x + t + t p x dt p x + t + t p x dt p x + t .
+But dt
+
+
+p 33
+x + t = 1 .
+
+Assuming that, for small dt,
+dt
+p ij x + t =
+\mu ij x + t dt + o ( dt ) ,
+
+o ( dt )
+= 0 ;
+dt → 0 dt
+where lim
+then substituting, we have
+dt + t
+11 13
+12 23
+13
+p 13
+x = t p x\mu x + t dt + t p x\mu x + t dt + t p x + o ( dt ) ,
+so that
+dt + t
+and hence
+
+13
+11 13
+12 23
+p 13
+x − t p x = t p x\mu x + t dt + t p x\mu x + t dt + o ( dt ) ,
+d
+( t p 13
+x ) =
+dt
+lim
+t + dt
+dt → 0
+13
+p 13
+x − t p x
+=
+dt
+t
+
+13
+12 23
+p 11
+x\mu x + t + t p x\mu x + t .
+
+[Total for part (i): 4]
+(ii)
+\mu NDO
+Never had
+Wadles
+(N)
+Dead from
+other causes
+(DO)
+\mu SDO
+\mu NS
+Suffering from
+Wadles
+(S)
+Page 18
+Dead from
+Wadles (DW)
+\mu SDW
+\mu IDO
+Recovered
+and immune
+(I)
+\mu SI
+[+2]
+OR
+[Total for part (ii): 2]
+(iii)
+The likelihood is
+{ (
+) } { (
+(\mu ) (\mu )
+) } {
+(\mu ) (\mu )
+L ∝ exp −\mu NS −\mu NDO ν N exp −\mu SDW −\mu SI −\mu SDO ν S exp −\mu IDO ν I
+(\mu ) (\mu )
+NS
+d NS
+NDO
+d NDO
+d SDW
+SDW
+SDO
+d SDO
+SI
+d SI
+IDO
+d IDO
+}
+.
+[+2]
+Here
+ν I is the waiting time in state I, 
+d IJ is the number of transitions from state I to state J, and 
+and\mu IJ is the intensity of the transition from state I to state J .
+
+[Total for part (iii): max. 3]
+(iv)
+Taking logarithms of the likelihood we have:
+ln L =
+( −\mu ) ν
+SDW
+S
+(
++ d SDW ln\mu SDW
+)
+plus terms not dependent on\mu SDW .
+
+Differentiating with respect to\mu SDW gives:
+d ( ln L )
+d\mu SDW
+= −ν S +
+d SDW
+\mu SDW
+,
+
+and setting this to zero gives a maximum likelihood estimate of\mu SDW
+\mu ˆ
+SDW
+d SDW
+.
+=
+ν S
+This is a maximum as the second derivative
+
+
+d 2 ( ln L )
+( d\mu )
+SDW
+2
+= −
+d SDW
+(\mu )
+SDW
+2
+
+Page 19
+must be negative.
+
+[Total for part (iv): 3]
+[Total 12]
+Part (i) was reasonably well answered by most candidates. Identifying
+the state space in part (ii) proved challenging for many candidates.
+Credit was given for an alternative four-state solution {Never had
+Wadles, Sick with Wadles, Recovered and Immune, Dead}. This is not
+ideal for estimating the death rate from Wadles, as a person who has
+Wadles may die from a cause other than Wadles, but is a reasonable
+answer to part (ii) as asked in the Examination Paper. A common
+error was to label the first state “Healthy” rather than “Never had
+Wadles”. This is ambiguous, as a person who has recovered from
+Wadles is also “Healthy”. In part (iii) most candidates successfully
+wrote down a likelihood consistent with the state space and transitions
+they had sketched in part (ii); they also managed to derive the
+maximum likelihood estimator of the death rate from Wadles in part
+(iv). Where the diagram in part (ii) did not include the death rate from
+Wadles (for example, it might include the death rate of any sick person,
+regardless of whether that person had Wadles or not), credit was given
+in part (iv) for a derivation of the maximum likelihood estimator of the
+transition rate which was closest to the death rate from Wadles .
