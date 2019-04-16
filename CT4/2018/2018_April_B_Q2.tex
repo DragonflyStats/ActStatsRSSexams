@@ -1,0 +1,111 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+[Total 4]
+2
+A football match between two teams, Team A and Team B, is being decided by a
+penalty competition. Each team takes one penalty alternately. Team A goes first.
+Let X i be the total number of penalties scored by team A minus the total number of
+penalties scored by team B after the ith penalty has been taken. If X i = 2, team A wins
+and the competition stops. If X i = –2, team B wins and the competition stops.
+(i)
+Determine the possible sample paths for the process X i for i = 1, 2, 3, 4.
+
+Suppose the chance of team A scoring each of its penalties is 0.5, and the chance of
+team B scoring each of its penalties is 0.4.
+
+
+Q2
+(i)
+Team A goes first, so at i = 1 the process can have the values 1 (if Team A
+scores) or 0 (if Team A misses).
+
+Page 3
+Team B then has a go. If Team B scores, then X 2 = X 1 – 1.
+If Team B misses, then X 2 = X 1 .
+
+Team A then has another go. If Team A scores, then X 3 = X 2 + 1.
+If Team A misses, then X 3 = X 2 .
+
+Hence possible sample paths for X i (i = 1, 2, 3, 4) are:
+0, 0, 0, 0
+0, 0, 0, –1
+0, 0, 1, 0
+0, 0, 1, 1
+0, –1, 0, 0
+0, –1, 0, –1
+0, –1, –1, –1
+0, –1, –1, –2
+1, 0, 0, –1
+1, 0, 0, 0
+1, 0, 1, 0
+1, 0, 1, 1
+1, 1, 1, 0
+1, 1, 1, 1
+1, 1, 2, process ends at i = 3
+(ii)
+Taking the paths in (i) and considering only the first three penalties we can
+compute the probabilities as follows:
+0, 0, 0
+0, 0, 1
+0, -1, 0
+0, -1, -1
+1, 0, 0
+1, 0, 1
+1, 1, 1
+1, 1, 2
+0.5 x 0.6 x 0.5 = 0.15
+0.5 x 0.6 x 0.5 = 0.15
+0.5 x 0.4 x 0.5 = 0.10
+0.5 x 0.4 x 0.5 = 0.10
+0.5 x 0.4 x 0.5 = 0.10
+0.5 x 0.4 x 0.5 = 0.10
+0.5 x 0.6 x 0.5 = 0.15
+0.5 x 0.6 x 0.5 = 0.15
+so the distributions are as follows
+Page 4
+
+[Total for part (i): max. 3]
+
+
+[Total for part (ii): 3]
+[Total 6]
+This question was on a part of the syllabus which had not been
+tested for several sessions, but which is an important part of the
+Core Reading. Performance was poor, with only a minority of
+candidates managing to list the possible sample paths in part (i),
+and fewer being able to compute the probabilities in part (ii). A
+common error was to fail to read the question closely and to
+consider pairs of penalties. Some credit was given for answers
+which were correct on the basis of pairs of penalties.
