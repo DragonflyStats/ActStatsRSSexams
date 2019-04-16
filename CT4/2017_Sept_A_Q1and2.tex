@@ -1,0 +1,129 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1
+In a certain country, the force of mortality, \mu_ x , in the age range 90-105 years exact is
+given by:
+Age range (years) \mu_ x
+90 \leq x < 95
+95 \leq x < 100
+100 \leq x < 105 0.10
+0.15
+0.20
+The head of state sends a congratulatory card on a citizen’s 100th birthday and again
+on reaching age 105.
+Derive the probability that a person aged exactly 93 WILL receive a congratulatory
+card for reaching age 100 but NOT receive a second congratulatory card for reaching
+age 105.
+
+2
+(i)
+Define an increment of a process.
+
+The rate of mortality in a certain population at ages over exact age 30 years, h (30 + u ) ,
+is described by the process:
+h (30 + u ) \;=\; B (1 + \gamma ) u u ≥ 0
+where B and γ are constants.
+3
+4
+(ii) Show that the increments of the process log[ h (30 + u )] are stationary.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Q1
+We require 5 q 100 . 7 p 93 \;=\; (1  5 p 100 ). 7 p 93
+7
+7
+
+7
+ 2
+
+p 93 \;=\; exp    0.10 dt   0.15 dt 
+2
+ 0
+ 
+p 93 \;=\; exp(  0.95) \;=\; 0.386741 
+ 5
+
+exp
+p
+\;=\;
+   0.20 dt 
+5 100
+ 0
+
+5 p 100
+\;=\; exp(  1.00) \;=\; 0.367879
+So 5 q 100 . 7 p 93 \;=\; 0.632121*0.386741 \;=\; 0.244467
+
+
+
+[Total 3]
+Full credit could be obtained for the correct numerical answer and some
+indication of the method used. A common error was to use an incorrect age
+range when evaluating survival probabilities. Most candidates, however,
+scored well on this question.
+%% ----- Page 3
+Q2
+(i) An increment of a process is the amount by which its value increases over a
+period of time, for example X(u + t) – X(u) where t > 0.
++1
+
+(ii) EITHER
+log[ h (30 + u + t )]  log[ h (30 + u )] \;=\; log[ B (1 + \gamma ) u + t ]  log[ B (1 + \gamma ) u ] +1
+\;=\; log B + ( u + t )log(1 + \gamma )  (log B + u log(1 + \gamma )). 
+\;=\; t log(1 + \gamma ) 
+The increment thus depends on t, the duration of the process but not
+on u, hence the process is stationary. +1
+OR
+log h (30 + u ) \;=\; log B + u log(1 + \gamma ) +1
+d
+log h (30 + u ) \;=\; log(1 + \gamma )
+du +1
+which is constant and does not depend on u, so the process is stationary.
++1
+
+[Total 4]
+Most candidates (though by no means all) could define an increment. Many
+candidates did not make a serious attempt at part (ii), which dealt with a topic
+that had not been examined for several sessions. The better-prepared
+candidates saw that the increment for each time unit was constant and hence
+the process was stationary. A few candidates failed to spot this and tried to
+demonstrate weak stationarity. Credit was given for this, although such
+candidates often encountered difficulty in calculating the covariance of the
+process.
+%% ----- Page 4
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
