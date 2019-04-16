@@ -1,0 +1,163 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+CT4 A2017–25
+A city operates a bicycle rental scheme. Bicycles are stored in racks at locations
+around the city and may be rented for a fee and ridden from one location and
+deposited at another, provided there is space in the rack. The rack outside the
+actuarial profession’s headquarters in that city has spaces for four bicycles.
+The profession would like the city to increase the size of the rack. The city has said it
+will do so if the profession can demonstrate that, in the long run, the rack is full or
+empty for more than 35 per cent of the working day. The profession commissions a
+study to monitor the rack every 10 minutes during the working day.
+The study shows that, on average:
+ there is a probability of 0.3 that the number, m, of bicycles in the rack will
+increase by 1 over a 10-minute interval (where 0 \leq m < 4).
+ there is a probability of 0.2 that the number of bicycles in the rack will decrease
+by 1 over a 10-minute interval (where 0 < m \leq 4).
+ the probability of more than one increase or decrease per 10-minute interval can
+be regarded as 0.
+(i) Give the transition matrix for the number of bicycles in the rack. 
+(ii) Determine whether the city will increase the size of the rack. [6]
+(iii) Comment on whether an increase in the size of the rack will reduce the
+proportion of time for which the rack is empty or full.
+
+[Total 10]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q5
+(i)
+0  0.7 0.3 0
+0
+0 
+
+
+1  0.2 0.5 0.3 0
+0 
+2  0 0.2 0.5 0.3 0  .
+
+
+3  0
+0 0.2 0.5 0.3 
+4   0
+0
+0 0.2 0.8  
++2
+
+(ii)
+For the long run proportion of time that the rack is either full or empty,
+we need to find the stationary distribution.
+OR
+Let the long-run probability of there being i bicycles in the rack be \pi_ i .
+
+Then if P is the transition matrix we need to solve
+( \pi_ 0
+\pi_ 1 \pi_ 2 \pi_ 3 \pi_ 4 ) \;=\; ( \pi_ 0 \pi_ 1 \pi_ 2 \pi_ 3 \pi_ 4 ) P .
+
+The equations are
+\pi_ 0 \;=\; 0.7 \pi_ 0 + 0.2 \pi_ 1
+\pi_ 1 \;=\; 0.3 \pi_ 0 + 0.5 \pi_ 1 + 0.2 \pi_ 2
+\pi_ 2 \;=\; 0.3 \pi_ 1 + 0.5 \pi_ 2 + 0.2 \pi_ 3
++11⁄2
+\pi_ 3 \;=\; 0.3 \pi_ 2 + 0.5 \pi_ 3 + 0.2 \pi_ 4
+\pi_ 4 \;=\; 0.3 \pi_ 3 + 0.8 \pi_ 4
+Starting with the equation for π 0 we have
+0.3 \pi_ 0 \;=\; 0.2 \pi_ 1
+\pi_ 1 \;=\; 1.5 \pi_ 0
+Then in the equation for \pi_ 1 we have
+1.5 \pi_ 0 \;=\; 0.3 \pi_ 0 + 0.5(1.5 \pi_ 0 ) + 0.2 \pi_ 2
+0.45 \pi_ 0 \;=\; 0.2 \pi_ 2
+\pi_ 2 \;=\; 2.25 \pi_ 0
+%% ----- Page 7
+and in the equation for \pi_ 2 we have
+2.25 \pi_ 0 \;=\; 0.3(1.5 \pi_ 0 ) + 0.5(2.25 \pi_ 0 ) + 0.2 \pi_ 3
+0.675 \pi_ 0 \;=\; 0.2 \pi_ 3
+\pi_ 3 \;=\; 3.375 \pi_ 0
+and, finally, in the equation for \pi_ 4 we have
+\pi_ 4 \;=\; 0.3(3.375 \pi_ 0 ) + 0.8 \pi_ 4
+0.2 \pi_ 4 \;=\; 1.0125 \pi_ 0
+\pi_ 4 \;=\; 5.0625 \pi_ 0
++11⁄2
+Since
+\pi_ 0 + \pi_ 1 + \pi_ 2 + \pi_ 3 + \pi_ 4 \;=\; 1 ,
+
+we have
+EITHER
+\pi_ 0 + 1.5 \pi_ 0 + 2.25 \pi_ 0 + 3.375 \pi_ 0 + 5.0625 \pi_ 0 \;=\; 13.1875 \pi_ 0 \;=\; 1 ,
+OR
+ 16 24 36 54 81 
+\pi_ 0  + + + +  \;=\; 1
+ 24 24 24 24 24 
+and hence
+\pi_ 0 \;=\;
+16
+81
+\;=\; 0.0758 \pi_ 4 \;=\;
+\;=\; 0.3839
+211
+211
+Thus the rack is full or empty 45.97 per cent (97/211) of the time,
+which is more than 35 per cent,
+and the city will increase the size of the rack.
+(iii)
+The increase in the size of the rack is likely to reduce the proportion
+of time for which the rack is empty or full, as the fact that there are
+more states will “dilute” the probabilities.
+
+
+
+[6]
++1
+This assumes that behaviour of the users of the scheme remains the same. 
+%% ----- Page 8
+However, if the behaviour/characteristics of those using the bicycle
+scheme change in response to the increased size of the rack
+(for example new people join the scheme)
+then the transition matrix may change so that the proportion of time
+the rack is empty or full may shift.
+
+
+[Max 2]
+[Total 10]
+Many candidates scored highly on parts (i) and (ii) of this question.
+Candidates who produced an incorrect matrix in part (i) could potentially score
+full credit in part (ii) if they followed through correctly. In part (iii) a substantial
+number of candidates spotted that, with more states, the dilution of the
+probability should mean that the proportion of time the rack is empty or full will
+decrease. Some, however, thought that that chance of it being full would be
+less, but that the chance of it being empty would remain the same. Only a
+few candidates went further to comment on the possible effect on the
+increase in the size of the rack on the behaviour of those using the bicycle
+scheme.
