@@ -1,0 +1,81 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+[Total 4]
+(i) Define a Markov Chain.
+(ii) Describe the difference between a time-homogeneous and a time-
+inhomogeneous Markov Chain, giving an example of each.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+Q3
+(i)
+A Markov Chain is a process operating in discrete time with a discrete state
+space
++1
+EITHER
+It obeys the Markov property: 
+that the future state of the process can be predicted from its present
+state alone, without any reference to its past history 
+OR
+P[X t \in A | X s 1 = x 1 , X s 2 = x 2 , ..., X s n = x n , X s = x] = P[X t \in A | X s = x]
+
+for all times s 1 < s2 < ... < sn < s < t, all states x 1 , x 2 , ..., xn , x in S and
+all subsets A of S.
+(ii)
+
+
+In a time-homogeneous Markov chain the transition probabilities are time-
+independent.
+
+In a time-inhomogeneous Markov chain the transition probabilities depend on
+the absolute values of time, not just the time difference.
+
+Examples: time-homogeneous – no claims discount system in which the
+probability of a claim in each year is constant.
+
+time-inhomogeneous – no claims discount system in which accident
+probabilities reflect changing traffic conditions from one year to the next. 
+
+[Total 4]
+Most candidates could define a Markov Chain. There was less sure-
+footedness about describing the difference between a time-homogeneous and
+a time-inhomogeneous Markov chain. Many candidates referred to “transition
+rates” when they meant one-step transition probabilities. Others made vague
+statements about the “Chain depending [or not] on time”, for which only
+limited credit was given. In part (ii) credit was given only for examples which
+could sensibly be analysed using a Markov Chain.
+%% ----- Page 5
