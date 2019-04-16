@@ -76,18 +76,135 @@ CT4 S2008—5
 
 \newpage
 
+
+
+8
+\item (i)
+The transition matrix of the process is
+The transition matrix of the process is
+
+\[ \begin{bmatrix}
+0.15 & 0.85 & 0 & 0 \\
+0.15 & 0 & 0.85 & 0 \\
+0.03 & 0.12 & 0 & 0.85 \\
+0 & 0.03 & 0.12 & 0.85 
+\end{bmatrix}  \]
+
+(a) For the one year transition, p 22 = 0, as can be seen
+from above (or is obvious from the statement).
+(b) The second order transition matrix is
+\[P^2 =  \begin{bmatrix}
+0.15 & 0.85 & 0 & 0 \\
+0.15 & 0 & 0.85 & 0 \\
+0.03 & 0.12 & 0 & 0.85 \\
+0 & 0.03 & 0.12 & 0.85 
+\end{bmatrix}  \times \begin{bmatrix}
+0.15 & 0.85 & 0 & 0 \\
+0.15 & 0 & 0.85 & 0 \\
+0.03 & 0.12 & 0 & 0.85 \\
+0 & 0.03 & 0.12 & 0.85 
+\end{bmatrix}  \]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(a) For the one year transition, p 22 = 0, as can be seen
+from above (or is obvious from the statement).
+(b) The second order transition matrix is
+% \[P^2 =  \begin{bmatrix}
+% (0.15 \times 0.15) + (0.85 \times 0.15) & 
+%     (0.15 \times 0.85) + (0) + (0) + (0) & 
+%       (0.15 \times 0) + (0.85 \times 0.85) + (0) + (0)& 
+%       (0) + (0) + (0) + (0) \\
+%--------------------%
+%(0.15 \times 0.15) + (0) +  (0.85 \times 0.03) + (0) & 
+%   (0.15 \times 0.15) + (0) + (0.85 \times 0.15) + (0)  & 
+%      (0.15 \times 0.15) + (0) + (0.85 \times 0.15) + (0)  & 
+%         (0.15 \times 0.15) + (0)  + (0.85 \times 0.15) + (0)  \\
+%--------------------%
+%(0.03 \times 0.15) + (0.12 \times 0.15) + (0)+  (0.85 \times 0.15) & 
+%   (0.03 \times 0.15) + (0.12 \times 0.15) + (0)+ (0.85 \times 0.15) & 
+%      (0.03 \times 0.15) + (0.12 \times 0.15)+ (0) +  (0.85 \times 0.15) & 
+%         (0.03 \times 0.15) + (0.12 \times 0.15)+ (0) +  (0.85 \times 0.15) \\
+%--------------------%
+% (0) + (0.03 \times 0.15) + (0.12 \times 0.03) +  (0.85 \times 0)  &  
+%     (0) +  (0.03 \times 0) + (0.12 \times 0.15) +  (0.85 \times 0.15) & 
+%        (0) + (0.03 \times 0.15) + (0.12 \times 0.12) +  (0.85 \times 0.15) & 
+%           (0) + (0.03 \times 0.15) + (0.12 \times 0.15) +  (0.85 \times 0.15)  \\
+%\end{bmatrix}\]
+
+\[ P^2 =\begin{bmatrix}
+0.15 & 0.1275 & 0.7225 & 0 \\
+0.048 & 0.2995 & 0 & 0.7225 \\
+0.0225 & 0.051 & 0.204 & 0.7225 \\
+0 & 0.0399 & 0.1275 & 0.8245 
+\end{bmatrix}  \]
+
+
+hence the required probability is $0.229$5.
+\item (iii)
+In matrix form, the equation we need to solve is $\pi P = \pi$,
+where $\pi$ is the vector of equilibrium probabilities.
+
+\[ \begin{bmatrix}
+\pi_1& \pi_2 & \pi_3 & \pi_4 
+\end{bmatrix}\begin{bmatrix}
+0.15 & 0.85 & 0 & 0 \\
+0.15 & 0 & 0.85 & 0 \\
+0.03 & 0.12 & 0 & 0.85 \\
+0 & 0.03 & 0.12 & 0.85 
+\end{bmatrix} = \begin{bmatrix}
+\pi_1& \pi_2 & \pi_3 & \pi_4 
+\end{bmatrix}  \]
+
+This reads
+\begin{enumerate}[(1)]
+\item ${ \displaystyle 0.15 \pi_1 + 0.15 \pi_2 + 0.03 \pi_3 = \pi_1 }$
+\item ${ \displaystyle 0.85 \pi_1 + 0.12 \pi_3 + 0.03 \pi_4 = \pi_2 }$
+\item ${ \displaystyle 0.85 \pi_2 + 0.12 \pi_4 = \pi_3 }$
+\item ${ \displaystyle  0.85 \pi_3 + 0.85 \pi_4 = \pi_4 }$
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Discard the first of these equations and use also the fact that
+\[\sum_{i= 1} \pi_i = 1 .\]
+4
+Then, we obtain first from (4) that $0.85 \pi_3 = 0.15 \pi_4$
+or, that $\pi_4 = 17 \pi_3 / 3$
+%- Page 9 — Models Core Technical — September 2008 — Examiners’ 
+
+Substituting in (3) this gives
+\[0.85 \pi_2 + 0.12 ×
+17
+\pi_3 = \pi_3 ⇒ \pi_3 = 2.65625 \pi_2
+3\]
+(2) now yields that
+\[0.85 \pi_1 = \pi_2 − 0.12 \pi_3 − 0.03 \pi_4 =
+1
+\pi_3 − 0.12 \pi_3 − 0.17 \pi_3 = 0.0865 \pi_3 ,
+2.65625\]
+so that finally we get $\pi_1 = 0.10173 \pi_3$ .
+Using now that the probabilities must add up to one, we obtain
+\[ \pi_1 + \pi_2 + \pi_3 + \pi_4 = (0.10173 + 0.3765 + 1 + 5.666) \pi_3 = 1, \]
+or that $\pi_3 = 0.13996$.
+Solving back for the other variables we get that
+\begin{itemize}
+    \item $ { \displaystyle \pi_1 = 0.01424}$, 
+    \item $ { \displaystyle \pi_2 = 0.05269}$, 
+    \item $ { \displaystyle \pi_4 = 0.79311}$
+\end{itemize}
+
+The long-run probability that the motorist is in discount level 2 is therefore
+0.05269.
+\newpage
 9
 A company pension scheme, with a compulsory scheme retirement age of 65, is
 modelled using a multiple state model with the following categories:
-1
-2
-3
-4
-5 currently employed by the company
-no longer employed by the company, but not yet receiving a pension
-pension in payment, pension commenced early due to ill health retirement
-pension in payment, pension commenced at scheme retirement age
-dead
+
+
+\begin{enumerate}
+    \item currently employed by the company
+    \item no longer employed by the company, but not yet receiving a pension
+    \item pension in payment, pension commenced early due to ill health retirement
+    \item pension in payment, pension commenced at scheme retirement age
+    \item dead
+\end{enumerate} 
 
 \begin{enumerate}
 \item (i) Describe the nature of the state space and time space for this process.
@@ -113,122 +230,10 @@ x + t = 65.
 x + t > 65.
 [6]
 [Total 10]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 
-8
-\item (i)
-The transition matrix of the process is
-⎛ 0.15
-⎜
-0.15
-P = ⎜
-⎜ 0.03
-⎜
-⎝ 0
-\item (ii)
-0.85
-0
-0.12
-0.03
-0
-0.85
-0
-0.12
-0 ⎞
-⎟
-0 ⎟
-0.85 ⎟
-⎟
-0.85 ⎠
-(a) For the one year transition, p 22 = 0, as can be seen
-from above (or is obvious from the statement).
-(b) The second order transition matriX_is
-⎛ 0.15 2 + 0.85 × 0.15
-⎜
-⎜ 0.15 2 + 0.85 × 0.03
-⎜
-⎜ 0.03 × 0.15 + 0.12 × 0.15
-⎜
-⎜ 0.03 × 0.15 + 0.12 × 0.03
-⎝
-⎛ 0.15
-⎜
-0.048
-= ⎜
-⎜ 0.0225
-⎜
-⎝ 0.0081
-⎞
-⎟
-⎟
-0.85 × 0.15 + 0.85 × 0.12 0
-0.85 2
-⎟
-⎟
-0.85 × 0.03 × 2
-0.85 × 0.12 × 2
-0.85 2
-⎟
-0.12 2 + 0.85 × 0.03
-0.85 × 0.03 + 0.85 × 0.12 0.12 × 0.85 + 0.85 2 ⎟ ⎠
-0.85 2
-0.85 × 0.15
-0.1275
-0.2295
-0.051
-0.0399
-0.7225
-0
-0.204
-0.1275
-0
-0
-⎞
-⎟
-0.7225 ⎟
-0.7225 ⎟
-⎟
-0.8245 ⎠
-hence the required probabilitY_is 0.2295.
-\item (iii)
-In matrix form, the equation we need to solve is $\pi P = \pi$,
-where \pi is the vector of equilibrium probabilities.
-This reads
-0.15 \pi_1 + 0.15 \pi_2 + 0.03 \pi_3
-0.85 \pi_1 +
-+ 0.85 \pi_2
-= \pi_1
-+ 0.12 \pi_3 + 0.03 \pi_4 = \pi_2
-+ 0.12 \pi_4 = \pi_3
-0.85 \pi_3 + 0.85 \pi_4 = \pi_4
-(1)
-(2)
-(3)
-(4)
-Discard the first of these equations and use also the fact that
-\[\sum_{i= 1} \pi_i = 1 .\]
-4
-Then, we obtain first from (4) that 0.85 \pi_3 = 0.15 \pi_4
-or, that \pi_4 = 17 \pi_3 / 3
-Page 9 — Models Core Technical — September 2008 — Examiners’ 
 
-Substituting in (3) this gives
-0.85 \pi_2 + 0.12 ×
-17
-\pi_3 = \pi_3 ⇒ \pi_3 = 2.65625 \pi_2
-3
-(2) now yields that
-0.85 \pi_1 = \pi_2 − 0.12 \pi_3 − 0.03 \pi_4 =
-1
-\pi_3 − 0.12 \pi_3 − 0.17 \pi_3 = 0.0865 \pi_3 ,
-2.65625
-so that finally we get \pi_1 = 0.10173 \pi_3 .
-Using now that the probabilities must add up to one, we obtain
-\pi_1 + \pi_2 + \pi_3 + \pi_4 = (0.10173 + 0.3765 + 1 + 5.666) \pi_3 = 1,
-or that \pi_3 = 0.13996.
-Solving back for the other variables we get that
-\pi_1 = 0.01424, \pi_2 = 0.05269, \pi_4 = 0.79311
-The long-run probability that the motorist is in discount level 2 is therefore
-0.05269.
 9
 \item (i)
 The state space is discrete with states as given iN_the question.
