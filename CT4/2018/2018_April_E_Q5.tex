@@ -1,0 +1,157 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+5
+Describe the factors which should be considered when deciding whether to
+consider time in a discrete or continuous way for a model.
+
+[Total 7]
+The calculation of the daily unit price for a fund investing in commercial properties
+can be done on one of two bases:
+• Bid price – reflecting the price at which the properties could be sold, allowing for
+the transaction costs for selling properties.
+• Offer price – reflecting the price at which properties could be purchased, again
+allowing for the transaction costs which would apply.
+Whether the fund is priced on the Bid or Offer basis depends on whether there is net
+investment into or redemption from the fund.
+Movements between the states Bid (B) and Offer (O) pricing basis are to be modelled
+using a Markov Jump Process with constant transition rates from Bid to Offer of l and
+Offer to Bid of \mu.
+(i) Give the generator matrix of the Markov Jump Process. 
+(ii) State the distribution of holding times in each state. 
+Let t P sij be the probability that the process is in state j at time s + t given that it was in
+state i at time s (i, j = B, O).
+(iii)
+Write down Kolmogorov’s forward equations for
+d
+d
+BB
+BO
+. 
+t P s and
+t P s
+dt
+dt
+
+The fund was being priced on a Bid price basis at time s.
+(iv)
+
+Solve the Kolmogorov equations to obtain an expression for t P sBB . 
+CT4 A2018–3 
+
+[Total 9]
+
+
+Q5
+(i)
+Writing the state space in the order {Bid (B), Offer (O)},
+
+the generator matrix is:
+B  −\lambda \lambda 
+
+ .
+O \mu −\mu 
+
+[Total for part (i): 1]
+(ii)
+The holding times are exponentially distributed with 
+parameter \lambda in state B, 
+and\mu in state O.
+(iii)
+
+[Total for part (ii): 2]
+\partial
+BB
+= −\lambda . t P s BB +\mu . t P s BO .
+t P s
+\partial t 
+\partial
+BO
+= \lambda . t P s BB −\mu . t P s BO .
+t P s
+\partial t 
+[Total for part (iii): 3]
+(iv)
+Page 8
+We have a two-state model so:
+BB
+t P s
++ t P s BO =
+1 .
+
+Substituting:
+\partial
+BB
+= −\lambda . t P s BB +\mu .(1 − t P s BB ) ;
+t P s
+\partial t 
+\partial 
+exp(( \lambda +\mu ) t ). t P s BB  =\mu .exp(( \lambda +\mu ) t ) ;
+
+\partial t  
+and hence
+exp(( \lambda + \mu
+=
+) t ). t P s BB
+\mu
+.exp(( \lambda +\mu ) t ) + constant.
+\lambda+\mu
+
+Since the process is in state Bid at time s (i.e. t = 0),
+\lambda
+,
+the constant is
+\mu+\lambda
+BB
+and thus t P
+=
+s
+
+\mu
+\lambda
++
+.exp( − ( \lambda +\mu ) t ) .
+\lambda+\mu \lambda+\mu
+
+[Total for part (iv): 4]
+[Total 9]
+This question was well answered, with many candidates scoring full
+marks, or close to full marks. In part (iv) a common error was to
+BB
+determine exp(( \lambda +\mu ) t ). t P s to be 0 for t = 0, which led to the
+−\mu
+constant being evaluated as \lambda +\mu . Where candidates wrote down
+incorrect Kolmogorov forward equations in part (iii), credit was
+given in part (iv) for sensible attempts to solve the equations that
+had been written.
