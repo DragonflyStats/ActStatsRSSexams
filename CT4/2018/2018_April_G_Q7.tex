@@ -1,0 +1,210 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+[Total 12]7
+(i)
+Define a Markov Chain.
+
+The manager of a sales team keeps records of how much each of the three sales staff
+(Andy, Brenda and Carol) sells each week. The data suggests that the sales staff
+member who makes the most sales each week can be modelled using a Markov Chain
+with the following transition matrix:
+⎛ 0.4
+⎜ 0.3
+⎝ 0.2
+0.3
+0.5
+0.3
+0.3
+0.2
+0.5
+⎛
+⎜
+⎝
+Andy
+Brenda
+Carol
+Brenda made the most sales in the first week in April.
+(ii) Calculate the probability that each member of the sales staff makes the most
+sales in the third week of April.
+
+(iii) Calculate the long term proportion of weeks in which each member of the
+sales staff makes the most sales.
+
+The manager is keen to encourage competition in the team, so he introduces an
+“Employee of the Week” incentive. He awards “Employee of the Week” to the
+member of the sales staff who makes the most sales unless this is the same employee
+who was awarded “Employee of the Week” last week. If last week’s “Employee of
+the Week” makes the most sales the manager will decide which of the other two staff
+should be “Employee of the Week” and is equally likely to choose either.
+(iv)
+(v)
+
+Justify why whoever is awarded “Employee of the Week” can NOT be
+modelled as a Markov Chain with state space {Andy, Brenda, Carol}.
+
+Identify a state space with the minimum number of states required to model
+the sequence of “Employees of the Week” as a Markov Chain.
+
+[Total 12]
+
+
+Q7
+(i)
+A Markov Chain is a stochastic process 
+with discrete states operating in discrete time 
+in which the probabilities of moving from one state to another are
+dependent only on the present state of the process. 
+OR
+A Markov chain is a sequence of random variables X 0 , X 1 , ... , X n , ...
+
+with the following property:
+P  X n = j  X 0 =
+i 0 , X 1 =
+i 1 ,..., X m − 1 =
+i m − 1 , X m =
+i  = P  X n =
+j X m =
+i 
+
+
+
+
+for all integer times n > m and states i 0 , i 1 ,..., i m − 1 , i , j in S.
+(ii)
+
+
+[Total for part (i): 2]
+This needs the second order transition matrix:
+ 0.4 0.3 0.3   0.4 0.3 0.3   0.31 0.36 0.33 
+
+
+ 
+
+ 0.3 0.5 0.2  .  0.3 0.5 0.2  =  0.31 0.4 0.29  .
+ 0.2 0.3 0.5   0.2 0.3 0.5   0.27 0.36 0.37 
+
+
+ 
+
+
+So the required probabilities are:
+Andy
+Brenda
+Carol
+0.31
+0.40
+0.29.
+
+OR
+Calculate directly, for example:
+Carol 0.2*0.5 + 0.3*0.3 + 0.5*0.2 = 0.29
+(iii)
+Page 12
+The long term probabilities satisfy \piP = \pi
++2
+[Total for part (ii): 2]
+
+0.4\pi_A + 0.3\pi_B + 0.2\pi_C = \pi_A (1) 0.3\pi_A + 0.5\pi_B + 0.3\pi_C = \pi_B (2) 0.3\pi_A + 0.2\pi_B + 0.5\pi_C = \pi_C (3) 
+and \pi_A + \pi_B + \pi_C = 1 (4) 
+(2) minus (3) gives
+0.3\pi_B – 0.2\pi_C = \pi_B – \pi_C
+so
+\pi_B = 8/7 \pi_C = 1.1429 \pi_C
+
+substitute in (1)
+0.6\pi_A = 0.5429\pi_C
+\pi_A = 0.9048\pi_C
+(0.9048 + 1.1429 ) \pi_C =1
+
+\pi_C = 0.3281 = 21/64
+\pi_B = 0.375 = 3/8
+\pi_A = 0.2969 = 19/64
+So the required probabilities are:
+Andy
+Brenda
+Carol
+(iv)
+19/64 or 0.2969
+3/8 or 0.375
+21/64 or 0.3281.
+
+[Total for part (iii): 4]
+In this case, to know who will be “Employee of the week”, we need to
+know who was “Employee of the week” last week as well as who
+made most sales this week.
+
+Suppose Andy made most sales this week. If he was “Employee of the week”
+last week his probability of being “Employee of the week”
+this week is 0, but if Brenda was “Employee of the week” last week, Andy
+will be “Employee of the week” this week.
+
+So additional states are needed to model “Employee of the week”
+Page 13
+as a Markov Chain.
+(v)
+
+[Total for part (iv): 2]
+This needs nine states i.e. 3 by 3,
+
+defined by
+Most Sales : “Employee of the Week” last week
+Andy : Andy
+Andy : Brenda
+Andy : Carol
+Brenda : Andy
+Brenda : Brenda
+Brenda : Carol
+Carol : Andy
+Carol : Brenda
+Carol : Carol.
+
+[Total for part (v): 2]
+[Total 12]
+Part (i) was well answered. In part (ii), common errors were to use
+the third order transition matrix, or to select the wrong elements
+from the second order transition matrix. Part (iii) was well
+answered, though a substantial number of candidates lost a small
+amount of credit by failing to identify which probability applied to
+which member of staff. In parts (iv) and (v), most candidates
+understood why the “Employee of the week” could not be modelled
+as a Markov Chain with three states; however, only a small number
+of candidates realised than nine states were required to model the
+process as a Markov Chain. The most common answer was “six
+states”. These were then typically defined as follows on the basis
+of Most Sales: “Employee of the week” last week {Andy: Andy,
+Andy: not Andy; Brenda: Brenda, Brenda: not Brenda, Carol:
+Carol, Carol: not Carol}. This can be shown to be insufficient to
+model the process as a Markov Chain by writing down the nine-
+state transition matrix.
