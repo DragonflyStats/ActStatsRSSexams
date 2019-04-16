@@ -1,0 +1,311 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%PLEASE TURN OVER
+10
+ForLawn is a new treatment for lawns which, according to the manufacturer, kills
+moss within days. A study was done in a small town in rural England in which
+14 residents with mossy lawns participated. Seven, chosen at random, were given
+ForLawn in a plain bottle and treated their lawns with it one morning. The other
+seven were given the most popular moss treatment already on the market, also in a
+plain bottle, and treated their lawns with it on the same morning. All 14 were asked
+to assess their lawns each morning following treatment until all the moss had gone.
+The study ended after 16 days, at which time any lawn which still had moss was
+considered to be censored.
+Unfortunately a flock of sheep escaped from the fields adjacent to the town on days 5
+and 8 and made such a mess of five of the lawns in the study that these lawns had to
+be withdrawn. These five lawns are also considered to be censored.
+The table below shows how many days elapsed before all the moss disappeared for
+each of the 14 lawns, or until censoring. Censoring is denoted by an *.
+ForLawn group:
+Alternative treatment group:
+5, 6, 8, 8*, 8*, 11, 16*
+3, 4, 5, 5*, 5* 5*, 10
+(i) Describe THREE types of censoring present in this study, giving examples of
+how they occur.
+
+(ii) Calculate the Kaplan-Meier estimate of the survival functions of still having
+moss for each of the two groups separately.
+
+(iii) Sketch the two estimated survival functions on the same graph.
+
+(iv) Comment on your results.
+
+A local statistician suggests that it would be a good idea to use Cox regression to
+compare the effectiveness of ForLawn with the alternative treatment. She thinks that
+using a dummy variable, X, with the value 1 for ForLawn and 0 for the alternative
+treatment would be suitable.
+(v) Determine the equations for the hazard function for the lawns treated with
+ForLawn and those treated with the alternative treatment, defining all the terms
+you use.
+
+(vi)
+ Derive the partial likelihood of the data in this Cox model.
+END OF PAPER
+CT4 A2018–8
+
+[Total 19]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+Q10
+(i)
+Random censoring when the time at which the life is censored is a random
+variable
+
+of the lawns damaged by sheep. 
+Right censoring when the censoring mechanism cuts short the
+observations in progress 
+such as when the sheep damage the lawns or any lawns still mossy when
+the study ends after 16 days. 
+Type 1 censoring when the censoring times are known in advance 
+of the lawns still mossy after 16 days. 
+Interval censoring, 
+because lawns are only checked once per day, so we do not know
+when in the day the moss disappeared. 
+Non-informative censoring,
+if the destruction of lawns by sheep gives no information about when they
+might have been free of moss.
+Page 20
+Informative censoring,
+if sheep are attracted to lawns where the moss has started to die.
+[Total for part (i): max. 3]
+(ii)
+N j
+t j
+d j c j \lambda j (1 – \lambda j )
+0
+0
+2
+1 1/7
+1/6
+1/5
+1/2 6/7
+5/6
+4/5
+1/2
+ForLawn
+5
+6
+8
+11 7
+6
+5
+2 1
+1
+1
+1
+  
+
+[+2]
+Alternative treatment
+3
+4
+5
+10 7
+6
+5
+1 1
+1
+1
+1
+  
+0
+0
+3
+0
+1/7
+1/6
+1/5
+1
+6/7
+5/6
+4/5
+0
+
+[+2]
+From which we obtain the survival functions as follows:
+ForLawn
+t S(t)
+0 ≤ t < 5
+5 ≤ t < 6
+6 ≤ t < 8
+8 ≤ t < 11
+11 ≤ t < 16 1
+6/7
+5/7
+4/7
+2/7
+ 
+
+Alternative treatment
+t S(t)
+0 ≤ t < 3
+3 ≤ t < 4
+4 ≤ t < 5
+5 ≤ t < 10
+10 ≤ t < 16 1
+6/7
+5/7
+4/7
+0
+Page 21
+
+
+
+[Total for part (ii): 6]
+(iii)
+1.2
+1
+0.8
+0.6
+For Lawn
+0.4
+Alternative
+treatment
+0.2
+0
+0
+5
+10
+15
+20
+t (days)
+[+2]
+[Total for part (iii): 2]
+(iv)
+ForLawn does not seem to be better than the alternative treatment. 
+Indeed, the survival function for the alternative treatment is below
+that of ForLawn at most durations, indicating that moss lasts less
+long under the alternative treatment than it does when treated
+with For Lawn. 
+However the study is small, so the difference may not be statistically
+significant at conventional levels.
+
+[Total for part (iv): 2]
+(v)
+For ForLawn we have
+h ( t | X = 1) = h 0 ( t ) exp β .
+
+For the alternative treatment we have
+h ( t | X = 0) = h 0 ( t ).
+
+Where h(t) is the hazard, h 0 (t) is the baseline hazard, β is the
+coefficient measuring the impact of the different treatments and X is a
+dummy variable taking the value 1 for ForLawn and 0 for the alternative
+treatment.
+
+[Total for part (v): 2]
+(vi)
+Page 22
+The contributions to the partial likelihood, L, at durations where events occur
+are:
+1
+t = 3
+
+7 + 7e β
+1
+t = 4
+
+6 + 7e β
+e β
+t = 5
+(using Breslow correction for ties)
+(5 + 7 e β ) 2
+
+e β
+t = 6
+
+1 + 6 e β
+e β
+t = 8
+
+1 + 5 e β
+1
+t = 10
+
+1 + 2e β
+e β
+t = 11
+β
+2 e
+=
+1
+2
+
+Multiplying these elements together gives
+L =
+1
+β
+7 + 7e
+.
+1
+β
+6 + 7e
+.
+e β
+β 2
+(5 + 7 e )
+.
+e β
+β
+1 + 6 e
+.
+e β
+β
+1 + 5 e
+.
+1
+. .
+
+1 + 2e 2
+[Total for part (vi): max. 4]
+[Total 19]
+1
+β
+This question was generally well answered, with many candidates
+scoring 12 marks or more. Answers to parts (i) – (iii) were especially
+good: many candidates scored full credit for these parts. In part (ii),
+some candidates did not realise that we have no information after t =
+16, so the ranges for the last interval of the survival function for
+ForLawn should be 11 ≤ t < 16, not just 11 ≤ t. In part (v) many
+candidates simply wrote down the general form of the Cox model,
+rather than determining the equations of the model for the two groups
+in this specific study. Answers to part (vi) fell into two groups:
+candidates who made little or no attempt, and candidates whose
+derivations were largely correct. Some of those who had the correct
+terms did not state to which time interval each term applied, and a
+small number of marks were lost for this.
+Page 23
+END OF EXAMINERS’ REPORT
+Page 24
+\end{document}
