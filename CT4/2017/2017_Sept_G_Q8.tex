@@ -1,0 +1,205 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+[Total 11]
+PLEASE TURN OVER8
+A careful shopkeeper takes delivery of a batch of 20 packets of cheese. Every
+morning at 8 a.m. precisely she checks to see if any of the cheese has gone mouldy
+and throws away any mouldy packets.
+As she runs a high quality establishment, she has lots of customers and some of the
+cheese is sold. After ten days she decides the cheese will be too old to sell and throws
+out the remaining packets.
+A curious customer observes that the shopkeeper has created an observational plan for
+calculating the hazard of cheese going mouldy.
+(i) State, with reasons, THREE types of censoring present in this situation.
+
+(ii) Assess, for EACH type of censoring listed in your answer to part (i), whether a
+change to the observational plan could be made which would remove that type
+of censoring.
+
+The shopkeeper made notes at 8 a.m. each day as follows:
+Day Shopkeeper’s notes
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10 Sold three packets already
+Sold one more packet
+One went mouldy
+Two more mouldy ones, I hope my fridge is cold enough
+Seems OK, nothing to report
+Sold four more – all to one customer!
+Nothing to report
+Another two mouldy ones this morning
+Sold two more
+Three more mouldy ones – I’ll throw the rest out
+(iii) Calculate the Kaplan-Meier estimate of the survival function for cheese
+staying free from mould.
+[6]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q8
+(i)
+Right censoring 
+Of those packets of cheese which are sold or discarded after 10 days.
+We do not know when these packets would have gone mouldy, but
+we know that it was after they ceased to be observed. 
+Random censoring 
+The time at which a packet of cheese is sold may be considered as
+a random variable. 
+Type 1 censoring 
+For those packets thrown out at day 10, the time of censoring is known in
+advance.
+
+Interval censoring 
+Because data were only collected once per day: we only know that
+events happened between 8 a.m. one day and 8 a.m. the next day;
+we do not know exactly when within this period they happened. 
+%% ----- Page 15
+EITHER
+Informative censoring 
+If packets that were sold were those which looked the freshest then
+those packets censored for this reason might be less likely to go
+mouldy at each duration in excess of the censoring time than those
+which remain on the shelves. 
+OR
+Non-informative censoring
+If shoppers select packets of cheese at random there is no reason to
+believe that those packets bought are any more or less likely to go
+mouldy than those remaining on the shelves.
+(ii)
+
+
+[Max 3]
+Right censoring
+Hard to change this, as would need to prevent customers buying cheese.
++1
+Random censoring
+Hard to change as would need to prevent customers buying cheese.
++1
+Type 1 censoring
+Could be removed by leaving all the cheese in the shelves until the
+last packet went mouldy or was sold.
++1
+OR
+Could be removed by throwing the remaining cheese away once a certain
+number had already gone mouldy, in which case we would have
+introduced Type II censoring.
++1
+Interval censoring
+Could be reduced by more frequent checks. Hard to remove,
+other than by continuous monitoring of the cheese and the
+removal of cheeses at the first sign of mould. Video surveillance
+might be a solution.
++1
+Informative censoring
+Could be removed by giving customers no choice about which
+packet of cheese they bought. However, customers
+might object to being treated this way.
+%% ----- Page 16
++1
+Non-informative censoring
+This feature is desirable so we would not want to remove it.
+(iii)
+t j n j
+0
+2
+2
+3
+4
+6
+9
+10 20
+17
+16
+15
+13
+9
+7
+5
+
++1
+d j
+c j
++1
+[Max 3]
+d j /n j 1  d j /n j
+1/16
+2/15 15/16
+13/15
+2/9 7/9
+3
+1
+1
+2
+4
+2
+3 2
+2 3/5 2/5
+   
++31⁄2
+ d j
+The Kaplan-Meier estimate is S(t) =   1 
+t j  t 
+ n j
+
+ . 
+
+
+t Kaplan-Meier estimate of S(t)
+0 \leq t < 3
+3 \leq t < 4
+4 \leq t < 8
+8 \leq t < 10
+t = 10 1
+15/16=0.9375
+13/16=0.8125
+91/144=0.6319
+91/360=0.2528
++1 +1
++2
+[6]
+[Total 12]
+The most common error with this question was to assume the wrong
+decrement (i.e. that the decrement was cheese being sold, whereas the
+question stated that interest is in “the hazard of cheese going mouldy”).
+Candidates who assumed the wrong decrement scored little for part (i) but
+could gain credit for part (ii) if their suggestions were sensible given what they
+had written in part (i), and for part (iii) if they applied the correct method.
+%% ----- Page 17
