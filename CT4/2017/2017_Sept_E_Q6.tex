@@ -1,0 +1,284 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+CT4 A2017–3
+PLEASE TURN OVER6
+(i)
+Define a Poisson process.
+
+An insurance company observed that 200 claims arrived in the 52 weeks of the
+calendar year 2014. The company has for some years modelled the number of claims
+per week, D, using a time-homogeneous Poisson process model with parameter λ.
+The company proposes to use a value  \;=\; 3.846 for 2014.
+(ii)
+Explain why this is a sensible value of λ to use.
+
+The company’s records for 2014 show that the number of claims per week was
+distributed as follows:
+Claims
+per week Number of weeks
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9 or more 1
+5
+8
+10
+12
+4
+6
+4
+1
+1
+(iii) Test the fit of the Poisson distribution with parameter  \;=\; 3.846 to the data.
+[7]
+(iv) State why the company might perform a serial correlations test on the
+experience.
+
+[Total 11]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+Q6
+(i)
+A Poisson process is a counting process in continuous time { N t , t  0} ,
+where N t records the number of occurrences of a type of event within
+the time interval from 0 to t. +1
+Events occur singly and may occur at any time; 
+the probability that an event occurs during the short time interval from time t
+to time t + h is approximately equal to λh for small h, where the parameter λ is
+the rate of the Poisson process.
+
+OR
+A Poisson process is an integer valued process in continuous time { N t , t  0} ,
+where
+
+N 0 \;=\; 0
+
+Pr[ N t + h  N t \;=\; 1| F t ] \;=\;  h + o ( h )
+Pr[ N t + h  N t \;=\; 0 | F t ] \;=\; 1   h + o ( h )
+Pr[ N t + h  N t  0,1| F t ] \;=\; o ( h )
++1
+%% ----- Page 9
+OR
+A Poisson process with rate  is a continuous-time integer-valued process
+N t , t  0 , with the following properties:
+
+N 0 \;=\; 0 
+N t has independent increments 
+N t has Poisson distributed stationary increments
+n  t  s
+   ( t  s )   e ( )
+,
+P  N t  N s \;=\; n  \;=\;
+n !
+s  t , n \;=\; 0,1,...
+
+
+(ii)
+Because it is total claims divided by number of weeks (to the nearest whole
+week):
+3.846 \;=\;
+200
+,
+52
+and this can be shown by formal procedures (e.g. maximum likelihood)
+to be a good estimate.
+(iii)
+The null hypothesis is that the number of claims per week follows a
+Poisson distribution with parameter 3.846.
+Using the Poisson formula, the probability of getting exactly d claims
+in a week is given by
+e  (200/52) (200 / 52) d
+Pr[D = d] =
+d !
+%% ----- Page 10
+
+
+
+
+This produces an expected distribution of claims per week as follows:
+Claims
+Probability
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9 or more
+Expected number of weeks
+0.02136
+0.08216
+0.15800
+0.20257
+0.19478
+0.14983
+0.09604
+0.05278
+0.02537
+0.01711
+1.11
+4.27
+8.22
+10.53
+10.13
+7.79
+4.99
+2.74
+1.32
+0.89
++2
+Combining the categories 0 and 1, and the categories 69 so that
+each of the expected values exceeds 5, we can test the fit using a
+chi-squared test as follows:
+Claims
+Actual number
+of weeks, A
+01
+2
+3
+4
+5
+69
+6
+8
+10
+12
+4
+12
+Expected number
+of weeks, E (A – E) 2 /E
+5.38
+8.22
+10.53
+10.13
+7.79
+9.94 0.071
+0.006
+0.027
+0.345
+1.844
+0.427
+
++1
+The chi-squared statistic is 2.72. 
+The number of degrees of freedom is the number of categories less one
+because of the constraint imposed by the number of weeks in the year. 
+So there are 5 degrees of freedom.. 
+The critical value at the 5% level is 11.07. 
+Since 2.72 < 11.07 
+we do not reject the null hypothesis, and conclude that the
+Poisson distribution with parameter 3.846 fits the data well. 
+%% ----- Page 11
+ACCEPTABLE ALTERNATIVE GROUPING OF CLAIMS
+Claims
+Actual number
+of weeks, A
+01
+2
+3
+4
+5
+6
+79
+6
+8
+10
+12
+4
+6
+6
+Expected number
+of weeks, E (A – E) 2 /E
+5.38
+8.22
+10.53
+10.13
+7.79
+4.99
+4.95 0.071
+0.006
+0.027
+0.345
+1.844
+0.203
+0.223
++1
+The chi-squared statistic is 2.72. 
+The number of degrees of freedom is the number of categories less one
+because of the constraint imposed by the number of weeks in the year. 
+So there are 6 degrees of freedom. 
+The critical value at the 5% level is 12.59. 
+Since 2.72 < 12.59 
+we do not reject the null hypothesis, and conclude that the
+Poisson distribution with parameter 3.846 fits the data well.
+(iv)
+In order to test for independence of the number of claims in
+successive weeks.
+Parts (i) and (ii) of this question were well answered. In part (ii) many
+candidates correctly calculated the expected number of weeks having 0, 1, 2,
+... claims using a Poisson distribution with parameter 3.846. Fewer knew
+how to test the hypothesis that this Poisson distribution fit the data. Of those
+who did a chi-squared test, only a minority grouped the claims categories so
+that the expected number of claims in each category was 5 or more. A
+significant minority of candidates calculated a table based on the actual and
+expected number of claims occurring in weeks with 0, 1, 2, ... claims, and
+tried to do a chi-squared test on this. This test cannot include the weeks in
+which no claims take place (when both actual and expected numbers are zero
+whatever the value of the parameter), so limited credit was given for this
+approach. A common error was to state that the number of degrees of
+freedom was the number of groups minus 1 because of the estimation of the
+Poisson parameter. This is incorrect; it is the number of groups minus one
+because of the constraint that there are 52 weeks in the year. In part (iv) only
+%% ----- Page 12
+
+[7]
++1
+
+[Total 11]
+a small number of candidates correctly identified the reason for performing a
+serial correlations test. Many candidates made vague reference to “clumps”
+or “runs”, suggesting that they were thinking in a general way about statistical
+tests of a graduation, rather than trying to understand the scenario in the
+question.
