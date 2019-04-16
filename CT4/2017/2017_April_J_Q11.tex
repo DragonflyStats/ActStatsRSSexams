@@ -1,0 +1,228 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+[Total 14]
+CT4 A2017–811
+A large company operates a health benefits scheme which pays a sickness benefit to
+any employee who is unable to work through ill-health and a death benefit to any
+employee who dies.
+(i) Draw a transition diagram with three states which could be used to analyse
+data from this scheme.
+
+(ii) Give the likelihood of the data, defining all the terms you use. 
+(iii) Derive the maximum likelihood estimator of the rate of falling sick. 
+The company records data on 1 January each year, classified by age last birthday on:
+
+
+the total number of employees (including those in receipt of sickness benefit).
+the number of employees in receipt of a sickness benefit.
+Some recent data are given in the table below:
+Age last
+birthday
+51
+52
+53
+Total number of employees
+on 1 January in year
+Number of employees in receipt of
+sickness benefit on 1 January in year
+2014 2015 2016 2014 2015 2016
+148
+146
+140 162
+148
+144 180
+160
+146 12
+10
+8 20
+18
+20 8
+7
+6
+The company wishes to estimate the rates of falling sick and recovery at age 52 years
+nearest birthday over the two-year period consisting of the calendar years 2014 and
+2015.
+(iv)
+Determine suitable exposed-to-risks for calculating the rates of falling sick and
+recovery.
+[6]
+[Total 15]
+END OF PAPER
+CT4 A2017–9
+
+Q11
+(i)
+Sick (in receipt of
+sick pay)
+Healthy
+Dead
++2
+
+(ii)
+Let the number of transitions observed from state i to state j be d ij . 
+Let the total waiting time in state i be W i . 
+Let the intensity of the transition from state i to state j be μ ij . 
+Then the likelihood, L, is
+HS
+L  exp[  W H ( \mu_ HS + \mu_ HD )]exp[  W S ( \mu_ SH + \mu_ SD )]( \mu_ HS ) d ( \mu_ HD ) d
+HD
+SH
+( \mu_ SH ) d ( \mu_ SD ) d
+SD
++21⁄2
+
+(iii)
+Taking logarithms of the likelihood we have
+log e L \;=\;  W H ( \mu_ HS ) + d HS log e \mu_ HS + terms not involving \mu_ HS
+
+HS
+To maximize this with respect to \mu_ we proceed as follows:
+d log e L
+d \mu_ HS
+\;=\;  W
+H
+
+d HS
+\mu_ HS
+.
+Setting this to zero produces the estimate
+\mu_
+^
+HS
+\;=\;
+d HS
+
+
+
+W H
+and since
+d 2 log e L
+( d \mu_ HS ) 2
+\;=\;
+d HS
+( \mu_ HS ) 2
+which is negative, we have a maximum.
+%% ----- Page 24
+
+
+
+(iv)
+Let the number of healthy members aged x last birthday on 1 January in
+year t be H x,t , and the number of sick members be S x,t .
+We need to adjust the exposed-to-risk to age nearest birthday. 
+Assuming birthdays are evenly distributed across the calendar year, 
+those aged 52 nearest birthday consist of half of those aged 51 last
+birthday and half of those aged 52 last birthday. 
+Further, assuming the population varies linearly over each calendar year
+we can apply the trapezium rule. 
+c
+The required central exposed to risk for sick members, E 52, S is given by
+c
+E 52,
+S \;=\;
+1  1
+1
+1
+1
+
+S 51,2014 + S 52,2014 ) + ( S 51,2015 + S 52,2015 ) + ( S 51,2015 + S 52,2015 ) + ( S 51,2016 + S 52,2016 ) 
+(
+
+2  2
+2
+2
+2
+
++1
+which is
+c
+E 52,
+S \;=\;
+1  1
+1
+1
+1
+( 12 + 10 ) + ( 20 + 18 ) + ( 20 + 18 ) + ( 8 + 7 )   \;=\; 28.25 .
+
+2  2
+2
+2
+2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Similarly, we have
+c
+E 52,
+H \;=\;
+1  1
+1
+1
+1
+
+H 51,2014 + H 52,2014 ) + ( H 51,2015 + H 52,2015 ) + ( H 51,2015 + H 52,2015 ) + ( H 51,2016 + H 52,2016 ) 
+(
+
+2  2
+2
+2
+2
+
++1
+and, since H x,t = total members – S x,t , we have
+c
+E 52,
+H \;=\;
++1
+1  1
+1
+1
+1
+( 136 + 136 ) + ( 142 + 130 ) + ( 142 + 130 ) + ( 172 + 153 )   \;=\; 285.25 
+
+2  2
+2
+2
+2
+
+[6]
+[Total 15]
+This question was well answered by most candidates. A very common error
+in part (iii) was to forget that the exposed to risk for falling sick should not
+include those persons who are already sick. The total exposed to risk was
+313.5, of whom 285.25 were Healthy (and hence at risk of falling sick) and
+28.25 were Sick (and hence at risk of recovery).
+END OF EXAMINERS’ REPORT
+%% ----- Page 25
