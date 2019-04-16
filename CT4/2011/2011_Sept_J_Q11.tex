@@ -65,31 +65,34 @@ previous morning.
 The actuary considers that the weather at the start of a journey, rather than being independent of past history, depends upon the weather at the start of the previous journey. He believes that if it was raining at the start of a journey the probability of it
 raining at the start of the next journey is r (0 < r <1), and if it was not raining at the
 start of a journey the probability of it raining at the start of the next journey is
-s (0 < s < 1, r \neq s).
+s $(0 < s < 1, r \neq s)$.
 (v) Write down the transition matrix for the Markov Chain for the weather.
 (vi) Explain why the process with three states {0,1,2}, being the number of his umbrellas at the actuary’s current location, would no longer satisfy the
 Markov property.
 
 (vii) Describe the additional state(s) needed for the Markov property to be satisfied, and draw a transition diagram for the expanded system.
 
-[Total 18]
-END OF PAPER
-CT4 S2011—8
+%%-- [Total 18]
+%%-- END OF PAPER
+%%-- CT4 S2011—8
+\newpage
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Question 11
+%% -- Question 11
 (i)
-Transitions from state “Zero”
-No umbrellas to take so must be two at the other location.
-Transitions from state “One”
-If it does not rain, then there remains one at each location, probability 1 − p .
-If it does rain, both umbrellas end up at the next destination, probability p .
-Transitions from state “Two”
-If it does not rain, then forgets to take an umbrella so none is at the next location,
+\begin{itemize}
+\item Transitions from state “Zero”
+\item No umbrellas to take so must be two at the other location.
+\item Transitions from state “One”
+\item If it does not rain, then there remains one at each location, probability 1 − p .
+\item If it does rain, both umbrellas end up at the next destination, probability p .
+\item Transitions from state “Two”
+\item If it does not rain, then forgets to take an umbrella so none is at the next location,
 probability 1 − p .
-If it does rain, takes one of the umbrellas to the other location, probability p .
+\item If it does rain, takes one of the umbrellas to the other location, probability p .
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (ii)
 One step transition matrix is:
 0
@@ -188,20 +191,19 @@ e.g. if in state “Two”, probability of next moving to “Zero” is 1- r if 
 last journey and 1 − s if it did not. As r does not equal s the Markov property is not
 satisfied.
 (vii)
-If we expand the states to include information about whether it rained on the last
+\begin{itemize}
+\item If we expand the states to include information about whether it rained on the last
 journey, then the Markov property is satisfied.
-Five states are needed, as cannot be in position with zero umbrellas when it rained on
+\item Five states are needed, as cannot be in position with zero umbrellas when it rained on
 last journey,
 so the state space is {Zero, One Rained, One Did Not Rain, Two Rained, Two Did
 Not Rain}
-Page 19%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
-Many candidates scored highly on parts (i)–(iii) of this question, but a much smaller
-proportion made a solid effort at parts (iv)–(vii). In part (vi), candidates who simply said that
-the process would not satisfy the Markov property because it depended on the “past history”
-scored only limited credit. For full credit, it was necessary to say that what matters is
-whether it was raining or not on the last journey, and to give an example of transitions with
-differing probabilities. In part (vii), some candidates produced four-state solutions, splitting
-either of states One or Two, but not both. These candidates were given credit for diagrams
-correct for the solution they were offering.
-END OF EXAMINERS’ REPORT
-Page 20
+\end{itemize}
+
+%%-- Page 19%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
+
+% Many candidates scored highly on parts (i)–(iii) of this question, but a much smaller proportion made a solid effort at parts (iv)–(vii). In part (vi), candidates who simply said that the process would not satisfy the Markov property because it depended on the “past history” scored only limited credit. For full credit, it was necessary to say that what matters is whether it was raining or not on the last journey, and to give an example of transitions with differing probabilities. In part (vii), some candidates produced four-state solutions, splitting either of states One or Two, but not both. These candidates were given credit for diagrams correct for the solution they were offering.
+
+%% END OF EXAMINERS’ REPORT
+%% Page 20
+\end{document}
