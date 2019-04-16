@@ -1,0 +1,194 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+CT4 A2017–47
+(i)
+Describe the essential feature of a proportional hazards model.
+
+A study was made of the impact of drinking beer on men aged 60 years and over. A
+sample of men was followed from their 60th birthdays until they died, or left the study
+for other reasons. The baseline hazard of death, μ, was assumed to be constant, and a
+proportional hazards model was estimated with a single covariate: the average daily
+beer intake in standard-sized glasses consumed, x. The equation of the model is:
+h ( t ) \;=\; \mu_ exp(  x )
+where h ( t ) is the hazard of death at age 60 + t.
+The estimated value of μ is 0.03, and the estimated value of β is 0.2.
+(ii) Explain how μ and β should be interpreted, in the context of this model.
+
+(iii) Calculate the estimated hazard of death of a man aged exactly 62 years who
+drinks two glasses of beer a day.
+
+A man is aged exactly 60 years and drinks three glasses of beer a day.
+(iv)
+(a) Calculate the estimated probability that this man will still be alive in
+10 years’ time.
+(b) Calculate the expectation of life at age 60 years for this man.
+
+Another man is aged exactly 60 years. He drinks beer only in his local bar. He drinks
+all the beer he buys and is expected to continue drinking the same amount of beer
+every day until he dies. The owner of the bar is interested in selling as much beer as
+possible.
+(v)
+CT4 A2017–5
+Determine the average number of glasses of beer a day the owner must sell the
+man in order to maximise the total amount of beer the man buys over his
+remaining lifetime.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q7
+(i)
+EITHER
+In a proportional hazards model the hazard factorises 
+into a component which depends only on duration and a
+component which depends only on the covariates. 
+OR
+In a proportional hazards model the hazard, h(t), may be represented as
+h(t) = h 0 (t)g(z), 
+where h 0 (t) depends only on duration and g(z) depends only
+on the covariates 
+As a consequence, the effect of a covariate is to shift the hazard up or
+down by a the same proportion at all durations OR the ratio between the
+hazards for two individuals, A and B, with different
+covariate vectors, h A (t)/h B (t), is constant/does not depend on duration t.
+(ii)
+μ is the hazard for a man who does not drink beer.
++1
+β measures the impact on the hazard of a one glass increase in the daily
+amount of beer drunk
+(iii)
++1
+
+The hazard for a man who drinks two glasses of beer a day is
+0.03exp(0.2 * 2) \;=\; 0.0448.
+(iv)
++1
+
+(a)
++1
+
+The probability that a man aged 60 years who drinks three glasses of
+beer a day will survive to his 70th birthday is
+ 10
+
+exp    0.03exp(0.2 *3) dt  \;=\; exp(  0.547) \;=\; 0.579 .
+
+
+ 0
+
++1
+%% ----- Page 13
+(b)
+Because the hazard of death is constant, the expectation of life at age
+60 years is given by
+1
+1
+1
+\;=\;
+\;=\;
+\;=\; 18.3 years.
+h ( t ) \mu_ exp(  x ) 0.03exp(0.2*3)
++1
+
+(v)
+The owner’s total revenue R is proportional to the average number of glasses
+of beer drunk per day multiplied by the man's expectation of life:
+R 
+x
+.
+0.03exp(0.2 x )
++1
+THEN EITHER
+We maximise R with respect to x.
+dR 0.03exp(0.2 x )  x (0.03*0.2)exp(0.2 x )
+1  0.2 x
+\;=\;
+\;=\;
+.
+dx
+0.03exp(0.2 x )
+[0.03exp(0.2 x )] 2
+This is zero when 1 – 0.2x = 0, or when x = 5.
+d 2 R  0.2[0.03exp(0.2 x )]  (1  0.2 x )[0.03*0.2exp(0.2 x )]
+\;=\;
+dx 2
+[0.03exp(0.2 x )] 2
+
+
+
+\;=\;
+ 0.2  0.2(1  0.2 x )
+[0.03exp(0.2 x )]
+\;=\;
+0.2(0.2 x  2)
+[0.03exp(0.2 x )]
+which is negative when x = 5, 
+so we have a maximum, 
+and the owner should sell the man five glasses of beer per day. 
+OR
+Taking the logarithm of R we have
+log R \;=\; log x  log 0.03  0.2 x
+d log R 1
+\;=\;  0.2 .
+dx
+x
+This is zero when x = 5.
+%% ----- Page 14
+
+
+Since
+d 2 log R
+1
+\;=\; 2
+2
+dx
+x
+
+which is always negative, 
+we have a maximum. 
+So the owner should sell the man five glasses of beer per day.
+
+
+[Total 11]
+The better-prepared candidates answered part (i) well. Part (ii) was answered
+poorly by many candidates. The question asked for the interpretation of the
+parameters μ and β “in the context of this model”, but most candidates simply
+gave general interpretation which were not given credit. Few candidates
+made serious attempts at part (v). Most seemed to have little idea of how to
+express the total amount of beer the man buys over his remaining lifetime as
+a function of the number of glasses of beer to be sold to him per day. Credit
+was given for an alternative approach in which candidates computed the
+expected revenue for 0, 1, 2, ... glasses per day and showed that this
+reached a maximum at 5 glasses.
