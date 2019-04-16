@@ -1,0 +1,308 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}CT4 A2018–5 
+PLEASE TURN OVER8
+(i)
+State why the Gompertz model is often used in analyses of human mortality.
+
+The following data are taken from an investigation of the mortality of males aged
+60–70 years inclusive in a developed country.
+Age (years) x\mu x Deaths Exposed-to-risk
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70 0.02029
+0.02230
+0.02466
+0.02721
+0.02937
+0.03102
+0.03194
+0.03055
+0.04297
+0.04405
+0.04749 49
+51
+55
+68
+70
+67
+69
+66
+84
+88
+83 2,415
+2,287
+2,230
+2,499
+2,383
+2,160
+2,160
+2,160
+1,955
+1,998
+1,748
+(ii) Determine the parameters of the Gompertz model using the data for ages 60
+and 70 years only.
+
+(iii) Test the overall fit of the model you estimated in part (ii) using data from
+ages 61–69 years only.
+(iv)
+
+CT4 A2018–6
+Comment on your results in part (iii).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q8
+(i)
+Page 14
+The Gompertz model has been shown to approximate human
+mortality closely in the middle and/or older ages in human populations. 
+The Gompertz model is simple to understand, 
+and is easy to fit.
+(ii)
+
+[Total for part (i): 2]
+EITHER
+The Gompertz model is
+Bc x .
+\mu x =
+Hence
+\mu x Bc x
+= =
+c x − y .
+y
+\mu y Bc 
+\mu 70
+= c 10
+\mu 60 
+Using the values for ages 60 and 70 years we have
+c = 10
+0.04749
+0.02029
+So c = 1.08876.
+
+Hence
+log e B log e 0.02029 − 60(0.08504)
+=
+and B = 0.0001234.
+
+OR
+The Gompertz model is
+\mu
+=
+x exp( α 0 + α 1 x )
+Hence
+log e\mu x = α 0 + α 1 x
+
+Using the values for ages 60 and 70 years we have
+log e 0.02029 =α 0 + 60 α 1
+log e 0.04749 =α 0 + 70 α 1
+
+Page 15
+Hence
+log e =
+0.04749 log e 0.02029 + 10 α 1
+=
+α 1
+log e (0.04749 / 0.02029)
+= 0.085039 .
+10
+
+So that
+α 0 = log e 0.02029 − 60(0.08504) =− 9.0000
+(iii)
+
+[Total for part (ii): 3]
+We compute the actual and expected deaths in the table below.
+EITHER using\mu x
+Age x Actual
+deaths Gompertz
+\mu x Expected
+deaths z x z x 2
+61
+62
+63
+64
+65
+66
+67
+68
+69 51
+55
+68
+70
+67
+69
+66
+84
+88 0.02209
+0.02405
+0.02619
+0.02851
+0.03104
+0.03380
+0.03680
+0.04006
+0.04362 50.52
+53.64
+65.44
+67.94
+67.05
+73.00
+79.48
+78.32
+87.15 0.0673
+0.1863
+0.3164
+0.2498
+–0.0061
+–0.4683
+–1.5121
+0.6416
+0.0911 0.0045
+0.0347
+0.1001
+0.0624
+0.0000
+0.2193
+2.2864
+0.4116
+0.0083
+Actual Gompertz Expected z x z x 2
+deaths\mu x + 1/2 deaths 51
+55
+68
+70
+67
+69
+66
+84
+88 0.02305
+0.02510
+0.02732
+0.02975
+0.03239
+0.03526
+0.03839
+0.04180
+0.04551 52.72
+55.97
+68.28
+70.89
+69.96
+76.17
+82.93
+81.72
+90.94 -0.2364
+-0.1290
+-0.0342
+-0.1060
+–0.3541
+–0.8217
+–1.8594
+0.2517
+-0.3078 0.0559
+0.0166
+0.0012
+0.0112
+0.1254
+0.6752
+3.4572
+0.0634
+0.0947
+OR using\mu x + 1/2
+Age x
+61
+62
+63
+64
+65
+66
+67
+68
+69
+[+2]
+Page 16
+The test is the chi-squared test, and the test statistic is
+∑ z x
+2
+
+x
+(iv)
+The null hypothesis is that the observed deaths come from a population
+in which the underlying mortality is described by the fitted model in (ii). 
+The calculated value of the test statistic is 3.1267.
+OR,
+using\mu x + 1/2 it is 4.5009 
+We compare this with the critical value of the chi-squared distribution
+with 9 degrees of freedom at the 95% level, 
+because we have not used the data involved in the test
+to estimate the expected deaths. 
+The critical value is 16.92. 
+Since 3.1267(4.5009) < 16.92, 
+we have no reason to reject the null hypothesis. 
+[Total for part (iii): 6]
+The Gompertz model seems to fit the data well. 
+However there is a relatively large negative deviations at age 67 years
+
+The exposed-to-risk is exactly the same at ages 65 to 67 years.
+Could there be a transcription error in the data?
+
+The model might be a better fit if MLE or weighted least squares had
+been used to fit the parameters.
+
+[Total for part (iv): max. 1]
+[Total 12]
+Parts (i) and (ii) of this question were well answered, with the majority
+of candidates correctly determining the parameters of the Gompertz
+model. Answers to part (iii) varied. Common errors included using the
+data given in the question, rather than the fitted model, to estimate the
+expected deaths, and hence effectively carrying out a chi-squared test
+on the rounding errors (unsurprisingly, the fit was found to be
+extremely good). Few candidates realised that, as the data for ages 61-
+69 years had not been used to estimate the parameters of the Gompertz
+distribution, and we can suppose the estimated \mu x s for each age to have
+been obtained independently, it was not necessary to deduct two
+degrees of freedom when carrying out the chi - squared test (it would
+Page 17
+have been necessary had data for all ages been used to estimate the
+parameters).
