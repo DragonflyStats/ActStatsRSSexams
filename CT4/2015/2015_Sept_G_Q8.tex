@@ -1,0 +1,102 @@
+[Total 10]8
+(i)
+Define a Markov Jump Process.
+
+A company provides phones on contracts under which it is responsible for repairing
+or replacing any phones which break down.
+When a customer reports a fault with a phone, it is immediately taken to the
+company’s repair shop and it is assessed whether it can be fixed (meaning fixable at
+reasonable cost). Based on previous experience, it is estimated that the probability of
+a phone being fixable is 0.75. If a phone is not fixable it is discarded and the
+customer is provided with a new phone.
+If a repaired phone breaks again the company, in line with its customer charter, will
+not attempt to repair it again, and so discards the phone and replaces it with a new
+one.
+The status of a phone is to be modelled as a Markov Jump Process with state space
+{Never Broken (NB), Repaired (R), Discarded (D)}.
+The company considers the rate at which phones break down to vary according to
+whether a phone has previously been repaired as follows:
+(ii)
+Status Probability of break down in small
+interval of time, dt
+Never Broken
+Repaired 0.1dt + o(dt)
+0.2dt + o(dt)
+Draw a transition diagram for the possible transitions between the states,
+including the associated transition rates.
+
+Let P NB (t), P R (t) and P D (t) be the probabilities that a phone is in each state after time t
+since it was provided as a new phone.
+(iii) Determine Kolmogorov’s forward equations in component form for P NB (t),
+P R (t) and P D (t).
+
+(iv) Solve the equations in part (iii) to obtain P NB (t) and P R (t).
+(v) Calculate the probability that a phone has not been discarded by time t.
+
+[Total 10]
+CT4 S2015–7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+Q8
+(i)
+A process with a continuous time space and discrete state space
+satisfying the Markov property that
+EITHER
+the future progression of the process does not depend on the history of the
+process prior to arrival in the current state.
+OR
+P[X t  A  X s 1 = x 1 , X s 2 = x 2 , ..., X s n = x n , X s = x] = P[X t  A  X s = x]
+for all times s 1 < s 2 < ... < s n < s < t, all states x 1 , x 2 , ..., x n , x in S and all
+subsets A of S.
+%%--------------------------- 10Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(ii)
+0.075
+Repair-
+ed
+Never
+Broken
+0.2
+0.025
+(iii)
+Discarded
+d
+P (t) = -0.1P NB (t)
+dt NB
+d
+P (t) = 0.075P NB (t) - 0.2P R (t)
+dt R
+d
+P D ( t ) ;\+\; 0.2 P R ( t ) \;=\; 0.025 P NB ( t )
+dt
+(iv)
+d
+P NB (t) = - 0.1P NB (t)
+dt
+d
+[ln P NB (t)] = -0.1
+dt
+ln P NB (t) = -0.1t + const
+P NB (0) = 1 so constant = 0
+P NB (t) = exp(-0.1t)
+d
+P R (t) = 0.075 exp(-0.1t) - 0.2P R (t)
+dt
+ d
+
+  dt P R ( t ) \;=\; 0.2 P R ( t )   exp(0.2t) = 0.075 exp(-0.1t) exp(0.2t)
+d
+[exp(0.2t) P R (t)] = 0.0750 exp(0.1t)
+dt
+%%--------------------------- 11Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+exp(0.2t) P R (t) = 0.750 exp(0.1t) + const
+P R (0) = 0 so constant = -0.75
+P R (t) = 0.750 (exp(-0.1t) - exp(-0.2t))
+(v)
+This is P NB (t) + P R (t)
+= 1.75 exp(-0.1t) - 0.75 exp(-0.2t)
+Answers to parts (iii)-(v) of this question were very disappointing. Few
+candidates worked out a constant of integration for P NB (t) (even though it was
+equal to zero). Few candidates produced the correct transition diagram in
+part (ii). Those candidates who wrote down incorrect transition diagrams
+were given credit in parts (iii)-(v) for answers which correctly followed through
+from the incorrect transition diagrams.
