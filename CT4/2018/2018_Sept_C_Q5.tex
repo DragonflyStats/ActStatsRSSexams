@@ -1,0 +1,224 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+[Total 6]5
+The following data are available for a sample of lives that were alive for at least some
+time between 1 January 2017 and 31 December 2017:
+•
+•
+•
+•
+6
+date of birth;
+date of entry into observation (if entering after 1 January 2017);
+date of death (if died between 1 January 2017 and 31 December 2017);
+date of exit from observation while still alive (if leaving before 31 December
+2017).
+(i) Derive a maximum likelihood estimator of the hazard of death which could be
+used with these data and which uses all the information available on the timing
+of death.
+
+(ii)
+ Explain how these data can be used to estimate a life table.
+
+[Total 7]
+A Markov jump process has the following generator matrix:
+A
+B
+C
+(i)
+⎛ −0.3 0.2 0.1 ⎞
+⎟
+⎜
+⎜ 0.1 −0.5 0.4 ⎟
+⎜ 0.3 0.1 −0.4 ⎟
+⎠
+⎝
+Draw a transition graph for this process.
+
+The process is in state A at time zero.
+(ii)
+Give Kolmogorov’s forward equations for
+d
+d
+d
+P AA ( t ) ,
+P AB ( t ) and
+P AC ( t ) .
+dt
+dt
+dt
+
+(iii) Calculate the probability that the process remains in state A throughout the
+period t = 0 to t = 2.
+
+(iv)
+ Determine the probability that the third jump of the process is into state C.
+[Total 9]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q5
+(i)
+Assume that the hazard of death (or force of mortality) is constant
+between ages x and x+1 and takes the unknown value \mu.
+Probability of observing all the data we actually observe – both
+censored lives and those which died is the likelihood L, which is
+∏
+L =
+S ( t i )
+all censored lives
+∏
+f ( t i ) ,
+
+all lives which died
+where t i is the duration for which life i is observed, and S(t i ) and f(t i )
+are the survival and probability density functions of the chosen survival
+distribution.
+
+^
+To obtain \mu , define a variable δ i such that
+δ i = 1 if life i died
+δ i = 0 if life i was censored.
+
+Then the likelihood can be written
+n n
+i = 1 i = 1
+L = ∏ f ( t i ) δ i S ( t i ) 1 − δ i = ∏ \mu δ i exp( − \mu t i ) .
+n
+∑ δ
+Thus
+log L
+=
+
+n
+log \mu − ∑ \mu t i
+i
+= i 1 = i 1
+
+We differentiate this with respect to \mu to give
+n
+\partial log L
+=
+\partial \mu
+∑ δ
+i = 1
+\mu
+i
+n
+− ∑ t i .
+
+i = 1
+Page 7
+Setting this equal to zero produces
+n
+∑ δ
+i = 1
+\mu
+i
+n
+= ∑ t i ,
+
+i = 1
+so that
+n
+^
+\mu =
+∑ δ
+i = 1
+n
+∑ t
+i = 1
+i
+.
+
+i
+n
+∑
+i
+\partial 2 log L
+i = 1
+We can check that this is a maximum by noting that
+,
+=
+−
+\mu 2
+\partial \mu 2
+which is negative.
+(ii)
+δ
+
+
+[max. 4]
+Obtain a series of separate estimates for the different hazards
+in each year of age for the calendar year 2017. 
+Suppose that the maximum likelihood estimate of the constant force
+during the single year of age from x to x+1 is \mu x . 
+Then the probability that a person alive at exact age x will still be alive at
+exact age x+1 is just S x (1) . Given the constant force, then
+^
+S x =
+(1) exp( − \mu x ) .
+
+In general, therefore
+ m − 1 ^ 
+
+S x ( =
+m ) m =
+p x exp − ∑ \mu x + j  .
+ j = 0
+
+
+
+By ‘chaining’ together the probabilities in this way, we can create
+a life table from our estimates and evaluate probabilities over
+any relevant age range.
+Page 8
+
+
+[max. 3]
+[Total 7]
+Part (i) of this question was from the Core Reading, Unit 6, pages
+8-11. A large number of candidates based their answers on the
+Poisson likelihood. This is not quite correct as, strictly speaking, it
+requires observation of all lives for the same fixed period, and the
+question states clearly that this is not the case. Nevertheless,
+candidates could score credit for correctly deriving the correct
+maximum likelihood estimator from the Poisson likelihood. On the
+other hand, Binomial likelihoods were given little credit, as they do
+not furnish a maximum likelihood estimator of the hazard of death
+(they allow one to construct an estimator of q x ). The answer to
+part (ii) given above follows that in the Core Reading, Unit 6,
+pages 11-12. Some candidates framed their answers to part (ii)
+around the need for graduation and smoothing. Some credit was
+given for such answers.
+Page 9
