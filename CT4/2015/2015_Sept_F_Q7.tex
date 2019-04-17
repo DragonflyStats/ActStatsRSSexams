@@ -1,0 +1,145 @@
+[Total 10]
+PLEASE TURN OVER7
+A school offers a one year course in a foreign language as an evening class. This is divided into three terms of 13 weeks each with one lesson per week. At the end of
+each lesson all the students sit a test and any that pass are awarded a qualification, and no longer attend the course.
+Last year 33 students started the course. Of these 13 dropped out before completing the year, and 16 passed the test before the end of the year. The last lesson attended by
+the students who did not stay for the whole 39 lessons is shown in the table below along with their reason for leaving.
+Number of
+students Last lesson
+attended Reason for
+leaving
+5
+1
+2
+2
+5
+6
+4
+1
+3 1
+6
+7
+13
+14
+27
+28
+30
+36 Dropped out
+Dropped out
+Passed test
+Dropped out
+Passed test
+Passed test
+Dropped out
+Dropped out
+Passed test
+(i) Calculate the Nelson-Aalen estimate of the survival function.
+
+(ii) Sketch a graph of the Nelson-Aalen estimate of the survival function, labelling
+the axes.
+
+(iii) Determine the probability that a student who starts the course passes by the
+end of the year.
+
+Since only four students had not passed by the end of the year and a total of 16 had
+passed, the school claims in its publicity that 80% of students are awarded the
+qualification by the end of the year.
+(iv)
+CT4 S2015–6
+Comment on the school’s claim in light of your answer to part (iii).
+
+%%--------------------------- 8Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q7
+(i)
+The Nelson-Aalen estimate for Λ is  t ;\+\;
+t j n j
+0
+1
+6
+7
+13
+14
+27
+28
+30
+36 33
+33
+28
+27
+25
+23
+18
+12
+8
+7
+d j
+c j
+d j
+ n j .
+x j  x
+Λ t
+d j /n j
+5
+1
+2
+2/27 0.0741
+5/23
+6/18 0.2915
+0.6248
+3/7 1.0534
+2
+5
+6
+3
+4
+1
+4
+Since S ( t ) ;\+\; exp  - t  we have:
+t S(t)
+0 \leq t < 7
+7 \leq t < 14
+14 \leq t < 27
+27 \leq t < 36
+36 \leq t < 39 1
+0.9286
+0.7472
+0.5354
+0.3488
+(ii)
+1
+0.9
+0.8/
+0.7
+0.6
+S(t) 0.5
+0.4
+0.3
+0.2
+0.1
+0
+0
+5
+10
+15
+20
+25
+30
+35
+40
+Duration t
+%%--------------------------- 9Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iii)
+EITHER
+1 - S(39) = 65.13%
+OR
+Since 16 students passed the test and 33 started the year, the required
+probability is 16/33 = 48.48%.
+(iv)
+The school has ignored those students who dropped out during the year.
+Since they did not pass, their exclusion would clearly increase the proportion
+who pass.
+In part (i) most candidates managed to compute the correct Nelson-Aalen
+estimate. A minority of candidates supposed that the decrement was
+dropping out rather than passing the test. As the wording of the question did
+not rule out this interpretation, full marks were awarded for the correct survival
+function for this alternative decrement.
