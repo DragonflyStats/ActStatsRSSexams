@@ -1,0 +1,282 @@
+PLEASE TURN OVER11
+(i)
+Describe why an insurance company might want to compare the results of a
+mortality investigation with previous experience.
+
+A large life insurance company has undertaken an investigation of the mortality of its
+policyholders. Currently it assumes that mortality at age x, \mu x , is equal to a standard
+table. The company wishes to use the results from the investigation to see whether
+the standard table is still appropriate. Below are shown some data from the
+investigation.
+Age x Number of
+policies in force Actual death
+claims Expected death
+claims from
+standard table
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79 1,000
+1,200
+1,100
+1,100
+1,000
+1,000
+950
+900
+850
+800 13
+28
+31
+34
+39
+41
+41
+40
+46
+48 23.74
+31.80
+32.50
+36.20
+36.63
+40.73
+42.99
+45.20
+47.34
+49.35
+(ii) Perform an overall test of the hypothesis that the underlying mortality of the
+company’s policyholders is, over this range of ages, represented by the
+standard table.
+[6]
+(iii) Evaluate the suitability of the standard table for use in the company’s financial
+modelling by performing two additional tests for different possible
+inconsistencies between the actual death rates and those represented by the
+standard table.
+[6]
+The company discovers that at age 70 years, one individual owns 25 of the policies in
+the investigation, the remaining policies each being owned by different individuals.
+(iv)
+Assess the impact of this on the variance of the number of claims at age 70
+years.
+
+[Total 18]
+END OF PAPER
+CT4 S2015–10
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q11
+(i)
+If the previous experience is the recent experience of the policyholders of a
+life insurance company, the comparison could be important for pricing life
+insurance contracts.
+Mortality rates are expected to change over time due to for example, improved
+medical processes or change in the mix of the population.
+It helps to validate the results of the investigation.
+It is can indicate whether the office’s experience is out of line with the
+population as a whole.
+Unexpected changes in mortality may have an impact on the underwriting
+process.
+%%--------------------------- 16Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+It is important for the company to know whether the investigation’s results are
+consistent with published life tables, especially if the company plans to use
+published tables for any financial calculations.
+(ii)
+The null hypothesis is that the company's underlying mortality experience is
+the same as the standard table.
+The calculations are shown in the table below.
+Age x Number of
+policies Actual
+deaths Expected
+deaths z x z x 2
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79 1,000
+1,200
+1,100
+1,100
+1,000
+1,000
+950
+900
+850
+800 13
+28
+31
+34
+39
+41
+41
+40
+46
+48 23.74
+31.80
+32.50
+36.20
+36.63
+40.73
+42.99
+45.20
+47.34
+49.35 -2.204
+-0.674
+-0.263
+-0.366
+0.392
+0.042
+-0.304
+-0.773
+-0.195
+-0.192 4.859
+0.454
+0.069
+0.134
+0.153
+0.002
+0.092
+0.598
+0.038
+0.037
+Sum
+6.436
+An overall test of the hypothesis is the chi-squared test.
+The test statistic is
+ z x 2
+x
+where
+z x ;\+\;
+E x c \mu x - E x c \mu s x
+E x c \mu s x
+and
+E x c is the central exposed to risk at age x, μ x is the observed death rate at age
+x, and \mu sx is the death rate at age x in the standard table.
+The calculated chi-squared statistic is 6.436.
+We have 10 ages, so 10 degrees of freedom.
+At the 95% level, the critical value is 18.31.
+%%--------------------------- 17Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Since 6.436 < 18.31
+we do not reject the null hypothesis that the underlying mortality of the
+company’s policyholders is, overall, represented by the standard table.
+(iii)
+Overall, the data fit the standard table pretty well, but there are features which
+the chi-squared test fails to detect such as small but consistent bias, or the
+existence of outliers.
+EITHER SIGNS TEST
+This tests for bias.
+We have only 2 positive signs out of 10 ages.
+The probability of getting only 2 positive signs under the hypothesis that the
+underlying mortality of the company’s policyholders is, overall, represented
+by the standard table is equal to
+ 10  10
+
+ 0.5 ;\+\; 0.0439
+ 8 or 2 
+which is greater than 0.025.
+Therefore at the 95% significance level we can say that there is no bias.
+OR CUMULATIVE DEVIATIONS TEST
+This tests for bias.
+ (Observed deaths - Expected deaths)
+the test statistic
+x
+ Expected deaths
+~ Normal(0,1).
+x
+So, using the results in the table, the value of the test statistic is
+361 - 386.48
+;\+\; - 1.30
+386.48
+Since –1.96 < test statistic < +1.96
+Therefore at the 95% significance level we can say that there is no bias.
+GROUPING OF SIGNS TEST
+This tests to see if the shape of the mortality is the same, or whether there is
+“clumping” of the deviations.
+%%--------------------------- 18Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We also have just one run of positive signs with 2 positive signs and 8
+negative signs.
+We could try the Grouping of Signs test. The table on p. 189 of the Golden
+Book shows no value for these data. So we cannot reject the null hypothesis
+of no difference between the two sets of mortality rates.
+The run of negatives, then positives, then negatives does look odd but we have
+too few age groups to conclude that this is a problem.
+INDIVIDUAL STANDARDISED DEVIATIONS TST
+This is a test for outliers.
+Under the null hypothesis we would expect the individual z x s to be distributed
+Normal (0,1)
+and therefore only 1 in 20 z x s should have absolute magnitude greater than
+1.96 (or none should be outside -3 to +3)
+OR
+table showing split of deviations, actual versus expected as below
+Range
+-∞,-2
+Expected 0.2
+Actual
+1
+-2,-1
+1.4
+0
+-1,0
+3.4
+7
+0,1
+3.4
+2
+1,2
+1.4
+0
+2,+∞
+0.2
+0
+In fact, z 70 = -2.20, which should give cause for concern.
+Nevertheless this test is inconclusive (1 deviation out of 10 ages is greater than
+1.96).
+(iv)
+The variance of the number of claims at age 70 years will increase in the ratio
+ i 2  i
+i
+,
+ i  i
+i
+where  i is the proportion of policyholders who have i policies.
+If, at age 70 years, the other 975 policyholders each have one policy, then we
+have
+ 1 ;\+\; 0.99898,  25 ;\+\; 0.00102 and  i = 0 for all other values of i.
+%%--------------------------- 19Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+OR
+ 1 ;\+\;
+975
+1
+and  i ;\+\; 0 for all other values of I.
+,  2 ;\+\;
+976
+976
+Thus for age 70 the variance ratio is
+(1*1* 0.99898) \;=\; (25* 25* 0.00102) 1.639
+;\+\;
+;\+\; 1.598
+(1* 0.99898) \;=\; (25* 0.00102)
+1.026
+OR
+(975 / 976) \;=\; 25* 25*(1/ 976)
+;\+\; 1.6
+(975 / 976) \;=\; 25(1/ 976)
+So the variance of the number of claims will be inflated by a factor of 1.598
+(or 1.6).
+Most candidates made a fair effort at part (i) and the majority scored highly on
+part (ii). Part (iii), however, was uncertainly answered by many candidates.
+Some candidates carried out both the Signs Test and the Cumulative
+Deviations Test, which were really checking for the same feature of the data.
+In part (iii), credit was only given for two tests. Only a minority of candidates
+attempted part (iv).
+END OF EXAMINERS’ REPORT
+%%--------------------------- 20
