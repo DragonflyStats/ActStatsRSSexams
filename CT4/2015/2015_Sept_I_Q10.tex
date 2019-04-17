@@ -1,0 +1,109 @@
+
+[Total 11]10
+A profession has examination papers in two subjects, A and B, each of which is
+marked by a team of examiners. After each examination session, examiners are given
+the choice of remaining on the same team, switching to the other team, or taking a
+session’s holiday.
+In recent sessions, 10% of subject A’s examiners have elected to switch to subject B
+and 10% to take a holiday. Subject B is more onerous to mark than subject A, and in
+recent sessions, 20% of subject B’s examiners have elected to take a holiday in the
+next session, with 20% moving to subject A.
+After a session’s holiday, the profession allocates examiners equally between subjects
+A and B. No examiner is permitted to take holiday for two consecutive sessions.
+(i) Sketch the transition graph for the process. 
+(ii) Determine the transition matrix for this process. 
+(iii) Calculate the proportion of the profession’s examiners marking for subjects A
+and B in the long run.
+
+The profession considers that in future, an equal number of examiners is likely to be
+required for each subject. It proposes to try to ensure this by adjusting the proportion
+of those examiners on holiday who, when they return to marking, are allocated to
+subjects A and B.
+(iv)
+CT4 S2015–9
+Calculate the proportion of examiners who, on returning from holiday, should
+be allocated to subject B in order to have an equal number of examiners on
+each subject in the long run.
+
+[Total 12]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q10
+(i)
+Marking Subject A
+Marking Subject B
+On holiday H
+(ii)
+Subject A  0.8 0.1 0.1 
+Subject B   0.2 0.6 0.2   .
+Holiday   0.5 0.5 0  
+(iii)
+We have P = .
+The stationary distribution of examiners can be found as the solution of the set
+of equations
+ A = 0.8 A + 0.2 B + 0.5 H (1)
+ B = 0.1 A + 0.6 B + 0.5 H (2)
+ H = 0.1 A + 0.2 B
+(3)
+(1) gives
+0.2 A = 0.2 B + 0.5 H
+0.4 A = 0.4 B +  H
+0.4 B = 0.4 A -  H
+(2) gives
+0.4 B = 0.1 A + 0.5 H
+%%--------------------------- 14Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+so
+0.4 A -  H = 0.1 A + 0.5 H
+0.3 A = 1.5 H
+ A = 5 H
+In (2) this gives
+ B = 0.5 H + 0.6 B + 0.5 H
+0.4 B =  H
+ B = 2.5 H
+So, since  A +  B +  H = 1,
+the stationary distribution is {5 H , 2.5 H ,  H }
+and hence
+10
+17
+5
+ B =
+17
+2
+ H =
+.
+17
+ A =
+So in the long run 58.8% of examiners are marking subject A and 29.4% are
+marking subject B.
+(iv)
+Let the new transition probability from H to A be x, and that from H to B be
+1 - x.
+The proportion we require is thus just x. The new transition matrix is
+Subject A  0.8 0.1 0.1 
+Subject B   0.2 0.6 0.2   .
+Holiday   x 1 - x 0  
+The stationary probability distribution is given by the three equations
+\pi_A ;\+\; 0.8 \pi_A \;=\; 0.2 \pi_B \;=\; x \pi_H
+\pi_B ;\+\; 0.1 \pi_A \;=\; 0.6 \pi_B \;=\; (1 - x ) \pi_H (1)
+\pi_H ;\+\; 0.1 \pi_A \;=\; 0.2 \pi_B (3)
+(2)
+%%--------------------------- 15Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We also have \pi_A ;\+\; \pi_B .
+EITHER
+From (3) \pi_H ;\+\; 0.3 \pi_B ;\+\; 0.3 \pi_A
+ 10 10 3 
+Therefore the new stationary probability distribution is  , ,  .
+ 23 23 23 
+In (1) we have
+10 = 8 + 2 + 3x
+Hence x = 0.
+OR
+If \pi_A = \pi_B then in (1)
+\pi_A ;\+\; 0.8 \pi_A \;=\; 0.2 \pi_B \;=\; x \pi_H ;\+\; 0.8 \pi_A \;=\; 0.2 \pi_A \;=\; x \pi_H ;\+\; \pi_A \;=\; x \pi_H
+Hence x = 0.
+AND HENCE
+All those returning from holiday will have to be allocated to subject B.
+There were a gratifying number of completely correct answers to this
+question, and many candidates scored full marks on parts (i)–(iii). Part (iv)
+was more demanding, and required candidates to invert the usual question
+and establish what transition matrix would give rise to a particular stationary
+distribution.
