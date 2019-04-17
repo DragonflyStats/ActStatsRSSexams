@@ -1,0 +1,114 @@
+[Total 7]4
+Company A and Company B are two small insurance companies which have recently
+merged to form Company C. Company C is reviewing its premium rates for a whole
+of life product and so is conducting an analysis of mortality rates experienced.
+Company A recorded the number of policies in force every 1 January using a
+definition of age next birthday whereas Company B recorded the number of policies
+in force every 1 April using an age definition of age last birthday. Both companies
+recorded deaths as they happened using an age definition of age last birthday.
+These are the data for the most recent years.
+Age next
+birthday
+51
+52
+53
+Age last
+birthday
+51
+52
+53
+Company A
+Number of
+Number of
+policies
+policies
+1 Jan. 2012
+1 Jan. 2013
+8,192
+7,684
+9,421
+6,421
+8,298
+8,016
+8,118
+7,187
+9,026
+Company B
+Number of
+Number of
+policies
+policies
+1 April 2012
+1 April 2013
+4,496
+5,281
+4,992
+Number of
+policies
+1 Jan. 2014
+3,817
+5,218
+5,076
+Number of
+policies
+1 April 2014
+4,872
+3,812
+5,076
+In the calendar year 2013 Company A recorded 28 deaths of those aged 52 last
+birthday and Company B recorded 17 deaths of those aged 52 last birthday.
+(i)
+(ii)
+CT4 S2015–3
+Estimate the force of mortality for the combined company for age 52 last
+birthday, stating all assumptions that you make.
+Explain the exact age to which your estimate applies.
+[6]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+Q4
+(i)
+The deaths data carries more information, so the exposed to risk data must be
+amended to correspond with the deaths data.
+The exposed to risk may be calculated using the census formula
+1
+E x c ;\+\;  P x , t dt ,
+0
+where P x is the population aged x last birthday.
+For Company A, 53 next corresponds to 52 last.
+Assuming that the population varies linearly between census dates, this can be
+approximated using the trapezium rule.
+So E x c ;\+\;
+1 
+( P x \;=\; 1,1/1/13 \;=\; P^{\ast} x \;=\; 1,1/1/14 ) ,
+2
+where P^{\ast} x is the population aged x next birthday
+= (8,016 + 9,026) / 2
+= 8,521
+For Company B the age definition does not need adjusting.
+Again assuming the population varies linearly between census dates we can
+calculate the population at 1/1/2013 as
+5,218 + (3/12) (5,281  5,218) = 5,233.75,
+%%--------------------------- 5Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+and the exposed to risk for the first three months of 2013 is
+(1/2) (3/12) (5,218 + 5,233.75) = 1,306.4688.
+Similarly the population at 1/1/2014 is
+5,218 - (9/12)(5,218  3,812) = 4,163.5
+and the exposed to risk for the last nine months of 2013 is
+(1/2)(9/12)(5,218 + 4,163.5) = 3,518.0625.
+Assuming that the force of mortality is constant over the year of age,
+we have \hat{\mu} 52 ;\+\;
+(ii)
+28 \;=\; 17
+;\+\; 0.0034
+8, 521 \;=\; 1, 306.47 \;=\; 3, 518.06
+The estimate \mû 52 applies to the age at the middle of the rate interval, which is
+age 52.5 exact.
+The credit for stating the assumptions was only given if they were stated in
+the right place in the argument. In fact, few candidates stated the correct
+assumptions and many stated assumptions that were unnecessary (e.g. that
+deaths should be uniformly distributed across the year of age). Very few
+candidates realised that it was necessary to assume a constant force of
+mortality across the year of age.
