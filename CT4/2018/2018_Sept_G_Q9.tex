@@ -1,0 +1,244 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+PLEASE TURN OVER9
+(i) Describe why a mortality experience would need to be graduated.
+(ii) Describe how smoothness is achieved when using the following graduation
+methods:
+
+(a)
+parametric formula;
+(b)
+graphical;
+(c)
+with reference to a standard table.
+
+An insurance company conducts an investigation into the mortality rates of
+policyholders who choose to retire at a relatively young age.
+The following table shows data from the investigation, together with graduated rates
+o
+s
+q x which were fitted with reference to standard table rates, q x using a link function
+o
+s
+q x = q x + constant.
+(iii)
+
+CT4 S2018–6
+o
+Age x Exposed to risk Deaths q x
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64 1,550
+2,100
+2,300
+2,450
+2,700
+3,250
+3,100
+3,450
+3,600
+3,750 15
+18
+15
+21
+18
+29
+25
+30
+45
+41 0.00673
+0.00689
+0.00709
+0.00736
+0.00770
+0.00820
+0.00891
+0.00978
+0.01084
+0.01210
+Test the goodness-of-fit of the graduated rates using a chi-square test.
+Q9
+(i)
+We believe that mortality varies smoothly with age
+OR
+evidence from large experiences suggests mortality varies
+smoothly with age
+. 
+Therefore the crude estimate of mortality at any age carries
+information about mortality at adjacent ages. 
+By smoothing the experience, we can make use of data at
+adjacent ages to improve the estimates at each age. 
+This reduces sampling (or random) errors. 
+The mortality experience may be used in financial calculations. 
+Irregularities, jumps and anomalies in financial quantities
+(such as premiums for life insurance contracts) are hard to justify to
+customers
+OR
+jumps and anomalies in financial quantities may be taken advantage of
+by customers.
+(ii)
+
+
+Parametric formula
+Rates are automatically smooth provided that a formula with
+sufficiently few parameters is used.
+
+Graphical
+Reliance is placed on the skill of the practitioner
+to draw a sufficiently smooth line through the crude rates. 
+The third differences test for smoothness is useful here. 
+Page 16
+It is usually necessary to make several attempts,
+and to adjust the results by hand (rather than re-drawing the curve),
+a process called hand-polishing.
+
+With reference to a standard table
+A standard table will already be smooth. 
+Provided a link function is selected with few parameters,
+this smoothness should be preserved in the graduated rates. 
+[max. 3]
+(iii)
+The null hypothesis is that the graduated rates are the same as the true
+underlying mortality rates for this block of business.
+The test statistic
+
+∑ z x 2 ≈ χ 2 m where m is the degrees of freedom.
+x
+Age Exposed
+to risk
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64 1550
+2100
+2300
+2450
+2700
+3250
+3100
+3450
+3600
+3750
+Observed
+deaths Graduated
+rates Expected
+deaths zx
+15
+18
+15
+21
+18
+29
+25
+30
+45
+41 0.00673
+0.00689
+0.00709
+0.00736
+0.00770
+0.00820
+0.00891
+0.00978
+0.01084
+0.01210 10.432
+14.469
+16.307
+18.032
+20.790
+26.650
+27.621
+33.741
+39.024
+45.375 1.41449
+0.92828
+-0.32366
+0.69894
+-0.61190
+0.45522
+-0.49871
+-0.64403
+0.95663
+-0.64949
+Total
+zx 2
+2.00079
+0.86170
+0.10476
+0.48852
+0.37442
+0.20722
+0.24871
+0.41478
+0.91514
+0.42183
+6.0378
+[+11⁄2]
+The observed test statistic is 6.0378 
+The degrees of freedom are 10 minus an unknown number for the
+choice of standard table (say 2) and a further one for the parameter in
+the link function. 
+So m = 7 say (but could also use 6 or 8 degrees of freedom) 
+Page 17
+The critical value of the χ 2 distribution with 7 degrees of
+freedom at the 95% significance level is 14.07 (6 d.f.12.59, 8 d.f. 15.51) 
+Since 6.0378 < 14.07 (or 12.59, or 15.51 
+We have insufficient evidence to reject the null hypothesis. 
+
+[Total 11]
+This question was reasonably well answered by most
+candidates. The weakest section was part (ii). Few
+candidates realised that a parametric formula would
+automatically furnish smoothness if the number of parameters
+was small. Similarly, few mentioned that a standard table will
+already be smooth, so the requirement is to find a link
+function capable of transferring that smoothness to the
+graduated rates. In part (iii), many candidates did not apply
+the approach outlined in the solution to Q2 to the
+determination of the number of degrees of freedom.
+Page 18
