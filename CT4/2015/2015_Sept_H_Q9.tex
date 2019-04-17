@@ -1,0 +1,124 @@
+
+PLEASE TURN OVER9
+Doctors at a health centre are carrying out an investigation to see if obesity affects the
+likelihood of dying from heart disease. They propose to use a model with four states:
+1.
+2.
+3.
+4.
+Obese
+Not obese
+Dead due to heart disease, and
+Dead due to other causes
+(i) Write down, defining all the terms you use, the likelihood for the transition
+intensities.
+
+(ii) Derive the maximum likelihood estimator of the force of mortality from heart
+disease for Obese people.
+
+The investigation has followed several thousand people aged 50–59 years for five
+years and has the following data:
+Waiting time in state Obese (in person-years)
+14,392
+Waiting time in state Not obese (in person-years)
+18,109
+Number of deaths due to heart disease for those persons who are Obese
+178
+Number of deaths due to heart disease for those persons who are Not obese
+190
+Number of deaths due to other causes for those persons who are Obese
+89
+Number of deaths due to other causes for those persons who are Not obese
+53
+The doctors want to promote healthy living and therefore wish to claim that Obese
+people have a much higher chance, statistically, of dying from heart disease than do
+people who are Not obese.
+(iii)
+CT4 S2015–8
+Test whether this claim is true at the 90% confidence level.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q9
+(i)
+Let the number of transitions observed between states i and j be d ij .
+Let the transition rate between states i and j be μ ij .
+Let the observed waiting time in state i be ν i .
+Then the likelihood of the data can be written
+12
+L  exp[( -\mu 12 - \mu 13 - \mu 14 )  1 ]exp[( -\mu 21 - \mu 23 - \mu 24 )  2 ]( \mu 12 ) d ( \mu 13 ) d
+14
+21
+23
+13
+( \mu 14 ) d ( \mu 21 ) d ( \mu 23 ) d ( \mu 24 ) d
+(ii)
+24
+Taking logarithms of the likelihood we have:
+log e L ;\+\; -\mu 13  1 \;=\; d 13 log e ( \mu 13 ) + terms not dependent on \mu 13 .
+Differentiating with respect to \mu 13 gives:
+d (log e L )
+d \mu 13
+1
+;\+\; - \;=\;
+d 13
+\mu 13
+.
+Setting the derivative to zero to get the maximum likelihood estimator (MLE):
+d 13
+\hat{\mu} 13 ;\+\; 1 .
+
+%%--------------------------- 12Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+As the second derivative of the log likelihood
+d 2 (log e L )
+( d \mu 13 ) 2
+;\+\;-
+d 13
+( \mu 13 ) 2
+is negative this is a maximum.
+(iii)
+The MLE of heart related death for an Obese person is
+and its associated variance is
+178
+;\+\; 0.012368
+14, 392
+0.012368
+;\+\; 0.859365  10 - 6 .
+14, 392
+The MLE of heart related death for a person who is Not obese is
+190
+;\+\; 0.010492
+18,109
+0.010492
+and its associated variance is
+;\+\; 0.579302  10 - 6 .
+18,109
+The null hypothesis is that the death rate for Obese people is no higher than
+that for people who are Not obese.
+The test statistic is
+\hat{\mu} 23 - \hat{\mu} 13
+23
+13
+\hat{\mu}
+\hat{\mu}
+\;=\;
+t 2
+t 1
+ N  0,1 
+Evaluating this gives (0.012368 - 0.010492) /√1.43875  10 - 6 =1.564
+This is a one-tailed test, at the 90% confidence level.
+Therefore, as 1.564 > 1.28, we can reject the null hypothesis and conclude that
+the death rate for Obese people is statistically larger at the 90% confidence
+level.
+In part (i) many candidates supposed that it was not possible to move from
+Obese to Not obese and vice versa. The experience of many people
+demonstrates that this is not the case! Candidates who omitted these
+transitions without justification were penalised modestly. Part (iii) produced
+many variant attempts involving confidence intervals. The calculation of
+confidence intervals around the difference between the two rates would be a
+valid way of conducting a two-sided test, but here a one-sided test seems
+more appropriate, hence the z-score approach is to be preferred. Some
+candidates computed confidence intervals around each rate separately and
+then argued that because they overlapped (or did not overlap) the rates were
+not (or were) significantly different. This approach gained only limited credit.
+%%--------------------------- 13Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
