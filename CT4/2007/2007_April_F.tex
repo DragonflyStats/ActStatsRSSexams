@@ -33,36 +33,37 @@
 \begin{document}
 \begin{enumerate}
 11
-(i) Consider two Poisson processes, one with rate \lambda and the other with rate \mu .
-Prove that the sum of events arising from either of these processes is also a
-Poisson process with rate ( \lambda + \mu ).
+\begin{enumerate}[(a)]
+\item (i) Consider two Poisson processes, one with rate \lambda and the other with rate $\mu$ .
+Prove that the sum of events arising from either of these processes is also a Poisson process with rate ( \lambda + \mu ).
 
-(ii) (a) Explain what is meant by a Markov jump chain.
-(b) Describe the circumstances in which the outcome of the Markov jump
-chain differs from the standard Markov chain with the same transition
+\item (ii) (a) Explain what is meant by a Markov jump chain.
+(b) Describe the circumstances in which the outcome of the Markov jump chain differs from the standard Markov chain with the same transition
 matrix.
 
-An airline has N adjacent check-in desks at a particular airport, each of which can
-handle any customer from that airline. Arrivals of passengers at the check-in area are assumed to follow a Poisson process with rate q. The time taken to check-in a
-passenger is assumed to follow an exponential distribution with mean 1/a.
-(iii)
-Show that the number of desks occupied, together with the number of passengers waiting for a desk to become available, can be formulated as a
-Markov jump process and specify:
+An airline has N adjacent check-in desks at a particular airport, each of which can handle any customer from that airline. Arrivals of passengers at the check-in area are assumed to follow a Poisson process with rate q. The time taken to check-in a passenger is assumed to follow an exponential distribution with mean 1/a.
+\item (iii)
+Show that the number of desks occupied, together with the number of passengers waiting for a desk to become available, can be formulated as a Markov jump process and specify:
 (a)
 (b)
 the state space; and
 the transition diagram
 
+\item 
 (iv) State the Kolmogorov forward equations for the process, in component form.
 
+\item 
 (v) Comment on the appropriateness of the assumptions made regarding passenger arrival and the check-in process.
-(vi)
+
+\item (vi)
 
 (a) Set out the transition matrix of the jump chain associated with the airline check-in process.
 (b) Determine the probability that all desks are in use before any passenger has completed the check-in process, given that no passengers have
 arrived at check-in at the outset.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
 11
 (i)
 .
@@ -71,21 +72,19 @@ The probability of an arrival from the first process in time dt is
 \lambda . dt + o ( dt ) and the probability of a arrival from the second process in time dt
 is \mu . dt + o ( dt ) .
 The arrival probability for the sum of the processes in dt is therefore
-( \lambda + \mu ). dt + o ( dt )
-This is by definition a Poisson process with rate ( \lambda + \mu ).
+\[( \lambda + \mu ). dt + o ( dt )\]
+This is by definition a Poisson process with rate $( \lambda + \mu )$.
 Alternative solutions, based on the Moment Generating Function or the
 Probability Generating Function of a Poisson distribution were acceptable.
-Page 17Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
+%% Page 17Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
+
 (ii)
 (a)
-A jump chain is formed by recording the state of a Markov jump
-process only at the instant when a transition has just been made.
+A jump chain is formed by recording the state of a Markov jump process only at the instant when a transition has just been made.
 The jump chain is in itself a Markov chain.
 (b)
-The outcome of the jump chain can only differ from that of the
-standard Markov chain if the jump process enters an absorbing state.
-As the jump process will make no further transitions once it enters an
-absorbing state, the jump chain “stops”.
+The outcome of the jump chain can only differ from that of the standard Markov chain if the jump process enters an absorbing state.
+As the jump process will make no further transitions once it enters an absorbing state, the jump chain “stops”.
 It is possible to model the jump chain as though transitions continue to
 occur but the chain continues to occupy the same state.
 (iii)
@@ -115,30 +114,33 @@ q
 N:2
 q
 Kolmogorov forward equations in component form are:
-d
+\[d
 P 0 ( t ) = aP 1 ( t ) − qP 0 ( t )
-dt
-d
+dt\]
+\[d
 P r ( t ) = a ( r + 1) P r + 1 ( t ) + qP r − 1 ( t ) − ( ar + q ) P r ( t )
 dt
 r + 1 ≤ N
-d
+\]
+\[d
 P N :0 ( t ) = aNP N :1 ( t ) + qP N − 1 ( t ) − ( aN + q ) P N :0 ( t )
 dt
-d
+\]
+\[d
 P N : m ( t ) = aNP N : m + 1 ( t ) + qP N : m − 1 ( t ) − ( aN + q ) P N : m ( t )
 dt
-Page 18
-m ≥ 1Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
+%%---- Page 18
+m ≥ 1
+\]
+%%%------- Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
 (v)
-Poisson process is usually suitable for arrivals at a service point.
-Rate may be time inhomogeneous because passengers may aim to arrive a
-couple of hours before the flight — so a time-inhomogeneous Poisson process
-may be better.
-However if the airline operates many flights this may not be an issue.
-Passengers may be checked-in in family groups rather than individually.
-There is likely to be a minimum time for processing a check-in due to standard
-security questions etc, so exponential distribution may not hold.
+\begin{itemize}
+\item Poisson process is usually suitable for arrivals at a service point.
+\item Rate may be time inhomogeneous because passengers may aim to arrive a couple of hours before the flight — so a time-inhomogeneous \item Poisson process may be better.
+\item However if the airline operates many flights this may not be an issue.
+\item Passengers may be checked-in in family groups rather than individually. There is likely to be a minimum time for processing a check-in due to standard security questions etc, so exponential distribution may not hold.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%
 (vi)
 (a)
 The transition matrix is:
@@ -193,10 +195,8 @@ q ⎟
 ⎟
 Na + q ⎟
 % ⎟ ⎠
-This is the probability that all the first N transitions are to the right in
-the transition diagram.
-The probability of each transition is given by the elements in the upper
-half of the jump chain transition matrix in (vi)(a).
+This is the probability that all the first N transitions are to the right in the transition diagram.
+The probability of each transition is given by the elements in the upper half of the jump chain transition matrix in (vi)(a).
 Required probability is therefore q
 N − 1
 . ∏
@@ -204,6 +204,7 @@ N − 1
 i = 1
 1
 ia + q
-END OF EXAMINERS’ REPORT
-Page 19
+
+%% END OF EXAMINERS’ REPORT
+%% Page 19
 \end{document}
