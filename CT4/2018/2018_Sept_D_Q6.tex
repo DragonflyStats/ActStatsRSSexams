@@ -1,0 +1,147 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+6
+date of birth;
+date of entry into observation (if entering after 1 January 2017);
+date of death (if died between 1 January 2017 and 31 December 2017);
+date of exit from observation while still alive (if leaving before 31 December
+2017).
+(i) Derive a maximum likelihood estimator of the hazard of death which could be
+used with these data and which uses all the information available on the timing
+of death.
+[4]
+(ii)
+ Explain how these data can be used to estimate a life table.
+[3]
+[Total 7]
+A Markov jump process has the following generator matrix:
+A
+B
+C
+(i)
+⎛ −0.3 0.2 0.1 ⎞
+⎟
+⎜
+⎜ 0.1 −0.5 0.4 ⎟
+⎜ 0.3 0.1 −0.4 ⎟
+⎠
+⎝
+Draw a transition graph for this process.
+[2]
+The process is in state A at time zero.
+(ii)
+Give Kolmogorov’s forward equations for
+d
+d
+d
+P AA ( t ) ,
+P AB ( t ) and
+P AC ( t ) .
+dt
+dt
+dt
+[2]
+(iii) Calculate the probability that the process remains in state A throughout the
+period t = 0 to t = 2.
+[2]
+(iv)
+ Determine the probability that the third jump of the process is into state C.[3]
+[Total 9]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+Q6
+(i)
+[+2]
+
+d
+P AA ( t ) =
+− 0.3 P AA ( t ) + 0.1 P AB ( t ) + 0.3 P AC ( t )
+dt
+(ii)
+d
+P AB ( t ) = 0.2 P AA ( t ) − 0.5 P AB ( t ) + 0.1 P AC ( t )
+dt
+d
+P AC ( t ) = 0.1 P AA ( t ) + 0.4 P AB ( t ) − 0.4 P AC ( t )
+dt
+(iii)
+[+2]
+
+EITHER
+To stay in state A the equation reduces to:
+d
+P ( t ) = − 0.3 P AA ( t )
+dt AA
+which has solution
+Page 10
+
+
+
+So for t = 2 we have exp(-0.6) = 0.5488.
+OR
+
+We can model this as Poisson with parameter (0.1 + 0.2)*2 = 0.6
+P ( Poi (0.6)
+= 0)
+=
+− 0.6
+= e =
+0.5488
+(iv)
+e − 0.6 0.6 0
+0!
+
+
+
+The only paths under which the third jump is into state C are BAC, CAC
+and CBC.
+
+The probabilities of each jump are given by the ratio of the transition rates.
+So the probabilities for each path are:
+BAC = 
+CAC = 
+CBC = 
+Sum = 7/36 = 0.194.
+
+
+[Total 9]
+Parts (i)-(iii) of this question were very well answered, with many
+candidates scoring full marks. Part (iv) was only answered
+correctly by a minority of candidates. An alternative solution
+involving writing down the transition matrix, P, of the process, and
+then pointing out that the correct probability would be found in
+cell {1,3} of the matrix P3 was awarded credit.
+Page 11
