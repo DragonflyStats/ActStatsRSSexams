@@ -1,0 +1,190 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}CT4 S2018–48
+A drug named Nimble is often prescribed to the elderly for periods greater than a year
+to reduce the pain of arthritis. It has been proven that taking Nimble increases the
+chance of death by heart disease. One local health authority is looking into whether
+the increased risk continues once a patient stops taking the drug. It proposes to use
+a model with five states: (1) Never taken Nimble, (2) Taking Nimble, (3) No longer
+taking Nimble, (4) Dead through heart disease, (5) Dead through other causes.
+(i)
+Draw a diagram showing the possible transitions between the five states.
+
+Let the transition intensity between state i and state j at time x + t be \mu ijx + t . Let the
+probability that a person in state i at time x will be in state j at time x + t be t p xij .
+(ii)
+Show from first principles that
+d
+34
+32 24
+33 34
+t p x = t p x \mu x + t + t p x \mu x + t
+dt
+
+(
+)
+The health authority wishes to calculate death rates aged 50 last birthday from each
+cause for individuals in states 1, 2 and 3.
+(iii)
+
+CT4 S2018–5 
+State what data would need to be extracted from the health authority’s medical
+records in order to do this.
+
+[Total 10]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Page 13
+Q8
+(i)
+[+2]
+
+(ii)
+Using the Markov assumption
+OR
+the Chapman Kolmogorov equation is
+dt + t
+32
+24
+33
+34
+34
+44
+35
+54
+p x 34 = t p x 31 dt p 14
+x + t + t p x dt p x + t + t p x dt p x + t + t p x dt p x + t + t p x dt p x + t .
+Since
+dt + t
+
+dt
+54
+p =
+x + t
+t
+=
+p x 31 0
+
+34
+44
+p x 34 = t p x 32 dt p x 24 + t + t p x 33 dt p 34
+x + t + t p x dt p x + t .
+Given that
+dt
+p x 44 + t = 1
+
+
+And assuming that, for small dt
+dt
+p ij x + t =
+\mu ij x + t dt + o ( dt )
+i ≠ j
+o ( dt )
+= 0 ,
+dt → 0 dt
+where lim
+
+
+then substituting, we have
+dt + t
+33 34
+34
+p x 34 = t p x 32 \mu 24
+x + t dt + t p x \mu x + t dt + t p x + o ( dt )
+so that
+Page 14
+dt + t
+33 34
+p x 34 − t p x 34 = t p x 32 \mu 24
+x + t dt + t p x \mu x + t dt + o ( dt )
+
+
+p 34
+− t p x 34
+d
+34
+t
+dt
+x
++
+and hence
+( t p x ) = lim
+=
+dt → 0
+dt
+dt
+t
+33 34
+p x 32 \mu 24
+x + t + t p x \mu x + t . 
+[max. 5]
+(iii)
+EITHER INDIVIDUAL-LEVEL DATA
+If data are held at an individual level we would need , for
+the period of the investigation 
+dates the individual moved into and out of the local
+health authority (if such movement took place) 
+date the individual attained exact age 50 or 51 years
+(or date of birth) 
+dates the individual started taking Nimble 
+dates the individual stopped taking Nimble 
+date the individual died 
+cause of death. 
+whether the individual had taken Nimble before (or date the
+individual first took Nimble). 
+OR AGGREGATE-LEVEL DATA
+If data is held at an aggregate level we would need
+the amount of time spent within the investigation period 
+by lives aged between ages 50 and 51 years exact 
+for each of the states “Never taken Nimble”, “Taking Nimble”
+and “No longer taking Nimble”
+. 
+The number of deaths 
+from each of the three states “Never taken Nimble”,
+“Taking Nimble” and “No longer taking Nimble” 
+split by cause of death (heart disease or not)
+
+[max. 3]
+[Total 10]
+Page 15
+In part (i), most candidates wrote down a transition graph which
+was either correct or close to being correct. Answers to part (ii)
+were better than answers to similar questions in previous sessions.
+In part (iii) most candidates provided answers assuming
+aggregate-level data. Candidates could assume either individual-
+level or aggregate-level data, but credit was not awarded from
+both alternatives given in the solutions. Candidates were expected
+to refer to the specific scenario in the question, so vague answers
+of the form ‘number of transitions from i to j scored little credit.
