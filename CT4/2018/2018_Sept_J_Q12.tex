@@ -1,0 +1,185 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+A small town is served by a single funeral director. The funeral director collects
+corpses immediately following death and stores them in a refrigerator pending
+embalming. The number of deaths per day in this town has the following probability
+distribution:
+Number of
+deaths per day Probability
+0 0.497
+1 0.348
+2 0.122
+3 0.028
+4 0.005
+The embalmer can embalm exactly one corpse per day. He works on a corpse from
+the refrigerator if there is one, but if the refrigerator is empty he works on the first
+corpse to arrive that day. Corpses are removed from the refrigerator immediately
+before being embalmed and are not returned there after embalming.
+The refrigerator has room for four corpses. If more space is needed, the funeral
+director has to ask the local hospital if there is spare capacity in the hospital’s
+refrigerator.
+(i)
+Determine the transition matrix for the number of corpses in the funeral
+director’s refrigerator.
+
+(ii) Calculate the long-run probability of there being 0, 1, 2, 3 and 4 corpses in the
+refrigerator.
+(iii) Calculate the probability that the funeral director has to contact the hospital on
+any given day.
+
+The embalmer has not had a day off for years. The funeral director says that from now
+on the embalmer must not work on Christmas Day.
+(iv)
+
+Calculate the probability that the funeral director will need to contact the
+hospital on Christmas Day when the embalmer is not working. 
+
+[Total 12]
+END OF PAPER
+CT4 S2018–9 
+PLEASE TURN OVER
+
+
+Q12
+(i)
+EITHER
+The number of corpses in the refrigerator one morning is the number
+the previous morning, plus the number of deaths that day less the one
+the embalmer embalmed
+
+OR
+If no corpses are in the refrigerator, then
+p(0,0) = 0.497 + 0.348 (since if there is
+1 death the embalmer will embalm the one who dies)
+p(0,1) = 0.122
+p(0,2) = 0.028
+p(0,3) = 0.005
+p(0,4) = 0.
+If one corpse is in the refrigerator, then
+p(1,0) = 0.497
+p(1,1) = 0.348
+p(1,2) = 0.122
+p(1,3) = 0.028
+p(1,4) = 0.005
+
+Using similar calculations for 2, 3 and 4 corpses, we obtain the
+transition matrix, P, of the number of corpses in the refrigerator:
+0  0.845 0.122 0.028 0.005
+0 
+1   0.497 0.348 0.122 0.028 0.005  
+2  0
+0.497 0.348 0.122 0.033  .
+
+
+3  0
+0
+0.497 0.348 0.155 
+4   0
+0
+0
+0.497 0.503  
+[+2]
+[max. 3]
+(ii)
+If x i is the probability that the refrigerator contains i corpses at the
+start of a day, then
+Using the transition matrix in part (i) and π = π P we get
+Page 24
+
+=
+x 0 0.845 x 0 + 0.497 x 1
+x 1 = 0.122 x 0 + 0.348 x 1 + 0.497 x 2
+x 2 = 0.028 x 0 + 0.122 x 1 + 0.348 x 2 + 0.497 x 3
+[+2]
+x 3 = 0.005 x 0 + 0.028 x 1 + 0.122 x 2 + 0.348 x 3 + 0.497 x 4
+x 4 = 0.005 x 1 + 0.033 x 2 + 0.155 x 3 + 0.503 x 4
+Proceeding recursively we obtain
+x 1 = (0.155/0.497)x 0 = 0.312x 0
+0.312x 0 = 0.122x 0 + 0.348(0.312x 0 ) + 0.497x 2
+x 2 = (0.081/0.497)x 0 = 0.164x 0
+0.164x 0 = 0.028x 0 + 0.122(0.312x 0 ) + 0.348(0.164x 0 ) + 0.497x 3
+x 3 = (0.041/0.497)x 0 = 0.082x 0
+0.082x 0 = 0.005x 0 + 0.028(0.312x 0 ) + 0.122(0.164x 0 ) + 0.348(0.082x 0 )
++ 0.497x 4
+[+11⁄2]
+x 4 = (0.020/0.497)x 0 = 0.040x 0
+So we have
+x 0 + 0.312x 0 + 0.164x 0 + 0.082x 0 + 0.040x 0 = 1
+x 0
+x 1
+x 2
+x 3
+x 4
+(iii)
+= 0.626
+= 0.195
+= 0.103
+= 0.051
+= 0.025
+
+
+
+The probability the funeral director has to contact the hospital is:
+x 2 Pr[4 deaths] + x 3 Pr[3 or 4 deaths] + x 4 [Pr 2 or more deaths]
+
+= 0.005x 2 + 0.033x 3 + 0.155x 4
+= 0.005(0.103) + 0.033(0.051) + 0.155(0.025) = 0.006.
+(iv)
+
+
+Probability the funeral director has to contact the
+hospital on Christmas Day is
+Page 25
+x 1 Pr[4 deaths] + x 2 Pr[3 or 4 deaths] + x 3 [Pr 2 or more deaths]
++ x 4 [Pr 1 or more deaths] 
+= 0.005(0.195) + 0.033(0.103) + 0.155(0.051) +0.503(0.025) = 0.025. 
+
+[Total 12]
+This question was based on a practical problem faced by a funeral
+director known to the Principal Examiner. It was poorly answered by
+most candidates. In part (i) there was +2 marks for the correct matrix and
++1 for some explanation of how the matrix was determined. Few
+candidates could correctly formulate the matrix. A common error was to
+ignore the fact that the embalmer can embalm one corpse per day and will
+always do so provided a corpse is available. Some candidates assumed
+that once the fridge was full the funeral director would offload the entire contents to the hospital morgue, rather than just those corpses in excess of
+4. Candidates whose matrices in part (i) were incorrect could score full
+credit for part (ii) if they correctly calculated the stationary distribution
+for the matrix they had produced in past (i). Few candidates attempted
+parts (iii) and (iv) and most attempts were incorrect. Full credit could be
+obtained in parts (iii) and (iv) for answers which applied the correct
+method to incorrect matrices.
+END OF EXAMINERS’ REPORT
+Page 26
