@@ -1,0 +1,111 @@
+6
+(i)
+Describe what is meant by a proportional hazards model.
+
+A pharmaceutical company is interested in testing a new treatment for a debilitating
+but non-fatal condition in cows. A randomised trial was carried out in which a sample
+of cows with the condition was assigned to either the new treatment or the previous
+treatment. The event of interest was the recovery of a cow from the condition. The
+results were analysed using a Cox regression model.
+The final model estimated the hazard, h ( t , x ) as:
+h(t, x) = h 0 (t) exp(\beta_0 z + \beta_1 x + \beta_2 xz),
+where:
+h 0 (t) is the baseline hazard;
+z is a covariate taking the value 1 if the cow was assigned the new treatment and 0 if
+the cow was assigned the previous treatment;
+x is a covariate denoting the length of time (in days) for which the cow had been
+suffering from the condition when treatment was started;
+and t is the number of days since treatment started.
+\beta_0 , \beta_1 and \beta_2 are parameters. Their estimated values were \beta_0 = 0.8, \beta_1 = 0.4
+and \beta_2 = - 0.1 .
+(ii)
+Determine the characteristics of the baseline cow.
+
+For a particular cow, the new treatment and the previous treatment have exactly the
+same hazard.
+(iii)
+Calculate the number of days for which that cow had the condition before the
+initiation of treatment.
+
+Under the previous treatment, cows whose treatment began after they had been
+suffering from the condition for three days had a median recovery time of 14 days
+once treatment had started.
+(iv)
+CT4 S2015–5
+Calculate the proportion of these cows which would still have had the
+condition after 14 days if they had been given the new treatment.
+
+Q6
+(i)
+A proportional hazards model is used to estimate the effect of covariates on
+the hazard of experiencing an event.
+In a proportional hazards model the hazard is assumed to factorise into two
+components, one depending only on duration, and the other depending only on
+the covariates.
+The ratio between the hazards for persons with any two values of a covariate is
+the same at all durations.
+%%--------------------------- 7Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(ii) A cow who started the previous treatment immediately the condition appeared.
+(iii) h 0 (t) exp(\beta_0 + \beta_1 x + \beta_2 x) = h 0 (t) exp(\beta_1 x)
+exp(\beta_0 ) = exp(- \beta_2 x)
+\beta_0 = - \beta_2 x
+0.8 = 0.1x
+So x = 8 days.
+(iv)
+The median recovery time is the value of t such that S(t) = 0.5.
+For the previous treatment, we have
+14
+14
+
+
+
+
+0.4(3)
+
+
+S (14) ;\+\; exp  - e
+h
+(
+t
+)
+dt
+exp
+3.320
+h
+(
+t
+)
+dt
+;\+\;
+-
+ 0 
+ 0   ;\+\; 0.5 .
+
+
+0
+0
+
+
+
+
+14
+So
+ h 0 ( t ) dt ;\+\;
+0
+log e (0.5)
+;\+\; 0.209.
+- 3.320
+For the new treatment we have
+14
+S (14) ;\+\; exp( - e 0.8 \;=\; 1.2 - 0.3  h 0 ( t ) dt )
+0
+;\+\; exp[ - 5.474(0.209)] ;\+\; 0.319 .
+Answers to part (ii) were disappointing. Some candidates wrote that the cow
+has not suffered from the condition before, which may or may not have been
+the case. Others wrote that the cow was not suffering from the condition
+when the treatment started, which was absurd as the treatment would not
+have been given were the cow not suffering from the condition. Part (iii) was
+well answered by most candidates. Part (iv) was more demanding, but it was
+disappointing that so many candidates framed their answers entirely in terms
+of the hazard function, whereas the question clearly refers to the median
+recovery time and hence implies that the survival function is required.
