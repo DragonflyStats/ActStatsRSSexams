@@ -44,15 +44,17 @@ Give an example application of each type of process.
 An insurance company is investigating the mortality of its annuity policyholders. It is
 proposed that the crude mortality rates be graduated for use in future premium
 calculations.
-(i)
+
+\begin{enumerate}[(a)]
+\item (i)
 (a) Suggest, with reasons, a suitable method of graduation in this case.
 (b) Describe how you would graduate the crude rates.
-
+\item 
 (ii)
 Comment on any further considerations that the company should take into
 account before using the graduated rates for premium calculations.
+\end{enumerate}
 
-[Total 5]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 3
 
@@ -64,6 +66,7 @@ Outline the stages you would go through in identifying an appropriate model.
 
 The actuary to a large pension scheme carried out an investigation of the mortality of
 the scheme’s pensioners over the two years from 1 January 2005 to 1 January 2007.
+
 (i)
 List the data required by the actuary for an exact calculation of the central
 exposed to risk for lives aged x.
@@ -77,7 +80,7 @@ birthday
 65
 66
 67
-CT4 A2007—2
+%%-- CT4 A2007—2
 Number of pensioners at:
 Deaths during:
 1 January
@@ -112,7 +115,7 @@ Mixed process
 (a) Is a stochastic process that operates in continuous time, which can also change
 value at predetermined discrete instants.
 (b) The number of contributors to a pension scheme can be modelled as a mixed
-process with state space S = { 1, 2,3,... } and time interval J = [ 0, ∞ ] .
+process with state space $S = \{ 1, 2,3,... \}$ and time interval $J = [ 0, \infty ]$ .
 Counting process
 (a)
 Is a process, X, in discrete or continuous time, whose state space is the natural
@@ -122,23 +125,20 @@ X(t) is a non-decreasing function of t.
 (b) Number of claims reported to an insurer by time t.
 (i) (a)
 Graduation by reference to a standard table would be appropriate.
-There are likely to be existing standard tables which are suitable and
-this method is suitable for relatively small data sets.
-Alternatively, graduation by parametric formula would be suitable if
-the volume of data was large enough. But that is unlikely to be the
+There are likely to be existing standard tables which are suitable and this method is suitable for relatively small data sets.
+Alternatively, graduation by parametric formula would be suitable if the volume of data was large enough. But that is unlikely to be the
 case here.
-Graphical graduation would not be appropriate for rates for premium
-calculations.
+
+Graphical graduation would not be appropriate for rates for premium calculations.
 (b)
 (ii)
 Assuming graduation by reference to a standard table:
+\begin{itemize}
 \item Select a suitable table, based on a similar group of lives.
-\item Plot the crude rates against q x s from the standard table to identify a
-simple relationship.
-\item Find the best-fit parameters, using maximum likelihood or least
-squares estimates.
-\item Test the graduation for goodness of fit. If the fit is not adequate,
-the process should be repeated.
+\item Plot the crude rates against q x s from the standard table to identify a simple relationship.
+\item Find the best-fit parameters, using maximum likelihood or least squares estimates.
+\item Test the graduation for goodness of fit. If the fit is not adequate, the process should be repeated.
+\end{itemize}
 Considerations include:
 \item
 As the premiums are for annuity policies, it is important not to
@@ -146,8 +146,7 @@ overestimate the mortality rates, as the premiums would be too low.
 3
 %%----Subject CT4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2007 — Examiners’ Report
 3
-\item The rates will be based on current mortality; the company should also take
-into account expected future changes, especially any reductions in
+\item The rates will be based on current mortality; the company should also take into account expected future changes, especially any reductions in
 mortality rates.
 \item Premiums charged by other insurer: if rates are too high the company will
 fail to attract business; if too low, it may attract too much, unprofitable
@@ -157,8 +156,7 @@ business.
 mortality? What is the period for which the forecast is wanted? Is it short (e.g. 5–10
 years) or long (e.g. 50–70 years).
 \item Consult the existing literature on models for forecasting mortality, and speak to
-experts in this field of application. Consider using or adapting existing models which
-are employed in other countries.
+experts in this field of application. Consider using or adapting existing models which are employed in other countries.
 \item Establish what data are available (e.g. on past mortality trends in the country,
 preferably with deaths classified by age and cause of death).
 On the basis of what data are available, define the model you propose to use. If the
