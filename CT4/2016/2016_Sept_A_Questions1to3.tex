@@ -1,9 +1,43 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
 1
 2
 State THREE advantages of the two-state model over the Binomial model for
 estimating transition intensities where exact dates of entry into and exit from
 observation are known.
 [3]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 The diagrams below show three Markov chains, where arrows indicate a non-zero
 transition probability.
 A
@@ -25,7 +59,7 @@ x
 irreducible.
 periodic, giving the period.
 [3]
-CT4 S2016–23
+%%---- CT4 S2016–23
 Describe the similarities and differences between the following processes:
 x Markov Chain
 x Markov Jump Chain
@@ -33,27 +67,29 @@ x Markov Jump Process
 [4]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Solutions
+\newpage
 Q1
 We can calculate the Maximum Likelihood Estimate (MLE) of the transition intensities
 directly using the two-state model, 
 whereas the Binomial model requires additional assumptions. 
 The variance of the Binomial estimator is greater than that of the estimate from the two-state
 model, though the difference is tiny unless the transition intensities are large.
-[1]
+
 The MLE in the two-state model is consistent and unbiased, 
 whereas the Binomial estimate is only consistent and unbiased if lives are observed for
 exactly one year, which is rarely the case. 
 The two-state model is easily extended to encompass increments and additional decrements,
 whereas the Binomial model is not.
-[1]
+
 The two-state model uses the exact times of the transitions, whereas the Binomial model only
 uses the number of transitions.
-[1]
+
 [Max 3]
 Not all the points listed above were required for full credit. This was one of the
 bookwork questions on which performance was relatively weak. Many
 candidates were only able to make one or two of the points listed above.
 %% ---  Page  3Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 –September 2016 – 
+\newpage
 Q2
 A
 Markov Chain 1
@@ -73,18 +109,15 @@ Reducible
 Aperiodic
 
 
-[Total 3]
-Many candidates did well on this question. The most common errors were to
-regard Markov Chain 1 as periodic (this is incorrect because return to any
-state is possible in 2 or 3 steps, and 2 and 3 have no common factor higher
-than 1), and to regard Markov Chain 2 as being periodic with period 4 rather
-than 2.
+% [Total 3]
+% Many candidates did well on this question. The most common errors were to regard Markov Chain 1 as periodic (this is incorrect because return to any state is possible in 2 or 3 steps, and 2 and 3 have no common factor higher than 1), and to regard Markov Chain 2 as being periodic with period 4 rather than 2.
+\newpage
 Q3
 All three processes have a discrete state space.
-[1]
+
 A Markov Chain and Markov Jump Chain both operate in discrete time but a Markov jump
 Process operates in continuous time.
-[1]
+
 All have the Markov property which is
 
 EITHER that the future development of the process can be predicted from its present state
@@ -102,11 +135,11 @@ path through the state space.
 The Jump Chain obeys the Markov Property and behaves as a Markov Chain except when the
 Jump Chain encounters an absorbing state. From that time it makes no further transitions,
 implying that time stops for the Jump Chain.
-[1]
+
 The Jump Chain associated with X takes the same path through the state space as X does.
 However questions about the times taken to visit a state are likely to have different answers
 for X and for the Jump Chain associated with X.
-[1]
+
 The Markov Jump Chain and the Markov Chain are expressed in terms of probabilities
 whereas the Markov Jump Process is expressed in terms of rates.
 
@@ -119,3 +152,5 @@ identified the fact that all three processes operated in discrete state space,
 but a large proportion thought that the Markov Jump Chain was a continuous
 time process. A Markov Jump Chain is a Markov Chain in its own right, and
 hence operates in discrete time.
+
+\end{document}
