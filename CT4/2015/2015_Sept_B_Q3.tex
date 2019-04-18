@@ -1,0 +1,103 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}3 (i)
+Define how the following forms of censoring arise in a survival investigation:
+
+\begin{itemize}
+\item right censoring
+\item type I censoring
+\item random censoring
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+An experience analysis is conducted where the event of interest is the lapse of a term
+assurance policy.
+(ii)
+%%---- CT4 S2015–2
+Explain whether each form of censoring listed in part (i) occurs in each of the
+following situations. If it is not possible to state whether a form of censoring
+occurs, explain why this is the case.
+\begin{itemize}
+    \item (a) A policyholder dies.
+    \item (b) A subset of the policies is migrated to a new administration system and
+no data are provided from the new system to the experience analysis
+team.
+    \item (c) A policy reaches its maturity date.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q3
+(i)
+\begin{itemize}
+    \item Right censoring refers to a life ceasing to be observed prior to the event of
+interest occurring.
+\item Type I censoring occurs when the censoring times are known in advance and
+lives will be considered censored on a pre-determined date regardless of
+whether the event of interest has occurred.
+\item Random censoring refers to the time of censoring being a random variable
+such that censoring may occur as a random event prior to the event of interest.
+(ii)
+(a)
+\item Right censoring occurs because the censoring means no information is
+available about whether the policy would subsequently have lapsed.
+\item This is not Type I censoring as it would not be known in advance when
+the policyholder would die.
+\item Random censoring occurs as the time of death is a random variable.
+\end{itemize}
+
+(b)
+It is right censoring as it removes information about whether the policies subsequently lapsed.
+It is not clear whether this is Type I censoring because it is not known whether the migration was anticipated in the observation plan.
+For the same reason it is not clear whether it is random censoring.
+(c)
+It is in theory right censoring, but in practice the event of interest cannot occur after the censoring date.
+It is Type I censoring as the maturity date would be known in advance.
+%%--------------------------- 4Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    \item The policy reaching its maturity date is not a random variable.
+A common error in part (i) was to state that Type I censoring occurred when
+the investigation runs for a fixed period. This is true, but is not a definition of
+Type I censoring. 
+\item Type I censoring can occur in an investigation of
+indeterminate duration provided that, for each life in the investigation, the
+censoring time is known in advance of the study.
+\item In part (ii), many candidates
+failed to read the question and did not describe those types of censoring that
+were not present in each situation, and explain why they were not there.
+Such candidates lost marks needlessly. 
+\end{itemize}
+
+
+% Other candidates simply stated whether each form of censoring was present or not, without offering an explanation of why. In part (ii) (c) credit was given for arguing either that right censoring would occur in theory as a result of the maturity date being reached, or that right censoring would not occur in practice, as a mature policy could not lapse.
+\end{document}
