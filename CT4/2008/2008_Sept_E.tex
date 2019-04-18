@@ -55,8 +55,8 @@ Consider j > i > 0.
 \item (iii) Derive an expression for the number of upward movements in the sequence X_n
 between t and (t + m) if X t = i and X t+m = j.
 
-(iv) Derive expressions for the m-step transition probabilities p ij ( m ) .
-(v) Show how the one-step transition probabilities would alter if X_n was restricted
+\item (iv) Derive expressions for the m-step transition probabilities p ij ( m ) .
+\item (v) Show how the one-step transition probabilities would alter if X_n was restricted
 to non-negative numbers bY_introducing:
 (a)
 (b)
@@ -64,15 +64,16 @@ to non-negative numbers bY_introducing:
 a reflecting boundary at zero.
 an absorbing boundary at zero.
 
-(vi)
+\item (vi)
 For each of the examples in part (v), explain whether the transition
 probabilities p ij ( m ) would increase, decrease or stay the same.
 (Calculation of the transition probabilities is not required.)
-CT4 S2008—8
-
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555
-Page 14 — Models Core Technical — September 2008 — Examiners’ Report
-11
+%% Page 14 — Models Core Technical — September 2008 — Examiners’ Report
+\newpage 
+%%--- Question 11
+\begin{itemize}
 \item (i)
 State space is the set of integers Ζ .
 Transition graph:
@@ -91,14 +92,12 @@ p
 1- p
 2
 1- p
-The process is not aperiodic
+\item The process is not aperiodic
 because it has period 2:
-for example, starting from an even number the
-process is only even after an even number of steps
+for example, starting from an even number the process is only even after an even number of steps
 (b)
-The process is irreducible
-as the probabilities of X_n increasing and decreasing by 1 are both
-non-zero so any state can be reached.
+\item The process is irreducible
+as the probabilities of X_n increasing and decreasing by 1 are both non-zero so any state can be reached.
 (c)
 \item (iii)
 No stationary distribution will exist because the state space is infinite.
@@ -110,16 +109,14 @@ So u =
 m + j − i
 .
 2
-The maximum number of upward steps is m so the
-transition probabilitY_is zero if j – i > m .
-As the chain is periodic with period 2, it can only occupy
-state j after m steps if m + j − i is even.
-If m + j − i is even and $j– i \leq m$ then there must be u
+\item The maximum number of upward steps is m so the transition probabilitY_is zero if j – i > m .
+As the chain is periodic with period 2, it can only occupy state j after m steps if m + j − i is even.
+\item If m + j − i is even and $j– i \leq m$ then there must be u
 upward jumps and ( m − u ) downward jumps.
 ⎛ m ⎞
 These can be ordered in ⎜ ⎟ ways.
 ⎝ u ⎠
-Page 15 — Models Core Technical — September 2008 — Examiners’ Report
+%%-- Page 15 — Models Core Technical — September 2008 — Examiners’ Report
 So the transition probabilities are:
 p ij ( m )
 (v)
@@ -133,11 +130,11 @@ p (1 − p ) m − u
 if j − i \leq m and m + j − i even
 otherwise
 EITHER
-In both cases the transition probabilities
+\item In both cases the transition probabilities
 are unaltered unless X_i = 0.
 (a) Reflecting boundarY_implies
 P[X_i+1 = 1│X_i = 0] = 1 (or p 01(1) = 1)
-(b) Absorbing boundarY_implies
+\item (b) Absorbing boundarY_implies
 P[X_i+1 = 0│X_i = 0] = 1 (or p 00(1) = 1)
 OR
 A matrix solution for the transition probabilities is acceptable
@@ -227,7 +224,7 @@ p
 ⎝ :
 OR
 A diagrammatic solution is also acceptable:
-Page 16 — Models Core Technical — September 2008 — Examiners’ Report
+%%--- Page 16 — Models Core Technical — September 2008 — Examiners’ Report
 Reflecting
 1
 0
@@ -245,17 +242,19 @@ p
 (vi)
 2
 1-p
-In both cases the zero transition probabilities remain
+\item In both cases the zero transition probabilities remain
 zero as the period is still 2 where relevant.
-If i is sufficiently above 0 then conditions at zero
+\item If i is sufficiently above 0 then conditions at zero
 will not be relevant and all the m-step transition
 probabilities will remain the same. (This applies if m < i.)
 Otherwise
-In (a) some sample paths which would have
+\item In (a) some sample paths which would have
 taken X below zero will be reflected, increasing the
 probability of reaching j at step m.
 So the m-step transition probabilities would increase.
-In (b) any sample path which reaches zero would
+\item In (b) any sample path which reaches zero would
 no longer be able to access state j
 so the transition probabilities would decrease.
-Page 17 — Models Core Technical — September 2008 — Examiners’ Report
+%%---- Page 17 — Models Core Technical — September 2008 — Examiners’ Report
+\end{itemize}
+\end{document}
