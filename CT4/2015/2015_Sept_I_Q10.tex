@@ -1,5 +1,36 @@
+\documentclass[a4paper,12pt]{article}
 
-[Total 11]10
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}10
 A profession has examination papers in two subjects, A and B, each of which is
 marked by a team of examiners. After each examination session, examiners are given
 the choice of remaining on the same team, switching to the other team, or taking a
@@ -10,28 +41,31 @@ recent sessions, 20% of subject B’s examiners have elected to take a holiday i
 next session, with 20% moving to subject A.
 After a session’s holiday, the profession allocates examiners equally between subjects
 A and B. No examiner is permitted to take holiday for two consecutive sessions.
-(i) Sketch the transition graph for the process. 
-(ii) Determine the transition matrix for this process. 
-(iii) Calculate the proportion of the profession’s examiners marking for subjects A
+\begin{enumerate}[(a)]
+\item (i) Sketch the transition graph for the process. 
+\item (ii) Determine the transition matrix for this process. 
+\item (iii) Calculate the proportion of the profession’s examiners marking for subjects A
 and B in the long run.
 
 The profession considers that in future, an equal number of examiners is likely to be
 required for each subject. It proposes to try to ensure this by adjusting the proportion
 of those examiners on holiday who, when they return to marking, are allocated to
 subjects A and B.
-(iv)
+\item (iv)
 CT4 S2015–9
 Calculate the proportion of examiners who, on returning from holiday, should
 be allocated to subject B in order to have an equal number of examiners on
 each subject in the long run.
+\end{enumerate}
 
-[Total 12]
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Q10
 (i)
 Marking Subject A
 Marking Subject B
 On holiday H
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (ii)
 Subject A  0.8 0.1 0.1 
 Subject B   0.2 0.6 0.2   .
@@ -74,7 +108,8 @@ and hence
  A =
 So in the long run 58.8% of examiners are marking subject A and 29.4% are
 marking subject B.
-(iv)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage(iv)
 Let the new transition probability from H to A be x, and that from H to B be
 1 - x.
 The proportion we require is thus just x. The new transition matrix is
@@ -102,8 +137,7 @@ If \pi_A = \pi_B then in (1)
 Hence x = 0.
 AND HENCE
 All those returning from holiday will have to be allocated to subject B.
-There were a gratifying number of completely correct answers to this
-question, and many candidates scored full marks on parts (i)–(iii). Part (iv)
-was more demanding, and required candidates to invert the usual question
-and establish what transition matrix would give rise to a particular stationary
-distribution.
+
+% There were a gratifying number of completely correct answers to this question, and many candidates scored full marks on parts (i)–(iii). Part (iv) was more demanding, and required candidates to invert the usual question and establish what transition matrix would give rise to a particular stationary distribution.
+%%--------------------------- 20
+\end{document}
