@@ -31,8 +31,9 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-CT4 S2014–5 PLEASE TURN OVER
-6 A motor insurance company offers annually renewable policies. To encourage
+%%CT4 S2014–5 PLEASE TURN OVER
+%% Question 6 
+A motor insurance company offers annually renewable policies. To encourage
 policyholders to renew each year it offers a No Claims Discount system which
 reduces the premiums for those people who claim less often. There are four levels of
 premium:
@@ -51,7 +52,10 @@ if they made at least one claim in the previous year they move down two levels o
 discount (subject to not going below the lowest level).
 \begin{enumerate}
 \item (i) (a) Explain how many states are required to model this as a Markov chain.
-(b) Draw the transition graph of the process. 
+(b) Draw the transition graph of the process. \\
+\smallskip
+
+
 The probability, p, of making at least one claim in any year is constant and
 independent of whether a claim was made in the previous year.
 \item (ii) Calculate the proportion of policyholders who are at the 25\% discount level in
@@ -60,7 +64,7 @@ the long run given that the proportion at the 40\% level is nine times that at t
 \item (iii) (a) Explain how the state space of the process would change if the
 probability of making a claim in any one year depended upon whether
 a claim was made in the previous year.
-(b) Write down the transition matrix for this new process. 
+\item (b) Write down the transition matrix for this new process. 
 \end{enumerate}
 \newpage
 
@@ -102,14 +106,16 @@ Substituting p = 0.25 gives 2  0.071006
  32
 Thus the proportion of people at the 25\% discount level is 0.213018. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-(iii) (a) Six states are now required
+(iii) (a) 
+\begin{itemize}
+\item Six states are now required
 because the probability of a person in discount level 1 moving to
 discount level 2 depends upon whether a claim was made the previous
 year or not.
-Hence discount level 1 must be split into
+\item Hence discount level 1 must be split into
 1+ = no claim made previous year and
 1 = claim made previous year
-(b) Let the probability of a claim in any year if there was a claim in the
+\item (b) Let the probability of a claim in any year if there was a claim in the
 previous year be r(epeat) and the probability of a claim in any year if
 there was not a claim in the previous year be n(ew), then the new
 transition matrix is
@@ -133,7 +139,7 @@ n n
   
     
 where the levels are ordered 0, 1+, 1, 2+, 2, 3. [4]
-
+\end{itemize}
 %%[Total 13]
 %Most candidates worked out that five states were required, identified the correct state spaceband drew the correct diagram. Many also produced a correct matrix in part (ii) but few were able to solve the equations. Attempts at part (iii) were patchy, and only a minority of candidates attempted to write down the expanded matrix in part (iii)(b).
 
