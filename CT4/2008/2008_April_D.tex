@@ -78,37 +78,39 @@ years following the traditional method is 0.7.
 \newpage
 
 8
-(i)
+\begin{itemize}
+\item (i)
+
 h ( z , t ) = h 0 ( t ).exp( \beta . z i T )
 where h(z,t) is the hazard at duration t
 h o (t) is the baseline hazard
 z i are the covariates
 \beta is the vector of regression parameters
-(ii)
+\item (ii)
 (iii)
 z 1 = 1 plays violin, 0 otherwise \beta 1 = 0.07
 z 2 = 1 plays trumpet, 0 otherwise \beta 2 = 0.14
 z 3 = 1 new tuition method, 0 otherwise \beta 3 = − 0.05
 z 4 = 1 male, 0 otherwise \beta 4 = 0.02
-Baseline hazard refers to
+\item Baseline hazard refers to
 a female,
 following traditional tuition method,
 playing the piano
 (iv)
-The parameter associated with the new tuition
+\item The parameter associated with the new tuition
 method is - 0.05. Because the parameter is negative, the hazard of dropping
 out is reduced by the new tuition method.
-Therefore the new tuition method does appear
+\item Therefore the new tuition method does appear
 to improve the chances of a child continuing
 with his or her instrument.
-However the 95\% confidence interval for the parameter spans zero.
-So at the 5% significance level it is not possible to conclude that the new
+\item However the 95\% confidence interval for the parameter spans zero.
+\item So at the 5% significance level it is not possible to conclude that the new
 tuition method has improved the chances of children continuing to play their
 instrument.
-(v)
+\item (v)
 The hazard for a girl being taught the trumpet by the traditional
 method giving up is h 0 ( t ) exp(0.14) .
-Therefore the probability of her still playing after 4 years is
+\item Therefore the probability of her still playing after 4 years is
 4
 ⎛ 4
 ⎞
@@ -121,7 +123,7 @@ S female (4) = exp ⎜ − \int h 0 ( t ) exp(0.14) dt ⎟ = exp ⎜ − 1.15027
 ⎝
 ⎠
 Page 13%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2008 — Examiners’ Report
-Since this is equal to 0.7, we have
+\item Since this is equal to 0.7, we have
 4
 ⎛
 ⎞
@@ -133,6 +135,8 @@ exp ⎜ − 1.150274 \int h 0 ( t ) dt ⎟ = 0.7, so that
 log e 0.7 = − 1.150274 \int h 0 ( t ) dt ,
 0
 4
+\end{itemize}
+
 and hence
 \int h 0 ( t ) dt =
 0
@@ -140,7 +144,7 @@ log e 0.7
 = 0.310078.
 − 1.150274
 The hazard of giving up for a boy taught the piano by the new
-method is h 0 ( t ) exp( − 0.05 + 0.02) = h 0 ( t ) exp( − 0.03).
+method is \[h 0 ( t ) exp( − 0.05 + 0.02) = h 0 ( t ) exp( − 0.03).\]
 Therefore the probability of him still playing after 4 years is
 ⎛ 4
 ⎞
@@ -148,9 +152,10 @@ S male (4) = exp ⎜ − \int h 0 ( t ) exp( − 0.03) dt ⎟ = exp [ − 0.3100
 ⎝ 0
 ⎠
 which is exp( - 0.300914) = 0.74014.
+\newpage
 ALTERNATIVELY
 The hazard of giving up for a girl being taught the trumpet by the
-traditional method is h 0 ( t ) exp( \beta 2 ) .
+traditional method is $h 0 ( t ) exp( \beta 2 )$ .
 Therefore the probability of her still playing after 4 years is
 4
 ⎛ 4
