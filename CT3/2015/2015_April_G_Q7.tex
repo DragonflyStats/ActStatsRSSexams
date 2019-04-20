@@ -1,0 +1,201 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+
+\usepackage{amsmath}
+
+\usepackage{chngpage}
+
+
+
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+
+
+
+% left top textwidth textheight headheight
+
+
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document}
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7 A continuous random variable $X$ has the cumulative distribution function $F_X(x)$ given
+by:
+
+
+\[ F_X(x) = \begin{cases}
+0, & x <0 \\
+\frac{1}{8}x^3 , & 0 \leq x \leq 2\\
+1, x > 2 \\
+\end{cases}\]
+
+\begin{enumerate}
+\item Determine the probability density function of $X$. 
+\item Calculate $P(0.5 <X< 1)$.
+
+Let $Y =  \sqrt{X}$
+
+\item Determine the cumulative distribution function and the probability density
+function of $Y$. 
+\item Calculate the expected values of $X$ and $Y$. 
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%CT3 A2015–4
+%%--Question 8 
+\item The random variables X and Y have a joint probability distribution with density
+function:
+  3 , 0 1
+, )
+0, otherwise
+xy (
+  x y x
+  f x y
+     
+  
+  
+  
+\begin{enumerate}[(i)]
+\item Determine the marginal densities of $X$ and $Y$. 
+\item State, with reasons, whether $X$ and $Y$ are independent. 
+\item Determine $E[X]$ and $E[Y]$. 
+\end{enumerate}
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+  7 (i)     3 2
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(i) 
+\begin{eqnarray*}
+f ( x ) &=& F ^{\prime} ( x ) \\  
+&=& \frac{3}{8} x^2 \mbox{ for } 0 \leq y \leq 2
+\end{eqnarray*}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(ii) 
+
+\begin{eqnarray*}
+P [ 0.5 \leq  X \leq  1 ] &=& F ( 1 ) \; - \; F ( 0.5 ) \\
+&=& \frac{1}{8} \left( 1 - -0.5^3 \right)\\
+&=& \frac{1}{8} \times \frac{7}{8} \\
+&=& \frac{7}{64}\\
+&=& 0.1094 \\
+\end{eqnarray*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+(iii) Distribution function for $0 \leq y \leq \sqrt{2}$ :
+
+\begin{eqnarray*}
+P \left[ Y \leq y right] 
+&=& P \left[ X \leq y 2 \right] \\ 
+&=& F_X(y^2) \\ 
+&=& \frac{1}{8} y^6 \\
+\end{eqnarray*}
+
+Density function for $0 \leq y \leq \sqrt{2}$ :
+
+
+\[f_Y ( y ) = \frac{6}{8} y^5 \]
+
+(iv)
+2
+3
+3  1 
+3 4 3
+3
+E [ X ] = \int x^3 dx = \left[x 4 \right] =
+2 = 16 =
+8
+8  4  0 32
+32
+2
+0
+6
+E [ Y ] =
+8
+2
+
+0
+2
+6  1 
+6
+y dy = \left[y 7 \right] = 2 3.5 = 1.212183
+
+\item (iv)  
+  2 2
+  3 4 4
+  0 0
+  3 3 1 3 2 3 16 3
+  8 84 32 32 2
+  E X  x dx   x       
+   
+  2 2
+  6 7 3.5
+  0 0
+  6 6 1 6 2 1.212183
+  8 8 7 56
+  E Y  y dy   y      
+ % \item Most candidates did very well. However, candidates that were not very competent with
+ % differentiation and integration of functions made basic errors.
+  %%%%%%%%%%%%%%%%%%%%%%%%%5
+  \item 8 (i)     2
+  0
+  0
+  3 3 3
+  x
+  y x
+  X y f x xdy xy x 
+       for 0 <x< 1
+      1 1
+  3 3 2 3 1 2
+  2 2
+  x
+  Y
+  y x y
+  f y xdx x y
+  
+  
+           for $0 <y< 1$
+ \item  (ii) Not independent because fX x fY  y  fXY x, y
+  (iii)    
+  1 1
+  4
+  0 0
+  3 0.75
+  X 4 E X  xf x dx   x     
+     
+  1 2 4 1
+  0 0
+  3 3
+  Y 2 2 4 8
+  E Y yf y dy y y
+    
+           
+  
+  % Subject CT3 (Probability and Mathematical Statistics) – April 2015 – Examiners’ Report
+  % Page 7
+% \item In part (i) many candidates could not identify correctly the range of integration, but part (ii) was well answered. In part (iii) again the wrong range of the variables was often used.
+\end{document}
