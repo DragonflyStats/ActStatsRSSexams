@@ -144,12 +144,16 @@ Comment on the results from all the tests carried out in (i) and (ii).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Question 10
 (i)
-Right censoring is present
+\begin{itemize}
+\ite Right censoring is present
 for those still alive and in hospital at the end of August
-OR
+\item OR
 for those who left hospital while still alive
-Left censoring is not present
-The censoring is likely to be informative, since those leaving hospital are likely to be in much better health than those who remain. (The idea of going home to die when you have had a lung transplant is a little tenuous.)
+\item Left censoring is not present
+\item The censoring is likely to be informative, since those leaving hospital are likely to be in much better health than those who remain. 
+\item (The idea of going home to die when you have had a lung transplant is a little tenuous.)
+\end{itemize}
+%%%%%%%%%%%%%%5555
 (ii)
 The durations and outcomes are shown in the table below.
 Patient Died/Censored Duration
@@ -314,18 +318,23 @@ censoring at the same duration (ALTERNATIVE 2) were required to state this assum
 calculating Kaplan-Meier estimates.
 Page 15Subject CT4 (Models Core Technical) — Examiners’ Report, April 2011
 In part (iii) the plotted function should be consistent with the answer to part (ii). If the answer to part (ii) was incorrect but the incorrect answer to part (ii) was correctly plotted in part (iii), full credit could be awarded to part (iii).
+%%%%%%%%%%%%%%%%%%%%%%%%5
+\newpage
 Question 11
 (i)
 The chi-squared test is a suitable overall test.
-Let μ x be the force of mortality in age-group x in the sample.
-Let μ x s be the force of mortality in age group x in the national population.
-Let E x c be the central exposed to risk in the sample.
-Then if z x =
+\begin{itemize}
+\item Let μ x be the force of mortality in age-group x in the sample.
+\item Let μ x s be the force of mortality in age group x in the national population.
+\item Let E x c be the central exposed to risk in the sample.
+\item Then if z x =
 E x c μ x − E x c μ s x
 E x c μ s x
 the test statistic is
 ∑ z x 2 ∼ χ 2 m ,
 x
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 THEN EITHER
 where m is the number of age groups, which in this case is 8.
 The calculations are shown below.
@@ -393,10 +402,13 @@ Age-group Expected deaths z x z x 2
 1.1121
 0.0073
 0.0408
-Therefore the value of the test statistic is 4.438.
-The critical value of the chi-squared distribution at the 5\% level of significance with 7
+\begin{itemize}
+\item Therefore the value of the test statistic is 4.438.
+\item The critical value of the chi-squared distribution at the 5\% level of significance with 7
 degrees of freedom is 14.07.
-Since 4.438 < 14.07 we do not reject the null hypothesis that the mortality rate from tuberculosis in the sample is the same as that in the national population
+\item Since 4.438 < 14.07 we do not reject the null hypothesis that the mortality rate from tuberculosis in the sample is the same as that in the national population
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%
 (ii)
 (a)
 Small bias which is not great enough for the chi-squared test to detect.
@@ -465,19 +477,23 @@ So the value of the test statistic is
 Page 18
 − 26.7991
 = 1.6595 .
-260.7991Subject CT4 (Models Core Technical) — Examiners’ Report, April 2011
-Using a 5% level of significance, we see that −1.96 < 1.6596 < 1.96.
-We do not reject the null hypothesis.
+260.7991
+
+%%-- Subject CT4 (Models Core Technical) — Examiners’ Report, April 2011
+\begin{itemize}
+\item Using a 5\% level of significance, we see that $−1.96 < 1.6596 < 1.96$.
+\item We do not reject the null hypothesis.
 (a) Individual ages at which there are unusually large differences between the sample and the national experience.
 (b) Individual standardised deviations
-Under the null hypothesis that the mortality rate from tuberculosis in the sample is the same as that in the national population
+\item Under the null hypothesis that the mortality rate from tuberculosis in the sample is the same as that in the national population
 we would expect the individual deviations to be distributed Normal (0,1) and therefore only 1 in 20 z x s should have absolute magnitudes greater than
 1.96
 OR
 none should lie outside the range (–3, +3)
 OR
 diagram showing split of deviations actual versus expected.
-Since the largest deviation is less in absolute magnitude than 1.96 we do not reject the null hypothesis.
+\item Since the largest deviation is less in absolute magnitude than 1.96 we do not reject the null hypothesis.
+\end{itemize}
 (a)
 Sections of the data where there is appreciable bias, revealed by runs or clumps of signs of the same type.
 EITHER
@@ -485,10 +501,13 @@ EITHER
 Grouping of signs test
 Under the null hypothesis that the mortality rate from tuberculosis in the
 sample is the same as that in the national population
-G = Number of groups of positive zs = 1
-m = number of deviations = 8 (or 7 if last two age groups combined)
-n 1 = number of positive deviations = 1
-n 2 = number of negative deviations = 7 (or 6 if last two age groups combined)
+\begin{itemize}
+\item G = Number of groups of positive zs = 1
+\item m = number of deviations = 8 (or 7 if last two age groups combined)
+\item n 1 = number of positive deviations = 1
+\item n 2 = number of negative deviations = 7 (or 6 if last two age groups combined)
+\end{itemize}
+
 THEN EITHER
 We want k* the largest k such that
 ⎛ n 1 − 1 ⎞⎛ n 2 + 1 ⎞
@@ -503,7 +522,8 @@ t = 1
 ∑
 < 0.05
 The test fails at the 5% level if G ≤ k *.
-Page 19Subject CT4 (Models Core Technical) — Examiners’ Report, April 2011
+%%--- Page 19
+%%--- Subject CT4 (Models Core Technical) — Examiners’ Report, April 2011
 In the table in the Gold Book a value for k * is not given,
 OR
 The table in the Gold Book shows that k * = 0,
@@ -662,10 +682,13 @@ Test 0.141 (√8) = 0.397 against Normal (0,1), and, since
 0.397 < 1.645, we do not reject the null hypothesis.
 that the mortality rate from tuberculosis in the sample is the same as that in the national population
 (iii)
-In none of the tests we have performed do we reject the null hypothesis.
-Therefore it seems that the mortality from tuberculosis in the town is the same as the national force of mortality.
-In part (ii) the null hypothesis should be stated somewhere for each test. It could be stated at
+
+\begin{itemize}
+\item In none of the tests we have performed do we reject the null hypothesis.
+\item Therefore it seems that the mortality from tuberculosis in the town is the same as the national force of mortality.
+\item In part (ii) the null hypothesis should be stated somewhere for each test. It could be stated at
 the beginning, or in the conclusion. As long as it is correctly stated somewhere, full credit was given. In part (iii), the comment should be consistent with the results of the tests performed in parts (i) and (ii) to gain credit.
-Most candidates made a good attempt at part (i). Attempts at part (ii) were more varied. In particular, most candidates did not point out that the chi-squared test only fails to detect SMALL (but consistent) bias. If the bias is large and consistent, the chi-squared test will
-detect it.
+\end{itemize}
+
+%% Most candidates made a good attempt at part (i). Attempts at part (ii) were more varied. In particular, most candidates did not point out that the chi-squared test only fails to detect SMALL (but consistent) bias. If the bias is large and consistent, the chi-squared test will detect it.
 \end{document}
