@@ -15,7 +15,7 @@
 \usepackage{framed}
 \usepackage{graphicx}
 \usepackage{amsmath}
-\usepackage{chng%% --- Page}
+\usepackage{chngpage}
 
 %\usepackage{bigints}
 \usepackage{vmargin}
@@ -31,86 +31,45 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  % Question 3 
 
+A random variable Y has probability density function
+f(y) = 1 ,
+y
+
+y > 1
+where  > 0 is a parameter.
+\begin{enumerate}[(i)]
+\item  Show that the probability density function of $Z = \ln(Y)$ is given by ez and determine its range.
+\item State the distribution of Z identifying any parameters involved. 
+\end{enumerate}
 
-3 (i)
-State the principle of correspondence in the context of a mortality
-investigation.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+Q3 (i) z = log yy = ez∴ dy
+dz
+= ez
+f(y) = y\theta+1
+\theta
+∴f(z) = \theta(ez)−(\theta+1) ez = \thetae−\thetaz [1½]
+and since y> 1 z> 0. 
 
-A mortality investigation collects the following data:
-n x (t) = total number of policies under which death claims are made when the
-policyholder is aged x last birthday for each calendar year t.
-P x (t) = number of in-force policies where the policyholder was aged x nearest
-birthday on 1 January in year t.
-(ii)
-(a)
-Derive an expression, in terms of P x (t), for the central exposed to risk,
-E x c , corresponding to the claims data which may be used to estimate
-the force of mortality in year t at each age x,  x .
-(b)
-4
-State any assumptions that you make, indicating at which point in your
-derivation each assumption is relevant.
+(ii) This is the probability density function of an exponential distribution with
+parameter \theta. 
+[OR: Obtain using the distribution function:
+\[    FZ(z) = Pr(Z≤z) = Pr(Y≤ez) = FY(ez)\]
+  Also, 1 1
+  1
+  ( ) 1
+  y y
+  FY y du u y
+  u
+  −\theta −\theta
+  \theta+
+    = \theta =−   = −   
+  Thus, FZ(z) = 1−e−\thetaz implying an Exp(\theta) distribution.]
 
-
-
-
-
-
-
-
-
-
-
-
-
-Q3
-(i) A life alive at time t should be included in the exposure at age x at time t if and
-only if, were that life to die immediately, he or she would be counted in the
-death data d x at age x.
-[Total 1]
-(ii) P x (t) is the number of policies under observation aged x nearest birthday on
-1 January in year t.
-To correspond with the claims data, we wish to have policies classified by age
-last birthday.
-
-Define the number of policies aged x last birthday on 1 January in year t to be
-P x ′ ( t ).
-
-Assuming that birthdays are evenly distributed over time,
-P x ′ ( t ) =
-1
-[ P x ( t ) + P x + 1 ( t )] .
-2
-
-
-The central exposed to risk is given by
-E x c =
-1
- 0 P x ′ ( t ) dt .
-
-%% --- Page 5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5(Models Core Technical) – April 2016 – Examiners’ Report
-Assuming that the population varies linearly between census dates, 
-1
-E x c ≈ [ P x ′ ( t ) + P x ′ ( t + 1)] .
-2 
-Substituting for the P x ′ ( t ) in terms of P x (t) from the equation above gives
-1  1
-1
-
-E x c ≈  [ P x ( t ) + P x + 1 ( t )] + [ P x ( t + 1) + P x + 1 ( t + 1)]  .
-2  2
-2
-
-
-[Total 5]
-[TOTAL 6]
-This was a straightforward exposed to risk question and was generally well
-answered. The most common reasons that candidates lost marks in part (ii)
-were the use of the incorrect age adjustment
-P x ′ ( t ) =
-1
-[ P x ( t ) + P x − 1 ( t )] ,
-2
-and a failure to point out where in the argument the assumptions were
-required.
+Part (i) required some work involving probabilistic arguments and was not well
+answered. There were no problems with part (ii).
+\end{document}
