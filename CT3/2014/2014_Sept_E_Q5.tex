@@ -1,0 +1,76 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+5
+Consider two random variables X and Y with E[X] = 2, V[X] = 4, E[Y] = −3, V[Y] = 1,
+and Cov[X, Y] = 1.6.
+
+Calculate:
+
+\begin{enumerate}[(a)]
+\item the expected value of 5X + 20Y.
+\item the correlation coefficient between X and Y.
+\item the expected value of the product XY.
+\item the variance of X − Y.
+\end{enumerate}
+
+\begin{framed}
+\noindent \textbf{Covariance of linear combinations}\\
+If 
+$ {\displaystyle X} $
+, 
+$ {\displaystyle Y} $
+, 
+$ {\displaystyle W} $
+, and 
+${\displaystyle V}$
+ are real-valued random variables and let 
+${\displaystyle a,b,c,d}$ are real-valued constants, then the following facts are a consequence of the definition of covariance: 
+\[
+{\displaystyle {\begin{aligned}\operatorname {Cov} (X,a) =&0\\\operatorname {Cov} (X,X)=&\operatorname {Var} (X)\\\operatorname {Cov} (X,Y)=&\operatorname {Cov} (Y,X)\\\operatorname {Cov} (aX,bY)=&ab\,\operatorname {Cov} (X,Y)\\\operatorname {Cov} (X+a,Y+b)=&\operatorname {Cov} (X,Y)\\
+\operatorname {Cov} (X,Y+W)=&\operatorname {Cov} (X,Y) + \,\operatorname {Cov} (X,W) \\
+\operatorname {Cov} (aX+bY,cW+dV)=&ac\,\operatorname {Cov} (X,W)+ad\,\operatorname {Cov} (X,V) + \\& bc\,\operatorname {Cov} (Y,W)+bd\,\operatorname {Cov} (Y,V)\end{aligned}}} 
+\]
+\end{framed}
+%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+5 (a) E5X  20Y   5*2  20*3 10  60   50
+(b)  ,  1.6 0.8
+2
+Corr X Y  
+(c) EXY   Cov  X ,Y   EX EY  1.6  2*3  4.4
+(d) V  X Y  V  X  V Y   2Cov  X ,Y   4 1 3.2 1.8
+
+%Generally very well answered. There were only a few problems with using the correct expression for the variance (taking into account the covariance).
+
+\end{document}
