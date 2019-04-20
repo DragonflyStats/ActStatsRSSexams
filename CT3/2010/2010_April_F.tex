@@ -32,7 +32,7 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}As part of a project in a modelling module, a statistics student is required to submit a
+As part of a project in a modelling module, a statistics student is required to submit a
 report on the sums insured on home contents insurance policies based on samples of such policies covering risks in five medium-sized towns in each of England, Wales,and Scotland. Data are provided on the average sum insured (Y, in units of £1,000)
 for each of the 15 towns and are as follows:
 England
@@ -147,27 +147,31 @@ Std. Error t value Pr(>|t|)
 2.616 0.0213*
 1.789 on 13 degrees of freedom
 
-
-Verify (by performing your own calculations) the following results for the fitted model as given in the output above:
-(a) the fitted regression line is y = 3.462 + 0.2589x
-(b) the percentage of the variation in the response (y) explained by the model (x) is 34.5%
-(c) the standard error of the slope estimate is 0.09896
-
-(iv) Comment briefly on the usefulness of “index” as a predictor for the average sum insured.
-
+\begin{enumerate}[(a)]
+\item Verify (by performing your own calculations) the following results for the fitted model as given in the output above:
+\begin{itemize}
+\item (a) the fitted regression line is y = 3.462 + 0.2589x
+\item (b) the percentage of the variation in the response (y) explained by the model (x) is 34.5%
+\item (c) the standard error of the slope estimate is 0.09896
+\end{itemize}
+\item (iv) Comment briefly on the usefulness of “index” as a predictor for the average sum insured.
+\item 
 (v) Suggest another model which you think might be more successful in explaining the variability in the values of the average sum insured and provide a better predictor.
-
+\end{enumerate}
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 12
 (i)
 (ii)
-• the three sets of points are positioned at different levels (the means are shown), so there is a prima facie case for suggesting that the underlying means are different (i.e. there are country effects)
-• the means are in the order England (highest), Scotland, Wales (lowest)
-• the variation in the data for Scotland is perhaps lower than that for
+\begin{itemize}
+\item the three sets of points are positioned at different levels (the means are shown), so there is a prima facie case for suggesting that the underlying means are different (i.e. there are country effects)
+\item the means are in the order England (highest), Scotland, Wales (lowest)
+\item the variation in the data for Scotland is perhaps lower than that for
 England, but with only 5 observations for each country, we cannot be sure
 that there is a real underlying difference in variance
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (a)
 SS T = 1316.63 – 137.1 2 /15 = 63.536, SS B = (55.6 2 + 36.8 2 + 44.7 2 ) /
 5 – 137.1 2 /15 = 35.644
@@ -185,8 +189,7 @@ MSS
 35.644 17.82
 27.892 2.324
 Under H 0 : no country effects F = 17.82/2.324 = 7.67 on (2,12) df
-P-value of F = 7.67 is less than 0.01, so we reject H 0 and conclude that
-there are differences among the population means of the average sum
+P-value of F = 7.67 is less than 0.01, so we reject H 0 and conclude that there are differences among the population means of the average sum
 insured
 (b)
 Page 8
@@ -198,7 +201,8 @@ to be in the order England (highest), Scotland, Wales (lowest).
 S xx = 7543 – 329 2 /15 = 326.9333, S yy = 63.536 (from (i)(b) above)
 S xy = 3091.7 – 329×137.1/15 = 84.64
 ˆ ( 329 /15 ) = 3.4617
-β ˆ = 84.64 / 326.9333 = 0.25889 , α ˆ = 137.1/15 − β×
+\[β ˆ = 84.64 / 326.9333 = 0.25889 ,\] 
+\[α ˆ = 137.1/15 − β×\]
 So fitted line is y = 3.462 + 0.2589 x
 (b) R 2 = S xy 2 /( S xx S yy ) = 84.64 2 /(326.9333×63.536) = 0.34488 so 34.5%
 (c) SSRES = S yy – S xy 2 / S xx = 63.536 – 84.64 2 /326.9333 = 41.62349
@@ -207,17 +211,19 @@ So fitted line is y = 3.462 + 0.2589 x
 1/2
 ⇒ s . e . β ˆ = ( 3.201807 / 326.9333 ) = 0.09896
 (iv)
-From the plot we see that the relationship between “index” and “average sum insured” is weak, positive (and possibly linear) – the percentage of the variation in “average sum insured” explained by the relationship with “index”
-is only 34.5%.
-So “index” is of some, but limited, use as a predictor of “average sum
+\begin{itemize}
+\item From the plot we see that the relationship between “index” and “average sum insured” is weak, positive (and possibly linear) – the percentage of the variation in “average sum insured” explained by the relationship with “index”
+is only 34.5\%.
+\item So “index” is of some, but limited, use as a predictor of “average sum
 insured”.
+\end{itemize}
 (v)
-We should try a “multiple regression” model which includes “country” and
+\begin{itemize}
+\item We should try a “multiple regression” model which includes “country” and
 “index” in the model.
-[ Note: although not explicitly in the syllabus, a comment to the effect that
+\item[ Note: although not explicitly in the syllabus, a comment to the effect that
 “Country” should be included as a qualitative variable (a “factor”) e.g. by
 using a text vector (with entries “ E ”, “ W ”, “ S ” say) or a pair of (Bernoulli)
 dummy variables, may attract a bonus for a borderline candidate.]
-END OF EXAMINERS’ REPORT
-Page 9
+\end{itemize}
 \end{document}
