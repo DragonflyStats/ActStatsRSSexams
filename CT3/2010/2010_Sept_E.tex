@@ -30,16 +30,14 @@
 
 \begin{document}
 
-\begin{enumerate}
-11
-\item A life insurance company issuing critical illness insurance wants to compare the delay times from the date when a claim is made until it is settled, for different causes of
+A life insurance company issuing critical illness insurance wants to compare the delay times from the date when a claim is made until it is settled, for different causes of
 illness covered. Random samples of 12 claims associated with two types of illness (A and B) related to heart disease have been collected. The logarithms of the delay times
 are given below (where the original times were measured in days):
-Cause A, y A : 4.0 5.4 4.6 3.5 4.2 4.5 4.2 4.9 5.1 5.2 5.1 5.4
-Cause B, y B : 5.7 5.6 4.2 5.1 4.4 5.9 5.4 3.9 5.7 4.5 4.8 3.9
+\[Cause A, y A : 4.0 5.4 4.6 3.5 4.2 4.5 4.2 4.9 5.1 5.2 5.1 5.4\]
+\[Cause B, y B : 5.7 5.6 4.2 5.1 4.4 5.9 5.4 3.9 5.7 4.5 4.8 3.9\]
 For these data:
-\sum y A = 56.1, \sum y 2 A = 266.33,
-\sum y B = 59.1, \sum y B 2 = 297.03
+$\sum y A = 56.1, \sum y 2 A = 266.33,$
+$\sum y B = 59.1, \sum y B 2 = 297.03$
 \begin{enumerate}
 \item 
 (i) Use a suitable t-test to investigate the hypothesis that the mean delay time is the same for claims related to the two causes of illness and state clearly your
@@ -85,12 +83,15 @@ Residuals
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 11
 (i)
-Less accurate estimation is the penalty paid for using the randomised
+\begin{itemize}
+\item Less accurate estimation is the penalty paid for using the randomised
 response method.
-We want to test H 0 : \mu A = \mu B against H 1 : \mu A \neq\mu B .
+\item We want to test H 0 : \mu A = \mu B against H 1 : \mu A \neq\mu B .
+\item 
 Data give: y A = 56.1/12 = 4.675 , y B = 59.1/12 = 4.925
 s 2 A = (266.33 − 56.1 2 /12) /11 = 0.36932 ,
 s B 2 = (297.03 − 59.1 2 /12) /11 = 0.54205
+\item 
 Assuming that the two samples come from normal distributions with the same
 variance,
 11 s 2 A + 11 s B 2
@@ -102,8 +103,11 @@ y − y B
 which gives t = A
 = − 0.907 .
 s p 2 /12
+\item 
 Critical values at 5\% level are t 22 (0.025) = −2.074 and t 22 (0.975) = 2.074
 so we don’t have evidence against H 0 and conclude that the mean delay time is the same for claims associated with the two causes of illness.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%
 (ii)
 (iii)
 Distribution of times can be skewed to the right, and we need a log
@@ -122,11 +126,14 @@ giving CI as (0.68134/3.478, 0.68134*3.478) = (0.196, 2.370).
 (b)
 (iv)
 Page 6
-The value “1” is included in the 95\% CI, meaning that the assumption
+\begin{itemize}
+\item The value “1” is included in the 95\% CI, meaning that the assumption
 of common variance made for the test is valid.
-SS T = 952.64 – 183 2 /36 = 22.39
-SS B = (56.1 2 + 59.1 2 + 67.8 2 )/12 − 183 2 /36 = 6.155
-⇒ SS R = 22.39 − 6.155 = 16.235
+\item SS T = 952.64 – 183 2 /36 = 22.39
+\item SS B = (56.1 2 + 59.1 2 + 67.8 2 )/12 − 183 2 /36 = 6.155
+\item  SS R = 22.39 − 6.155 = 16.235
+\end{itemize}
+
 Source of variation d.f. SS MSS
 Between
 Residual
@@ -139,8 +146,10 @@ Total 2
 F = 3.078/0.492 = 6.256 on (2,33) degrees of freedom.
 From tables, F 2,33 (0.05) is between 3.276 and 3.295, and F 2,33 (0.01) is
 between 5.289 and 5.336.
-We have strong evidence against the null hypothesis and conclude that the three mean delay times are not equal.
-12
-(v) The assumptions are that the data come from normal populations with constant variance.
-(vi) The plot suggests that the normality assumption is reasonable and that variance does not depend on cause. Test seems valid.
+
+\begin{itemize}
+\item We have strong evidence against the null hypothesis and conclude that the three mean delay times are not equal.
+\item (v) The assumptions are that the data come from normal populations with constant variance.
+\item (vi) The plot suggests that the normality assumption is reasonable and that variance does not depend on cause. Test seems valid.
+\end{itemize}
 \end{document}
