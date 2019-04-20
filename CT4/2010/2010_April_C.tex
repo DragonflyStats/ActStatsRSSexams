@@ -32,35 +32,24 @@
 
 \begin{document}
 \begin{enumerate}
-CT4 A2010—48
-A certain profession admits new members to the status of student. Students may
-qualify as fellows of the profession by virtue of passing a series of examinations.
-Normally student members sit the examinations whilst working for an employer.
-There are two sessions of the examinations each year.
-An employer provides study support to student members of the profession. It wishes
-to assess the cost of providing this study support and therefore wishes to know the
-average time it can expect to take for its students to qualify.
-The employer has maintained records for 23 of its students who all sat their first
-examination in the first session of 2003. The students’ progress has been recorded up
-to and including the last session of 2009. The following data records the number of
-sessions which had been held before the specified event occurred for a student in this
+%%-- CT4 A2010—48
+A certain profession admits new members to the status of student. Students may qualify as fellows of the profession by virtue of passing a series of examinations.
+Normally student members sit the examinations whilst working for an employer. There are two sessions of the examinations each year.
+An employer provides study support to student members of the profession. It wishes to assess the cost of providing this study support and therefore wishes to know the average time it can expect to take for its students to qualify.
+The employer has maintained records for 23 of its students who all sat their first examination in the first session of 2003. The students’ progress has been recorded up to and including the last session of 2009. The following data records the number of sessions which had been held before the specified event occurred for a student in this
 cohort:
 Qualified
 Stopped studying
 6, 8, 8, 9, 9, 9, 11, 11, 13, 13, 13
 4, 5, 8, 11, 14
-The remaining seven students were still studying for the examinations at the end of
-2009.
+The remaining seven students were still studying for the examinations at the end of 2009.
 \begin{enumerate}[(i)]
-\item (i) Determine the median number of sessions taken to qualify for those students
-who qualified during the period of observation.
+\item (i) Determine the median number of sessions taken to qualify for those students who qualified during the period of observation.
 \item  
-(ii) Calculate the Kaplan-Meier estimate of the survival function, S(t), for the
-“hazard” of qualifying, where t is the number of sessions of examinations
+(ii) Calculate the Kaplan-Meier estimate of the survival function, $S(t)$, for the “hazard” of qualifying, where t is the number of sessions of examinations
 since 1 January 2003.
 \item  
-(iii) Hence estimate the median number of sessions to qualify for the students of
-this employer.
+(iii) Hence estimate the median number of sessions to qualify for the students of this employer.
 \item  
 (iv) Explain the difference between the results in (i) and (iii) above.
 \end{enumerate}
@@ -95,35 +84,33 @@ Parameter estimate Variance
 0.2
 0 0.0026
 0
-(ii) State the features of the bird to which the baseline hazard applies.
-(iii) For each regression parameter:
+\begin{enumerate}[(a)]
+\item (ii) State the features of the bird to which the baseline hazard applies.
+\item (iii) For each regression parameter:
 (a) Define the associated covariate.
 (b) Calculate the 95\% confidence interval based on the standard error.
  
  
 (iv)
 (v)
-Comment on the farmer’s belief that the new enclosure will result in an
-increase in his birds’ life expectancy.
- 
-Calculate, using this model, the probability that a female duck in the new
-enclosure has been killed by a predator at the end of six months, given that the
-probability that a male goose in the old enclosure has been killed at the end of
-the same period is 0.1 (all other decrements can be ignored).
-
-[Total 12]
+\item Comment on the farmer’s belief that the new enclosure will result in an increase in his birds’ life expectancy.
+\item  
+Calculate, using this model, the probability that a female duck in the new enclosure has been killed by a predator at the end of six months, given that the probability that a male goose in the old enclosure has been killed at the end of the same period is 0.1 (all other decrements can be ignored).
+\end{enumerate}
+%%-- [Total 12]
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 8
 (i)
-11 students qualified during the period of observation, so the median is the
-number of sessions taken to qualify by the sixth student to qualify.
+
+11 students qualified during the period of observation, so the median is the number of sessions taken to qualify by the sixth student to qualify.
 This is 9 sessions.
 (ii)
 Define t as the number of sessions which have taken place since 1 Jan 2003.
 Stopped studying implies recorded after the session number reported.
+\begin{verbatim}
 tj Nj Dj Cj
 0
 6
@@ -163,10 +150,12 @@ N j
 14/17
 12/14
 8/11
+\end{verbatim}
 The Kaplan-Meier estimate is given by product of 1 −
 D j
 N j
 Then the Kaplan-Meier estimate of the survival function is
+
 t
 0≤ t < 6
 6≤ t < 8
@@ -188,17 +177,11 @@ Page 10
 ^
 S ( t )Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
 (iv)
-The estimate based on students qualifying during the period
-is a biased estimate because it does not contain information
-about students still studying at the end of the period, or about
-those who dropped out (stopped studying without qualifying).
-The students still studying at the end of 2009 have (by definition) a longer
-period to qualification than those who qualified in the period.
-Hence the Kaplan-Meier estimate is higher than the median using
-only students who qualified during the period.
-In part (i) the question said “determine” so some explanation of where the answer comes
-from was required for full credit. In part (ii) the question said “calculate” so the correct S(t)
-and associated ranges of t scored full marks.
+The estimate based on students qualifying during the period is a biased estimate because it does not contain information
+about students still studying at the end of the period, or about those who dropped out (stopped studying without qualifying).
+The students still studying at the end of 2009 have (by definition) a longer period to qualification than those who qualified in the period.
+Hence the Kaplan-Meier estimate is higher than the median using only students who qualified during the period.
+In part (i) the question said “determine” so some explanation of where the answer comes from was required for full credit. In part (ii) the question said “calculate” so the correct $S(t)$ and associated ranges of t scored full marks.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \newpage
 
@@ -216,29 +199,29 @@ and associated ranges of t scored full marks.
 (ii) The baseline hazard refers to a female chicken in the old enclosure
 (iii) The 95 per cent confidence interval for a parameter \beta is given by
 the formula
-\beta ± 1.96(SE[ \beta ]) = \beta ± 1.96 Var ( \beta ) ,
+\[\beta \pm 1.96(SE[ \beta ]) = \beta \pm 1.96 Var ( \beta ) ,\]
 where SE[\beta] is the standard error of the parameter \beta.
 Thus, for the covariate z 1 =1 if Duck 0 otherwise, we have
 95 per cent confidence interval =
 − 0.210 ± 1.96 0.002 = − 0.210 ± 0.088 = { − 0.298, − 0.122}
 95\% C.I.
-z 1 = 1 if Duck 0 otherwise \beta 1 = (–0.298, -0.122)
-z 2 = 1 if Goose 0 otherwise \beta 2 = (–0.049, 0.199)
-z 3 = 1 if New enclosure 0 otherwise \beta 3 = (0.049, 0.201)
-z 4 = 1 if Male 0 otherwise \beta 4 = (0.100, 0.300)
-Page 11Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+\begin{itemize}
+\item z 1 = 1 if Duck 0 otherwise $\beta 1 = (–0.298, -0.122)$
+\item z 2 = 1 if Goose 0 otherwise $\beta 2 = (–0.049, 0.199)$
+\item z 3 = 1 if New enclosure 0 otherwise $\beta 3 = (0.049, 0.201)$
+\item z 4 = 1 if Male 0 otherwise $\beta 4 = (0.100, 0.300)$
+\end{itemize}
+%%--- Page 11Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
 (iv)
-The parameter for the new enclosure is 0.125 so the
-ratio of the hazard for two otherwise identical birds is
+The parameter for the new enclosure is 0.125 so the ratio of the hazard for two otherwise identical birds is
 exp(0.125) = 1.133.
 So the hazard appears to have got worse.
-The 95\% confidence interval is entirely positive OR does not
-include zero
+The 95\% confidence interval is entirely positive OR does not include zero
 so at the 95\% level the deterioration is statistically significant.
 (v)
 ALTERNATIVE 1
 Hazard for a Male, Goose in the Old enclosure is
-h 0 ( t ) exp (0.2 + 0.075 + 0) = h 0 ( t ) exp (0.275)
+\[h_0 ( t ) exp (0.2 + 0.075 + 0) = h_0 ( t ) exp (0.275)\]
 %-------------------------------------------------------%
 
 Hazard for a Male, Goose in the Old enclosure is
@@ -275,19 +258,20 @@ So the probability she’s dead is 0.07087
 Page 12Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
 ALTERNATIVE 2
 Hazard for a Male, Goose in the Old enclosure is
-h 0 ( t ) exp (0.2 + 0.075 + 0) = h 0 ( t ) exp (0.275)
-Therefore the probability of still being alive in 6 months is
+\[h_0 ( t ) exp (0.2 + 0.075 + 0) = h_0 ( t ) exp (0.275)\]
+\begin{itemize}
+\item Therefore the probability of still being alive in 6 months is
 6
 S Goose = exp ⎡ ⎢ − \int h 0 ( t ) exp ( 0.275 ) dt ⎤ ⎥
 ⎣ 0
 ⎦
-Similarly, the probability of still being alive in 6 months for
-A Female Duck in the New enclosure is
+\item Similarly, the probability of still being alive in 6 months for
+\item A Female Duck in the New enclosure is
 6
 S Duck = exp ⎡ ⎢ − \int h 0 ( t ) exp ( − 0.085 ) dt ⎤ ⎥ .
 ⎣ 0
 ⎦
-Therefore we can write
+\item Therefore we can write
 6
 exp ⎡ − \int h 0 ( t ) exp ( 0.275 ) dt ⎤
 S Goose
@@ -309,6 +293,8 @@ exp(0.275)
 =
 .
 6
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%
 log e S Duck − h ( t ) exp ( − 0.085 ) dt exp( − 0.085)
 \int 0
 0
