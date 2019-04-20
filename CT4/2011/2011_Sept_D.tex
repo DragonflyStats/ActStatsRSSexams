@@ -32,11 +32,8 @@
 
 \begin{document}
 \begin{enumerate}
-PLEASE TURN OVER8
-A continuous-time Markov process with states {Able to work (A), Temporarily unable
-to work (T), Permanently unable to work (P), Dead (D)} is used to model the cost of
-providing an incapacity benefit when a person is permanently unable to work. The
-generator matrix, with rates expressed per annum, for the process is estimated as:
+%%--- PLEASE TURN OVER8
+A continuous-time Markov process with states {Able to work (A), Temporarily unable to work (T), Permanently unable to work (P), Dead (D)} is used to model the cost of providing an incapacity benefit when a person is permanently unable to work. The generator matrix, with rates expressed per annum, for the process is estimated as:
 A
 T
 P
@@ -52,24 +49,27 @@ P
 0
 0
 D
-(i) Draw the transition graph for the process.
+\begin{enumerate}[(a)]
+\item (i) Draw the transition graph for the process.
+\item (ii) Calculate the probability of a person remaining in state A for at least 5 years continuously.
 
-(ii) Calculate the probability of a person remaining in state A for at least 5 years
-continuously.
+Define F(i) to be the probability that a person, currently in state i, will never be in state P.
 
-Define F(i) to be the probability that a person, currently in state i, will never be in
-state P.
-(iii)
+\item (iii)
 Derive an expression for:
 (a)
 (b)
 9
-F(A) by conditioning on the first move out of state A.
-F(T) by conditioning on the first move out of state T.
+$F(A)$ by conditioning on the first move out of state $A$.
+$F(T)$ by conditioning on the first move out of state $T$.
 
+\item 
 (iv) Calculate F(A) and F(T).
+\item 
 (v) Calculate the expected future duration spent in state P, for a person currently
 in state A.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 [Total 11]
 (i) State the principle of correspondence as it applies to the estimation of
@@ -81,23 +81,18 @@ Explain why it might be difficult to ensure the principle of correspondence is
 adhered to, and give a specific example of an investigation where this may be
 the case.
 
-An actuary was asked to investigate the mortality of lives in a particular geographical
-area. Data are available of the population of this area, classified by age last birthday,
-on 1 January in each year. Data on the number of deaths in this area in each calendar
+An actuary was asked to investigate the mortality of lives in a particular geographical area. Data are available of the population of this area, classified by age last birthday, on 1 January in each year. Data on the number of deaths in this area in each calendar
 year, classified by age nearest birthday at death, are also available.
 (iii)
-Derive a formula which would allow the actuary to estimate the force of
-mortality at age x + f, μ x + f , in a particular calendar year, in terms of the
-available data, and derive a value for f.
+Derive a formula which would allow the actuary to estimate the force of mortality at age x + f, μ x + f , in a particular calendar year, in terms of the available data, and derive a value for f.
 (iv)
-[6]
-List four factors other than geographical location which a government
-statistical office might use to subdivide data for national mortality analysis. 
+
+List four factors other than geographical location which a government statistical office might use to subdivide data for national mortality analysis. 
 [Total 11]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Question 8
+\newpage
+%%--- Question 8
 (i)
 T
 0.1
@@ -121,19 +116,24 @@ So the probability of staying in state A for at least 5 years continuously is gi
 exp(−.75) = 0.472.
 (iii)
 (a)
-Conditioning on the first move out of A:
-Probability 0.1/0.15 of moving to T, at which point probability becomes F(T).
-Probability 0.02/0.15 of moving to P, at which point certain to travel through
+\begin{itemize}
+\item Conditioning on the first move out of A:
+\item Probability 0.1/0.15 of moving to T, at which point probability becomes F(T).
+\item Probability 0.02/0.15 of moving to P, at which point certain to travel through
 state P.
-Probability 0.03/0.15 of moving straight to D, at which point certain never to
+\item Probability 0.03/0.15 of moving straight to D, at which point certain never to
 reach state P.
-Page 10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
+\end{itemize}
+%%%--Page 10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
 So F(A) = 0.1/0.15*F(T)+0.02/0.15*0+0.03/0.15*1 = 2/3*F(T) + 1/5.
 (b)
 Similarly conditioning on first move out of T
-Probability 0.45/0.6 to A when probability becomes F(A).
-Probability 0.1/0.6 to P when probability becomes 0.
-Probability 0.05/0.6 to D when probability becomes 1.
+\begin{itemize}
+\item Probability 0.45/0.6 to A when probability becomes F(A).
+\item Probability 0.1/0.6 to P when probability becomes 0.
+\item Probability 0.05/0.6 to D when probability becomes 1.
+\end{itemize}
+
 So F(T) = 3/4 * F(A)+ 1/12
 (iv)
 Substituting for F(T) in first equation:
@@ -146,26 +146,23 @@ with rate 0.2,
 so mean time spent in state P from point of entry is 1/0.2 = 5 years.
 So expected time spent in state P for a person currently
 able to work is (1 − F(A))*5 = 22/45*5 = 22/9 years.
-Parts (i) and (ii) were well answered by most candidates. However, the majority of
-candidates struggled with parts (iii)–(v), many not attempting these sections. The rates were
-not required on the diagram in (i) for full credit. Alternative approaches to parts (iii)
-onwards are possible (for example involving geometric progressions) and were attempted by
-a few candidates. These approaches involve more complicated equations than the solution
-above and were rarely successfully completed.
-Question 9
-(i) A life alive at time t should be included in the exposure at age x at time t if and only
-if, were that life to die immediately, he or she would be counted in the deaths data at
-age x.
-(ii) When the deaths data and the exposed to risk data come from different sources.
-E.g. occupational mortality investigations where deaths data come from death
-registers and exposed to risk data from census
-OR
-where deaths data come from claims department of an office, whereas exposed to risk
-data are based on policies in force, which come from a different part of the office.
-Page 11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
+
+% Parts (i) and (ii) were well answered by most candidates. However, the majority of candidates struggled with parts (iii)–(v), many not attempting these sections. The rates were not required on the diagram in (i) for full credit. Alternative approaches to parts (iii) onwards are possible (for example involving geometric progressions) and were attempted by a few candidates. These approaches involve more complicated equations than the solution above and were rarely successfully completed.
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Question 9%%%%
+\begin{itemize}
+\item (i) A life alive at time t should be included in the exposure at age x at time t if and only
+if, were that life to die immediately, he or she would be counted in the deaths data at age x.
+\item (ii) When the deaths data and the exposed to risk data come from different sources. E.g. occupational mortality investigations where deaths data come from death registers and exposed to risk data from census
+\item OR
+where deaths data come from claims department of an office, whereas exposed to risk data are based on policies in force, which come from a different part of the office.
+\end{itemize}
+%%--- Page 11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
 (iii)
 We need to adjust the exposed-to-risk to correspond to the age definition of deaths.
-Let the population aged x nearest birthday on 1 January in year t be P x,t .
+Let the population aged x nearest birthday on 1 January in year t be $P x,t$ .
+
 A central exposed to risk for calendar year t can be approximated by
 1
 1
@@ -204,8 +201,7 @@ P x , t + P x * − 1, t
 ⎦
 ) (
 )
-The age range at the start of the rate interval is [x − 1, x], so the age range at the
-middle of the rate interval is [x − 1⁄2, x + 1⁄2].
+The age range at the start of the rate interval is $[x − 1, x]$, so the age range at the middle of the rate interval is $[x − 1⁄2, x + 1⁄2]$.
 The average age at the middle of the rate interval is therefore x.
 So f = 0.
 (iv)
@@ -221,10 +217,5 @@ Disability, chronic health condition, limiting long-term illness
 In part (ii), candidates who stated that “different age definitions” are a reason why
 correspondence is difficult to achieve were given limited credit. If they went on to suggest
 Page 12%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, September 2011
-that different age definitions can arise because the deaths data and the exposed-to-risk data
-come from different sources, and gave a relevant example, full credit was awarded. Many
-candidates, however, did not describe the different age definitions clearly. Part (iii) was
-better answered than have been exposed-to-risk questions in recent examination papers. In
-part (iv) “smoking behaviour” is NOT correct as a factor which a national statistical office
-might use to classify mortality, neither are factors such as “type of policy”, “policy size” or
-“sales channel”. Candidates are reminded to read the question carefully!
+that different age definitions can arise because the deaths data and the exposed-to-risk data come from different sources, and gave a relevant example, full credit was awarded. Many candidates, however, did not describe the different age definitions clearly. Part (iii) was better answered than have been exposed-to-risk questions in recent examination papers. In part (iv) “smoking behaviour” is NOT correct as a factor which a national statistical office might use to classify mortality, neither are factors such as “type of policy”, “policy size” or “sales channel”. Candidates are reminded to read the question carefully!
+\end{document}
