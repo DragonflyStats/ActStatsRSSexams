@@ -262,7 +262,7 @@ Quarter
 beginning Spider bites
 1 January
 1 April
-1 July
+%%-- 1 July
 1 October 15
 25
 30
@@ -285,7 +285,9 @@ being bitten
 = 0.213
 In part (ii) credit was only given if the points made related to one of the assumptions stated in
 the answer to part (i).
-Page 8Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+
+%%-- Page 8Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+\newpage
 7
 \item (i)
 Learner
@@ -299,33 +301,46 @@ Q
 \item (ii)
 R
 \beta
-Let α be the transition rate R to P
-\beta be the transition rate R to Q
-γ be the transition rate P to Q
-δ be the transition rate P to R
+
+\begin{itemize}
+\item  $\alpha$ be the transition rate R to P
+\item $\beta$ be the transition rate R to Q
+\item $\gamma$ be the transition rate P to Q
+\item $\delta$ be the transition rate P to R
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%5
 Let P be the time spent in Learner state
 R be the time spent in Restricted state
-Let a be the number of transitions from Restricted to Learner
-b be the number of transitions from Restricted to Qualified
-c be the number of transitions from Learner to Qualified
-d be the number of transitions from Learner to Restricted
-L ∝ exp { ( −δ − γ ) P } exp { ( −α − \beta ) R } α a \beta b γ c δ d
-\item (iii)
-Take the logarithm of the likelihood
-log e L = k − P ( δ + γ ) − R ( α + \beta ) + a ln α + b ln \beta + c ln γ + d ln δ
-Differentiate with respect to α
-d log e L
-a
-= − R +
-d α
-α
+Let 
+\begin{itemize}
+\item[a] the number of transitions from Restricted to Learner
+\item[b]the number of transitions from Restricted to Qualified
+\item[c] the number of transitions from Learner to Qualified
+\item[d] the number of transitions from Learner to Restricted
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\[ L \sim exp{(-\delta - \gamma) P}exp{(-\alpha -\beta)R}\alphaa\betab\gammac\deltad \]
+
+(iii) Take the logarithm of the likelihood
+\[\log_e L = k - P(\delta + \gamma) - R(\alpha + \beta) + a \ln \alpha + b \ln\beta + c \ln \gamma + d \ln \delta \]
+Differentiate with respect to \alpha
+\[ \frac{d}{d \alpha} \left(\log_e L  \right) = -R  + \frac{a}{\alpha} \]
+
+
+Set equal to zero to get estimator:
+\begin{itemize}
+\item ${ \displaystyle R = \frac{a}{\alpha} }$
+\item ${ \displaystyle \hat{\alpha} = \frac{a}{R} }$
+\end{itemize}
+
 Set equal to zero to get estimator:
 a
 = R
 α
 α ˆ = a .
 R
-Page 9Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+%%--- Page 9Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
 Differentiate a second time:
 d ln L
 2
@@ -335,4 +350,4 @@ a
 α 2
 .
 which is always negative, so that we have a maximum.
-Thus α ˆ = 230 /1940 = 0.1186
+Thus $\hat{\alpha}  = 230 /1940 = 0.1186$
