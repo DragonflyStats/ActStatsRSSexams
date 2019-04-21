@@ -1,0 +1,151 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+7
+An analyst wishes to model the number of Initial Public Offerings (IPOs) on the
+local stock exchange each calendar month. Let X i be a random variable denoting the
+number of IPOs in month i, where all X i ’s are independent. The analyst wishes to
+model X i using a Poisson distribution but is aware that there is less activity during the
+summer so uses the following rates:
+{
+l,
+\lambda,
+i \neq July, August
+\lambda
+l i =
+		
+ul,
+i = July, August
+u\lambda,
+(i)
+Write down the probability function of X i . .
+
+The analyst wishes to estimate u and \lambda using data from the last 12 months.
+(ii)
+Show that the log likelihood is given by
+l l ( ( x x ; ; \lambda , , u u ) ) = ∑ x x i i ln
+ln \lambda − (10
+(10 + 2 2 u u ) ) \lambda + ( ( x x Jul
+x Aug
+ln u u + C
+C
+Jul + x
+Aug ) ) ln
+i i
+where C is a constant, independent of u and \lambda.
+\lambda.
+
+(iii)
+
+S2018–4
+CT3 X18–4
+Derive the maximum likelihood estimators for u and \lambda. You are not required to
+function.
+confirm that these estimators maximise the likelihood function.
+[5]
+
+
+Q7
+(i)
+pp ii (xx) =
+(ii)
+⎧
+⎪
+\lambda\lambda xx ee −\lambda\lambda
+0, xx < 0
+, xx \geq 0, ii \neq JJJJJJJJ, AAAAAAAAAAAA
+xx!
+⎨ (uuuu) xx ee −uuuu
+⎪
+, xx \geq 0, ii = JJJJJJJJ, AAAAAAAAAAAA
+⎩ xx!
+LL(xx; \lambda\lambda, uu) =
+�
+ii\neqJJJJJJ,AAAAAA
+= �
+ii
+xx ii
+\lambda\lambda xx ii ee −\lambda\lambda
+xx ii !
+
+
+�
+ii=JJJJJJ,AAAAAA
+(uuuu) xx ii ee −uuuu
+xx ii !
+\lambda\lambda
+× �ee −(10+2uu)\lambda\lambda uu xx JJJJJJ +xx AAAAAA �
+xx ii !
+ll(xx; \lambda\lambda, uu) = � xx ii ln \lambda\lambda − (10 + 2uu)\lambda\lambda + �xx JJJJJJ + xx AAAAAA � ln uu + CC
+ii
+(iii)
+xx JJJJJJ + xx AAAAAA
+δδδδ
+= −2\lambda\lambda +
+=0
+δδδδ
+uu
+⟹ 2\lambda\lambda\lambda\lambda = (xx JJJJJJ + xx AAAAAA )
+
+
+
+
+
+δδδδ ΣΣxx ii
+=
+− 10 − 2uu = 0
+δδδδ
+\lambda\lambda
+⟹ ΣΣxx ii − 10\lambda\lambda = 2\lambda\lambda\lambda\lambda = (xx JJJJJJ + xx AAAAAA )
+
+Page 7Subject CT3  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+⟹ \lambda\lambdâ =
+�
+ii\neqJJJJJJ,AAAAAA
+xx ii /10
+
+⟹ uu� = (xx JJJJJJ + xx AAAAAA )/2\lambda\lambdâ
+= (xx JJJJJJ + xx AAAAAA )/(2
+= (xx JJJJJJ + xx AAAAAA )/(
+�
+ii\neqJJJJJJ,AAAAAA
+�
+ii\neqJJJJJJ,AAAAAA
+xx ii /10)
+xx ii /5)
+
+[Total 10]
+There were mixed answers in parts (i) and (ii), often with poor notation
+for the likelihood. Part (iii) was well answered.
+\end{document}
