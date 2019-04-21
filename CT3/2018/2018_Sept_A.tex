@@ -1,46 +1,79 @@
-© Institute and Faculty of Actuaries1
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%© Institute and Faculty of Actuaries1
 A data set of 20 observations has mean 45 and standard deviation 25.4. The data set is
 reviewed and one observation which was incorrectly recorded as 130 is now corrected
 to 30.
 data.
 Determine the mean and standard deviation of the corrected data.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 2
 
 A random variable, X, has the probability generating function G X (t) where
 G X (t) = 0.4096 + 0.4096t + 0.1528t 2 + 0.0256t 3 + 0.0016t 4
 (i)
 (t).
-Determine the probability P(X = 3) using G X (t).
+Determine the probability $P(X = 3)$ using $G_X (t)$.
 
 You are now given that X follows a binomial distribution.
 (ii)
 X.
-Determine the parameter values of the distribution of X.
+Determine the parameter values of the distribution of $X$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%---Question 3
 
-3
-
-[Total 4]
-A sports scientist is building a statistical model to describe the number of attempts
-a high jump athlete will have to make until she succeeds in clearing a certain height
-for the first time during an indoor sports event. For this model the scientist considers
+%%[Total 4]
+A sports scientist is building a statistical model to describe the number of attempts a high jump athlete will have to make until she succeeds in clearing a certain height for the first time during an indoor sports event. For this model the scientist considers
 a geometric distribution with probability of success p. The cumulative distribution
 function of the geometric distribution is given as
-F X (x) = 1 − (1 − p) x , x = 1, 2, 3, ...
+\[F X (x) = 1 − (1 − p) x , x = 1, 2, 3, ...\]
 (i)
-(a) State the assumptions that the scientist needs to make for considering
-this distribution.
+(a) State the assumptions that the scientist needs to make for considering this distribution.
 (b) Comment on the validity of the assumptions in part (i)(a). 
 
 The athlete has tried n jumps without success.
 (ii)
 
-S2018–2
-CT3 X18–2
+%% S2018–2
+%% CT3 X18–2
 (a) Determine the probability that the athlete will require more than x
 additional jumps to succeed in clearing the height.
 (b) athlete. 
 Comment on what the answer in part (ii)(a) means for the athlete.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\newpage
 Solutions
 Q1
 For original data: ΣΣxx ii = nnxx̅ = 20 × 45 = 900
@@ -58,7 +91,7 @@ Corrected data:
 ss = �
 19
 = 15.825
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 [Total 4]
 The question was very well answered by most candidates. A common
 mistake was using n instead of n-1 for the standard deviation.
