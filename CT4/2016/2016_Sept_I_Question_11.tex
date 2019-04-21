@@ -134,40 +134,40 @@ However if \beta = 0 it can never leave its current state so it is reducible.
 In this case the matrix is P =  0.1 0.7 0.2 
  0.01 0.1 0.89 
 
- 
-The stationary distribution satisfies π = π P . 
+(iv) In this case the matrix is 
+\[P =
+\bordermatrix{0.89 & 0.1 & 0.01 \cr
+0.1 & 0.7 & 0.2 \cr
+0.01 & 0.1 & 0.89 \cr }
+\]
+
+%---------%
+The stationary distribution satisfies $\pi = \pi P.$
+
 We have:
-π 0 = 0.89 π 0 + 0.1 π 20 + 0.01 π 40
-π 20 = 0.1 π 0 + 0.7 π 20 + 0.1 π 40
+  
+\begin{enumerate}
+\item ${ \displaystyle \pi_{0} = 0.89\pi_{0} + 0.1\pi_{20} + 0.01\pi_{40}  }$
+\item ${ \displaystyle \pi_{20} = 0.1\pi_{0} +  0.7\pi_{20} + 0.1\pi_{40}  }$
+\item ${ \displaystyle \pi_{40} = 0.01\pi_{0} + 0.2\pi_{20} + 0.89\pi_{40}  }$
+\end{enumerate}
 
-π 40 = 0.01 π 0 + 0.2 π 20 + 0.89 π 40
 and
-π 0 + π 20 + π 40 = 1 .
+\[ \pi_{0} + \pi_{20} + \pi_{40} = 1 \]
 
+%------------------------------------------%
 The first and third equations give
-0.11 π 40 − 0.22 π 0 = 0.01 π 0 − 0.02 π 40
-0.23
-π 0 = 1.769 π 0
-0.13
-0.1 + 0.1769
-=
-π 0 = 0.923 π 0 ,
-0.3
-π 40 =
-π 20
-so (1 + 0.923 + 1.769) π 0 = 1 , and hence
-[1]
-13
-48
-1
-= 0.25 =
-4
-23
-= 0.479 =
-48
-π 0 = 0.271 =
-π 20
-π 40
+\[ 0.11 \pi_{40} - 0.22 \pi_{0} = 0.01 \pi_{0} - 0.02 \pi_{40} \]
+
+\[ \pi_{40} = \frac{0.23}{0.13} \pi_{0} = 1.760 \pi_{0} \]
+
+\[ \pi_{20} = \frac{0.1 \; + \; 0.1769}{0.3} \pi_{0} = 0.923 \pi_{0} \]
+
+so $(1 \;+\; 0.923 \;+\;1.769)\pi_0 =1$, and hence 
+
+\[ \pi_{0} = 0.271 = \frac{13}{48} \]
+\[ \pi_{20} = 0.250 = \frac{12}{48} \]
+\[ \pi_{40} = 0.479 = \frac{23}{48} \]
 are the long term proportion of taxpayers at each marginal rate.
 (v)
 [1]
