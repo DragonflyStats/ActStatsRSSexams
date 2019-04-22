@@ -1,0 +1,185 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+8
+The two random variables X 1 and X 2 are independent from each other and follow a
+uniform U(– θ, θ) distribution, where θ > 0 is a parameter.
+Let θ ˆ 1 = 3 Z denote a possible estimator of θ, where Z = max(X 1 , X 2 ).
+(i)
+(ii)
+(iii)
+z +θ
+Show that the probability density function of Z is given by f Z ( z ) =
+,
+2 θ 2
+by first deriving its cumulative distribution function.
+
+θ
+Show that E ( Z ) = .
+3
+(a)
+Derive the bias of θ ˆ .
+1
+(b)
+Derive an expression for the mean squared error (MSE) of θ ˆ 1 in terms
+of the unknown parameter θ.
+Let θ ˆ 2 = 2 Z denote a different estimator of θ, where again Z = max(X 1 , X 2 ).
+(iv)
+(v)
+
+CT3 S2017–5
+(a) θ
+Show that bias θ ˆ 2 = − .
+3
+(b) Show that MSE θ ˆ 2 = θ 2 .
+( )
+( )
+Comment on how good the two estimators are, based on your answers in parts
+(iii) and (iv).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Q8
+(i)
+F_Z(z) \;=\; P [ z \leq z ] \;=\; P \left[  max ( X 1 , X 2 ) \leq z \right] \;=\; P [ X 1 \leq z , X 2 \leq z ] 
+and because of X 1 and X 2 being iid 
+F_Z(z) \;=\; P [ X 1 \leq z ]
+2
+ z \theta 
+\;=\;
+
+ 2 \theta 
+2
+
+2
+d  z \theta 
+z \theta
+So, F_Z(z) \;=\; 
+ \;=\;
+dz  2 \theta 
+2 \theta 2
+\theta
+
+\theta
+(ii)  z 3 z 2 
+\theta
+E ( Z ) \;=\;  z 2 dz \;=\;  2   \;=\;
+4 \theta  
+3
+2 \theta
+  6 \theta
+\theta
+\theta
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iii) (a)
+z \theta
+( )
+bias( \hat{\theta}1 ) \;=\; E \hat{\theta}1  \theta \;=\; 3 E ( Z )  \theta \;=\; 0
+\theta
+(b)
+
+( ) \;=\;  z
+E Z
+2
+\theta
+2
+z \theta
+2 \theta 2
+
+\theta
+ z 4 z 3 
+\theta 2
+dz \;=\;  2 
+\;=\;
+
+6 \theta  
+3
+  8 \theta
+\theta
+( )
+MSE( \hat{\theta}1 ) \;=\; V \hat{\theta}1
+
+
+ \theta 2 \theta 2 
+\;=\; V ( 3 Z ) \;=\; 9 V ( Z ) \;=\; 9  E Z 2  E 2 ( Z )  \;=\; 9    \;=\; 2 \theta 2
+
+
+9  
+  3
+
+
+( )
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+(iv)
+(a)
+\theta
+\theta
+bias( \hat{\theta}2 ) \;=\; E \hat{\theta}2  \theta \;=\; 2 E ( Z )  \theta \;=\; 2  \theta \;=\; 
+3
+3
+( )
+
+%%--Page 7
+%%-- Subject CT3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(b)
+\theta 2
+\theta 2
+MSE( \hat{\theta}2 ) \;=\; bias 2 \hat{\theta}2  V \hat{\theta}2 \;=\;
+ V ( 2 Z ) \;=\;
+ 4 V ( Z )
+9
+9
+( ) ( )
+\;=\;
+\theta 2
+2 \theta 2
+ 4
+\;=\; \theta 2
+9
+9
+
+(v)
+\hat{\theta} 1 is unbiased, but has much larger MSE compared to \hat{\theta} 2 (by factor of 2). 
+On the other hand \hat{\theta} 2 has considerable bias, equal to a third of the true value
+of the parameter.
+h
+Part (i) was not well answered with a number of candidates not
+attempting it at all. Note that similar questions have appeared in past
+examination papers in different contexts. Part (ii) was generally well
+answered, although there were issues with the simple integration (e.g.
+limits). Parts (iii), (iv) and (v) were well answered.
+\end{document}
