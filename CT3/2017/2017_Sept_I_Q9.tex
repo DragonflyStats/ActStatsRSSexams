@@ -1,0 +1,182 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage
+
+{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}[Total 16]
+PLEASE TURN OVER9
+The reaction time of drivers under the influence of alcohol is the subject of an
+empirical study with an emphasis on the relationship between regular physical
+exercise and reaction time. For this study drivers are categorised into four groups
+according to the time spent exercising per week: group A (no regular exercising),
+group B (0–2 hours), group C (2–4 hours) and group D (more than 4 hours per week).
+Five drivers are randomly chosen from each group and their reaction time in seconds
+is measured during a simulated driving test 60 minutes after ingesting a specific
+amount of alcohol. The measured reaction times are in the following table.
+\sum x i \sum x i 2
+Reaction time, x i
+Group A 0.95 1.40 1.00 1.35 1.30 6.00 7.375
+Group B 1.25 1.35 0.90 1.20 1.35 6.05 7.458
+Group C 1.10 1.30 1.10 0.95 1.30 5.75 6.703
+Group D 1.05 0.80 1.25 1.05 1.05 5.20 5.510
+In a first approach the mean reaction time is studied without considering the time
+spent on exercising.
+(i)
+Calculate a 95% confidence interval for the mean reaction time based on the
+sample of all twenty drivers, stating any assumptions you make.
+[6]
+It is estimated that the average reaction time of drivers not under the influence of
+alcohol is 0.9 seconds.
+(ii)
+Test the null hypothesis that the mean reaction time under the influence of
+alcohol is equal to 0.9 seconds against the alternative hypothesis that the
+reaction time is different from 0.9 seconds. The test decision should be based
+on the sample of all twenty drivers. Use a significance level of 5%.
+
+To investigate the impact of regular exercising on the reaction time under the
+influence of alcohol an analyst suggests carrying out an ANOVA test based on the
+grouping of drivers and the data in the table above.
+(iii) State the mathematical model underlying the one-way analysis of variance
+together with all assumptions.
+
+(iv) Carry out an analysis of variance to test the null hypothesis that the time spent
+on exercising has no effect on the average reaction time under the influence of
+alcohol.[9]
+[Total 19]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q9
+(i)
+Overall mean: X \;=\;
+1
+23
+( 6 + 6.05 + 5.75 + 5.2 ) \;=\; \;=\; 1.15
+20
+20
+
+Variance:
+S 2 \;=\;
+\;=\;
+1 
+( 7.375 + 7.458 + 6.703 + 5.510 )  20 \times 1.15 2 \right]
+
+19
+1
+[ 27.046  26.45  \;=\; 0.031368
+19
+
+Standard deviation
+S= 0.031316 \;=\; 0.177
+
+With the sample not being large we assume that the sample comes from a
+normal distribution.
+[0.5]
+t 0.025,19 \;=\; 2.093
+[0.5]
+95% Confidence interval using t result
+0.177
+0.177 
+
+,1 .15 + t 0.025,19
+ 1.15  t 0.025,19
+
+20
+20 
+
+[ 1.15  0.0828,1 .15 + 0.0828  \;=\; [ 1.067, 1 .233 
+Page 8
+Subject CT3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(ii) The confidence interval in part (i) does not contain 0.9. Therefore, there is a
+significant difference between the reaction time under alcohol intoxication and
+0.9.
+
+(iii) Y ij \;=\; \mu + \tau i + \varepsilon ij
+[0.5]
+where \mu is the overall mean and \tau i is the treatment effect of treatment i [0.5]
+(
+and \varepsilon ij being i.i.d. N 0, \sigma 2
+)
+[0.5]
+In particular, it is assumed that the variance is the same in all groups.
+(iv)
+[0.5]
+2
+2
+2
+2
+SS B \;=\; 5 \times   ( 1.2  1.15 ) + ( 1.21  1.15 ) + ( 1.15  1.15 ) + ( 1.04  1.15 )  
+
+
+\;=\; 5 \times  0.05 2 + 0.06 2 + 0.11 2  \;=\; 0.091
+
+
+SS R \;=\; 7.375 
+\;=\; 27.046 
+
+6.00 2
+6.05 2
+5.75 2
+5.20 2
++ 7.458 
++ 6.703 
++ 5.510 
+5
+5
+5
+5
+(
+)
+1
+36 + 6.05 2 + 5.75 2 + 5.2 2 \;=\; 27.046  26.541 \;=\; 0.505
+5
+
+ANOVA table:
+Source of variation d.f. SS
+MSS F
+Between groups
+3
+0.091 0.030 0.961
+Residual
+16 0.505 0.032
+
+The value of the test statistic is very close to 1, which needs to be compared to
+an F 3,16 distribution (3.239 at 5% level).
+
+We can therefore conclude that regular exercising has no impact on the
+reaction time under alcohol intoxication.
+
+Alternatively, the critical values (at 10%) is 2.462 > 0.961, and we come to the
+same conclusion.
+Answers were very satisfactory overall. In part (ii) many candidates
+performed a full test, and received full credit, but note that this was not
+required. There were some numerical errors in calculating the
+relevant sums in part (iv).
+Page 9Subject CT3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
