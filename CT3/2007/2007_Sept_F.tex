@@ -32,7 +32,7 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
+%%-- \begin{enumerate}
 
 %%[Total 19]
 %%CT3 S2007—613
@@ -62,38 +62,44 @@ resulted in the following observed response data.
 55
 These data are analysed by two statisticians, A and B, who use an analysis of variance
 approach and a linear regression approach, respectively.
+\begin{enumerate}
 \item (i)
 Statistician A’s approach:
 You are given the following data summaries:
 sub-totals $\sum_y = 186$, 236, 243 and 207 at x = 12, 14, 16 and 18,
 respectively, and overall totals $\sum_y = 872$ and $\sum_y^2 = 48,196$.
-(a) Apply a one-way analysis of variance to these data and obtain the
+\begin{itemize}
+\item (a) Apply a one-way analysis of variance to these data and obtain the
 resulting F-value for the usual test.
-(b) Show that the P-value for the test is substantially less than 0.01, by referring to tables of percentage points for the F distribution.
-(c) The result of part (b) above shows that there is very strong evidence of
+\item (b) Show that the P-value for the test is substantially less than 0.01, by referring to tables of percentage points for the F distribution.
+\item (c) The result of part (b) above shows that there is very strong evidence of
 an effect on y due to the quantitative factor x. Suggest a suitable
 diagram that statistician A could now use to describe the effect of x on
 y. Draw this diagram and hence comment on the effect of x on y.
-(d) The graph below shows the residuals plotted against the values of x:
+\item (d) The graph below shows the residuals plotted against the values of x:
 Comment briefly on any implications of this graph.
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%\item (ii)
-Statistician B’s approach:
+\item Statistician B’s approach:
 You are given the following data summaries:
-\sum x = 240 \sum_y = 872 \sum x 2 = 3,680 \sum_y 2 = 48,196 \sum xy = 13,150.
+\[\sum x = 240 \sum_y = 872 \sum x 2 = 3,680 \sum_y 2 = 48,196 \sum xy = 13,150.\]
 (a) Perform a linear regression analysis on these data to show that the
-fitted line is given by y = 41.4 + 0.875x.
+fitted line is given by $y = 41.4 + 0.875x$.
 (b) Perform the hypothesis test on the slope coefficient
-H 0 : \beta = 0 v H 1 : \beta \neq 0
+$H 0 : \beta = 0 v H 1 : \beta \neq 0$
 showing that the P-value is greater than 0.20.
-Comment on what this implies about the relationship between x and y.
-(c)
-The graph below shows the residuals plotted against the values of x:
+
+\begin{itemize}
+    \item Comment on what this implies about the relationship between x and y.
+
+\item (c) The graph below shows the residuals plotted against the values of x:
 Comment briefly on what this graph implies about the effect of x on y.
-(d)
+\item (d)
 Suggest an additional analysis statistician B could now use to describe
 the effect of x on y.
-[10]
+\end{itemize}
+\end{enumerate}
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
@@ -101,9 +107,11 @@ the effect of x on y.
 13
 \item (i)
 (a)
-SS T = 48196 – 872 2 /16 = 48196 – 47524 = 672
-SS B = (186 2 + 236 2 + 243 2 + 207 2 )/4 – 47524 = 523.5
-SS R = 672 – 523.5 = 148.5
+\begin{itemize}
+\item SS T = 48196 – 872 2 /16 = 48196 – 47524 = 672
+\item SS B = (186 2 + 236 2 + 243 2 + 207 2 )/4 – 47524 = 523.5
+\item SS R = 672 – 523.5 = 148.5
+\end{itemize} 
 F =
 523.5 / 3 174.5
 =
@@ -121,9 +129,10 @@ Page 8  — September 2007 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The shape of the effect seems to be curved, initially increasing, then
 decreasing.
 (d)
-\item (ii)
+%% \item (ii)
 (a)
-The implications are simply that there is nothing to invalidate the
+\begin{itemize}
+\item The implications are simply that there is nothing to invalidate the
 assumptions required for the analysis.
 240 2
 = 3680 −
@@ -141,11 +150,11 @@ S_{xy} = 13150 −
 = 70
 16
 70
-\hat{beta} =
-= 0.875 as required
+\item $\hat{\beta} = = 0.875 as required$
 80
 \alpha ˆ =
-(b)
+
+\item (b)
 1
 (872 − 0.875(240)) = 41.375 as required.
 16
@@ -165,14 +174,15 @@ t =
 = 1.185 on 14 d.f.
 0.7385
 P-value = 2 × P(t 14 >1.185)
-As P(t 14 >1.345) = 0.10 from tables, P-value > 2(0.10), i.e. > 0.20
-This implies that there is no evidence against H 0 , and hence that there
+\item As P(t 14 >1.345) = 0.10 from tables, P-value > 2(0.10), i.e. > 0.20
+\item This implies that there is no evidence against H 0 , and hence that there
 is no linear relationship between x and y.
 [not that there is no “relationship”]
 (c) Residual plot suggests that there may be a curved, rather than linear,
 relationship between x and y.
 (d) Statistician B could try a quadratic regression (or some other curved
 form) of y on x.
+\end{itemize}
 END OF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 9
 \end{document}
