@@ -94,36 +94,39 @@ Sum
 195 195 170 190 150 190 200 210 1500
 The last column contains the sum of all eight columns.
 From these values we obtain the following results:
-∑ x i y i = 10, 695; ∑ x i 2 = 416;
+\sum x_i y i = 10, 695; \sum x_i 2 = 416;
 (i)
 \sum y i 2 = 283, 750
-Calculate the correlation coefficient between the index of school quality and
+
+\begin{enumerate}
+\item Calculate the correlation coefficient between the index of school quality and
 the house price index.
 
 You can assume that the joint distribution of the two random variables is a bivariate
 normal distribution.
-(ii) Perform a statistical test for the null hypothesis that the true correlation
+\item (ii) Perform a statistical test for the null hypothesis that the true correlation
 coefficient between the school quality index and the house price index is
 equal to 0.8 against the alternative that the correlation coefficient is smaller
 than 0.8, by calculating an approximate p-value.
-
+\item 
 (iii) Fit a linear regression model to the data, by considering the school quality
 index as the explanatory variable. You should write down the model and
 estimate all parameters.
-
+\item 
 (iv) Calculate the coefficient of determination R 2 for the regression model
 obtained in part (iii).
-(v)
+\item (v)
 Provide a brief interpretation of the slope of the regression model obtained in
 part (iii).
-
+\end{enumerate}
 
 
 CT3 A2012–8
 
 
 %%%%%%%%%%%%%%%%%%%%
-12
+\newpage
+%% -Question 12
 (i)
 p ˆ =
 X 220 + 2* 90
@@ -140,35 +143,43 @@ expected frequency under H_{0} 100 200 100
 ( f j − e j ) 2
 ( f j − e j ) 2 / e j
 2
-The test-statistic is = ∑ ( f j − e j ) 2 / e j . For the given data the value of C is
+The test-statistic is = \sum ( f j − e j ) 2 / e j . For the given data the value of C is
 j = 0
 c = 4 .
 C is \chi^2-distributed with 3−1−1 = 1 degree of freedom.
 H_{0} is rejected since the (1 − \alpha ) -quantile (\alpha = 0.05) of the \chi^2-distribution with
 one degree of freedom is 3.841 < 4.
-(iii) Since the estimated value is 0.5, any reasonable test will not reject that value,
+\begin{itemize}
+    \item (iii) Since the estimated value is 0.5, any reasonable test will not reject that value,
 since the value 0.5 will always be in the acceptance region of the test. In other
 words, 0.5 will always be in any confidence interval around the estimate 0.5.
-(iv) We now have: H_{0} : X i ~ Bin (2, 0.5) and
+\item (iv) We now have: $H_{0} : X i ~ Bin (2, 0.5)$ and
 H 1 : X i does not follow Bin (2, 0.5) (emphasis on both Bin, p = 0.5 )
-(v)
+\item (v)
 The value of the test-statistic is still c = 4 but the distribution of C is now a
-\chi^2-distribution with 3−1 = 2 degrees of freedom.
+$\chi^2$-distribution with 3−1 = 2 degrees of freedom.
+\end{itemize}
+
 Page 8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – April 2012 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Now H_{0} is NOT rejected at a 5%-level since the (1 − \alpha ) -quantile
-(\alpha = 0.05) of the \chi^2-distribution with two degrees of freedom is
+\begin{itemize}
+\item Now $H_{0}$ is NOT rejected at a 5%-level since the (1 − \alpha ) -quantile
+$(\alpha = 0.05)$ of the $\chi^2$-distribution with two degrees of freedom is
 5.991 > 4.
-(vi)
+\item (vi)
 The result in part (ii) states that a binomial distribution does not fit the data
 well and is rejected. However, in part (iii) we found that, under the assumption
 of a binomial distribution, p 0 = 0.5 cannot be rejected. A specific binomial
 distribution with parameter p = 0.5 is not rejected in part (v) for the same
-data. The reason is that the additional degree of freedom in part (v) allows for
+data. 
+\item The reason is that the additional degree of freedom in part (v) allows for
 a larger value of the test-statistic under the null.
 Most candidates answered very well the parts of this question that concerned “knowledge”
 and “application” aspects of the tests. However, there were problems with the comments and
 reasoning.
-13
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%-- Quesiton  13
 (i)
 S xx = 24, S yy = 2500, S_{xy} = 195
 r =
@@ -203,26 +214,25 @@ No evidence against the null hypothesis.
 (iii)
 Y i = a + bX i + ε i
 {
-For b we obtain: b ˆ = n ∑ x i y i −
-∑ x i \sum y i } { n ∑ x i 2 − ( ∑ x i ) 2 }
+For b we obtain: \hat{b} = n \sum x_i y i −
+\sum x_i \sum y i } { n \sum x_i 2 − ( \sum x_i ) 2 }
 − 1
 8*10695 − 56*1500
 = 8.125
-And therefore: b ˆ =
+And therefore: \hat{b} =
 8*416 − 56 2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – April 2012 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 And a ˆ =
 1
 8
-( \sum y i − b ˆ ∑ x i ) = 130.625
+( \sum y i − \hat{b} \sum x_i ) = 130.625
 (iv) R 2 = 0.796084 2 = 0.634
 (v) Any increase in school quality by 1 index-point, leads to an increase of 8.125
 in the house price index.
 Mostly very well answered.
-END OF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 10
 
-%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 12
 An insurer has collected data about the body mass index of 200 males between the
 age of 18 and 40. The results are shown in the following table.
@@ -248,9 +258,12 @@ p
 10p
 >30
 1−31p
-(i) Estimate the parameter p using the method of maximum likelihood.
-
+\begin{enumerate}
+\item (i) Estimate the parameter p using the method of maximum likelihood.
+\item 
 (ii) Perform a statistical test to decide whether the suggested distribution is appropriate for the observed data. You should state the null hypothesis for the test and your decision.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
 To improve the description of the distribution of the body mass index, it is suggested that the marital status of the males in this study is also recorded. The results are
 shown in the following table.
@@ -280,13 +293,16 @@ Total
 42
 200
 A life office has considered a sample of 10,000 men aged between 18 and 40 of which 50\% are married and the other 50\% are single.
-(iii) Estimate the proportion of men with a body mass index of more than 30 in this sample, based on the data in the above table.
+\begin{itemize}
+\item[(iii)] Estimate the proportion of men with a body mass index of more than 30 in this sample, based on the data in the above table.
 
-(iv) Determine whether the body mass index is independent of the marital status or not, using an appropriate statistical test. You should state the null hypothesis for the test, calculate the value of the test statistic and the approximate
+\item[(iv)] Determine whether the body mass index is independent of the marital status or not, using an appropriate statistical test. You should state the null hypothesis for the test, calculate the value of the test statistic and the approximate
 p-value and state your decision.
-[8]
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-13
+\newpage
+%%---Question  13
 The following data give the weight, in kilograms, of a random sample of 10 different
 models of similar motorcycles and the distance, in metres, required to stop from a
 speed of 20 miles per hour.
@@ -313,8 +329,8 @@ For these data:
 14.5
 369
 14.4
-∑ x = 3,377 , ∑ x 2 = 1,143,757 , \sum y = 141.7 ,
-\sum y 2 = 2, 008.39 , ∑ xy = 47,888.6
+\sum x = 3,377 , \sum x 2 = 1,143,757 , \sum y = 141.7 ,
+\sum y 2 = 2, 008.39 , \sum xy = 47,888.6
 Also: S xx = 3,344.1, S yy = 0.501, S_{xy} = 36.51
 A scatter plot of the data is shown below.
 Stopping distance against motorcycle weight
@@ -325,19 +341,22 @@ Stopping distance against motorcycle weight
 360
 370
 Weight (kilograms)
-(i)
+\begin{itemize}
+\item (i)
 (a) Comment briefly on the association between weight and stopping distance, based on the scatter plot.
-(b) Calculate the correlation coefficient between the two variables.
-
+\item (b) Calculate the correlation coefficient between the two variables.
+\item 
 (ii) Investigate the hypothesis that there is positive correlation between the weight of the motorcycle and the stopping distance, using Fisher’s transformation of the correlation coefficient. You should state clearly the hypotheses of your
 test and any assumption that you need to make for the test to be valid.
-
+\item 
 (iii) (a)
 Fit a linear regression model to these data with stopping distance being the response variable and weight the explanatory variable.
-(b)
+
+\item (b)
 Calculate the coefficient of determination for this model and give its interpretation.
-CT3 S2012–8(c)
+\item (c)
 Calculate the expected change in stopping distance for every additional 10 kilograms of motorcycle weight according to the model fitted in
 part (iii)(a).
+\end{itemize}
 
 \end{document}
