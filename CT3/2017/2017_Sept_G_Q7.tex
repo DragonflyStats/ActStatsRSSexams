@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+[Total 10]7
+The annual number of claims an insurance company incurs, N, is believed to follow
+a Poisson distribution with mean l. The value of each claim X i , i = 1, 2, ... follows
+a known distribution with mean m and variance s 2 . The value of each claim is
+independent of the value of any other claim and of the number of claims. Let
+S = X 1 + X 2 + ... + X N denote the total claims in any given year.
+(i)
+Write down an expression for the moment generating function of S in terms of
+the moment generating function of X i .
+(ii)
+Derive formulae for the mean and variance of S using your answer to part (i).
+
+
+[Total 6]
+Q7
+
+
+(i) M S ( y ) \;=\; exp  ( M X ( y )  1 ) where M X ( y ) is the MGF of X
+(ii) M S  ( y ) \;=\;  M X ' ( y ) exp  ( M X ( y )  1 )
+
+
+
+
+
+
+ E ( S ) \;=\; M S  ( 0 ) \;=\;  M  X ( 0 ) exp  ( M X ( 0 )  1 ) \;=\; 
+
+
+
+
+
+M S '' ( y ) \;=\;  M  X ( y ) exp  ( M X ( y )  1 )  (  M  X ( y ) ) exp  ( M X ( y )  1 ) 
+Page 6
+2Subject CT3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+()
+() { (
+( ) ) } (
+( ) )
+Þ M S ¢¢ 0 = l M ¢¢ X 0 exp l M X 0 -1 + l M ¢ X 0
+(
+)
+2
+{ ( ( ) ) }
+exp l M X 0 -1
+\;=\;   2   2  (  )
+2
+
+(
+)
+(
+V ( S ) \;=\; M S  ( 0 )  ( M S  ( 0 ) ) \;=\;   2   2  (  )  (  ) \;=\;   2   2
+2
+2
+2
+)
+
+The answer in part (i) was given in a variety of forms, and credit was
+given as appropriate. There were various errors or incomplete answers
+in part (ii), with many candidates showing knowledge of the required
+steps but failing to derive the correct answer mainly due to algebra and
+differentiation problems.
