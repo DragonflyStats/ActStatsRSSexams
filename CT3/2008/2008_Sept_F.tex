@@ -62,12 +62,14 @@ y
 For these data x = 30, y = 341, x 2 = 110, y 2 = 14,345 , xy = 1,211
 (i)
 (ii)
-You are asked to carry out a linear regression analysis using these data.
-(a) Draw a plot of the data to show the relationship between the response and explanatory values.
-(b) Calculate the total, regression, and residual sums of squares for a least- squares linear regression analysis of y on x, and hence calculate the value of $R^2$ , the coefficient of determination.
-(c) Determine the equation of the fitted regression line.
-(d) Calculate a 95\% confidence interval for the slope of the underlying regression line.
-
+\begin{itemize}
+\item You are asked to carry out a linear regression analysis using these data.
+\item (a) Draw a plot of the data to show the relationship between the response and explanatory values.
+\item (b) Calculate the total, regression, and residual sums of squares for a least- squares linear regression analysis of y on x, and hence calculate the value of $R^2$ , the coefficient of determination.
+\item (c) Determine the equation of the fitted regression line.
+\item (d) Calculate a 95\% confidence interval for the slope of the underlying regression line.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%
 A colleague suggests that it will be simpler and will produce the same results if we use the following reduced data, in which the two responses at each x
 value are replaced by their mean:
 x
@@ -117,12 +119,15 @@ produce “the same results”.
 (i)
 (a)
 (b)
-SSTOT = S yy = 14345 – 341 2 /10 = 2716.9
-Σx = 30, Σx 2 = 110 so S xx = 110 – 30 2 /10 = 20
-S xy = 1211 − 30*341/10 = 188
-∴SSREG = 188 2 /20 = 1767.2
+\begin{itemize}
+\item SSTOT = S yy = 14345 – 341 2 /10 = 2716.9
+\item Σx = 30, Σx 2 = 110 so S xx = 110 – 30 2 /10 = 20
+\item S xy = 1211 − 30*341/10 = 188
+\item ∴SSREG = 188 2 /20 = 1767.2
 SSRES = 2716.9 − 1767.2 = 949.7
-R 2 = 1767.2/2716.9 = 0.650 (65.0%)
+\item R 2 = 1767.2/2716.9 = 0.650 (65.0%)
+\end{itemize}
+
 (c)
 y = a + bx:
 b ˆ = 188 / 20 = 9.4
@@ -143,17 +148,19 @@ s . e . b ˆ = ⎜
 95% confidence interval for b is given by $9.4 \pm 2.306 × 2.4363$
 i.e. 9.4 ± 5.62 i.e. $(3.78, 15.02)$
 (ii)
-When we replace the pair of responses by their mean:
+\begin{itemize}
+\item When we replace the pair of responses by their mean:
 the equation of the fitted line remains the same
-but otherwise the analyses do not produce “equivalent results”
+\item but otherwise the analyses do not produce “equivalent results”
 the “fit” of the line is very much better [the goodness-of-fit measure R 2 increases
 to a very high value − from 65% to 98.5%]
-plus, for example:
-the estimate of the slope has a much lower standard error (2.436 drops to 0.6733)
+\item plus, for example:
+\item the estimate of the slope has a much lower standard error (2.436 drops to 0.6733)
 the SSTOT drops hugely (from 2716.9 on 9df to 897.2 on 4df)
-the residual error (SSRES) drops hugely [from 949.7 on 8df (error variance
+\item the residual error (SSRES) drops hugely [from 949.7 on 8df (error variance
 estimate 118.7 ) to 13.60 on 3 df (error variance estimate 4.53)]
 BUT we lose all information on the variation of the response for a given value of
 the explanatory variable
-Note: these and other relevant comments will receive credit.
+\item Note: these and other relevant comments will receive credit.
+\end{itemize}
 \end{document}
