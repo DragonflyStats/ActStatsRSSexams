@@ -6,7 +6,9 @@
 \usepackage{vmargin}
 \usepackage{amsmath}
 \usepackage{graphics}
-\usepackage{epsfig}
+\usepackage
+
+{epsfig}
 \usepackage{enumerate}
 \usepackage{multicol}
 \usepackage{subfigure}
@@ -30,39 +32,64 @@
 
 \setcounter{MaxMatrixCols}{10}
 
-\begin{document}
-\begin{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\begin{document}[Total 16]
+9
+The random variables X and Y have joint probability density function (pdf)
+\[
+f_{X,Y}(x,y) = \begin{cases}  
+24 x^3 y & 0 < x < y < 1, \\
+0 & otherwise.\\
+\end{cases}
+\]
+(i)
+(a)
+Show that the marginal pdf of X is
+\[f_X(x) = 12x 3 (1 – x^2 ), 0 < x < 1.\]
+(b)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+Show that the marginal pdf of $Y$ is 
+\[f_Y   (y) = 6y 5 , 0 < y < 1.\]
+
 Q9
 (i)
 (a)
-f X =
-( x )
-1
-\int^{\infty}_{0} 24 x
-3
-(
-)
-y =
-dy 12 x 3 1 − x 2 ,      0 < x < 1
+\begin{eqnarray*}
+f_YX(x) 
+&=& \int^{1}_{x} f_{X,Y}(x,y) dy \\
+&=& \int^{1}_{x} 24x^3 y dx \\
+&=& 24x^3 \int^{1}_{x}y dx \\
+&=& 24x^3 \left[ \frac{y^2}{2} \right]^{1}_{x}\\
+&=& 24x^3 \left[ \frac{1}{2} - \frac{x^2}{2}\right] \\
+&=& 12x^3(1-x^2)  \mbox{0 <x < 1} \\
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%%%%5
 
-x
-(b)
-f =
-Y ( y )
-y
-y dx
-\int^{\infty}_{0} 24 x =
-3
-6 y 5 ,     0 < y < 1
+\begin{eqnarray*}
+f_Y (y) 
+&=& \int^{y}_{0} f_{X,Y}(x,y) dx \\
+&=& \int^{y}_{0} 24x^3 y dx \\
+&=& 24y \int^{y}_{0}x^3 dx \\
+&=& 24y \left[ \frac{x^4}{4}\right]^{y}_{0}\\
+&=& 24y \times \frac{y^4}{4}\\
+&=& 6y^5 \mbox{0 <y < 1} \\
+\end{eqnarray*}
 
-0
-%%% Page 7Subject CT3  – April 2018 – Examiners’ Report
-E [ X ] =
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(ii) Determine the covariance $\operatorname{cov}(X, Y)$.
+
 (ii)
-1
-1
-\[\int^{\infty}_{0} xf X ( x ) dx = \int^{\infty}_{0} x 12 x ( 1 − x )\]
+\begin{eqnarray*}
+E(X) &=& \int x f_X ( x ) dx \\
+&=& \int x 12 x^3 ( 1 − x^2 ) dx \\
+&=&  12 \int ( x^4 - x^6 ) dx \\
+&=& 12 \left[ \frac{x^5}{5} - \frac{x^7}{7} \right]^{1}_{0}
+&=&
+\end{eqnarray*}
+
+
 3
 0
 =
@@ -77,30 +104,67 @@ dx =
 7  
   5
 0
-
+[1]
 1
 y 6  
 y dy
-\int^{\infty}_{0} =
+\int =
 5
-
+[1]
 6/7
 0
 1 y
 3
 =
-E [ XY ]   24
-y   
-dx dy
-\int^{\infty}_{0}\int^{\infty}_{0} xy x =
-00
-1
-24 7
-=
-y dy 3 / 5
-5 \int^{\infty}_{0}
-0
-\[cov ( X , Y ) = E ( XY ) − E ( X ) E ( Y ) \] =
+\begin{eqnarray*}
+E [ XY ]   &=&
+\int\int xy 24x^3 y dx dy \\ 
+&=& \frac{24}{5} \int^{1}{0} y^7 dy \\
+&=& \frac{24}{5} \left[ \frac{y^8}{8} \right]^{1}{0}\\
+&=& \frac{24}{5} \left[ \frac{1}{8} - 0 \right]\\
+&=& \frac{3}{5}
+\end{eqnarray*}
+
+\begin{eqnarray*}
+cov ( X , Y ) &=& E ( XY ) − E ( X ) E ( Y ) \\
+&=& \frac{3}{5} \;-\; \frac{24}{35} \times \frac{6}{7} \\
+&=& \frac{147}{245} \;-\; \frac{144}{245} \\
+&=& \frac{3}{245}  
+\end{eqnarray*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+(iii) Determine the conditional pdf $f_{X |Y}(x| y)$ together with the range of $X$ for which
+it is defined. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iv)
+
+Determine the conditional probability \[P\left( X > \frac{1}{3} | Y = \frac{1}{2} \right)\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(v)
+
+
+Determine the conditional expectation \[E\left( X | Y=4 \right)\]
+4   
+⎛
+⎝
+(iv)
+Verify that $E[E[X |Y ]] = E[X]$ by evaluating each side of the equation.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+(iii)
+(iv)
+3 24 6
+3
+− × =
+5 35 7 245
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (iii)
 (iv)
@@ -143,7 +207,13 @@ f Y ( y )
 65
 
  1 
-P  X > | Y =  = \int^{\infty}_{0} f X | Y  x |  dx = \int^{\infty}_{0} 4 x 3 2 4 dx = 16   x 4   =
+
+\begin{eqnarray*}
+P  X > | Y =  = \int^{\infty}_{0} f_{X | Y}  x |  dx \\
+&=& \int^{\infty}_{0} 4 x 3 2 4 dx \\
+&=&  16   x 4   \\ 
+&=&
+\end{eqnarray*}
 
 1/3
 3
