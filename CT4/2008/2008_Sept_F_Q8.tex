@@ -1,0 +1,202 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+8
+
+[Total 8]
+A No-Claims Discount system operated by a motor insurer has the following four
+levels:
+
+\begin{itemize}
+\item Level 1: 0\% discount
+\item Level 2: 25\% discount
+\item Level 3: 40\% discount
+\item Level 4: 60\% discount
+\end{itemize}
+
+
+
+
+
+The rules for moving between these levels are as follows:
+\begin{enumerate}
+\item Following a year with no claims, move to the next higher level, or remain at
+level 4.
+\item  Following a year with one claim, move to the next lower level, or remain at
+level 1.
+\item  Following a year with two or more claims, move down two levels, or move to
+level 1 (from level 2) or remain at level 1.
+\end{enumerate}
+For a given policyholder in a given year the probability of no claims is 0.85 and the
+probability of making one claim is 0.12.
+\begin{enumerate}
+\item (i) Write down the transition matrix of this No-Claims Discount process.
+\item (ii) Calculate the probability that a policyholder who is currently at level 2 will be
+at level 2 after:
+(a)one year.
+
+(b) two years.
+\item (iii)
+
+
+
+Calculate the long-run probability that a policyholder is in discount level 2.
+\end{enumerate}
+%%-- [Total 9]
+CT4 S2008—5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+
+
+8
+\begin{itemize}
+\item (i)
+The transition matrix of the process is
+The transition matrix of the process is
+
+\[ \begin{bmatrix}
+0.15 & 0.85 & 0 & 0 \\
+0.15 & 0 & 0.85 & 0 \\
+0.03 & 0.12 & 0 & 0.85 \\
+0 & 0.03 & 0.12 & 0.85 
+\end{bmatrix}  \]
+
+(a) For the one year transition, p 22 = 0, as can be seen
+from above (or is obvious from the statement).
+(b) The second order transition matrix is
+\[P^2 =  \begin{bmatrix}
+0.15 & 0.85 & 0 & 0 \\
+0.15 & 0 & 0.85 & 0 \\
+0.03 & 0.12 & 0 & 0.85 \\
+0 & 0.03 & 0.12 & 0.85 
+\end{bmatrix}  \times \begin{bmatrix}
+0.15 & 0.85 & 0 & 0 \\
+0.15 & 0 & 0.85 & 0 \\
+0.03 & 0.12 & 0 & 0.85 \\
+0 & 0.03 & 0.12 & 0.85 
+\end{bmatrix}  \]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(a) For the one year transition, p 22 = 0, as can be seen
+from above (or is obvious from the statement).
+(b) The second order transition matrix is
+% \[P^2 =  \begin{bmatrix}
+% (0.15 \times 0.15) + (0.85 \times 0.15) & 
+%     (0.15 \times 0.85) + (0) + (0) + (0) & 
+%       (0.15 \times 0) + (0.85 \times 0.85) + (0) + (0)& 
+%       (0) + (0) + (0) + (0) \\
+%--------------------%
+%(0.15 \times 0.15) + (0) +  (0.85 \times 0.03) + (0) & 
+%   (0.15 \times 0.15) + (0) + (0.85 \times 0.15) + (0)  & 
+%      (0.15 \times 0.15) + (0) + (0.85 \times 0.15) + (0)  & 
+%         (0.15 \times 0.15) + (0)  + (0.85 \times 0.15) + (0)  \\
+%--------------------%
+%(0.03 \times 0.15) + (0.12 \times 0.15) + (0)+  (0.85 \times 0.15) & 
+%   (0.03 \times 0.15) + (0.12 \times 0.15) + (0)+ (0.85 \times 0.15) & 
+%      (0.03 \times 0.15) + (0.12 \times 0.15)+ (0) +  (0.85 \times 0.15) & 
+%         (0.03 \times 0.15) + (0.12 \times 0.15)+ (0) +  (0.85 \times 0.15) \\
+%--------------------%
+% (0) + (0.03 \times 0.15) + (0.12 \times 0.03) +  (0.85 \times 0)  &  
+%     (0) +  (0.03 \times 0) + (0.12 \times 0.15) +  (0.85 \times 0.15) & 
+%        (0) + (0.03 \times 0.15) + (0.12 \times 0.12) +  (0.85 \times 0.15) & 
+%           (0) + (0.03 \times 0.15) + (0.12 \times 0.15) +  (0.85 \times 0.15)  \\
+%\end{bmatrix}\]
+
+\[ P^2 =\begin{bmatrix}
+0.15 & 0.1275 & 0.7225 & 0 \\
+0.048 & 0.2995 & 0 & 0.7225 \\
+0.0225 & 0.051 & 0.204 & 0.7225 \\
+0 & 0.0399 & 0.1275 & 0.8245 
+\end{bmatrix}  \]
+
+
+hence the required probability is $0.229$5.
+\item (iii)
+In matrix form, the equation we need to solve is $\pi P = \pi$,
+where $\pi$ is the vector of equilibrium probabilities.
+
+\[ \begin{bmatrix}
+\pi_1& \pi_2 & \pi_3 & \pi_4 
+\end{bmatrix}\begin{bmatrix}
+0.15 & 0.85 & 0 & 0 \\
+0.15 & 0 & 0.85 & 0 \\
+0.03 & 0.12 & 0 & 0.85 \\
+0 & 0.03 & 0.12 & 0.85 
+\end{bmatrix} = \begin{bmatrix}
+\pi_1& \pi_2 & \pi_3 & \pi_4 
+\end{bmatrix}  \]
+
+This reads
+\begin{enumerate}[(1)]
+\item ${ \displaystyle 0.15 \pi_1 + 0.15 \pi_2 + 0.03 \pi_3 = \pi_1 }$
+\item ${ \displaystyle 0.85 \pi_1 + 0.12 \pi_3 + 0.03 \pi_4 = \pi_2 }$
+\item ${ \displaystyle 0.85 \pi_2 + 0.12 \pi_4 = \pi_3 }$
+\item ${ \displaystyle  0.85 \pi_3 + 0.85 \pi_4 = \pi_4 }$
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Discard the first of these equations and use also the fact that
+\[\sum_{i= 1} \pi_i = 1 .\]
+4
+
+\item Then, we obtain first from (4) that $0.85 \pi_3 = 0.15 \pi_4$
+or, that $\pi_4 = 17 \pi_3 / 3$
+%- Page 9 — Models Core Technical — September 2008 — Examiners’ 
+
+\item Substituting in (3) this gives
+\[0.85 \pi_2 + 0.12 ×
+17
+\pi_3 = \pi_3 ⇒ \pi_3 = 2.65625 \pi_2
+3\]
+(2) now yields that
+\[0.85 \pi_1 = \pi_2 − 0.12 \pi_3 − 0.03 \pi_4 =
+1\]
+\[\pi_3 − 0.12 \pi_3 − 0.17 \pi_3 = 0.0865 \pi_3 ,
+2.65625\]
+so that finally we get $\pi_1 = 0.10173 \pi_3$ .
+Using now that the probabilities must add up to one, we obtain
+\[ \pi_1 + \pi_2 + \pi_3 + \pi_4 = (0.10173 + 0.3765 + 1 + 5.666) \pi_3 = 1, \]
+or that $\pi_3 = 0.13996$.
+Solving back for the other variables we get that
+\begin{itemize}
+    \item $ { \displaystyle \pi_1 = 0.01424}$, 
+    \item $ { \displaystyle \pi_2 = 0.05269}$, 
+    \item $ { \displaystyle \pi_4 = 0.79311}$
+\end{itemize}
+
+\item The long-run probability that the motorist is in discount level 2 is therefore
+0.05269.
+
+\end{itemize}
+\end{document}
