@@ -31,42 +31,39 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
+
 
 
 11
-Consider the random variable defined by X_n =
-∑ Y_i with each Y_i mutually
-i = 1
+Consider the random variable defined by $$ X_n =
+\sum_{i=1}Y_i $ with each $Y_i$ mutually
+
 independent with probability:
-P[Y_i = 1] = p, P[Y_i = -1] = 1- p
+\[P[Y_i = 1] = p, P[Y_i = -1] = 1- p\]
 0 < p < 1
+\begin{enumerate}[(a)]
 \item (i) Write down the state space and transition graph of the sequence X_n .
 \item (ii) State, with reasons, whether the process:
-(a)
-(b)
-(c)
-is aperiodic.
-is reducible.
-admits a stationary distribution.
+\begin{enumerate}[(a)]
+\item is aperiodic.
+\item is reducible.
+\item admits a stationary distribution.
+\end{enumerate}
 
-
-Consider j > i > 0.
+Consider $j > i > 0$.
 \item (iii) Derive an expression for the number of upward movements in the sequence X_n
 between t and (t + m) if X t = i and X t+m = j.
 
-\item (iv) Derive expressions for the m-step transition probabilities p ij ( m ) .
+\item (iv) Derive expressions for the m-step transition probabilities $p_{ij} ^{( m )}$ .
 \item (v) Show how the one-step transition probabilities would alter if X_n was restricted
-to non-negative numbers bY_introducing:
-(a)
-(b)
-
-a reflecting boundary at zero.
-an absorbing boundary at zero.
-
+to non-negative numbers by introducing:
+\begin{enumerate}[(a)]
+\item a reflecting boundary at zero.
+\item an absorbing boundary at zero.
+\end{enumerate}
 \item (vi)
 For each of the examples in part (v), explain whether the transition
-probabilities p ij ( m ) would increase, decrease or stay the same.
+probabilities $p_{ij} ^{( m )}$ would increase, decrease or stay the same.
 (Calculation of the transition probabilities is not required.)
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555
@@ -101,39 +98,42 @@ as the probabilities of X_n increasing and decreasing by 1 are both non-zero so 
 (c)
 \item (iii)
 No stationary distribution will exist because the state space is infinite.
-Suppose there are u upward movements.
-Then there must be m − u downward movements,
-and u – ( m – u ) = j – i
-So u =
-(iv)
-m + j − i
-.
-2
-\item The maximum number of upward steps is m so the transition probabilitY_is zero if j – i > m .
-As the chain is periodic with period 2, it can only occupy state j after m steps if m + j − i is even.
-\item If m + j − i is even and $j– i \leq m$ then there must be u
-upward jumps and ( m − u ) downward jumps.
-⎛ m ⎞
-These can be ordered in ⎜ ⎟ ways.
-⎝ u ⎠
-%%-- Page 15 — Models Core Technical — September 2008 — Examiners’ Report
-So the transition probabilities are:
-p ij ( m )
-(v)
-⎧⎛ m ⎞ u
-p (1 − p ) m − u
-⎪
-= ⎨ ⎜ ⎝ u ⎟ ⎠
-⎪
-0
-⎩
-if j − i \leq m and m + j − i even
-otherwise
+%%- Part iii
+
+\begin{itemize}
+\item Suppose there are u upward movements.
+\item Then there must be $m − u$ downward movements,
+and $u – ( m – u ) = j – i$
+\item So 
+\[ u = \frac{m + j − i}{2}. \]
+\end{itemize}
+
+%%- part iv
+
+\begin{itemize}
+\item The maximum number of upward steps is m so the
+transition probability is zero if $j – i > m$ .
+\item 
+As the chain is periodic with period 2, it can only occupy
+state j after m steps if $m + j − i$ is even.
+\item If $m + j − i$ is even and $j – i \leq m$ then there must be $u$
+upward jumps and $( m − u )$ downward jumps.
+
+\item These can be ordered in ${ \displaystyle {m \choose u} }$ ways.
+\item So the transition probabilities are:
+\[
+p_{ij}^{( m )}  = \begin{cases}
+{m \choose u} p^{u}(1-p)^{m-u}\\ if j − i \leq m \mbox{ and }m + j − i \mbox{ even }
+0 & otherwise\\
+\end{cases}
+\]
+\end{itemize}
+
 EITHER
 \item In both cases the transition probabilities
 are unaltered unless X_i = 0.
-(a) Reflecting boundarY_implies
-P[X_i+1 = 1│X_i = 0] = 1 (or p 01(1) = 1)
+\item (a) Reflecting boundarY_implies
+\[P[X_i+1 = 1│X_i = 0] = 1 (or p 01(1) = 1)\]
 \item (b) Absorbing boundarY_implies
 P[X_i+1 = 0│X_i = 0] = 1 (or p 00(1) = 1)
 OR
@@ -223,7 +223,7 @@ p
 :
 ⎝ :
 OR
-A diagrammatic solution is also acceptable:
+\item A diagrammatic solution is also acceptable:
 %%--- Page 16 — Models Core Technical — September 2008 — Examiners’ Report
 Reflecting
 1
