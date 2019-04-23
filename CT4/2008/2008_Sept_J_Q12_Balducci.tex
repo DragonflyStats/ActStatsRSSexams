@@ -31,51 +31,55 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
+
+%%-Question 12
 \begin{enumerate}
-12
-(i) Explain the meaning of the rates of mortality usually denoted q x and m x , and the relationship between them.
+\item (i) Explain the meaning of the rates of mortality usually denoted $q_x$ and $m_x$ , and the relationship between them.
 
-(ii) Write down a formula for t q x , $0 \leq t \leq 1$ , under each of the following assumptions about the distribution of deaths in the age range $[x, x+1]$:
-(a)
-(b)
-(c)
-uniform distribution of deaths
-constant force of mortality
-the Balducci assumption
-
+\item (ii) Write down a formula for t q x , $0 \leq t \leq 1$ , under each of the following assumptions about the distribution of deaths in the age range $[x, x+1]$:
+\begin{enumerate}[(a)]
+\item uniform distribution of deaths
+\item constant force of mortality
+\item the Balducci assumption
+\end{enumerate}
+\medskip
 %%%%%%%%%%%%%%
-A group of animals experiences a mortality rate q x = 0.1.
-(iii) Calculate m x under each of the assumptions (a) to (c) above.
-(iv) Comment on your results in part (iii).
+A group of animals experiences a mortality rate $q_x = 0.1$.
 
-CT4 S2008—9
-[8]
+\begin{itemize}
+\item (iii) Calculate m x under each of the assumptions (a) to (c) above.
+\item (iv) Comment on your results in part (iii).
+\end{itemize}
+%%--CT4 S2008—9
+%%-- [8]
 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 12
-(i)
-q x is the probability that a life aged exactly x will die before reaching exact age x+1, and is called the initial rate of mortality.
-m x is called the central rate of mortality and represents the probability that a life alive between the ages of $x$ and $x+1$ dies
-They are related by:
+\begin{itemize}
+\item (i)
+q x is the probability that a life aged exactly x will die before reaching exact age $x+1$, and is called the initial rate of mortality.
+\item m x is called the central rate of mortality and represents the probability that a life alive between the ages of $x$ and $x+1$ dies
+\item They are related by:
 m x =
 q x
 1
 \int t p x dt
 0
+\item 
 (ii)
 (a)
 Uniform distribution of deaths (UDD)
 t q x
-(b)
+\item (b)
 Constant force of mortality (CFM)
 t q x
 (c)
 = t * q x
 = 1 − e −\mu * t
-Balducci assumption
+\item Balducci assumption
 1 − t q x + t
-(iii)
+\item (iii)
 (a)
 = (1 − t ) * q x
 UDD
@@ -105,13 +109,13 @@ dt
 (or other reasoning why exposure is 0.95
 under UDD)
 m x = 0.1/0.95 = 0.105263
-(b)
+\item (b)
 CFM
 \mu given by:
 1 − e −\mu = 0.1
 \mu = − ln 0.9 = 0.1053605
 %%------- 18Subject CT4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2008 — Examiners’ Report
-EITHER
+\item EITHER
 If force of mortality constant over [x, x+1] then
 central rate must be equal to the force \mu
 so m x = 0.1053605
@@ -130,7 +134,7 @@ OR
 \mu ⎣
 ⎦ 0 \mu
 m x = 0.1/0.949122=0.1053605
-(c)
+\item (c)
 Balducci
 For consistency, observe that 1 p x = t p x . 1 − t p x + t
 So
@@ -148,9 +152,11 @@ p x + t
 1 − 1 − t q x + t 0.9 + 0.1 t
 0.9
 0.9
-\int t p x dt = \int 0.9 + 0.1 t dt = 0.1 [ ln(0.9 + 0.1 t ) ] 0 = − 9 ln 0.9 = 0.9482446
+
+\[\int t p x dt = \int 0.9 + 0.1 t dt = 0.1 [ ln(0.9 + 0.1 t ) ] 0 = − 9 ln 0.9 = 0.9482446\]
 1
 So m x = 0.1/0.9482446=0.1054580
+\end{itemize}
 (iv)
 \begin{itemize}
 \tiem The Balducci assumption implies a decreasing mortality rate over [x, x+1] and UDD
