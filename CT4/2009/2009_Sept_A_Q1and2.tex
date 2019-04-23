@@ -1,0 +1,141 @@
+
+Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@DragonflyStats
+
+1
+0
+
+    0
+
+DragonflyStats/ActStatsRSSexams
+Code
+Issues 0
+Pull requests 0
+Projects 0
+Wiki
+Insights
+Settings
+ActStatsRSSexams/CT4/2009/2009_Sept_A.tex
+@ShinyMCS ShinyMCS corrections 2 2b53cfb on Mar 24
+@ShinyMCS
+@DragonflyStats
+220 lines (202 sloc) 7.6 KB
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+© Institute of Actuaries1
+Describe the difference between the following assumptions about mortality between
+any two ages, x and y (y > x):
+\item
+\item
+uniform distribution of deaths
+constant force of mortality
+In your answer, explain the shape of the survival function between ages x and y under
+each of the two assumptions.
+
+2
+(i)
+List the key steps in constructing a new actuarial model.
+
+You work for an actuarial consultancy which is taking over responsibility for a
+modelling process which has previously been conducted in house by a client.
+3
+\item (ii) Discuss the extent to which the steps required for this task differ from those
+listed in your answer to (i).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1
+A uniform distribution of deaths means
+EITHER
+that deaths are evenly spaced between the ages x and y.
+OR
+that t q x  tq x
+( t  y  x )
+OR
+that t p x  x  t is constant for t  y  x .
+It also means that the survival function decreases linearly between ages x and y. The
+assumption of a constant force of mortality between any two ages means
+EITHER
+that the hazard does not change with age over this age range.
+OR
+that t p x  ( p x ) t .
+This implies that the survival function decreases exponentially between ages x and y.
+Answers to this straightforward bookwork question were disappointing. Although
+most candidates could describe the difference between a constant force of mortality
+and the increasing force implied by a uniform distribution of deaths, few made correct reference to the form of the survival function. An alarming number of candidates
+referred to survival functions which increased with age! Credit was given for graphs which correctly depicted the shape of the survival function under the two
+assumptions.
+%%%%%%%%%%%%%%%%%%%%%
+\newpage
+2
+(i) Define objectives of modelling process.
+Plan the modelling process and how it will be validated.
+Collect and validate the data required.
+2  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+\begin{itemize}
+\item Define the form of the model.
+\item Involve experts on the real world system/get feedback on validity.
+\item Decide on software to be used, choose random number generator etc.
+\item Write the computer program.
+\item Debug the program.
+\item Analyse the output
+\item Test the reasonableness of the output.
+\item Consider appropriateness of response of the model to small changes in input
+parameters.
+\item Communicate and document results.
+\end{itemize}
+%%[1⁄2 mark was awarded for each point up to a maximum of 4 marks]
+
+\item (ii) Whilst in theory all steps are still required, some may take the form of
+reviewing the appropriateness of existing decisions made, such as how the
+form of the model was determined.
+Extent of work will depend on whether the existing model is to be used,
+adapted or superseded.
+An understanding of how results compare with those previously used by the
+company will be required.
+Process maps for the existing approach, or discussions with the people running the process about what they do, may be helpful.
+The scope needs to be tightly defined up front to ensure it is clear what is expected of the consultancy.
+Data sources may already be established.
+[1⁄2 mark was awarded for each point up to a maximum of 2 marks]
+Part (i) of this question was basic bookwork and was extremely well
+answered. part (ii) required more thought, but many candidates were able to
+write down some relevant points.
+
+\end{document}
