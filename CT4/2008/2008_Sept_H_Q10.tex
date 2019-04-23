@@ -31,8 +31,7 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
-CT4 S2008—610
+%%- Question 10
 In an investigation of reconviction rates among those who have served prison
 sentences, let X be a random variable which measures the duration from the date of
 release from prison until the ex-prisoner is convicted of a subsequent offence. The
@@ -41,9 +40,13 @@ same date) at one-monthly intervals from their date of release for a period of 6
 months. Those who could not be traced in any month were removed from the sample
 at that point and not traced in subsequent months. Reconviction was assumed to take
 place at the duration that a prisoner was first known to have been reconvicted.
-(i)
+
+\begin{enuemrate}
+\item (i)
 Express the hazard rate at duration x months in terms of probabilities.
 [1]
+
+\item 
 The investigation produced the following data for a sample of 100 ex-prisoners.
 Months since release
 1
@@ -52,6 +55,7 @@ Months since release
 4
 5
 6
+\item 
 (ii)
 Number of prisoners
 contacted
@@ -70,21 +74,21 @@ since last contact
 3
 5
 0
+\item 
 Calculate the Nelson-Aalen estimate of the survival function.
-
+\medskip
 A previous investigation found that the probability that a prisoner would be
 reconvicted within 6 months of release was 0.2.
-(iii)
+\item (iii)
 Estimate confidence intervals around the integrated hazard using the results
 from part (ii) to test the hypothesis that the rate of reconviction has declined
 since the previous investigation.
-[6]
-[Total 12]
-CT4 S2008—7
-PLEASE TURN OVERn
+\end{enumerate}
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 10
-(i)
+\begin{itemize}
+\item (i)
 ∂ t t 35
 13
 p 13
@@ -100,22 +104,26 @@ x = −\mu x + t . t p x
 p 15
 x = \mu x + t . t p x + \mu x + t . t p x
 EITHER
-The hazard rate at duration x is given by
-Pr[ X ≤ x + dt | X > x ]
+\item The hazard rate at duration x is given by
+Pr[ X \leq x + dt | X > x ]
 .
 dt → 0
 dt
 lim
 OR
+\item 
 In discrete time, the hazard rate at duration x is given by, $Pr[ X = x | X \geq  x ]$ .
 OR
+\item 
 The hazard rate at duration x is given by h ( x ) = −
 1 d
 [ S ( x )] ,
 S ( x ) dx
 where S(x) is the survival function defined as $Pr[X > x]$.
+\end{itemize}
 (ii)
-The integrated hazard, \lambda x , is estimated as follows:
+\begin{itemize}
+    \item The integrated hazard, \lambda x , is estimated as follows:
 x j
 n j
 d j
@@ -147,7 +155,7 @@ n j
 \lambda x =
 d j
 ∑ n j
-x j ≤ x
+x j \leq x
 0 0
 0
 0
@@ -161,25 +169,29 @@ x j ≤ x
 0.1343
 0.1343
 Page 12%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2008 — Examiners’ Report
-The survival function S ( x ) is given by exp( − \lambda x ), so that we have
+\item The survival function $S ( x )$ is given by $exp( − \lambda x )$, so that we have
 (iii)
-x S ( x )
-0 ≤ x < 3
-3 ≤ x < 4
-4 ≤ x < 5
-5 ≤ x 1.0000
-0.9588
-0.9274
-0.8744
-Confidence intervals around the integrated hazard may
+\begin{center}
+\begin{tabular}{cc}
+x & S ( x ) \\ \hline
+0 \leq x < 3 &  1.0000 \\ \hline
+3 \leq x < 4 & 0.9588 \\ \hline
+4 \leq x < 5 & 0.9274 \\ \hline
+5 \leq x & 0.8744 \\ \hline
+\end{tabular}
+\end{center}
+\end{itemize}
+
+\begin{itemize}
+\item Confidence intervals around the integrated hazard may
 be estimated using the formula
 ~
 Var [ \lambda x ] =
 ∑
 d j ( n j − d j )
 n 3 j
-x j ≤ x
-Applying this to the data gives
+x j \leq x
+\item Applying this to the data gives
 x j
 0
 1
@@ -215,7 +227,7 @@ n 3 j
 0.000651
 0
 d j ( n j − d j )
-x j ≤ x
+x j \leq x
 n 3 j
 0
 0
@@ -224,40 +236,42 @@ n 3 j
 0.000783
 0.001434
 0.001434
-95 per cent confidence intervals around the integrated
+\item 95 per cent confidence intervals around the integrated
 hazard at duration 6 can therefore be computed as
-^
-^
-\lambda 6 \pm 1.96 var \lambda 6
-= 0.1343 \pm 1.96 0.001434
-= (0.1343 – 0.0742, 0.1343 + 0.0742)
-= (0.0601, 0.2085).
-Page 13%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2008 — Examiners’ Report
+\begin{eqnarray*}
+\hat{\lambda} 6 \pm 1.96 var \hat{\lambda} 6
+&=& 0.1343 \pm 1.96 0.001434 \\
+&=&(0.1343 – 0.0742, 0.1343 + 0.0742)\\
+&=& (0.0601, 0.2085).\\
+\end{eqnarray*}
+
+%%-- Page 13%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2008 — Examiners’ Report
 THEN EITHER
-^
-The estimated survival function, S ( x ) is given
-^
-by exp( − \lambda x ) ,
-^
-so that the 95 per cent confidence interval for S ( x ) is
-[exp( −0.0601), exp(−0.2085)]
+\begin{itemize}
+\item The estimated survival function, S ( x ) is given
+by $exp( − \lambda x )$ ,
+
+so that the 95 per cent confidence interval for $S ( x )$ is
+$[exp( −0.0601), exp(−0.2085)]$
 which is (0.9417, 0.8118).
-In the previous investigation the probability that a
+\item In the previous investigation the probability that a
 prisoner would not be reconvicted within 6 months
 of release was 1 – 0.2 = 0.8.
 ^
+\item 
 Since the 95 per cent confidence interval around S ( x ) in the current
 ^
 investigation does not include the value 0.8, and our estimate of S ( x ) > 0.8
 we conclude that the rate of reconviction has declined since the previous
 investigation.
 OR
-In the previous investigation the probability that a
+\item In the previous investigation the probability that a
 prisoner would not be reconvicted within 6 months
 of release was 1 – 0.2 = 0.8 – i.e. S (6) = 0.8
-Since S ( x ) = exp(−\lambda x ), the value of \lambda 6 corresponding to S (6) = 0.8 is
-\lambda 6 = −log e (0.8) = 0.2231.
-Since this is higher than the upper limit in the range (0.0601, 0.2085) we
+\item Since S ( x ) = exp(−\lambda x ), the value of \lambda 6 corresponding to S (6) = 0.8 is
+$$\lambda 6 = −log e (0.8) = 0.2231$.
+\item Since this is higher than the upper limit in the range (0.0601, 0.2085) we
 conclude that the rate of reconviction has declined since the previous
 investigation.
+\end{itemize}
 \end{document}
