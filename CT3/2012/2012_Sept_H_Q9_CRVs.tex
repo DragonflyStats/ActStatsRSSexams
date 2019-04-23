@@ -1,0 +1,129 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+9
+An analyst is interested in using a gamma distribution with parameters α = 2 and
+1
+1 − x
+λ = 1⁄2, that is, with density function f ( x ) = xe 2 , 0 < x < ∞ .
+4
+\begin{enumerate}[(a)]
+\item (i)
+(a) State the mean and standard deviation of this distribution.
+(b) Hence comment briefly on its shape.
+\item 
+(ii)
+Show that the cumulative distribution function is given by
+1
+− x
+1
+F ( x ) = 1 − (1 + x ) e 2 , 0 < x < ∞
+2
+(zero otherwise).
+
+The analyst wishes to simulate values x from this gamma distribution and is able to
+generate random numbers u from a uniform distribution on (0,1).
+\item (iii)
+(a) Specify an equation involving x and u, the solution of which will yield
+the simulated value x.
+(b) Comment briefly on how this equation might be solved.
+(c) The graph below gives F(x) plotted against x. Use this graph to obtain
+the simulated value of x corresponding to the random number u = 0.66.
+
+\end{enumerate}
+
+\newpage
+9
+\begin{itemize}
+\item (i)
+α
+= 8 = 2.8
+mean =
+(b) As claims are non-negative and the s.d. is quite large relative to the
+mean, then the distribution will be quite positively skewed.
+F ( x )
+λ 2
+1
+x
+\item (ii)
+α
+= 4 and s.d. =
+λ
+(a)
+1 − t
+= \int te 2 dt
+4
+0
+1
+x
+− t
+1
+= − \int td ( e 2 )
+2
+0
+1
+x
+1
+1 − t
+1 − t
+= − [ te 2 ] 0 x + \int e 2 dt
+2
+2
+0
+1
+1
+− t
+1 − x
+= − xe 2 − [ e 2 ] 0 x
+2
+1
+− x
+1
+= 1 − (1 + x ) e 2
+2
+1
+\item 
+(iii)
+− x
+1
+i.e. 1 − (1 + x ) e 2 = u
+2
+(a) F ( x ) = u
+(b) This equation would have to be solved numerically
+(c) Using u = 0.66 on the vertical axis, we invert to get x = 4.5 on the
+horizontal axis.
+In part (ii) many candidates failed to integrate correctly. A lot of problems were caused by not using the correct limits for the integral. In part (iii) a popular answer was to use “trial-
+and-error”, which is not an appropriate approach here.
+Page 6%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – September 2012 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{itemize}
+\end{document}
