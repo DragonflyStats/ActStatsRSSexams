@@ -1,0 +1,178 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%- Question 9
+A company pension scheme, with a compulsory scheme retirement age of 65, is
+modelled using a multiple state model with the following categories:
+
+
+\begin{enumerate}
+    \item currently employed by the company
+    \item no longer employed by the company, but not yet receiving a pension
+    \item pension in payment, pension commenced early due to ill health retirement
+    \item pension in payment, pension commenced at scheme retirement age
+    \item dead
+\end{enumerate} 
+
+\begin{enumerate}
+\item (i) Describe the nature of the state space and time space for this process.
+\item (ii) Draw and label a transition diagram indicating appropriate transitions between
+the states.
+
+
+\medskip 
+
+For i,j in {1,2,3,4,5}, let:
+t
+p 1i x
+the probability that a life is in state i at age x+t, given they are in state 1 at age
+x
+$\mu ijx + t$ the transition intensity from state i to state j at age $x+t$
+\item (iii) Write down equations which could be used to determine the evolution of t p 1i x
+(for each i) appropriate for:
+(a)
+(b)
+(c)
+x + t < 65.
+x + t = 65.
+x + t > 65.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+9
+\begin{itemize}
+\item (i)
+The state space is discrete with states as given in the question.
+The process operates in continuous time.
+However, at the compulsory scheme retirement
+age of 65 there is a discrete step change.
+This is sometimes described as a mixed process.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item (ii)
+2
+$\mu12$
+x + t
+No longer
+employed
+$\mu 24$
+x + t
+$\mu 14$
+x + t
+1
+Currently
+employed
+4
+$\mu 13$
+x + t
+3
+Ill health
+% \mu 45
+x + t
+% \mu 35
+x + t
+% \mu 15
+x + t
+Pensioner
+% \mu 25
+x + t
+5
+Dead
+\item (iii)
+(a)
+For x + t < 65
+% \frac{\partial}{\partial t} 
+% \frac{\partial}{\partial t} 
+% \frac{\partial}{\partial t} 
+% \frac{\partial}{\partial t} 
+% \frac{\partial}{\partial t}  t t 12
+13
+15
+11
+p 11
+
+\[\frac{\partial}{\partial t}  t t 12 x = − ( \mu x + t + \mu x + t + \mu x + t ) t p x \]
+11
+25
+12
+p 12
+\[
+\frac{\partial}{\partial t}  t t 13 x = \mu x + t . t p x − \mu x + t . t p x\]
+11
+35
+13
+p 13
+
+\[\frac{\partial}{\partial t} x = \mu x + t . t p x − \mu x + t . t p x t t 15\]
+11
+25
+12
+35
+13
+p 15
+\[x = \mu x + t . t p x + \mu x + t . t p x + \mu x + t . t p x\]
+and t p 14
+X is zero.
+
+\item (b)
+For x + t = 65
+t
+12
+p 11
+% x and t p x become 0 at $x + t = 65+ \delta$
+% t +\delta
+% p 14
+% x =
+% t −\delta
+% 12
+% p 11
+% x + t −\delta p x
+
+(c)
+For x + t >65
+t
+12
+p 11
+x = t p x = 0
+
+\[\frac{\partial}{\partial t} \]
+\[\frac{\partial}{\partial t} \]
+\[\frac{\partial}{\partial t} \]
+\end{itemize}
+\end{document}
