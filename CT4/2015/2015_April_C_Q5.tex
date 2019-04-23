@@ -1,0 +1,143 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+\item 5
+
+(i)
+State the principle of correspondence as it applies to death rates.
+
+\medksip
+A nightclub opens at 10.00 p.m. and closes at 2.00 a.m. It admits only people aged
+over 21 years on the production of an identity card giving date of birth.
+The table below shows the number of people entering in various intervals between
+10.00 p.m. and 2.00 a.m. on 30 June 2013. No-one was admitted after 1.00 a.m., and
+you may assume that all those who enter the premises stay until 2.00 a.m.
+\begin{verbatim}
+Year of
+birth 10.00–11.30
+p.m. 11.30–12.00
+p.m. 12.00 p.m.–1.00 a.m.
+1989
+1990
+1991
+1992 100
+200
+150
+100 300
+400
+400
+250 200
+350
+300
+200
+\end{verbatim}
+
+During the period of opening, 40 people aged 22 last birthday required medical
+attention for heat exhaustion.
+\item (ii)
+6
+Calculate the rate per person-hour at which those attending the night club aged
+22 last birthday required medical attention for heat exhaustion, stating any
+assumptions you make.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+5
+\begin{itemize}
+    \item (i) A life alive at age x at time t should be included in the
+exposed-to-risk if and only if, were that life to die immediately,
+his or her death would be included in the deaths at age x, d x .
+\item (ii) Those aged 22 last birthday on 30 June 2013 were born between 1 July 1990
+and 30 June 1991, so half of them were born in 1990 and half in 1991.
+\item Assuming that birthdays are evenly distributed across calendar years,
+The number of persons aged 22 last birthday entering during each period is
+10.00 – 11.30 p.m.
+11.30 p.m. – 12.00 midnight
+12.00 midnight – 1.00 a.m.
+0.5(200 + 150) = 175
+0.5(400 + 400) = 400
+0.5(350 + 300) = 325
+\item THEN EITHER
+The number of persons aged 22 last birthday in the nightclub at 10.00 p.m.,
+11.30 p.m., 12.00 midnight, 1.00 a.m. and 2.00 a.m. is therefore
+10.00 p.m.
+11.30 p.m.
+12 midnight
+1.00 a.m.
+2.00 a.m.
+0
+175
+575
+900
+900
+\item Using the census approximation and assuming that arrivals are evenly
+distributed across time,
+the exposed to risk in person-hours is
+ 0  175 
+ 175  575   575  900 
+1.5 
+  0.5 
+  1 
+  900
+2
+2
+ 2 
+
+ 
+
+ 131.25  187.5  737.5  900
+= 1,956.25
+OR
+\item Using the census approximation and assuming that arrivals are evenly
+distributed across time,
+the exposed-to-risk in person-hours is
+175(3.25) + 400(2.25) + 325(1.5) = 1,956.25.
+Page 7 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – April 2015 – Examiners’ Report
+AND HENCE
+the rate of requiring medical attention is
+40
+ 0.02045 per person hour.
+1,956.25
+\item 
+Common errors were to use the wrong year or years of birth, to fail to cumulate the arrivals
+(i.e. to realise that once inside the building, customers remained until 2.00 a.m.), and to
+forget the final hour, during which the club was full and no more customers entered. In
+general, answers to this question were rather better than answers to similar questions on
+other recent examination papers. 
+\item In part (ii) candidates were expected to relate the
+assumptions to the specific stage of the derivation to which they applied. Candidates who
+wrote down lists of assumptions – some relevant to the answer, others not – scored little
+credit.
+\end{itemize}
+\end{document}
