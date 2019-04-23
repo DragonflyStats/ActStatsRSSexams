@@ -33,8 +33,9 @@
 \begin{document}
 \begin{enumerate}
 
-Let $\{X_1 , X_2 , \ldots , X_n\}$ be a random sample from a distribution with parameter θ and
+Let $\{X_1 , X_2 , \ldots , X_n\}$ be a random sample from a distribution with parameter $\theta$ and
 density function:
+\[
 ⎧ 2 x
 ; 0 ≤ x ≤θ
 ⎪
@@ -43,6 +44,7 @@ f ( x ) = ⎨ θ 2
 ⎪ 0
 ; x < 0 or x > θ
 ⎩
+\]
 Suppose that x = ( $\{X_1 , X_2 , \ldots , X_n\}$ ) is a realisation of $X_1 , X_2 , \ldots , X_n$ .
 \begin{enumerate}[(i)]
 \item (a) Derive the likelihood function $L(\theta; x)$ and produce a rough sketch of its graph.
@@ -52,12 +54,12 @@ Let $X ( n ) = \mbox{max}\{ X_1 , X_2 , \ldots , X_n\}$ be the estimator of $\th
 (a)
 Show that the cumulative distribution function of the estimator $X ( n )$ is
 given by:
-⎛ x ⎞
+\[⎛ x ⎞
 F X ( n ) ( x ) = ⎜ ⎟
 ⎝ θ ⎠
-2 n
+2 n\]
 for $0 \leq x \leq \theta$.
-(b) Hence, derive the probability density function of the estimator X ( n ) .
+(b) Hence, derive the probability density function of the estimator $X ( n )$ .
 (c) Determine the expected value $E ( X ( n ) )$ and the variance $V ( X ( n ) )$ .
 (d) Show that the estimator
 2 n + 1
@@ -73,7 +75,8 @@ X ( n ) is an unbiased estimator of θ.
 \newpage
 
 8
-(i)
+\begin{itemize}
+\item (i)
 (a)
 Likelihood is given as
  n f ( x ;  ) 
@@ -84,15 +87,15 @@ L (  ; x )   i  1 i
  2 n
 if   x ( n )  max{ x 1 , x 2 ,  , x n }
 if   x ( n ) .
-Its graph is given below:
+\item Its graph is given below:
 0
 max(x)
 theta
-(b)
+\item (b)
 From the graph, the likelihood is maximised at
   x  n   max  x 1 , x 2 ,  , x n  .
 
-(ii)
+\item (ii)
 (a)
 F X
  n 
@@ -107,7 +110,7 @@ n
    2 du     2     
   0 
          0     
-(b)
+\item (b)
 Differentiating we obtain
  2 nx 2 n  1
 if 0  x  
@@ -136,7 +139,7 @@ n  2
 n  1
        
 V X  n   E X  2 n   E X  n 
-(iii)
+\item (iii)
 2
 2
 
@@ -159,11 +162,11 @@ E X  n  
 2 n 2 n  1
  2 n
 
-(a)  2 n  1
+\item (a)  2 n  1
 
  2 n  1
 
-MSE 
+\item MSE 
 X  n    V 
 X  n  
  2 n
@@ -179,15 +182,15 @@ X  n  
 
  2 n 
  2 n 
-(b)
+\item (b)
 2
 n  2
  n  1  2 n  1  2
  2
 
 4 n  n  1 
-We have MSE  0 as n  , therefore the estimator is consistent.
-
+\item We have MSE  0 as n  , therefore the estimator is consistent.
+\end{itemize}
 This question was not well answered, and there were some poor efforts especially in part (i). In many cases, the plotted graph revealed inadequate understanding of the likelihood concept, with some candidates attempting to draw it as a function of x. Note that for full marks the likelihood needs to include the range of the parameter and the graph must indicate
 the value of max(x) on the x-axis. In parts (ii) and (iii) some candidates did not cope well
 with the algebra.
