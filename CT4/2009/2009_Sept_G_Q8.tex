@@ -1,0 +1,162 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+8
+Sketch, using your answers to parts (i) and \item (ii), a graph showing the
+probability that a car currently located at the Airport is subsequently at the
+Airport, Beach or City against the number of times the car has been rented. 
+[Total 10]
+A researcher is studying a certain incurable disease. The disease can be fatal, but
+often sufferers survive with the condition for a number of years. The researcher
+wishes to project the number of deaths caused by the disease by using a multiple state
+model with state space:
+{ H – Healthy, I – Infected, D (from disease) – Dead (caused by the disease), D (not from disease)
+– Dead (not caused by the disease)}.
+The transition rates, dependent on age x , are as follows:
+\item a mortality rate from the Healthy state of \mu ( x )
+\item a rate of infection with the disease σ ( x )
+\item a mortality rate from the Infected state of υ ( x ) of which ρ ( x ) relates to Deaths
+caused by the disease
+(i) Draw a transition diagram for the multiple state model.
+\item (ii) Write down Kolmogorov’s forward equations governing the transitions by
+specifying the transition matrix.
+
+\item (iii) Determine integral expressions, in terms of the transition rates and any
+expressions previously determined, for:
+(a) P HH (x, x + t)
+(b) P HI (x, x + t)
+(c) P HD(from disease) (x, x + t)
+
+
+[Total 10]
+CT4 S2009—5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+8
+(i)
+ ( x )
+ ( x )
+Healthy Infected
+ ( x )  ( x )   ( x )
+Dead (not
+from
+disease)
+\item (ii)
+d
+P ( x )  P ( x ) A ( x )
+dt
+where with order of state space
+{Healthy, Infected, Dead (not disease), Dead(from disease)}
+ ( x )
+0 
+  ( x )   ( x )  ( x )
+
+
+0
+ ( x )  ( x )   ( x )  ( x ) 
+
+A(x)=
+
+0
+0
+0
+0 
+
+
+0
+0
+0
+0 
+
+10
+Dead
+(from
+disease)  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+\item (iii)
+t
+a. P HH (x, x+t)= exp[ 
+
+(  ( x  w )   ( x  w )) dw ]
+w  0
+t
+
+b. P HI (x, x+t)=
+t
+P HH ( x , x  w ).  ( x  w ).exp[ 
+w  0
+
+ ( x  u ) du ]. dw
+u  w
+c. EITHER
+t
+
+P HD(from disease) (x, x+t)=
+P HI ( x , x  w ).  ( x  w ). dw
+w  0
+OR (backwards alternative)
+P HD(from disease) (x, x+t)
+t
+ P
+=
+HH
+( x  w ).  ( x  w ). P ID ( fromdiseas e ) ( x  w , x  t ). dw .
+w  0
+t
+Now P ID ( fromdiseas e ) ( x  w , x  t ) 
+ P
+II
+( x  w , x  s ).  ( x  s ). 1 . ds
+s  w
+ s
+
+and P II ( x  w , x  s )  exp     ( x  u ) du  .
+ u  w
+
+So P HD(from disease) (x, x+t)
+ s
+
+  P HH ( x  w ).  ( x  w ).  exp     ( x  u ) du  .  ( x  s ). ds . dw
+w  0
+s  w
+ u  w
+
+t
+t
+This question was considerably better answered than were similar questions in
+previous examinations. In particular, the proportion of candidates making serious
+attempts at part (iii) was greater than has been the case for similar questions in the
+past.
+
+
+\end{document}
