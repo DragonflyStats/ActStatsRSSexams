@@ -1,0 +1,135 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%% [5]
+%% PLEASE TURN OVER
+%% - Question  6
+A portfolio of term assurance policies was transferred from insurer A to insurer B on 1 January 2001. Each policy in the portfolio was written with premiums payable annually in advance. Insurer B wishes to investigate the mortality experience of its
+ac\hat{q}uired portfolio and has collected the following data over the period 1 January 2001
+to 1 January 2005:
+d x numbers of deaths aged x
+P x,t number of policies in force aged x at time t (t = 0, 1, 2, 3, 4 years measured
+from 1 January 2001)
+Where x is defined as:
+age last birthday at the most recent policy anniversary prior to the portfolio
+transfer + number of premiums received by insurer B.
+(i)
+(ii)
+(a)
+(b)
+State the rate interval implied by the above data.
+Write down the range of ages at the start of the rate interval.
+
+Give an expression which can be used to estimate the initial exposed to risk at age x, E x , stating any assumptions made.
+
+The following is an extract from the data collected in the investigation:
+x d x \sum P x , t \sum P x , t + 1
+39
+40
+41 28
+36
+33 10,536
+10,965
+10,421 11,005
+10,745
+10,577
+where the summations are from t = 0 to t = 3.
+7
+(iii) Estimate $\hat{q}_{40}$ , stating any further assumptions made.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{itemize}
+\item 
+Age label changes on the receipt of the
+premium on the policy anniversary so this is a
+policy year rate interval.
+Policyholders’ ages range from x to x +1
+at start of the rate interval.
+\item (ii)
+Central exposed to risk
+E x c
+4
+1 3
+= \int P x , t dt \approx \sum ( P x , t + P x , t + 1 )
+2 t = 0
+t = 0
+Approximation assumes population changes linearly over each year
+during the period of investigation.
+1 3
+1
+( P x , t + P x , t + 1 ) + d x ,
+\sum
+2 t = 0
+2
+assuming deaths are uniform over the rate interval OR deaths occur on
+average half way through the rate interval.
+Initial exposed to risk E x \approx
+(but NOT deaths are uniform over the “year”, or occur on average half
+way through the “year”)
+\item (iii)
+d x
+estimates \hat{q} x for the average age
+E x
+at the start of the rate interval.
+\hat{q} x =
+Assuming birthdays are uniformly distributed
+across policy years,
+the average age at the start of the rate interval
+is x+1⁄2, so we re\hat{q}uire \hat{q}̂_{39} 1 to estimate \hat{q}_40}$ .
+2
+1
+\item Assuming $\hat{q}_{39} 1 = [ \hat{q}_{39} + \hat{q}_{40} ]$ we have
+2
+2
+\hat{q}_{39} =
+\hat{q}_{40} =
+28
+= 0.002596
+1
+1
+(10536 + 11005) + * 28
+2
+2
+36
+1
+1
+(10965 + 10745) + *36
+2
+2
+= 0.003311
+and hence our estimate of \hat{q}_{40} is 0.5[0.002596 + 0.003311) = 0.002954.
+%%--Page 7Subject CT4 — Models Core Technical — September 2008 — Examiners’ Report
+\end{itemize}
+\end{enumerate}
