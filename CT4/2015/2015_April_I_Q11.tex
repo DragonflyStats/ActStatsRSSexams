@@ -31,28 +31,6 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
-In a computer game a player starts with three lives. Events in the game which cause
-the player to lose a life occur with a probability  dt  o ( dt ) in a small time interval dt.
-However the player can also find extra lives. The probability of finding an extra life
-in a small time interval dt is  dt  o ( dt ). The game ends when a player runs out of
-lives.
-(i) Outline the state space for the process which describes the number of lives a
-player has.
-[1]
-(ii) Draw a transition graph for the process, including the relevant transition rates.
-[3]
-(iii) Determine the generator matrix for the process.
-[2]
-(iv) Explain what is meant by a Markov jump chain.
-[1]
-(v) Determine the transition matrix for the jump chain associated with the process.
-[2]
-(vi) Determine the probability that a game ends without the player finding an extra
-life.
-[1]
-[Total 10]
-CT4 A2015–5
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 PLEASE TURN OVER11
@@ -60,163 +38,34 @@ A new disease has been discovered which is transmitted by an airborne virus.
 Anyone who contracts the disease suffers a high fever and then in 60% of cases dies
 within an hour and in 40% of cases recovers. Having suffered from the disease once,
 a person builds up antibodies to the disease and thereafter is immune.
-(i) Draw a multiple state diagram illustrating the process, labelling the states and
+\begin{enumerate}[(a)]
+\item (i) Draw a multiple state diagram illustrating the process, labelling the states and
 possible transitions between states.
-[2]
+\item 
 (ii) Express the likelihood of the process in terms of the transition intensities and
 other observable quantities, defining all the terms you use
-[4]
+\item 
 (iii) Derive the maximum likelihood estimator of the rate of first time sickness.
-[2]
+\smallskip
 Three years ago medical students visited the island where the disease was first
 discovered and found that of the population of 2,500 people, 860 had suffered from
 the disease but recovered. They asked the leaders of the island to keep records of the
 occurrence and the outcome of each incidence of the disease. The students intended
 to return exactly three years later to collect the information.
+\item 
+(iv) Derive an expression (in terms of the transition intensities) for the probability
+that an islander who has never suffered from the disease will still be alive in
+three years’ time.
+\item 
+(v) Set out the information which the students would need when they returned three years later in order to calculate the rate of sickness from the disease. 
+\end{enumerate}
+\newpage
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-i)
-10
-{0,1,2,3,4....}
-(ii)
-
-0
-
-1
-
-(iii)
-
-2
-
-3
-
-
-4
-
-
-Generator matrix
-Lives
-0
-1
-2
-3
-4
-0
-0
-0
-0
- 0
-
-
-0
-0
-   (    )
- 0
-
- (    )
-
-0
-
-
- (    )
-
-0
- 0
- 0
-
- (    )
-0
-0
- 
- .
-(iv)
-...
-. 
-
-
-
-
-
-
-
-.  
-EITHER
-If a Markov jump process X t is examined only at the times of transition, the
-resulting process is called the jump chain associated with X t .
-OR
-A jump chain is each distinct state visited in the order visited where the time
-set is the times when states are moved between.
-(v)
-Lives
-0
-1
-2
-3
-4
-...
-1
-0
-0
-0
-0
-etc. 
-
-
-
-0
- / (    )
-0
-0
-  / (    )
-
-
-
-0
- / (    )
-0
- / (    )
-0
-
-
- / (    )
- / (    )
-0
-0
-0
-
-
-
-
- / (    )
-0
-0
-0
-0
- 
- 
-etc.
-
-
-Page 15 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – April 2015 – Examiners’ Report
-3
-(vi)
-  
-
-
-  
-Many candidates scored respectably on this question. The most common error was to define
-the state space as {0, 1, 2, 3}, ignoring the possibility that the player could, at any time, have
-found more extra lives than (s)he has lost. Candidates who used this state space were
-penalised in parts (i) and (ii) but could score full credit for later parts by carrying through
-their answer correctly. The other commonly occurring errors were to allow a transition out
-of state 0 (this is not possible, as the game ends when the player has no lives left), or to
-ignore the absorbing state 0 completely. Again, these errors were penalised in parts (i) and (ii) but credit was given for correctly following through into later parts. Candidates who
-ignored state 0 completely were unable to give a sensible answer to part (vi). In part (iv) a
-disappointing number of candidates simply provided a general definition of a Markov chain (i.e. repeating the answer to Question 7, part (i)), rather than relating the Markov jump chain
-to a Markov jump process.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 11
 ALTERNATIVE 1
-(i)
+\begin{itemize}
+\item (i)
 0.4ρ
 Healthy
 (H)
@@ -253,7 +102,7 @@ d HD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – April 2015 – Exa
 d IJ is the number of transitions from state I to state J (J = R, D, O)
 and  IJ is the intensity of the transition from state I to state J and ρ is
 the rate of first time sickness
-(iii)
+\item (iii)
 Taking logarithms of the likelihood we have:
 ln L    0.6   0.4    H  d HS ln  0.6    d HR ln  0.4   plus terms not
 dependent on 
@@ -278,10 +127,10 @@ d HD  d HR
    2
 must
 be negative.
-(iv)
+\item (iv)
 We want a person in H at t = 0 not dead at t = 3.
 So they can either be healthy throughout:
-HH
+HH/
 t p 0
   3
  
@@ -317,7 +166,7 @@ where we ignore the short time spent in the sick state.
  
   
 
-So altogether exp      HO u  0.4  exp    RO  3  u   du .
+\item So altogether exp      HO u  0.4  exp    RO  3  u   du .
  
  
  
@@ -325,7 +174,7 @@ So altogether exp      HO u  0.4  exp    RO  3 
 
 0
 Page 17 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – April 2015 – Examiners’ Report
-(v)
+\item (v)
 We need enough information to calculate the number of transitions from
 Healthy to Sick and the waiting time in the “Healthy” state. Hence we will
 need:
@@ -334,7 +183,7 @@ Date of death of all “Healthy” deaths in last three years.
 Date of any other immigration or emigration of Healthy people in last three
 years.
 Date at which each person who contracted the disease fell ill
-ALTERNATIVE 2
+\item ALTERNATIVE 2
 (i)
 Suffering
 from
@@ -374,7 +223,7 @@ where
  I is the waiting time in state I,
 d IJ is the number of transitions from state I to state J,
 and  IJ is the intensity of the transition from state I to state J.
-The four states are H – healthy, S – suffering from disease,
+\item The four states are H – healthy, S – suffering from disease,
 R – recovered, D – dead.
 Page 18
 d HS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – April 2015 – Examiners’ Report
@@ -383,7 +232,7 @@ Taking logarithms of the likelihood we have:
  
 ln L   HS  H  d HS ln  HS
 plus terms not dependant on  HS
-Differentiating with respect to  HS gives:
+\item Differentiating with respect to  HS gives:
 d  ln L 
 d  HS
   H 
@@ -407,7 +256,7 @@ HS
 2
 must be
 negative.
-(iv)
+\item (iv)
 We want a person in H at t = 0 neither suffering from the
 disease nor dead at t = 3.
 So they can either be healthy throughout:
@@ -451,7 +300,7 @@ So altogether exp    HS   HD u   HS 0.4 exp    RD 
 
 0
 Page 19 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – April 2015 – Examiners’ Report
-(v)
+\item (v)
 We need enough information to calculate the number of transitions from
 Healthy to Sick and the waiting time in the “Healthy” state. Hence we will
 need:
@@ -471,20 +320,16 @@ disease
 Dead
 from
 disease
-This was treated sympathetically for parts (i) to (iii) as the rate of first-time sickness can be
-derived from this model. However in part (iv) the probability of remaining alive for three
-years depends on the rate of death from causes other than the disease, even among islanders
-who have never suffered from the disease, so this needs to be introduced. Moreover, the rate
+\newpage
+This was treated sympathetically for parts (i) to (iii) as the rate of first-time sickness can be derived from this model. However in part (iv) the probability of remaining alive for three years depends on the rate of death from causes other than the disease, even among islanders who have never suffered from the disease, so this needs to be introduced. Moreover, the rate
 of death from causes other than the disease may vary for persons who have never had the
 disease and persons who have recovered from the disease.
 Few candidates attempted part (iv). Candidates were expected to calculate the probability of
-being alive in three years’ time for a person who had never had the disease at the start of that
-three-year period, not the probability that a person who had not had the disease would be
-alive and still not have had the disease in three years’ time. In part (iv) some candidates
+being alive in three years’ time for a person who had never had the disease at the start of that three-year period, not the probability that a person who had not had the disease would be alive and still not have had the disease in three years’ time. In part (iv) some candidates
 assumed constant transition intensities and evaluate the integral, which was given full credit.
-In part (v) many candidates stated that what is required is the number of healthy
-persons at the beginning of the period (three years ago) and the current number of healthy
-persons, together with the number of persons who had fallen sick. This would allow an
-approximate sickness rate to be calculate using various assumptions and was given partial
+In part (v) many candidates stated that what is required is the number of healthy persons at the beginning of the period (three years ago) and the current number of healthy persons, together with the number of persons who had fallen sick. This would allow an approximate sickness rate to be calculate using various assumptions and was given partial
 credit.
-Page 20 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – April 2015 – Examiners’ Report
+\end{itemize}
+\end{document}
+
+%%Page 20 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – April 2015 – Examiners’ Report
