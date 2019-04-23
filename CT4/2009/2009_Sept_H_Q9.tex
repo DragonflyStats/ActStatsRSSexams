@@ -1,0 +1,152 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%--- Question 9
+ An electronics company developed a revolutionary new battery which it believed
+would make it enormous profits. It commissioned a sub-contractor to estimate the
+survival function of battery life for the first 12 prototypes. The sub-contractor
+inserted each prototype battery into an identical electrical device at the same time and
+measured the duration elapsing between the time each device was switched on and the time its battery ran out. The sub-contractor was instructed to terminate the test
+immediately after the failure of the 8th battery, and to return all 12 batteries to the
+company.
+When the test was complete, the sub-contractor reported that he had terminated the
+test after 150 days. He further reported that:
+\begin{itemize}
+    \item two batteries had failed after 97 days
+\item three further batteries had failed after 120 days
+\item two further batteries had failed after 141 days
+\item one further battery had failed after 150 days
+
+\end{itemize}
+However, he reported that he was only able to return 11 batteries, as one had exploded
+after 110 days, and he had treated this battery as censored at that duration when
+working out the Kaplan-Meier estimate of the survival function.
+\begin{enumerate}
+\item (i) State, with reasons, the forms of censoring present in this study.
+
+\item (ii) Calculate the Kaplan-Meier estimate of the survival function based on the
+information supplied by the sub-contractor.
+
+In his report, the sub-contractor claimed that the Kaplan-Meier estimate of the
+survival function at the duration when the investigation was terminated was 0.2727.
+\item (iii)
+Explain why the sub-contractor’s Kaplan-Meier estimate would be consistent
+with him having stolen the battery he claimed had exploded.
+\end{enumerate}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9
+\begin{itemize]
+\item 
+(i) Type II censoring as the study was terminated after a pre-determined number
+of failures. Random censoring of the device which exploded.
+\item (ii) According to the information supplied by the sub-contractor, the Kaplan-
+Meier estimate of the survival function should be calculated as follows:
+Page 11
+j t j N j
+0 0 12
+1 97 12
+d j c j d j /N j 1 – d j /N j
+2 1 2/12 10/12  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+2 120 9 3 0 3/9 6/9
+3 141 6 2 0 2/6 4/6
+4 150 4 1 3 1/4 3/4
+The Kaplan-Meier estimate is then
+ d j
+S ˆ ( t )    1 
+ N j
+t j \leqt 
+
+
+
+
+so we have
+\begin{center}
+\begin{tabular}{cc}
+t & \hat{S} ( t )\\
+0 \leq t < 97 &  1\\
+97 \leq t < 120 & 5/6\\
+120 \leq t < 141 & 5/9\\
+141 \leq t < 150 & 10/27\\
+150 \leq t & 5/18 = 0.2778\\
+\end{tabular}
+\end{center}
+\item (iii)Since 5/18 is not equal to 0.2727, the sub-contractor‟s story is internally
+inconsistent. The Kaplan-Meier estimate of the survival function after the
+failure of the 8th battery of 0.2727 would be obtained had only 11 batteries
+been tested at the start, and no battery being censored, as shown in the
+following table.
+\begin{verbatim}
+d j c j d j /N j 1 – d j /N j
+11 2 0 2/11 9/11
+120 9 3 0 3/9 6/9
+3 141 6 2 0 2/6 4/6
+4 150 4 1 0 1/4 3/4
++1⁄2 +1⁄2
+j t j N j
+0 0 11
+1 97 2
+\end{verbatim}
+The Kaplan-Meier estimate is then
+ d j
+S ˆ ( t )    1 
+ N j
+t j \leqt 
+
+
+
+
+so we have
+t
+%%Page 12
+S ˆ ( t )  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+\begin{verbatim}
+0 \leqt < 97  1
+97 \leqt < 120 9/11
+120 \leqt < 141 6/11
+141 \leqt < 150 4/11
+150 \leqt 3/11 = 0.2727
+\end{verbatim}
+Therefore the value of S ˆ (150) reported by the sub-contractor is consistent with
+him having stolen the last battery.
+
+\item Many candidates scored highly on this question. Credit was given in part (i) for other
+types of censoring provided that a sensible reason was given. In part \item (iii), for full
+credit some kind of calculation of an alternative survival function was needed,
+together with an explanation of why this provided evidence to support the suggestion
+that the sub-contractor has stolen the battery.
+\end{itemzie}
+
+\end{document}
