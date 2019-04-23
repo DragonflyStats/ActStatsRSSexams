@@ -1,0 +1,112 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}Let X be a random variable with probability density function:
+⎧ 1 x
+⎪ e
+f ( x ) = ⎨ 2
+⎪ 1 e − x
+⎩ 2
+(i)
+; x ≤ 0
+; x > 0
+Show that the moment generating function of X is given by:
+M X ( t ) = (1 − t 2 ) − 1 ,
+for t < 1 .
+(ii)
+CT3 A2014–2
+[3]
+Hence find the mean and the variance of X using the moment generating
+function in part (i).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+4
+(i)
+1
+M X ( t )  E ( e ) 
+2
+tX
+1  e ( t  1) x 
+ 
+
+2   t  1  
+0
+
+0
+ e
+( t  1) x
+
+1  e ( t  1) x 
+ 
+
+2   t  1  
+
+1
+dx   e ( t  1) x dx
+2
+0
+
+0
+and for  t  1
+%% --- Page 3 (Probability and Mathematical Statistics) – April 2014 – 
+M X ( t ) 
+(ii)
+1  1
+1 
+1
+
+
+ 
+2  t  1 t  1  1  t 2
+
+M  X ( t )  (1  t 2 )  1   (1  t 2 )  2 (  2 t )  2 t (1  t 2 )  2
+
+
+ E ( X )  M  X (0)  0
+
+M  X ( t )  2 t (1  t 2 )  2
+
+  2(1  t
+2  2
+)
+ 2 t (  2)(1  t 2 )  3 (  2 t )
+ 2(1  t 2 )  2  8 t 2 (1  t 2 )  3
+ E ( X 2 )  M  X (0)  2
+V ( X )  E ( X 2 )  E 2 ( X )  2
+(Alternatively, based on a series expansion:
+M X ( t )  1  t 2  t 4  ...  E ( X )  0 and E ( X 2 )  2 and the variance follows.)
+
+%%-- Generally well answered. In part (ii) most candidates were familiar with the method, but some showed poor differentiation skills.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
