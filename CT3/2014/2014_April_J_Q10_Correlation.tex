@@ -39,7 +39,7 @@
 \item (i)
 Comment on the relationship between issue size and value traded. 
 The analyst denotes issue size by s and monthly value traded by v . He calculates the following from the data:
-\sum  s i = 2,843.7, \sum  s i 2 = 397, 499.8, \sum  v i = 115.34, \sum  v i 2 = 689.37, \sum  s i v i = 15, 417.75
+\[\sum  s i = 2,843.7, \sum  s i 2 = 397, 499.8, \sum  v i = 115.34, \sum  v i 2 = 689.37, \sum  s i v i = 15, 417.75\]
 \item (ii)
 (a) Determine the correlation coefficient between s and v .
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -58,16 +58,29 @@ the upper and lower tails the linear relationship would be much weaker.
 \end{enumerate}
 
 \newpage
-10
-(i) There appears to be a positive linear relationship
-(ii) (a)
-S ss   s i 2   
-   s i 
-S vv   v i 2   
-   v i 
-S vs   v i s i     v  s   / n  15417.75   2843.7  115.34  / 33  5478.6
-r 
-(ii)
+%%- Question 10
+\begin{itemize}
+\item (i) There appears to be a positive linear relationship
+\item (ii) (a)
+\begin{eqnarray*}
+S_{ss} &=& \sum s_i^2 - \frac{(\sum s_i)^2 }{n} \\&=& 397499.8 - \frac{(2843.7)^2}{33} \\
+&=& 152450.4 \\
+\end{eqnarray*}
+
+\begin{eqnarray*}
+S_{vv} &=& \sum v_i^2 - \frac{(\sum v_i)^2 }{n} \\&=& 689.37 - \frac{(115.34 )^2}{33} \\
+&=& 286.24 \\
+\end{eqnarray*}
+
+
+
+\begin{eqnarray*}
+S_{vs} &=& \sum v_i\;s_i - \frac{(\sum v_i)(\sum s_i) }{n} \\
+&=& 15417.75 - \frac{2843.7 \times  115.34 }{33} \\
+&=& 5478.6\\
+\end{eqnarray*}
+
+\item (ii)
 (b)
 2 
  / n  397499.8   2843.7  / 33  152450.4
@@ -84,20 +97,29 @@ S vs
 
  0.8294
 152450.4  286.24
+
+\begin{eqnarray*}
+r &=&  \frac{S_{vs}}{\sqrt{S_{vv} \times S_{ss} } }\\
+&=& \frac{5478.6}{\sqrt{152450.4 \times 286.24 }}\\
+&=& 0.8294\\
+\end{eqnarray*}
+
 S ss S vv
 H 0 : r  0, H 1 : r  0
-Test statistic = r
-n  2
-1  r
-2
-
-0.8294 33  2
-1  0.8294
-2
- 8.266
-At 0.5% level t 31  2.744 which << test statistic
-So reject H 0 .
-(iii)
+
+\begin{itemize}
+    \item Test statistic 
+    
+\begin{eqnarray*} 
+\mbox{Test Statistic} &=& r \frac{ \sqrt{n-2} }{\sqrt{1-r^2}} \\
+&=& 0.8294 \frac{ \sqrt{33-2} }{\sqrt{1-(0.8294)^2}} \\
+&=& 8.266 \\
+\end{eqnarray*}
+
+\item At 0.5\% level t 31  2.744 which << test statistic
+\item So reject H 0 .
+\end{itemize}
+\item (iii)
 
 S vs
 5478.6
@@ -113,13 +135,15 @@ S ss 152450.4
 33
 v i  0.398  0.0359 s i
 
-(iv)
+\item (iv)
 Testing whether  is significantly different from zero is mathematically the same as testing whether the correlation coefficient is significantly different from zero.
 As H 0 was rejected in (ii)(b), we can conclude testing H 0 :   0 would give
 the same result.
-
+\item 
 (v)
 It is true that extreme observations can determine the strength of a linear relationship. However, there are many more bonds in the central part of the data and we would consequently expect a greater range of value traded.
-Generally well answered. In part (ii)(b) Fisher’s z transformation method was also allowed.
+
+\item Generally well answered. In part (ii)(b) Fisher’s z transformation method was also allowed.
 In part (v) other possible reasonable comments were given credit.
+\end{itemize}
 \end{document}
