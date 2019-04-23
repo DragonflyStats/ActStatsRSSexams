@@ -1,0 +1,106 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}[(a)]
+(i) Explain why, under Continuous Mortality Investigation investigations, the data analysed are usually based upon the number of policies in force and number of policies giving rise to claims, rather than the number of lives
+exposed and number of lives who die during the period of study.
+[2]
+Suppose N identical and independent lives are observed from age x exact for one year
+or until death if earlier.
+\medskip
+Define:
+\begin{itemize}
+\item $pi_i$ to be the proportion of the N lives exposed who hold i policies (i = 1,2,3,....);
+\item D i to be a random variable denoting the number of deaths amongst lives with i
+policies
+\item C i to be a random variable denoting the number of claims arising from lives with i
+policies.
+\end{itemize}
+
+
+\item (ii) Derive an expression for the ratio of the variance of the number of claims
+arising compared with that if each policy covered an independent life.
+
+\item (iii) Explain how the expression derived in \item (ii) could be used in practice.
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\newpage
+7
+\begin{itemize}
+\item (i)
+Individual life offices are likely to have their systems set up to provide
+information on a “by policy” basis.
+When data from different offices is pooled, it would not be practicable to
+establish whether an individual held policies with other companies.
+\item (ii)
+If the mortality rate is q x then since the lives are independent the number of
+deaths D i will be distributed Binomial $( q x , \pi i N )$
+So
+$\sum C i = \sum i D i .$
+i
+i
+⎡
+⎤
+⎡
+⎤
+Hence Var[ C ] = Var ⎢ \sum C i ⎥ = Var ⎢ \sum i D i ⎥ = \sum i 2 Var [ D i ]
+⎣ ⎢ i
+⎦ ⎥ i
+⎣ ⎢ i
+⎦ ⎥
+by independence of deaths
+= \sum i 2 \pi i Nq x (1 − q x )
+i
+If instead there were
+\sum i \pi i N independent
+i
+policies/lives the variance would be additive so:
+Var [ C ′ ] = \sum i \pi i Nq x (1 − q x )
+i
+\sum i 2 \pi i
+So the variance is increased by the ratio i
+\sum i \pi i
+i
+\item (iii)
+If the proportions of lives holding i policies were known, the variance ratio
+could be allowed for in statistical tests
+by using the ratio to adjust the variance upwards.
+\item However, the variance ratio is unlikely to be known exactly.
+Special investigations may be performed from time to time to estimate the
+variance ratios by matching up policyholders, which could then be applied to
+subsequent mortality investigations.
+%%-- Page 8Subject CT4 — Models Core Technical — September 2008 — Examiners’ Report
+\end{itemize}
+\end{document}
