@@ -1,0 +1,196 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+In a computer game a player starts with three lives. Events in the game which cause
+the player to lose a life occur with a probability  dt  o ( dt ) in a small time interval dt.
+However the player can also find extra lives. The probability of finding an extra life
+in a small time interval dt is  dt  o ( dt ). The game ends when a player runs out of
+lives.
+\begin{enumerate}
+\item (i) Outline the state space for the process which describes the number of lives a
+player has.
+\item
+(ii) Draw a transition graph for the process, including the relevant transition rates.
+\item 
+(iii) Determine the generator matrix for the process.
+\item 
+(iv) Explain what is meant by a Markov jump chain.
+\item 
+(v) Determine the transition matrix for the jump chain associated with the process.
+\item 
+(vi) Determine the probability that a game ends without the player finding an extra
+life.
+\end{enumerate}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+i)
+10
+{0,1,2,3,4....}
+(ii)
+
+0
+
+1
+
+(iii)
+
+2
+
+3
+
+
+4
+
+
+Generator matrix
+Lives
+0
+1
+2
+3
+4
+0
+0
+0
+0
+ 0
+
+
+0
+0
+   (    )
+ 0
+
+ (    )
+
+0
+
+
+ (    )
+
+0
+ 0
+ 0
+
+ (    )
+0
+0
+ 
+ .
+(iv)
+...
+. 
+
+
+
+
+
+
+
+.  
+EITHER
+\begin{itemize}
+\item If a Markov jump process X t is examined only at the times of transition, the
+resulting process is called the jump chain associated with X t .
+OR
+\item 
+A jump chain is each distinct state visited in the order visited where the time
+set is the times when states are moved between.
+(v)
+Lives
+0
+1
+2
+3
+4
+...
+1
+0
+0
+0
+0
+etc. 
+
+
+
+0
+ / (    )
+0
+0
+  / (    )
+
+
+
+0
+ / (    )
+0
+ / (    )
+0
+
+
+ / (    )
+ / (    )
+0
+0
+0
+
+
+
+
+ / (    )
+0
+0
+0
+0
+ 
+ 
+etc.
+
+
+Page 15 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – April 2015 – Examiners’ Report
+3
+(vi)
+  
+
+
+  
+\item Many candidates scored respectably on this question. The most common error was to define the state space as {0, 1, 2, 3}, ignoring the possibility that the player could, at any time, have found more extra lives than (s)he has lost. Candidates who used this state space were
+penalised in parts (i) and (ii) but could score full credit for later parts by carrying through their answer correctly. The other commonly occurring errors were to allow a transition out of state 0 (this is not possible, as the game ends when the player has no lives left), or to
+ignore the absorbing state 0 completely.
+\item Again, these errors were penalised in parts (i) and (ii) but credit was given for correctly following through into later parts. Candidates who ignored state 0 completely were unable to give a sensible answer to part (vi). In part (iv) a
+disappointing number of candidates simply provided a general definition of a Markov chain (i.e. repeating the answer to Question 7, part (i)), rather than relating the Markov jump chain
+to a Markov jump process.
+\end{itemize}
+\end{document}
