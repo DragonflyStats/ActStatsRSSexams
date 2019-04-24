@@ -1,0 +1,108 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+
+A chi-square test of association for the frequency data in the following $2 × 3$ table
+
+\begin{center}
+\begin{tabular}{|c|c||c|c|c} \hline
+ & Factor A & A1 & A2 & A3 \\   \hline 
+Factor B &  B1  &  &  &  \\ \hline
+&  B2  &  &  &  \\ \hline
+&  B3  &  &  &  \\ \hline
+\end{tabular}
+\end{center}
+
+B1
+B2
+
+40
+30
+50
+80
+30
+70
+produces a chi-square statistic with value 4.861 and associated P-value 0.089.
+Consider a chi-square test of association for the data in the following 2 × 3 table, in
+which all frequencies are twice the corresponding frequencies in the first table:
+\begin{center}
+\begin{tabular}{|c|c||c|c|c} \hline
+ & Factor A & A1 & A2 & A3 \\   \hline 
+Factor B &  B1  &  &  &  \\ \hline
+&  B2  &  &  &  \\ \hline
+&  B3  &  &  &  \\ \hline
+\end{tabular}
+\end{center}
+Factor B
+B1
+B2
+Factor A
+A1
+A2
+A3
+80
+60
+100
+160
+60
+140
+\begin{enumerate}[(a)]
+\item (i) State, or calculate, the value of the chi-square test statistic for the second table.
+
+\item(ii) Find the P-value associated with the test statistic in (i).
+\item(iii) Comment on the results.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+10
+\begin{itemize}
+\item (i)
+Chi-square statistic is doubled and has value 9.722
+OR work it out
+\item (ii)
+(
+)
+P-value is given by P χ 22 > 9.722 = 0.0077
+Note: answer = 0.008 is acceptable for the mark
+\item (iii) Comment: With the first table we do not have strong enough evidence to
+justify rejecting the hypothesis of no association. In the second table, we have
+the same proportions in the columns, but based on more data, and now we do
+have strong enough evidence (P-value < 1\%) to justify rejecting the
+hypothesis of no association.
+\end{itemize}
+
+\end{document}
