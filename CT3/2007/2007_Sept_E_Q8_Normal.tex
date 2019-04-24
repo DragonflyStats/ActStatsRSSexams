@@ -1,0 +1,146 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+%%- Question 8 
+
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+8
+Claim sizes in a certain insurance situation are modelled by a normal distribution with
+mean \mu = \$30,000 and standard deviation \sigma = \$4,000.
+
+ The insurer defines a claim to
+be a large claim if the claim size exceeds \$35,000.
+\begin{enumerate}[(a)]
+\item (i)
+Calculate the probabilities that the size of a claim exceeds
+(a)
+(b)
+\$35,000, and
+\$36,000
+
+\item 
+(iii)
+Calculate the probability that the size of a large claim (as defined by the
+insurer) exceeds \$36,000.
+\item 
+Calculate the probability that a random sample of 5 claims includes 2 which
+exceed \$35,000 and 3 which are less than \$35,000.
+\end{enumerate}
+
+
+$X$ is normally distributed with mean $\mu = 30$ and $\sigma = 4$ (working in units of \$1000)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%--- Page 3Subject CT3  — September 2007 — Examiners’ Report
+8
+$X$ is normally distributed with mean $\mu = 30$ and $\sigma = 4$ (working in units of \$1000)
+
+\begin{framed}
+\noindent \textbf{Part (a)}\\ \large
+\noindent Calculate the probabilities that the size of a claim exceeds
+(a)
+(b)
+\$35,000, and
+\$36,000
+
+
+\end{framed}
+\large
+\noindent 
+\begin{eqnarray*}
+P ( X > 35 ) &=& P \left( Z >\frac{35 − 30}{4} \right) \\
+&=& P \left( Z >\frac{5}{4} \right) \\
+&=& P ( Z > 1.25 ) \\ 
+&=& 1 - \Phi (1.25 ) \\ 
+&=& 1 − 0.89435 \\
+&=& 0.10565\\
+\end{eqnarray*}
+ 
+
+\begin{eqnarray*}
+P ( X > 36 ) &=& P \left( Z >\frac{36 − 30}{4} \right) \\
+&=& P \left( Z >\frac{6}{4} \right) \\
+&=& P ( Z > 1.50 ) \\ 
+&=& 1 - \Phi (1.50) \\ 
+&=& 1 − 0.93319 \\
+&=& 0.06681\\
+\end{eqnarray*}
+\newpage
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{framed}
+\noindent \textbf{Part (b)}\\ \large
+\noindent 
+Calculate the probability that the size of a large claim (as defined by the
+insurer) exceeds \$36,000.
+\end{framed}
+\large
+\noindent 
+Calculate the probability that the size of a claim  exceeds \$36,000,\textbf{ \textit{given that it is defined as a large claim by the
+insurer}}.
+
+\begin{eqnarray*}
+P(X > 36 | X > 35) &=& \frac{P(X > 36 \mbox{ and } X > 35)}{P(X > 35)}\\
+&=& \frac{P(X > 36)}{P(X > 35)}\\
+& & \\
+&=& \frac{P(Z > 1.5)}{P(Z > 1.25)}\\
+& & \\
+&=& \frac{0.06681}{0.10565}\\
+& & \\
+&=& 0.632 \\
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{framed}
+\noindent \textbf{Part (c)}\\ \large
+\noindent Calculate the probability that a random sample of 5 claims includes 2 which
+exceed \$35,000 and 3 which are less than \$35,000.
+\end{framed}
+\large
+\noindent This can be described as a \textbf{ \textit{Binomial Experiment}} with 5 independent trials where a success is a claim that exceeds \$35,000.
+\begin{itemize}
+    \item n = 5
+    \item p = 0.10565
+    \item Number of Successes : X = 2
+\end{itemize}
+\begin{eqnarray*}
+P(X = 2) &=& { 5 \choose 2} \times  (0.10565)^2 \times (1 \;-\;0.10565)^3 \\
+&=& { 10} \times  0.10565^2 \times 0.89435^3) \\
+&=& 10 \times 0.01116  \times 0.71535 \\
+&=& 0.07983 \\
+\end{document}
