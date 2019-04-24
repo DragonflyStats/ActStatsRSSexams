@@ -34,19 +34,18 @@
 \begin{document}
 9
 10
-For a certain class of policies issued by a large insurance company it is believed that
-the probability of each policy giving rise to any claims is 0.5, independently of all
-other policies. A random sample of 250 such policies is selected.
-(i) Determine approximately the probability that at least 139 of the policies in the
-sample will each give rise to any claims.
-[4]
-(ii) Suppose we do observe that 139 policies in our sample give rise to at least one
+For a certain class of policies issued by a large insurance company it is believed that the probability of each policy giving rise to any claims is 0.5, independently of all other policies. A random sample of 250 such policies is selected.
+\begin{enumerate}[(a)]
+\item Determine approximately the probability that at least 139 of the policies in the sample will each give rise to any claims.
+\item Suppose we do observe that 139 policies in our sample give rise to at least one
 claim. Use your answer to part (i) to determine whether this suggests at the
 1% level of significance that the probability of any claims arising from a
 policy of this certain class is greater than initially believed.
-[3]
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-9
+\newpage
+
+%%---Question 9
 (i)
 ⎛ 5 ⎞
 2
@@ -54,10 +53,12 @@ policy of this certain class is greater than initially believed.
 ⎜ ⎟ × 0.1056 × 0.8944 = 0.0798
 2
 ⎝ ⎠
-If X is the random variable denoting the number of policies giving a claim,
+
+\begin{itemize}
+\item If X is the random variable denoting the number of policies giving a claim,
 then X ~ binomial(250,0.5).
-Using the normal approximation (CLT), X ≈ N (125, 62.5) .
-Using the appropriate continuity correction we have:
+\item Using the normal approximation (CLT), X ≈ N (125, 62.5) .
+\item Using the appropriate continuity correction we have:
 P ( X ≥ 139) = P ( X > 138.5)
 138.5 − 125 ⎞
 ⎛
@@ -65,11 +66,12 @@ P ( X ≥ 139) = P ( X > 138.5)
 ⎟ = 1 − Φ ( 1.7076 ) = 0.044 .
 62.5 ⎠
 ⎝
-(ii)
+\item (ii)
 This is a one-sided test of H 0 : p = 0.5 v H 1 : p > 0.5 .
-P-value of the test is 0.044 from part (i).
-The evidence against the hypothesis that p = 0.5 (and in favour of
+\item P-value of the test is 0.044 from part (i).
+\item The evidence against the hypothesis that p = 0.5 (and in favour of
 p > 0.5) is not strong enough to justify rejecting it at the 1% level of testing
 — we cannot conclude “p > 0.5”.
+\end{itemize}
 
 \end{document}
