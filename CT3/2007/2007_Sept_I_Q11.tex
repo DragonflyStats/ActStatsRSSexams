@@ -1,0 +1,218 @@
+
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%[Total 5]11
+Suppose that the random variable X follows an exponential distribution with
+probability density function
+\[f ( x ) = \lambda e −\lambda x , 0 < x < ∞\]
+Define a new random variable Y =
+
+
+\begin{enumerate}
+\item (i)
+(a)
+( \lambda > 0) .
+1
+X 3 .
+Show that the cumulative density function of Y is given by
+⎧ ⎪),
+
+
+\[ F Y ( y ) = \begin{cases}  1 − exp( −\lambda y 3  &  y \leq 0 \\
+ 0 & y < 0 \\
+ \end{cases}
+ \]
+and hence, or otherwise, find the probability density function of Y.
+
+\item (b) Explain how you would simulate a value of Y given a value u from the
+uniform U(0,1) distribution.
+[7]
+\item (ii)(a) Find an expression for the maximum likelihood estimator of the
+parameter $\lambda$, using a sample y 1 , y 2 , ..., y n , from the distribution of Y.
+\item (b) Eight observed values of the random variable Y are given below:
+\[0.72 1.15 1.26 1.03 1.69 1.30 1.42 1.15\]
+Calculate the maximum likelihood estimate of $\lambda$ using these values. [6]
+\item (iii)
+(a)
+The hazard function of a continuous random variable T is defined
+f ( t )
+as h ( t ) =
+, where $f(t)$ denotes the probability density function and
+S ( t )
+S(t) denotes the survival function defined as $S ( t ) = P ( T > t )$ .
+Derive the hazard functions of the random variables X and Y defined
+above.
+\item (b)
+If a random variable T represents the lifetime of an individual, then the
+hazard function $h ( t )$, as defined in part (iii)(a), gives the instantaneous
+mortality rate (that is, the force of mortality) at time t for that
+individual.
+
+State (with reasons) which of the two random variables ( X and Y ) you
+would use to model the lifetime of pensioners for a period of time
+longer than one year, basing your answer on the form of the
+corresponding hazard functions derived in part (iii)(a).
+\end{enumerate}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\newpage
+
+
+11
+\begin{itemize}
+    \item 
+(i) (a)
+Y = X
+1
+3
+⇒ X = Y 3 , and range of Y is (0, ∞ ).
+\item The cdf is given by
+\[F Y ( y ) = P ( Y \leq y ) = P ( X \leq y 3 ) = F X ( y 3 )\]
+% ⎪ ⎧ 1 − exp( −\lambda y 3 ), y ≥ 0
+% ∴ F Y ( y ) = ⎨
+% y < 0
+% ⎩ 0,
+(using formulae or by integration).
+\item Then, the pdf of Y can be derived as
+\[f Y ( y ) =
+(
+)
+d
+F Y ( y ) = 3 \lambda y 2 exp −\lambda y 3 .
+dy\]
+\item  [ OR , directly as
+\[f Y ( y ) = f X ( x )
+3
+dx
+= \lambda e −\lambda y 3 y 2
+dy
+(
+)\]
+\[ f Y ( y ) = 3 \lambda y 2 exp −\lambda y 3 ,\[
+OR , from formulae, identifying the cdf as that of a Weibull distribution
+with $c = \lambda$ , $γ = 3$. ]
+Page 5Subject CT3  — September 2007 — Examiners’ Report
+(b)
+\item  First simulate X ~ exp(\lambda) as
+1
+\[u = 1 − e −\lambda x ⇒ x = − log(1 − u ) ,\]
+%\lambda
+then set y = x
+1
+3 .
+[ OR , use cdf of Y directly, i.e. u = 1 − e
+−\lambda y 3
+⎧ 1
+⎫
+⇒ y = ⎨ − log(1 − u ) ⎬
+⎩ \lambda
+⎭
+\item (ii)
+n
+(a)
+n
+{
+\[(
+L ( \lambda ) = ∏ f ( y i ; \lambda ) = ∏ 3 \lambda y i 2 exp −\lambda y i 3
+i = 1
+i = 1
+) } = 3 \lambda ∏ y
+n n
+i
+( \lambda ) = log L ( \lambda ) = n log( \lambda ) − \lambda ∑ y i 3 + constant\]
+i
+n
+′ ( \lambda ) = − ∑ y i 3
+\lambda i
+′ ( \lambda ) = 0 ⇒ \lambda ˆ =
+n
+∑ y i 3
+i
+[Check that ′′ ( \lambda ) = −
+(b)
+n
+\lambda 2
+< 0. ]
+\item For the given data we have
+∑ y i 3 = 16.3952
+i
+∴\lambda ˆ =
+n
+∑ y i
+3
+=
+8
+= 0.488 .
+16.3952
+\item (iii)
+(a)
+For $X ~ exp(\lambda)$ we have
+\begin{eqnarray*}
+h ( x ) &=& f ( x ) \lambda e −\lambda x \\
+&=& \lambda
+S ( x ) 1 − 1 − e −\lambda x
+\end{eqnarray*}
+\item For Y (using pdf and cdf derived above):
+(
+(
+) = 3 \lambda y
+) )
+3 \lambda y 2 exp −\lambda y 3
+f ( y )
+h ( y ) =
+=
+S ( y ) 1 − 1 − exp −\lambda y 3
+(
+Page 6
+i
+2
+.
+2
+⎛
+⎞
+exp ⎜ −\lambda ∑ y i 3 ⎟
+⎜
+⎟
+i
+⎝
+⎠
+1
+3
+]
+
+\end{itemize}
+\end{document}
