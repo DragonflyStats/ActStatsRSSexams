@@ -34,9 +34,9 @@
 \begin{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%- Question 10
-\item A model used for claim amounts (X, in units of \$10,000) in certain circumstances has
-the following probability density function, f(x), and cumulative distribution function,
-F(x):
+\item A model used for claim amounts ($X$, in units of \$10,000) in certain circumstances has
+the following probability density function, $f(x)$, and cumulative distribution function,
+\[ F(x):
 f ( x ) =
 5(10 5 )
 (10 x )
@@ -45,12 +45,13 @@ f ( x ) =
 0 ; F ( x ) = 1
 10
 10 x
-5
+5\]
 .
 You are given the information that the distribution of X has mean 2.5 units (\$25,000)
 and standard deviation 3.23 units (\$32,300).
-(i) Describe briefly the nature of a model for claim sizes for which the standard deviation can be greater than the mean.
-
+\begin{enumerate}
+\item (i) Describe briefly the nature of a model for claim sizes for which the standard deviation can be greater than the mean.
+\item 
 (ii) (a)
 Show that we can obtain a simulated observation of X by calculating
 x = 10 (1 r )
@@ -87,13 +88,14 @@ r Claim (\$)
 3,243
 ?
 ?
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+%% [Total 7]
+%% CT3 A2005
+%% 4
 
-[Total 7]
-CT3 A2005
-411
-Twenty insects were used in an experiment to examine the effect on their activity
-level, y, of 3 standard preparations of a chemical. The insects were randomly
-assigned, 4 to receive each of the preparations and 8 to remain untreated as controls.
+% --- Question 11
+Twenty insects were used in an experiment to examine the effect on their activity level, $y$, of 3 standard preparations of a chemical. The insects were randomly assigned, 4 to receive each of the preparations and 8 to remain untreated as controls.
 Their activity levels were metered from vibrations in a test chamber and were as
 follows:
 Activity levels (y)
@@ -127,9 +129,10 @@ For these data y = 1, 203 ,
 270
 292
 y 2 = 77, 249 .
-(i) Conduct an analysis of variance test to establish whether the data indicate
+\begin{enumerate}[(a)]
+\item (i) Conduct an analysis of variance test to establish whether the data indicate
 significant differences amongst the results for the four treatments.
-[7]
+\item 
 (ii) (a)
 Complete the following table of residuals for the data and analysis in
 part (i) above:
@@ -163,25 +166,21 @@ conducted in part (i).
 (d) Comment on how well the data conform to these assumptions in the
 light of the residual plot.
 [8]
-It is suggested that any differences can be explained in terms of a difference
+\item It is suggested that any differences can be explained in terms of a difference
 between controls on the one hand and treated groups on the other.
 Comment on any evidence for this and state how you would formally test for
 this effect (but do not carry out the test).
-
-[Total 19]
-CT3 A2005
-5
-
-
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
 10
-(i) X takes positive values only so to have such a relatively high standard deviation the distribution must be positively skewed with sizeable probability
+\begin{itemize}
+\item (i) X takes positive values only so to have such a relatively high standard deviation the distribution must be positively skewed with sizeable probability
 associated with high values (i.e. the model embraces high claim sizes; the density has a long or heavy tail).
-(ii) (a) Solving r = F(x)
-(b) R ~ U(0,1) 1 R ~ U(0, 1) so (1 r) is also a random number from (0, 1), so we can use 1 r in place of r , giving the formula
+\item (ii) (a) Solving r = F(x)
+\item (b) R ~ U(0,1) 1 R ~ U(0, 1) so (1 r) is also a random number from (0, 1), so we can use 1 r in place of r , giving the formula
 x 10 r
 (c)
 Page 4
@@ -197,6 +196,7 @@ x = 10[(1
 r)
 0.2
 1] 
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555
 (i)
 SS T = 77249 1203 2 /20 = 4888.55
@@ -278,17 +278,17 @@ Page 5
 (iii)
 April 2005
 Examiners Report
-(c) Observations Y ij (j th value for treatment i) are independent and
+\begin{itemize}
+\item (c) Observations Y ij (j th value for treatment i) are independent and
 normally distributed with variance 2 which is constant across
 treatments.
-(d) The assumptions seem reasonable
+\item (d) The assumptions seem reasonable
 with the exception of the constant
 variance assumption, which is questionable
 the data for preparation
-A appear to be less variable than the data for the other treatments.
+\item A appear to be less variable than the data for the other treatments.
 The control mean is lower than all three treatment means
-(48.4 v 63.5, 67.5, 73.0) so there is prima facie evidence to support the
-suggestion.
-One could perform a two-sample t-test of control mean = treatment mean
-by combining the data for the 3 preparations (and using samples of sizes 8
-and 12).
+(48.4 v 63.5, 67.5, 73.0) so there is prima facie evidence to support the suggestion.
+\item One could perform a two-sample t-test of control mean = treatment mean by combining the data for the 3 preparations (and using samples of sizes 8 and 12).
+\end{itemize}
+\end{document}
