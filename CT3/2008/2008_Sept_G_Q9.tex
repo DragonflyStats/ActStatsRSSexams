@@ -1,0 +1,80 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}%[Total 6]
+%9
+\item A random sample of four insurance policies of a certain type was examined for each of three insurance companies and the sums insured were recorded. An analysis of variance was then conducted to test the hypothesis that there are no differences in the
+means of the sums insured under such policies by the three companies.
+The total sum of squares was found to be SS T = 420.05 and the between-companies
+sum of squares was found to be SS B = 337.32.
+Perform the analysis of variance to test the above hypothesis and state your
+conclusion.
+[4]
+(ii) State clearly any assumptions that you made in performing the analysis in (i).
+[2]
+(iii) The plot of the residuals of this analysis of variance against the associated
+fitted values, is given below.
+(i)
+18
+20
+22
+24
+26
+28
+30
+32
+Fitted
+Comment briefly on the validity of the test performed in (i), basing your
+answer on the above plot.
+%%[2]
+%%[Total 8]
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+9
+(i)
+SS R = SS T – SS B = 420.05 – 337.32 = 82.73.
+The degrees of freedom are 3 – 1 = 2 for the treatment (company) SS, and
+12 – 1 – 2 = 9 for the residual SS.
+%%-- Page 4
+%%-- Subject CT3 (Probability and Mathematical Statistics Core Technical) — September2008 — Examiners’ Report
+These give F =
+337.32 2
+= 18.348.
+82.73 9
+From tables, F 0.01,2,9 = 8.022, and therefore we have strong evidence against the hypothesis that the means of the insured sums are equal for the 3
+companies.
+10
+(ii) To perform the ANOVA we assume that the data follow normal distributions and that their variance is constant.
+(iii) The variance of the residuals seems to depend on the company from which the data come. This violates the assumption of constant variance in the response variable, and therefore the analysis may not be valid.
+\end{document}
