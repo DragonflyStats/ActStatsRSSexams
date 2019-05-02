@@ -1,0 +1,65 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+
+
+8
+\begin{enumerate}[(i)]
+\item (i)
+Use the following uniform(0,1) random numbers
+0.9236 , 0.2578
+and a suitable table of probabilities to simulate two observations of the random
+variable X, where $X \sim N(200,100)$.
+\item (ii)
+Use the following uniform(0,1) random numbers
+0.3287 , 0.9142
+to simulate two observations of the random variable Y, where Y has an exponential distribution with mean 100.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+8
+(i)
+From Yellow Book Table
+$P(Z < 1.43) = 0.9236$ giving x value $(10*1.43) + 200 = 214.3$
+$P(Z < −0.65) = 0.2578$ giving x value $(10*(−0.65)) + 200 = 193.5$
+
+(ii)
+Setting r = P(Y < y) = 1 – exp(−y/100) ⇒ y = −100*log(1 − r)
+$r = 0.3287$ therefore $y = −100log(0.6713) = 39.85$
+$r = 0.9142$ therefore $y = −100log(0.0858) = 245.6$
+Note: We can do away with the step of subtracting r from 1 and use.
+y = −100*log(r). This gives y = 111.3, 8.971.
+\end{document}
