@@ -1,0 +1,180 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}%[Total 6]
+
+%%[2]
+%%[Total 8]
+%%CT3 S2007—410
+When a new claim comes into an office it is screened at a first stage and has a probability  of being cleared for progress, otherwise it is rejected. If it clears the first stage, it is then independently screened at a second stage and has the same probability
+ of being cleared for progress, otherwise it is rejected.
+\bgin{enumerate}[(i)]
+\item (i) Explain clearly why the probability of a claim being rejected at the first stage
+is 1 - , of being rejected at the second stage is  (1 - ) and of progressing after the two stages is  2 .
+[3]
+\item (ii) For a sample of n independent claims which came into the office x 1 were rejected at the first stage, x 2 were rejected at the second stage and x 3
+progressed after the two stages (x 1 + x 2 + x 3 = n).
+(a)
+Write down the likelihood L() for this sample and hence show that the derivative of the log-likelihood is given by
+x  2 x 3 x 1  x 2
+
+.
+log L (  )  2
+
+1  
+
+
+(b)
+Show that the maximum likelihood estimator (MLE) is given by
+ ˆ 
+x 2  2 x 3
+.
+x 1  2 x 2  2 x 3
+[7]
+\item (iii)
+(iv)
+
+2
+(a) log L (  ) of the log-likelihood in
+ 2
+part (ii) above and hence show that the Cramer-Rao lower bound
+ (1   )
+(CRlb) is given by
+.
+n (1   )
+\end{enumerate}
+(b) Use the asymptotic distribution for the MLE ̂ with the CRlb
+evaluated at ̂ to obtain an approximate large-sample 95% confidence
+interval for  expressing it simply in terms of ̂ and n.
+[7]
+Determine the second derivative
+For a sample of 1,000 independent claims, 110 were rejected at the first stage, 96 were rejected at the second stage and 794 progressed after the two stages.
+Calculate the MLE ̂ together with an approximate 95\% confidence interval
+for .
+[3]
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+
+10
+
+(i) P(rejected at 1 st ) = 1 – P(cleared at 1 st ) = 1 – \theta
+P(rejected at 2 nd ) = P(cleared at 1 st )P(rejected at 2 nd | cleared at 1 st )
+= \theta (1 – \theta)
+P(progressing after two) = P(cleared at 1 st ) P(cleared at 2 nd ) = \theta 2
+(ii)
+(a)
+L ( \theta ) = [(1 − \theta )] x 1 [ \theta (1 − \theta )] x 2 [ \theta 2 ] x 3
+= \theta x 2 + 2 x 3 (1 − \theta ) x 1 + x 2
+∴ log L ( \theta ) = ( x 2 + 2 x 3 ) log \theta + ( x 1 + x 2 ) log(1 − \theta )
+∴
+(b)
+x + 2 x 3 x 1 + x 2
+∂
+log L ( \theta ) = 2
+−
+1 − \theta
+∂\theta
+\theta
+equate to zero for MLE
+∴\theta ( x 1 + x 2 ) = (1 − \theta )( x 2 + 2 x 3 )
+∴\theta ( x 1 + 2 x 2 + 2 x 3 ) = x 2 + 2 x 3
+x 2 + 2 x 3
+x 1 + 2 x 2 + 2 x 3
+∴\theta ˆ =
+(iii)
+(a)
+∂ 2 x 2 + 2 x 3
+∂\theta \theta 2
+log L ( \theta ) = −
+2
+E {
+−
+x 1 + x 2
+(1 − \theta ) 2
+∂ 2 n \theta (1 − \theta ) + 2 n \theta 2
+∂\theta \theta 2
+log L ( \theta )} = −
+2
+−
+n (1 − \theta ) + n \theta (1 − \theta )
+(1 − \theta ) 2
+%%-- Page 5Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2008 — Examiners’ Report
+n
+n
+n (1 + \theta )
+1
+1
+= − (1 + \theta ) −
+(1 + \theta ) = − n (1 + \theta )( +
+) =−
+\theta
+\theta 1 − \theta )
+\theta (1 − \theta )
+(1 − \theta )
+1
+CRlb =
+− E [
+∂
+log L ( \theta )]
+∂\theta 2
+2
+=
+\theta (1 − \theta )
+n (1 + \theta )
+\theta ˆ ≈ N ( \theta , CRlb ) for large n
+(b)
+using CRlb =
+\theta ˆ (1 − \theta ˆ )
+\theta ˆ (1 − \theta ˆ )
+, then \theta ˆ ≈ N ( \theta ,
+)
+n (1 + \theta ˆ )
+n (1 + \theta ˆ )
+\theta ˆ (1 − \theta ˆ )
+95% CI is \theta ˆ ± 1.96
+n (1 + \theta ˆ )
+(iv)
+\theta ˆ =
+96 + 2(794)
+1684
+=
+= 0.8910
+110 + 2(96) + 2(794) 1890
+CRlb ≈
+0.8910(1 − 0.8910)
+= 0.0000514 ∴ CRlb = 0.00717
+1000(1 + 0.8910)
+∴95% CI is 0.8910 ± 1.96(0.00717)
+⇒ 0.891 ± 0.014 or (0.877, 0.905)
+\end{document}
