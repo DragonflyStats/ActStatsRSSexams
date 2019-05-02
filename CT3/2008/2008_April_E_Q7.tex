@@ -1,0 +1,84 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item % Question 6
+The claim amount X in units of \$1,000 for a certain type of industrial policy is modelled as a gamma variable with parameters $\alpha = 3$ and $\lambda = 1⁄4$.
+1
+X ~ χ 6 2 .
+2
+\begin{enumerate}
+    \item (i) Use moment generating functions to show that
+\item (ii) Hence use tables to find the probability that a claim amount exceeds \$20,000.
+\end{enumerate}
+
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2008 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+7
+\begin{itemize}
+\item (i)
+E ( Y ) =
+2 1
+2 2 y 3 1 2 2 4
+y
+(2
+−
+y
+)
+dy
+=
+[ y − ] 0 = ⋅ =
+3 ∫ 0
+3
+3
+3 3 9
+\[M_X ( t ) = E ( e tX ) = (1 − 4 t ) − 3\] from yellow book
+\item Let Y =
+1
+X .
+2
+Therefore \[M Y ( t ) = E ( e tY ) = E ( e tX / 2 ) = M X ( t / 2) = (1 − 2 t ) − 6 / 2\]
+which is the m.g.f. of a gamma(3,1/2) or χ 6 2 variable
+\item (ii)
+\begin{eqnarray*}
+P ( X > 20) &=& P ( Y > 10)\\
+&=& 1 – 0.8753 \\ &=& 0.1247\\
+\end{itemize}
+
+\end{document}
+
+
+
