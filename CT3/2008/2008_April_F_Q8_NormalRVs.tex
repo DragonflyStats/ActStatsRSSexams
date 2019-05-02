@@ -1,0 +1,55 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+
+
+A woodcutter has to cut 100 fence posts of a standard length and he has a metal bar of the required length to act as the standard. The woodcutter decides to vary his procedure from post to post − he cuts the first post using the metal standard, then uses
+this post as his standard for the cut of the next post. He continues in a similar manner, each time using the most recently cut post as the standard for the next cut.
+
+Each time the woodcutter cuts a post there is an error in the length cut relative to the
+standard being employed for that cut − you should assume that the errors are independent observations of a random variable with mean 0 and standard deviation 3mm.
+
+Calculate, approximately, the probability that the length of the final post differs from the length of the original metal standard by more than 15mm.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+8
+Let L be the length of the metal bar and Z i be the error that arises at the i th cut.
+\begin{itemize}
+\item Length of 1 st post cut = L + Z 1
+\item Length of 2 nd post cut = L + Z 1 + Z 2
+\item Length of 100 th post cut = L + Z 1 + Z 2 + ... + Z 100
+\item Error in length of last post cut is E = Z 1 + Z 2 + ... + Z 100
+\item E ~ N(0,900) approximately, by CLT
+\item P(|E| <15) ≈ P(|Z| < 15/30) = P(|Z| < 0.5) = 2 × 0.1915 = 0.383
+So P(error exceeds 15mm) ≈ 1 – 0.383 = 0.617
+\end{document}
