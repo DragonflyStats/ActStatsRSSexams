@@ -88,34 +88,6 @@ two-state model and assuming that the force is constant.
 \end{enumerate}
 %%%%%%%%%%%%%
 \newpage
-(i) Define a Markov jump process.
-
-[Total 9]
-
-A study of a tropical disease used a three-state Markov process model with states:
-\begin{description}
-\item[1.] Not suffering from the disease
-\item[2.] Suffering from the disease
-\item[3.] Dead
-\end{description}
-The disease can be fatal, but most sufferers recover. Let t p ij x be the probability that a
-person in state i at age x is in state j at age x+t. Let $\mu ijx + t$ be the transition intensity
-from state i to state j at age x+t.
-(ii)
-Show from first principles that:
-d 13
-11 13
-12 23
-t p x = t p x \mu x + t + t p x \mu x + t .
-dt
-
-The study revealed that sufferers who contract the disease a second or subsequent
-time are more likely to die, and less likely to recover, than first-time sufferers.
-(iii)
-Draw a diagram showing the states and possible transitions of a model which
-allows for this effect yet retains the Markov property.
-
-[Total 9]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Question 8
@@ -216,7 +188,7 @@ EITHER ALTERNATIVE 1
 (iv)
 The initial exposed to risk, E 0 is approximately equal to E 0 c + 0.5 d 0 , where E 0 c is the
 central exposed to risk and d 0 is the number of deaths.
-9Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
+%% --- 9 Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
 Therefore we have
 q 0 * =
 (v)
@@ -243,128 +215,17 @@ and q 0 * =
 (v) q 0 * is calculated using the exact initial exposed to risk, making no assumptions about
 the shape of the force of mortality during the interval,
 OR
-In the calculation of q 0 * lives could die at any time during the year of age, so they are
+\begin{itemize}
+\item In the calculation of q 0 * lives could die at any time during the year of age, so they are
 treated as being exposed to risk for the entire year, whereas q 0 assumes a constant force
 of mortality between exact ages 0 and 1, which implies an assumption about the
 distribution of deaths over this interval.
-In part (i) full credit could be obtained for rather less than is written in the solution above.
-Credit can be given for any clear algebraic expressions in terms of the entry age x+a i , the
+\item In part (i) full credit could be obtained for rather less than is written in the solution above.
+\item Credit can be given for any clear algebraic expressions in terms of the entry age x+a i , the
 age at death, x+t i and the age at exit if the life did not die, x+b i , which made clear the
 difference between the central and initial exposeds to risk.
-In part (v) the wording did not have to be precise. The Examiners were looking for some
+\item In part (v) the wording did not have to be precise. The Examiners were looking for some
 understanding of the idea that different assumptions are made about the shape of the force of
 mortality over the rate interval.
-10Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
-Question 9
-(i)
-A Markov jump process is a continuous time, discrete state process
-THEN EITHER
-in which, given the present state of the process, additional knowledge of the past is
-irrelevant for the calculation of the probability distribution of future values of the
-process.
-OR
-\[P [ X t ∈ A | X s 1 = x 1 , X s 2 = x 2 ,..., X s n = x n ] = P [ X t ∈ A | X s = x ]\]
-for all times s 1 < s 2 < ... < s n < s < t , all states $x 1 , x 2 ,..., x n$ , $x \in S$ and all subsets A of S.
-(ii)
-Using the Markov property, and conditioning on the state occupied
-at age x + t, we have
-t + dt
-11
-13
-12
-23
-13
-33
-p 13
-x = t p x dt p x + t + t p x dt p x + t + t p x dt p x + t
-Assume that
-dt
-p ij x + t = \mu ij x + t dt + o ( dt ) , i \neq j
-where lim
-dt → 0
-+
-o ( dt )
-= 0 .
-dt
-Substituting for the dt p ij x + t in the equation above, and noting that
-since return from the state “Dead” is impossible, produces
-t + dt
-dt
-p 33
-x + t = 1
-11 13
-12 23
-13
-p 13
-x = t p x \mu x + t dt + t p x \mu x + t dt + t p x + o ( dt )
-so that
-t + dt
-13
-11 13
-12 23
-p 13
-x − t p x = t p x \mu x + t dt + t p x \mu x + t dt + o ( dt )
-and, taking limits, we have
-lim
-dt → 0 +
-t + dt
-13
-p 13
-13
-12 23
-x − t p x
-= t p 11
-x \mu x + t + t p x \mu x + t
-dt
-So
-d 13
-11 13
-12 23
-t p x = t p x \mu x + t + t p x \mu x + t .
-dt
-11Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
-(iii)
-EITHER
-1. Never
-having
-suffered
-from disease
-3. Dead
-2. Suffering
-from disease
-for first time
-4. Recovered
-5. Suffering from
-disease for second
-or subsequent
-time
-OR
-1. Never
-having
-suffered
-from disease 2. Suffering
-from disease
-for first time 4. Recovered
-after first
-attack of
-disease
-3. Dead 5. Suffering
-from disease
-for second or
-subsequent
-time 6. Recovered
-after second or
-subsequent
-attack of
-disease
-%This question was fairly well answered, though many candidates omitted the initial point in
-%part (ii), that we need the Markov property to be able to condition on the state occupied at
-%x+t. A common error in part (iii) was a four-state solution with the states “1 – Never having
-%suffered from the disease”, “2 – Suffering from the disease”, “3 – Dead”, and “4 –
-%Recovered”. This is not correct, as the probability of moving from the state “Suffering from
-%the disease” to the state “Dead” depends on whether the person is suffering from the disease
-for the first time or the second or subsequent time.
-12Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
-In part (iii) both alternatives were accepted. The second allows for the possibility that the
-effect of contracting the disease for the second time in raising the risk of death persists even
-after the patient recovers from the second or subsequent attack.
+\end{itemize}
+\end{document}
