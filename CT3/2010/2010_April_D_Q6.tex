@@ -1,0 +1,80 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Let X 1 , X 2 , ... , X n be a random sample of claim amounts which are modelled using a
+gamma distribution with known parameter $\alpha = 4$ and unknown parameter $\lambda$ .
+n
+\item 
+(a)
+Specify the distribution of
+∑ X i .
+i = 1
+(b)
+Justify the fact that 2n \lambda X has a \chi^2 k distribution, where X is the mean of the sample, by using a suitable relationship between the gamma and the \chi^2 distribution, and specify the degrees of freedom k.
+
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+6
+\begin{itemize}
+\item (i)
+(a) Σ X i ~ gamma(4 n , \lambda)
+(b) If Y ~ gamma(\alpha, \lambda) and 2\alpha is an integer, then 2 \lambda Y ~ \chi^22 \alpha (from book
+of formulae, p12)
+So 2 \lambda nX ~ \chi^2 with df 8 n .
+\item (ii)
+P ( \chi^2 40 (97.5) < 10 \lambda X < \chi^2 40 (2.5)) = 0.95
+⎛ \chi^2 (97.5) \chi^2 40 (2.5) ⎞
+giving the 95% CI as ⎜ 40
+,
+⎟ ⎟
+⎜ 10 X
+10
+X
+⎝
+⎠
+⎛ 24.43
+59.34 ⎞
+Data ⇒ ⎜
+,
+⎟ = (0.140, 0.339)
+⎝ 10(17.5) 10(17.5) ⎠
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\end{document}
