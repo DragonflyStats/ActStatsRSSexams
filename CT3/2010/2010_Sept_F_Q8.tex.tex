@@ -30,43 +30,13 @@
 
 \begin{document}
 
-\begin{enumerate}
-7
-Let X be a discrete random variable with the following probability distribution:
-X:
-P(X = x):
-(i)
-0
-0.4
-1
-0.3
-2
-0.2
-3
-0.1
-Simulate three observations of X using the following three random numbers
-from a uniform distribution on (0,1) (you should explain your method briefly
-and clearly).
-Random numbers: 0.4936, 0.7269, 0.1652
 
-Let X be a random variable with cumulative distribution function:
-F X ( x ) =
-(ii)
-8
-1
-1 − e − 1
-( 1 − e ) ,
-− x 2
-0 < x < 1 (F X (x) = 0 for x ≤ 0 and F X (x) = 1 for x \geq 1).
-Derive an expression for a simulated value of X using a random number u
-from a uniform distribution on (0,1) and hence simulate an observation of X
-using the random number u = 0.8149.
-
-[Total 6]
 A certain type of claim amount (in units of £1,000) is modelled as an exponential
 random variable with parameter λ = 1.25. An analyst is interested in S, the total of 10
 such independent claim amounts. In particular he wishes to calculate the probability
 that S exceeds £10,000.
+\begin{enumerate}
+\item 
 (i)
 (a)
 Show, using moment generating functions, that:
@@ -77,59 +47,23 @@ S has a gamma distribution, and
 2.5S has a χ 220 distribution.
 Use tables to calculate the required probability.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-(ii)
+\item (ii)
 (a) Specify an approximate normal distribution for S by applying the
 central limit theorem, and use this to calculate an approximate value
 for the required probability.
 (b) Comment briefly on the use of this approximation and on the result.
-
-[Total 8]
-
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-7
-(i)
-2
-/2
-2
-2
-+ e 2 μ+\sigma ( e \sigma − 1)
-Method
-0 < u ≤ 0.4
-0.4 < u ≤ 0.7
-0.7 < u ≤ 0.9
-0.9 < u ≤ 1
-⇒ x = 0
-⇒ x = 1
-⇒ x = 2
-⇒ x = 3
-We get x = 1, 2, 0
-(ii)
-Setting u =
-1
-1 − e
-− 1
-( 1 − e ) ⇒ e
-− x 2
-(
-− x 2
-)
-(
-)
-= 1 − 1 − e − 1 u
-1/2
-⇒ x = ⎡ − log ⎡ 1 − 1 − e − 1 u ⎤ ⎤
-⎢ ⎣
-⎣
-⎦ ⎥ ⎦
-u = 0.8149 ⇒ x = 0.851
+\newpage
 8
 (i)
 (a)
 (1)
-Let X i be a claim amount.
+\begin{itemize}
+\item Let X i be a claim amount.
 t ⎞
 ⎛
-Mgf of X i is M X ( t ) = ⎜ 1 −
+Mgf of X i is $M_X ( t )$ = ⎜ 1 −
 ⎟
 ⎝ 1.25 ⎠
 − 1
@@ -144,9 +78,10 @@ i = 1
 ,
 which is the mgf of a gamma(10, 1.25) variable.
 (2)
-Mgf of 2.5 S is E [ e t (2.5 S ) ] = E [ e (2.5 t ) S ] = M S (2.5 t ) = (1 − 2 t ) − 10 ,
+\item Mgf of 2.5 S is \begin{eqnarray*}E [ e t (2.5 S ) ] &=& E [ e (2.5 t ) S ] \\ &=& M S (2.5 t ) \\ &=& (1 − 2 t ) − 10\\ 
+\end{eqnarray*},
 which is the mgf of a gamma(10, 1⁄2) variable, i.e. χ 220 .
-(ii)
+\item (ii)
 (b) P (total > £10, 000) = P ( S > 10) = P ( χ 220 > 25) = 1 − 0.7986 = 0.2014
 (a) S has mean
 10
@@ -159,3 +94,5 @@ which is the mgf of a gamma(10, 1⁄2) variable, i.e. χ 220 .
 P ( S > 10) ≅ P ( Z >
 = 0.791) = 1 − 0.786 = 0.214
 6.4
+\end{itemize}
+\end{document}
