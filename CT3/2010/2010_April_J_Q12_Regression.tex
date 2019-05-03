@@ -166,16 +166,21 @@ Std. Error t value Pr(>|t|)
 (ii)
 \begin{itemize}
 \item the three sets of points are positioned at different levels (the means are shown), so there is a prima facie case for suggesting that the underlying means are different (i.e. there are country effects)
-\item the means are in the order England (highest), Scotland, Wales (lowest)
-\item the variation in the data for Scotland is perhaps lower than that for
-England, but with only 5 observations for each country, we cannot be sure
-that there is a real underlying difference in variance
+\item the means are in the order England (highest), Scotland, Wales (lowest) 
+\item the variation in the data for Scotland is perhaps lower than that for England, but with only 5 observations for each country, we cannot be sure that there is a real underlying difference in variance
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (a)
-SS T = 1316.63 – 137.1 2 /15 = 63.536, SS B = (55.6 2 + 36.8 2 + 44.7 2 ) /
-5 – 137.1 2 /15 = 35.644
-∴ SS R = 63.536 – 35.644 = 27.892
+\begin{itemize}
+\item SS T = 1316.63 – 137.1 2 /15 = 63.536, 
+\item SS B = (55.6 2 + 36.8 2 + 44.7 2 ) /
+5 – 13.1 2 /15 = 35.644
+\item SS R = 63.536 – 35.644 = 27.892
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{verbatim}
 Source of variation
 Between countries
 Residual
@@ -188,13 +193,15 @@ SS
 MSS
 35.644 17.82
 27.892 2.324
+\end{verbatim}
+
 Under H 0 : no country effects F = 17.82/2.324 = 7.67 on (2,12) df
 P-value of F = 7.67 is less than 0.01, so we reject H 0 and conclude that there are differences among the population means of the average sum
 insured
 (b)
-Page 8
-We have strong evidence that country effects exist − the means appear
-to be in the order England (highest), Scotland, Wales (lowest).
+
+%%---- Page 8
+We have strong evidence that country effects exist − the means appear to be in the order England (highest), Scotland, Wales (lowest).
 %%---   — April 2010 — Examiners’ Report
 (iii)
 (a)
@@ -221,9 +228,7 @@ insured”.
 \begin{itemize}
 \item We should try a “multiple regression” model which includes “country” and
 “index” in the model.
-\item[ Note: although not explicitly in the syllabus, a comment to the effect that
-“Country” should be included as a qualitative variable (a “factor”) e.g. by
-using a text vector (with entries “ E ”, “ W ”, “ S ” say) or a pair of (Bernoulli)
+\item[ Note: although not explicitly in the syllabus, a comment to the effect that “Country” should be included as a qualitative variable (a “factor”) e.g. by using a text vector (with entries “ E ”, “ W ”, “ S ” say) or a pair of (Bernoulli)
 dummy variables, may attract a bonus for a borderline candidate.]
 \end{itemize}
 \end{document}
