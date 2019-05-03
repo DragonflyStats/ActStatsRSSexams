@@ -1,0 +1,71 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+
+%%[Total 4]
+\item Suppose that in a group of insurance policies (which are independent as regards
+occurrence of claims), 20\% of the policies have incurred claims during the last year.
+An auditor is examining the policies in the group one by one in random order until
+two policies with claims are found.
+\begin{enumerate}
+\item (i) Determine the probability that exactly five policies have to be examined until
+two policies with claims are found.
+\item 
+(ii) Find the expected number of policies that have to be examined until two
+policies with claims are found.
+\end{enumerate}
+
+\item For a certain class of business, claim amounts are independent of one another and are
+distributed about a mean of $\mu = £4,000$ and with standard deviation $\sigma = £500$.
+Calculate an approximate value for the probability that the sum of 100 such claim
+amounts is less than £407,500.
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\newpage
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%5
+Expected number = mean of negative binomial distribution =
+0.2
+Working in units of £1,000, sum of 100 claim amounts S has E [ S ] = 100×4 = 400 and
+V [ S ] = 100 × 0.5 2 = 25, and so S ~ N (400, 5 2 ) approximately.
+P ( S < 407.5) = P ( Z < 1.5) = 0.933
+
+\end{document}
