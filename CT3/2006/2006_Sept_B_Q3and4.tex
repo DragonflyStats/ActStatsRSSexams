@@ -36,14 +36,36 @@
 %%%%%%%%%%%%%%%%%%%%%
 %-Question 3
 \item 
-Consider 12 independent insurance policies, numbered 1, 2, 3, , 12, for each of which a maximum of 1 claim can occur. For each policy, the probability of a claim
+Consider 12 independent insurance policies, numbered $\{1, 2, 3, , 12\}$, for each of which a maximum of 1 claim can occur. For each policy, the probability of a claim
 occurring is 0.1.
-Find the probability that no claims arise on the group of policies numbered 1, 2, 3, 4, 5 and 6, and exactly 1 claim arises in total on the group of policies numbered 7, 8, 9,
-10, 11, and 12.
-%%%%%%%%%%%%%%%%%%%%%
+Find the probability that no claims arise on the group of policies numbered 1, 2, 3, 4, 5 and 6, and exactly 1 claim arises in total on the group of policies numbered 7, 8, 9, 10, 11, and 12.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+%%--- Question 3
+\begin{itemize}
+\item P(no claims on 6 policies) = 0.5314 (from tables p186 — or using 0.9 6 )
+\item P(1 claim on 6 policies) = 0.8857 − 0.5314 = 0.3543 (or using 6(0.1)(0.9 5 ))
+\item So required probability = 0.5314 × 0.3543 = 0.188.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 %-Question 4
 \item In a large portfolio 65\% of the policies have been in force for more than five years. An investigation considers a random sample of 500 policies from the portfolio.
 Calculate an approximate value for the probability that fewer than 300 of the policies in the sample have been in force for more than five years.
+%%%%%%%%%%%%%%%%%%%%%
+\newpage
+4
+Let X be the number in force for more than five years
+then X ~ binomial(500,0.65)
+Using a normal approximation, X ≈ N(325, 10.665 2 )
+P(X < 300) becomes P(X < 299.5) using continuity correction
+ P ( Z <
+299.5 − 325
+) where Z ~ N(0,1)
+10.665
+= P ( Z < − 2.39) = 1 − 0.99158 = 0.0084
+Page 4  — September 2006 — 
 %%%%%%%%%%%%%%%%%%%%%
 %- Question 5
 \item 
@@ -56,22 +78,6 @@ H 0 :
 stating clearly the approximate probability value of the observed statistic and your conclusion.
 \end{enumerate}
 \newpage
-%%%%%%%%%%%%%%%%%%%%%
-3
-P(no claims on 6 policies) = 0.5314 (from tables p186 — or using 0.9 6 )
-P(1 claim on 6 policies) = 0.8857 − 0.5314 = 0.3543 (or using 6(0.1)(0.9 5 ))
-So required probability = 0.5314 × 0.3543 = 0.188.
-%%%%%%%%%%%%%%%%%%%%%
-4
-Let X be the number in force for more than five years
-then X ~ binomial(500,0.65)
-Using a normal approximation, X ≈ N(325, 10.665 2 )
-P(X < 300) becomes P(X < 299.5) using continuity correction
- P ( Z <
-299.5 − 325
-) where Z ~ N(0,1)
-10.665
-= P ( Z < − 2.39) = 1 − 0.99158 = 0.0084
-Page 4  — September 2006 — 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
