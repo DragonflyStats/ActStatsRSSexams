@@ -1,0 +1,176 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+%%%%%%%%%%%%%
+\newpage
+(i) Define a Markov jump process.
+
+[Total 9]
+
+A study of a tropical disease used a three-state Markov process model with states:
+\begin{description}
+\item[1.] Not suffering from the disease
+\item[2.] Suffering from the disease
+\item[3.] Dead
+\end{description}
+The disease can be fatal, but most sufferers recover. Let t p ij x be the probability that a
+person in state i at age x is in state j at age x+t. Let $\mu ijx + t$ be the transition intensity
+from state i to state j at age x+t.
+(ii)
+Show from first principles that:
+d 13
+11 13
+12 23
+t p x = t p x \mu x + t + t p x \mu x + t .
+dt
+
+The study revealed that sufferers who contract the disease a second or subsequent
+time are more likely to die, and less likely to recover, than first-time sufferers.
+(iii)
+Draw a diagram showing the states and possible transitions of a model which
+allows for this effect yet retains the Markov property.
+\newpage  Question 9
+(i)
+A Markov jump process is a continuous time, discrete state process
+THEN EITHER
+in which, given the present state of the process, additional knowledge of the past is
+irrelevant for the calculation of the probability distribution of future values of the
+process.
+OR
+\[P [ X t \in  A | X s 1 = x 1 , X s 2 = x 2 ,..., X s n = x n ] = P [ X t \in  A | X s = x ]\]
+for all times s 1 < s 2 < ... < s n < s < t , all states $x 1 , x 2 ,..., x n$ , $x \in S$ and all subsets A of S.
+(ii)
+Using the Markov property, and conditioning on the state occupied
+at age x + t, we have
+t + dt
+11
+13
+12
+23
+13
+33
+p 13
+x = t p x dt p x + t + t p x dt p x + t + t p x dt p x + t
+Assume that
+dt
+p ij x + t = \mu ij x + t dt + o ( dt ) , i \neq j
+where lim
+dt → 0
++
+o ( dt )
+= 0 .
+dt
+Substituting for the dt p ij x + t in the equation above, and noting that
+since return from the state “Dead” is impossible, produces
+t + dt
+dt
+p 33
+x + t = 1
+11 13
+12 23
+13
+p 13
+x = t p x \mu x + t dt + t p x \mu x + t dt + t p x + o ( dt )
+so that
+t + dt
+13
+11 13
+12 23
+p 13
+x − t p x = t p x \mu x + t dt + t p x \mu x + t dt + o ( dt )
+and, taking limits, we have
+lim
+dt → 0 +
+t + dt
+13
+p 13
+13
+12 23
+x − t p x
+= t p 11
+x \mu x + t + t p x \mu x + t
+dt
+So
+d 13
+11 13
+12 23
+t p x = t p x \mu x + t + t p x \mu x + t .
+dt
+11Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
+(iii)
+EITHER
+1. Never
+having
+suffered
+from disease
+3. Dead
+2. Suffering
+from disease
+for first time
+4. Recovered
+5. Suffering from
+disease for second
+or subsequent
+time
+OR
+1. Never
+having
+suffered
+from disease 2. Suffering
+from disease
+for first time 4. Recovered
+after first
+attack of
+disease
+3. Dead 5. Suffering
+from disease
+for second or
+subsequent
+time 6. Recovered
+after second or
+subsequent
+attack of
+disease
+%This question was fairly well answered, though many candidates omitted the initial point in
+%part (ii), that we need the Markov property to be able to condition on the state occupied at
+%x+t. A common error in part (iii) was a four-state solution with the states “1 – Never having
+%suffered from the disease”, “2 – Suffering from the disease”, “3 – Dead”, and “4 –
+%Recovered”. This is not correct, as the probability of moving from the state “Suffering from
+%the disease” to the state “Dead” depends on whether the person is suffering from the disease
+for the first time or the second or subsequent time.
+12Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report, April 2011
+In part (iii) both alternatives were accepted. The second allows for the possibility that the
+effect of contracting the disease for the second time in raising the risk of death persists even
+after the patient recovers from the second or subsequent attack.
+\end{document}
