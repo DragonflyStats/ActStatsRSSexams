@@ -1,0 +1,281 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+10
+At Miracle Cure hospital a pioneering new surgery was tested to replace human lungs with synthetic implants. Operations were carried out throughout June 2010. Patients
+who underwent the surgery were monitored daily until the end of August 2010, or until they died or left hospital if sooner. The results are shown below. Where no date
+is given, the patient was alive and still in hospital at the end of August.
+
+(i)
+Patient Date of surgery Date of leaving
+observation Reason for
+leaving
+observation
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N June 1
+June 3
+June 5
+June 8
+June 9
+June 12
+June 16
+June 17
+June 22
+June 24
+June 25
+June 26
+June 29
+June 30 June 3
+July 2 Died
+Left Hospital
+July 11 Died
+June 21
+Aug 12 Died
+Left Hospital
+June 29
+Aug 20 Died
+Died
+Aug 6 Left Hospital
+Explain whether each of the following types of censoring is present and for
+those present explain where they occur:
+•
+•
+•
+right censoring
+left censoring
+informative censoring
+
+(ii)
+Calculate the Kaplan-Meier estimate of the survival function for these
+patients, stating all assumptions that you make.
+[6]
+(iii) Sketch, on a suitably labelled graph, the Kaplan-Meier estimate of the survival
+function.
+
+(iv) Estimate the probability that a patient will die within four weeks of surgery.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+Question 10
+(i)
+Right censoring is present
+for those still alive and in hospital at the end of August
+OR
+for those who left hospital while still alive
+Left censoring is not present
+The censoring is likely to be informative, since those leaving hospital are
+likely to be in much better health than those who remain. (The idea of going home to
+die when you have had a lung transplant is a little tenuous.)
+(ii)
+The durations and outcomes are shown in the table below.
+Patient Died/Censored Duration
+A
+G
+J
+B
+E
+M
+H
+K
+N
+L
+I
+F
+D
+C Died
+Died
+Died
+Censored
+Died
+Censored
+Censored
+Died
+Censored
+Censored
+Censored
+Censored
+Censored
+Censored 2
+5
+5
+29
+32
+38
+56
+56
+62
+66
+70
+80
+84
+87
+%%-- Page 13
+%%-- Subject CT4 (Models Core Technical) — Examiners’ Report, April 2011
+EITHER ALTERNATIVE 1
+Assuming that at duration 56 the death occurred before the life was censored, the
+Kaplan-Meier estimate is as follows:
+t j n j d j c j
+0
+2
+5
+32
+56
++1⁄2 14
+14
+13
+10
+8
++1⁄2 0
+1
+2
+1
+1
++1⁄2 0
+0
+1
+1
+7
++1⁄2
+λ j =
+d j
+n j
+0
+1/14
+2/13
+1/10
+1/8
+The Kaplan-Meier estimate at duration t is given by the product of 1 −
+d j
+n j
+over
+durations up to and including t. Thus the Kaplan-Meier estimate of the survival
+function is
+^
+t S ( t )
+0≤ t < 2
+2≤ t < 5
+5≤ t < 32
+32≤ t < 56
+56≤ t < 92 1.0000
+0.9286
+0.7857
+0.7071
+0.6188
+OR
+OR
+OR
+OR
+13/14
+11/14
+99/140
+99/160
+OR ALTERNATIVE 2
+Assuming that at duration 56 the death occurred after the life was
+censored, the Kaplan-Meier estimate is as follows:
+Page 14
+t j n j d j c j
+0
+2
+5
+32
+56 14
+14
+13
+10
+7 0
+1
+2
+1
+1 0
+0
+1
+2
+6
+λ j =
+d j
+n j
+0
+1/14
+2/13
+1/10
+1/7
+%%-- Subject CT4 (Models Core Technical) — Examiners’ Report, April 2011
+The Kaplan-Meier estimate at duration t is given by the product of 1 −
+d j
+n j
+over
+durations up to and including t. Thus the Kaplan-Meier estimate of the survival
+function is
+^
+t S ( t )
+0≤ t < 2
+2≤ t < 5
+5≤ t < 32
+32≤ t < 56
+56≤ t < 92 1.0000
+0.9286
+0.7857
+0.7071
+0.6061
+OR 13/14
+OR 11/14
+OR 99/140
+OR 297/490
+(iii)
+(iv)
+The probability of death within 4 weeks is 1 – S(28) = 0.2143.
+In part (i) candidates could receive credit for saying that left censoring was present IF they gave a valid reason (which typically involved the imprecise measurement of the times of
+surgery or of events – the left censoring arising as a special case of interval censoring).
+In part (ii) each error was only penalised once. Correct calculations which carried forward earlier errors were given full credit. However, candidates who did not list the durations they
+were using, but then presented incorrect estimates of the survival function, were more heavily
+penalised, as it was not clear how many errors they had made.
+In part (ii) candidates who assume that the death at duration 56 takes place after the censoring at the same duration (ALTERNATIVE 2) were required to state this assumption for
+full credit. For ALTERNATIVE 1, the assumption that the death at duration 56 takes place before the censoring does not need to be stated for full credit, as it is the convention when
+calculating Kaplan-Meier estimates.
+Page 15Subject CT4 (Models Core Technical) — Examiners’ Report, April 2011
+In part (iii) the plotted function should be consistent with the answer to part (ii). If the
+answer to part (ii) was incorrect but the incorrect answer to part (ii) was correctly plotted in
+part (iii), full credit could be awarded to part (iii).
+\end{document}
