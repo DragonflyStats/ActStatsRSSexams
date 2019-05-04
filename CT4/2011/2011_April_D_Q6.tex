@@ -58,30 +58,42 @@ died.
 %%--- Question 6
 (i)
 The probability that an insect will survive for 10 days, 10 p 0 , is given by the formula
-⎛ 10
-⎞
-⎜
-⎟ .
-=
-−
-\mu
-p
-exp
-dx
-10 0
-⎜ \int x ⎟
-⎝ 0
-⎠
+
+%%-- Question 6
+
+The probability that an insect will survive for 10 days, 10 p 0 , is given by the formula
+
+\[ _{10}p_{0} = \mbox{exp} left[ - \int^{10}_{0} \mu_x dx \right)   \]
+
 Since the force of mortality is constant up to age 30 days at a value of 0.05,
-⎛ 10
-⎞
-10
-10 p 0 = exp ⎜ − \int 0.05 dx ⎟ = exp − [ 0.05 x ] 0 = exp ( − 0.5 ) = 0.6065 .
-⎜
-⎟
-⎝ 0
-⎠
+
+\begin{eqnarray*} _{10}p_{0} &=& \mbox{exp} left[ - \int^{10}_{0} -0.005 dx \right)   \\
+&=& \mbox{exp} \left( -\[eflt[ -0.05x \right]^{10}_{0} right) \\
+&=& \mbox{exp} \left( -0.5 right) \\
+&=& 0.6065 \\
+\end{eqnarray*}
+
 (
+(ii)
+)
+The probability that an insect 10 days old will survive for a further 30 days (that is to
+exact age 40 days) is given by
+\[ _{30}p_{10} = \mbox{exp} left[ - \int^{40}_{10} \mu_x dx \right)   \]
+
+
+Since
+$_{30}p_{10} = _{20}p_{10} \times _{10}p_{30} $, this is equal to
+
+
+%%- check line 3 below
+\begin{eqnarray*} 
+\mbox{exp} left[ - \int^{30}_{10} -0.05 dx \right) \times \mbox{exp} left[ - \int^{10}_{0} -0.01 dx \right)    \\
+&=& \mbox{exp} \left( -\[left[ -0.05x \right]^{30}_{10} right) \times \mbox{exp} \left( -\left[ -0.05x \right]^{10}_{0} right)\\
+&=& e^{-(1.5 - 0.05)} \times e^{5 exp(0.1)- 5(exp(0))} \\
+&=& \mbox{exp}(-1) \times \mbox{exp}(-0.5258) \\
+&=& 0.3679 \times 0.5911 \\
+&=& 0.2174\\
+\end{eqnarray*}
 (ii)
 )
 The probability that an insect 10 days old will survive for a further 30 days (that is to exact age 40 days) is given by
@@ -99,32 +111,7 @@ exp
 Since
 30 p 10
 = 20 p 10 . 10 p 30 , this is equal to
-⎛ 30
-⎞
-⎛ 10
-⎞
-exp ⎜ − \int 0.05 dx ⎟ exp ⎜ − \int 0.05exp(0.01 x ) dx ⎟
-⎜
-⎟
-⎜
-⎟
-⎝ 10
-⎠
-⎝ 0
-⎠
-10
-⎛ ⎡ 0.05
-30
-⎤ ⎞
-= exp − [ 0.05 x ] 10 exp ⎜ − ⎢
-exp(0.01 x ) ⎥ ⎟
-⎜ ⎣ 0.01
-⎦ 0 ⎟ ⎠
-⎝
-)
-(
-= e − (1.5 − 0.5) e − (5exp(0.1) − 5exp(0))
-= e − 1 e − 0.5258 = 0.3679 \times0.5911 = 0.2174.
+
 (iii)
 If the required age is 30+a, then we have
 30 + a
