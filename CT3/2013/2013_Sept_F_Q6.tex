@@ -1,0 +1,83 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+%%-- PLEASE TURN OVER
+%%-- Question 6
+\item A researcher obtains samples of 25 items from normally distributed measurements
+from each of two factories. The sample variances are 2.86 and 9.21 respectively.
+\begin{enumerate}[(i)]
+\item Perform a test to determine if the true variances are the same. 
+\item  For each factory calculate central 95\% confidence intervals for the true
+variances of the measurements. 
+\item 
+Comment on how your answers in parts (i) and (ii) relate to each other.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+6
+\begin{itemize}
+\item (i)
+H 0 = variances are the same, H 1 = variances are different
+S 2 / S 1 ~ F 24,24
+Test statistic = 9.21/2.86 = 3.22.
+F 24,24,0.995 = 0.337 and F 24,24,0.005 = 2.967
+i.e. reject H 0 at 1\% significance level.
+\item (ii)
+  n  1  S 2  n  1  S 2
+Confidence interval is given by  2
+, 2
+ X 0.025, n  1 X 0.975,
+n  1
+
+
+
+
+
+2
+2
+X 0.975,24
+ =  12.40, X 0.025,24
+ =  39.36
+Confidence interval 1 = (1.74, 5.54)
+Confidence interval 2 = (5.61, 17.83)
+%%-- Page 5Subject CT3 – September 2013 – Examiners’ Report
+\item (iii)
+Confidence intervals don’t overlap i.e. agree with result in (i) that variances
+are different.
+
+Generally well answered. In part (i) some candidates worked with the S 1 /S 2 ratio, which of course gives the same conclusion. Part (ii) requires the calculation of two CIs, but some
+candidates attempted to provide a CI for the ratio.
+\end{itemize}
+\end{document}
