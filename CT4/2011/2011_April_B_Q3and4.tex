@@ -91,22 +91,18 @@ Calculate the probability distribution of the process after the grading on Frida
 Question 4
 (i)
 (ii)
-⎛ 0.7
-⎜
-⎜ 0.3
-⎜ 0.1
-⎜
-⎝ 0
-0.2
-0.4
-0.2
-0.1
-0.1 0 ⎞
-⎟
-0.2 0.1 ⎟
-0.4 0.3 ⎟
-⎟
-0.2 0.7 ⎠
+
+%%-- Question 4
+
+
+\begin{pmatrix}
+0.7	&	0.2	&	0.1 & 0 \\
+0.3	&	0.4	&	0.2 & 0.1 \\
+0.1	&	0.2	&	0.4 & 0.3 \\
+0	&	0.1	&	0.2 & 0.7 \\
+\end{pmatrix}
+
+
 If the probability distribution in the first week is Π , and the transition matrix is M,
 then the probability distribution at the end of the third week is
 ⎛ 0.7
@@ -127,41 +123,32 @@ then the probability distribution at the end of the third week is
 ⎜ 0.17
 ⎜
 ⎝ 0.05
-0.1 0 ⎞ ⎛ 0.7
-⎟⎜
-0.2 0.1 ⎟ ⎜ 0.3
-0.4 0.3 ⎟ ⎜ 0.1
-⎟⎜
-0.2 0.7 ⎠ ⎝ 0
-0.24
-0.27
-0.21
-0.15
-0.15
-0.21
-0.27
-0.24
-0.2
-0.4
-0.2
-0.1
-0.1 0 ⎞
-⎟
-0.2 0.1 ⎟
-0.4 0.3 ⎟
-⎟
-0.2 0.7 ⎠
-0.05 ⎞
-⎟
-0.17 ⎟
-0.35 ⎟
-⎟
-0.56 ⎠
+\begin{pmatrix}
+0.7	&	0.2	&	0.1 & 0 \\
+0.3	&	0.4	&	0.2 & 0.1 \\
+0.1	&	0.2	&	0.4 & 0.3 \\
+0	&	0.1	&	0.2 & 0.7 \\
+\end{pmatrix} \times \begin{pmatrix}
+0.7	&	0.2	&	0.1 & 0 \\
+0.3	&	0.4	&	0.2 & 0.1 \\
+0.1	&	0.2	&	0.4 & 0.3 \\
+0	&	0.1	&	0.2 & 0.7 \\
+\end{pmatrix}
+
+%-------------------------%
+\begin{pmatrix}
+0.56	&	0.24	&	0.15	&	0.05	\\ 
+0.35	&	0.27	&	0.21	&	0.17	\\ 
+0.17	&	0.21	&	0.27	&	0.35	\\ 
+0.05	&	0.15	&	0.24	&	0.56	\\ 
+\end{pmatrix}
+
 so that there is a probability of
 35% that a child will be graded Poor’,
 27% that a child will be graded Satisfactory,
 21% that a child will be graded Good and
 17% that a child will be graded Excellent..
+
 There were two common errors on this question. The first was to assume that if a child could
 not move up or down two levels, he or she would not move at all. The phrase in the question
 “[s]ubject to a maximum level of Excellent and a minimum level of Poor” was intended to
