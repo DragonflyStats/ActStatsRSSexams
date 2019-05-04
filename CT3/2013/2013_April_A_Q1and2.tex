@@ -39,37 +39,6 @@ during a year.
 0 0 0 0 0 0 0 1 1 1
 1 1 1 1 1 1 2 2 2 3
 Determine the sample mean, median, mode and standard deviation of these data.
-2
-Consider a random variable U that has a uniform distribution on [0,1] and let F be
-the cumulative distribution function of the standard normal distribution.
-Show that the random variable X = F − 1 ( U ) has a standard normal distribution.
-3
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-
-A discrete random variable X has a cumulative distribution function (CDF) with the
-following values:
-
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|} \hline
-Observation & 10 & 20 & 30 & 40 & 50 \\ \hlne
-CDF & 0.5& 0.7& 0.85& 0.95& 1\\ \hline 
-\end{tabular}
-\end{center}
-
-Calculate the probability that X takes a value:
-\begin{enumerate}[(i)]
-\item larger than 10.
-\item less than 30.
-\item exactly 40.
-\item larger than 20 but less than 50.
-\item exactly 20 or exactly 40.
-\end{enumerate}
-
-
-
-
-[Total 7]
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
@@ -89,6 +58,17 @@ STD = 0.8522
 Well answered. Some working needs to be shown for full marks.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+2
+Consider a random variable U that has a uniform distribution on [0,1] and let F be
+the cumulative distribution function of the standard normal distribution.
+Show that the random variable $X = F − 1 ( U )$ has a standard normal distribution.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 
 2
 For any number x we get
@@ -99,29 +79,5 @@ which shows that F is the distribution function of the random variable X , which
 proves the result.
 %Very poorly answered. Most candidates did not attempt this question and very few completed it correctly.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-3
-\begin{eqnarray*}
-P [ X > 10 ] &=& 1 − P [ X \leq 10 ] \\ &=& 1 − F ( 10 ) \\ &=& 0.5 \\
-\end{eqnarray*}
-
-\begin{eqnarray*}
-P [ X < 30 ]  &=& P [ X \leq 20 ] \\ &=& F ( 20 ) \\ &=& 0.7\\
-\end{eqnarray*}
-
-\begin{eqnarray*}
-P [ X =40 ] &=& F ( 40 ) − F ( 30 ) \\ &=& 0.1\\
-\end{eqnarray*}
-
-\begin{eqnarray*}
-P [ 20 < X < 50 ]  &=& F ( 40 ) − F ( 20 ) \\ &=& 0.25\\
-\end{eqnarray*}
-
-\begin{eqnarray*}
-P \left[ { X =20 } ∪ { X  = 40 } \right] \\ &=& P [ X =20 ] + P [ X = 40 ]
-\\ &=& \left[ F ( 20 ) − F ( 10 ) \right] + \left[ F ( 40 ) − F ( 30 ) \right] \\ &=& 0.2 + 0.1 \\ &=& 0.3\\
-\end{eqnarray*}
-
-Some problems were encountered here involving understanding and distinguishing the need
-(or not) for strict inequalities for discrete variables, e.g. P[X<30] = P[X≤20].
 
 \end{document}
