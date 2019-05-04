@@ -1,0 +1,168 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+[Total 8]
+A behavioural scientist is observing a troop of monkeys and is investigating whether
+social status affects the amount of food that an individual takes. The monkeys are
+divided into two groups of different social rank and the scientist counts the number of
+bananas each individual takes. Each monkey can take a maximum of 7 bananas.
+Social rank
+Number of monkeys
+Total bananas taken
+(i)
+A
+6
+33
+B
+11
+37
+It is first suggested that the number of bananas taken by each individual of each group follows the same binomial distribution with common parameter p
+and n=7.
+(a) Use the method of moments to estimate the parameter p.
+(b) The scientist is unsure whether a common parameter is appropriate and wishes to compare p A and p B , the probability that a banana is taken
+by an individual in groups A and B respectively.
+Test the hypothesis that p A = p B .
+[7]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 
+A statistician suggests an alternative model. The number of bananas taken by
+an individual still follows a binomial distribution with n=7, but for group A
+the parameter is 2\theta and for group B the parameter is $\theta$, where $\theta < 0.5$.
+(a)
+Show that the log likelihood for \theta is given by:
+33
+\[\ln ( 2 \theta ) + 9 \ln ( 1 − 2 \theta ) + 37 \ln ( \theta ) + 40 \ln ( 1 − \theta ) + constant\]
+(b)
+Hence calculate the maximum likelihood estimate of0 $\theta$.
+
+(iii)
+(a) Compare the fit of the two suggested models in parts (i) (with common
+parameter p) and (ii) by considering the expected number of bananas
+taken in groups A and B under the two models. You are not required
+to perform a formal test.
+(b) Comment on the above comparison in relation to your answer in
+part (i)(b).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\newpage
+9
+\begin{itemize}
+\item (i)
+(a)
+If X i is the number of bananas for each monkey then X i ~ Bin(7, p)
+E ( X i ) = x ⇒ 7 \hat{p} =
+\item (b)
+p̂ A =
+33 + 37
+⇒ \hat{p} = 0.588
+( 6 + 11 )
+33
+37
+= 0.786, p̂ B =
+= 0.481
+6*7
+11*7
+\sigma 2 = Variance of test statistic = 0.588 * (1 − .588) * (1/42 + 1/77)
+= 0.00891
+Test statistic =
+\hat{p} A − \hat{p} B 0.786 − 0.481
+=
+= 3.23
+\sigma
+0.00891
+\item Test statistic has N(0,1) distribution so p-value is 0.00124
+i.e. reject H 0 : p A = p B
+\item (ii)
+(a)
+Let n i be the number of monkeys in group i and B i be the total number
+of bananas taken by group i.
+L ( b ; \theta ) = (2 \theta ) B A (1 − 2 \theta ) 7 n A − B A ( \theta ) B B (1 − \theta ) 7 n B − B B × constant
+l ( b ; \theta ) = ln L ( b ; \theta )
+= 33ln ( 2 \theta ) + (42 − 33) ln ( 1 − 2 \theta ) + 37 ln ( \theta ) + (77 − 37) ln ( 1 − \theta ) + constant
+= 33ln ( 2 \theta ) + 9ln ( 1 − 2 \theta ) + 37 ln ( \theta ) + 40ln ( 1 − \theta ) + constant
+(b)
+18
+37 40 70 18
+40
+dl 66
+= −
++ −
+= −
+−
+d\theta^2\theta 1− 2\theta \theta 1− \theta \theta 1− 2\theta 1− \theta
+Set equal to zero and solve
+(
+) (
+)
+(
+)
+70 1− 2\theta 1− \theta −18\theta 1− \theta − 40\theta(1− 2\theta)
+\theta(1− 2\theta)(1− \theta)
+= 0
+⇒ 70 − 210\theta +140\theta^2 −18\theta +18\theta^2 − 40\theta + 80\theta^2 = 0
+⇒ 238\theta^2 − 268\theta + 70 = 0
+⇒ \theta = 0.412 or 0.714
+As \theta<0.5, \thetâ = 0.412.
+Page 6 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item (iii)
+(a)
+Expected values under 2 models are:
+A
+42 * 0.588 = 24.7
+42 * 2 * 0.412 = 34.6
+33
+Model in (i)
+Model in (ii)
+Observed
+B
+77 * 0.588 = 45.3
+77 * 0.412 = 31.7
+37
+\item Model in (ii) seems to provide a better fit as expected values are
+closer to observed.
+\item (b)
+In part (i)(b) we rejected p A = p B which suggests a model with a
+common value of p would not be appropriate. The comparison above
+suggests that an improved model can be used.
+\item There were some common errors here, mainly involving part (i)(b) where many candidates
+failed to identify an appropriate test to perform. There were also basic errors with algebraic
+and calculus operations.
+\item We note that in part (i)(b)an alternative solution can be given, using a chi-square test with
+1 d.f. in a 2x2 table (4 cells). This is exactly equivalent to the test presented here and full
+credit was given when completed correctly.
+\end{itemize}
+
+\end{document}
