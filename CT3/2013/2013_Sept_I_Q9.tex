@@ -1,4 +1,36 @@
-The random variables Y A and Y B describe the number of hours per month that a
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}The random variables Y A and Y B describe the number of hours per month that a
 randomly selected household in Cities A and B, respectively, uses its car. Both cities
 recently decided to introduce measures to reduce road congestion. To investigate the
 effect of these measures ten households in each city were randomly selected and
@@ -31,23 +63,21 @@ Here, y and z denote the sample means of Y and Z in the two cities, and s Y , s 
 and s X denote the sample standard deviations for Y, Z and X respectively.
 You can assume that the random variables Y A and Y B are independent and
 approximately normally distributed
-(i)
-Perform a statistical test at a 5% significance level to test the null hypothesis
-that expected car usage in City A was the same as expected car usage in City
-B before the measures were introduced. State all other assumptions that you
+
+\begin{enumerate}[(a)]
+\item (i)
+Perform a statistical test at a 5% significance level to test the null hypothesis that expected car usage in City A was the same as expected car usage in City B before the measures were introduced. State all other assumptions that you
 make and justify them.
-[6]
-An actuary wishes to investigate whether the measures to reduce road congestion have
-been effective.
-(ii) Perform a statistical test at the 5% significance level, where the alternative
-hypothesis is that car usage in City A has been reduced as a result of the
+\medskip
+An actuary wishes to investigate whether the measures to reduce road congestion have been effective.
+\item (ii) Perform a statistical test at the 5% significance level, where the alternative hypothesis is that car usage in City A has been reduced as a result of the
 measures.
 
-(iii) Calculate a 95% confidence interval for the expected reduction in car usage
+\item (iii) Calculate a 95\% confidence interval for the expected reduction in car usage
 for City B.
-[3]
-To investigate further the impact of measures to reduce road congestion, a third city,
-City C, is included in the study. The following table contains the data for 10 randomly
+\end{enumerate}
+
+To investigate further the impact of measures to reduce road congestion, a third city, City C, is included in the study. The following table contains the data for 10 randomly
 selected households in City C:
 Sample size n
 City C
@@ -90,11 +120,12 @@ j = 1
 Perform an analysis of variance to test at a 5% significance level the null
 hypothesis that there is no difference in the mean reduction in car usage
 between the three cities.
-[6]
-[Total 21]
+\end{enumerate}
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 9
-(i)
+\begin{itemize}
+\item(i)
 Sample sizes are small, therefore, we need a t -test. We need to assume that
 the variances are equal, although the sample standard deviations are different.
 Since the sample size is small we can argue that equal variances is a
@@ -124,9 +155,9 @@ t  =
 33  29
  =  1.1535
 12.025
-Two sided test, critical values are −2.101 and 2.101 from t 18 .
+\item Two sided test, critical values are −2.101 and 2.101 from t 18 .
 The null hypothesis of equal car usage is not rejected.
-(ii)
+\item (ii)
 
 X A  =  Y A  Z A ~ N  A ,  A 2
 
@@ -139,16 +170,16 @@ t  =
 0.6325
 2 / 10
 Critical values from t 9 at 5%: 1.833
-This is clear evidence that the null hypothesis is rejected, and therefore, car
+\item This is clear evidence that the null hypothesis is rejected, and therefore, car
 usage has been reduced significantly in City A.
-(iii)
+\item (iii)
 X B  =  Y B  Z B ~ N   B ,  B 2 
 CI: 29  28 
 t 9,0.025 2.5
 10
  =  (1  2.262  0.79, 1  2.262  0.79 )  =  ( 0.788, 2.788 
 (marking: test statistic 1mark, critical value 1mark, correct answer 1mark)
-(iv)
+\item (iv)
 Let x ij be the difference in city i household j .
 10
  x Aj  =  10  y  z   =  45,
@@ -170,7 +201,8 @@ Page 8
  =  545.75 
 95 2
  =  244.92
-30Subject CT3 – September 2013 – Examiners’ Report
+30
+%%---- Subject CT3 – September 2013 – Examiners’ Report
  45 2 10 2 40 2  95 2 3  3725  9025
 SS B  =  
 
@@ -192,8 +224,10 @@ F  =
  =  5.58 on (2, 27) degrees of freedom
 173.25 / 27 6.417
 Critical value at 5%: 3.354
-The null hypothesis that reduction in car usage is equal in the three cities is
+\item The null hypothesis that reduction in car usage is equal in the three cities is
 rejected.
-There were no particular problems with this question. However a number of candidates
+\item There were no particular problems with this question. However a number of candidates
 failed to justify the assumptions in part (i), while some seemed not to understand fully the
 different test (or CI) requirements in different parts of the question.
+\end{itemize}
+\end{document}
