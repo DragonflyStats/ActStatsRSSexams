@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt]{article}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{eurosym}
 \usepackage{vmargin}
@@ -15,6 +15,151 @@
 \usepackage{framed}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+8
+Consider a random sample X 1 , ..., X n from a Poisson distribution with expectation $E[X i ] = \lambda$. An estimator $\hat{\lambda}$ for the parameter \lambda is given by the observed mean of the sample, that is:
+1 n
+\hat{\lambda} = \sum X i .
+n i = 1
+\begin{enumerate}
+    \item (i)
+Derive formulae for the expected value and the variance of $\hat{\lambda}$  in terms of \lambda and n.
+
+Assume in parts (ii) to (v) that the true parameter value is $\lambda = 0.25$.
+\item (ii) Calculate the exact probability that 0.2 \leq \hat{\lambda} \leq 0.3 if the sample size is n = 10.
+
+\item (iii) Calculate the approximate probability that $0.2 \leq \hat{\lambda} \leq 0.3$ if the sample size is
+n = 10 using the following:
+(a) the normal approximation to \sum i = 1 X i with continuity correction
+(b) the normal approximation to \sum i = 1 X i without continuity correction.
+n
+n
+\item 
+(iv) Comment on the differences in your answers in parts (ii) and (iii).
+
+\item 
+(v) Calculate the minimal required sample size n for which the probability that 0.2 \leq \hat{\lambda} \leq 0.3 is at least 0.95, using the normal approximation without continuity correction
+
+\item 
+Suppose a random sample of size n = 400 gives the estimate \hat{\lambda} = 0.27.
+(vi)
+Calculate a 95\% confidence interval for \lambda.
+\end{enumerate}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    \item 8
+(i)
+(ii)
+1
+\sum E [ X i ] = \lambda
+n i
+1
+1
+$V [ \hat{\lambda} ] = 2 \sum i V [ X i ] = \lambda$ (using independence of X i )
+n
+n
+%----------------------------------------%
+\begin{eqnarray*}
+E [ \hat{\lambda} ] &=& P [0.2 \leq \hat{\lambda} \leq 0.3] \\ 
+&=& P [2 \leq 10 \hat{\lambda} \leq 3]\\
+&=& F(3; \lambda = 2.5) − F(1; \lambda = 2.5)\\ &=& 0.75758 − 0.28730 \\ &=& 0.47028 \\
+\end{eqnarray*}
+
+
+\item (iii)
+(a)
+10 \hat{\lambda} = \sum i = 1 X i ~ N (2.5, 2.5) approximately.
+10
+With continuity correction:
+P [0.2 \leq \hat{\lambda} \leq 0.3] = P [2 \leq 10 \hat{\lambda} \leq 3] ≈ P [2 − 0.5 \leq 10 \hat{\lambda} \leq 3 + 0.5]
+3.5 − 2.5 ⎤
+⎡ 1.5 − 2.5
+⎛ 1 ⎞
+= P ⎢
+\leq Z \leq
+⎟ − 1
+⎥ = 2* F Z ⎜
+2.5 ⎦
+⎣ 2.5
+⎝ 2.5 ⎠
+= 2* F Z (0.63246) − 1 = 2 * 0.73565 − 1 = 0.4713
+(b)
+10 \hat{\lambda} = \sum i = 1 X i = Y ≈ N (2.5, 2.5) approximately.
+10
+Without continuity correction:
+3 − 2.5 ⎤
+⎡ 2 − 2.5
+P [0.2 \leq \hat{\lambda} \leq 0.3] = P [2 \leq 10 \hat{\lambda} \leq 3] ≈ P ⎢
+\leq Z \leq
+⎥
+2.5 ⎦
+⎣ 2.5
+⎛ 0.5 ⎞
+= 2*F Z ⎜
+⎟ − 1 = 2*F Z (0.32) − 1 = 2*0.62552 − 1 = 0.2510
+⎝ 2.5 ⎠
+\item (iv)
+When compared to the exact probability in (ii) the results in (iii) (a) and (b)
+show that the continuity correction reduces the approximation error
+significantly for this small sample size.
+(v)
+0.3 − 0.25 ⎤
+⎡ 0.2 − 0.25
+⎛ 0.05 ⎞
+P [0.2 \leq \hat{\lambda} \leq 0.3] ≈ P ⎢
+\leq z \leq
+⎟ − 1 = 0.95
+⎥ = 2* F Z ⎜
+0.25 / n ⎦
+⎣ 0.25 / n
+⎝ 0.25 / n ⎠
+1.95
+0.05
+n , and
+= F ( z ), then z = 1.96 =
+2
+0.25
+Page 6
+n = 1.96
+0.5
+= 1.96, and n ≈ 384
+0.05Subject CT3 (Probability and Mathematical Statistics) — September 2011 — Examiners’ Report
+\item (vi)
+Using the normal approximation we find:
+0.27 ± z 0.975
+\hat{\lambda}
+0.27
+= 0.27 ± 1.96
+= 0.27 ± 0.05092 = [021908, 0.32092]
+n
+20
+\item In part (i) independence must be mentioned for full marks in the derivation of the variance. In
+(ii) most candidates either went straight to a normal approximation, or incorrectly calculated
+the Poisson probability. In part (iii) many candidates applied the continuity correction
+wrongly.
+\end{itemize}
+\end{document}
+
 \usepackage{chngpage}
 
 %\usepackage{bigints}
