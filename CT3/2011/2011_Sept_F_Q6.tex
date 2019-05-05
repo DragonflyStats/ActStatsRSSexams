@@ -35,8 +35,7 @@
 
 \begin{enumerate}
 \item
-The number of claims made by each policyholder in a certain class of business is
-modelled as having a Poisson distribution with mean $\lambda$.
+The number of claims made by each policyholder in a certain class of business is modelled as having a Poisson distribution with mean $\lambda$.
 
 \begin{enumerate}
 \item Derive an expression for the probability, $p$, that a policyholder in this class has made at least one claim.
@@ -47,26 +46,27 @@ modelled as having a Poisson distribution with mean $\lambda$.
 probability p given in (i) using your answer in (ii)(a).
 (iii)
 \item Show that, in the case $X = 5$, the maximum likelihood estimate (MLE) of p is
-[3]
+
 $\hat{p} = 0.25$ and hence calculate the MLE of $\lambda$ .
 \end{enumerate}
 It is now found that of the five policyholders who had made at least one claim there were four who had made exactly one claim and one who had made two claims.
+
 Calculate the MLE of $\lambda$ given this additional information.
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-
-(i) \begin{eqnarray*}p &=& Pr( N \geq 1) \\ &=& 1 − \Pr( N = 0) &=& 1 − e^{−\lambda} .\end{eqnarray*}
-(ii) (a)
+\begin{itemize}
+\item (i) \begin{eqnarray*}p &=& Pr( N \geq 1) \\ &=& 1 − \Pr( N = 0) &=& 1 − e^{−\lambda} .\end{eqnarray*}
+\item (ii) (a)
 X ~ Bin(20,p)
 (b)
 L ( p ) ∝ p X (1 − p ) 20 − X
 ⇒ l ( p ) = log( L ( p )) = X log p + (20 − X ) log(1 − p )
 and l '( p ) = 0 ⇒
 (and l ''( p ) = −
-(iii)
+\item (iii)
 p ˆ =
 X 20 − X
 X
@@ -83,11 +83,11 @@ p ˆ 2 (1 − p ˆ ) 2
 5
 = 0.25
 20
-\begin{itemize}
 \item Then, using the invariance property of the MLE:
 ˆ
 p ˆ = 1 − e −λ ⇒ λ ˆ = − log(1 − p ˆ ) = − log(0.75) = 0.288
 \item Likelihood function now is:
+
 (iv)
 L ( λ ) ∝ P ( X = 0) 15 × P ( X = 1) 4 × P ( X = 2)
 ( ) ( λ e ) ( λ e )
@@ -111,6 +111,7 @@ Page 4
 \item In part (iii)
 the invariance property must be used and mentioned for full credit.
 \end{itemize}
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 7
 \begin{itemize}
