@@ -1,0 +1,94 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+% [3] 
+5
+\item Consider the random variable X taking the value X = 1 if a randomly selected person is a smoker, or X = 0 otherwise. The random variable Y describes the amount of physical exercise per week for this randomly selected person. It can take the values 0
+(less than one hour of exercise per week), 1 (one to two hours) and 2 (more than two hours of exercise per week). The random variable R = (3 − Y) 2 (X + 1) is used as a risk index for a particular heart disease.
+The joint distribution of X and Y is given by the joint probability function in the
+following table.
+X
+0
+1
+6
+0
+0.2
+0.1
+Y
+1
+0.3
+0.1
+2
+0.25
+0.05
+\begin{enumerate}[(i)]
+\item Calculate the probability that a randomly selected person does more than two hours of exercise per week.
+\item Decide whether X and Y are independent or not and justify your answer. 
+\item Derive the probability function of $R$. 
+\item Calculate the expectation of $R$.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+5
+(i) P[Y = 2] = 0.25 + 0.05 = 0.3
+(ii) P[X = 0] = 0.75 and
+\[ P[{X = 0} \cap {Y = 2}] = 0.25 ≠ 0.225 = 0.3 * 0.75 = P[X = 0] * P[Y = 2]\]
+Therefore X and Y are not independent. (Any other joint probability can be used.)
+
+(iii)
+(iv)
+The probability function is
+r 1
+2
+4
+8
+9
+18
+P(R = r) 0.25 0.05 0.3 0.1 0.2 0.1
+\begin{eqnarray*}
+E[R] &=& 0.2 * 9 + 0.3 * 4 + 0.25 * 1 + 0.1 * 18 + 0.1 * 8 + 0.05 * 2\\
+&=& 1.8 + 1.2 + 0.25 + 1.8 + 0.8 + 0.1 \\
+&=& 5.95\\
+\end{eqnarray*}
+
+In part (ii) notice that one example of $P(XY) = P(X)P(Y)$ is not sufficient for showing
+independence (it needs to hold for all cases). Also, some candidates failed to provide the
+probability function in (iii).
+
+\end{document}
