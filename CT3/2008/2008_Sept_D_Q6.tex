@@ -34,22 +34,22 @@
 \begin{enumerate}
 
 %%--- CT3 S2007—26
-Suppose that the time T, measured in days, until the next claim arises under a portfolio of non-life insurance policies, follows an exponential distribution with mean 2.
+Suppose that the time $T$, measured in days, until the next claim arises under a portfolio of non-life insurance policies, follows an exponential distribution with mean 2.
+
 \begin{enumerate}[(i)]
 \item Find the probability that no claim is made in the next one day period.
-\item The median of a random variable is defined as the value for which the cumulative distribution function of the variable is equal to 0.5.
-Find the median time until the next claim arises.
+\item The median of a random variable is defined as the value for which the cumulative distribution function of the variable is equal to 0.5. Find the median time until the next claim arises.
 \item 
-Now let T 1 , T 2 , ..., T 30 be the times (in days) until the next claim arises under each one of 30 similar portfolios of non-life insurance policies, and assume that each $T_i , i = 1,...,30$, follows an exponential distribution with mean 2,
+Now let $T_1 , T_2 , \ldots , T_{30}$ be the times (in days) until the next claim arises under each one of 30 similar portfolios of non-life insurance policies, and assume that each $T_i , i = 1,...,30$, follows an exponential distribution with mean 2,
 independently of all others.
 Calculate, approximately, the probability that the total of all 30 times which elapse until a claim arises on each of the portfolios exceeds 45 days.
 \end{enumerate}
 
 %%%%%%%%%%%%%%%
-
+\begin{itemize}
 %---------------------------------------------------------------%
-(i) $T ~ Exp(0.5)$ and therefore $P ( T > 1) = e − 0.5 × 1 = 0.6065$ .
-(ii) The median, $M$, is such that
+\item (i) $T ~ Exp(0.5)$ and therefore $P ( T > 1) = e − 0.5 × 1 = 0.6065$ .
+\item (ii) The median, $M$, is such that
 M
 ∫
 0
@@ -60,22 +60,30 @@ which gives
 \[1 − e − 0.5 M = 0.5 ⇒ M = − 2 log(0.5) , or M = 2 log(2) = 1.386 .\]
 (Note: the cdf is available from the Yellow Book, p11.)
 30
-(iii)
+\item (iii)
 From CLT, Y = ∑ T i ~ N (30 × 2, 30 × 4), i.e. N (60,120) , approximately.
 i = 1
 Then,
 45 − 60 ⎞
 ⎛
 P ( Y > 45) = P ⎜ Z >
-⎟ = P ( Z > − 1.3693) = P ( Z < 1.3693) = 0.915.
+⎟ 
 120 ⎠
 ⎝
+
+\begin{eqnarray*}
+P ( Y > 45) &=& P \left( Z > \frac{45 \;-\; 60}{\sqrt{120} }\\
+&=& P ( Z > − 1.3693) \\
+&=& P ( Z < 1.3693) \\
+&=& 0.915.\\
+\end{eqnarray*}
+
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 2
 , from which we can then use the
 [OR Y ~ gamma(30,1/2), that is Y ~ χ 60
-normal approximation as above, or get P(Y > 45) = 0.922 (approximately) by
-2
+normal approximation as above, or get P(Y > 45) = 0.922 (approximately) by 2
 (Yellow Book p168).]
 interpolating in tables of percentage points of χ 60
 \end{document}
