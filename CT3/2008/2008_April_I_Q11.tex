@@ -39,7 +39,7 @@ until the policy expires can be modelled as an exponential random variable with 
 Suppose that the investigation is terminated as soon as k policies have expired, where k is a known (predetermined) constant. The observed policy expiry times are denoted by t 1 , t 2 , ..., t k with 0 < k ≤ n and t 1 < t 2 < ... < t k .
 (a) Show that the probability that any randomly selected policy is still in force at the time of the termination of the investigation is e −λ t k .
 
-(b) Show that the likelihood function of the parameter λ, using information from all n policies, is given by
+(b) Show that the likelihood function of the parameter $\lambda$, using information from all n policies, is given by
 k
 L ( λ ) = λ k e
 −λ ∑ t i
@@ -50,17 +50,15 @@ Hence find the maximum likelihood estimate (MLE) of λ.
 Consider an investigation on 20 policies which is terminated when five policies have expired, giving the following observed expiry times (in
 months):
 \[1.03 6.67 12.70 12.88 21.54\]
-Calculate the MLE of λ based on this sample.
-[9]
+Calculate the MLE of $\lambda$ based on this sample.
+
 \item (ii)
-Suppose instead that the investigation is terminated after a fixed length of time t 0 . The number of policies that have expired by time t 0 is considered to be a random variable, denoted by K.
-(a) Explain clearly why the distribution of K is binomial and determine its
-parameters.
-(b) Hence find the MLE of λ in this case.
-(c) Consider an investigation on 20 policies that is terminated after 24
-months. By the time of termination five policies have expired.
-Use this information to calculate the MLE of λ in this case.
-[9]
+Suppose instead that the investigation is terminated after a fixed length of time t 0 . The number of policies that have expired by time t 0 is considered to be a random variable, denoted by $K$.
+(a) Explain clearly why the distribution of K is binomial and determine its parameters.
+(b) Hence find the MLE of $\lambda$ in this case.
+(c) Consider an investigation on 20 policies that is terminated after 24 months. By the time of termination five policies have expired.
+Use this information to calculate the MLE of $\lambda$ in this case.
+
 \end{enumerate}
 \end{enumerate}
 \newpage
@@ -69,8 +67,14 @@ Use this information to calculate the MLE of λ in this case.
 (i)
 (a)
 The required probability is
-P ( T > t k ) = 1 − P ( T ≤ t k ) = 1 − F T ( t k )
-= 1 − (1 − e −λ t k ) = e −λ t k (using formulae or by integration).
+\begin{eqnarray*}
+P ( T > t k ) &=& 1 − P ( T ≤ t k ) \\
+&=& 1 − F T ( t k )\\
+&=& 1 − (1 − e −λ t k ) \\
+&=& e − \lambda  t k (using formulae or by integration).\\
+\end{eqnarray*}
+
+
 (b)
 The likelihood function is given by:
 k
@@ -113,9 +117,11 @@ i = 1
 k
 < 0 ]
 λ 2
+%-------------------------------------------------%
 For the observed data,
 k
-n = 20, k = 5, t k = 21.54,
+
+$n = 20$, $k = 5$, $t_k = 21.54$,
 ∑ t i = 54.82 .
 i = 1
 λ ˆ =
@@ -127,13 +133,15 @@ k
 = 0.0132 .
 54.82 + 15 × 21.54
 i = 1
+$-----------------------------------------------$
 (ii)
-(a)
+\begin{itemize}
+\item (a)
 We have n policies with independent durations, and each will have expired by the time of termination with probability
 p = P ( T ≤ t 0 ) = 1 − e −λ t 0 ,
 or will have not expired with probability 1 - p.
 (
-Therefore, K ~ bin n , 1 − e −λ t 0
+\item Therefore, K ~ bin n , 1 − e −λ t 0
 (b)
 (
 L ( λ ) ∝ 1 − e −λ t 0
@@ -149,7 +157,7 @@ kt 0 e −λ t 0
 1 − e −λ t 0
 − ( n − k ) t 0
 l ′ ( λ ) = 0 ⇒ e −λ t 0 =
-Page 6
+
 n − k
 1
 ⎛ k ⎞
@@ -159,9 +167,11 @@ t 0
 ⎝ n ⎠S
 
 %ubject CT3 (Probability and Mathematical Statistics Core Technical) — April 2008 — Examiners’ Report
-[OR, observed proportion (k/n) is the MLE of corresponding
-proportion/probability {1 − exp(−λt 0 )}; solving for λ leads to same
+\item [OR, observed proportion (k/n) is the MLE of corresponding
+proportion/probability ${1 − exp(−\lambda t 0 )}$; solving for $\lambda$  leads to same
 estimate as above.]
+\end{itemize}
+%--------------------------------------------%
 (c)
 Now t 0 = 24 and all other involved quantities are as before.
 1
@@ -174,88 +184,5 @@ t 0
 24
 ⎝ n ⎠
 ⎝ 20 ⎠
-12
-(i)
-(a)
-F = 1149/289 = 3.98 on (2, 12) degrees of freedom
-From Yellow Tables pages 172/3, P-value of the data is between 0.05 and 0.025.
-We can reject H 0 (the “no schools effects” hypothesis) at the 5\% level of testing but not at the 1% level. We have some evidence against the “no schools effects” hypothesis − and conclude that there are school
-effects (i.e. differences among the underlying means).
-(b)
-School 1 mean = 598/5 = 119.6
-t 12 (0.025) = 2.179
-95\% CI for school 1 mean is 119.6 \pm 2.179×(289/5) 1/2
-i.e. 119.6 \pm 16.6 or
-(ii)
-(a)
-(103.0, 136.2)
-y 1• = 598, y 2• = 485, y 3• = 629, y 4• = 566
-y •• = 2278,\sigmay 2 = 266,788
-SS T = 266788 – 2278 2 /20 = 7323.8
-SS B = (598 2 + 485 2 + 629 2 + 566 2 )/5 − 2278 2 /20 = 2301
-⇒ SS R = 7324 − 2301 = 5023
 
-\begin{verbatim}
-    Source of variation d.f.
-Between schools
-Residual
-Total 3
-16
-19
-SS MSS
-2301
-5023
-7324 767
-314
-\end{verbatim}
-
-F = 767/314 = 2.44 on (3, 16) degrees of freedom
-%Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2008 — Examiners’ Report
-From Yellow Tables pages 172/3, P-value of the data is just more than
-0.1 (>10%)
-\begin{itemize}
-    \item We do not have sufficiently strong evidence against the “no schools effects” hypothesis, which can stand.
-\item (b) With only three schools involved, the results from one of them (School 2) are sufficiently different from those of the other two to allow us to detect a difference among underlying means.
-\item However, the results for the fourth school range across the results for the original three schools
-− with all four schools in the comparison, the “between schools” sum of squares is no longer so high relative to the residual and we fail to detect differences.
-\end{itemize}
-
-(c) t 16 (0.025) = 2.120
-0.5
-⎧
-⎛ 1 1 ⎞ ⎫
-95\% CI is ( 119.6 − 97 ) \pm 2.120 ⎨ 314 ⎜ + ⎟ ⎬
-⎝ 5 5 ⎠ ⎭
-⎩
-i.e. 22.6 \pm 23.76 or (−1.2, 46.4)
-13
-(i)
-A clearly labelled scatterplot:
-There seems to be a positive linear relationship between blood flow and auricular pressure.
-%Page 8Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2008 — Examiners’ Report
-(ii)
-\begin{itemize}
-\item n = 12
-\item S xx = 1381.85 −
-\item S yy = 1251 −
-113 2
-= 186.9167
-12
-\item S xy = 1272.2 −
-\beta ˆ =
-S xy
-S xx
-=
-126.5 2
-= 48.3292
-12
-(126.5)(113)
-= 80.9917
-12
-80.9917
-= 1.676
-48.3292
-1
-\item α ˆ = y − \beta ˆ x = (113 − 1.6758*126.5) = − 8.249
-\end{itemize}
 \end{document}
