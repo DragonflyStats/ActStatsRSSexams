@@ -31,7 +31,7 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
+
 \item 
 %question 11
 A survey of financial institutions which offered tax-efficient savings accounts was
@@ -47,6 +47,7 @@ High street banks (x 1 ): 11.91, 11.87, 11.83, 11.66, 11.53, 11.49, 11.49, 11.42
 Other banks (x 2 ): 12.23, 12.17, 12.16, 11.90, 11.82, 11.77, 11.74, 11.70, 11.64, 11.60,
 11.55, 11.50
 ( x 2 = 141.78, x 2 2 = 1,675.8224)
+\begin{enumerate}
 \item (i) Draw a diagram in which the maturity values for high street and other banks
 may be compared.
 
@@ -59,7 +60,8 @@ Show that a test of the equality of variances of maturity values for high
 street banks and other banks is not significant at the 5% level.
 (b)
 Comment briefly on the validity of the assumptions required for the
-interval in \item (ii).
+interval in (ii).
+
 
 The following values (in units of £1,000 and rounded to 2 decimal places) are the
 maturity values for the maximum possible investment for a random sample of 12
@@ -67,21 +69,22 @@ building societies (a different kind of financial institution).
 Building societies (x 3 ): 12.40, 12.19, 12.06, 12.01, 12.00, 11.97, 11.94, 11.92, 11.88,
 11.86, 11.81, 11.79
 ( x 3 = 143.83, x 3 2 = 1,724.2449)
+
+\item
 (iv) Add further points to your diagram in part (i) such that the maturity values for
 all three types of financial institution may be compared.
 
+\item 
 (v) Use one-way analysis of variance to compare the maturity values for the three
 different types of financial institution, and comment briefly on the validity of
 the assumptions required for analysis of variance.
-[6]
+\item 
 (vi) Interpret the results of the statistical analyses conducted in \item (ii) and (v).
-[2/]
-[Total 21]
-CT3 S2006
-6
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 11
+\begin{itemize}
 \item (i)
 Maturity values for high street banks and other banks
 High street
@@ -119,18 +122,18 @@ s 2 2 =
 ⎟ = 0.062882
 11 ⎜ ⎝
 12 ⎟ ⎠
-Pooled estimate of \sigma:
-s 2 p
+\item Pooled estimate of $\sigma$:
+\[s 2 p
 ( n 1 − 1) s 1 2 + ( n 2 − 1) s 2 2 7(0.038143) + 11(0.062882)
 =
 =
 = 0.053261
 n 1 + n 2 − 2
-18
-∴ s p = 0.2308
-95% confidence interval for \mu 1 − \mu 2 is
-11.650 − 11.815 ± t 18 (21⁄2%) s p
-= −0.165 ± (2.101)(0.2308)
+18\]
+Therefore $s_p = 0.2308$
+\item 95\% confidence interval for $\mu_{1} − \mu_{2}$ is
+11.650 − 11.815 \pm t 18 (21⁄2%) s p
+= −0.165 \pm (2.101)(0.2308)
 1 1
 +
 8 12
@@ -138,13 +141,11 @@ n 1 + n 2 − 2
 +
 8 12
 Page 9Subject CT3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2006 — Examiners’ Report
-i.e. −0.165 ± 0.2213
-i.e. (−0.386, 0.056)
-i.e. the confidence interval for the difference between the means for high street
-banks and other banks (\mu 1 − \mu 2 ) is −£386 to £56.
-As zero is within the confidence interval, there is insufficient evidence, at 5%
-level, to reject the null hypothesis that the mean maturity values do not differ
-for the accounts offered by high street banks and other banks.
+i.e. $−0.165 \pm 0.2213$
+i.e. $(−0.386, 0.056)$
+
+i.e. the confidence interval for the difference between the means for high street banks and other banks $(\mu_{1} − \mu_{2} )$ is −£386 to £56.
+\item As zero is within the confidence interval, there is insufficient evidence, at 5\% level, to reject the null hypothesis that the mean maturity values do not differ for the accounts offered by high street banks and other banks.
 \item (iii)
 (a)
 S 2 2
@@ -152,25 +153,20 @@ S 1 2
 ~ F 11,7
 under the assumption that the variances are equal for high street and
 other banks,
-i.e. H 0 : \sigma^2_1 = \sigma^2 2
+i.e. $H 0 : \sigma^2_1 = \sigma^2 2$
 s 2 2
 s 1 2
 =
 0.062882
 = 1.65
 0.038143
-We cannot reject the null hypothesis at the 5% level as the two-sided
-critical value of a 5% level test is approximately 4.71 (by interpolation
-using 21⁄2% one-sided F table in Yellow Book).
-[OR probability value is p > 0.20 as a two-sided 20% level test has a
-critical value of approximately 2.69.]
+\item We cannot reject the null hypothesis at the 5\% level as the two-sided critical value of a 5\% level test is approximately 4.71 (by interpolation using 21⁄2% one-sided F table in Yellow Book).
+[OR probability value is p > 0.20 as a two-sided 20\% level test has a critical value of approximately 2.69.]
 (b)
 (iv)
-The plot in \item (i) indicates that the assumption of a normal distribution for
-maturity values is reasonable (but small samples) for both high street
-and other banks. The assumption of equal variance also seems valid as
-the test in \item (iii)(a) is not significant (and the plot above supports this).
-Adding points for building societies to previous plot in \item (i).
+\item The plot in (i) indicates that the assumption of a normal distribution for maturity values is reasonable (but small samples) for both high street and other banks. The assumption of equal variance also seems valid as the test in (iii)(a) is not significant (and the plot above supports this).
+
+\item Adding points for building societies to previous plot in (i).
 Maturity values
 High street
 Other banks
@@ -197,7 +193,9 @@ SS T = 4486.114 −
 32
 ∴ SS R = SS T − SS B = 1.832 − 0.551 = 1.281
 SS B =
-Analysis of variance table
+
+\begin{verbatim}
+    Analysis of variance table
 Source of variation
 Financial institution types
 Residual
@@ -218,19 +216,22 @@ MSS
 = 6.27 on (2, 29) degrees of freedom
 0.044
 F 2,29 (5%) = 3.328 and F 2,29 (1%) = 5.42
-Reject H 0 : \mu 1 = \mu 2 = \mu 3 (population means are equal) at 1% level.
+\end{verbatim}
+
+\item Reject $H_0 : \mu_{1} = \mu_{2} = \mu 3$ (population means are equal) at 1\% level.
 Strong evidence of differences between the 3 financial institutions.
 The plot shows nothing strong enough to invalidate the assumptions of
 normality and equal variances, even though the variability for the building
 societies is a bit smaller than for the banks.
-(vi)
+\item (vi)
 part (ii) indicates that there are no differences between the mean maturity
 values of the two types of bank, but (v) indicates that there are differences
 between the mean maturity values of the 3 types of financial institution.
-Therefore, in conclusion, it seems that the mean maturity value for building
+\item Therefore, in conclusion, it seems that the mean maturity value for building
 societies is not equal to the mean maturity values of the banks. Also, the plot
 in (iv) suggests that the maturity value for building societies is higher than the
 mean maturity values for the banks.
-Page 11Subject CT3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2006 — Examiners’ Report
+\end{itemize}
+%%--- Page 11Subject CT3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2006 — Examiners’ Report
 \end{document}
 \end{document}
