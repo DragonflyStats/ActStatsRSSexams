@@ -1,0 +1,84 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%% Question 5
+In a random sample of 200 policies from a company s private motor business, there
+are 68 female policyholders and 132 male policyholders.
+Let the proportion of policyholders who are female in the corresponding population of
+all policyholders be denoted .
+Test the hypotheses
+H 0 :
+0.4 v H 1 :
+< 0.4
+stating clearly the approximate probability value of the observed statistic and your conclusion.
+%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+5
+\begin{itemize}
+    \item Under $H_0$ : sample proportion P is approximately normally distributed with mean 0.4
+and standard error (0.4×0.6/200) 1/2 = 0.03464
+\item P-value of observed proportion (68/200 = 0.34)
+0.34 − 0.4 ⎞
+⎛
+= P ⎜ Z <
+⎟ = P ( Z < − 1.732 ) = 0.042
+0.03464 ⎠
+⎝
+\item We reject $H_0$ at the 5\% level of testing and conclude that the proportion of policyholders who are female is less than 0.4.
+\item [OR This is actually better - working with the number of female policyholders (observed = 68), the P-value is
+⎛
+⎞
+68.5 − 80
+P ⎜ Z <
+= − 1.660 ⎟ = 0.048
+⎜
+⎟
+200(0.4)(0.6)
+⎝
+⎠
+]
+\item Note: We can word the conclusion: we reject $H_0$ at levels of testing dowN_to 4.2% (or
+4.8%) and conclude ...
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
