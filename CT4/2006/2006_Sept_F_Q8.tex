@@ -31,17 +31,8 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
-A commuter catches a bus each morning for 100 days. The buses arrive at the stop according to a Poisson process, at an average rate of one per 15 minutes, so if X_i is the waiting time on day i, then X_i has an exponential distribution with parameter
-1
-15
-so
-E[X_i ] = 15, Var[X_i ] = 15 2 = 225.
-\item (i) Calculate (approximately) the probability that the total time the commuter
-spends waiting for buses over the 100 days exceeds 27 hours.
 
-\item (ii) At the end of the 100 days the bus frequency is increased, so that buses arrive at one per 10 minutes on average (still behaving as a Poisson process). The commuter then catches a bus each day for a further 99 days. Calculate (approximately) the probability that the total time spent waiting over the whole 199 days exceeds 40 hours.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %- 8
 Let X 1 denote the mean of a random sample of size $n$ from a normal population with
 mean
@@ -59,7 +50,7 @@ W
 X 1 (1
 ) X 2
 
-\begin{enumerate}[\item (i)]
+\begin{enumerate}[(a)]
 \item Show that W is an unbiased estimator of . 
 \item Obtain an expression for the mean square error of W.
 \item  Show that the value of
@@ -76,65 +67,42 @@ and verify that the optimum corresponds to a minimum.
 9
 \item  Consider the special case when the variances of the two random samples are equal to a common value 2 . State (do not derive) the maximum likelihood estimator of calculated from the combined samples, and compare it with the estimator obtained in \item (iii).
 \end{enumerate}
-
-
-7
-\item (i)
-As stated in the question, if X_i is the waiting time on day i, then X_i has an
-exponential distribution with parameter
-1
-15
-so E(X_i ) = 15, Var(X_i ) = 15 2 = 225.
-If X_is the total waiting time over the 100 days, X = ∑ i = 1 X_i ,
-100
-Page 5Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
-so E [ X ] = 1500 and Var [ X ] = 22500 and by the CLT
-X has approximately an N (1500, 22500) distribution,
-⎛ 1620 − 1500 ⎞
-so P ( X > 1620) ≈ 1 − \Phi ⎜
-⎟ = 1 − \Phi(0.8) = 0.2119.
-150
-⎝
-⎠
-\item (ii)
-If Y j is the waiting time on day j of the extra 99 days, then E ( Y j ) = 10 and
-Var ( Y j ) = 100 so that if Y =
-∑ j = 1 Y j
-99
-is the total waiting time over the 99 days, then Y is approximately N (990,9900) by CLT.
-If Z = X + Y (so that Z is the total waiting time over the whole 199 days), then since X and Y are independent, Z is approximately N (1500+990, 22500+9900),
-i.e. N (2490, 32400).
-⎛ 2400 − 2490 ⎞
-Hence P ( Z > 2400) ≈ 1 − \Phi ⎜
-⎟ = 1 − \Phi(−0.5) = \Phi(0.5) = 0.6915.
-180
-⎝
-⎠
+\newoage
 8
+\begin{itemize}
 \item (i)
-E ( W ) = E ( \alpha X 1 + (1 − \alpha ) X 2 )
-= \alpha E ( X 1 ) + (1 − \alpha ) E ( X 2 ) = \alphaμ + (1 − \alpha ) μ = μ
+\begin{eqnarray*}
+E ( W ) 
+&=& E ( \alpha X 1 + (1 − \alpha ) X 2 )\\
+&=& \alpha E ( X 1 ) + (1 − \alpha ) E ( X 2 ) \\
+&=& \alpha\mu + (1 − \alpha ) \mu \\ &=& \mu\\
+\end{eqnarray*}
+
 Therefore W is unbiased.
 \item (ii)
 MSE(W) = var(W) + {bias(W)} 2
 W is unbiased
-∴ MSE(W) = var(W)
-= var( \alpha X 1 + (1 − \alpha ) X 2 )
-= \alpha 2 var( X 1 ) + (1 − \alpha ) 2 var( X 2 ) (independent samples)
-= \alpha 2
+∴ 
+\begin{eqnarray*}MSE(W) &=& var(W)\\
+&=& var( \alpha X 1 + (1 − \alpha ) X 2 )\\
+&=& \alpha 2 var( X 1 ) + (1 − \alpha ) 2 var( X 2 ) (independent samples)\\
+&=& \alpha 2\\
+\end{eqnarray*}
 \item (iii)
+\[
 \sigma^2_1
 \sigma^2
 + (1 − \alpha ) 2 2
 n
 n
 \sigma^2
-\sigma^2
-d MSE
+\sigma^2\]
+\[d MSE
 = 2 \alpha 1 − 2(1 − \alpha ) 2
 d \alpha
 n
-n
+n\]
+
 d MSE
 = 0 ⇒ ( \sigma^2_1 + \sigma^2 2 ) \alpha = \sigma^2 2
 d \alpha
@@ -151,9 +119,10 @@ d \alpha 2
 + 2 2 > 0 ∴ minimum
 n
 n
-The maximum likelihood estimator of μ in the special case with
-\sigma^2_1 = \sigma^2 2 = \sigma^2 is
-μ ˆ =
+\item
+The maximum likelihood estimator of $\mu$ in the special case with
+$\sigma^2_1 = \sigma^2 2 = \sigma^2$ is
+\mu ˆ =
 =
 nX + nX 2
 sum of observations
@@ -185,4 +154,5 @@ This is the same as W since
 2
 2
 2
+\end{itemize}
 \end{document}
