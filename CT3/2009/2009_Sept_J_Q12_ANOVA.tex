@@ -59,8 +59,8 @@ Let \mu  A , \mu  B , \mu  C denote the mean telephone holding times under recor
 (b) Calculate a 95\% confidence interval for $\mu_A − \mu_C$ , using information available from all three samples.
 An equivalent approach for analysing the effects of the recorded messages on holding
 time is the following:
-consider the regression model E [ Y i ] = a + b 1 x i 1 + b 2 x i 2 , i = 1, 2, ..., 15, where
-Y i is the telephone holding time and x i 1 , x i 2 are indicator variables such that x i 1 = 1 if the message for caller i contains an advertisement (and 0 otherwise), and x i 2 = 1 if the message contains easy listening music (and 0 otherwise).
+consider the regression model E [ Y i ] = a + b 1 x i 1 + b 2 x i 2 , i = 1, 2, ..., 15, where Y i is the telephone holding time and x i 1 , x i 2 are indicator variables such that x i 1 = 1 if the message for caller i contains an advertisement (and 0 otherwise), and x i 2 = 1 if the message contains easy listening music (and 0 otherwise).
+
 The results from fitting this model are given below:
 Coef.
 Intercept
@@ -85,15 +85,11 @@ R-sq = 51.7%
 %-------------------------------------------------------------------------------%
 \item (ii)
 Using the fitted model:
-(a) Calculate the predicted value for the telephone holding time when the
-message contains classical music.
-(b) Test the hypothesis H 0 : b 1 = 0 against H 1 : b 1 \neq 0 at the 5\% level of
-significance.
-(c) Derive an expression relating b 1 with \mu  A and \mu  C , and hence verify
-your result from the test in \item (ii)(b) using the confidence interval
-obtained in \item (i)(b).
-[7]
-[Total 18]
+(a) Calculate the predicted value for the telephone holding time when the message contains classical music.
+(b) Test the hypothesis H 0 : b 1 = 0 against H 1 : b 1 \neq 0 at the 5\% level of significance.
+(c) Derive an expression relating b 1 with \mu  A and \mu  C , and hence verify your result from the test in \item (ii)(b) using the confidence interval
+obtained in (i)(b).
+
 \end{enumerate}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
@@ -140,12 +136,11 @@ or ( 9.694, 0.306)
 2
 1
 2
-\item The P-value is 0.039. We have evidence to reject the hypothesis that
-b 1 = 0 at the 5\% level of significance.
+\item The P-value is 0.039. We have evidence to reject the hypothesis that $b_1 = 0$ at the 5\% level of significance.
 (c)
 0.5
-\item We have y ˆ i 10.4 5.0 x i 1 7.6 x i 2 and for classical music
-message we need x i 1 x i 2 0 .
+\item We have y ˆ i 10.4 5.0 x i 1 7.6 x i 2 and for classical music message we need x i 1 x i 2 0 .
+
 \item This gives y ˆ i
 (b)
 1
@@ -165,8 +160,7 @@ a
 C
 1
 1
-\item The 95\% CI for A C in \item (i)(b) can be used for testing H 0:
-0 and equivalently H 0: b 1 = 0. The interval does not include
+\item The 95\% CI for A C in \item (i)(b) can be used for testing H 0: 0 and equivalently H 0: b 1 = 0. The interval does not include
 A
 C
 the value 0, and thus we reject H 0 at the 5\% level.
