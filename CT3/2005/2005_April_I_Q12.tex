@@ -31,12 +31,13 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%--- Question 12
 (i)
-\item A random variable $Y$ has a Poisson distribution with parameter but there is a restriction that zero counts cannot occur. The distribution of $Y$ in this case is referred to as the zero-truncated Poisson distribution.
-(a)
+ A random variable $Y$ has a Poisson distribution with parameter but there is a restriction that zero counts cannot occur. The distribution of $Y$ in this case is referred to as the zero-truncated Poisson distribution.
+\begin{enumerate}[(a)]
+\item
 Show that the probability function of Y is given by
 y
 p ( y ) =
@@ -55,7 +56,7 @@ may be determined
 1 e
 and deduce that the maximum likelihood estimate is the same as the method of moments estimate.
 (b)
-(iii)
+\item (iii)
 Obtain an expression for the Cramer-Rao lower bound (CRlb) for the variance of an unbiased estimator of .
 
 The following table gives the numbers of occupants in 2,423 cars observed on a road junction during a certain time period on a weekday morning.
@@ -77,14 +78,15 @@ Frequency of cars
 The above data were modelled by a zero-truncated Poisson distribution as given in (i).
 The maximum likelihood estimate of is = 0.8925 and the Cramer-Rao lower bound on variance at = 0.8925 is 5.711574 10 4 (you do not need to verify these results.)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-(a) Obtain the expected frequencies for the fitted model, and use a $\chi^2$ goodness-of-fit test to show that the model is appropriate for the data.
-(b) Calculate an approximate 95\% confidence interval for and hence calculate a 95\% confidence interval for the mean of the zero-truncated Poisson distribution.
-[9]
+\item (a) Obtain the expected frequencies for the fitted model, and use a $\chi^2$ goodness-of-fit test to show that the model is appropriate for the data.
+\item (b) Calculate an approximate 95\% confidence interval for and hence calculate a 95\% confidence interval for the mean of the zero-truncated Poisson distribution.
+\end{enumerate}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 12
-(i)
+\begin{itemize}
+\item (i)
 (a)
 The probability function for the zero-truncated Poisson distribution is given by
 P ( Y
@@ -101,7 +103,7 @@ y
 e
 ( y 1, 2, ).
 y !(1 e )
-(b)
+\item (b)
 Expectation of Y:
 y
 E [ Y ]
@@ -124,10 +126,10 @@ z !
 )
 y 1)
 0)%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-(ii)
+\item (ii)
 (a)
 The log likelihood function for
-April 2005
+%%--- April 2005
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 is:
 n
@@ -191,7 +193,7 @@ e
 (1 e ) 2
 .
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-(iii)
+\item (iii)
 (a)
 April 2005
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -237,6 +239,7 @@ Total
 (1 1.35) 2
 = 2.99
 1.35
+\item 
 The Yellow Book gives that the probability value is greater than 50\%, therefore there is no evidence to reject the null hypothesis, i.e. the model seems appropriate for the data.
 
 [OR
@@ -255,7 +258,8 @@ at
 = 0.8925,
 = 0.8925 1.96(0.0238989) = 0.8925
 = (0.84566, 0.93934)
-0.04684
+0.046847
+\item 
 Then the 95\%  confidence interval for the mean of Y ,
 by
 0.84566
@@ -271,5 +275,5 @@ Page 8
 1
 , is given
 1 e
-
+\end{itemize}
 \end{document}
