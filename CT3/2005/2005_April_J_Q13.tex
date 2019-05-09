@@ -31,10 +31,10 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-613
+%%--- Question 13
 As part of an investigation into health service funding a working party was concerned with the issue of whether mortality rates could be used to predict sickness rates. Data on standardised mortality rates and standardised sickness rates were collected for a sample of 10 regions and are shown in the table below:
 
 Region Mortality rate m (per 10,000) Sickness rate s (per 1,000)
@@ -74,7 +74,7 @@ m = 1136.1,
 m 2 = 129,853.03, s = 1934.2,
 s 2 = 377,700.62, ms = 221,022.58
 
-\begin{enumerate}[(i)]
+\begin{enumerate}[(a)]
 \item Calculate the correlation coefficient between the mortality rates and the sickness rates and determine the probability-value for testing whether the underlying correlation coefficient is zero against the alternative that it is positive.
 
 \item (ii) Noting the issue under investigation, draw an appropriate scatterplot for these data and comment on the relationship between the two rates.
@@ -84,13 +84,18 @@ s 2 = 377,700.62, ms = 221,022.58
 \item (iv) For a region with mortality rate 115.0, estimate the expected sickness rate and calculate 95\% confidence limits for this expected rate.
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 
 13
-(i)
+\begin{itemize}
+\item (i)
 %%---------April 2005
-S mm = 129853.03 (1136.1) 2 /10 = 780.709
-S ss = 377700.62 (1934.2) 2 /10 = 3587.656
-S ms = 221022.58 (1136.1)(1934.2)/10 = 1278.118
+\begin{itemize}
+\item S mm = 129853.03 (1136.1) 2 /10 = 780.709
+\item S ss = 377700.62 (1934.2) 2 /10 = 3587.656
+\item S ms = 221022.58 (1136.1)(1934.2)/10 = 1278.118
+\end{itemize} 
+%----------------------------------%
 r 1278.118
 (780.709)(3587.656)
 H_0 : = 0 v. H 1 :
@@ -101,9 +106,9 @@ r 8
 %%- ---------------------      Examiners Report
 0.764
 > 0
-Prob-value = P(t 8 > 3.35) = 0.005 from tables.
+Prob-value = P(t_8 > 3.35) = 0.005 from tables.
 [OR use Fisher s transformation]
-(ii)
+\item (ii)
 Given the issue of whether mortality can be used to predict sickness, we require a plot of sickness against mortality:
 There seems to be an increasing linear relationship such that mortality could be used to predict sickness.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -137,8 +142,8 @@ t
 0.74 on 8 df
 Prob-value large; no evidence to reject $H_0$ : = 2
 So we can accept that the slope is as large as 2.
-(iv)
-For a region with m = 115:
+\item (iv)
+For a region with $m = 115$:
 estimated expected s = 7.426 + 1.6371(115) = 195.69
 with variance =
 2
@@ -155,4 +160,5 @@ t 8 (s.e.)
 2.306(4.376)
 195.69
 10.09 or (185.60, 205.78)
+\end{itemize}
 \end{document}
