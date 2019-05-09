@@ -55,25 +55,13 @@ Comment on the comparison of the conditional expectation of X given X < 800 with
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Question 11
-Consider the following simple model for the number of claims, N, which occur in a  year on a policy:
-0
-0.55
-n
-P(N = n)
-1
-0.25
-2
-0.15
-3
-0.05
-\begin{enumerate}[(i)]
-\item (a) Explain how you would simulate an observation of $N$ using a number $r$, an observation of a random variable which is uniformly distributed on $(0, 1)$.
-\item (b) Illustrate your method described in (i) by simulating three observations of $N$ using the following random numbers between 0 and 1: 0.6221, 0.1472, 0.9862.
-\end{enumerate}
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 $X ~ U(0,1000)$ , $Y = min(X,800)$
-(i)
+
+\begin{itemize}
+\item (i)
 
 P ( X
 x | X
@@ -95,7 +83,7 @@ so the conditional distribution is $U(0,800)$
 [other reasonable arguments were given credit, e.g. the conditional distribution is simply a scaled version of the original uniform distribution on a restricted range .]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\item 
 (ii)
 
 E[Y] = E[X|X < 800] P(X < 800) + 800 P(X
@@ -109,20 +97,11 @@ Page 4
 1000
 800)
 
+\item 
 (iii) $Y$ is approximately normal with expectation 480 by Central Limit Theorem
-(iv) $E[X | X < 800] = 400$ whereas $E[Y] = 480$.
+
+\item (iv) $E[X | X < 800] = 400$ whereas $E[Y] = 480$.
 The higher value for E[Y] results from 20\% of the Y values being 800 (and 80\% being between 0 and 800).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-11
-(a)
-For 0 r < 0.55
-0.55 r < 0.8
-0.8 r < 0.95
-0.95 r 1
-n = 0
-n = 1
-n = 2
-n = 3
-[OR any equivalent allocation which reflects the probabilities of the 4 values
-of N.]
+\end{itemize}
 \end{document}
