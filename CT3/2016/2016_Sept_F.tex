@@ -47,7 +47,7 @@ Group
 A
 B
 C
-∑y
+\sumy
 0.693 1.099
 0
 1.099 0.693 0.693
@@ -65,37 +65,40 @@ C
 6.475
 6.356
 11.589
-For these data: SS T = 8.364, SS B = 1.785, SS R = 6.579 (as defined in page 26 of the
+For these data: SS_{T}= 8.364, SS_{B} = 1.785, SS R = 6.579 (as defined in page 26 of the
 Formulae and Tables).
+\begin{enumerate}
 \item (i) Perform an analysis of variance to test the null hypothesis that the mean level
 of stage-fright is the same among the three groups.
 
 \item (ii) Determine the residuals for the first musician in groups A and B using the
-fitted model in part \item (i).
+fitted model in part (i).
 
-(iii) Determine a 95% confidence interval for the variance of the scores (on the
+\item
+(iii) Determine a 95\% confidence interval for the variance of the scores (on the
 logarithmic scale), based on:
 (a)
 (b)
 the residual sum of squares.
 the sum of squares between treatments.
-[6]
+\item 
 (iv)
 Comment on the interval obtained in part (iii)(b).
 
 It is suggested that any differences in the scores could be explained by the difference
 between the scores of the control group and the groups receiving a stage-fright drug.
-(v)
+\item (v)
 Suggest how this effect can be formally tested. You should not carry out any
 test.
 
 [Total 17]
-
+\end{enumerate}
 CT3 S2016–7
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Q10
 \item (i)
 ANOVA table:
+\begin{verbatim}
 Source of variation df SS MSS
 Between groups
 Residual
@@ -110,7 +113,7 @@ F =
 0.8925
 = 3.662 on 2, 27 df
 0.2437
-
+\end{verbatim
 F 2,27 (5%) = 3.354, F 2,27 (1%) = 5.488, so reject the null hypothesis at the 5%
 level.
 
@@ -123,7 +126,7 @@ r A 1 = y A 1 − y A = 0.693 −
 6.475
 = 0.0455
 10
-Page 9Subject CT3  – September 2016 
+%%%%%%%%%%%%%%%%%%%%%%%
 r B 1 = y B 1 − y B = 0 −
 (iii)
 (a)
@@ -135,14 +138,14 @@ Interval will be based on
 σ
 2
 
-~ χ 227
+~\chi^2 227
 
 and therefore a 95% CI is given as
 SSR
  2
 
 2
- χ 27 ( 0.025 ) ≤ 2 ≤ χ 27 ( 0.975 ) 
+\chi^2 27 ( 0.025 ) ≤ 2 ≤\chi^2 27 ( 0.975 ) 
 σ
 
 
@@ -152,9 +155,9 @@ SSR
 SSR
 SSR
 i.e.  2
-≤ σ 2 ≤ 2
+≤ \sigma2 ≤ 2
 
- χ ( 0.975 )
+\chi^2 ( 0.975 )
 
 χ
 0.025
@@ -165,7 +168,7 @@ i.e.  2
  
 6.579 
  6.579
-≤ σ 2 ≤
+≤ \sigma2 ≤
 which gives 
  , i.e. (0.1523, 0.4515)
 14.57 
@@ -174,18 +177,18 @@ Interval now based on
 SSB
 σ
 2
-~ χ 22
+~\chi^2 22
 
 Working similarly as above we obtain a 95% CI as:
 1.785 
  1.785
-≤ σ 2 ≤
+≤ \sigma2 ≤
 
  , i.e. (0.2419, 35.2488)
 0.05064 
  7.378
 
-(iv) This interval is too wide. Notice that its validity depends on H 0 being true,
+(iv) This interval is too wide. Notice that its validity depends on H_0 being true,
 which is rejected at 5% level.
 
 (v) We could perform a two-sample t-test of control mean = treatment mean by

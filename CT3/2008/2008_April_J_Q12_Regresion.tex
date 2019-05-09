@@ -122,7 +122,7 @@ y:
 5
 6.8
 5
-%Σ x = 126.5\sigma x 2 = 1,381.85\sigma y = 113\sigma y 2 = 1, %251\sigma xy = 1, 272.2
+%\sum x = 126.5\sigma x 2 = 1,381.85\sigma y = 113\sigma y 2 = 1, %251\sigma xy = 1, 272.2
 
 \begin{enumerate}[(i)]
 \item (i) Construct a scatterplot of blood flow against auricular pressure and comment briefly on any relationship between them.
@@ -145,7 +145,7 @@ that the true underlying slope coefficient is equal to 1.5.
 F = 1149/289 = 3.98 on (2, 12) degrees of freedom
 
 From Yellow Tables pages 172/3, P-value of the data is between 0.05 and 0.025.
-We can reject H 0 (the “no schools effects” hypothesis) at the 5\% level of testing but not at the 1% level. We have some evidence against the “no schools effects” hypothesis − and conclude that there are school
+We can reject H_0 (the “no schools effects” hypothesis) at the 5\% level of testing but not at the 1% level. We have some evidence against the “no schools effects” hypothesis − and conclude that there are school
 effects (i.e. differences among the underlying means).
 (b)
 School 1 mean = 598/5 = 119.6
@@ -157,7 +157,7 @@ i.e. 119.6 \pm 16.6 or
 (103.0, 136.2)
 y 1• = 598, y 2• = 485, y 3• = 629, y 4• = 566
 y •• = 2278,\sigmay 2 = 266,788
-SS T = 266788 – 2278 2 /20 = 7323.8
+SS_{T}= 266788 – 2278 2 /20 = 7323.8
 SS B = (598 2 + 485 2 + 629 2 + 566 2 )/5 − 2278 2 /20 = 2301
 ⇒ SS R = 7324 − 2301 = 5023
 
@@ -202,15 +202,15 @@ There seems to be a positive linear relationship between blood flow and auricula
 (ii)
 \begin{itemize}
 \item n = 12
-\item S xx = 1381.85 −
-\item S yy = 1251 −
+\item S_{xx} = 1381.85 −
+\item S_{yy} = 1251 −
 113 2
 = 186.9167
 12
-\item S xy = 1272.2 −
-\beta ˆ =
-S xy
-S xx
+\item S_{xy} = 1272.2 −
+\hat{\beta}=
+S_{xy}
+S_{xx}
 =
 126.5 2
 = 48.3292
@@ -222,7 +222,7 @@ S xx
 = 1.676
 48.3292
 1
-\item α ˆ = y − \beta ˆ x = (113 − 1.6758*126.5) = − 8.249
+\item \hat{\alpha}= y − \hat{\beta}x = (113 − 1.6758*126.5) = − 8.249
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%12
@@ -230,29 +230,29 @@ Fitted line is y = - 8.249 + 1.676x
 (iii)
 (a)
 \[
-\beta ˆ − \beta
-σ ˆ 2
-S xx
+\hat{\beta}− \beta
+\sigmaˆ 2
+S_{xx}
 ~ t n − 2 where\hat{\sigma}^2 =
 P [ − t n − 2 (2.5%) <
-\beta ˆ − \beta
+\hat{\beta}− \beta
 \]
-σ ˆ 2
-S xx
+\sigmaˆ 2
+S_{xx}
 2
-S xy
+S_{xy}
 1
-( S yy −
+( S_{yy} −
 )
 n − 2
-S xx
+S_{xx}
 < t n − 2 (2.5%)] = 0.95
 Rearrangement results in the 95\% confidence interval for $\beta$
 2
 
 \[ \hat{\beta} \pm t (2.5\%)\sigma ˆ\]
 n − 2
-S xx
+S_{xx}
 Here: %\hat{\sigma}^2 =
 1
 (80.9917) 2
@@ -269,17 +269,17 @@ As 1.5 lies comfortably inside this confidence interval, then there is no eviden
 \[( n − 2)\hat{\sigma}^2
 σ
 2
-~ \chi^2 n − 2
-P [ χ n 2 − 2 (97.5\%) <
+~ \chi^2_{n} − 2
+P [\chi^2_{n} 2 − 2 (97.5\%) <
 ( n − 2)\hat{\sigma}^2
 σ
 2
-< \chi^2 n − 2 (2.5\%)] = 0.95\]
+< \chi^2_{n} − 2 (2.5\%)] = 0.95\]
 Rearrangement results in the 95\% confidence interval for $\sigma^2$
 \[( n − 2)\hat{\sigma}^2
 χ n 2 − 2 (2.5\%)
 2
-<σ <\]
+<\sigma<\]
 Here 95\% CI is
 \[( n − 2)\hat{\sigma}^2
 χ n 2 − 2 (97.5%)

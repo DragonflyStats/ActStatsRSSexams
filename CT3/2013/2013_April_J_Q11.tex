@@ -33,10 +33,11 @@
 \begin{document}
 \begin{enumerate}
 
-PLEASE TURN OVER11
+%- PLEASE TURN OVER
+%- Question 11
 The table below gives the frequency of a critical illness disease by age group in a
 certain study. The table also gives the age midpoint (x), the number of people in each
-⎛ \theta ˆ ⎞
+⎛ \thet\hat{a}⎞
 , where \thetâ denotes the proportion in an age group with
 group (n), and y = log ⎜ ⎜
 ˆ ⎟ ⎟
@@ -97,28 +98,30 @@ y
 0.51083
 1.17865
 1.38629
-∑x = 360; ∑x 2 = 17437.5; ∑y = −2.9392; ∑y 2 = 13.615; ∑xy= −9.0429
-(i)
+\sum x = 360; \sum x 2 = 17437.5; \sum y = −2.9392; \sum y^{2} = 13.615; \sum xy= −9.0429
+
+\begin{enumerate}[(a)]
+\item (i)
 Calculate an estimate of the probability of having the disease under the assumption that the probability is the same for all age groups.
-[1]
+
 Consider the hypothesis that there are no differences in the probability of having the
 disease for the different age groups.
-(ii)
-(a) Construct an 8 × 2 contingency table which includes the expected
+\item (ii)
+(a) Construct an $8 \; \times \; 2$ contingency table which includes the expected
 frequencies under this hypothesis.
-(b) Conduct a χ 2 test to investigate the hypothesis.
-[6]
-Consider the linear regression model y = α + \betax + ε, where the error terms (ε) are
+(b) Conduct a\chi^2 2 test to investigate the hypothesis.
+
+Consider the linear regression model $y = \alpha + \beta x + \varepsilon $, where the error terms (ε) are
 independent and identically distributed following a N (0, \sigma 2 ) distribution.
-(iii)
+\item (iii)
 (a) Draw a scatterplot of y against x and comment on the appropriateness
 of the considered model.
 (b) Calculate the fitted regression line of y on x.
 (c) Calculate a 99% confidence interval for the slope parameter.
 (d) Interpret the result obtained in part (ii) with reference to the confidence
 interval obtained in part (iii)(c).
-[14]
-
+\end{enumerate}
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 11
 (i)
@@ -126,8 +129,8 @@ Notation: n i = number in group i; r i = number with disease in group i.
 θ ˆ =
 (ii)
 (a)
-∑ r i = 43 = 0.43
-∑ n i 100
+\sum r i = 43 = 0.43
+\sum n i 100
 Expected frequencies (in brackets) are given assuming constant
 probability of disease for all groups, independently of age:
 Disease
@@ -179,7 +182,7 @@ Total
 57
 100
 Page 8Subject CT3 (Probability and Mathematical Statistics) – April 2013 – Examiners’ Report
-χ = ∑
+χ = \sum
 2
 (b)
 ( f i − e i ) 2 = ( 1 − 4.3 ) 2 + ...+ ( 2 − 5.7 ) 2
@@ -188,7 +191,7 @@ e i
 5.7
 = 26.6 on 7 d.f.
 2
-From tables, χ 7,
+From tables,\chi^2 7,
 0.01 = 18.48
 We have (strong) evidence against the hypothesis of no differences in
 probability of disease among age groups.
@@ -205,57 +208,57 @@ x
 360 2
 = 1237.5
 8
-S xx = 17437.5 −
-S yy = 13.615 −
+S_{xx} = 17437.5 −
+S_{yy} = 13.615 −
 ( − 2.9392) 2
 = 12.535
 8
-S xy = − 9.0429 −
+S_{xy} = − 9.0429 −
 ( 360 ) ( − 2.9392) = 123.22
 8
 Least squares estimates:
-β ˆ =
-S xy
-S xx
+\hat{\beta} =
+S_{xy}
+S_{xx}
 =
 123.22
 = 0.09957
 1237.5
-α ˆ = y − β ˆ x = − 0.3674 − 0.09957 ( 45 ) = − 4.85
-Fitted line: y ˆ = − 4.85 + 0.09957 x
+\hat{\alpha}= y − \hat{\beta} x = − 0.3674 − 0.09957 ( 45 ) = − 4.85
+Fitted line: \hat{y} = − 4.85 + 0.09957 x
 Page 9Subject CT3 (Probability and Mathematical Statistics) – April 2013 – Examiners’ Report
 (c)
 ⎛
 2 ⎞
-S xy 2 ⎞ ⎛
-⎜ S yy −
+S_{xy} 2 ⎞ ⎛
+⎜ S_{yy} −
 ⎟ ⎜ 12.535 − 123.22 ⎟
 ⎜
-S xx ⎟ ⎜
+S_{xx} ⎟ ⎜
 1237.5 ⎟ ⎠
 ⎠ = ⎝
-σ ˆ 2 = ⎝
+\hat{\sigma} 2 = ⎝
 = 0.04430
 n − 2
 6
 ()
-se β ˆ =
-σ ˆ 2
+se \hat{\beta} =
+\hat{\sigma} 2
 0.210
 =
 = 0.0060
-S xx
+S_{xx}
 1237. 5
 and t 6, 0.005 = 3.707
-99% CI for β̂ is given by 0.09957 ± 3.707(0.0060)
-i.e. 0.09957 ± 0.0222 or (0.0774, 0.1218)
+99% CI for \betâ is given by 0.09957 \pm  3.707(0.0060)
+i.e. 0.09957 \pm  0.0222 or (0.0774, 0.1218)
 (d)
 In (ii) it was found that the probability of having the disease is
 different for different age groups. In part (iii)(c) it was also found that
 the probability of disease depends on age, as zero was not included in
 the interval for the slope parameter.
 The quality of the answers was mixed, with some common errors appearing in part (ii)
-where many candidates failed to produce an appropariate 8 × 2 table (both “yes” and “no”
+where many candidates failed to produce an appropariate 8 \; \times \; 2 table (both “yes” and “no”
 columns) and perform the correct chi-square test (with 7 d.f.).
 It is noted that in part (ii)(b) the chi-square test can alternatively be performed by combining
 some of the age groups (both columns) to achieve expected frequencies greater than 5, with
