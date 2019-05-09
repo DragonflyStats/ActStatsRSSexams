@@ -1,0 +1,78 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+9
+\begin{enumerate}
+\item 
+The total claim amount on a portfolio, S, is modelled as having a compound
+distribution
+S = X 1 + X 2 +
++ X N
+where N is the number of claims and has a Poisson distribution with mean , $X_i$ is the amount of the i th claim, and the X i s are independent and identically distributed and
+independent of N. Let $M_X (t)$ denote the moment generating function of X i .
+\begin{enumerate}
+\item (i)
+Show, using a conditional expectation argument, that the cumulant generating function of S, $C_S (t)$, is given by
+C S (t) =
+M X (t) 1}.
+Note: You may quote the moment generating function of a Poisson random variable from the book of Formulae and Tables.
+\item 
+(ii)
+Calculate the variance of S in the case where
+variance 10.
+CT3 A2006 4
+= 20 and X has mean 20 and
+\end{enumerate}
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+9
+\begin{enumerate}
+\item (i)
+M S (t) = E[e tS ] = E[E[e tS |N]]
+Now E[e tS |N = n] = E[exp(tX 1 +
++ tX n )] = E[exp(tX i )] = {M X (t)} n
+M S (t) = E[{M X (t)} N ] = E[exp{NlogM X (t)}] = M N {logM X (t)}
+= exp[ M X (t) 1}] since N ~ Poisson( )
+C S (t) = logM S (t) = M X (t) 1}
+\item (ii)
+V[S] = C S (0) =
+M X (0)} = E[X 2 ] = 20(10 + 20 2 ) = 8200
+OR V[S] = E[N]V[X] + V[N]{E[X]} 2 = 20 10 + 20 20 2 = 8200
+\end{enumerate}
+
+\end{document}
