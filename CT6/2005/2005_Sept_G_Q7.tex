@@ -1,0 +1,134 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+%%% - Question 7
+
+PLEASE TURN OVER7
+An insurer operates a simple no claims discount system with 5 levels: 0%, 20%, 40%,
+50% and 60%.
+The rules for moving between levels are:
+An introductory discount of 20% is available to new customers.
+If no claims are made during a year the policyholder moves up to the next
+discount level or remains at the maximum level.
+If one or more claims are made during the year, a policyholder at the 50% or 60%
+discount level moves to the 20% level and a policyholder at 0%, 20% or 40%
+moves to or remains at the 0% level.
+The full annual premium is \$600.
+When an accident occurs, the distribution of loss is exponential with mean \$1,750. A
+policyholder will only claim if the loss is greater than the extra premiums over the
+next four years, assuming no further accidents occur.
+8
+(i) For each discount level, calculate the smallest cost for which a policyholder
+will make a claim.
+
+(ii) For each discount level, calculate the probability of a claim being made in the
+event of an accident occurring.
+
+(iii) Comment on the results of (ii).
+(iv) Currently, equal numbers of customers are in each discount level and the
+probability of a policyholder not having an accident each year is 0.9.
+Calculate the expected proportions in each discount level next year.
+
+[Total 12]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+7
+September 2005
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(i)
+Discount level Premiums if no claim Premiums if claim Difference
+0%
+20%
+40%
+50%/60% 480, 360, 300, 240
+360, 300, 240, 240
+300, 240, 240, 240
+240, 240, 240, 240 600, 480, 360, 300
+600, 480, 360, 300
+600, 480, 360, 300
+480, 360, 300, 240 360
+600
+720
+420
+(ii)
+0%
+20%
+40%
+50%/60%
+P(Cost > 360) = exp(
+P(Cost > 600) = exp(
+P(Cost > 720) = exp(
+P(Cost > 420) = exp(
+360/1,750) = 0.814
+600/1,750) = 0.710
+720/1,750) = 0.663
+420/1,750) = 0.787
+(iii) The amount for which the 50%/60% discount drivers will claim is much lower
+than the 20% and 40% categories. It seems illogical for this to be the case as
+this leads to a higher probability of a claim in the event of an accident.
+Suggest that structure is altered to make claims for these categories less likely.
+(iv) The transition matrix is
+0.0814 0.9186 0
+0
+0.0710 0
+0.9290 0
+0.0663 0
+0
+0
+0.0787 0
+0
+0.0787 0
+0
+0
+0.9337 0
+0
+0.9213
+0
+0.9213
+This year the proportions at each level are
+(0.2, 0.2, 0.2, 0.2, 0.2)
+Next year, the expected proportions are
+0.2
+0.2
+0.2
+0.2
+0.2
+Page 8
+(0.0814 + 0.0710 + 0.0663)
+(0.9186 + 0.0787 + 0.0787)
+0.9290
+0.9337
+(0.9213 + 0.9213)
+= 0.04374
+= 0.2152
+= 0.1858
+= 0.18674
+= 0.36852%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
