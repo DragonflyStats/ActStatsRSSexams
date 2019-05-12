@@ -1,0 +1,70 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+%%% - Question 1
+
+1
+A coin is biased so that the probability of throwing a head is an unknown constant p.
+It is known that p must be either 0.4 or 0.75. Prior beliefs about p are given by the
+distribution:
+P(p = 0.4) = 0.6
+P(p = 0.75) = 0.4
+The coin is tossed 6 times and 4 heads are observed.
+Find the posterior distribution of p.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%- Question 1
+
+\[P ( p = 0.4 | 4 H ) &=&
+\frac{P (4 H p = 0.4) P ( p = 0.4)}{P (4 H )}\]
+But 
+
+\begin{eqnarray*}
+P(4H) &=& P (4 H |p = 0.4) P ( p = 0.4) + P (4 H p = 0.75) P ( p = 0.75)\\
+&=& { 6 \choose 4} 0.4^4 0.6^2 \times 0.6 + { 6 \choose 4} 0.75^4 0.25^2 \times 0.4\\
+&=&  0.082944 + 0.11865\\
+&=& 0.201596\\
+\end{eqnarray}
+
+So 
+\begin{eqnarray*}
+P ( p = 0.4 |4 H ) &=& \frac{0.082944}{0.201596}\\
+&=& 0.411436
+\end{eqnarray*}
+
+So the posterior distribution of $p$ is given by 
+$P(p = 0.4) = 0.411436$ and 
+$P(p = 0.75) = 0.588564$
+
+
+
+Comment: This question was intended to be a straightforward application of Bayes’
+Theorem. However, the question was generally not well answered, with many candidates
+unable to find the posterior distribution in this slightly unfamiliar scenario.
