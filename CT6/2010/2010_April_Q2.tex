@@ -1,0 +1,55 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+%%% - Question 2
+[5]
+An insurance company is modelling claim numbers on its portfolio of motor insurance
+policies using a Poisson distribution, whose mean depends on the age and gender of
+the policyholder.
+(i) Suggest a link function for fitting a generalised linear model for the mean of
+the Poisson distribution.
+
+(ii) Specify the corresponding linear predictor used for modelling the age and
+gender dependence as:
+(a)
+(b)
+age + gender
+age + gender + age \times gender
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2
+(i) The link function here is g ( \mu  ) = log \mu  .
+(ii) (a) The linear predictor is \alpha i + \beta x where the intercept \alpha i for i = 1, 2
+depends on gender.
+(b) The linear predictor is \alpha i + \beta i x so that both parameters depend on
+gender.
+Comment: This straightforward question was generally well answered.
+
+
