@@ -1,0 +1,306 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+%%% - Question 8
+
+
+The following time series model is used for the monthly inflation rate (Y t ) in a
+particular country:
+Y t = 0.4Y t
+1
++ 0.2Y t
+2
++ Z t + 0.025
+where {Z t } is a sequence of uncorrelated identically distributed random variables
+whose distributions are normal with mean zero.
+(i)
+Derive the values of p, d and q, when this model is considered as an
+ARIMA(p, d, q) model. 
+(ii) Determine whether {Y t } is a stationary process. 
+(iii) Assuming an infinite history, calculate the expected value of the rate of
+inflation over this. [1]
+CT6 S2005
+49
+(iv) Calculate the autocorrelation function of {Y t }.
+
+(v) Explain how the equivalent infinite-order moving average representation of
+{Y t } may be derived.
+
+[Total 13]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+8
+(i)
+(1
+0.4B
+September 2005
+Examiners Report
+0.2B 2 ) Y t = Z t + 0.025
+Characteristic equation
+1
+0.4z
+0.2z 2 = 0
+has no root at z = 1, so d = 0.
+No functional dependence on Z t 1 , Z t 2 , etc., so q = 0.
+Hence this is an ARIMA(2, 0, 0).
+(ii) Roots of characteristic equation are 1
+so {Y t } is stationary.
+(iii) Mean is stationary over time
+(1
+(iv)
+Y t
+0.4 0.2)E[Y t ] = 0.025
+E[Y t ] = 0.025
+= 0.0625.
+0.4
+0.0625 = 0.4(Y t
+k
+= E[(Y t
+0.0625) + 0.2(Y t
+1
+0.0625)(Y t
+Put k = 1, and note that
+0 = 1 and
+1 1
+= 0.4 + 0.2
+2 = 0.4 1 + 0.2 = 0.4
+3 = 0.4 2 + 0.2
+1
+2
+0.0625) + Z t
+0.0625)] = 0.4
+k
+1
+6 , which are outside ( 1, +1),
+1
+=
+=
+k 1
++ 0.2
+k 2
+1
+0.4
+= 0.5
+0.8
+= 0.26
+and so on.
+(v)
+(1
+0.4B
+Y t
+0.2B 2 )(Y t
+0.0625 = (1
+0.0625) = z t
+0.4B
+0.2B 2 ) 1 Z t
+So we need to invert (1 0.4B 0.2B 2 )
+and multiply by Z t to obtain the equivalent moving average process.
+Page 9Subject CT6 (Statistical Methods Core Technical)
+9
+September 2005
+Examiners Report
+(Figures in £000s)
+AY
+2001
+2002
+2003
+2004
+Inflation factors for each development year
+0
+1
+2
+3
+1.02499
+1.00390
+0.99200
+1.00000
+1.00390
+0.99200
+1.00000
+0.99200
+1.00000
+1.00000
+Other inflation adjustments were given credit providing they were sensible, consistent and
+some explanation was given.
+Inflation adjusted claim payments in mid 2004
+prices
+AY
+2001
+2002
+2003
+2004
+0 1 2 3
+1,287.39
+1,444.61
+1,530.66
+1,480 948.69
+1,063.42
+1,133 625.95
+723 378
+Inflation adjusted cumulative claim payments in
+mid 2004 prices
+AY
+2001
+2002
+2003
+2004
+Column sum
+Column sum minus last entry
+Development factor
+0 1 2 3
+1,287.39
+1,444.61
+1,530.66
+1,480 2,236.08
+2,508.03
+2,663.66 2,862.03
+3,231.03 3,240.03
+7,407.77
+4,744.11
+1.28434 6,093.06
+2,862.03
+1.13207 3,240.03
+2,572.0
+1,092.0
+1.025
+1,119.3
+2,357.4 3,303.3
+731.3
+1.050625
+768.3 3,739.6
+436.3
+1.076891
+469.8
+4,262.66
+1.73783
+(i)
+Outstanding amounts arising from 2004 policies
+Accumulated
+Disaccumulated
+Inflation
+Inflation adj by year
+Total
+For example, 2,572.0 = 1,480
+Page 10
+1,480.0
+1.7378Subject CT6 (Statistical Methods Core Technical)
+(ii)
+Ultimate amount for 2004 policies
+September 2005
+5,250
+Examiners Report
+0.75 = 3,937.50
+Outstanding amounts for 2004 policies
+1,149.8
+1.025
+1,178.5
+2,482.2
+Infl adj by year
+Inflation adj by year
+Total
+770.0
+1.050625
+809.0
+459.4
+1.076781
+494.7
+For example,
+1,149.8 = 3,937.5
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+8
+(i)
+(1
+0.4B
+September 2005
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0.2B 2 ) Y t = Z t + 0.025
+Characteristic equation
+1
+0.4z
+0.2z 2 = 0
+has no root at z = 1, so d = 0.
+No functional dependence on Z t 1 , Z t 2 , etc., so q = 0.
+Hence this is an ARIMA(2, 0, 0).
+(ii) Roots of characteristic equation are 1
+so {Y t } is stationary.
+(iii) Mean is stationary over time
+(1
+(iv)
+Y t
+0.4 0.2)E[Y t ] = 0.025
+E[Y t ] = 0.025
+= 0.0625.
+0.4
+0.0625 = 0.4(Y t
+k
+= E[(Y t
+0.0625) + 0.2(Y t
+1
+0.0625)(Y t
+Put k = 1, and note that
+0 = 1 and
+1 1
+= 0.4 + 0.2
+2 = 0.4 1 + 0.2 = 0.4
+3 = 0.4 2 + 0.2
+1
+2
+0.0625) + Z t
+0.0625)] = 0.4
+k
+1
+6 , which are outside ( 1, +1),
+1
+=
+=
+k 1
++ 0.2
+k 2
+1
+0.4
+= 0.5
+0.8
+= 0.26
+and so on.
+(v)
+(1
+0.4B
+Y t
+0.2B 2 )(Y t
+0.0625 = (1
+0.0625) = z t
+0.4B
+0.2B 2 ) 1 Z t
+So we need to invert (1 0.4B 0.2B 2 )
+and multiply by Z t to obtain the equivalent moving average process.
+Page 9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
