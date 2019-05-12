@@ -1,0 +1,75 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+%%% - Question 1
+
+%%- Question 1
+Claims occur on a portfolio of insurance policies according to a Poisson process at a
+rate . All claims are for a fixed amount d, and premiums are received continuously.
+The insurer s initial surplus is U (< d) and the annual premium income is 1.2 d.
+Show that the probability that ruin occurs at the first claim is:
+1 e
+2
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1
+September 2005
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Ruin will occur if the time of the first claim t is such that
+U + 1.2 dt < d
+i.e. if
+t <
+d U
+.
+1.2 d
+The time until the first claim follows an exponential distribution with parameter . So
+the probability of ruin is given by
+d U
+1.2 d
+0
+x
+e
+dx =
+e
+= 1 e
+= 1 e
+2
+d U
+x 1.2 d
+0
+d U
+1.2 d
+1
+U
+1
+1.2
+d
+.
