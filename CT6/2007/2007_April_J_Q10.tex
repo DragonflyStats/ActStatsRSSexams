@@ -1,0 +1,125 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10
+(i)
+The Gamma distribution with mean \mu  and variance \mu  2 /\alpha  has density function
+\[f(y) =
+\alpha  \alpha 
+\mu  \alpha  \Gamma ( \alpha  )
+y
+\alpha − 1
+e
+−
+y \alpha 
+\mu 
+( y > 0 )\]
+(a) Show that this may be written in the form of an exponential family.
+(b) Use the properties of exponential families to confirm that the mean and
+[9]
+variance of the distribution are \mu  and \mu  2 /\alpha .
+(ii) Explain the difference between a continuous covariate and a factor.
+
+(iii) A company is analysing its claims data on a portfolio of motor policies, and uses a gamma distribution to model the claim severities. The company uses
+three rating factors:
+policyholder age (as a continuous variable);
+policyholder gender;
+vehicle rating group (as a factor).
+(a) Write down the form of the linear predictor when all rating factors are included as main effects.
+(b) State how the linear predictor changes if an interaction between
+policyholder age and gender is included.
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+(i) (a)
+⎡ y \alpha 
+⎤
+f(y) = exp ⎢ −
+− \alpha  log \mu  + ( \alpha  − 1) log y + \alpha  log \alpha  − log \Gamma ( \alpha  ) ⎥
+⎣ \mu 
+⎦
+⎡ ⎛ y
+⎤
+⎞
+= exp ⎢ \alpha  ⎜ − − log \mu  ⎟ + ( \alpha  − 1) log y + \alpha  log \alpha  − log \Gamma ( \alpha  ) ⎥
+⎠
+⎣ ⎝ \mu 
+⎦
+which is in the form of an exponential family.
+\theta  = −
+1
+\mu 
+b(\theta ) = log \mu 
+⎛ 1 ⎞
+= log ⎜ − ⎟ = - log( - \theta )
+⎝ \theta  ⎠
+%%--- Page 10
+%%-- Subject CT6 (Statistical Methods Core Technical) — April 2007 — Examiners’ Report
+(b)
+The mean and variance of the distribution are b ′ ( \theta  ) and a ( \phi  ) b ′′ ( \theta  )
+b ′ ( \theta  ) = −
+1
+= \mu 
+\theta 
+which confirms that the mean is \mu .
+b ′′ ( \theta  ) =
+a(\phi ) =
+1
+\theta 
+2
+= \mu  2
+1
+\alpha 
+hence the variance is
+(ii)
+1 2
+\mu  , as required
+\alpha 
+A factor is categorical e.g. male/female.
+For a continuous covariate, the value is included. For example, if x is a continuous covariate, a main effect would be $\alpha  + \beta x$.
+(iii)
+(a)
+The linear predictor has the form
+\[\alpha  i + \beta j + \gamma x\]
+where \alpha  i is the factor for policyholder gender (i = 1,2)
+\beta j is the factor for vehicle rating group
+x is the policyholder age
+(\alpha  1 = 0, \beta 1 = 0)
+(b)
+The linear predictor becomes
+\[\alpha  i + \beta j + \gamma i x\]
+\end{document}
