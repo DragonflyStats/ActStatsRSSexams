@@ -1,0 +1,336 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+%%% - Question 10
+
+[Total 16]
+PLEASE TURN OVER10
+The total amounts claimed each year from a portfolio of insurance policies over n
+years were x 1 , x 2 , , x n . The insurer believes that annual claims have a normal
+distribution with mean
+of
+2
+1 , where
+and variance
+is assumed to be normal with mean
+is unknown. The prior distribution
+2
+2 .
+and variance
+(i) Derive the posterior distribution of .
+(ii) Using the answer in (a), write down the Bayesian point estimate of
+quadratic loss.
+(iii)
+
+under
+
+Show that the answer in (b) can be expressed in the form of a credibility
+estimate and derive the credibility factor.
+
+The claims experience over five years for two companies was as follows:
+Company A
+Company B
+(iv)
+Year 1 2 3 4 5
+Amount
+Amount 421
+343 417
+335 438
+356 456
+366 463
+380
+Determine the Bayes credibility estimate of the premiums the insurer should
+charge for each company based on the modelling assumptions of part (i), a
+profit loading of 25% and the following parameters:
+2
+1
+2
+2
+Company A Company B
+400
+500 300
+350
+800 600
+
+(v)
+Comment on the effect on the result of increasing
+END OF PAPER
+CT6 S2005
+6
+2
+1 and
+2
+2 .
+
+[Total 16]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+10
+(i)
+x 1 ,
+(1 / (1.28434 * 1.13207)
+1 / (1.73783 * 1.28434 * 1.13207))
+, x n are the observed claims:
+) 2
+(
+f( )
+e
+1
+2
+2
+2
+e
+2 2
+n 2
+)
+2
+1
+2
+e
+p(x )
+(
+) 2
+( x 1
+x
+2
+2
+2
+i 1
+n
+1
+= e
+2
+1 i 1
+2
+n
+1
+e
+2
+1 i 1
+2
+1
+= e
+p( x)
+2
+2
+(
+2 x i )
+n
+2
+n
+2
+1
+) 2
+( x i
+2
+x i
+i 1
+p(x ) p( )
+1
+e
+2
+2
+2
+(
+2
+2
+1
+)
+2
+2
+1
+n
+2
+x i
+i 1
+n
+1
+2
+x i
+n
+2
+2
+2
+2
+2
+1
+i 1
+2
+2
+2
+2
+2
+1
+2
+= e
+Page 11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2
+1
+2
+= e
+2
+1
+n
+2
+1
+n 2 2
+2 2
+1 2
+2
+n 2 2
+2 2
+1 2
+2
+September 2005
+2
+2
+2
+1
+2
+1
+n
+2
+2
+x i
+i 1
+2 2
+1 2
+2
+2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2
+n
+x i
+i 1
+2
+2
+2
+1
+n
+2
+2
+e
+n
+2
+1
+i 1
+x ~ N
+(ii)
+2
+2
+x i
+2
+1
+,
+2
+2
+n
+2 2
+1 2
+2
+1
+n
+2
+2
+Point estimator under quadratic loss is the posterior mean:
+2
+1
+E( x) =
+2
+1
+n
+n
+2
+2
+2
+2
+2
+1
+n
+2
+2
+x i
+i 1
+n
+x i
+(iii)
+E( x) = (1
+Z)
++ Z
+i 1
+n
+which is in the form of a credibility estimate, and
+Z =
+n
+2
+1
+2
+2
+n
+2
+2
+is the credibility factor.
+(iv)
+Company A Company B
+5 5
+2
+1 500 350
+2
+2 800 600
+0.8889 0.8955
+439 356
+400 300
+n
+2
+2
+Z =
+2
+2
+x
+Page 12
+2
+1
+n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Credibility Premium
+= Zx (1 Z )
+Premium (CP + 25%)
+(v)
+September 2005
+434.7 350.1
+543.3 437.7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2
+1 increases Reduces credibility factor and hence credibility premium
+moves towards prior mean.
+2
+2 increases Increases credibility factor and hence credibility premium
+moves towards sample mean.
+END OF EXAMINERS REPORT
+Page 13
