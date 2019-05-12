@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+%%% - Question 5
+
+CT6 S2006
+25
+(i) Let p be an unknown parameter, and let f(p x) denote the probability density of the posterior distribution of p given information x. Show that under all-or-
+nothing loss the Bayes estimate of p is the mode of f(p x).
+
+(ii) Now suppose p is the proportion of the population carrying a particular genetic condition. Prior beliefs about p have a U(0, 1) distribution. A sample of size
+N is taken from the population revealing that m individuals have the genetic condition.
+(a) Suggest why the U(0, 1) distribution has been chosen as the prior, and derive the posterior distribution of p.
+(b) Calculate the Bayes estimate of p under all-or-nothing loss.
+[6]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+5
+(i)
+Consider the loss function
+⎧ 0 if g − \varepsilon  < p < g + \varepsilon 
+L(g(x), p) = ⎨
+⎩ 1 otherwise
+Then the expected posterior loss is given by
+g +\varepsilon 
+1 −
+∫
+f ( p ⏐ x ) dp
+g −\varepsilon 
+≈ 1 − 2\varepsilon f(g|x)
+for small values of \varepsilon . This is minimised by setting g to be the maximum (i.e.
+the mode) of f(p|x).
+Page 6 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(ii)
+(a)
+Using U(0, 1) as the prior for p suggests that no prior information or
+beliefs about p have been formed — it is equally likely to lie anywhere
+in the range [0, 1].
+f(p|m) ∝ f(m|p) f(p)
+∝ p m (1 − p) N−m \times  1
+So posterior beliefs about p have a Beta distribution with parameters
+m + 1 and N − m + 1.
+(b)
+We must find the mode of (f(p|m).
+Maximising this is the same as maximising
+g(p) = log f(p|m) = m log p + (N − m) log (1 − p) + constant
+g ′ ( p ) =
+m N − m
+−
+p 1 − p
+and g ′ ( p ) = 0 when
+m N − m
+−
+= 0 i.e.
+p 1 − p
+m(1 − p) = (N − m) p
+Np = m
+p = m / N
+Page 7 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
