@@ -1,0 +1,76 @@
+
+%%% - Question 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+3
+The following two models have been suggested for representing some quarterly data
+with underlying seasonality.
+Model 1
+Model 2
+Y t = \alpha Y t − 4 + e t
+Y t = \beta e t − 4 + e t
+Where e t is a white noise process in each case.
+(i)
+Determine the auto-correlation function for each model.
+
+The observed quarterly data is used to calculate the sample auto-correlation.
+(ii)
+State the features of the sample auto-correlation that would lead you to prefer
+Model 1.
+
+[Total 5]
+CT6 A2010—24
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3
+(i)
+Model 1
+In general we have γ k = \alphaγ k − 4
+Taking covariance with Y t , Y t − 1 , Y t − 2 , Y t − 3 we get:
+γ 1 = \alphaγ 3
+γ 2 = \alphaγ 2
+γ 3 = \alphaγ 1
+For \alpha ≠ 0 these equations imply that ρ k = 0 unless k is divisible by 4.
+Page 2%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2010 — Examiners’ Report
+So we have ρ 4 k = \alpha k and all other autocorrelations are zero.
+Model 2
+Here we have γ k = 0 unless k=4 and k=0. In these cases
+.
+So ρ 0 = 1 ,
+(ii)
+and all the other autocorrelations are zero.
+Model 1 is preferred in situations where the sample auto-correlation is non-
+zero and decays exponentially.
+Comment: This question was reasonably well attempted, although a number of candidates
+dropped marks especially in calculating the ACF of Model 1.
