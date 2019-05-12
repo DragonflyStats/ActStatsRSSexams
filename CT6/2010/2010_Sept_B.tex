@@ -25,9 +25,9 @@
 \setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
 \renewcommand{\baselinestretch}{1.3}
 \setcounter{MaxMatrixCols}{10}
-\begin{document} An office worker receives a random number of e-mails each day. The number of
-emails per day follows a Poisson distribution with unknown mean μ. Prior beliefs
-about μ are specified by a gamma distribution with mean 50 and standard deviation
+\begin{document} 
+
+An office worker receives a random number of e-mails each day. The number of emails per day follows a Poisson distribution with unknown mean μ. Prior beliefs about μ are specified by a gamma distribution with mean 50 and standard deviation
 15. The worker receives a total of 630 e-mails over a period of ten days.
 Calculate the Bayesian estimate of μ under all or nothing loss.
 CT6 S2010—2
@@ -88,6 +88,7 @@ respectively.
 [Total 9]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newpage
 
 4
 Let the prior distribution of μ have a Gamma distribution with parameters α and λ
@@ -103,7 +104,9 @@ Then dividing the first by the second λ =
 15 2
 = 0.22222
 And so α = 50 × 0.22222 = 11.111111
-Page 3Subject CT6 (Statistical Methods Core Technical) — September 2010 — Examiners’ Report
+
+%%--- Page 3Subject CT6 (Statistical Methods Core Technical) — September 2010 — Examiners’ Report
+
 The posterior distribution of μ is then given by
 f ( μ x ) ∝ f ( x μ ) f ( μ )
 ∝ e − 10 μ ×μ 630 ×μ 10.11111 e − 0.22222 μ
@@ -125,6 +128,8 @@ x =
 10.22222
 Alternatively, credit was given for differentiating the log of the posterior (which is simpler).
 This question was well answered by most candidates.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 5
 (i)
 The overall mean is given by X =
@@ -162,19 +167,15 @@ Page 4
 7
 7 + 144 . 7
 = 0 . 978213
-928 . 14Subject CT6 (Statistical Methods Core Technical) — September 2010 — Examiners’ Report
+928 . 14
+%%----- Subject CT6 (Statistical Methods Core Technical) — September 2010 — Examiners’ Report
 And the credibility premia for the risks are:
 For risk 1 : 0 . 978213 × 127 . 9 + ( 1 − 0 . 978213 ) × 122 . 167 = 127 . 8
 For risk 2 : 0 . 978213 × 88 . 9 + ( 1 − 0 . 978213 ) × 122 . 167 = 89 . 6
 For risk 3 : 0 . 978213 × 149 . 7 + ( 1 − 0 . 978213 ) × 122 . 167 = 149 . 1
 (ii)
-The data show that the variation within risks is relatively low (the S i 2 are low,
-especially for the 2 nd and 3 rd risks) but there seems to be quite a high variation
-between the average claims on the risks.
-With the S i 2 being low, this variation cannot be explained just by variability
-in the claims, and must be due to variability in the underlying parameter.
-This means that we can put relatively little weight on the information provided
-by the data set as a whole, and must put more on the data from the individual
-risks, leading to a relatively high credibility factor.
-Most candidates scored well on part (i). Only the better candidates were able to give a clear
-explanation in part (ii).
+The data show that the variation within risks is relatively low (the S i 2 are low, especially for the 2 nd and 3 rd risks) but there seems to be quite a high variation between the average claims on the risks.
+With the S i 2 being low, this variation cannot be explained just by variability in the claims, and must be due to variability in the underlying parameter.
+This means that we can put relatively little weight on the information provided by the data set as a whole, and must put more on the data from the individual risks, leading to a relatively high credibility factor.
+Most candidates scored well on part (i). Only the better candidates were able to give a clear explanation in part (ii).
+\end{document}
