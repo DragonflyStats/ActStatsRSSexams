@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+%%- Question 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+[Total 7]
+
+%%- Question 5
+An insurance company has issued life insurance policies to 1,000 individuals. Each
+life has a probability q of dying in the coming year. In a warm year, q = 0.001 and in
+a cold year q = 0.005. The probability of a warm year is 50% and the probability of a
+cold year is 50%. Let N be the aggregate number of claims across the portfolio in the
+coming year.
+(i) Calculate the mean and variance of N.
+(ii) Calculate the alternative values for the mean and variance of N assuming that
+q is a constant 0.003.
+
+(iii) Comment on the results of (i) and (ii).
+CT6 A2010—3
+
+%%%%%%%%%%%%%%%%%%%%%5
+
+%%-- CT6 April 2010 .... Question 5
+(i)
+\begin{eqnarray*}
+E ( N ) &=& E \left[ E ( N | q ) \right]\\
+&=& E \left[ 1000 q \right]\\
+&=& 1000 \times ( 0.5 \times 0.001 + 0.5 \times 0.005 )\\
+&=& 1000 \times 0.003 \\
+&=& 3\\
+\end{eqnarray*}
+
+\begin{eqnarray*}
+Var ( N ) 
+&=& Var \left[ E ( N |q ) \right] + E  \left[ Var ( N| q ) \right]\\
+&=& Var (1000 q ) + E (1000 q (1 − q )) \\
+\end{eqnarray*}
+
+Now
+\begin{itemize}
+\item $E ( q ) = 0.003$ and 
+\item $E ( q 2 ) = 0.5 \times 0.001 2 + 0.5 \times 0.005 2 = 0.000013$
+\end{itemize}
+
+%----------------------%
+So 
+
+\begin{eqnarray*}
+Var ( q ) &=& 0.000013 − 0.003^2 \\
+&=& 0.000004\\
+\end{eqnarray*}
+
+\begin{eqnarray*}
+E ( q (1 − q )) &=&  0.5 \times 0.001 \times 0.999 + 0.5 \times 0.005 \times 0.995 \\ &=&  0.002987  \\
+\end{eqnarray*}
+
+
+
+So Var ( N ) = 1000 2 \times 0.000004 + 1000 \times 0.002987 = 6.987
+(ii)
+In this case N ~ B (1000, 0.003) and so
+E ( N ) = 1000 \times 0.003 = 3
+and
+Var ( N ) = 1000 \times 0.003 \times 0.997 = 2.991
+(iii)
+Page 4
+The simplification in (ii) results in the same mean number of deaths, but a
+very significantly lower variance.%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2010 — Examiners’ Report
+This is because in (i) there is a tendency for deaths to occur at the same time,
+or not at all (as a result of the weather) whereas in (ii) deaths are genuinely
+independent.
+Comment: Many good answers here although some candidates struggled to articulate why
+the variance in (ii) was lower.
+t
