@@ -1,0 +1,152 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+%%- Question 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The truncated exponential distribution on the interval (0, c) is defined by the
+probability density function:
+f ( x ) = ae −\lambda x for 0 < x < c
+where \lambda is a parameter and a is a constant.
+(i) Derive an expression for a in terms of \lambda and c.
+
+(ii) Construct an algorithm for generating samples from this distribution using the
+inverse transform method.
+
+% --------------------------------------------------------%
+
+%- Part 3
+
+Suppose that $0 < \lambda < c$ and consider the truncated Normal distribution defined by the
+probability density function:
+
+
+\[  g ( x ) = \frac{  e^{ − x^2 / 2} }{ \sqrt{2 \pi}  \left[ \Phi ( c ) − 0.5 \right] }   \]
+
+
+for $0 < x < c$
+
+where $ \Phi ( z )$ is the cumulative density function of the standard Normal distribution.
+(iii)
+Extend the algorithm in (ii) to use samples generated from $f(x)$ to produce
+samples from $g(x)$ using the acceptance / rejection method.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+7
+(i)
+c
+7
+(i)
+
+\begin{eqnarray*}
+1 &=& \int^{c}_{0} ae^{ −\lambda x} dx \\
+&=& \left[ − \frac{a}{\lambda} e^{ −\lambda x} \right]^{c}_{0} \\
+&=& \frac{a}{\lambda} \left(1 − e^{ −\lambda c} \right) \\
+\end{eqnarray*}
+
+\[  a  \;=\; \frac{\lambda}{1 \;-\; e^{ −\lambda c} \]
+
+%---------%
+
+(ii)
+The distribution function is
+\begin{eqnarray}
+F(x) &=& \int^{x}_{0} ae^{ −\lambda y} dy \\
+&=& \left[ − \frac{a}{\lambda} e^{ −\lambda y} \right]^{x}_{0} \\
+&=& \frac{a}{\lambda} \left(1 − e^{ −\lambda x} \right) \\
+&=& \frac{1 − e^{ −\lambda x}}{1 − e^{ −\lambda c}\\
+\end{eqnarray*}
+
+%--------------------------%
+
+The required transformation is therefore given by:
+$u = F ( x )$
+\[1 − e^{ −\lambda x} = u (1 − e^{ −\lambda c}) \]
+
+\[x = − frac{(log 1 − u (1 − e^{ −\lambda c})
+) } {\lambda} \]
+
+%------------%
+
+So the algorithm is:
+•
+•
+Generate u from U(0, 1)
+Set x = −
+(
+log 1 − u (1 − e − c \lambda )
+)
+\lambda
+g ( x )
+(1 − e − c \lambda ) e − x / 2 +\lambda x
+= Max
+We need to find M = Max
+2 \pi  [ Φ ( c ) − 0.5] \lambda
+0 < x < c f ( x )
+0 < x < c
+2
+(iii)
+Let h ( x ) = e − x /2 +\lambda x then we can simply find the maximum of h(x) since it
+differs only by a constant.
+2
+Then h '( x ) = h ( x ) \times ( − x + \lambda )
+So
+h '( x ) = 0 when x = \lambda
+h ''( x ) = h '( x )( \lambda − x ) − h ( x )
+And so h ''( \lambda ) = − h ( \lambda ) < 0 so we do have a maximum.
+(1 − e − c \lambda ) e \lambda / 2
+Hence M =
+2 \pi  [ Φ ( c ) − 0.5] \lambda
+2
+Page 6%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2010 — Examiners’ Report
+And so
+2
+2
+g ( x )
+= e − x /2 +\lambda x −\lambda /2
+Mf ( x )
+So the algorithm is:
+•
+Generate u from U(0,1)
+(
+log 1 − u (1 − e − c \lambda )
+• Set x = −
+• Generate v from U(0,1)
+• If v < e − x
+)
+\lambda
+2
+/2 +\lambda x −\lambda 2 /2
+return x as the random sample, otherwise begin again.
+Comment: This was found particularly hard especially part (iii), where some harder
+calculations are involved. Many candidates just described the general theory of rejection
+algorithms without being able to apply it explicitly here.
