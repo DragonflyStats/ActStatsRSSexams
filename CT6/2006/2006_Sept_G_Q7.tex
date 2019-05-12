@@ -1,0 +1,145 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+%%% - Question 7
+
+PLEASE TURN OVER7
+The random variable W has a binomial distribution such that
+P(W = w) =
+w
+w
+(1
+) n
+w
+(w = 0, 1, 2,
+, n)
+W
+.
+n
+Let Y =
+8
+n
+1 2
+, ,..., 1 .
+n n
+(i) Write down an expression for P(Y = y), for y = 0,
+
+(ii) Express the distribution of Y as an exponential family and identify the natural
+parameter and the dispersion parameter.
+
+(iii) Derive an expression for the variance function.
+(iv) For a set of n independent observations of Y, derive an expression of the
+scaled deviance.
+
+[Total 10]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+7
+(i) ⎛ n ⎞
+P(Y = y) = ⎜ ⎟ \mu ny (1 − \mu) n−ny
+⎝ ny ⎠
+(ii) ⎡
+⎛ n ⎞ ⎤
+P(Y = y) = exp ⎢ ny log \mu + n (1 − y ) log(1 − \mu ) + log ⎜ ⎟ ⎥
+⎝ ny ⎠ ⎦
+⎣
+⎡ ⎛
+⎛ n ⎞ ⎤
+⎞
+\mu
+= exp ⎢ n ⎜ y log
++ log(1 − \mu ) ⎟ + log ⎜ ⎟ ⎥
+1 − \mu
+⎠
+⎝ ny ⎠ ⎦
+⎣ ⎝
+which is in the form of an exponential family.
+The natural parameter is log
+Page 8
+\mu
+.
+1 − \mu — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The dispersion parameter is
+(iii)
+either \phi  = n
+or \phi  =
+and a(\phi ) =
+1
+\phi 
+1
+and a ( \phi  ) = \phi 
+n
+V ( \mu ) = b ′′ ( \theta  )
+b ( \theta  ) = − log(1 − \mu ) = log
+b ′ ( \theta  ) =
+b ′′ ( \theta  ) =
+1
+= log(1 + e \theta  )
+1 − \mu
+e \theta 
+1 + e \theta 
+(1 + e \theta  ) e \theta  − e \theta  e \theta 
+(1 + e \theta  ) 2
+=
+e \theta 
+(1 + e \theta  ) 2
+= \mu(1 − \mu)
+(iv)
+Scaled deviance is −2(l c − l f )
+l c =
+⎡ ⎛
+i
+l f =
+\mu
+1 ⎞ ⎛ n ⎞ ⎤
+⎠ ⎦
+1 ⎞ ⎛ n ⎞ ⎤
+⎠ ⎦
+\sum  ⎢ ⎢ n ⎜ y i log 1 − \mu i i − log 1 − \mu i ⎟ + log ⎝ ⎜ ny i ⎠ ⎟ ⎥ ⎥
+⎣ ⎝
+⎡ ⎛
+\sum  ⎢ ⎢ n ⎜ y i log 1 − i y i − log 1 − y i ⎟ + log ⎜ ⎝ ny i ⎟ ⎠ ⎥ ⎥
+i
+y
+⎣ ⎝
+Hence the scaled deviance is
+⎛
+⎛ \mu 1 − y i ⎞
+⎛ 1 − y i ⎞ ⎞
+− log ⎜
+−2(l c − l f ) = − 2 \sum  n ⎜ y i log ⎜ i
+⎟
+⎟ ⎟ ⎟
+⎜
+⎝ y i 1 − \mu i ⎠
+⎝ 1 − \mu i ⎠ ⎠
+⎝
+i
