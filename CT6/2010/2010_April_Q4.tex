@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+%%- Question 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The number of claims N on a portfolio of insurance policies follows a binomial
+distribution with parameters n and p. Individual claim amounts follow an exponential
+distribution with mean 1/ \lambda . The insurer has in place an individual excess of loss
+reinsurance arrangement with retention M.
+(i)
+Derive an expression, involving M and \lambda, for the probability that an individual
+claim involves the reinsurer.
+
+Let I i be an indicator variable taking the value 1 if the ith claim involves the reinsurer
+and 0 otherwise.
+(ii)
+Evaluate the moment generating function M I i ( t ) .
+Let K be the number of claims involving the re-insurer so that K = I 1 +
+(iii)
+
+
++ I N .
+(a) Find the moment generating function of K.
+(b) Deduce that K follows a binomial distribution with parameters that you
+should specify.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+4
+(i)
+Let X represent the distribution of individual claims. Let denote the
+probability that an individual claim involves the reinsurer. Then
+∞
+\pi  = P ( X > M ) =
+∫ \lambda e
+−\lambda x
+dx
+M
+∞
+= ⎡ − e −\lambda x ⎤
+⎣
+⎦ M
+= e −\lambda M
+(ii) M I i ( t ) = E ( e tI i ) = \pi  e t + 1 − \pi 
+(iii) Using the results for the moment generating function of a compound
+distribution, we have
+M K ( t ) = M N (log M I i ( t ))
+(
+= pM I i ( t ) + 1 − p
+)
+n
+( )
+( )
+= p ( \pi  e t + 1 − \pi  ) + 1 − p
+= p \pi  e t + p − p \pi  + 1 − p
+n
+n
+Page 3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2010 — Examiners’ Report
+(
+= p \pi  e t + 1 − p \pi 
+)
+n
+Which is the MGF of a binomial distribution with parameters n and p\pi  .
+Hence, by the uniqueness of MGFs K has a binomial distribution with
+parameters n and p\pi  .
+Comment: This question was well answered.
+
