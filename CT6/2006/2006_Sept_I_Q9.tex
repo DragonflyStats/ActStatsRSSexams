@@ -1,0 +1,150 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+%%% - Question 9
+
+[7]9
+An insurer operates a No Claims Discount system with three levels of discount:
+Discount
+Level 0
+Level 1
+Level 2
+0%
+20%
+50%
+The annual premium in level 0 is £650.
+If a policyholder makes no claims in a policy year, they move to the next high
+discount level (or remain at level 2). In all other cases they move to (or remain at)
+discount level 0.
+For a policyholder who has not yet had an accident in a policy year, the probability of
+an accident occurring is 0.1. The time at which an accident occurs in the policy year
+is denoted by T, where
+0 T 1;
+T = 0 means that the accident occurs at the start of the policy year;
+T = 1 means that the accident occurs at the end of the policy year.
+It is assumed that T has a uniform distribution.
+Given that a policyholder has had their first accident, the probability of them having a
+second accident in the same policy year is 0.4(1 T). It is assumed that a
+policyholder will not have more than two accidents in a policy year.
+The cost of each accident has an exponential distribution with mean £1,000.
+After each accident, the policyholder decides whether or not to make a claim by
+comparing the increase in the premium they would have to pay in the next policy year
+with the claim size. In doing this, they assume that they will have no further
+accidents.
+(i)
+Show that the distribution of the number of accidents, K, that a policyholder
+has in a year is:
+P(K = 0) = 0.9
+P(K = 1) = 0.08
+P(K = 2) = 0.02
+
+(ii) For each level of discount, calculate the probability that a policyholder makes
+n claims in a policy year, where n = 0, 1, 2.
+[8]
+(iii) Write down the transition matrix.
+(iv) Derive the steady state distribution.
+CT6 S2006
+5
+
+
+[Total 17]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+(i)
+log 0.5
+= 0.0104
+− 66.61
+P(K = 0) = 0.9
+P(K = 1) = 0.1 \times  P(no 2 nd accident)
+P(2 nd accident) =
+1
+∫ 0 0.4(1 − t ) f ( t ) dt
+1
+= 0.4 ∫ (1 − t ) dt = 0.4[ t − 1⁄2 t 2 ] 1 0
+0
+= 0.4 \times  1⁄2 = 0.2
+∴ P(K = 1) = 0.1 \times  (1 – 0.2) = 0.08
+P(K = 2) = 1 – 0.9 – 0.08 = 0.02
+(ii)
+Let N = number of claims a policyholder makes.
+2
+Then P(N = n) = \sum  P ( N = n K = k ) P ( K = k )
+k = 0
+Level 0:
+Change in premium when first claim made = 650 − 0.8 \times 
+650=130
+P(X > 130) = e − 130/1,000 = 0.8781
+Levels 1, 2: Change in premium when first claim made = 650 − 0.5 \times  650 =
+325
+P(X > 325) = e − 325/1,000 = 0.7225
+P(N = 0) = P(K = 0) + P(N = 0|K=1) P(K = 1)
++ P(N = 0|K = 2) P(K = 2)
+Page 11 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Level 0:
+P(N = 0) = 0.9 + 0.1219 \times  0.08 + 0.1219 2 \times  0.02
+= 0.9100
+Levels 1, 2: P(N = 0) = 0.9 + 0.2775 \times  0.08 + 0.2775 2 \times  0.02
+= 0.9237
+Note that if one claim has already been made then the NCD has already been
+lost, and it is therefore certain that a second claim will be made, regardless of
+the size of the loss. Therefore, for two accidents to result in only one claim it
+must be that the first accident resulted in no claim, and the second resulted in a
+claim.
+P(N = 1) = P(N = 1|K = 1) P(K = 1) + P(N = 1|K = 2) P(K = 2)
+Level 0:
+P(N = 1) = 0.8781 \times  0.08 + 0.1219\times  0.8781 \times  0.02
+= 0.0724
+Levels 1, 2: P(N = 1) = 0.7225 \times  0.08 + 0.2775 \times  0.7255 \times  0.02
+= 0.0618
+Two accidents will result in two claims whenever the first accident results in a
+claim (since in this case the second accident will certainly result in a claim).
+P(N = 2) = P(N = 2|K = 2) P(K = 2)
+Level 0:
+0.8781 \times  0.02 = 0.0176
+Levels 1, 2: P(N = 2) = 0.7225 \times  0.02 = 0.0145
+(iii)
+The transition matrix is
+⎛ 0.0900 0.9100 0
+⎞
+⎜
+⎟
+0.9238 ⎟
+⎜ 0.0762 0
+⎜ 0.0762 0
+0.9238 ⎟ ⎠
+⎝
+(iv)
+\pi  = P \pi 
+0.9100\pi  0 = \pi  1
+0.9238(\pi  1 + \pi  2 ) = \pi  2
+∴ \pi  2 = 12.123\pi  1 = 11.032\pi  0
+Page 12 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Since \pi  0 + \pi  1 + \pi  2 = 1
+\pi  0 + 0.9100\pi  0 + 11.032\pi  0 = 1
+∴ \pi  0 = 0.0773, \pi  1 = 0.0703, \pi  2 = 0.8524
