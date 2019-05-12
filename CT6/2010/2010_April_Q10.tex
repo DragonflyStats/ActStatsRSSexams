@@ -1,0 +1,148 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+
+%%% ---- Question 10
+
+
+10
+Claims on a portfolio of insurance policies arrive as a Poisson process with annual
+rate \lambda. Individual claims are for a fixed amount of 100 and the insurer uses a
+premium loading of 15%. The insurer is considering entering a proportional
+reinsurance agreement with a reinsurer who uses a premium loading of 20%. The
+insurer will retain a proportion \alpha of each risk.
+(i) Write down and simplify the equation defining the adjustment coefficient R
+for the insurer.
+
+(ii) By considering R as a function of \alpha and differentiating show that
+(120 \alpha − 5)
+(iii)
+Explain why setting
+for \alpha .
+(iv)
+dR
+dR ⎞ 100 \alpha R
+⎛
++ 120 R = ⎜ 100 R + 100 \alpha
+⎟ e
+d \alpha
+d \alpha ⎠
+⎝
+
+dR
+= 0 and solving for \alpha may give an optimal value
+d\alpha
+
+Use the method suggested in part (iii) to find an optimal choice for \alpha .
+
+[Total 13]
+
+10
+(i)
+Let X denote the individual claim amounts net of re-insurance. Then
+X = 100 \alpha and M X ( t ) = e 100 \alpha t .
+The insurer’s annual net premium income is
+100 \times \lambda \times 1.15 − 100 \times (1 − \alpha ) \times \lambda \times 1.2 = \lambda (120 \alpha − 5)
+So the adjustment coefficient R satisfies
+\lambda + \lambda (120 \alpha − 5) R = \lambda e 100 \alpha R
+That is 1 + (120 \alpha − 5) R = e 100 \alpha R
+Page 9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2010 — Examiners’ Report
+(ii)
+Differentiating this equation with respect to \alpha we get
+120 R + (120 \alpha − 5)
+and
+dR
+d ⎡ 100 \alpha R ⎤
+=
+e
+⎦
+d \alpha d \alpha ⎣
+d ⎡ 100 \alpha R ⎤
+d
+= e 100 \alpha R
+e
+[ 100 \alpha R ]
+⎣
+⎦
+d \alpha
+d \alpha
+dR ⎞
+⎛
+= e 100 \alpha R ⎜ 100 R + 100 \alpha
+⎟
+d \alpha ⎠
+⎝
+So putting these together, we have:
+(120 \alpha − 5)
+(iii)
+dR
+dR ⎞ 100 \alpha R
+⎛
++ 120 R = ⎜ 100 R + 100 \alpha
+⎟ e
+d \alpha
+d \alpha ⎠
+⎝
+Firstly, by Lundberg’s inequality the higher the value of R the lower the upper
+bound on the probability of ruin.
+So we wish to choose \alpha so that R is a maximum.
+That is, we need
+(iv)
+dR
+= 0 .
+d \alpha
+dR
+= 0 in the equation in (ii) we get
+d \alpha
+Putting
+120 R = 100 Re 100 \alpha R
+i.e. e 100 \alpha R = 1.2
+i.e. R =
+log1.2
+100 \alpha
+substituting into the equation in (i) gives
+1 + (120 \alpha − 5) \times
+log1.2
+= 1.2
+100 \alpha
+i.e. 100 \alpha + (120 \alpha − 5) log1.2 = 120 \alpha
+− 20 \alpha + 120 \alpha log1.2 = 5 log1.2
+So \alpha =
+Page 10
+5log1.2
+= 0.48526
+120 log1.2 − 20
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2010 — Examiners’ Report
+Comment: This question on material new to the syllabus for 2010 was not answered well
+with many candidates struggling, especially in the last part.
+
+\end{document}
