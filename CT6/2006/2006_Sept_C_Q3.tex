@@ -1,0 +1,55 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+%%% - Question 3
+
+[Total 5]
+State the Markov property and explain briefly whether the following processes are
+Markov:
+AR(4);
+ARMA (1, 1).
+[5]
+
+
+3
+The Markov property for a process {Y t } states that the conditional distribution of
+Y t |Y t−1 is the same as the conditional distribution of
+Y t |Y t−1 , Y t−2 , ...
+Development can be predicted from present state without any reference to past
+history.
+AR(4)
+Y t = \alpha  + \beta  1 Y t−1 + \beta  2 Y t−2 + \beta  3 Y t−3 + \beta  4 Y t−4 + e t
+This is not Markov since the distribution of Y t |Y t−1 changes when Y t−2 , Y t−3 , Y t−4 are
+also given.
+ARMA(1,1)
+Y t = \alpha  + \beta Y t−1 + e t − \theta e t−1
+Y t−1 = \alpha  + \beta Y t−2 + e t−1 − \theta e t−2
+Hence e t−1 = Y t−1 − \alpha  − \beta Y t−2 + \theta e t−2 , and substituting into the expression for Y t , it
+can be seen that knowledge of Y t−2 changes the distribution of Y t |Y t−1 . So this is not
+Markov.
