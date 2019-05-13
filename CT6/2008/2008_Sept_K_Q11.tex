@@ -1,0 +1,196 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+CT6 S2008—611
+Losses on a portfolio of insurance policies in 2006 are assumed to have an exponential distribution with parameter $\lambda$. In 2007 loss amounts have increased by a
+factor k (so that a loss incurred in 2007 is k times an equivalent loss incurred in 2006).
+(i)
+Show that the distribution of loss amounts in 2007 is also exponential and
+determine the parameter of the distribution.
+[3]
+Over the calendar years 2006 and 2007 the insurer had in place an individual excess of-loss reinsurance arrangement with a retention of M. Claims paid by the insurer
+were:
+2006: 4 amounts of M and 10 claims under M for a total of 13,500.
+2007: 6 amounts of M and 12 claims under M for a total of 17,000.
+(ii)
+Show that the maximum likelihood estimate of \lambda  is:
+\hat{\lambda} =
+22
+17, 000
+6 M
+13,500 +
++ 4 M +
+k
+k
+
+(iii)
+The insurer is negotiating a new reinsurance arrangement for 2008. The retention was set at 1600 when the current arrangement was put in place in 2006. Loss inflation between 2006 and 2007 was 10% (i.e. k = 1.1) and
+further loss inflation of 5% is expected between 2007 and 2008.
+(a) Use this information to calculate \lambda ̂ .
+(b) The insurer wishes to set the retention M ′ for 2008 such that the expected (net of re-insurance) payment per claim for 2008 is the same
+as the expected payment per claim for 2006. Calculate the value of M ′ , using your estimate of \lambda  from (iii)(a).
+[10]
+[Total 20]
+END OF PAPER
+CT6 S2008—7
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+11
+(i)
+Suppose X is exponentially distributed with parameter \lambda . Then we must show
+that Y = kX is also exponentially distributed.
+Now
+P ( Y < y ) = P ( kX < y )
+= P ( X < y / k )
+y / k
+=
+\int 
+\lambda  e −\lambda  z dz
+0
+y
+= \int 
+0
+y
+\lambda 
+− x
+\lambda  e k
+dx
+making the substitution x = k z
+k
+\lambda 
+\lambda  − x
+= \int  e k dx
+k
+0
+Which is the distribution n function of an exponential distribution with parameter \lambda  / k . So Y is exponentially distributed with parameter \lambda  / k .
+(ii)
+First note that the probability that a loss in 2006 is greater than M is given by e −\lambda  M and likewise the probability that a loss in 2007 is greater than M is
+given by e −\lambda  M / k .
+
+The likelihood of the data is given by:
+\lambda 
+L = C \times  e − 4 \lambda  M \times  ∏ ( \lambda  e −\lambda  x i ) \times  e − 6 \lambda  M / k \times  ∏ ( e −\lambda  y i / k )
+k
+i
+j
+Where the x i represent the claims in 2006 and y j represent the claims in
+2007.
+The log-likelihood is given by
+l = log L = C ' − 4 \lambda  M + 10 log \lambda  − \lambda  ∑ x i − 6 \lambda  M / k + 12 log \lambda  − \lambda  / k ∑ y j
+= C ' − 4 \lambda  M + 22 log \lambda  − 13,500 \lambda  − 6 \lambda  M / k − 17, 000 \lambda  / k
+Differentiating gives
+l ' = − 4 M +
+22
+− 13,500 − 6 M / k − 17, 000 / k
+\lambda 
+And equating this to zero gives
+− 4 M + 22 / \hat{\lambda} − 13,500 − 6 M / k − 17, 000 / k = 0
+Page 10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — September 2008 — Examiners’ Report
+22 / \hat{\lambda} = 13,500 + 17, 000 / k + 4 M + 6 M / k
+22
+\hat{\lambda} =
+13,500 + 17, 000 / k + 4 M + 6 M / k
+We can check this is a maximum by noting that l '' = −
+(iii)
+22
+\lambda  2
+< 0
+22
+= 0.000499
+13,500 + 17, 000 /1.1 + 4 \times  1, 600 + 6 \times  1, 600 /1.1
+(a) \hat{\lambda} =
+(b) Expected payment per claim for 2006 is given by:
+M
+\int  x \lambda  e
+−\lambda  x
+∞
+dx + M
+0
+\int  \lambda  e
+−\lambda  x
+M
+M
+dx = ⎡ − xe −\lambda  x ⎤ +
+⎣
+⎦ 0
+M
+\int  e
+−\lambda  x
+0
+∞
+dx + M ⎡ − e −\lambda  x ⎤
+⎣
+⎦ M
+M
+⎡ 1
+⎤
+= − Me −\lambda  M + ⎢ − e −\lambda  x ⎥ + Me −\lambda  M
+⎣ \lambda 
+⎦ 0
+1
+= (1 − e −\lambda  M ) (*)
+\lambda 
+1
+(1 − e − 0.000499 \times  1600 )
+=
+0.000499
+= 1102.107
+We know that claims for 2008 will have an exponential distribution . We need to choose the retention R so
+with parameter $\mu = \lambda$ 
+1.05 \times  1.1
+that
+R
+1102.107 = \int  x \mu e
+−\mu x
+∞
+dx + R \int  \mu e −\mu x dx
+0
+1
+= (1 − e −\mu R )
+\mu
+R
+using the result from (*)
+−
+1.05 \times  1.1
+=
+(1 − e
+0.0004999
+0.000499 R
+1.05 \times  1.1 )
+And so
+0.476148392 = 1 − e − 0.00043203463 R
+R =−
+1
+log(1 − 0.476148392)
+0.00043203462
+=1496.52
+Page 11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — September 2008 — Examiners’ Report
+END OF EXAMINERS’ REPORT
+Page 12
