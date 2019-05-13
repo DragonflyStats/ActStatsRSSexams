@@ -1,0 +1,161 @@
+6\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+7
+A no claims discount system has 4 levels. The premiums paid by policyholders in
+each level are as follows:
+Level Premium
+0
+25
+40
+50 100%
+75%
+60%
+50%
+The rules for moving between the levels are as follows:
+• following a claim-free year, a policyholder moves to the next higher level of
+discount, or remains at 50% discount
+• following a year of one or more claims, a policyholder moves to the next lower
+discount rate or remains at 0% discount
+It is assumed that claims occur according to a Poisson process with rate λ per year per
+policyholder, and that the equilibrium distribution has been reached.
+(i)
+Show that the average premium paid, if the premium paid by a policyholder in
+level 0 is £500, may be written as
+⎛ 1 + 0.75 k + 0.6 k 2 + 0.5 k 3 ⎞
+500 ⎜
+⎟ ⎟
+⎜
+1 + k + k 2 + k 3
+⎝
+⎠
+where k =
+e −λ
+1 − e −λ
+[5]
+(ii) Calculate the average premium paid by policyholders whose claim rate per
+year is (a) 0.12, (b) 0.24, (c) 0.36.
+[3]
+(iii) Comment on the results in (ii), in relation to the effectiveness of the no claims
+discount system discriminating between good and bad drivers.
+[2]
+[Total 10]
+
+
+%%%%%%%%%%%%%
+7
+(i)
+Let θ = exp( - \lambda )
+\pi  = \pi  P
+θ
+0
+⎡ 1 − θ
+⎢ 1 − θ
+θ
+0
+P = ⎢
+⎢ 0 1 − θ
+0
+⎢
+0 1 − θ
+⎣ 0
+\pi  0
+\pi  25
+\pi  40
+\pi  50
+=
+=
+=
+=
+(1 - θ) \pi  0 +
+θ \pi  0 +
+0 ⎤
+0 ⎥ ⎥
+θ ⎥
+⎥
+θ ⎦
+(1 - θ) \pi  25
+(1 - θ) \pi  40
+θ \pi  25 +
+θ \pi  40 +
+\pi  0 + \pi  25 + \pi  40 + \pi  50 = 1
+\pi  25 =
+\pi  40 =
+\pi  50 =
+θ
+\pi  0
+1 − θ
+θ
+\pi  25
+1 − θ
+θ
+\pi  40
+1 − θ
+= k\pi  0
+= k 2 \pi  0
+= k 3 \pi  0
+and hence \pi  0 + k \pi  0 + k 2 \pi  0 + k 3 \pi  0 = 1
+Page 8
+(1 - θ) \pi  50
+θ \pi  50Subject CT6 (Statistical Methods Core Technical) — September 2007 — Examiners’ Report
+hence \pi  0 =
+1
+1 + k + k 2 + k 3
+hence the average premium paid is
+⎛ 1 + 0.75 k + 0.6 k 2 + 0.5 k 3 ⎞
+500 × ⎜
+⎟ ⎟
+⎜
+1 + k + k 2 + k 3
+⎝
+⎠
+θ/(1 - θ) = e -0.12 /(1 – e -0.12 ) = 7.8433
+θ/(1 - θ) = e -0.24 /(1 – e -0.24 ) = 3.6866
+θ/(1 - θ) = e -0.36 /(1 – e -0.36 ) = 2.3077
+(ii) (a)
+(b)
+(c)
+(iii) (a) to (b)
+Premium = £257.79
+Premium = £270.33
+Premium = £288.46
+\lambda  increases by 100% but average premium paid increases only by
+4.9%
+\lambda  increases by 50% but average premium paid increases only by
+6.7%
+(b) to (c)
+The no claims discount system is not effective at discriminating between good
+and bad drivers.
+
+\end{document}
