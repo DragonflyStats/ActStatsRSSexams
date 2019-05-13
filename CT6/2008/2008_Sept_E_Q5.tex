@@ -1,0 +1,87 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+[6]
+5 The table below shows the cumulative values (in units of £1,000) of incurred claims
+on a portfolio of an insurance company:
+Development year
+Underwriting
+year
+2005
+2006
+2007
+1
+3,541
+2,949
+3,894
+2
+7,111
+6,850
+3
+9,501
+The estimated loss ratio for 2006 and 2007 is 87% and the respective premium
+income (also in units of £1,000) is:
+2005
+2006
+2007
+Premium income
+11,041
+11,314
+12,549
+Given that the total of claims paid to date is £20,103,000, calculate the reserve for this
+portfolio using the Bornhuetter-Ferguson method.
+
+%%%%%%%%%%%%%%%%%%%
+
+Page 4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — September 2008 — Examiners’ Report
+5
+The main calculations are reported in the table:
+Initial ultimate.
+Loss
+Year
+2006
+2007
+9843.18
+10917.63
+Emerging
+1 - 1/f
+r
+f
+Liability
+1.336099 1.336099
+0.251552 2476.08
+2.151156 2.874157=1.336099\times 2.151156 0.652072 7119.08
+The second column (IUL) is obtained as 87% of Premium income values. The
+third column reports the development factors
+7111/9501 = 1.336099 and (7111 + 6850) / (3541 + 2949) = 2.151156.
+The emerging liability column is the product of IUL vales with those of
+1 - 1/ f .
+The total emerged liability is now 2476.08 + 7119.08 = 9595.16 and the total
+reported liability is 9501 + 6850 + 3894 = 20245. Therefore the reserve value
+is 9595.16 + 20245 – 20103 = 9737.2 .
