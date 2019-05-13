@@ -1,0 +1,89 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+2
+Two poachers can escape from either the farmyard or the fields of an estate. Two
+gamekeepers are employed by the estate to catch them. The gamekeepers have three
+options: both patrol the farmyard (action a 1 ); one of them patrols the farmyard and the
+other patrols the fields (action a 2 ); both gamekeepers patrol the fields (action a 3 ). The
+poachers also have three options: both try to escape through the farmyard (option \theta 1 );
+one of them tries to escape from the farmyard and the other from the fields (option
+\theta 2 ); both try to escape over the fields (option \theta 3 ). The number of birds they manage
+to poach under each combination of \theta i and a j can be found in the following table:
+
+h combination of θ i and a j can be found in the following table:
+θ 1
+θ 2
+θ 3
+a 1 a 2 a 3
+0
+75
+120 90
+0
+90 120
+75
+0
+
+Assume the goal of the gamekeepers and the poachers is to minimise and maximise
+the number of birds poached, respectively.
+3
+(i) Show that \theta 1 does not dominate \theta 2 and vice versa.
+(ii) Determine the minimax solution to this problem for the gamekeepers, and
+state the maximum number of birds that will be poached if they adopt this
+strategy.
+
+(iii) Given the prior distribution P(\theta 1 ) = 0.25, P(\theta 2 ) = 0.35 and P(\theta 2 ) = 0.4,
+determine the Bayes solution to the problem for the gamekeepers.
+
+[Total 6]
+[1]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2
+(i)
+\theta  1 would dominate \theta  2 (and vice versa) if the amount of birds poached under
+each of a 1 , a 2 and a 3 is higher in each case for \theta  1 (\theta  2 )
+\theta  1 provides a better outcome for a 2 (90 > 0) and a 3 (120 > 75)
+\theta  2 provides a better outcome for a 1 (0 < 75)
+(ii)
+Minimax solution for gamekeepers. Worst loss under each option would be:
+a 1 = max (0,75,120) = 120
+a 2 = max (90,0,90) = 90
+a 3 = max (120,75,0) = 120
+Therefore, gamekeepers would choose a 2 and lose 90 birds.
+(iii)
+a 1 = 0.25 \times 0 + 0.35 \times 75 + 0.4 \times 120 = 74.25
+a 2 = 0.25 \times 90 + 0.35 \times 0 + 0.4 \times 90 = 58.5
+a 3 = 0.25 \times 120 + 0.35 \times 75 + 0.4 \times 0 = 56.25
+Hence the Bayes decision is a 3 .
+Page 3Subject CT6 (Statistical Methods Core Technical) — September 2007 — Examiners’ Report
