@@ -1,0 +1,80 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+The number of claims, N, in a year on a portfolio of insurance policies has a Poisson
+distribution with parameter \lambda. Claims are either large (with probability p) or small
+(with probability 1 - p) independently of one another.
+Suppose we observe r large claims. Show that the conditional distribution of N − r | r
+is Poisson and find its mean.
+[7]
+
+Page 3%%%%%%%%%%%%%%%%%%%%%%5 — September 2\theta \theta 7 — Examiners’ Report
+3
+P ( N − r = k r big claims) = P ( N = r + k ) \times  P ( of r + k claims k are small) / P ( r big claims)
+but
+∞
+P ( r big claims) = \sum  e −\lambda
+j = \theta 
+\lambda r + j
+( r + j )! r
+\times 
+p (1 − p ) j
+( r + j )! r ! j !
+\lambda r r ∞ −\lambda \lambda j
+=
+p \times  \sum  e
+(1 − p ) j
+r !
+j !
+j = \theta 
+=
+\lambda r r −\lambda \lambda (1 − p )
+p e e
+r !
+So
+P ( N − r = k r big claims) = P ( N = r + k ) \times  P ( of r + k claims k are small) / P ( r big claims)
+e −\lambda
+=
+\lambda r + k
+( r + k )! r
+\times 
+p (1 − p ) k
+( r + k )! r ! k !
+e −\lambda e \lambda (1 − p ) p r \lambda r / r !
+= e −\lambda (1 − p )
+\lambda k (1 − p ) k
+k !
+which is a probability from a Poisson distribution with parameter \lambda (1 − p ) . Hence
+conditional mean of N - r is \lambda (1 − p ) .
+Page 4%%%%%%%%%%%%%%%%%%%%%%5 — September 2\theta \theta 7 — Examiners’ Report
