@@ -1,0 +1,105 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+PLEASE TURN OVER10
+
+From a sample of 50 consecutive observations from a stationary process, the table below gives values for the sample autocorrelation function (ACF) and the sample
+partial autocorrelation function (PACF):
+
+Lag
+1
+2
+3
+ACF
+0.854
+0.820
+0.762
+PACF
+0.854
+0.371
+0.085
+The sample variance of the observations is 1.253.
+
+(i)
+(ii)
+Suggest an appropriate model, based on this information, giving your
+reasoning.
+
+Consider the AR(1) model
+Y t = a 1 Y t-1 + e t ,
+where e t is a white noise error term with mean zero and variance \sigma 2 .
+Calculate method of moments (Yule-Walker) estimates for the parameters of
+a 1 and \sigma 2 on the basis of the observed sample.
+
+(iii)
+Consider the AR(2) model
+Y t = a 1 Y t-1 + a 2 Y t-2 + e t ,
+where e t is a white noise error term with mean zero and variance \sigma 2 .
+Calculate method of moments (Yule-Walker) estimates for the parameters of
+
+a 1 , a 2 and \sigma 2 on the basis of the observed sample.
+(iv)
+List two statistical tests that you should apply to the residuals after fitting a model to time series data.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+10
+(i) ACF looks to decline exponentially suggesting an AR( p ) process. While
+PACF becomes almost zero at lag 3 so AR(2) is a likely process here.
+(ii) For p = 1 the equations are:
+γ 1 = a 1 γ 0
+γ 0 = a 1 γ 1 + \sigma 2
+therefore â 1 = ρ̂ 1 = 0.854 and \sigma ˆ 2 = γ ˆ 0 − a ˆ 1 γ ˆ 1 = γ ˆ 0 (1 − ρ ˆ 1 2 ) = 0.33917.
+(iii)
+For p = 2 the equations are:
+γ 2 = a 1 γ 1 + a 2 γ 0
+γ 1 = a 1 γ 0 + a 2 γ 1
+γ 0 = a 1 γ 1 + a 2 γ 2 + \sigma 2
+Solving the first two equations with respect to a i after dividing both sizes by γ 0
+we have that
+a 2 =
+ρ 2 − ρ 1 2
+1 − ρ 1 2
+a 1 = ρ 1 (1 – a 2 )
+and with the right substitution for ρ ˆ 1 , ρ ˆ 2 we get a ˆ 1 = 0.5679 and a ˆ 2 = 0.3350.
+Then the white noise variance can now be estimated as
+\sigma ˆ 2 = γ ˆ 0 − a ˆ 1 γ ˆ 1 − a ˆ 2 γ ˆ 2 = 0.3011.
+(iv)
+Any 2 tests can be given, including:
+•
+•
+•
+the turning point’s test
+the “portmanteau” Ljung-Box χ 2 test
+the inspection of the values of the SACF values based on their 95%
+confidence intervals under the white noise null hypothesis
+Page 9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — September 2008 — Examiners’ Report
