@@ -1,0 +1,116 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+[8]
+5
+Aggregate annual claims on a portfolio of insurance policies have a compound
+Poisson distribution with parameter \lambda. Individual claim amounts have an exponential
+distribution with mean 1.
+The insurer calculates premiums using a loading of \alpha (so that the annual premium is
+1+ \alpha times the annual expected claims) and has initial surplus U.
+(i) Show that if the first claim occurs at time t, the probability that this claim
+causes ruin is e − U e − (1 +\alpha ) \lambda t .
+
+(ii) Show that the probability of ruin on the first claim is
+(iii) Show that if the insurer wishes to set \alpha such that the probability of ruin at the
+
+first claim is less than 1% then it must choose \alpha > 100 e − U − 2 .
+[Total 9]
+
+e − U
+.
+2 +\alpha
+[4]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+5
+(i)
+Let X be the size of the first claim, so that X has an exponential distribution
+with parameter 1. Then for ruin to occur at time t we require
+X > U + (1 + \alpha) \lambda t.
+∞
+P(X > U + (1 + \alpha) \lambda t) =
+e − x dx
+∫
+U + (1 +\alpha ) \lambda t
+∞
+= ⎡ − e − x ⎤
+⎣
+⎦ U + (1 +\alpha ) \lambda t
+= e - U e - (1+ \alpha ) \lambda t .
+[Note that it would be acceptable to quote the cumulative distribution function
+for the exponential distribution from the tables rather than calculate the
+integral]
+(ii)
+Let T denote the time until the first claim. Then T has an exponential
+distribution with parameter \lambda and
+∞
+P(Ruin at first claim) =
+∫ P (Ruin at first claim ⏐ first claim is at t ) × f T ( t ) dt
+0
+∞
+= ∫ e − U e − ( 1 + \alpha ) \lambda t \lambda e − \lambda t dt
+0
+∞
+=
+∫ e
+− U
+\lambda e − (2 +\alpha ) \lambda t dt
+0
+∞
+⎡
+⎤
+\lambda
+= ⎢ − e − U
+e − (2 +\alpha ) \lambda t ⎥
+(2 + \alpha ) \lambda
+⎣
+⎦ 0
+=
+Page 6
+e − U
+.
+2 +\alpha
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+
+Subject CT6 (Statistical Methods Core Technical) — September 2007 — Examiners’ Report
+(iii)
+We require
+e − U
+< 0.01
+2 +\alpha
+i.e. e - U < 0.01 × (2 + \alpha)
+i.e. 100e - U < 2 + \alpha.
+i.e. 100e - U – 2 < \alpha.
