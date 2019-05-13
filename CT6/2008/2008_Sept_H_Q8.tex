@@ -1,0 +1,104 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+An insurer has issued two five-year term assurance policies to two individuals
+involved in a dangerous sport. Premiums are payable annually in advance, and claims
+are paid at the end of the year of death.
+Individual
+A
+B
+Annual
+Premium
+100
+50
+Sum Assured
+1,700
+400
+Annual
+Prob (death)
+0.05
+0.1
+Assume that the probability of death is constant over each of the five years of the
+policy. Suppose that the insurer has an initial surplus of U.
+(i) Define what is meant by \psi ( U ) and \psi ( U , t ) .
+(ii) Assuming U = 1,000
+
+(a) Determine the distribution of S(1), the surplus at the end of the
+first year, and hence calculate \psi ( U ,1) .
+(b) Determine the possible values of S(2) and hence calculate \psi ( U , 2) .
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+8
+(i)
+Let S ( t ) denote the insurer’s surplus at time t . Then
+\psi ( U ) = Pr( S ( t ) < 0 for some value of t ) i.e. the probability of ruin at some
+time
+\psi ( U , t ) = Pr( S ( k ) < 0) for some k < t i.e. the probability that ruin occurs
+before time t .
+(ii)
+(a)
+Immediately before the payment of any claims, the insurer has cash
+reserves of 1000 + 150 =1150.
+The distribution of S (1) is given by:
+Deaths
+None
+A only
+B only
+A and B
+S(1)
+1150
+1150 – 1700 = - 550
+1150 – 400 = 750
+1150 – 2100 = - 950
+Prob
+0.95 \times  0.9 = 0.855
+0.9 \times  0.05 = 0.045
+0.95 \times  0.1 = 0.095
+0.05 \times  0.1 = 0.005
+And the probability of ruin is given by 0.045 + 0.005 = 0.05.
+(b)
+Assuming the surplus process ends if ruin occurs by time 1, then 2
+possible values of S (2) are - 550 and - 950.
+If there are no deaths in year 1, possible values of S (2) are
+No deaths: 1150 + 150 = 1300
+Page 7%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — September 2008 — Examiners’ Report
+A only: 1150 + 150 – 1700 = - 400
+B only: 1150 + 150 – 400 = 900
+A and B: 1150 + 150 – 1700 – 400 = - 800
+If B dies in year 1, the possible values of S (2) are:
+A lives: 750 + 100 = 850
+A dies: 750 + 100 – 1700 = - 850
+The probability of ruin within 2 years is given by:
+0.05 + 0.855 \times  (0.05 \times  0.9 + 0.05 \times  0.1) + 0.095 \times  0.05 = 0.0975
+Alternatively, note that ruin occurs within 2 years if and only if A dies
+during this time, the probability of which is 0.05 + 0.95 \times  0.05 =
+0.0975.
