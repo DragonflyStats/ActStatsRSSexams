@@ -1,0 +1,186 @@
+
+[Total 15]10 
+The time series X t is assumed to be stationary and to follow an ARMA (2,1) process
+defined by:
+X t = 1 +
+8
+1
+1
+X t − 1 –
+X t − 2 + Ζ t – Ζ t− 1
+15
+15
+7
+where Z t are independent N (0 ,1) random variables.
+(i) Determine the roots of the characteristic polynomial, and explain how their
+values relate to the stationarity of the process.
+
+(ii) (a)
+Find the autocorrelation function for lags 0 , 1 and 2.
+(b)
+Derive the autocorrelation at lag k in the form
+\rho k =
+A
+c
+k
++
+B
+d k
+[12]
+(iii)
+Determine the mean and variance of X t .
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Page 12%%%%%%%%%%%%%%%%%%%%%%5 — September 20 0 7 — Examiners’ Report
+10
+(i)
+The characteristic equation is given by:
+(1 -
+8
+1 2
+1
+1
+\lambda +
+\lambda ) = (1 -
+\lambda ) (1 - \lambda ) = 0 
+15
+15
+3
+5
+which has roots = 3 and 5. They are both greater than 1. Hence, subject to the
+initial values having appropriate distributions, this implies (weak) stationarity.
+(ii)
+(a)
+Firstly, note that Cov ( X t , Z t ) = 1 and Cov ( X t , Z t − 1 ) = 8 / 15 − 1 / 7 = 41 / 10 5
+We need to generate 3 distinct equations linking γ 0  , γ 1 and γ 2
+This can be done as follows:
+(A)
+γ 0  = Cov ( X t , X t ) = Cov ( 1 + 8 / 15 X t − 1 − 1 / 15 X t − 2 + Z t − 1 / 7 Z t − 1 , X t )
+= 8 / 15 γ 1 − 1 / 15 γ 2 + 1 − 1 / 7 \times  41 / 10 5
+= 8 / 15 γ 1 − 1 / 15 γ 2 + 694 / 735
+(B)
+γ 1 = Cov ( X t , X t − 1 ) = Cov ( 1 + 8 / 15 X t − 1 − 1 / 15 X t − 2 + Z t − 1 / 7 Z t − 1 , X t − 1 )
+= 8 / 15 γ 0  − 1 / 15 γ 1 − 1 / 7
+(C)
+γ 2 = Cov ( X t , X t − 2 ) = Cov ( 1 + 8 / 15 X t − 1 − 1 / 15 X t − 2 + Z t − 1 / 7 Z t − 1 , X t − 2 )
+= 8 / 15 γ 1 − 1 / 15 γ 0 
+Next stage is to solve these equations.
+Substituting (C) into (A) gives
+γ 0  = ( 8 / 15 ) γ 1 − ( 1 / 15 )(( 8 / 15 ) γ 1 − ( 1 / 15 ) γ 0  ) + 694 / 735
+so
+( 224 / 225 ) γ 0  = ( 112 / 225 ) γ 1 + 694 / 735
+γ 0  = ( 1 / 2 ) γ 1 + 520 5 / 5488
+Page 13%%%%%%%%%%%%%%%%%%%%%%5 — September 20 0 7 — Examiners’ Report
+Now substituting into (B) gives
+γ 1 = 8 / 15 (( 1 / 2 ) γ 1 + 520 5 / 5488 ) − ( 1 / 15 ) γ 1 − 1 / 7
+so
+( 4 / 5 ) γ 1 = 249 / 686
+γ 1 = 1245 / 2744 = 0  . 4537
+And
+γ 0  = 1 / 2 \times  0  . 4537 + 520 5 / 5488 = 1 . 1753
+γ 2 = 8 / 15 \times  0  . 4537 − 1 / 15 \times  1 . 1753 = 0  . 1636
+Finally,
+\rho 0  = 1, \rho 1 =
+(b)
+\rho k =
+γ 1
+γ
+= 0 .386, \rho 2 = 2 = 0 .139
+γ 0 
+γ 0 
+8
+1
+\rho k − 1 -
+\rho k − 2
+15
+15
+for k ≥ 2
+We will show that the solution has the form:
+\rho k
+1
+1
+= A ( ) k + B ( ) k
+3
+5
+Substituting the proposed solution into the recurrence relation gives
+8
+1
+8
+1
+1
+1
+1
+1
+\rho k − 1 -
+\rho k − 2 =
+[ A ( ) k - 1 + B ( ) k–1 ] -
+[ A ( ) k–2 + B ( ) k–2 ]
+15
+15
+15
+2
+5
+15
+3
+5
+1
+8
+1
+1
+8
+1
+= A ( ) k (
+\times  3 - \times  9) + B ( ) k (
+\times  5 -
+\times  25)
+3
+15
+5
+5
+15
+15
+1
+1
+= A ( ) k + B ( ) k
+3
+5
+= \rho k
+So the solution does have this form.
+Page 14%%%%%%%%%%%%%%%%%%%%%%5 — September 20 0 7 — Examiners’ Report
+The values of A and B are fixed by \rho 0  = 1, \rho 1 = 0 .386
+∴ A + B = 1
+1
+1
+A + B = 0 .386
+3
+5
+→
+1
+1
+A + (1 – A ) = 0 .386
+3
+5
+A = 1.395
+B = - 0 .395
+1
+1
+∴ P k = 1.395 ( ) k – 0 .395 ( ) k
+3
+5
+(iii)
+We require mean and variance of X t which must be normally distributed
+since Z is normally distributed.
+Variance is γ 0  = 1.1753 from (ii) (a)
+E ( X t ) = 1 +
+∴ E ( X t ) =
+8
+1
+E ( X t ) -
+E ( X t )
+15
+15
+15
+8
+END OF EXAMINERS’ REPORT
+Page 15
