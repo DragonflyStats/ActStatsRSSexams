@@ -1,0 +1,78 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+6
+Consider the ARCH(1) process
+X t = \mu + e t \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2
+where e t are independent normal random variables with variance 1 and mean 0.
+Show that, for s = 1, 2, ... , t-1, X t and X t-s are:
+(i)
+(ii)
+uncorrelated.
+not independent.
+CT6 S2008—3
+
+[3]
+[Total 8]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+6
+(i)
+Since e t are independent from X t , X t - 1 , ... and E ( e t ) = 0 we have that
+E ( X t ) = E ( \mu + e t \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2 )
+= \mu + E ( e t \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2 )
+= \mu + E ( e t ) E ( \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2 ) since e t and X t − 1 are independent
+= \mu + 0 \times  E ( \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2 )
+=\mu
+The direct approach to showing that X t and X t − s are uncorrelated is shown
+below. The crucial steps involve noting that e t is independent of X t − 1 as
+above, and that e t is independent of
+e t − s \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2 \alpha  0 + \alpha  1 ( X t − s − 1 − \mu ) 2 .
+The algebra can be simplified by noting that adding a constant doesn’t affect
+covariance, so the \mu ’s can be ignored.
+Page 5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — September 2008 — Examiners’ Report
+Cov ( X t , X t − s ) = E ( X t X t − s ) − E ( X t ) E ( X t − s )
+(
+)
+= E ( \mu + e t \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2 )( \mu + e t − s \alpha  0 + \alpha  1 ( X t − s − 1 − \mu ) 2 ) − \mu 2
+= E ( \mu 2 + \mu e t \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2 + \mu e t − s \alpha  0 + \alpha  1 ( X t − s − 1 − \mu ) 2
++ e t e t − s \alpha  0 + \alpha  1 ( X t − s − 1 − \mu ) 2 \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2 ) − \mu 2
+= E ( \mu 2 ) + \mu E ( e t ) E ( \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2 ) + \mu E ( e t − s ) E ( \alpha  0 + \alpha  1 ( X t − s − 1 − \mu ) 2 )
++ E ( e t e t − s \alpha  0 + \alpha  1 ( X t − s − 1 − \mu ) 2 \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2 ) − \mu 2
+= \mu 2 + \mu \times  0 \times  E ( \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2 ) + \mu \times  0 \times  E ( \alpha  0 + \alpha  1 ( X t − s − 1 − \mu ) 2 )
++ E ( e t ) E ( e t − s \alpha  0 + \alpha  1 ( X t − s − 1 − \mu ) 2 \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2 ) − \mu 2
+= \mu 2 + 0 + 0 + 0 \times  E ( e t − s \alpha  0 + \alpha  1 ( X t − s − 1 − \mu ) 2 \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2 ) − \mu 2
+= 0
+(ii)
+The conditional variance of X t X t − 1 is
+var( X t X t − 1 ) = var( e t )( \alpha  0 + \alpha  1 ( X t - 1 - \mu ) 2 ) = \alpha  0 + \alpha  1 ( X t - 1 - \mu ) 2 .
+So the values of X t - 1 are affecting the variance of X t . If the same idea is
+applied recursively, it can be seen that the variance of X t will be affected by
+the value of X t - s . So X t and X t - s are not independent.
