@@ -1,0 +1,159 @@
+y 1 , y 2 , ..., y n are independent, identically distributed observations with probability
+function given by f ( y i | \mu ) =
+(i)
+\mu y i e −\mu
+.
+y i !
+Show that the log-likelihood may be written as
+n
+\theta \sum  y i − nb ( \theta ) + terms not depending on \theta
+i = 1
+and identify the natural parameter, \theta , and the function b ( \theta ) .
+(ii)
+
+The fitted value for observation y i is denoted by y ˆ i .
+(a) Write down the Pearson residual for y i , in terms of y i and y ˆ i .
+(b) Explain why Pearson residuals are usually not suitable for model
+checking for the Poisson distribution.
+
+(iii)
+Show that the conjugate prior density function for \theta is proportional to
+{
+}
+exp \alpha\theta − \beta e \theta , and derive the posterior distribution for this prior.
+(iv)
+[4]
+⎡ \partial  log f ⎤
+= \theta  (for any density function f) to show that
+Use the identity E ⎢
+⎣ \partial \theta ⎥ ⎦
+n
+\alpha
+E ⎡ ⎣ b ( \theta ) ⎤ ⎦ = and E ⎡ ⎣ b ( \theta ) | y 1 , y 2 , ... , y n ⎤ ⎦ =
+\beta
+results.
+CT6 S2\theta \theta 7—6
+\alpha + \sum  y i
+i = 1
+\beta+ n
+, and comment on these
+[5]
+%%%%%%%%%%%%%%%%%%%%%%%%%
+9
+(i)
+The likelihood is
+∏
+i = 1
+n
+f ( y i | \mu ) = ∏
+i = 1
+\mu y i e −\mu
+y i !
+and hence the log-likelihood is
+n n
+i = 1 i = 1
+log \mu \sum  y i − n \mu − ... = \theta \sum  y i − nb ( \theta ) + terms not depending on \theta
+where \theta = log\mu
+b(\theta) = e \theta
+(ii)
+(a)
+The Pearson residual is
+y i − y ˆ i
+y ˆ i
+(b)
+The Pearson residuals are skewed.
+This makes it difficult to assess the fit of the model by eye.
+Page 11%%%%%%%%%%%%%%%%%%%%%%5 — September 2\theta \theta 7 — Examiners’ Report
+(iii)
+The conjugate prior has the same \theta dependence as the likelihood, which is
+{
+}
+{
+}
+proportional to exp y \theta − e \theta . Hence the conjugate prior is exp \alpha\theta − \beta e \theta .
+f ( \theta | y 1 , y 2 , ... , y n ) ∝ f ( y 1 , y 2 , ... , y n | \theta ) f ( \theta )
+⎧ ⎪ n
+⎫ ⎪
+∝ exp ⎨ \theta \sum  y i − ne \theta ⎬ exp \alpha\theta − \beta e \theta
+⎩ ⎪ i = 1
+⎭ ⎪
+n
+⎧ ⎪ ⎛
+⎫ ⎪
+⎞
+∝ exp ⎨ \theta ⎜ \alpha + \sum  y i ⎟ − ( \beta + n ) e \theta ⎬
+⎜
+⎟
+⎪ ⎩ ⎝
+i = 1
+⎠
+⎭ ⎪
+{
+(iv)
+For the prior log f = \alpha\theta − \beta e \theta and
+}
+\partial  log f
+= \alpha − \beta e \theta . Hence
+\partial  \theta
+\alpha
+⎡ \partial  log f ⎤
+E ⎢
+= E ⎡ \alpha − \beta e \theta ⎤ =\theta , and so E ⎡ e \theta ⎤ = .
+⎥
+⎣ ⎦ \beta
+⎣
+⎦
+⎣ \partial \theta ⎦
+n
+⎡
+⎤
+⎡ \partial  log f ⎤
+\theta
+=
+\alpha
++
+−
+\beta
++
+E
+y
+n
+e
+For the posterior E ⎢
+(
+)
+⎢
+⎥ , and hence
+\sum  i
+⎣ \partial \theta ⎥ ⎦
+i = 1
+⎣ ⎢
+⎦ ⎥
+n
+\theta
+E ⎡ e | y 1 , y 2 , ... , y n ⎤ =
+⎣
+⎦
+\alpha + \sum  y i
+i = 1
+\beta+ n
+.
+Note that e \theta = \mu , and the posterior estimate can be written as
+n
+n
+\beta
+\sum  y
+\alpha
+n
+\times  +
+\times  i = 1
+\beta + n \beta \beta + n
+n
+i
+\sum  y
+\alpha
+= Z + ( 1 − Z ) i = 1
+\beta
+n
+i
+ie a combination of the prior estimate and the estimate from the data.
