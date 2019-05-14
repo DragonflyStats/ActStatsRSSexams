@@ -1,0 +1,70 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+3
+
+An actuary has a tendency to be late for work. If he gets up late then he arrives at
+work X minutes late where X is exponentially distributed with mean 15. If he gets up
+on time then he arrives at work Y minutes late where Y is uniformly distributed on
+[0,25]. The office manager believes that the actuary gets up late one third of the time.
+Calculate the posterior probability that the actuary did in fact get up late given that he
+arrives more than 20 minutes late at work.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+3
+Let L be the state getting up late and let M be the state of getting up on time.
+Let Z be the number of minutes late.
+According to Bayes’ theorem:
+P ( L Z > 20) =
+P ( Z > 20 L ) P ( L )
+P ( Z > 20)
+but
+P ( Z > 20 L ) = e
+−
+20
+15
+= 0.263597138
+and
+P ( Z > 20 ) = P ( Z > 20 L ) P ( L ) + P ( Z > 20 M ) P ( M )
+= 0.263597138 × 1 + 0.2 × 2 = 0.221199046
+3
+3
+and so
+P ( L Z > 20) =
+0.263597138 × 1
+3 = 0.3972 .
+0.221199046
+This question was well answered by most candidates however weaker candidates were unable
+to apply Bayes' Theorem.
