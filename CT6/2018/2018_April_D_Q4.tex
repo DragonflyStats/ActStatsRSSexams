@@ -1,0 +1,60 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document}
+
+The table below shows the cumulative incurred claims by year for a portfolio of general insurance policies, with all figures in £m. Claims paid to date total 13.5. The ultimate loss ratio is expected to be in line with the 2013 accident year, and claims are
+assumed to be fully developed by the end of Development Year 3.
+
+Development Year
+Accident Year 0 1 2 3 Earned Premiums
+2013 3.01 3.38 3.85 4.00 4.32
+2014 3.30 3.67 4.15 2015 3.32 3.86 2016 3.74
+4.41
+4.55
+4.68
+Calculate the total reserve required to meet the outstanding claims, using the
+Bornheutter-Ferguson method.
+%%%%%%%%%%%%%%
+\newpage
+Q4
+\begin{itemize}
+\item Ultimate loss ratio = 4/4.32 = 92.5926% 
+\item DF3 = 4/3.85 = 1.03896 
+\item DF2 = (3.85+4.15)/(3.38+3.67) = 1.134752 
+\item DF1 = (3.38+3.67+3.86)/(3.01+3.3+3.32) = 1.132918 
+\item Adjusted expected ultimate claim for
+AY2 = 4.15+0.925926*4.41*(1 – 1/1.03896) = 4.3031 
+\item Adjusted expected ultimate claim for AY3
+= 3.86+0.925926*4.55*(1 – 1/(1.03896*1.134751)) = 4.4995 
+\item Adjusted expected ultimate claim for AY4
+= 3.74+0.925926*4.68*(1–1/(1.03896*1.134751*1.132918)) = 4.8290 \end{itemize}
+So reserve = 4 + 4.3031 + 4.4995 + 4.8290 – 13.5 = 4.13m
+
+Most candidates scored very well on this straightforward chain-ladder
+question, although some candidates did not appear to know the method
+required.
+\end{document}
