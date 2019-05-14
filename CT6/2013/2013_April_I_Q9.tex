@@ -1,0 +1,169 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+[Total 12]
+PLEASE TURN OVER9
+Claims on a portfolio of insurance policies arise as a Poisson process with rate \lambda .
+The mean claim amount is \mu  . The insurance company calculates premiums using a
+loading of \theta   and has an initial surplus of U.
+(i)
+Explain how the parameters \lambda , \mu  , \theta   and U affect \psi ( U ) , the probability of
+ultimate ruin.
+
+Now suppose that \lambda =50, \mu  =200 and \theta   =30%. There are three models under
+consideration for the distribution of individual claim amounts:
+A
+B
+C
+fixed claims of 200
+exponential with mean 200
+gamma with mean 200 and variance 800
+Let the corresponding adjustment coefficients be R A , R B and R C .
+(ii)
+Find the numerical value of R B and show that R B is less than both R A and
+R C .
+
+n
+(iii)
+CT6 A2013–6
+⎛ x ⎞
+Use the fact that ⎜ 1 + ⎟ ≈ e x for large n to show that R A and R C are
+⎝ n ⎠
+approximately equal.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+9
+(i)
+\psi ( U )
+does not depend on \lambda . This parameter affects the speed with which
+the process runs, but does not affect the ultimate probability of ruin.
+\psi ( U ) is higher for higher values of \mu  since the significance of the starting
+capital falls as \mu  rises, providing proportionately less of a buffer.
+\psi ( U ) is lower for higher values of \theta   since the higher \theta   is the higher the
+premiums with no change to claim amounts, so that there is a larger buffer
+against ruin.
+\psi ( U ) is lower for higher values of U since the higher U is the higher the
+larger the buffer against ruin given by the initial capital.
+(ii)
+The adjustment coefficients are the solutions to:
+M X ( R ) = 1 + 200 × 1.3 × R = 1 + 260 R
+for the various choices of the moment generating function.
+Our first task is to find the parameters in the gamma distribution in C.
+Denoting these by \alpha and \beta we have:
+\alpha
+\alpha
+= 200 and 2 = 800
+\beta
+\beta
+Dividing the second by the first we get 1 = 4 so \beta = 0.25 and \alpha = 50.
+\beta
+Solving for R B we have:
+0.005
+= 1 + 260 R B .
+0.005 − R B
+1 = ( 1 + 260 R B ) (1 − 200 R B ).
+1 = 1 + 60 R B − 52, 000 R B 2
+R B =
+60
+= 0.001153846.
+52, 000
+Consider the three functions:
+A = e 200 R − 1 − 260 R
+Page 9Subject %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – April 2013 – Examiners’ Report
+B =
+0.005
+− 1 − 260 R
+0.005 − R
+50
+⎛ 0.25 ⎞
+C = ⎜
+⎟ − 1 − 260 R .
+⎝ 0.25 − R ⎠
+We can tabulate the values of these functions as follows:
+R A B C
+0.0001
+0.0012 −0.00579
+−0.04075 −0.00559
+0.003789 −0.00579
+−0.0400
+So the second function has changed sign, but the first and third have not which
+gives the required result.
+(iii)
+We know that R C satisfies:
+⎛ 0.25 ⎞
+⎜
+⎟
+⎝ 0.25 − R C ⎠
+50
+= 1 + 260 R C .
+We can re-write this as:
+⎛ 0.25 − R C ⎞
+⎜ 0.25 ⎟
+⎝
+⎠
+− 50
+= 1 + 260 R C .
+1
+= 1 + 260 R C .
+R
+(1 − C ) 50
+0. 25
+1
+⎛ 200 R C ⎞
+⎜ 1 − 50 ⎟
+⎝
+⎠
+50
+= 1 + 2 60 R C .
+But due to the approximation given in the question, the denominator of the left
+hand side is approximately e − 200 R C .
+So we have, approximately:
+1
+e
+i.e.
+Page 10
+− 200 R C
+= 1 + 260 R C .
+e 200 R C = 1 + 260 R C .Subject %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – April 2013 – Examiners’ Report
+Which is the equation satisfied by R A . Hence R C and R A are approximately
+equal.
+Most candidates scored well in part (i), although many simply stated how the probability of
+ruin changes without explaining why. Well prepared candidates scored well on part (ii),
+noting the method in previous examinations for finding the root of the equation; however very
+few candidates scored well on part (iii) which was stretching.
+\end{document}
