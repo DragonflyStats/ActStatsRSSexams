@@ -1,0 +1,254 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document}
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+Claims on a certain portfolio of insurance policies arise as a Poisson process with annual rate . Individual claim amounts are independent from claim to claim and follow an exponential distribution with mean . The insurance company has
+purchased excess of loss reinsurance with retention M from a reinsurer who calculates
+premiums using a premium loading of . Denote by X i the amount paid by the
+reinsurer on the i th claim (so that X i = 0 if the i th claim amount is below M).
+(i)
+(ii)
+Explain why the claims arrival process for the reinsurer is also a Poisson
+process and specify its parameter.
+Show that
+M X i ( t )  1  e
+(iii)
+(iv)
+ M
+
+
+ t
+.
+1   t
+
+(a) Determine E(X i ).
+(b) Write down and simplify the equation for the reinsurer’s adjustment
+coefficient.
+
+Comment on your results to part (iii).
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\item %%- Question 10
+(i)
+A Poisson process is characterised by the probability of a single claim arising
+in a small time interval dt being dt (with no probability of more than one
+claim).
+For the reinsurer, the probability of a claim arising in a small time interval dt
+is given by
+dt × P ( X i > M )
+=  dt  
+
+M
+1
+1   x
+e dx
+
+
+x
+=  dt    
+   e   M
+=  dt  e
+
+M
+=    
+e
+M
+
+ dt
+
+
+so we have a Poisson process with parameter  e
+Page 14
+
+M
+
+.
+
+%%%--- Subject CT6 (Statistical Methods Core Technical) – April 2015 – Examiners’ Report
+(ii)
+M X i ( t ) = E ( e tX i )
+x
+
+   e t ( x  M ) 1 e  dx
+  M
+
+
+M
+
+= e   
+ 1  e 
+0 t
+= 1  e
+
+M
+
+ 
+
+M
+ 1
+
+1  Mt  x     t  
+e e
+dx
+
+
+= 1  e
+= 1  e
+= 1  e
+= 1  e
+= 1  e
+=1  e
+(iii)
+(a)
+1
+
+ 1  
+ x   t  
+
+
+e    
+ e  Mt  
+ 1  t
+
+  
+  M
+M
+
+
+ 1
+ 1  
+ M   t  
+
+ 
+
+ e  Mt 
+ e    
+ 1  t
+
+  
+ 
+ M
+  M
+  M
+ 
+1 
+ 1 
+
+ 1  t  
+ M
+   t  
+
+
+ 1  t  
+
+M
+
+ e
+
+
+M
+
+
+1
+1  t 
+ t
+1   t
+Now M X i ( t ) = 1  e
+So
+M X ' i ( t )
+
+= e
+and so E(X i ) =
+M
+
+
+M
+
+
+ t
+1   t
+ 
+
+ t
+
+  
+
+2
+ 1   t (1   t )
+
+M X ' i (0) =
+ e
+
+M
+
+%%Page 15
+%%%Subject CT6 (Statistical Methods Core Technical) – April 2015 – Examiners’ Report
+(b)
+\begin{itemize}
+\item The reinsurers annual rate of premium income is given by ( 1 + )
+E(X i ). 
+\item So the adjustment coefficient satisfies
+ + (1 + ) E(X i )R =  M X i ( R )
+i.e.
+(iv)
+1 + (1 + ) E(X i )R = M X i ( R )
+
+M
+
+R = 1  e
+i.e. 1 + (1 + )  e
+i.e. (1 + ) R =
+i.e. (1 + ) R(1  R) = R
+i.e. (1 + ) (1  R) = 1
+i.e. 1 +   R  (R) = 1
+i.e. R(1 + ) = 
+i.e. R =
+
+M
+
+
+ R
+1   R
+ R
+1   R
+
+(1   ) 
+\end{itemize}
+R does not depend on the retention M.
+This is a surprising result at first glance, but arises because of the memoryless
+feature of the exponential distribution
+i.e. X i  MX i > M is exponential with parameter
+1
+
+so the reinsurers claim process is just a slower version of the insurers.
+
+%Full credit was given for alternative solutions to part (i) and part (iv). This question was relatively poorly answered, although those candidates who were able to make a good attempt tended to score well.
+\end{document}
