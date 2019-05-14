@@ -1,0 +1,84 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document}
+
+\begin{enumerate}
+3
+An insurance company has collected data on the number of claims arising from
+certain risks over the last n years. The number of claims from the i th risk in the j th
+year is denoted by X_{ij} for i = 1, 2, ..., N and j = 1, 2, ..., n.
+The distribution of X_{ij} depends on an unknown parameter q i . The X_{ij} are independent
+identically distributed random variables given q i .
+\begin{enumerate}
+\item (i) Describe briefly what is meant by each of the following: m(q), s 2 (q), E(s 2 (q)),
+var(m(q)), and Z, when using Empirical Bayes Credibility Theory (EBCT)
+Model 1.
+\item 
+(ii) Explain how the value of Z depends on the following factors: n, E(s 2 (q)),
+var(m(q)).
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+Q3
+\begin{itemize}
+    \item 
+
+(i)
+m ( \theta ) is the average claim amount for each risk for a given value of $\theta_i$
+
+s 2 ( \theta ) is the variance of the claim amount for each risk given a value of $\theta_i$
+E ( s 2 ( \theta ) ) is the average variability of data values from year to year for a single
+risk, I 
+var( m ( \theta ) ) is the variability of the average data values for different risks 
+\item Z is the credibility factor for the EBCT 1 model / weight placed on the sample
+mean
+
+(ii)
+(a)
+(b)
+Z increases as n increases, since we place more weight on the data for
+that risk
+
+(
+)
+\item As E s 2 ( \theta ) increases, Z decreases since the variance of the data
+from the individual risk is high and so we place more weight on the
+collective data.
+[2]
+(c)
+(
+)
+\item As var m ( \theta ) increases, Z increases since it implies that the means of
+the individual risks are very different, so we place more weight on the
+individual risk data compared to the collective.
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+Most candidates scored well here, although some lost marks through a
+combination of only using formulae in part (i) and giving insufficient
+explanations in part (ii).
+\end{itemize}
+\end{document}
