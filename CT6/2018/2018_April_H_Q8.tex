@@ -1,0 +1,125 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+%%[Total 12]
+%%- Question 88
+Claim events on a portfolio of insurance policies follow a Poisson process with
+parameter l. Individual claim amounts, X, follow a Normal distribution with
+parameters m = 500 and s 2 = 200.
+The insurance company calculates premiums using a premium loading factor of 20%.
+\begin{enumerate}
+    \item (i)
+Show that the adjustment coefficient, r = 0.000708 to three significant figures.
+
+The insurance company’s initial surplus is 5,000.
+    \item (ii)
+Calculate an upper bound on the probability of ruin, using Lundberg’s
+inequality.
+The insurance company actuary believes that claim amounts are better modelled using
+an exponential distribution. You may assume that the mean m is unchanged, and is
+now equal to the standard deviation.
+    \item (iii) Calculate the new upper bound of the probability of ruin.
+    \item (iv) Give a reason why claim amounts on insurance policies are not usually
+modelled using a Normal distribution, and suggest an alternative distribution,
+other than the exponential.
+\end{enumerate}
+
+
+[Total 12]
+
+CT6 A2018–5 
+\newpage
+\begin{itemize}
+%%-- Q8
+(i)
+r is the unique positive root of the equation:
+\[\lambda + cr = \lambda M X ( r )\]
+
+c 1.2 \lambda E ( X ) , so the equation simplifies to
+Here =
+1 + 1.2 E ( X ) r =
+M X ( r )
+
+Page 8 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – April 2018 – Examiners’ Report
+M X ( r ) =
+1
+\mu r + \sigma 2 r 2
+e 2
+(from tables)
+
+E ( X ) = 500 (from question)
+So 1 + 600 r
+1
+500 r + 200 r 2
+2
+− e
+
+= 0
+
+\item At r = 0.000 7075, LHS is +0.000 03, and at r = 0.000 708 5, LHS is
+–0.000 08
+
+\item So the adjustment coefficient must be 0.000 708 to 3sf
+− 0.000 708*5000
+=
+By Lundberg’s inequality, upper bound given
+by e − RU e =
+0.029
+(ii)
+(iii)
+\lambda = 0.002
+MGF is
+(iv)
+
+
+\lambda
+\lambda − r
+
+0.002
+1 + 600 r =
+0.002 − r 
+(1 + 600 r )(0.002 −=
+r ) 0.002 ⇒ 1.2 r − r − 600 =
+r 2 0 
+r (0.2 − 600 r ) = 0 ⇒ r = 1 
+3000
+e − RU = 0.189 
+\item Normal distributions allow the possibility of negative claim amounts  Normal distributions do not have “fat tails”, commonly observed in insurance
+claims
+
+Normal distributions are not positively skewed, unlike typical claim amounts
+
+[Max 1]
+Any sensible alternative (gamma, Pareto, Weibull etc.)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Most candidates are now familiar with the method required in part (i), and were able to score well throughout this question.
+\end{itemize}
+\end{document}
