@@ -1,0 +1,125 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+[Total 11]8
+An insurance company has a portfolio of 1,000 car insurance policies. Claims arise
+on individual policies according to a Poisson process with annual rate \mu  . The
+insurance company believes that \mu  follows a gamma distribution with parameters
+\alpha = 2 and \lambda = 8.
+\begin{enumerate}
+\item (i)
+(a) Show that the average annual number of claims per policy is 0.25.
+(b) Show that the variance of the number of annual claims per policy is
+0.28125.
+
+Individual claim amounts follow a gamma distribution with density
+− x
+x
+f ( x ) =
+e 1000 for x > 0.
+1, 000, 000
+\item (ii)
+Calculate the mean and variance of the annual aggregate claims for the whole
+portfolio.
+
+The insurance company has agreed an aggregate excess of loss reinsurance contract
+with a retention of \$0.55m (this means that the reinsurance company will pay the
+excess above \$0.55m if the aggregate claims on the portfolio in a given year exceed
+\$0.55m).
+\item (iii)
+Calculate, using a Normal approximation, the probability of aggregate claims
+exceeding the retention in any year.
+
+For each of the last three years, the total claim amount has in fact exceeded the
+retention.
+\item (iv)
+
+Comment on this outcome in light of the calculation in part (iii).
+\end{enumerate}
+
+\newpage
+
+
+8
+\begin{itemize}
+\item (i)
+(ii)
+(a)
+\begin{eqnarray*}
+E(N) &=& E[E(N|\mu )]\\
+&=& E[\mu ] \\
+&=& 2/8 \\
+&=& 0.25\\
+\end{eqnarray*}
+(b)
+\begin{eqnarray*}
+var(N) &=& E[var(N|\mu )] + var[E(N|\mu )]\\
+&=& E[\mu ] + var[\mu ]\\
+&=& 2/8 + 2/8 2 \\ 
+&=& 0.28125\\
+\end{eqnarray*}
+
+\item Let Y be aggregate claims from one policy.
+Individual claim is gamma with \alpha = 2 and \lambda = 0.001 .
+\[E ( Y ) = E ( X ) E ( N ) = 2000 × 0.25 = 500.\]
+Var ( Y ) = E ( N ) Var ( X ) + Var ( N ) E ( X ) 2
+= 0.25 × 2000000 + 9
+32
+× 2000 2 = 1, 625, 000.
+So the mean and variance of total claims are 500,000 and 1,625,000,000
+respectively.
+\item (iii)
+Our approximate distribution for S is S ~ N(500,000 , 1625000000).
+550000 − 500000 ⎞
+⎛
+P ( S > 550000 ) = P ⎜ Z >
+⎟ = P ( Z > 1.24035 ) = 0.1074 .
+1625000000 ⎠
+⎝
+\item (iv)
+The prob three years in a row is $0.1074^3 = 0.00124$ .
+The probability of this happening is very low. It is more likely that the
+insurance company’s belief about the distribution of claims amounts is
+incorrect.
+The normal approximation tails off quickly and so underestimates the
+probability of extreme events
+\item Part (i) was straightforward, however some candidates failed to show sufficient working to
+gain full marks. A surprising number of candidates were unfamiliar with the standard
+bookwork underlying part (ii). Credit was given for any sensible comments in part (iv).
+\end{itemize}
+
+
+\end{document}
