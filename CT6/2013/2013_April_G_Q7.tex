@@ -1,0 +1,156 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+An insurance company believes that individual claim amounts from house insurance
+policies follow a gamma distribution with distribution function given by:
+f ( y ) =
+\alpha \alpha
+\mu  \alpha \Gamma ( \alpha )
+y
+\alpha− 1
+e
+\alpha
+− y
+\mu 
+for y > 0
+where \alpha and \mu  are positive parameters.
+(i)
+Show that the gamma distribution can be written in exponential family form,
+giving the natural parameter and the canonical link function.
+
+The insurance company has data for claim amounts from previous claims. It believes
+that the claim amount is primarily influenced by two variables:
+x i the type of geographical area in which the house is situated. This can take
+one of 4 values.
+y i the category of the age of the house where the three categories are 0–29
+years, 30-59 years and 60 years +.
+It wishes to model claim amounts using this data and the generalised linear model
+from part (i) with canonical link function. The insurance company is investigating
+models which take into account these variables and has the following table of values:
+Model
+A
+B
+C
+D
+(ii)
+CT6 A2013–4
+Choice of
+predictor
+1
+Age
+Age +location
+Age * location
+Scaled Deviance
+900
+789
+544
+541
+Explain, by analysing the scaled deviances, which model the insurance
+company should use.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+7
+(i)
+From the definition of the gamma density given in the question
+f ( y ) =
+\alpha \alpha
+\mu  \alpha \Gamma ( \alpha )
+y
+\alpha− 1
+e
+\alpha
+− y
+\mu 
+⎡ ⎛ y
+⎤
+⎞
+= exp ⎢ ⎜ − − log \mu  ⎟ \alpha + ( \alpha − 1 ) log y + \alpha log \alpha − log \Gamma ( \alpha ) ) ⎥
+⎠
+⎣ ⎝ \mu 
+⎦
+⎡ ( y \theta  − b ( \theta  ) )
+⎤
+= exp ⎢
++ c ( y , \phi  ) ⎥
+⎣ a ( \phi  )
+⎦
+where:
+\theta =−
+1
+\mu 
+\phi =\alpha
+a ( \phi  ) =
+1
+\phi 
+b ( \theta  ) = − log ( −\theta  )
+c ( y , \phi  ) = ( \phi  − 1 ) log y + \phi  log \phi  − log \Gamma ( \phi  ).
+Hence the distribution has the right form for a member of an exponential
+family.
+1
+The natural parameter is − 1 . The canonical link function is .
+\mu 
+\mu 
+(ii)
+Using the information given, we can calculate the deviance differences and
+compare that with the differences of the degrees of freedom for each of the
+nested models. If the decrease in the deviances is greater than twice the
+difference in degrees of freedom this suggests an improvement.
+Model Scaled
+Deviance Degrees of
+freedom
+1
+Age
+Age +location
+Age * location 900
+789
+544
+541 12
+10
+7
+1
+Difference
+in scaled
+deviance
+111
+245
+3
+
+From the table we can see that the interaction model does not indicate any
+improvement hence the recommended model would be Age +location.
+Again well prepared candidates were able to score highly on this question, however weaker
+candidates dropped marks as a result of not specifying a full parameterisation in part (i). In
+part (ii) full credit was given to candidates who used the chi-squared test rather than the
+approximation set out above..
+\end{document}
