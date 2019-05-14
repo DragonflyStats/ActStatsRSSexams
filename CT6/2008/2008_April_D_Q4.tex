@@ -1,0 +1,110 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+
+
+%-----------------------------------------------------------------------%
+4
+$Y_1 , Y_2 , ..., Y_n$ are independent observations from a normal distribution with $E[Y_i ] = \mu i$
+and $Var[Y_i] = \sigma 2$ .
+\begin{enumerate}[(i)]
+\item  Write the density of $Y_i$ in the form of an exponential family of distributions. 
+\item Identify the natural parameter and derive the variance function.
+\item Show that the Pearson residual is the same as the deviance residual.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+4
+\begin{itemize}
+\item (i)
+f(y i ) =
+⎧ ⎪ ( y − \mu ) 2 ⎫ ⎪
+exp ⎨ − i 2 i ⎬
+2 \sigma
+2 \pi\sigma 2
+⎩ ⎪
+⎭ ⎪
+1
+2
+logf = − 1⁄2 log(2 \pi\sigma ) −
+=
+\[y i \mu i − 1⁄2 \mu i 2
+\sigma 2
+( y i 2 − 2 y i \mu i + \mu i 2 )
+2 \sigma 2
+− 1⁄2 log(2 \pi\sigma 2 ) − 1⁄2
+y i 2
+\sigma 2\]
+which is the form of an exponential family of distributions.
+\item (ii)
+The natural parameter is \mu i
+\theta i = \mu i
+b(\theta i ) = 1⁄2 \mu i 2 = 1⁄2 \theta i 2
+b ′ ( \theta i ) = \theta i
+b ′′ ( \theta i ) = 1
+Hence V(\mu i ) = 1
+\item (iii)
+The scaled deviance is
+⎡ ( y − y ) 2
+⎤
+( y − \hat{\mu} ) 2
+2 ∑ ⎢ − i 2 i − 1⁄2 log(2 \pi\sigma^2 ) + i 2 i + 1⁄2 log(2 \pi\sigma 2 ) ⎥
+2 \sigma
+2 \sigma
+⎣ ⎢
+⎦ ⎥
+=
+Page 4
+∑
+( y i − \hat{\mu} i ) 2
+\sigma 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 
+Hence the deviance residual is
+( y i − \hat{\mu} i ) 2
+y i − \hat{\mu} i
+\sigma
+\sigma
+y − \hat{\mu} i
+y − \hat{\mu}
+
+\item The Pearson residual is i
+= i
+\sigma V ( \hat{\mu} i )
+\sigma
+sign( y i − \hat{\mu} )
+2
+=
+
+\item Comment: This was a relatively easy question and many scored full marks in (i) and
+(iii) here.
+\end{itemize}
+
+\end{document}
