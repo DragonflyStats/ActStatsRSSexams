@@ -1,0 +1,158 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%% - Question 10
+Consider the following probability density function:
+\[h(x) = \sigma e −\sigma x x > 0\]
+\begin{enumerate}[(a)]
+\item (i)
+Set out an algorithm for sampling from h(x) using the inverse transform
+method.
+Now also consider the following density function, the “half-normal” distribution:
+−x 2
+2 2 \sigma 2
+f (x) =
+e
+, x > 0
+\sigma \pi 
+Let M be the maximum of
+f (x)
+h(x)
+2
+\sigma 2 \sigma 2
+e 2
+\item (ii) Show that M =
+\item (iii) Set out an acceptance-rejection algorithm, using h(x), which generates samples
+from the half normal distribution f(x).
+\item (iv) Determine the value of l for which the algorithm is the most efficient (i.e. on
+average require fewest samples from h(x) to generate samples from f(x)).
+\item (v) Show that the samples from part (iii) can be used to generate samples from the
+normal distribution with mean m and variance s 2 .
+\end{enumerate}
+
+\sigma\sigma \pi 
+
+\newpage 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q10
+\begin{itemize}
+\item (i)
+\[F ( x ) = 1 − e −\sigma x \]
+First, sample u from U ∼ U ( 0,1 ) 
+1
+− log ( 1 − U )
+\item Then X =
+\sigma 
+− x 2
+2 2 \sigma 2 +\sigma x
+f
+sup
+sup
+M
+e
+=
+=
+\item (ii)
+h x > 0 \sigma\sigma \pi 
+the maximum being achieved at
+and M =
+2
+\sigma\sigma \pi 
+x =\sigma 2 \sigma ,
+\sigma 2 \sigma 2
+e 2
+g ( x )
+therefore =
+
+
+− x 2
+(iii)
+
+f ( x )
+= e 2 \sigma
+Mh ( x )
++\sigma x −
+2
+\sigma 2 \sigma 2
+2
+
+\item The rejection algorithm is then:
+Sample x from $f ( x )$ as in (i) [Step 1] 
+Sample u from U(0,1) [Step 2] 
+− x 2
+
+\item If u< e 2 \sigma
+(iv)
++\sigma x −
+2
+\sigma 2 \sigma 2
+2
+then set y = x, otherwise go to step 1.
+The optimal $\sigma$ is the one minimizing M ,
+
+
+this can be found by taking log M and differentiating
+'
+
+2 \sigma 2 \sigma 2 
+1
+log M =  − log \sigma + log
++
+= − + \sigma\sigma 2
+
+
+2  
+\sigma
+\sigma \pi 
+
+'
+\end{itemize}
+%% Page 11 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – April 2018 – Examiners’ Report
+which becomes zero for \sigma =
+1
+\sigma
+
+(v)
+Y is a sample as in (iii)
+Sample U from U ( 0,1 ) 
+\[X = \mu + Y , if U > 0.5 \]
+\[X = \mu − Y , if U <= 0.5\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Most candidates scored well in parts (i) to (iii), although a number
+failed to use the cumulative distribution in part (i).
+Only the best prepared candidates were able to score well in parts (iv)
+and (v).
+\end{document}
