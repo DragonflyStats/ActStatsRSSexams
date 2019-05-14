@@ -1,0 +1,155 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 9
+Consider the time series model
+(1 − \alpha B ) 3 X t = e t
+where B is the backwards shift operator and e t is a white noise process with variance
+\sigma 2 .
+(i)
+Determine for which values of \alpha the process is stationary.
+
+Now assume that \alpha = 0.4.
+(ii)
+(iii)
+10
+(a) Write down the Yule-Walker equations.
+(b) Calculate the first two values of the auto-correlation function \rho  1 and
+\rho  2 .
+
+Describe the behaviour of \rho  k and the partial autocorrelation function \phi k as
+k →∞ .
+
+[Total 12]
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\new%%-- Page 
+9
+(i)
+The characteristic polynomial is (1 − \alpha Y ) 3 = 0 .
+This has a triple root at 1
+\alpha
+and so the process is stationary when
+i.e. $\alpha < 1$ .
+(ii)
+Expanding the cubic equation and rearranging gives:
+X t − 3 \alpha X t − 1 + 3 \alpha_{2} X t − 2 − \alpha_{3} X t − 3 = e t
+So the Yule-Walker equations give:
+
+\[\rho  0 − 3 \alpha\rho  1 + 3 \alpha_{2} \rho  2 − \alpha_{3} \rho  3 = \sigma 2
+\rho  1 − 3 \alpha + 3 \alpha_{2} \rho  1 − \alpha_{3} \rho  2 = 0 (A)
+\rho  2 − 3 \alpha\rho  1 + 3 \alpha_{2} − \alpha_{3} \rho  1 = 0 (B)
+\rho  3 − 3 \alpha\rho  2 + 3 \alpha_{2} \rho  1 − \alpha_{3} \rho  0 = 0
+(
+)\]
+So re-writing we have from (A) \rho  1 1 + 3 \alpha_{2} − 3 \alpha = \alpha_{3} \rho  2
+And substituting into (B) gives
+(
+)
+\rho  1 1 + 3 \alpha_{2} − 3 \alpha
+\alpha
+i.e.
+%%-- Page 12
+3
+− 3 \alpha\rho  1 + 3 \alpha_{2} − \alpha_{3} \rho  1 = 0
+\rho  1 (1 + 3 \alpha_{2} − 3 \alpha_{4} − \alpha 6 )
+\alpha_{3}
+=
+3 \alpha − 3 \alpha_{5}
+\alpha_{3}
+1
+> 1
+\alpha
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+i.e.
+\rho  1 =
+3 \alpha (1 − \alpha_{4} )
+(1 + 3 \alpha_{2} − 3 \alpha_{4} − \alpha 6 )
+= 0.83573487
+And so
+\rho  2 =
+(
+)
+3 \alpha_{1} − \alpha_{4} (1 + 3 \alpha_{2} )
+2
+4
+6
+(1 + 3 \alpha − 3 \alpha − \alpha ) \alpha
+3
+−
+3
+\alpha_{2}
+= 0.576368876
+\newpage
+
+\subsection*{Alternative solution:}
+Express the Yule-Walker equations in terms of the covariances:
+X t = 1.2 X t − 1 − 0.48 X t − 2 + 0.064 X t − 3 + e t
+\gamma_{0} = 1.2 \gamma_{1} − 0.48 \gamma_{2} + 0.064 \gamma_{3} + \sigma 2
+\gamma_{1} = 1.2 \gamma_{0} − 0.48 \gamma_{1} + 0.064 \gamma_{2}
+\gamma_{2} = 1.2 \gamma_{1} − 0.48 \gamma_{0} + 0.064 \gamma_{1}
+\gamma_{3} = 1.2 \gamma_{2} − 0.48 \gamma_{1} + 0.064 \gamma_{0}
+Or in general:
+\gamma_{0} = 1.2 \gamma_{1} − 0.48 \gamma_{2} + 0.064 \gamma_{3} + \sigma 2
+\gamma k = 1.2 \gamma k − 1 − 0.48 \gamma k − 2 + 0.064 \gamma k − 3 k \geq  1
+Simplifying the second and third equations:
+148 \gamma_{1} = 1.2 \gamma_{0} + 0.064 \gamma_{2} ⇒ \gamma_{1} =
+30 \gamma
+37 0
+8 \gamma
++ 185
+2
+\gamma_{2} = 1.264 \gamma_{1} + 0.064 \gamma_{1}
+To obtain:
+\gamma_{2} =
+200 \gamma
+347 0
+\lambda 1 =
+290 \gamma
+347 0
+Dividing both by \gamma_{0} gives the same solutions as above.
+(iii)
+The series is an AR(3) series. The asymptotic behaviour is therefore that \rho  k
+decays exponentially to zero
+whilst \phi k is zero for k>3.
+The latter parts of this question were not particularly well answered. Candidates generally
+showed an understanding of how to solve the problem, but made a number of arithmetic and
+algebraic slips.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
