@@ -1,0 +1,190 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+10
+An insurance company has a portfolio of building insurance policies. The company
+classifies buildings into three types and believes that the number of claims on
+buildings of each type follows a Poisson distribution with parameters as shown:
+Type Parameter
+1
+2
+3 \lambda
+2\lambda
+5 \lambda
+where \lambda is an unknown positive constant.
+Actual claim numbers over the last five years have been as follows. Here X ij
+represents the number of claims from the ith type in the jth year:
+Number of claims X ij
+Year (j)
+5
+Type(i)
+1
+2
+3
+5 4 3 2 1 \sum  ( X ij − X i ) 2
+23
+56
+87 17
+39
+115 9
+44
+141 21
+29
+92 12
+35
+84 139.2
+417.2
+2322.8
+j = 1
+\begin{enumerate}
+\item (i) Derive the maximum likelihood estimate of \lambda . 
+\item (ii) Estimate the average number of claims per year for each type of building
+using EBCT Model 1. 
+\item (iii) Comment on the results of parts (i) and (ii). 
+\item (iv) Explain the main weakness of the model in part (ii).
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+10
+\begin{itemize}
+\item (i)
+The likelihood function is given by:
+5
+L \propto \product e −\lambda \lambda
+x 1, i
+i = 1
+5
+\product e − 2 \lambda (2 \lambda )
+x 2, i
+i = 1
+5
+\product e − 5 \lambda (5 \lambda )
+x 3, i
+.
+i = 1
+Where x j , i is the number of claims on the jth type in the ith year.
+The log likelihood is given by:
+\[
+l = log L = C − 5 \lambda − 10 \lambda − 25 \lambda + (log \lambda ) \sum  x j , i .
+i , j
+= C − 40 \lambda + 804(log \lambda ) .\]
+\item  Differentiating gives:
+dl
+804
+.
+= − 40 +
+d \lambda
+\lambda
+and setting this equal to zero gives:
+804
+\hat{\lambda} =
+= 20.1.
+40
+This is a maximum since:
+d 2 l
+d \lambda
+(ii)
+2
+=−
+804
+\lambda 2
+< 0.
+\item  The mean number of claims for the various types are:
+X 1 = 16.4 and X 2 = 40.6 and X 3 = 103.8.
+With overall mean X = 53.6.
+Page 11Subject %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – April 2013 – Examiners’ Report
+\item  So we have parameter estimates:
+E ( m ( \theta  ) ) = X = 53.6.
+1 3 ⎡ 1 5
+E s ( \theta  ) = \sum  ⎢ \sum  X ij − X i
+3 i = 1 ⎢ 4 j = 1
+⎣
+(
+=
+2
+)
+(
+)
+2 ⎤
+⎥
+⎥ ⎦
+1
+( 139.2 + 417.2 + 2322.8 ) = 239.9333333.
+12
+2 1
+1 3
+Var ( m ( \theta  ) ) = \sum  ( X i − X ) − E ( s 2 ( \theta  ) )
+2 i = 1
+5
+= 0.5 ⎡ (16.4 − 53.6) 2 + (40.6 − 53.6) 2 + (103.8 − 53.6) 2 ⎤ − 0.2 × 239.93333333
+⎣
+⎦
+=1988.4533333.
+And so:
+5
+Z =
+5 +
+E ( s ( \theta  ) )
+Var ( m ( \theta  ) )
+2
+=
+5
+= 0.976436003 .
+239.9333333
+5 +
+1988.4533333
+and the expected claims from the three types are:
+\item  (iii)
+Type Credibility Premium
+1
+2
+3 0.976436002 × 16.4 + 0.023563998 × 53.6 = 17.3
+0.976436002 × 40.6 + 0.023563998 × 53.6 = 40.9
+0.976436002 × 103.8 + 0.023563998 × 53.6 = 102.6
+The corresponding estimates based on our computed \hat{\lambda}   are 20.1, 40.2 and
+100.5.
+\item  The estimates are remarkably similar. The biggest difference is for type 1
+buildings, where the maximum likelihood estimate gives a lower weight to the
+data from that risk, but the credibility estimate gives greater weight.
+\item (iv)
+The main limitation is that the model in (ii) does not take account of the
+volume of buildings covered, which will probably vary from year to year.
+\item Again well prepared candidates found this question relatively straightforward. Weaker
+candidates were unable to construct the likelihood function in part (i). A disappointing
+number of candidates were unable to accurately render the standard formulae in part (ii).
+\end{itemize}
+
+\end{document}
