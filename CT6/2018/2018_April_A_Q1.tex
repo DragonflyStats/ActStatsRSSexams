@@ -1,0 +1,105 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document}
+
+%% CT6 A 2018 
+%% Institute and Faculty of Actuaries
+%% 1
+A random variable X follows a Pareto distribution with density function:
+5
+, x > 0
+(1 + x) 6
+For a given estimate d of x, the loss function is defined as:
+x 4 – 4 d 2 x 2 + d 4
+(a)
+Show that the expected loss is given by:
+2 d 2
+E ( L (x, d )) = 1 –
++ d 4
+3
+(b)
+Determine the optimal estimate for d under the Bayes rule.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+Q1
+\begin{itemize}
+\item (a)
+Pareto so clear \lambda  = 1 and \alpha  = 5 
+\Gamma ( \alpha  − 2 ) \Gamma ( 1 + 2 ) 2* 2 1
+2
+  
+= =
+From tables E X =
+\Gamma ( \alpha  )
+24 6 [1⁄2]
+( )
+( )
+=
+E X 4
+\Gamma ( \alpha  − 4 ) \Gamma ( 1 + 4 )
+= 1
+\Gamma ( \alpha  )
+(
+)
+1 −
+So E X 4 − 4 d 2 X 2 + d 4 =
+(b)
+
+2 d 2
++ d 4 as required
+3
+\item 
+Differentiating with respect to d and setting equal to 0
+−
+4 d
++ 4 d 3 = 0
+3
+So 4 =
+d 2
+[1]
+4
+1
+=
+,  
+d
+3
+3
+\item Check for minimum: second derivative is 12 d 2 −
+[1]
+4
+, > 0 so this is indeed a
+3
+minimum.
+\item 
+Many candidates struggled on part (a), as this has not been examined for some time, although the majority of candidates were able to score well on part (b), including checking for a minimum.
+\end{itemize}
+\end{document}
