@@ -1,0 +1,77 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 
+
+Define what it means for a random variable to belong to an exponential
+family.
+[1]
+Show that if a random variable has the exponential distribution it belongs to an
+exponential family.
+
+\item 
+
+\end{enumerate}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+1
+(i)
+A random variable Y belongs to an exponential family if the pdf of Y can be
+written in the form
+⎡ y \theta  − b ( \theta  )
+⎤
+f ( y ; \theta  , \phi  ) = exp ⎢
+− c ( y , \phi  ) ⎥
+⎣ a ( \phi  )
+⎦
+Where a, b and c are functions.
+(ii)
+Suppose that the parameter of the exponential distribution Y is \lambda . Then
+f ( y ) = \lambda  exp ( −\lambda  y )
+= exp [ log \lambda  − \lambda  y ]
+⎡ \lambda  y − log \lambda  ⎤
+= exp ⎢
+− 1 ⎥ ⎦
+⎣
+Which is of the required form with
+\theta =\lambda 
+a ( \phi  ) = − 1
+b ( \theta  ) = log \theta 
+c ( y , \phi  ) = 0
+Alternative solution: \theta  = −\lambda ; a(\phi ) = 1; b(\theta ) = −log(−\theta ); c(y,\phi ) = 0
+This question was answered well.
+\end{document}
