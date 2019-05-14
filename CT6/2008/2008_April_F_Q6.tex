@@ -1,0 +1,80 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%-- Question 6
+A portfolio of general insurance policies is made up of two types of policies. The policies are assumed to be independent, and claims are assumed to occur according to a Poisson process. The claim severities are assumed to have exponential distributions.
+For the first type of policy, a total of 65 claims are expected each year and the expected size of each claim is \$1,200.
+For the second type of policy, a total of 20 claims are expected each year and the expected size of each claim is \$4,500.
+\begin{enumerate}[(i)]
+\item Calculate the mean and variance of the total cost of annual claims, S, arising from this portfolio.
+
+The risk premium loading is denoted by $\theta$, so that the annual premium on each policy is $(1+\theta)$ × expected annual claims on each policy. The initial reserve is denoted by u.
+A normal approximation is used for the distribution of S, and the initial reserve is set by ensuring that
+\[P(S < u + \mbox{ annual premium income }) = 0.975.\]
+\item
+(a) Derive an equation for u in terms of $\theta$.
+(b) Determine the annual premium required in order that no initial reserve
+is necessary.
+\end{enumerate}
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6
+(i)
+E[S]
+= 65 × 1200 + 20 × 4500 = 168000
+Var[S] = 65 × 2 × 1200 2 + 20 × 2 × 4500 2
+= 187,200,000 + 810,000,000
+= 997,200,000
+(ii)
+(a)
+c = annual premium income = (1 + \theta) E[S]
+⎛ u + c − E [ S ] ⎞
+P(S < u + c)  Φ ⎜
+⎜ Var[ S ] ⎟ ⎟
+
+⎝
+⎠
+u + c − E [ S ]
+= 1.96
+Var[ S ]
+u + \thetaE[S] = 1.96 Var[ S ]
+u = 1.96 Var[ S ] - \thetaE[S]
+= 61893.8 - 168000\theta
+(b)
+61893.8 - 168000\theta = 0
+\theta = 0.3684
+No initial reserve is required if $\theta \leq 0.3684$. i.e. when the premium $ \geq \$229,894$.
+Comment: There were some mixed answers for the second part of this question.
+Numerical figures varied in (b) due to the rounding of the square root of the
+Var(S).
+\end{document}
