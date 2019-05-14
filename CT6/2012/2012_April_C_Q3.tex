@@ -1,0 +1,90 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+Claim amounts on a certain type of insurance policy follow a distribution with density
+\[f ( x ) = 3 cx 2 e − cx for x > 0\]
+3
+where c is an unknown positive constant. The insurer has in place individual excess
+of loss reinsurance with an excess of 50. The following ten payments are made by the
+insurer:
+Losses below the retention: 23, 37, 41, 11, 19, 33
+Losses above the retention: 50, 50, 50, 50
+Calculate the maximum likelihood estimate of c.
+4
+%----------%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3
+\begin{itemize}
+    \item 
+The likelihood function is given by:
+6
+3
+L = D \times \product 3 cx i 2 e − cx i \times e − 4 \times 50
+3
+c
+i = 1
+where D is a constant.
+Where the x i are the claims below the retention.
+6
+6
+l = log L = log D + \sum  log 3 cx i − c \sum  x i 3 − 4 \times 50 3 c
+2
+i = 1
+i = 1
+6 6
+i = 1 i = 1
+= log D + 6 log 3 + 6 log c + \sum  log x i 2 − c \sum  x i 3 − 4 \times 50 3 c
+\item Differentiating we get
+dl 6 6 3
+= − \sum  x i − 500000
+dc c i = 1
+%%-- Page 4
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% (Statistical Methods) – April 2012 – Examiners’ Report
+\item So our estimate is given by
+c ˆ =
+6
+6
+\sum  i = 1 x 1 3 + 500000
+=
+6
+= 8.8775 \times 10 − 6
+175868 + 500000
+% This question was answered well.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{itemize}
+\end{document}
