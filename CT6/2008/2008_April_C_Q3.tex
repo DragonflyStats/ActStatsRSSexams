@@ -1,0 +1,88 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+3
+(i) 
+
+\begin{enumerate}
+\item X and Y are independent Poisson random variables with mean $\lambda$. Derive the moment generating function of X, and hence show that X + Y also has a Poisson distribution.
+
+\item 
+(ii) An insurer has a portfolio of 100 policies. Annual premiums of 0.2 units per policy are payable annually in advance. Claims, which are paid at the end of the year, are for a fixed sum of 1 unit per claim. Annual claims numbers on each policy are Poisson distributed with mean 0.18.
+\medskip 
+Calculate how much initial capital is needed in order to ensure that the probability of ruin at the end of the year is less than 1%.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3
+(i)
+\begin{eqnarray*}
+M_{X} ( t ) &=& E ( e tX )\\
+&=& \sum^{\infty}e kt e −\lambda
+k = 0
+\\
+&=& \sum^{\infty}e −\lambda
+k = 0
+= e −\lambda e \lambda e
+\lambda k
+k !
+( \lambda e t ) k
+k !
+t \\
+&=& e \lambda ( e − 1)
+t \\
+\end{eqnarray*}
+Hence
+\begin{eqnarray*}
+M X + Y ( t ) &=& E ( e t ( X + Y ) )\\
+&=& E ( e tX ) E ( e tY )\\
+&=& M X ( t ) M Y ( t )\\
+&=& e \lambda ( e − 1) e \lambda ( e − 1)\\
+t
+t
+&=& e 2 \lambda ( e − 1)\\
+t
+\end{eqnarray*}
+which is the MGF of a Poisson distribution with parameter $2\lambda$. Hence $X + Y$ is
+Poisson distributed.
+(ii)
+Using the result above, aggregate claims on the portfolio over the year have a Poisson distribution with parameter 18.
+Let the initial capital be U. At the end of the year, the surplus will be $U + 20 – N$ where N is the number of claims.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Now using the tables in the gold book, $P(N \leq 28) = 0.9897$, and
+$P(N < = 29) = 0.9941$.
+So we need U to be large enough that ruin would only occur if there were 30
+or more claims. So we need U + 20 – 29 > 0.
+i.e. U > 9.
+Comment: Many candidates struggled with (ii) here.
+
+
+
+\end{document}
