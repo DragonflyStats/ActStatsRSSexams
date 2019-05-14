@@ -1,0 +1,77 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\item 
+A statistician is told that one of two dice has been chosen and rolled, and he is told the result of the roll. One dice is a conventional dice, but the other has three sides numbered 2 and three sides numbered 4. If the statistician correctly identifies the dice he wins a prize of 1.
+\begin{enumerate}
+\item (i) Determine the total number of decision functions available to the statistician.'
+\item 
+(ii) (a)
+Identify the most natural candidate for the decision function.
+\item 
+Calculate the expected payoff for this function assuming that each of
+the two dice are equally likely to be chosen.
+\end{enumerate}
+\end{enumerate}
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+2
+\begin{enumerate}
+\item (i)
+The decision function must nominate a choice of die for each potential
+outcome from the observation.
+There are 6 possible outcomes from the die roll and hence $2 \times  2 \times  2 \times  2 \times  2 \times 
+2 = 64$ possible decision functions.
+\item (ii)
+The most natural candidate is to nominate the conventional die on rolls of
+1,3,5,6 and the special die on rolls of 2 or 4.
+The expected payoff from this approach is:
+2 ⎞
+⎛ 4
+0.5 \times  ⎜ \times  1 + \times  0 ⎟ + 0.5 \times  1 = 0.83333
+6 ⎠
+⎝ 6
+\end{enumerate}
+% Candidates who understood what a decision function is scored well. However, many
+% candidates struggled to make any headway with this question. For part (i) some candidates
+% observed that if the dice roll is 1,3,5 or 6 it is obvious that you must chose the conventional
+% dice. Therefore a choice is only needed on a roll of a 2 or a 4 giving a total of 2 \times  2 = 4
+% functions. This was given full credit if carefully explained.
+\end{document}
