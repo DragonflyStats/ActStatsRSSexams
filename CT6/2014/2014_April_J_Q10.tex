@@ -1,0 +1,83 @@
+10
+For a certain portfolio of insurance policies the number of claims on the i th policy in
+the j th year of cover is denoted by Y ij . The distribution of Y ij is given by
+P(Y ij = y) = \theta  ij (1 − \theta  ij ) y
+y = 0, 1, 2, ...
+where 0 \leq  \theta  ij \leq  1 are unknown parameters with i = 1, 2, ..., k and j = 1, 2, ..., l.
+(i) Derive the maximum likelihood estimate of \theta  ij given the single observed data
+point y ij .
+[4]
+(ii) Write P(Y ij = y) in exponential family form and specify the parameters.
+(iii) Describe the different characteristics of Pearson and deviance residuals.
+[2]
+[Total 10]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+10
+(i)
+The likelihood is given by
+L = \theta  ij (1 − \theta  ij )
+y ij
+Taking logs gives
+l = log L = log \theta  ij + y ij log(1 − \theta  ij )
+Differentiating with respect to \theta  ij gives
+y ij
+1
+∂ l
+=
+−
+∂\theta  ij \theta  ij (1 − \theta  ij )
+and setting
+∂ l
+= 0 we have
+∂\theta  ij
+y ij
+1
+=
+\theta  ˆ ij 1 − \theta  ˆ ij
+Page 10
+113
+110Subject CT6 (Statistical Methods Core Technical) – April 2014 – Examiners’ Report
+so 1 − \theta  ˆ ij = y ij \theta  ˆ ij
+so 1 = (1 + y ij ) \theta  ˆ ij
+i.e. \theta  ˆ ij =
+and since
+1
+1 + y ij
+∂ 2 l
+∂\theta  ij 2
+=−
+1
+\theta  ij 2
+−
+y ij
+(1 − \theta  ij ) 2
+< 0
+(since y ij > 0)
+we do have a maximum.
+(ii)
+P ( Y ij = y ) = \theta  ij (1 − \theta  ij ) y
+= exp[log\theta  ij + y log(1 − \theta  ij )]
+= exp[ y log(1 − \theta  ij )] + log\theta  ij ]
+⎡ y \theta  − b ( \theta  )
+⎤
+= exp ⎢
++ c ( y , φ ) ⎥
+⎣ a ( φ )
+⎦
+where \theta 
+= log(1 − \theta  ij ) is the natural parameter
+b (\theta ) = −log\theta  ij = −log[1 − e \theta  ]
+φ = 1
+a (φ) = 1
+c ( y , φ) = 0
+(iii)
+The Pearson residuals are often skewed for non normal data which makes the
+interpretation of residual plots difficult.
+Deviance residuals are usually more likely to be symmetrically distributed and
+are preferred for actuarial applications.
+This question was, for the most part, answered well. A common mistake in part (i) was to try
+to sum across either years or policies when the question specifically referred to a single data
+point.
