@@ -1,0 +1,159 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+An insurer believes that claim amounts, X, on its portfolio of pet insurance policies follow an exponential distribution with mean \$200.
+A reinsurance policy is arranged such that the reinsurer pays X R , where
+
+\[
+X R =
+\begin{cases}
+0 & if X \leq \$50 \\
+X 50 & if \$50 <X \leq M\\ 
+M 50 & if X> M\\
+\end{cases}
+\]
+
+
+calculate M such that $E[X_R ] = \$100$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{itemize}
+    \item 
+
+We know that M is to be chosen so that
+M
+50
+where
+=
+( x 50) e
+x
+dx
+M
+( M
+50) e
+x
+dx = 100
+1
+= 0.005.
+200
+\item The LHS of the expression above can be written as
+M
+50
+=
+x
+x e
+xe
+= Me
+M
+dx 50
+x M M
+50 50
+M
+50 e
+e
+50
+x
+e
+x
+dx
+dx 50
+e
+50
+M
+e
+( M
+50) e
+x M
+x
+dx
+( M
+50
+50) e
+x
+M
+M
+x
+50 e
+M
+50 e
+50
+( M
+50) e
+50
+= Me
+= 200 e
+M
+50
+200 e M
+200 e M
+200 e
+.
+\item 
+So the equation for M becomes
+100 = 200e
+%%-- Page 4
+0.25
+200e
+0.005M
+50
+50 e
+M
+Me
+M
+50 e
+M
+M
+
+%%--- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%--- April 2005
+%%--- Examiners Report
+so that
+e
+0.005M
+=
+200 e
+0.25
+100
+200
+= 0.2788
+and hence
+M =
+6
+(i)
+\[ M = \frac{- \log 0.2788}{0.005} = 
+= 255.45\]
+\end{itemize}
+\end{document}
