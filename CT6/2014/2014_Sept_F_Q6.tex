@@ -1,0 +1,104 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+6
+X 1 = (8130 + 9210 + 8870) / 3 = 8736.67
+X 2 = (7420 + 6980 + 8130) / 3 = 7510
+X 3 = (9070 + 8550 + 7730) / 3 = 8450
+X
+= (8736.67 + 7510 + 8450) / 3 = 8232.22
+s 1 2 =%%--- Question 6
+For three years an insurance company has insured buildings in three different towns
+against the risk of fire damage. Aggregate claims in the j th year from the i th town are
+denoted by X ij for i = 1, 2, 3 and j = 1, 2, 3. The data is given in the table below.
+Town i
+1
+2
+3
+1 Year j
+2 3
+8,130
+7,420
+9,070 9,210
+6,980
+8,550 8,870
+8,130
+7,730
+Calculate the expected claims from each town for the next year using the assumptions
+of Empirical Bayes Credibility Theory model 1.
+[10]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+3
+ ( X ij  X 1 ) 2  (8130  8736.67) 2  (9210  8736.67) 2
+j  1
++ (8870  8736.67) 2 = 609866.65
+Similarly s 2 2 = 673,400
+s 3 2 = 912,800
+E(s 2 ()) =
+1
+( s 1 2  s 2 2  s 3 2 ) = 366,011.11
+3  2
+Var[m()] =
+
+1
+(8736.67  8232.22) 2  (7510  8232.22) 2
+2
+1
+ (8450  8232.22) 2  E ( s 2 (  ))
+3
+
+= 411,749.83  366,011.11 / 3
+= 289,746.13
+so Z =
+3
+ 0.7037
+366011.11
+3 
+289746.13
+so we have
+
+\begin{description}
+\item{Town 1}: $0.7037 \times  8736.67 + 0.2963  8232.22 = 8587.2$
+\item{Town 2}: $0.7037  7510
++ 0.2963  8232.22 = 7724.0$
+\item{Town 3}: $0.7037  8450
++ 0.2963  8232.22 = 8385.5$
+\end{description}
+
+This question was well answered with many candidates scoring full marks.
+Page 8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – September 2014 – Examiners’ Report
+
+\end{document}
