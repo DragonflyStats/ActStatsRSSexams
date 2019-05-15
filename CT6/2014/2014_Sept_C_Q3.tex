@@ -1,0 +1,120 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+Sara is a car mechanic for a racing team. She knows that there is a problem with the
+car, but is unsure whether the fault is with the gearbox or the engine. Sara is able to
+observe one practice race.
+If the underlying problem is with the gearbox there is a 40% chance the car will not
+complete the practice race. If the underlying problem is with the engine there is a
+90% chance the car will not complete the practice race.
+At the end of the practice race Sara must decide, on the basis of whether the car
+completes the practice race, whether the fault lies with the gearbox or the engine.
+\begin{enumerate}
+\item (i)
+Write down the four decision functions Sara could adopt.
+\medskip 
+If Sara correctly identifies the fault there is no cost. The cost of incorrectly deciding
+the fault is with the gearbox is £1m. The cost of incorrectly deciding the fault is with
+the engine is £5m.
+\item (ii)
+Show that one of the decision functions is dominated.
+
+The probability that the fault lies with the gearbox is p.
+\item (iii)
+
+Determine the range of values of p for which Sara will, under the Bayes
+criterion, choose a decision function whose outcome is affected by whether or
+not the car completes the practice race.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+
+3
+(i)
+The four decision functions are:
+d 1 – choose the gearbox regardless
+d 2 – choose the gearbox if the car stops and the engine otherwise
+d 3 – choose the engine if the car stops and the gearbox otherwise
+d 4 – choose the engine regardless
+(ii)
+Let  1 = state of nature where gearbox is at fault
+ 2 = state of nature where engine is at fault
+Let R(d i ,  j ) = E(L(d i ,  j ))
+Then the expected loss matrix is:
+ 1
+ 2
+d 1 d 2 d 3 d 4
+0
+1 3
+2
+0.9 0.1 5
+0
+where
+R(d 2 ,  1 ) = 0.6  5 = 3
+R(d 2 ,  2 ) = 0.9  1 = 0.9
+R(d 3 ,  1 ) = 0.4  5 = 2
+R(d 4 ,  2 ) = 0.1  1 = 0.1
+Page 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – September 2014 – Examiners’ Report
+It is clear that d 2 is dominated by d 3 .
+(iii)
+
+Under Bayes criteria, we need to minimise the expected loss.
+Expected losses are
+\begin{eqnarray*}
+E(L(d 1 )) &=& 0.p + 1.(1  p) = 1  p
+\\E(L(d 3 )) &=& 2p + 0.1(1  p) = 1.9p + 0.1\\
+E(L(d 4 )) &=& 5p + 0.(1  p) = 5p\\
+\end{eqnarray*}
+
+We need to choose p so that d 3 has the lowest expected loss, i.e.
+1.9p + 0.1 < 1  p i.e. 2.9p < 0.9 i.e. p < 0.3103
+1.9p + 0.1 < 5p i.e. 0.1 < 3.1p i.e. p > 0.03226
+and
+so we need 0.03226 < p < 0.3103
+9 
+ 1
+.
+
+
+p
+  31
+29  
+
+[Total 9]
+This Bayes’ Criterion question was very disappointingly answered, with only the best
+candidates managing to calculate the correct answer to part (iii).
+\end{document}
