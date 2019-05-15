@@ -1,0 +1,138 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+  
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+
+
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+ 2 Claim amounts Xi from a portfolio of insurance policies follow a gamma distribution
+with parameters k and \lambda  i. Each \lambda  i also follows a gamma distribution with parameters
+\alpha and \beta .
+\begin{enumerate}
+
+
+\item
+(i) Show that the mixture distribution of losses is a generalised Pareto, with
+parameters \alpha, \beta , k. [4]
+Claim amounts are now assumed to be exponentially distributed with parameter \lambda  i.
+\item (ii) Show, using your answer to part (i), that the mixture distribution of losses is
+now a standard Pareto distribution with parameters \alpha, \beta .
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%-- Solutions
+
+Q2 (i)   ,  
+0
+fX x fX x, d
+
+       |  
+0
+f fX x| d
+
+      [½]
+        1 1
+0
+exp
+Γ Γ
+k
+xk exp x d
+k
+ 
+   
+   
+ 
+   
+ 
+ 
+  
+      1
+1
+0
+Γ
+exp
+Γ Γ Γ
+k k
+k
+k
+x k x x d
+k x k
+   
+ 
+
+    
+      
+      . [2]
+The integral sums to 1 so we are left with
+ 
+     
+Γ 1
+, 0
+Γ Γ
+k
+k
+k x x
+k x
+ 
+
+  
+
+  
+[1]
+Which is the PDF of the Generalised Pareto distribution.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(ii) The Exponential is a special case of the Gamma distribution with k = 1. 
+So the mixture distribution is
+ 
+       
+1 1
+1 1
+Γ 1
+Γ Γ 1
+x
+x x
+  
+ 
+   
+
+    
+[1]
+Which is the PDF of a Pareto distribution with parameters  and  . [½]
+[Total 6]
+Candidates who were familiar with the necessary bookwork were able to
+score very well here, although a disappointing number were not. Most
+candidates spotted the first step in part (ii) – setting k equal to 1.
+
+\end{document}
