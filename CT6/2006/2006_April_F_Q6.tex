@@ -1,0 +1,166 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+
+
+\begin{document}
+6
+An insurance company has a set of n risks (i = 1, 2, , n) for which it has recorded
+the number of claims per month, y_{ij} , for m months (j = 1, 2, , m).
+It is assumed that the number of claims for each risk, for each month, are independent
+Poisson random variables with
+E[y_{ij} ] =
+ij .
+These random variables are modelled using a generalised linear model, with
+log
+ij
+=
+i
+(i = 1, 2,
+\begin{enumerate}
+\item (i) Derive the maximum likelihood estimator of 
+\item (ii) Show that the deviance for this model is
+n
+m
+2
+y_{ij} log
+i 1 j 1
+where y i =
+7
+, n)
+1
+m
+y_{ij}
+y i
+( y_{ij}
+i .
+
+y i )
+m
+y_{ij} .
+
+j 1
+\item (iii) A company has data for each month over a 2 year period. For one risk, the
+average number of claims per month was 17.45. In the most recent month for
+this risk, there were 9 claims. Calculate the contribution that this observation
+makes to the deviance.
+\end{enumerate}
+\newpage
+%%-- %%-- Page 5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+y_{ij}
+6
+(i)
+ij
+\begin{itemize}
+\item The likelihood is
+e
+April 2006
+Examiners Report
+ij
+y_{ij} !
+i , j
+and the loglikelihood is
+n
+m
+( y_{ij} log
+l =
+ij
+ij
+log y_{ij} !)
+i 1 j 1
+\item Hence
+n
+m
+( y_{ij}
+l =
+e i
+me i
+i
+log y_{ij} !)
+i 1 j 1
+m
+l
+y_{ij}
+=
+i
+l
+j 1
+= 0
+e
+i
+i
+and
+(ii)
+i
+j 1
+n m
+y_{ij}
+= log y i
+The deviance is
+n
+2(l f
+m
+l c ) = 2
+( y_{ij} log y_{ij}
+y_{ij} )
+i 1 j 1
+n
+y_{ij} log
+i 1 j 1
+( y_{ij} log y i
+y i )
+i 1 j 1
+m
+= 2
+\item (iii)
+m
+1
+= y i , where y i =
+m
+y_{ij}
+y i
+( y_{ij}
+y i )
+\item The deviance is
+D_{ij} = y_{ij} log
+y_{ij}
+y i
+( y_{ij}
+y i ) = 9 log
+9
+(9 17.45)
+17.45
+= 2.491
+\item Full credit should also be given to 2 x 2.491 = 4.98
+Comments on question 6: Most candidates scored well on (i). Only more able candidates
+scored well on parts (ii) and (iii). There were some relatively easy marks available in (iii) for
+applying data to the formula given in (ii).
+\end{itemize}
+%%-- %%-- Page 6
+%%-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
