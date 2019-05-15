@@ -1,0 +1,108 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%--- Question 6
+
+On 1 January 2001 an insurer in a far off land sells 100 policies, each with a five year
+term, to householders wishing to insure against damage caused by fireworks. The
+insurer charges annual premiums of £600 payable continuously over the life of the
+policy.
+The insurer knows that the only likely date a claim will be made is on the day of
+St Ignitius feast on 1 August each year, when it is traditional to have an enormous
+fireworks display. The annual probability of a claim on each policy is 40\%. Claim
+amounts follow a Pareto distribution with parameters = 10 and = 9,000.
+\begin{enumerate}
+\item (i) Calculate the mean and standard deviation of the annual aggregate claims. 
+\item (ii) Denote by (U, t) the probability of ruin before time t given initial surplus $U$.
+(a)
+(b)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 
+Explain why for this portfolio $(U, t 1 ) = (U, t 2 )$ if
+$7/12 < t 1 , t 2 < 19/12$.
+
+Estimate (15,000, 1) assuming annual claims are approximately
+Normally distributed.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item The number of annual claims N follows a binomial distribution:
+N ~ B(100, 0.4) then
+E(N) = 100
+0.4 = 40
+and
+Var(N) = 100
+0.4
+0.6 = 24.
+\item Let $X$ denote the distribution of the individual claim amounts, so that X ~
+Pareto(10, 9,000). Then
+E(X) =
+9, 000
+= 1,000
+10 1
+and
+Var(X) =
+9, 000 2 10
+9 2 8
+= 1,250,000.
+\item The annual aggregate claim amount S has
+E(S) = E(N)E(X) = 40
+1,000 = 40,000
+and
+\begin{eqnarray*}
+Var(S) &=& E(N)Var(X) + Var(N)E(X)^2\\
+&=& 40
+1,250,000 + 24
+1,000^2\\
+&=& 74,000,000\\
+&=& (8,602.33) 2\\
+\end{eqnarray*}
+%%-- Page 5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(ii)
+(a)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Since claims can only fall on one day of the year, there is effectively only one day of the year on which ruin can occur, namely 1 August (or strictly shortly thereafter). For a year after 1 August, the insurer will be receiving premiums but paying no claims, and hence solvency will be improving. Hence
+\[(U, t 1 ) = (U, t 2 ) if 7/12 < t 1 , t 2 < 19/12.\]
+\item (b)
+We must find (15,000, 1). But ruin will have occurred before time 1
+only if it occurs at t = 7/12. Just before the claims occur, the insurers assets will be 7/12 100 600 + 15,000 = 50,000 and ruin will occur if the aggregate claims in the first year exceed this level. \item Assuming that S is approximately normally distributed, we have
+P(Ruin) = P(N(40,000, (8,602.33) 2 ) > 50,000)\\
+= P N (0, 1)\\
+= 1
+50, 000 40, 000
+8, 602.33
+(1.162)
+= 0.123.
+\end{itemize}
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
