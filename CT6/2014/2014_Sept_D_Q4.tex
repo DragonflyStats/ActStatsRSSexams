@@ -1,0 +1,148 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+[Total 9]4
+As part of a simulation study an actuary is asked to design an algorithm for simulating
+claims from a particular type of insurance policy. The probability distribution of the
+annual number of claims on a policy is given by:
+Probability
+No claims One claim Two claims
+0.4 0.4 0.2
+The claim size distributions of the first and second claims are different. The size of
+the first claim follows an exponential distribution with mean 10. The size of the
+second claim follows a Weibull distribution with parameters c = 1 and γ = 4.
+5
+(i) Construct an algorithm to simulate the first claim on a given policy. 
+(ii) Construct an algorithm to simulate the second claim on a given policy. 
+(iii) Construct an algorithm to simulate the total annual claims on a given policy.
+
+[Total 10]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The table below shows the incremental claims incurred for a certain portfolio of
+insurance policies.
+Accident year
+2011
+2012
+2013
+Development year
+0
+1
+2
+2,233
+3,380
+4,996
+1,389
+1,808
+600
+Cumulative numbers of claims are shown in the following table:
+Accident year
+2011
+2012
+2013
+Development year
+0
+1
+2
+140
+180
+256
+203
+230
+224
+(i) Calculate the outstanding claim reserve for this portfolio using the average
+cost per claim method with grossing up factors.
+[7]
+(ii) State the assumptions underlying the calculations in part (i).
+CT6 S2014–3
+
+[Total 10]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+4
+(i)
+Using the inversion method, set
+u = F(x) = 1  e
+
+
+x
+10
+x
+10
+i.e. 1  u = e
+i.e. x
+log(1  u) = 10
+i.e. x = 10 log(1  u)
+so the algorithm is:
+Step 1
+Step 2
+Generate a sample u from a U(0,1) distribution.
+Set x = 10 log(1  u).
+
+Page 5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – September 2014 – Examiners’ Report
+(ii)
+Again using the inversion method, set
+ x
+u = F(x) = 1  e
+i.e.  x
+1  u = e
+i.e. x 4 = log(1  u)
+i.e. x = [log(1  u)] 1⁄4
+4
+4
+so the algorithm is
+Step 1
+Step 2
+Generate a sample u from a U(0,1) distribution.
+Set x = [log(1  u)] 1⁄4 .
+
+(iii)
+Our algorithm is as follows:
+Step 1 Generate a sample u from a U(0,1) distribution.
+Step 2 If 0  u  0.4 then total claim amount X = 0 and stop
+Else continue to step 3.
+Step 3 If 0.4 < u 0.8 then simulate a claim from Exp(1/10)
+distribution using the algorithm in (i) and set X = this value
+and stop.
+Else go to step 4.
+Step 4
+Simulate claims using the algorithms in (i) and (ii) and set
+X = total of the two simulated claims.
+
+[Total 10]
+This question was well answered.
+\end{document}
