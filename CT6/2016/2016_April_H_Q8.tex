@@ -1,0 +1,159 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+% [Total 11]
+% CT6 A2016–5 PLEASE TURN OVER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+8 (i) Show that:
+  2
+2 2
+1 (ln ) 2 2
+2 ½
+2
+1 ln ln
+2
+b x
+a
+e dx e b a
+ 
+  
+           
+                
+ . [4]
+A general insurance company writes claims, whose amounts have a lognormal
+distribution, with mean 300 and standard deviation 400. The insurance company
+purchases excess of loss reinsurance with retention 500 per claim.
+(ii) Calculate the average expected claim size payable by the insurance
+company. [6]
+Next year, claim inflation is 10%, but the retention amount remains the same.
+(iii) Explain whether the average expected claim size payable by the insurance
+company next year would increase by 10%. [2]
+[Total 12]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+Q8 (i) I =
+  2
+2
+1 (ln )
+2
+2
+1
+2
+b x
+a
+e dx
+− −μ
+σ
+πσ
+
+Put y lnx, so dy = 1 dx
+x
+and dx = eydy [1]
+I =
+  2
+2
+1 ( ) ln 2
+ln 2
+1
+2
+b y y
+a
+e edy
+− −μ
+σ
+πσ
+ [½]
+=
+  ln 2 2 2
+ln 2 2
+1 exp 1 ( 2 2 )
+2 2
+b
+a
+− y − μy + μ − yσ dy
+πσ  σ 
+ [½]
+Subject CT6 (Statistical Methods Core Technical) – April 2016 – Examiners’ Report
+Page 8
+=
+  ln 2 2 2 4
+ln 2 2
+1 exp 1 (( ) 2 )
+2 2
+b
+a
+− y −μ −σ − μσ −σ dy
+πσ  σ 
+ [1]
+=
+  2 2
+2 2
+1 ( ) ½ ln 2
+ln 2
+1
+2
+b y
+a
+e e dy
+−μ−σ
+μ+ σ σ
+πσ  [½]
+= 2 2 2
+eμ+½σ ln b ln a   − μ − σ   − μ − σ   Φ  −Φ     σ   σ  
+[½]
+[Total 4]
+(ii)
+e(μ+σ2 /2) = 300
+e(2μ+σ2 ) (eσ2 −1) = 4002
+2 2
+2
+2
+400 25 ( 1) ln9 300
+eσ − = → σ =  
+ 
+[1]
+μ = ln 300 − σ2 / 2 = ln180 [1]
+Average claim payable is
+E(X|X < 500) + 500 * P(X ≥ 500) [1]
+( )
+ln 500 2 E(X|X 500) 300 * 300 * 0 150
+ − μ − σ  < = Φ   = Φ =  σ 
+[1]
+P(X ≥ 500) = 1−Φ  ln 500 − μ  = 0.1561  σ 
+[1]
+So average claim is 150 + 500 * 0.1561 = 228.0 (4sf) [1]
+%- [Total 6]
+(iii) The insurance company’s expected claims would increase by less than 10%,
+[½]
+since the chances of high claims has increased due to the standard deviation remaining the same, hence the reinsurer will pick up a greater share of the claims.% [1½]
+
+
+% Candidates who had learned the bookwork underlying part (i) were able to score well here. Most candidates did well on parts (ii) and (iii).
+% Subject CT6 (Statistical Methods Core Technical) – April 2016 – Examiners’ Report
+\end{document}
