@@ -1,0 +1,191 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+[Total 14]8
+Claims on a portfolio of insurance policies follow a Poisson process with rate \lambda.
+Individual claim amounts follow a distribution X with mean $\mu$   and variance \sigma^{2} . The
+insurance company charges premiums of c per policy per year.
+(i) Write down the equation satisfied by the adjustment coefficient R.
+(ii) Show that R can be approximated by
+
+2( c − \mu   )
+R ˆ = 2
+\sigma   + \mu   2
+
+Now suppose that individual claims follow a distribution given by
+Value
+10
+Probability 0.3
+20
+0.5
+50
+0.15
+100
+0.05
+The insurance company uses a premium loading of 30%. It is considering the
+following reinsurance arrangements:
+(iii)
+(iv)
+CT6 S2014–5
+A No reinsurance.
+B Proportional reinsurance where the insurer retains 70\% of all claims with
+a reinsurer using a 20\% premium loading.
+C Excess of loss reinsurance with retention 70 with a reinsurer using a 40%
+premium loading.
+Determine which arrangement gives the insurance company the lowest
+probability of ultimate ruin, using the approximation in part (ii)
+Comment on your result in part (iii).
+[10]
+
+[Total 17]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+8
+Note: the question should have read “... premiums of c per claim per year”, rather
+than “per policy”. This would have meant the equation in (i) simplified to
+1 + cR = M x (R).
+(i)
+R is the solution to
+ + ncR =  M x ( R ), where n is the number of policies
+Note: Full credit also given for  + cR =  M x ( R ) and 1 + cR = M x ( R )
+Note: The solution shown in part (ii) is based on the equation 1 + cR = M x ( R )
+
+(ii)
+1 + cR = E ( e XR )
+
+
+R 2 X 2
+ ... 
+= E  1  RX 
+
+
+2
+
+
+R 2
+= 1 + RE ( X ) 
+E ( X 2 )  ...
+2
+Now E(X) = 
+and E(X 2 ) = Var(X) + E(X) 2 =  2 +  2 so we have
+1 + cR = 1 + R +
+R 2 2
+(    2 )  ...
+2
+truncating at the term involving R 2 gives
+R ˆ 2 2
+1  cR ˆ = 1   R ˆ 
+(    2 )
+2
+Page 11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – September 2014 – Examiners’ Report
+i.e. c =  +
+R̂ =
+R ˆ 2
+(    2 )
+2
+2( c   )
+ 2   2
+
+Note: if candidates assumed that  + cR =  M x (R), the alternative correct solution receiving
+2  c   
+.
+full credit is R ˆ 
+  2   2
+
+
+If candidates assumed that  + ncR =  M x (R), the alternative correct solution receiving full
+2  nc   
+.
+credit is R ˆ 
+  2   2
+
+
+For part (iii), most candidates used the formula given in the question, although full credit
+was given to candidates who used the alternative formulae above and then correctly worked
+through the reinsurance outcomes, whether or not they left their answers in terms of  and n,
+or set them to be some sensible value.
+(iii)
+(A)
+We have E(X) = 10  0.3 + 20  0.5 + 50  0.15 + 100  0.05
+= 25.5
+and E(X 2 ) = 10 2  0.3 + 20 2  0.5 + 50 2  0.15 + 100 2  0.05
+= 1105
+Here c = 25.5  1.3 = 33.15
+and so R̂ =
+(B)
+2(33.15  25.5)
+= 0.013846
+1105
+We now have  = 0.7  25.5 = 17.85
+ 2 +  2 = E ((0.7X) 2 ) = 0.7 2  1105 = 541.45
+and
+c = 33.15  0.3  25.5  1.2
+= 33.15  9.18
+= 23.97
+and so R̂ =
+Page 12
+2(23.97  17.85)
+= 0.02261
+541.45%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – September 2014 – Examiners’ Report
+(C)
+We now have  = 10  0.3 + 20  0.5 + 50  0.15 + 70  0.05
+= 24
+and  2 +  2 = 10 2  0.3 + 20 2  0.5 + 50 2  0.15 + 70 2  0.05
+= 850
+the reinsurer charges premiums of 30  0.05  1.4 = 2.1
+so c = 33.15  2.1 = 31.05
+and R̂ =
+2(31.05  24)
+= 0.01659
+850
+The higher the adjustment coefficient the lower the probability of ruin, so
+approach B gives the lowest probability of ruin.
+%%%%%%%%%%%%%%%%%%
+\newpage
+(iv)
+It is clear that B is better than A since the reinsurer’s premium loading is
+lower than the insurer’s. So we have a 30\% reduction in claims but a lower
+than 30\% reduction in premiums.
+The excess of loss reinsurance in C does reduce risk relative to A but not as
+much as B. This will be a combination of the relatively high retention and the
+reinsurer’s premium loading being higher than the insurer’s.
+
+[Total 17]
+Full credit was given for alternative comments reflecting the answers derived by candidates
+using the alternative formulae.
+Despite the issue with the wording in the question, many candidates scored well on this
+question.
+\end{document}
