@@ -1,0 +1,94 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+Let $X _{t }= a + bt + Y t$ , where Y t is a stationary time series, and a and b are fixed non-
+zero constants.
+
+\begin{enumerate}
+\item (i)
+Show that $X _{t}$is not stationary.
+
+Let $\Delta_{X} t = X _{t }− X _{t − 1}$ .
+(ii) Show that \Delta_{X} t is stationary. 
+\item (iii) Determine the autocovariance values of \Delta_{X} t in terms of those of Y t . 
+Now assume that Y t is an MA(1) process, i.e. \[Y t = \varepsilon t + \beta \varepsilon t–1\]
+\item (iv) Set out an equation for $\Delta_{X} t$ in terms of b, \beta , \varepsilon t and L, the lag operator.
+\item (v) Show that $\Delta_{X} t$ has a variance larger than that of Y t .
+
+
+\end{enumerate}
+[Total 12]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+Q10
+\begin{itemize}
+\item i)
+Since $E(Y_{t } ) = \mu Y$ is constant for each t, $E(Xt ) = a + bt + \mu_Y$ . 
+Since this mean depends on t then the time series Xt is not stationary. 
+\item (ii) $\Delta_{X}t = b + \Delta Y_{t }$ (and since Y_{t } is stationary $\Delta Xt$ is) 
+\item (iii) And the covariance function is 
+\begin{eqnarray*}
+Cov(\Delta Xt , \Delta Xt–s ) &=& Cov(Y_{t } – Y_{t-1 } ,Y t–s – Y_{t }–s–1 ) \\
+&=& Cov(Y_{t } ,Y_{t }–s ) + Cov(Y_{t-1 },Y_{t-1 }–s ) – Cov(Y_{t } ,Y_{t }–s–1 ) – Cov(Y_{t-1 },Y_{t }–s ) \\
+&=&  Y (s) +  Y (s) –  Y (s + 1) –  Y (s – 1) 
+\\ 
+&=& 2 Y (s) –  Y (s + 1) –  Y (s – 1) 
+\\
+\end{eqnarrray*}
+Where  Y (s) represents the autocovariance of Y at s.
+\item (iv)
+(v)
+Y_{t } = \varepsilon t + \beta \varepsilon t–1 , where \varepsilon t is white noise with variance \sigma^{2} then
+\[\Delta Xt = b + \varepsilon t + \beta \varepsilon t–1 - \varepsilon t -1 - \beta \varepsilon t–2\]
+or
+\Delta Xt = b + (1 – L)(1 + \beta L) \varepsilon t .
+\end{itemize}
+
+[Max 1]
+In particular Y t   t   t  1 the corresponding auto-covariance function is
+\gamma Y (0)  (1   2 ) \sigma^{2} and \gamma Y (1)  \sigma^{2} .
+
+So from (iii) 
+\begin{eqnarray*}
+var(\Delta(X)) &=& 2\gamma Y (0) − 2\gamma Y (1) \\ 
+&=& 2(1 + \beta 2 )\sigma^{2} − 2\beta\sigma^{2} \\ 
+&=& ( 1 + \beta 2 ) \sigma^{2} + ( 1 − \beta ) 2 \sigma^{2} > ( 1 + \beta 2 ) \sigma^{2} \\ &=& \gamma Y ( 0)\\
+\end{eqnarray*}
+
+Most candidates were able to score well on parts (i) and (ii), and
+although only stronger candidates were able to score well on parts (iii)
+and (v), this question presented few problems for those well prepared
+on this topic.
+\end{document}
