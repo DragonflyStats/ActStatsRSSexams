@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+
+CT6 A2007—47
+The total claims arising from a certain portfolio of insurance policies over a given
+month is represented by
+⎧ N
+⎪ X i
+S = ⎨ ∑
+i = 1
+⎪
+⎩ 0
+if
+N > 0
+if N = 0
+where N has a Poisson distribution with mean 2 and X 1 , X 2 , ... , X N is a sequence of
+independent and identically distributed random variables that are also independent of
+N. Their distribution is such that P ( X i = 1) = 1/ 3 and P ( X i = 2) = 2 / 3 . An
+aggregate reinsurance contract has been arranged such that the amount paid by the
+reinsurer is S - 3 (if S > 3) and zero otherwise.
+The aggregate claims paid by the direct insurer and the reinsurer are denoted by
+S I and S R , respectively.
+Calculate E ( S I ) and E ( S R ) .
+
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+7
+E ( S ) = E ( N ) × E ( X 1 )
+= 2 × (1 × 1 + 2 × 2 )
+3
+3
+= 10
+3
+and S = S I + S R .
+We will calculate directly the distribution of S I .
+P ( S I = 0) = P ( N = 0) = e − 2 = 0.13534
+P ( S I = 1) = P ( N = 1) P ( X 1 = 1) = e − 2
+2 1 1
+× = 0.09022
+1! 3
+P ( S I = 2) = P ( N = 1) P ( X 1 = 2) + P ( N = 2) P ( X 1 = 1) P ( X 2 = 1)
+2 1 2 − 2 2 2 1 1
+× + e
+× ×
+1! 3
+2! 3 3
+= 0.21052
+= e − 2
+P ( S I = 3) = 1 − 0.13534 − 0.09022 − 0.21052 = 0.56392
+E ( S I ) = 0 × 0.13534 + 1 × 0.09022 + 2 × 0.21052 + 3 × 0.56392
+= 2.20303
+and hence
+E ( S R ) = E ( S − S I ) = E ( S ) − E ( S I ) = 10 − 2.20303 = 1.1303.
+3
+Page 7Subject CT6 (Statistical Methods Core Technical) — April 2007 — Examiners’ Report
+
+
+
+\end{document}
