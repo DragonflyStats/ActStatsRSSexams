@@ -1,0 +1,184 @@
+\documentclass[a4paper,12pt]{article}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+
+
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document}
+\begin{enumerate}
+
+%%- Question 5 
+\item Claims X each year from a portfolio of insurance policies are normally distributed
+with mean $\theta$ and variance $\tau^2$. Prior information is that $\theta$ is normally distributed with
+known mean \mu and known variance \sigma2.
+Aggregate claims over the last n years have been xi for i = 1 to n, and you should
+assume that these are independent.
+\begin{enumerate}[(a)]
+\item (i) Derive the posterior distribution of $\theta$. 
+\item (ii) Write down the Bayesian estimate of $\theta$ under quadratic loss. 
+\item (iii) Show that the estimate in your answer to part (ii) can be expressed in the
+form of a credibility estimate, including statement of the credibility factor Z.
+\end{enumerate}
+
+\item % Question 6
+
+\begin{enumerate}
+\item (i) Explain what is meant by a saturated model. 
+\item(ii) State the definition of the scaled deviance in a fitting under generalised
+linear modelling. 
+\item (iii) (a) Define both Pearson and deviance residuals.
+(b) Explain how these two types of residuals are generally different.
+(c) State in which case they are the same. 
+\end{enumerate}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+Q5 (i) Given
+f(\theta) 
+2
+2 2
+exp ( ) exp 1
+2 2
+\theta  \mu
+  
+\sigma \sigma
+(\theta2  2\mu\theta)
+and
+p(x\theta) 
+2
+2
+2 2
+1 1
+exp ( ) exp 1 ( 2 )
+2 2
+n n
+i
+i
+i i
+x x
+ 
+ \theta
+   \theta  \theta
+\tau \tau  
+ 2
+2
+exp 1 ( 2 )
+2
+ n\theta  nx\theta
+\tau
+1
+=
+  n
+i
+i
+x nx
+
+ 
+ 
+ 
+ ,
+we want
+p(\thetax)  p(x\theta) p(\theta)
+ 2
+2 2 2 2
+exp 1
+2 2
+   n  \theta   \mu  nx  \theta         \sigma \tau   \sigma \tau  
+ exp  \tau2  n\sigma2
+2\sigma2\tau2 \theta2  2 \mu\tau2  nx\sigma2
+\tau2  n\sigma2
+
+ 
+
+ 
+\theta
+ 
+
+ 
+
+
+
+
+
+
+
+
+2 2 2 2 2
+2 2 2 2 exp
+2
+n nx
+n
+ \tau  \sigma  \mu\tau  \sigma    \theta   
+ \sigma \tau  \tau  \sigma  
+ \thetax ~
+  2 2 2 2
+2 2 2 2 2 2 N n x,
+n n n
+ \tau \sigma \sigma \tau 
+ \mu  
+ \tau  \sigma \tau  \sigma \tau  \sigma 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – September 2015 – Examiners’ Report
+Page 6
+(ii) The posterior mean (the point estimator under quadratic loss) is
+E(\thetax) =
+  2 2
+2 2 2 2
+n x
+n n
+\tau \sigma
+\mu 
+\tau  \sigma \tau  \sigma
+(iii) E(\thetax) = (1  Z) \mu + Zx
+where
+Z =
+  2
+2 2
+n
+n
+\sigma
+\tau  \sigma
+= 2
+2
+n
+n \tau
+
+\sigma
+is the credibility factor. Hence E(\thetax) can be expressed in the form of a
+credibility estimate.
+Again well prepared candidates who had learnt the relevant bookwork scored
+very well on this question. Some candidates attempted to “fudge” the result or
+only quoted the result, making no attempt to derive it, and hence scored
+poorly.
+\end{document}
