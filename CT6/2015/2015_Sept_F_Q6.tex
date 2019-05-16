@@ -1,0 +1,75 @@
+\documentclass[a4paper,12pt]{article}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+
+
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document}
+\begin{enumerate}
+
+\item % Question 6
+
+\begin{enumerate}
+\item (i) Explain what is meant by a saturated model. 
+\item(ii) State the definition of the scaled deviance in a fitting under generalised
+linear modelling. 
+\item (iii) (a) Define both Pearson and deviance residuals.
+(b) Explain how these two types of residuals are generally different.
+(c) State in which case they are the same. 
+\end{enumerate}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+Q6 (i) The saturated model is one where the number of parameters is the same as the
+data points,
+i.e. the fitted values are the same as the fitted data.
+(ii) The scaled deviance is twice the difference between the log likelihood values between the model in consideration and the saturated model.
+(iii) (a) Pearson residuals are
+var( ˆ )
+y \muˆ
+\mu
+where ˆ \mu is the fitted response
+estimator.
+The deviance residuals are sign(y \muˆ)di where di is the contribution of
+the i-th to the total deviances,
+i.e. 2
+di is the scaled deviance.
+(b) The Pearson residuals tend to be skewed in non normal data while the deviance residuals tend to be symmetric and hence the
+normal assumption is more appropriate.
+For that reason the latter is preferred in actuarial applications.
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – September 2015 – Examiners’ Report
+Page 7
+(c) In the normal data, normal residuals these are identical.
+Most candidates were able to score at least some of the marks here, but only the stronger candidates had sufficient recall and understanding of the full detail of the bookwork in order to score very well.
+\end{document}
