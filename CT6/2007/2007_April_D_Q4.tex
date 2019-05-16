@@ -1,0 +1,140 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+CT6 A2007—24
+A casino operator moving into a country for the first time must apply to the casino
+regulator for a licence. There are three types of licence to choose from — slots, dice
+and cards — each with different running costs. The casino operator has to pay a fixed
+amount annually (£1,300,000) to the regulator, plus a variable annual licence cost.
+The variable licence cost and expected revenue per customer for each type of game
+are as follows:
+Variable
+Expected Revenue
+Licence cost
+per customer
+£
+£
+Slots
+Dice
+Cards
+250,000
+550,000
+1,150,000
+60
+120
+160
+The casino operator is uncertain about the number of customers and decides to
+prepare a profit forecast based on cautious, best estimate and optimistic numbers of
+customers. The figures are 14,000; 20,000 and 23,000 respectively.
+\begin{enumerate}[(a)]
+\item (i) Determine the annual profits under each possible combination. [
+\item (ii) Determine the minimax solution for optimising the profits. 
+\item (iii) Determine the Bayes criterion solution based on the annual profit given the
+probability distribution P (cautious) = 0.2, P (best estimate) = 0.7 and
+P (optimistic) = 0.1.
+\end{enumerate}
+
+4
+(i)
+(
+)
+(
+)
+1 − 100 \lambda  − 2000 \lambda 
+− e
+= 1000 e − 0.1 − e − 2 = 769.5 .
+e
+\lambda 
+Revenue (£)
+Slots
+Dice
+Cards
+Cautious Best estimate Optimistic
+840,000
+1,680,000
+2,240,000 1,200,000
+2,400,000
+3,200,000 1,380,000
+2,760,000
+3,680,000
+Cautious Best estimate Optimistic
+1,550,000
+1,850,000
+2,450,000 1,550,000
+1,850,000
+2,450,000 1,550,000
+1,850,000
+2,450,000
+Cautious Best estimate Optimistic
+- 710,000
+- 170,000
+- 210,000 - 350,000
+550,000
+750,000 - 170,000
+910,000
+1,230,000
+Costs (£)
+Slots
+Dice
+Cards
+Profit (£)
+Slots
+Dice
+Cards
+Slots is dominated by Dice and Cards, so could be left out from here on.
+(ii)
+Maximum
+Cost
+Slots
+Dice
+Cards
+- 710,000
+- 170,000
+- 210,000
+The minimax decision is Dice.
+
+(iii)
+Expected
+Profit
+Slots
+Dice
+Cards
+- 404,000
+442,000
+606,000
+The highest expected profit comes from Cards.
+\end{document}
