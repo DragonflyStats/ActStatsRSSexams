@@ -1,0 +1,197 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document}
+
+\begin{enumerate}
+5
+The cumulative claim amounts incurred on a portfolio of motor insurance policies are
+as follows:
+Accident Year
+Development Year
+0 1 2 3
+2014 3,907 5,606 6,061 6,145
+2015 4,831 7,319 7,470 2016 6,042 8,282 2017 7,061
+The cumulative number of reported claims are as follows
+Accident Year
+(i)
+Development Year
+0 1 2 3
+2014 435 469 528 534
+2015 485 525 541 2016 509 558 2017 544
+Estimate the ultimate number of claims, for each accident year, using the
+chain-ladder technique.
+[4]
+(ii) Estimate the ultimate average incurred cost per claim, for each accident year,
+using the grossing-up method.
+[5]
+(iii) Calculate the total reserve required, using the results from (i) and (ii),
+assuming that claims paid to date are 19,544.
+[2]
+[Total 11]
+
+CT6 S2018–3 
+\newpage 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q5
+(i)
+df1 = 534 / 528 = 1.011 364 ...
+df2 = (528+541)/(469+525) = 1.075 453 ...
+df3 = (469 + 525 + 558) / (435 + 485 + 509) = 1.086 074 ...
+Accident
+Year
+2014
+2015
+2016
+2017
+[1]
+[1⁄2]
+[1⁄2]
+Development Year
+0
+435
+485
+509
+544
+1
+469
+525
+558
+2
+528
+541
+3
+534
+547.15
+606.92
+642.62
+[2]
+(ii)
+Cost per claim:
+Accident
+Year
+2014
+2015
+2016
+2017
+Development Year
+0
+8.982
+9.961
+11.870
+12.980
+1
+11.953
+13.941
+14.842
+2
+11.479
+13.808
+3
+11.507
+[2]
+Grossing up table:
+Accident
+Year
+0
+2014
+78.050%
+2015
+71.962%
+2016
+81.811%
+2017
+77.274%
+Development Year
+1
+103.872%
+100.716%
+102.294%
+2
+99.754%
+99.754%
+3
+100%
+[2]
+Page 5Subject CT6 (Statistical Methods Core Technical) – September 2018 – Examiners’ Report
+Ultimate average cost per claim:
+Accident
+Development Year
+Year
+0
+1
+2
+2014
+8.982
+11.953
+11.479
+2015
+9.961
+13.941
+13.808
+2016
+11.870
+14.842
+2017
+12.980
+3
+11.507
+13.842
+14.509
+16.797
+[1]
+Ultimate total claim amounts:
+Accident
+Year
+0
+2014
+3,907
+2015
+4,831
+2016
+6,042
+2017
+7,061
+Development Year
+1
+5,606
+7,319
+8,282
+2
+6,061
+7,470
+3
+6,145
+7,574
+8,806
+10,794
+[1]
+Outstanding = (6145 +7574 + 8806 + 10794) – 19544 = 13,775
+[1]
+[Total 11]
+This question posed few problems for well-prepared candidates.
+
+\end{document}
