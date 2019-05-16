@@ -28,22 +28,21 @@
 \begin{document} 
 %%--- 11
 A time series model is specified by
-Y t = 2 \alpha Y t − 1 − \alpha 2 Y t − 2 + e t
+\[ Y t = 2 \alpha Y_{t − 1} − \alpha 2 Y_{t − 2} + e t\]
 where e t is a white noise process with variance \sigma 2 .
-(i) Determine the values of \alpha for which the process is stationary.
-(ii) Derive the auto-covariances \gamma 0 and \gamma 1 for this process and find a general
-recursive expression for \gamma k for k ≥ 2.
-(iii)
+\begin{enumerate}
+\item (i) Determine the values of \alpha for which the process is stationary.
+\item (ii) Derive the auto-covariances \gamma 0 and \gamma 1 for this process and find a general
+recursive expression for \gamma_{k} for k ≥ 2.
+\item (iii)
 
 [10]
 Show that the auto-covariance function can be written in the form:
-\gamma k = A \alpha k + kB \alpha k
+\gamma_{k} = A \alpha_{k} + kB \alpha_{k}
 for some values of A, B which you should specify in terms of the constants \alpha
 and \sigma 2 .
-
-[Total 17]
-END OF PAPER
-CT6 S2010—6
+\end{enumerate}
+\newpage 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 11
@@ -58,13 +57,13 @@ ands so the series will be stationary provided that \alpha < 1 .
 Firstly, note that Cov ( Y t , e t ) = Cov ( e t , e t ) = \sigma 2
 So, taking the covariance of the defining equation with Y t we get:
 \gamma 0 = 2 \alpha\gamma 1 − \alpha 2 \gamma 2 + \sigma 2 (A)
-Taking the covariance with Y t − 1 we get
+Taking the covariance with Y_{t − 1} we get
 \gamma 1 = 2 \alpha\gamma 0 − \alpha 2 \gamma 1
 i.e. (1 + \alpha 2 ) \gamma 1 = 2 \alpha\gamma 0
 (B)
-Finally, taking the covariance with Y t − 2 gives:
+Finally, taking the covariance with Y_{t − 2} gives:
 \gamma 2 = 2 \alpha\gamma 1 − \alpha 2 \gamma 0 (C)
-In general, for k ≥ 2 we have \gamma k = 2 \alpha\gamma k − 1 − \alpha 2 \gamma k − 2
+In general, for k ≥ 2 we have \gamma_{k} = 2 \alpha\gamma_{k} − 1 − \alpha 2 \gamma_{k} − 2
 Substituting the expression for \gamma 2 in (C) into (A) gives:
 \gamma 0 = 2 \alpha\gamma 1 − \alpha 2 (2 \alpha\gamma 1 − \alpha 2 \gamma 0 ) + \sigma 2
 So that
@@ -121,12 +120,12 @@ And so \gamma 1 =
 (1 − \alpha )
 ⎝ (1 − \alpha ) (1 + \alpha ) ⎠
 2 \alpha\gamma 0%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — September 2010 — Examiners’ Report
-And more generally \gamma k = 2 \alpha\gamma k − 1 − \alpha 2 \gamma k − 2 (D)
+And more generally \gamma_{k} = 2 \alpha\gamma_{k} − 1 − \alpha 2 \gamma_{k} − 2 (D)
 (iii)
-Suppose \gamma k − 1 = A \alpha k − 1 + ( k − 1) B \alpha k − 1 and \gamma k − 2 = A \alpha k − 2 + ( k − 2) B \alpha k − 2 and
+Suppose \gamma_{k} − 1 = A \alpha_{k} − 1 + ( k − 1) B \alpha_{k} − 1 and \gamma_{k} − 2 = A \alpha_{k} − 2 + ( k − 2) B \alpha_{k} − 2 and
 substitute into (D).
-\gamma k = 2 \alpha A \alpha k − 1 + 2 \alpha ( k − 1) B \alpha k − 1 − \alpha 2 A \alpha k − 2 − ( k − 2) \alpha 2 B \alpha k − 2
-= A ( 2 \alpha k − \alpha k ) + B ( 2 \alpha k ( k − 1 ) − ( k − 2 ) \alpha k ) = A \alpha k + Bk \alpha k
+\gamma_{k} = 2 \alpha A \alpha_{k} − 1 + 2 \alpha ( k − 1) B \alpha_{k} − 1 − \alpha 2 A \alpha_{k} − 2 − ( k − 2) \alpha 2 B \alpha_{k} − 2
+= A ( 2 \alpha_{k} − \alpha_{k} ) + B ( 2 \alpha_{k} ( k − 1 ) − ( k − 2 ) \alpha_{k} ) = A \alpha_{k} + Bk \alpha_{k}
 Which is of the correct form, so the general form of the expression holds.
 Setting k = 0 we get \gamma 0 = A
 So A =
@@ -150,10 +149,10 @@ So B = − A = ⎜ ⎜
 [Alternatively, solve using the formula on %%-- Page 4 of the Tables:
 We have g k = 2 \alpha g k − 1 + \alpha 2 g k − 2 = 0
 Using the Tables formula, the roots are \lambda 1 = \lambda 2 = \alpha so we have a solution
-of the form g k = ( A + Bk ) \lambda k = ( A + Bk ) \alpha k
+of the form g k = ( A + Bk ) \lambda k = ( A + Bk ) \alpha_{k}
 Set k = 0 and k = 1 to get the same equations as before.]
 Another good differentiator, with strong candidates scoring well, and weaker candidates
 struggling with parts (ii) and (iii) in particular.
-END OF EXAMINERS’ REPORT
+
 %%-- Page 13
 \end{document}
