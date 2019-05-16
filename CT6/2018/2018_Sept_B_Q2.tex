@@ -1,0 +1,109 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+2
+\begin{enumerate}
+\item (i)
+State the three main components of a generalised linear model.
+[3]
+Consider the discrete random variable Y, with the following probability density
+function
+⎛ n ⎞
+⎟ \mu ny ( 1− \mu ) n−ny
+f ( y, \mu ) = ⎜⎜
+⎟
+ny
+⎝
+⎠
+(ii)
+1 2
+y = 0, , ,...,1
+n n
+\item Show that Y belongs to the exponential family of distributions, specifying each
+component.
+\item (iii)
+State the canonical link function in this case.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+\noindent \textbf{Solutions}
+
+Q2
+(i)
+(ii)
+The distribution of the response variable.
+A linear predictor as a function of the covariates.
+A link function between the response variable and the linear predictor.
+
+ n  
+=
+f ( y , \mu ) exp  n ( y ln \mu + (1 − y ) ln ( 1 − \mu ) ) + ln   
+ ny  
+
+ 
+
+ n  
+ \mu 
+= exp  n  y ln 
+ + ln ( 1 − \mu )  + ln  ny  
+  
+ 1 − \mu 
+   
+
+Hence
+ \mu 
+θ = ln 
+
+ 1 − \mu 
+\phi  = n
+1
+a ( \phi  ) =
+\phi 
+(iii)
+[1]
+[1]
+
+[1⁄2]
+[1⁄2]
+b =
+( θ ) ln ( 1 + e θ )
+ \phi  
+c ( y , \phi  ) = ln  
+ \phi  y 
+ \mu 
+Link function: g ( \mu ) = ln 
+
+ 1 − \mu  [1]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Well prepared candidates were able to score highly here, although many candidates gave
+insufficiently detailed answers in part (i), and didn’t give expressions in part (ii) as a function
+of the correct variable e.g. leaving b(theta) as a function of mu.
+
+
+\end{document}
