@@ -1,0 +1,123 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+7 Claim amounts, X, arising from a portfolio of insurance policies follow a Pareto
+distribution, with parameters α and λ. The insurance company has bought excess of
+loss reinsurance cover, with retention M > 0.
+The reinsurer only has a record of claims greater than M. Consider the truncated distribution of claim amounts, Z = X – M | X > M.
+\begin{enumerate}
+(i) Show that Z also follows a Pareto distribution, but with parameters α and
+λ + M. [4]
+CT6 S2016–5 PLEASE TURN OVER
+Claim amounts, X’, have now increased by a factor k, such that a claim incurred is k
+times an equivalent claim previously incurred, and k is greater than 1. The retention level M is unchanged.
+(ii) Show that the distribution of X’ still follows a Pareto distribution, and
+determine its parameters. [4]
+The truncated distribution of claim amounts is now Z’, where Z’ = X’ – M | X’ > M.
+(iii) State the distribution of Z’, using the results from parts (i) and (ii), including
+statement of parameters. [1]
+(iv) Comment on whether or not the average claim amount retained by the
+insurance company has increased by a factor of k. [2]
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+Q7 (i) Let Z be the reinsurer claim distribution.
+Then ( ) ( )
+( )
+1
+f z M
+g z
+F M
++
+  =
+  −
+where f(x) and F(x) refer to the underlying claim
+distribution [1]
+( )
+( )
+( )
+1 ( ) f z M ;F M 1
+z M M
+α α
+α+ α
++ = αλ = − λ
+λ+ + λ +
+  [1½]
+So ( )
+( )
+( ) ( )
+1 ( ) 1
+M M
+g z
+z M z M
+α α α
+α+ α α+
+  αλ λ + α λ + = =
+  λ + + λ λ + +
+  [1]
+This is in the form of a Pareto distribution with parameters α and λ +M . [½]
+(ii) Let ( ) ( )
+( ) 1
+0
+;
+y
+k
+Y kX P Y y P kX y dz
+z
+α
+α+
+  = < = < = αλ
+λ+  [1½]
+Let
+1 ( ) 1
+0 0
+;
+y y x kz dx k dx
+x k k x
+k
+α αα
+α+ α+
+  = = αλ = αλ
+λ +  λ +  
+ 
+  . [2]
+Which is in the form of a Pareto distribution with parameters α and kλ . [½]
+(iii) The reinsurer’s distribution of claims is therefore Pareto with parameters α
+and kλ +M. [1]
+(iv) The average claim retained by the insurer has increased by a factor less than k
+since the retention M is unchanged, so on average a greater proportion of
+claims get passed on to the reinsurer. [2]
+For strong candidates familiar with the bookwork this question was very
+straightforward, but few candidates were able to score well here.
+\end{document}
