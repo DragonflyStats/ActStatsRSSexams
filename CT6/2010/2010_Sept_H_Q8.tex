@@ -1,0 +1,236 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+
+
+\begin{document}
+An insurance company has a portfolio of policies under which individual loss amounts follow an exponential distribution with mean 1/ \lambda  . There is an individual excess of loss reinsurance arrangement in place with retention level 100. In one year,
+the insurer observes:
+•
+•
+85 claims for amounts below 100 with mean claim amount 42; and
+39 claims for amounts above the retention level.
+(i) Calculate the maximum likelihood estimate of \lambda  .
+(ii) Show that the estimate of \lambda  produced by applying the method of moments to
+the distribution of amounts paid by the insurer is 0.011164.
+[5]
+[Total 10]
+% CT6 S2010—3
+% [5]
+% PLEASE TURN OVER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+8
+Claims on a portfolio of insurance policies arrive as a Poisson process with rate \lambda  .
+The claim sizes are independent identically distributed random variables
+X 1 , X 2 , ...with:
+M
+∑ p k = 1 .
+P ( X i = k ) = p k for k = 1, 2, ... , M and
+k = 1
+The premium loading factor is θ.
+(i)
+Show that the adjustment coefficient R satisfies:
+2 θ m 1
+1
+log(1 + θ ) < R <
+M
+m 2
+where m i = E ( X 1 i ) for i = 1, 2 .
+[The inequality e Rx \leq 
+[7]
+x RM
+x
+for 0 \leq  x \leq  M may be used without
++ 1 −
+e
+M
+M
+proof.]
+(ii)
+9
+(a) Determine upper and lower bounds for R if θ = 0.3 and X i is equally likely to be 2 or 3 (and cannot take any other values).
+(b) Hence derive an upper bound on the probability of ruin when the initial
+surplus is U.
+[3]
+[Total 10]
+An actuarial student has been working on some claims projections but some of her workings have been lost. The cumulative claim amounts and projected ultimate
+claims are given by the following table:
+Accident
+Year 0
+1
+2
+3
+4 1001
+1250
+1302
+Z
+Development Year
+1
+2
+1485
+Y
+1805
+1762
+1820
+Ultimate
+3
+W
+X
+1862.3
+2122.5
+2278.8
+All claims are paid by the end of development year 3.
+It is known that ultimate claims for accident years 2 and 3 have been estimated using the Basic Chain Ladder method.
+(i)
+Calculate the values of W, X and Y.
+[5]
+For accident year 4 the student has used the Bornhuetter-Ferguson method using an earned premium of 2,500 and an expected loss ratio of 90%.
+CT6 S2010—410
+(ii) Calculate the value of Z.
+[4]
+(iii) Calculate the outstanding claims reserve for all accident years implied by the completed table.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6
+(i)
+We must write f(x) in the form:
+⎡ x θ − b ( θ )
+⎤
+f ( x ) = exp ⎢
++ c ( x , φ ) ⎥
+⎣ a ( φ )
+⎦
+For some parameters θ , φ and functions a,b and c.
+α α
+f ( x ) =
+μ α Γ ( α )
+x
+α− 1
+e
+−
+x α
+μ
+⎡ ⎛ x
+⎤
+⎞
+= exp ⎢ ⎜ − − log μ ⎟ α + ( α − 1) log x + α log α − log Γ ( α ) ⎥
+⎠
+⎣ ⎝ μ
+⎦
+Which is of the required form with:
+θ=−
+1
+μ
+φ=α
+a ( φ ) =
+1
+φ
+% Page 5Subject CT6 (Statistical Methods Core Technical) — September 2010 — Examiners’ Report
+b ( θ ) = − log( −θ ) = log μ
+c ( x , φ ) = ( φ − 1) log x + φ log φ − log Γ ( φ )
+(ii)
+The mean and variance for members of the exponential family are given by
+b '( θ ) and a ( φ ) b ''( θ ) .
+In this case b '( θ ) = −
+1
+=μ
+θ
+b ''( θ ) = θ − 2 = μ 2 so the variance is μ 2 / α as required.
+Generally well answered, though many candidates did not score full marks on part (i)
+because they failed to specify all the parameters involved.
+7
+(i)
+First note that the probability of a claim exceeding 100 is e − 100 \lambda  .
+The likelihood function for the given data is:
+L = C × \lambda  85 e − 85 × 42 ×\lambda  × ( e − 100 ×\lambda  ) 39
+Where C is some constant. Taking logarithms gives
+l = log L = C ' + 85 log \lambda  − 85 × 42 × \lambda  − 100 × 39 × \lambda 
+Differentiating with respect to \lambda  gives
+∂ l 85
+=
+− 85 × 42 − 100 × 39
+∂\lambda  \lambda 
+Setting this expression equal to zero we get:
+\lambda  ˆ =
+85
+= 0.011379
+85 × 42 + 100 × 39
+And this gives a maximum since
+Page 6
+∂ 2 l
+∂\lambda 
+2
+=−
+85
+\lambda  2
+< 0
+% Subject CT6 (Statistical Methods Core Technical) — September 2010 — Examiners’ Report
+(ii)
+We must first calculate the mean amount paid by the insurer per claim. This is
+100
+∫
+0
+100
+x \lambda  e −\lambda  x dx + 100 P ( X > 100) = ⎡ − xe −\lambda  x ⎤ +
+⎣
+⎦ 0
+= − 100 e
+=
+− 100 \lambda 
+(
+100
+∫ e
+−\lambda  x
+dx + 100 e − 100 \lambda 
+0
+100
+⎡ 1
+⎤
++ ⎢ − e −\lambda  x ⎥ + 100 e − 100 \lambda 
+⎣ \lambda 
+⎦ 0
+1
+1 − e − 100 \lambda 
+\lambda 
+)
+So we must show the given value of \lambda  results in the actual average paid by the
+85 × 42 + 39 × 100
+insurer. This is
+= 60.24
+85 + 39
+Substituting for \lambda  in the expression derived above, we get
+(
+)
+1
+0.6725435
+1 − e − 100 × 0.0111654 =
+= 60.24 as required.
+0.011164
+0.011164
+Stronger candidates scored well on this question, whereas the weaker candidates struggled
+with the calculations required in part (ii).
+\end{document}
