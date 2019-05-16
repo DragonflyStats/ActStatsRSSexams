@@ -1,0 +1,77 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+4 A small island is holding a vote on independence. Two recent survey results are
+shown below:
+  Poll Sample size Support for
+independence
+A 10 5
+B 20 11
+You should assume that the samples are independent.
+A politician is using a suitable uniform distribution as the prior distribution in order
+to estimate the proportion  in favour of independence.
+(i) Calculate an estimate of  under the quadratic loss function. [3]
+A rival politician decides to use instead a beta distribution as the prior, with
+parameters  and , where  = .
+(ii) Determine the new estimate of  under the “all-or-nothing” loss function in
+terms of . [4]
+[Total 7]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Q4 (i) A suitable distribution is U(0,1) as theta must lie between 0 & 1.
+f() = 1 for 0    1
+Binomial distribution so likelihood function
+L() = (30 C 16) 16 (1  )14
+Bayes theorem: PDF (posterior) = PDF (prior) * likelihood
+PDF (Posterior) proportional to 16 (1 – )14
+So distribution of theta|sample is Beta (17,15)
+Under quadratic loss estimate of theta is mean so
+17/(17 + 15) = 0.53125
+(ii) prior PDF proportional to 1 * (1 – )1
+so using Bayes again posterior proportional to 15+ * (1 – )13+
+Under all-or-nothing we need the mode of the posterior
+Subject CT6 (Statistical Methods Core Technical) – September 2015 – Examiners’ Report
+Page 5
+Take logs (15 + ) log + (13 + ) log (1  )
+differentiate (15 + ) /   (13 + ) / (1  ) = 0
+so (15 + ) (1 – ) = (13 + )  so  (2 + 28) = 15 + 
+so  = (15 + ) / (28 + 2)
+since f(0) = f(1) = 0 this must be a maximum
+Well prepared candidates had little difficulty with this straightforward question
+on Bayes’ theory. Most candidates were able to pick up at least a few marks
+by showing knowledge of the basic theory.
+\end{document}
