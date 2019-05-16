@@ -37,30 +37,7 @@ Probability
 0.3 0.3 0.4
 1 2 3
 Set out an algorithm to generate samples from X, using the inverse transform method.
-[5]
-2
-\begin{enumerate}
-\item (i)
-State the three main components of a generalised linear model.
-[3]
-Consider the discrete random variable Y, with the following probability density
-function
-⎛ n ⎞
-⎟ μ ny ( 1− μ ) n−ny
-f ( y, μ ) = ⎜⎜
-⎟
-ny
-⎝
-⎠
-(ii)
-1 2
-y = 0, , ,...,1
-n n
-\item Show that Y belongs to the exponential family of distributions, specifying each
-component.[4]
-\item (iii)
-State the canonical link function in this case.
-\end{enumerate}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage 
 \noindent \textbf{Solutions}
@@ -95,57 +72,6 @@ log U 2
 [Total 5]
 
 %%This question was generally well answered, but a disappointing number of candidates used the probability density function, rather than the cumulative density function.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Q2
-(i)
-(ii)
-The distribution of the response variable.
-A linear predictor as a function of the covariates.
-A link function between the response variable and the linear predictor.
-
- n  
-=
-f ( y , μ ) exp  n ( y ln μ + (1 − y ) ln ( 1 − μ ) ) + ln   
- ny  
-
- 
-
- n  
- μ 
-= exp  n  y ln 
- + ln ( 1 − μ )  + ln  ny  
-  
- 1 − μ 
-   
-
-Hence
- μ 
-θ = ln 
-
- 1 − μ 
-φ = n
-1
-a ( φ ) =
-φ
-(iii)
-[1]
-[1]
-
-[1⁄2]
-[1⁄2]
-b =
-( θ ) ln ( 1 + e θ ) [1⁄2]
- φ 
-c ( y , φ ) = ln  
- φ y  [1⁄2]
- μ 
-Link function: g ( μ ) = ln 
-
- 1 − μ  [1]
-[Total 8]
-Well prepared candidates were able to score highly here, although many candidates gave
-insufficiently detailed answers in part (i), and didn’t give expressions in part (ii) as a function
-of the correct variable e.g. leaving b(theta) as a function of mu.
 
 
 \end{document}
