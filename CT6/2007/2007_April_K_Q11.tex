@@ -32,43 +32,35 @@
 
 \begin{document}
 
-\begin{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 11
 The number, X, of claims on a given insurance policy over one year has probability
 distribution given by
 \[ P ( X = k ) = \theta  k (1 − \theta  ) k = 0, 1, 2, ...\]
-where \theta  is an unknown parameter with $0 < \theta  < 1$ .
-Independent observations x 1 , ... , x n are available for the number of claims in the
-previous n years. Prior beliefs about \theta  are described by a distribution with density
+where $\theta$   is an unknown parameter with $0 < \theta  < 1$ .
+Independent observations x 1 , ... , x n are available for the number of claims in the previous n years. Prior beliefs about $\theta$   are described by a distribution with density
 
-\[ f ( \theta  ) ∝ \theta  \alpha − 1 (1 − \theta  ) \alpha − 1\]
+\[ f ( \theta  ) \propto \theta  \alpha − 1 (1 − \theta  ) \alpha − 1\]
 for some constant $\alpha  > 0$ .
 
 \begin{enumerate}
 \item (i)
-(a) Derive the maximum likelihood estimate, \theta ̂ , of \theta  given the data
-x 1 , ... , x n .
-(b) Derive the posterior distribution of \theta  given the data x 1 , ... , x n .
-(c) Derive the Bayesian estimate of \theta  under quadratic loss and show that
-it takes the form of a credibility estimate
-Z \theta  ˆ + (1 − Z ) \mu 
+(a) Derive the maximum likelihood estimate, \theta ̂ , of $\theta$   given the data x 1 , ... , x n .
+(b) Derive the posterior distribution of $\theta$  given the data x 1 , ... , x n .
+(c) Derive the Bayesian estimate of $\theta$   under quadratic loss and show that it takes the form of a credibility estimate
+\[Z \theta  ˆ + (1 − Z ) \mu \]
 where \mu  is a quantity you should specify from the prior distribution of
-\theta .
+$\theta$  .
 (d)
 Explain what happens to Z as the number of years of observed data
 increases.
 
 \item (ii)
-(a) Determine the variance of the prior distribution of \theta .
-(b) Explain the implication for the quality of prior information of
-increasing the value of \alpha . Give an interpretation of the prior
-distribution in the special case \alpha  = 1.
+(a) Determine the variance of the prior distribution of $\theta$  .
+(b) Explain the implication for the quality of prior information of increasing the value of \alpha . Give an interpretation of the prior distribution in the special case \alpha  = 1.
 
 \item (iii)
-Calculate the Bayesian estimate of \theta  under quadratic loss if n = 3,
+Calculate the Bayesian estimate of $\theta$   under quadratic loss if n = 3,
 x 1 = 3, x 2 = 3, x 3 = 5 and
 (a)
 (b)
@@ -84,7 +76,7 @@ Comment on your results in the light of (ii) above.
 (a)
 The likelihood is given by
 \theta  x n (1 − \theta  )
-L ∝ \theta  x 1 (1 − \theta  )
+L \propto \theta  x 1 (1 − \theta  )
 = \theta  x 1 +
 x n
 (1 − \theta  ) n
@@ -127,7 +119,7 @@ n
 (1 − \theta  ) 2
 < 0
 The posterior distribution is given by
-f ( \theta  x ) ∝ g ( x \theta  ) f ( \theta  )
+f ( \theta  x ) \propto g ( x \theta  ) f ( \theta  )
 = \theta  x 1 +
 + x n
 = \theta  \alpha + x 1 +
@@ -137,13 +129,14 @@ f ( \theta  x ) ∝ g ( x \theta  ) f ( \theta  )
 which is the pdf of a beta distribution with parameters \alpha  + x 1 +
 and \alpha  + n .
 (c)
-First note that the prior distribution of \theta  is Beta with parameters \alpha 
+First note that the prior distribution of $\theta$   is Beta with parameters \alpha 
 and \alpha  . Hence its mean is
 \alpha 
 = 1/ 2 .
 \alpha +\alpha 
 Page 12
-+ x nSubject CT6 (Statistical Methods Core Technical) — April 2007 — Examiners’ Report
++ x n
+%%%%%%%%%%%%%%%%%%%%%%%%
 Under Bayesian loss, the estimator is given by the mean of the posterior distribution, which is
 \theta  * =
 \alpha  + \sum  x i
@@ -160,7 +153,7 @@ Where Z =
 (ii)
 \sum  x i + n
 2 \alpha  + \sum  x i + n
-and \mu  = 1/ 2 is the prior mean of \theta  .
+and \mu  = 1/ 2 is the prior mean of $\theta$  .
 (d) As n increases, Z tends towards 1, and the Bayes estimate approaches the maximum likelihood estimate, as more credibility is put on the data, and less on the prior estimate.
 (a) The variance of the prior distribution is given by:
 \alpha  2
@@ -171,10 +164,8 @@ and \mu  = 1/ 2 is the prior mean of \theta  .
 1
 .
 4(2 \alpha  + 1)
-Higher values of \alpha  result in a lower variance and hence imply greater certainty over the prior value of \theta  .
-In the special case where \alpha  = 1 the prior distribution is Uniform on
-[0,1] implying that we have no particular reason to believe that any
-prior value of \theta  is more or less likely than any other.
+Higher values of \alpha  result in a lower variance and hence imply greater certainty over the prior value of $\theta$   .
+In the special case where \alpha  = 1 the prior distribution is Uniform on [0,1] implying that we have no particular reason to believe that any prior value of $\theta$  is more or less likely than any other.
 (iii)
 \sum  x i = 3 + 3 + 5 = 11
 (a) \theta  * = 5 + 11
@@ -186,7 +177,5 @@ prior value of \theta  is more or less likely than any other.
 13
 = = 0.7222
 2 × 2 + 11 + 3 18
-The first set of parameters has greater certainty attached to the prior estimate
-(i.e. a higher value of \alpha  ), and therefore the posterior estimate is closer to the
-mean of the prior distribution (which is 0.5) than in the second case.
+The first set of parameters has greater certainty attached to the prior estimate (i.e. a higher value of \alpha  ), and therefore the posterior estimate is closer to the mean of the prior distribution (which is 0.5) than in the second case.
 \end{document}
