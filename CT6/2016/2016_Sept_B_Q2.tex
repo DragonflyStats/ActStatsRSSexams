@@ -1,0 +1,57 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chng%%-- Page}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2 Andy is playing a game, which involves rolling four-sided fair dice. Each time a dice is rolled, it is equally likely to show one of the numbers: 1, 2, 3 or 4.
+Before each roll, he has three strategies:
+  a1: Receive 1.5 times the number showing.
+a2: Receive half the number showing if it is odd, and twice the number if it is even.
+a3: Receive the number showing if it is even, and twice the number if it is odd.
+(i) Construct Andy’s payoff matrix. 
+(ii) State which, if any, of the decision functions are dominated. 
+(iii) Determine Andy’s optimal strategy under the Bayes criterion. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+Q2 (i) Let θi be the state of nature when the roll of the die = i.
+Then the payoff matrix is:
+  θ1 θ2 θ3 θ4
+a1 1.5 3 4.5 6
+a2 0.5 4 1.5 8
+a3 2 2 6 4
+[1 mark for first correct row, ½ mark thereafter]
+(ii) None of the decision functions is dominated. 
+(iii) Since each number is equally likely, this is equivalent to summing up the payoffs for each decision function. 
+This is 15, 14 and 14. 
+So a1 is the optimal decision under the Bayes criterion. 
+This straightforward question was very well answered by most candidates, with many scoring full marks.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – September 2016 – Examiners’ Report
+%%-- Page 4
+\end{document}
