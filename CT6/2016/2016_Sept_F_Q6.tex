@@ -1,0 +1,126 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+
+6 Assume that the numbers of accidents for three different risks in five years are as
+follows:
+  Year 1 Year 2 Year 3 Year 4 Year 5 Total
+Risk A 1 4 5 0 2 12
+Risk B 1 6 4 6 5 22
+Risk C 5 6 4 9 4 28
+An actuary is modelling each risk according to a Poisson distribution.
+(i) Determine the Poisson parameter for each risk using the method of maximum likelihood estimation.
+(ii) Test the hypothesis that the three risks have the same claim rate, using the scaled deviances. 
+
+\newpage
+%%-- [Total 10]
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q6 (i) For risk A with rate μ1 the log-likelihood function is:
+  5 5
+1 1 1 1 1
+1 1
+log log i 5 log i !
+  i i
+L y y
+= =
+  = μ  − μ −
+Subject CT6 (Statistical Methods Core Technical) – September 2016 – Examiners’ Report
+Page 7
+5
+1 1 1
+1
+= 12log 5 log i !
+  i
+y
+=
+  μ − μ − [1½]
+And therefore the mle for μ1 is obtained for
+1 1
+∂logL = 12 −5 = 0
+∂μ μ
+[1]
+i.e. 
+μ1 = 2.4 [½]
+Similarly we have that 2
+22 4.4
+5
+μ = = and 
+3
+28 5.6
+5
+μ = = . [2]
+(ii) Under the assumption that these risks share the same rate i.e. μ1 = μ2 = μ3 = μ
+then the mle estimate for this is simply ˆ 62
+15
+μ = . [½]
+In order to compare these models we can use the scaled deviances to compare
+these models and using the chi-squared test.
+The difference in the scaled deviance is chi-square with 3 − 1 = 2 degrees of
+freedom. [1]
+2(logL1 + logL2 + logL3 − logL)
+     
+= 2(12logμ1 − 5μ1 + 22logμ2 − 5μ2 + 28logμ3 − 5μ3 − 62logμˆ +15 μˆ ) [1]
+With the
+5
+1
+1
+log i !
+  i
+y
+= 
++
+  5 5
+2 3
+1 1
+log i ! log i !
+  i i
+y y
+= =
+   + cancelling out in the difference.
+Hence
+2( ) 1 2 3 logL + logL + logL − logL
+2 12log2.4 22log 4.4 28log5.6 62log 62 5(12 22 28) 15 62
+15 5 15
+ + + 
+=  + + − − + 
+ 
+2 12log2.4 22log4.4 28log5.6 62log 62 6.71034
+15
+=  + + −  =  
+ 
+. [1½]
+Subject CT6 (Statistical Methods Core Technical) – September 2016 – Examiners’ Report
+Page 8
+This value is above 5.991 which is the critical value at the upper 5% level and
+therefore conclude that mean claim rates are different. [1]
+[Total 10]
+Part (i) was very well answered by most candidates. Fewer candidates
+scored full marks in part (ii), despite similar questions having been asked in
+several recent examinations.
