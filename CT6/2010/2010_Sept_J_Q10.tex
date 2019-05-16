@@ -52,7 +52,7 @@ Show that the retention M is approximately 358.50.
 If f(x) is the PDF of the N(μ, \sigma 2 ) distribution then
 U
 ∫ L
-xf ( x ) dx = μ [ Φ ( U ') − Φ ( L ') ] − \sigma [ φ ( U ') − φ ( L ') ]
+xf ( x ) dx = μ [ \phi  ( U ') − \phi  ( L ') ] − \sigma [ \phi  ( U ') − \phi  ( L ') ]
 where L ' =
 L −μ
 U −μ
@@ -60,8 +60,8 @@ U −μ
 and U ' =
 \sigma
 \sigma
-Here Φ(z) is the cumulative density function of the N(0, 1) distribution and
-φ ( z ) =
+Here \phi (z) is the cumulative density function of the N(0, 1) distribution and
+\phi  ( z ) =
 e
 CT6 S2010—5
 −
@@ -86,15 +86,15 @@ We require:
 \item The risk of flood damage is independent from building to building.
 \item Let the individual claim amounts net of re-insurance be X. 
 \item Then
-E ( \alpha X ) = \alpha E ( X ) = 400 \alpha
-And Var ( \alpha X ) = \alpha 2 Var ( X ) = (50 \alpha ) 2
+\[E ( \alpha X ) = \alpha E ( X ) = 400 \alpha\]
+And \[Var ( \alpha X ) = \alpha 2 Var ( X ) = (50 \alpha ) 2\]
 \item So if Y represents the aggregate annual claims net of re-insurance, then we
 have:
 E ( Y ) = 10, 000 \times 0.03 \times 400 \alpha = 120, 000 \alpha
 and
 Var ( Y ) = 10, 000 \times 0.03 \times (50 \alpha ) 2 + 10, 000 \times 0.03 \times 0.97 \times (400 \alpha ) 2 = 47,310, 000 \alpha 2
 = (6,878.23 \alpha ) 2
-\item We require \alpha to be chosen so that
+\item We require $\alpha$ to be chosen so that
 P ( Y > 120, 000) = 0.01
 i.e. P ( N (0,1) >
 120, 000 − 120, 000 \alpha
@@ -125,9 +125,9 @@ We first calculate the mean claim amount paid by re-insurer. This is equal to
 ⎡
 ⎡
 ⎛ 358.50 − 400 ⎞ ⎞
-= 400 ⎢ 1 − Φ (
-) ⎥ − 50 ⎢ 0 − φ (
-) ⎥ − 358.50 \times ⎜ 1 − Φ ⎜
+= 400 ⎢ 1 − \phi  (
+) ⎥ − 50 ⎢ 0 − \phi  (
+) ⎥ − 358.50 \times ⎜ 1 − \phi  ⎜
 ⎟ ⎟
 50
 50
@@ -140,7 +140,7 @@ We first calculate the mean claim amount paid by re-insurer. This is equal to
 ⎠ ⎠
 ⎝
 This gives
-400 [ 1 − Φ ( − 0.83) ] + 50 φ ( − 0.83) − 358.50 \times (1 − Φ ( − 0.83))
+400 [ 1 − \phi  ( − 0.83) ] + 50 \phi  ( − 0.83) − 358.50 \times (1 − \phi  ( − 0.83))
 1 −
 = 400 \times 0.79673 + 50 \times
 e
@@ -149,8 +149,8 @@ e
 0.83 2
 2
 − 358.50 \times 0.79673
-Then the aggregate premium charged will be 10, 000 \times 0.03 \times 47.20 \times 1.15 =
-16,284 which is the same as under the first arrangement as required.
+Then the aggregate premium charged will be $10, 000 \times 0.03 \times 47.20 \times 1.15 =
+16,284$ which is the same as under the first arrangement as required.
 Carrying forward more than 3 significant figures from the result in (ii) gives a slightly
 different value in (iii). To full accuracy, the solution in (iii) becomes 16,236 resulting in a
 minor discrepancy between the answers in (iii) and (iv). This appears not to have concerned
@@ -159,3 +159,4 @@ approximately equal. The examiners gave credit for either approach.
 
 %%This question was a good differentiator – the better prepared candidates were able to score well whilst weaker candidates struggled.
 \end{document}
+
