@@ -1,0 +1,102 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document}
+
+
+
+PLEASE TURN OVER6
+In a two-player zero sum game, the matrix below shows the value to Player 1. Player
+1’s strategies are labelled I to VI, where Player 2’s strategies are labelled A to F.
+\begin{verbatim}
+A B C D E F
+I 13 29 8 12 16 23
+II 18 22 21 22 29 31
+III 18 22 31 31 27 37
+IV 11 22 12 21 21 26
+V 18 16 19 14 19 28
+VI 23 22 19 23 30 34
+\end{verbatim}
+(i)
+(ii)
+\begin{enumerate} 
+\item Show, by eliminating dominated strategies, that the game can be reduced to the
+following 3 x 3 matrix.
+[3]
+a b c
+α 13 29 8
+\beta  18 22 31
+γ 23 22 19
+\item Explain whether or not this new 3 x 3 matrix has any saddle points.
+\medskip 
+Now consider a randomised strategy for Player 2, denoted X, whereby strategy ‘a’ is
+chosen with probability p and strategy ‘c’ is chosen with probability 1 – p, 0 < p < 1.
+\item (iii) Find the range of values for p such that X dominates strategy ‘b’.
+\item (iv) Solve the game and determine the value to Player 1 given that ‘b’ is
+dominated.[
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q6
+(i) For Player 1, Strategy VI dominates strategies IV & V
+For Player 2, Strategy C dominates Strategy F ...
+... and Strategies D & E with IV & V eliminated
+With D, E & F eliminated, Strategy III dominates Strategy II
+(ii) There are no saddle points, since the maximum in any column is never equal
+to the minimum of any row.
+[2]
+(iii) ‘b’ is always dominated for α.
+[1⁄2]
+For \beta , we require 18p + 31(1 – p) < 22
+For γ, we require 23p + 19(1 – p) < 22
+So 9/13 < p < 3⁄4
+
+[1⁄2]
+
+(iv)
+
+
+Now α is also dominated for Player 1, so we are left with
+a
+c
+\beta 
+18
+31
+γ
+23
+19
+
+Hence Player 2 should choose a randomised strategy with
+18p + 31(1 – p) = 23p + 19(1 – p)
+p = 12/17 (i.e. choose strategy a with probability 12/17)
+with value 21.8
+
+\newpage
+Performance in this question was mixed, with many candidates dropping marks in part (i) for
+insufficient explanation of their answer; and fewer candidates were able to score well in
+parts (iii) & (iv).
+\end{document}
