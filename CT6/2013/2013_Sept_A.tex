@@ -1,4 +1,36 @@
+\documentclass[a4paper,12pt]{article}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
 
 © Institute and Faculty of Actuaries1
 An insurance company has a portfolio of n policies. The probability of a claim in a
@@ -14,21 +46,11 @@ written in the form of a credibility estimate.
 .]
 parameters \alpha and \beta is
 \alpha +\beta− 2
-2
-Claim amounts on a certain type of insurance policy follow an exponential
-distribution with mean 100. The insurance company purchases a special type of
-reinsurance policy so that for a given claim X the reinsurance company pays
-0
-0.5 X − 40
-X − 120
-if 0 < X < 80;
-if 80 ≤ X < 160;
-if X ≥ 160.
-Calculate the expected amount paid by the reinsurance company on a randomly
-chosen claim.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
 1
 The posterior distribution of p is given by
 f ( p k claims)  f ( k claims p )  f ( p )
@@ -71,53 +93,4 @@ is the estimate of p derived from the data.
 The first part of this question was answered well. Most candidates didn’t recognise the need
 to base the prior estimate on the mode of the prior distribution and therefore didn’t manage
 to express the posterior estimate as a credibility estimate.
-Page 3Subject CT6 (Statistical Methods Core Technical) – September 2013 – Examiners’ Report
-2
-The mean amount paid by the reinsurance company is given by:
-
-160
- 1
-
- 0.01 x
- 0.01 x
-   2 x  40    0.01 e dx   ( x  120)  0.01 e dx .
-80
-160
-The first integral is (using integration by parts):
-160
-  1
-  0.01 x 
-+
-   2 x  40  e
-
-
- 
- 80
-160
-
-80
-1  0.01 x
-e
-dx
-2
-160
-=  40 e  1.6   50 e  0.01 x 
-
- 80
-= 50 e  0.8  90 e  1.6  4.2957.
-The second integral is:
-
-  ( x  120) e  0.01 x 
-+
-
- 160
-
- e
- 0.01 x
-dx
-160
-= 40 e  1.6  1 00 e  1.6
-= 28.26551.
-So total mean claim = 4.29576 + 28.26551 = 32.56.
-This question was generally answered well. Weaker candidates could not integrate by parts
-accurately.
+\end{document}
