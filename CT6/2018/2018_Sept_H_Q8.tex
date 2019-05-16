@@ -1,0 +1,131 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document}
+
+%%--- Question 8
+
+For a portfolio of insurance policies, claims X i are independent and follow a gamma
+distribution, with parameters $\alpha  = 6$ and $\beta$ , which is unknown.
+A random sample of n claims, X 1 ,..., X n is selected, with mean X .
+\begin{enumerate}[(a)]
+\item(i) Derive an expression for the estimator of $\beta$ using the method of moments. 
+\item (ii) Explain what the Maximum Likelihood Estimator (MLE) of $\beta$  represents. 
+\item (iii) Derive an expression for the MLE of $\beta$, commenting on the result.
+\item (iv) State the Moment Generating Function (MGF) of X.
+\end{enumerate}
+Let Y = 2n \beta  X .
+(v)
+
+
+Derive the MGF of Y, and hence its distribution, including statement of
+parameters.[5]
+[Total 15]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+Q8
+(i)
+(ii)
+Mean = \alpha 
+\alpha 
+\beta  ⇒ \beta  = X
+
+The MLE is the estimate that maximises the likelihood of having observed the
+sample data.
+
+n
+L ( \beta  ) = ∏
+i = 1
+(iii)
+\beta  \alpha  \alpha  − 1 − \beta  x
+x i e
+Γ ( \alpha  )
+i
+n
+[11⁄2]
+log L ( \beta  ) \propto n \alpha  ln \beta  − \beta  ∑ x i
+i = 1
+Then differentiate
+n
+n \alpha 
+0
+− ∑ x i =
+\beta 
+i = 1
+⇒ \beta  = \alpha  n
+= \alpha  = 6
+X
+X
+i
+∑ x
+[11⁄2]
+Check for maximum
+d 2 ln L − 6 n
+=
+< 0
+\beta  2
+d \beta  2 
+In this case the MLE and method of moments lead to the same result. 
+%Page 8Subject CT6 (Statistical Methods Core Technical) – September 2018 – Examiners’ Report
+(iv)
+(v)
+
+t 
+ 1 − 
+ \beta  
+− \alpha 
+
+2 \beta  t ∑ X i
+2 n \beta  tX
+=
+( e tY ) E ( e =
+) E ( e =
+)
+M
+E =
+Y ( t )
+n
+∏ E ( e \beta 
+2 tX i
+)
+[11⁄2]
+i = 1
+by independence
+[1⁄2]
+− \alpha 
+ 2 \beta  t 
+− n \alpha 
+M Y ( t ) =
+( 1 − 2 t )
+∏ i   1 − \beta    =
+By the uniqueness property of MGFs
+This is a Chi Squared distribution with parameter 2n\alpha 
+
+
+
+[Total 15]
+% Many candidates were able to score well on this question, although again marks were dropped when not showing all the steps in parts (iii) & (v).
+\end{document}
