@@ -1,0 +1,178 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+
+
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+
+
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+
+
+\begin{document}
+
+
+7 A shipping insurance company has insured ships for six years, and classifies the
+ships it insures into three types.
+Let:
+  Pij be the number of ships insured in the jth year from type i,
+Yij be the corresponding number of claims.
+The six years of data are summarised as follows:
+  Type (i)
+6
+1
+i ij
+j
+P P
+
+  Xi 
+Yij
+j1 Pi
+6
+Pij
+j1
+6
+Yij
+Pij
+ Xi
+
+
+
+
+
+
+2
+Pij
+j1
+6
+Yij
+Pij
+ X
+
+
+
+
+
+
+2
+Type 1 648 0.524 691 30.966 692 64.392683
+Type 2 981 0.145062 4.689 264 42.240804
+Type 3 636 0.370 370 62.449 512 66.467 182
+X =
+  3 6
+1 1
+ij
+i j
+Y
+  P
+  = 0.297572, where P =
+  3
+1
+i
+i
+P
+ 
+There are 100 ships of Type 3 to be insured in year seven.
+\begin{enumerate}
+\item (i) Estimate the number of claims from Type 3 ships in year seven using
+empirical Bayes credibility theory (EBCT) Model 2. [6]
+The insurance company’s actuary is considering using EBCT Model 1 instead.
+\item (ii) Explain an advantage and a disadvantage of using EBCT Model 1 rather
+than EBCT Model 2. 
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+Q7 (i) Z3  j1
+6  P3, j
+j1
+6 P3, j  Es2 / Var m
+i
+i
+P P = 2265
+n = 6, N = 3
+  *  
+1
+1 1 /
+  1
+N
+i i
+i
+P P P P
+Nn 
+ 
+ 
+= 1/17 * (648 * (1  648/2265) + 981 * (1  981/2265) + 636 *
+            (1  636/2265))
+= 86.831 944
+ 2    2
+, ,
+1 1
+1 1
+1
+N n
+i j i j i
+i j
+E s P X X
+N n  
+         
+ 
+= 1/15{30.966 692 + 4.689 264 + 62.449 512) = 6.540 364 5
+    2  2  
+* , ,
+1 1
+Var 1 1
+1
+N n
+i j i j
+i j
+m PX X E s
+P Nn  
+           
+
+= 1/86.831 944 * (1/17{64.392683 + 42.240804+66.467182}  6.540 365)
+= 0.041 943
+so Z3 = 636/(636 + 6.5403645/0.04194341) = 0.803 098
+X3,7 = 0.803 098 * 0.370 370 + (1  0.803098) * 0.297 572 = 0.356 036
+So Y3,7 = 100 * X3,7 = 35.60
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% – September 2015 – Examiners’ Report
+Page 8
+(ii) Disadvantages of Model 1
+Does not make use of the risk volumes
+Requires more assumptions about the data
+Advantages of Model 1
+Requires less information (does not take account of risk volumes)
+EBCT Model 1 is likely to be computationally more straightforward
+
+
+%This was one of the best answered questions on the paper, with the majority of candidates able to score most or all of the marks in part (i). Only the
+%stronger candidates were able to pick up both marks in part (ii), although again most candidates picked up some marks here.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
