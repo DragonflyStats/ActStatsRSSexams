@@ -1,0 +1,71 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  [Total 4]
+3 A particular industry always generates total profits of \$1bn in each year, shared between two companies: Raspberry Inc. and Robots Ltd. Every year the companies each need to choose between two distinct business approaches: cautious and
+aggressive.
+If both companies adopt the same approach in a given year, Raspberry Inc. captures
+70% of the total profits. If they adopt different approaches, Robots Ltd. captures 80% of the total profits if Raspberry Inc. is cautious, and 60% of the total profits if
+Raspberry Inc. is aggressive. Neither company knows what the other company’s
+approach will be before adopting its own approach.
+\begin{enumerate}
+    \item (i) Explain why the above can be thought of as a zero-sum two person game. 
+Raspberry Inc. decides to adopt a randomised strategy to setting its approach each
+year.
+    \item (ii) Explain what is meant by a randomised strategy. 
+    \item (iii) Determine Raspberry Inc.’s optimal randomised strategy. 
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  Q3 (i) Because total profits are fixed, whatever one company makes the other can be
+thought of as having lost, and vice-versa.
+(ii) A randomised strategy is where the player randomly chooses between
+different strategies, rather than adopting a fixed approach.
+(iii) Raspberry Inc. will randomly choose the cautious approach with probability p,
+and the aggressive approach with probability (1  p).
+Robots/Raspberry Cautious Aggressive
+Cautious 700 400
+Aggressive 200 700
+In order to determine the optimal strategy we need to equate the payoffs:
+  700p + 400(1  p) = 200p + 700(1  p)
+800p = 300
+so p = 3/8
+So Raspberry Inc. should adopt the Cautious approach 3/8 of the time.
+\newpage
+Candidates familiar with zero-sum two person games were able to score very
+well on this question. Weaker candidates were unfamiliar with randomised
+strategies.
+\end{document}
