@@ -1,0 +1,176 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+\begin{document} 
+5
+The table below shows aggregate annual claim statistics for three risks over a period
+of seven years. Annual aggregate claims for risk i in year j are denoted by X ij .
+X i =
+Risk, i
+1 7
+= ∑ X ij − X i
+6 j = 1
+(
+)
+2
+335.1
+65.1
+33.9
+(i) Calculate the credibility premium of each risk under the assumptions of EBCT
+Model 1.
+[6]
+(ii) Explain why the credibility factor is relatively high in this case.
+[2]
+[Total 8]
+The probability density function of a gamma distribution is given in the following
+parameterised form:
+f ( x ) =
+(i)
+(ii)
+7
+S i 2
+127.9
+88.9
+149.7
+i = 1
+i = 2
+i = 3
+6
+1 7
+∑ X ij
+7 j = 1
+α α
+\mu  α Γ ( α )
+x
+α− 1
+e
+−
+x α
+\mu 
+for x > 0.
+Express this density in the form of a member of the exponential family,
+specifying all the parameters.
+[6]
+Hence show that the mean and variance of the distribution are given by \mu  and
+\mu  2
+respectively.
+[3]
+α
+[Total 9]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+4
+Let the prior distribution of \mu  have a Gamma distribution with parameters α and \lambda 
+as per the tables.
+Then
+α
+α
+= 50 and 2 = 15 2
+\lambda 
+\lambda 
+Then dividing the first by the second \lambda  =
+50
+15 2
+= 0.22222
+And so α = 50 × 0.22222 = 11.111111
+
+%%--- Page 3Subject CT6 (Statistical Methods Core Technical) — September 2010 — Examiners’ Report
+
+The posterior distribution of \mu  is then given by
+f ( \mu  x ) ∝ f ( x \mu  ) f ( \mu  )
+∝ e − 10 \mu  ×\mu  630 ×\mu  10.11111 e − 0.22222 \mu 
+∝ \mu  640.11111 e − 10.22222 \mu 
+Which is the pdf of a Gamma distribution with parameters α ' = 641.11111 and
+\lambda  '= 10 . 22222
+Now under all or nothing loss, the Bayesian estimate is given by the mode of the
+posterior distribution. So we must find the maximum of
+f ( x ) = x 640.11111 e − 10.2222 x (we may ignore constants here)
+Differentiating:
+(
+f '( x ) = e − 10.22222 x − 10.2222 x 640.11111 + 640.1111 x 639.11111
+)
+= x 639.1111 e − 10.22222 x ( − 10.2222 x + 640.11111)
+And setting this equal to zero we get
+x =
+640.111111
+= 62.62
+10.22222
+Alternatively, credit was given for differentiating the log of the posterior (which is simpler).
+This question was well answered by most candidates.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+5
+(i)
+The overall mean is given by X =
+(
+)
+E s 2 ( θ ) =
+127.9 + 88.9 + 149.7
+= 122.1 67
+3
+⎞ 335 . 1 + 65 . 1 + 33 . 9
+1 3 ⎛ 1 7
+⎜ ∑ ( X ij − X i ) 2 ⎟ =
+= 144 . 7
+∑
+⎜
+⎟
+3 i = 1 ⎝ 6 j = 1
+3
+⎠
+1 3
+( X i − X ) 2 − 1 E ( S 2 ( θ ))
+∑
+2 i = 1
+7
+2
+( 127 . 9 − 122 . 1 ) + ( 88 . 9 − 122 . 1 ) 2 + ( 149 . 7 − 122 . 1 ) 2 144 . 7
+=
+−
+2
+7
+= 928 . 14
+Var ( m ( θ )) =
+So the credibility factor is Z =
+Page 4
+7
+7 + 144 . 7
+= 0 . 978213
+928 . 14
+%%----- Subject CT6 (Statistical Methods Core Technical) — September 2010 — Examiners’ Report
+And the credibility premia for the risks are:
+For risk 1 : 0 . 978213 × 127 . 9 + ( 1 − 0 . 978213 ) × 122 . 167 = 127 . 8
+For risk 2 : 0 . 978213 × 88 . 9 + ( 1 − 0 . 978213 ) × 122 . 167 = 89 . 6
+For risk 3 : 0 . 978213 × 149 . 7 + ( 1 − 0 . 978213 ) × 122 . 167 = 149 . 1
+(ii)
+The data show that the variation within risks is relatively low (the S i 2 are low, especially for the 2 nd and 3 rd risks) but there seems to be quite a high variation between the average claims on the risks.
+With the S i 2 being low, this variation cannot be explained just by variability in the claims, and must be due to variability in the underlying parameter.
+This means that we can put relatively little weight on the information provided by the data set as a whole, and must put more on the data from the individual risks, leading to a relatively high credibility factor.
+Most candidates scored well on part (i). Only the better candidates were able to give a clear explanation in part (ii).
+\end{document}
