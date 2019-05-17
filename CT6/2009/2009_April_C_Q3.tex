@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+% -------------------------- [Total 4]
+An insurer’s portfolio consists of three independent policies. Each policy can give rise to at most one claim per month, which occurs with probability \theta  independently
+from month to month. The prior distribution of \theta  is beta with parameters \alpha  = 2 and
+\beta = 4. A total of 9 claims are observed on this portfolio over a 12 month period.
+
+\begin{enumerate}
+\item (i)  Derive the posterior distribution of \theta .
+\item (ii)  Derive the Bayesian estimate of \theta  under all or nothing loss.
+\end{enumerate}
+
+
+3
+(i)
+f ( \theta  x ) \propto  f ( x \theta  ) f ( \theta  )
+\propto  \theta  9 (1 − \theta  ) 27 \theta  \alpha − 1 (1 − \theta  ) \beta− 1
+\propto  \theta  9 (1 − \theta  ) 27 \theta  1 (1 − \theta  ) 3
+\propto  \theta  10 (1 − \theta  ) 30
+Which is the pdf of a Beta(11,31) distribution.
+(ii)
+Under all or nothing loss, the Bayes estimate is the value that maximises the
+pdf of the posterior.
+f ( \theta  ) = C \times  \theta  10 (1 − \theta  ) 30
+(
+)
+f ′ ( \theta  ) = C 10 \theta  9 (1 − \theta  ) 30 + \theta  10 \times  30(1 − \theta  ) 29 \times  − 1
+= C \theta  9 (1 − \theta  ) 29 ( 10(1 − \theta  ) − 30 \theta  )
+And f ′ ( \theta  ) = 0 when
+10(1 − \theta  ) − 30 \theta  = 0
+40 \theta  = 10
+\theta  = 1/ 4
+We can check this is a maximum by observing that f(0.25) > 0 whilst
+f(0) = f(1) = 0. Since the maximum on [0,1] must occur either at the end-
+points of the interval, or at turning point we can see that we do have a
+maximum.
