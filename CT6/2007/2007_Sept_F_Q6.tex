@@ -33,24 +33,21 @@
 \begin{document}
 
 
-Claim sizes (in suitable units) for a portfolio of insurance policies come from a
-distribution with probability density function
+Claim sizes (in suitable units) for a portfolio of insurance policies come from a distribution with probability density function
 ⎪ axe − x 2 0 \leq x \leq 2 a > 0
 f ( x ) = ⎨
 0 otherwise
 ⎩
 where a > 0 is a constant.
 \begin{enumerate}
-\item (i) Find a. 
+\item (i) Find $a$. 
 \item (ii) Show that $f ( x ) \leq 1$ . 
-\item (iii) Random numbers have been drawn from a U(0,1) distribution, and are
-arranged in pairs. The first three pairs are:
+\item (iii) Random numbers have been drawn from a U(0,1) distribution, and are arranged in pairs. The first three pairs are:
 0.7413 and 0.4601
 0.3210 and 0.6316
 0.5069 and 0.0392
-Using the rectangle { ( x , y ) 0 \leq x \leq 2, 0 \leq y \leq 1 } and the pairs of random
-numbers in the order given above, use the acceptance-rejection method to
-generate a single observation from the claim size distribution.
+Using the rectangle ${ ( x , y ) 0 \leq x \leq 2, 0 \leq y \leq 1 }$ and the pairs of random
+numbers in the order given above, use the acceptance-rejection method to generate a single observation from the claim size distribution.
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -90,26 +87,20 @@ and this derivative is zero when
 x = ± 0.70711
 and f(0.70711) = 0.8738.
 Note that f(0) = 0 and f(2) = 0.07463 so that the maximum value on [0,2] is
-0.8738 and so f ( x ) < 1 as required.
+0.8738 and so $f ( x ) < 1$ as required.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 
-
-(iii)
+\begin{itemize}
+\item (iii)
 Take as our first point (2 ° 0.7413, 0.4601) = (1.4826,0.4601)
-Now f(1.4826) = 0.3353 which is less than 0.4601 so we reject this point as it
-lies above the graph of f(x).
+Now f(1.4826) = 0.3353 which is less than 0.4601 so we reject this point as it lies above the graph of f(x).
 Take as our second point (2 ° 0.3210, 0.6316) = (0.6420,0.6316)
-Now f(0.6420) = 0.86615 > 0.6316 so this point lies below the graph of f(x)
-and is therefore acceptable. Our random sample is therefore the x co-ordinate
-= 0.6420.
-(iv) The box 0 < x < 2, 0 < y < 1 has area 2, and the area under the curve of f(x) is
-1 by definition. Therefore we expect half the points to be rejected as they lie
-above f(x). Hence it will on average take 4 U(0,1) simulations to determine
+Now f(0.6420) = 0.86615 > 0.6316 so this point lies below the graph of f(x) and is therefore acceptable. Our random sample is therefore the x co-ordinate = 0.6420.
+\item (iv) The box 0 < x < 2, 0 < y < 1 has area 2, and the area under the curve of f(x) is 1 by definition. Therefore we expect half the points to be rejected as they lie above f(x). Hence it will on average take 4 U(0,1) simulations to determine
 one point using the acceptance-rejection method.
-(v) It would be better to use the same simulated claims to evaluate the re-
-insurance arrangements
-This avoids the possibility that the apparent superiority of one arrangement is
-in fact due to a favourable series of simulated claims
+\item (v) It would be better to use the same simulated claims to evaluate the reinsurance arrangements This avoids the possibility that the apparent superiority of one arrangement is in fact due to a favourable series of simulated claims
+\end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
