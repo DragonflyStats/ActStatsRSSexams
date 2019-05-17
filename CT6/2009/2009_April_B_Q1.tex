@@ -1,0 +1,61 @@
+
+
+2 \item (i)  Express the probability density function of the gamma distribution in the form
+of a member of the exponential family of distributions. Specify the natural
+and scale parameters.
+
+\item (ii)  State the corresponding canonical link function for generalised linear
+modelling if the response variable has a gamma distribution.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We need to express the distribution function of the Gamma distribution in the
+form:
+⎡ ( y \theta  − b ( \theta  ))
+⎤
+f Y ( y ; \theta  , \phi  ) = exp ⎢
++ c ( y , \phi  ) ⎥
+⎣ a ( \phi  )
+⎦
+Suppose Y has a Gamma distribution with parameters \alpha  and \lambda  . Then
+f Y ( y ) =
+And substituting \lambda  =
+\lambda  \alpha  \alpha − 1 −\lambda  y
+y e
+\Gamma  ( \alpha  )
+\alpha 
+we can write the density as
+\mu
+f Y ( y ; \theta  , \phi  ) =
+\alpha  \alpha 
+\mu \alpha  \Gamma  ( \alpha  )
+y
+\alpha − 1
+e
+−
+y \alpha 
+\mu
+⎡ ⎛ y
+⎤
+⎞
+f Y ( y ; \theta  , \phi  ) = exp ⎢ ⎜ − − log \mu ⎟ \alpha  + ( \alpha  − 1) log y + \alpha  log \alpha  − log \Gamma  ( \alpha  ) ⎥
+⎠
+⎣ ⎝ \mu
+⎦
+1
+1
+; \phi  = \alpha  ; a ( \phi  ) = ; b ( \theta  ) = − log( −\theta  )
+\mu
+\phi 
+and c ( y , \phi  ) = ( \phi  − 1) log y + \phi  log \phi  − log \Gamma  ( \phi  ) .
+Which is in the right form with \theta  = −
+Thus the natural parameter is
+1
+, ignoring the minus sign, and the scale
+\mu
+parameter is \alpha  .
+(ii)
+The corresponding link function is
+1
+.
+\mu
+Page 3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
