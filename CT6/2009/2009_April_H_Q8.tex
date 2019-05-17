@@ -1,0 +1,61 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%7
+8
+It is necessary to simulate samples from a distribution with density function f ( x ) = 6 x (1 − x ) 0 < x < 1 .
+\item (i)  Use the acceptance-rejection technique to construct a complete algorithm for generating samples from f by first generating samples from the distribution
+with density $h ( x ) = 2(1 − x )$ .
+
+\item (ii)  Calculate how many samples from h would on average be needed to generate one realisation from f.
+
+\item (iii)  Explain whether the acceptance-rejection method in \item (i)  would be more efficient if the uniform distribution were to be used instead.
+
+% -------------------------- [Total 10]
+An insurer has an initial surplus of U. Claims up to time t are denoted by S(t).
+Annual premium income is received continuously at a rate of c per unit time.
+\item (i)  Explain what is meant by the insurer’s surplus process U(t).
+\item (ii)  Define carefully each of the following probabilities:
+(a)
+(b)
+
+\psi  ( U , t )
+\psi  h ( U , t )
+
+\item (iii) 
+Explain, for each of the following pairs of expressions, whether one of each
+pair is certainly greater than the other, or whether it is not possible to reach a
+conclusion.
+(a)
+(b)
+(c)
+\psi  (10, 2) and \psi  (20,1)
+\psi  (10, 2) and \psi  (5,1)
+\psi  0.5 (10, 2) and \psi  0.25 (10, 2)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+8
+(i)
+U(t) represents the insurers surplus at time t. It represents the initial surplus
+plus cumulative premiums received less claims incurred:
+U ( t ) = U + ct − S ( t )
+Where U is the initial surplus and c is the annual premium income (assumed
+payable continuously).
+(ii)
+(iii)
+(a) \psi  ( U , t ) = P ( U ( s ) < 0 for some 0 \leq  s \leq  t given that U (0) = U )
+(b) \psi  h ( U , t ) = P ( U ( s ) < 0 for some s , s = h , 2 h , ... , t − h , t
+given that U (0) = U )
+(a) We can say that \psi  (10, 2) > \psi  (10,1) > \psi  (20,1)
+The first inequality holds because the longer the period considered
+when checking, the more likely that ruin will occur. The second
+inequality holds because a larger initial surplus reduces the probability
+of ruin (higher claims are required to cause ruin).
+(b) We can reach no definite conclusion here. The first term has a longer
+term suggesting a higher probability, but a higher initial surplus
+suggesting a lower probability. We can’t say anything about the size
+of the two effects, so we can’t reach a definite conclusion.
+(c) We can say that \psi  0.5 (10, 2) \leq  \psi  0.25 (10, 2) .
+This is because the second term checks for ruin at the same times as the first
+term, as well as at some additional times. So the probability of ruin when
+checking over the larger set of times must be higher.
