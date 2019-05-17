@@ -31,28 +31,21 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-Let X 1 and X 2 be random variables with moment generating functions M X 1 ( t ) and
-M X 2 ( t ) respectively. A new random variable Y is formed by choosing a sample
-from X 1 with probability p or a sample from X 2 with probability 1 − p .
-(i)
+Let X 1 and X 2 be random variables with moment generating functions M X 1 ( t ) and M X 2 ( t ) respectively. A new random variable Y is formed by choosing a sample from X 1 with probability p or a sample from X 2 with probability 1 − p .
+\begin{enumerate}
+\item (i)
 Show that the moment generating function of Y is given by
-M Y ( t ) = pM X 1 ( t ) + ( 1 − p ) M X 2 ( t )
-[2]
-A portfolio of insurance policies consists of two different types of policy. Claims on
-type 1 policies arrive according to a Poisson process with parameter \lambda  1 and claim
-amounts have a distribution X 1 . Claims on type 2 policies arrive according to a
-Poisson process with parameter \lambda  2 and claim amounts have a distribution X 2 .
-(ii)
-Show that aggregate claims on the whole portfolio follow a compound Poisson
-distribution, specifying the claim rate and the claim size distribution.
-[6]
-Now suppose that \lambda  1 = 10 and \lambda  2 = 15 and that the claim sizes are exponentially
-distributed with mean 50 for type 1 policies and mean 70 for type 2 policies.
-(iii)
-CT6 A2012–5
-Construct an algorithm for simulating total claims on the whole portfolio. [6]
-[Total 14]
+\[M Y ( t ) = pM X 1 ( t ) + ( 1 − p ) M X 2 ( t )\]
+\medskip 
+A portfolio of insurance policies consists of two different types of policy. Claims on type 1 policies arrive according to a Poisson process with parameter \lambda  1 and claim amounts have a distribution X 1 . Claims on type 2 policies arrive according to a Poisson process with parameter \lambda  2 and claim amounts have a distribution X 2 .
+\item (ii)
+Show that aggregate claims on the whole portfolio follow a compound Poisson distribution, specifying the claim rate and the claim size distribution.
+\medskip
+Now suppose that \lambda  1 = 10 and \lambda  2 = 15 and that the claim sizes are exponentially distributed with mean 50 for type 1 policies and mean 70 for type 2 policies.
+\item (iii)
 
+Construct an algorithm for simulating total claims on the whole portfolio. 
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
@@ -93,17 +86,14 @@ M X ( t ) − 1 ⎟ ⎥
 \lambda  1 + \lambda  2
 = exp(( \lambda  1 + \lambda  2 )( M Y ( t ) − 1))
 Where Y is defined as in part (i). This is of the form M N ( logM Y ( t ) ) where N
-is a Poisson distribution with parameter \lambda  1 + \lambda  2 . Hence S has a compound
-Poisson distribution with rate \lambda  1 + \lambda  2 and where individual claim amounts are
-\lambda  1
-taken from distribution X 1 with probability p =
+is a Poisson distribution with parameter $\lambda  1 + \lambda  2$ . Hence S has a compound Poisson distribution with rate $\lambda  1 + \lambda  2$ and where individual claim amounts are $\lambda_{1}$ taken from distribution X 1 with probability p =
 and from distribution
 \lambda  1 + \lambda  2
 \lambda  2
 X 2 with probability 1 − p =
 .
 \lambda  1 + \lambda  2
-Page 14Subject CT6 (Statistical Methods) – April 2012 – Examiners’ Report
+%%-- Page 14Subject CT6 (Statistical Methods) – April 2012 – Examiners’ Report
 (iii)
 Step 1
 We first begin by generating a random sample from N ~ P ( 25 ) as follows:
