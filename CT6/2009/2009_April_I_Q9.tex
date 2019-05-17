@@ -1,0 +1,56 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%-- April Question 9
+
+%% % -------------------------- [Total 10]
+%% CT6 A2009—49
+
+Individual claims under a certain type of insurance policy are for either 1 (with probability \alpha ) or 2 (with probability 1 − \alpha ).
+The insurer is considering entering into an excess of loss reinsurance arrangement with retention 1 + k (where k < 1). Let X i denote the amount paid by the insurer (net
+of reinsurance) on the ith claim.
+\begin{enumerate}
+\item (i) 
+Calculate and simplify expressions for the mean and variance of X i .
+
+Now assume that \alpha  = 0.2 . The number of claims in a year follows a Poisson distribution with mean 500. The insurer wishes to set the retention so that the
+probability that aggregate claims in a year will exceed 700 is less than 1%.
+\item (ii) 
+
+Show that setting k = 0.334 gives the desired result for the insurer.
+\end{enumerate}
+
+
+Page 8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+9
+(i)
+E ( X i ) = \alpha  + (1 + k )(1 − \alpha  )
+= 1 + k (1 − \alpha  )
+Var ( X i ) = E ( X i 2 ) − E ( X i ) 2
+= \alpha  + (1 + k ) 2 (1 − \alpha  ) − (1 + k (1 − \alpha  )) 2
+= \alpha  + (1 − \alpha  ) + 2 k (1 − \alpha  ) + k 2 (1 − \alpha  ) − 1 − 2 k (1 − \alpha  ) − k 2 (1 − \alpha  ) 2
+= k 2 (1 − \alpha  )(1 − (1 − \alpha  ))
+= k 2 \alpha  (1 − \alpha  )
+(ii)
+Let Y denote the aggregate claims in a year. Then Y has a compound Poisson
+distribution, and using the standard results from the tables:
+E ( Y ) = 500 \times  E ( X i ) = 500 + 500 k (1 − \alpha  ) = 500 + 400 k =633.60
+And
+Var ( Y ) = 500 \times  E ( X i 2 )
+(
+)
+= 500 ( \alpha  + (1 − \alpha  ) + 2 k (1 − \alpha  ) + k
+= 500 \alpha  + (1 + k ) 2 (1 − \alpha  )
+2
+(1 − \alpha  )
+)
+= 500 + (1000 k + 500 k 2 )(1 − \alpha  )
+= 500 + 800 k + 400 k 2
+= 811.82
+Using a normal approximation, we find
+P ( Y > 700) = P ( Z >
+700 − 633.6
+)
+811.82
+= P ( Z > 2.33)
+= 0.01
