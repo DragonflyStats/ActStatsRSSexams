@@ -1,0 +1,70 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%-- April Question 10
+Let Y t be a stationary time series with autocovariance function \gamma  Y ( s ) .
+\begin{enumerate}
+\item (i)  Show that the new series X t = a + bt +Y t where a and b are fixed non-zero constants, is not stationary.
+
+\item (ii)  Express the autocovariance function of ΔX t = X t − X t−1 in terms of \gamma  Y ( s ) and
+show that this new series is stationary.
+
+\item (iii)  Show that if Y t is a moving average process of order 1, then the series ΔX t is not invertible and has variance larger than that of Y t .
+
+\end{enumerate}
+
+CT6 A2009—5
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+10
+(i)
+Since Y t is stationary, we know there is a constant \mu Y such that E ( Y t ) = \mu Y
+for all values of t.
+But then E ( X t ) = E ( a + bt + Y t ) = a + bt + \mu Y which depends on t since b is
+non-zero.
+Hence X t is not stationary.
+Page 9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+(ii)
+First note that
+E ( Δ X t ) = E ( X t − X_{t − 1} )
+= E ( X t ) − E ( X_{t − 1} )
+= E ( a + bt + Y t ) − E ( a + b ( t − 1) + Y t − 1 )
+= a + bt + \mu Y − a − b ( t − 1) − \mu Y
+= b
+i.e. the mean is a constant independent of t.
+Secondly,
+Cov ( Δ X t , Δ X t − s ) = Cov ( X t − X_{t − 1} , X t − s − X t − s − 1 )
+= Cov ( b + Y t − Y t − 1 , b + Y t − s − Y t − s − 1 )
+= Cov ( Y t − Y t − 1 , Y t − s − Y t − s − 1 )
+= Cov ( Y t , Y t − s ) − Cov ( Y t − 1 , Y t − s ) − Cov ( Y t , Y t − s − 1 ) + Cov ( Y t − 1 , Y t − s − 1 )
+= \gamma  Y ( s ) − \gamma  Y ( s − 1) − \gamma  Y ( s + 1) + \gamma  Y ( s )
+= 2 \gamma  Y ( s ) − \gamma  Y ( s − 1) − \gamma  Y ( s + 1)
+Since the autocovariance depends only on the lag s, and the mean is constant,
+the new series is stationary.
+(iii)
+Suppose that Y t = e t + \beta e t − 1 where e t is a white noise process with variance
+\sigma^{2}   .
+Then
+Δ X t = a + bt + e t + \beta e t − 1 − a − b ( t − 1) − e t − 1 − \beta e t − 2
+= b + e t + ( \beta − 1) e t − 1 − \beta e t − 2
+= b + (1 + ( \beta − 1) B − \beta B 2 ) e t
+= b + (1 − B )(1 + \beta B ) e t
+So the lag polynomial has a unit root, and hence the time series is not
+invertible.
+Now
+Var ( Y t ) = Var ( e t + \beta e t − 1 )
+= Var ( e t ) + \beta 2 Var ( e t − 1 )
+= (1 + \beta 2 ) \sigma^{2}  
+So \gamma  Y (0) = (1 + \beta 2 ) \sigma^{2}  
+Page 10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+Also \gamma  Y (1) = \gamma  Y ( − 1) = Cov ( e t + \beta e t − 1 , e t − 1 + \beta e t − 2 ) = \beta\sigma^{2}  
+So using the result from part (ii)
+Var ( Δ X t ) = 2 \gamma  Y (0) − \gamma  Y (1) − \gamma  Y ( − 1)
+= 2(1 + \beta 2 ) \sigma^{2}   − 2 \beta\sigma^{2}  
+= 2(1 − \beta + \beta 2 ) \sigma^{2}  
+And finally
+Var ( Δ X t ) − Var ( Y t ) = (2 − 2 \beta + 2 \beta 2 ) \sigma^{2}   − (1 + \beta 2 ) \sigma^{2}  
+= (1 − 2 \beta + \beta 2 ) \sigma^{2}  
+= (1 − \beta ) 2 \sigma^{2}   > 0
