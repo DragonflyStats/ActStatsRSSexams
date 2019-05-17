@@ -1,0 +1,176 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%-- April Question 11
+A motor insurance company operates a No Claims Discount scheme with discount
+levels 0%, 25% and 50% of the annual premium of 1,000. The probability of having an accident during any year is 0.1 (ignore the possibility of more than one accident in
+a year). The policyholder moves one level up in the discount scheme (or stays at the 50% level) in the event of a claim free year and moves one level down (or stays at the
+0% level) if the claim does not involve a criminal offence. If the claim involves a criminal offence then the policyholder automatically moves to the 0% discount level.
+One in ten accidents involves a criminal offence. The policyholder makes a claim only if the cost of repairs is higher than the aggregate additional premiums payable in
+the next two claim-free years.
+\begin{enumerate}
+\item (i) 
+Calculate, for each level of discount, the cost of a repair below which the policyholder will not claim, distinguishing between claims that involve a
+criminal offence and claims that do not.
+
+\item (ii)  Calculate the probability of a claim for each level of discount given that an accident has occurred, given that the repair cost following an accident has an
+exponential distribution with mean 400.
+
+\item (iii)  Calculate the stationary distribution of the proportion of policyholders at each discount level.
+
+% -------------------------- [Total 16]
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+
+
+11
+(i)
+Premiums at the three levels are £1,000, £750 and £500.
+0% level
+Claims involving criminal offences make no difference here.
+Claim: 1000 + 750 = 1750
+No Claim: 750 + 500 = 1250
+No claim if the accident cost is less than 500.
+25% level
+Claims involving criminal offences make no difference here.
+Claim: 1000 + 750 = 1750
+No Claim: 500 + 500 = 1000
+No claim if the accident cost is less than 750.
+50% level
+Criminal offence claims make a difference here so we distinguish two
+scenarios:
+No criminal offence
+Claim: 750 + 500 = 1250
+Not claim: 500 + 500 = 1000
+No claim if the accident cost is less than 250.
+Page 11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+Criminal offence
+Claim: 1000 + 750 = 1750
+Not claim: 500 + 500 = 1000
+No claim if the accident cost is less than 750.
+(ii)
+⎛ 1 ⎞
+Let X be the repair cost for each accident then X \sim  Exp ⎜
+⎟
+⎝ 400 ⎠
+i.e. P(X > x) = e
+−
+x
+400
+For 0% level: P(claim|accident) = P(X > 500) = e
+−
+For 25% level: P(claim|accident) = P(X > 750) = e
+5
+4
+−
+= 0.2865
+75
+40
+= 0.1534
+For 50% level: P(claim|accident) = P(claim|criminal offence)
++ P(claim| no criminal offence)
+= P(X > 750) \times  0.1 + P(X > 250) \times  0.9
+= 0.1e
+(iii)
+−
+75
+40
++ 0.9e
+−
+25
+40 =
+0.4971
+Note that P(Accident) = 0.1 and P(criminal offence| accident) = 0.1.
+Hence at 0% level:
+P 11 = P(current level) = P(make a claim)
+= P(claim|accident) P(accident) = 0.02865
+P 12 = P(move to 25% level) = P(not claim) = 1 − 0.02865 = 0.97135
+P 13 = P(move to 50% level) = 0
+At 25% level:
+P 21 = P(move down to 0% level) = P(make a claim)
+= P(claim|accident) P(accident) = 0.015335
+P 22 = 0 since it can never remain at this level for more than a year at a time
+P 23 = 1 − P 21 = 1 − 0.015335 = 0.984665
+Page 12%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+At the 50% levels:
+P 31 = P(make a claim and criminal offence involved)
+= P(accident) P(criminal offence|accident) P(claim|criminal offence)
+= \times  0.1P(X > 750) = 0.01 \times  e
+−
+75
+40
+= 0.0015335
+P 32 = P(make a claim and no criminal offence involved) P(accident)
+P(no criminal offence|accident) P(claim|no criminal offence)
+= 0.1 \times  0.9 \times  P(X > 250) = 0.09 \times  e
+−
+25
+40
+= 0.0481735
+P 33 = P(no claim) = 1 − P(claim)
+= 1 − 0.01 \times  e
+−
+75
+40
+− 0.09 \times  e
+−
+25
+40
+= 0.950293 (rounding errors possible here)
+Therefore the transition matrix is now
+0.97135
+0
+⎛ 0.02865
+⎞
+⎜
+⎟
+0
+0.984665 ⎟
+P = ⎜ 0.015335
+⎜ 0.0015335 0.0481735 0.950293 ⎟
+⎝
+⎠
+For the stationary distribution we need to find \pi  = (\pi  0 , \pi  1 , \pi  2 ) such
+that \pi P = \pi :
+\pi  0 0.02865 + \pi  1 0.015335 + \pi  2 0.0015335 = \pi  0
+\pi  0 0.97135 + 0 + \pi  2 0.481735 = \pi  1
+0 + \pi  1 0.984665 + \pi  2 0.950293 = \pi  2
+\pi  0 + \pi  1 + \pi  2 = 1
+Further calculations show that \pi  0 = 0.002256424, \pi  1 = 0.047946812 and
+\pi  2 = 0.949796764.
+
+\end{document}
