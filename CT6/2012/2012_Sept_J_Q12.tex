@@ -1,0 +1,91 @@
+
+PLEASE TURN OVER10
+Claims occur on a portfolio of insurance policies according to a Poisson process.
+Individual claim amounts are either 1 (with probability 0.7) or 8 (with probability
+0.3). The insurance company uses a premium loading of 60% to calculate premiums
+and buys excess of loss reinsurance with a retention of M (1<M<8) from a reinsurer.
+The reinsurer uses a premium loading of 120%.
+(i) Calculate the smallest value of M that the insurance company should consider
+if it wishes to expect to make a profit on this portfolio.
+
+(ii) Derive the adjustment coefficient equation for the insurance company. 
+(iii) Calculate the adjustment coefficient (correct to 2 decimal places) if M=4. 
+The same reinsurer also offers proportional reinsurance with the same premium
+loading such that the reinsurer pays a proportion \alpha  of each claim.
+(iv) Show that the insurance company may either purchase excess of loss
+3(8 − M )
+reinsurance with retention M or proportional reinsurance with \alpha  =
+31
+for the same premium.
+
+(v) Determine whether the adjustment coefficient with proportional reinsurance is
+higher or lower than that with excess of loss reinsurance when M=4.
+
+(vi) Comment on the implications of part (v).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+10
+(i)
+The insurer charges a premium of \lambda  \times  ( 1 \times  0.7 + 8 \times  0.3 ) \times  1.6 = 4.96 \lambda 
+Where \lambda  is the rate of the Poisson process. Expected claims outgo (net of
+reinsurance) is given by \lambda  \times  ( 1 \times  0.7 + M \times  0.3 ) = \lambda  (0.7 + 0.3 M )
+The premiums charged by the reinsurer are
+\lambda  \times  ( 0.3 \times  ( 8 − M ) \times  2.2 ) = 0.66 \lambda  (8 − M )
+So the expected profit is positive if:
+4.96 \lambda  − \lambda  ( 0.7 + 0.3 M ) − 0.66 \lambda  ( 8 − M ) > 0
+i.e.
+− 1.02 + 0.36 M > 0
+Page 13Subject CT6 (Statistical Method) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+i.e.
+M >
+(ii)
+1.02
+= 2.833
+0.36
+The adjustment coefficient is equation is:
+M X ( R ) − 1 − cR = 0
+Comment: Or alternatively \lambda  + c net R = \lambda  M Y ( R ) , where c net is the overall net
+premium.
+Where X is the distribution of net claim payments by the direct insurer. This
+gives:
+0.7 e R + 0.3 e MR − 1 − ( 4.96 − 0.66 ( 8 − M ) ) R = 0
+(iii)
+With M = 4 this equation becomes:
+f ( R ) : = 0.7 e R + 0.3 e 4 R − 1 − 2.32 R = 0
+We shall find R by trial and error
+f(0.1) = −0.0108<0
+f(0.2) = 0.058644209>0
+f(0.15) = 0.01191961>0
+f(0.125) = −0.002179<0
+f(0.135 )= 0.002778077>0
+So the root lies between 0.125 and 0.135 and so R=0.13 (to 2 decimal places)
+(iv)
+The premium charged by the reinsurer for the proportional reinsurance is
+\lambda  \times  \alpha  \times  2.2 \times  ( 0.7 + 0.3 \times  8 ) = 6.82 \alpha \lambda  .
+Equating the premiums for the two types of reinsurance we get
+6.82 \alpha \lambda  = 0.66 \lambda  (8 − M )
+i.e.
+\alpha =
+(v)
+Page 14
+0.66(8 − M ) 3(8 − M )
+=
+6.82
+31
+In this case \alpha  = 0.387096774 and the premium charged by the reinsurer is
+2.64\lambda  .%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – Examiners’ Report
+The adjustment coefficient equation for the insurer is given by
+g ( R ) : = 0.7 e 0.612903226 R + 0.3 e 4.903225806 R − 1 − 2.32 R = 0
+Again by trial and error
+g ( 0.125 ) = 0.019471559 > 0
+g ( 0.135 ) = 0.028745229 > 0
+g ( 0.001 ) = − 0.00041625635 < 0
+So the root lies between 0.001 and 0.125 and is therefore less than in the
+excess of loss case.
+(vi)
+By Lundberg’s inequality the adjustment coefficient is an inverse measure of risk – that is, the higher the coefficient the lower the probability of ruin. The
+excess of loss reinsurance is therefore more effective at reducing the probability of ruin than the proportional reinsurance.
+Many candidates really struggled with this question, and in particular with the re-insurance arrangement and its impact on the claims paid and net premiums received by the insurer. A
+not insignificant number assumed that the insurer would reduce the premiums it charged the customer as a result of the reinsurance. Only the best candidates managed to accurately
+produce the equations satisfied by the adjustment coefficient and go on to find the numerical values.
+\end{document}
