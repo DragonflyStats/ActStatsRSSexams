@@ -1,0 +1,94 @@
+5
+Claims arising on a particular type of insurance policy are believed to follow a Pareto
+distribution. Data for the last several years shows the mean claim size is 170 and the
+standard deviation is 400.
+(i) Fit a Pareto distribution to this data using the method of moments.
+
+(ii) Calculate the median claim using the fitted parameters and comment on the
+result.
+
+[Total 7]
+A discrete probability distribution is defined by
+⎛ n ⎞
+n − ny
+f ( y , \mu  ) = ⎜ ⎟ \mu  ny ( 1 − \mu  )
+⎝ ny ⎠
+1 2
+y = 0, , , ... .,1
+n n
+where \mu  is a parameter between 0 and 1.
+6
+(i) Explain why this distribution belongs to an exponential family. 
+(ii) State the three main components that need to be taken into account when
+constructing a generalised linear model. 
+(iii) Suggest a natural choice of link function if the response variable followed the
+distribution defined above.
+
+(iv) Suggest a natural choice of link function if instead the response variable
+followed a lognormal distribution.
+
+[Total 10]
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+5
+(i)
+From the definition
+⎡
+⎛ n ⎞ ⎤
+f ( y , \mu  ) = exp ⎢ n ( y log \mu  + ( 1 − y ) log ( 1 − \mu  ) ) + log ⎜ ⎟ ⎥
+⎝ ny ⎠ ⎦
+⎣
+⎡ ⎛
+⎛ n ⎞ ⎤
+⎞
+\mu 
+= exp ⎢ n ⎜ y log(
+) + log ( 1 − \mu  ) ⎟ + log ⎜ ⎟ ⎥
+1 − \mu 
+⎠
+⎝ ny ⎠ ⎦
+⎣ ⎝
+⎡ y \theta  − b ( \theta  )
+⎤
+= exp ⎢
++ c ( y , \Phi ) ⎥
+⎣ a ( \Phi )
+⎦
+Which is the right form for a member of an exponential family where
+⎛ \mu  ⎞
+\theta  = log ⎜
+⎟
+⎝ 1 − \mu  ⎠
+\Phi= n
+a ( \Phi ) =
+1
+\Phi
+(
+b ( \theta  ) = log 1 + e \theta 
+)
+⎛ \Phi ⎞
+c ( y , \Phi ) = log ⎜ ⎟
+⎝ \Phi y ⎠
+Hence the distribution does belong to an exponential family.
+(ii)
+The three main components are:
+•
+•
+•
+the distribution of the response variable
+a linear predictor of the covariates
+link function between the response variable and the linear predictor
+(iii) In this case we have a binomial distribution and therefore the natural choice of
+⎛ \mu  ⎞
+link function is g ( \mu  ) = log ⎜
+⎟ .
+⎝ 1 − \mu  ⎠
+(iv) We could apply a log transform to the response and then apply a simple linear
+regression. Hence the link function is log ( \mu  ) .
+This was well answered, though a number of candidates lost some marks through failing to
+carefully define all of the parameters involved in the characterisation as a member of the
+exponential family.
+Page 6%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – Examiners’ Report
