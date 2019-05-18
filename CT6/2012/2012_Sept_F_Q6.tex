@@ -1,0 +1,71 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+6
+(i) The annual premium charged is 0.25 \times  150 \times  1.7 = 63.75
+(ii) Let X be an individual claim. Then
+( (
+)
+P ( X < 200 ) = P N 150,30 2 < 200
+)
+200 − 150 ⎞
+⎛
+= P ⎜ N ( 0,1 ) <
+⎟
+30
+⎝
+⎠
+= P ( N ( 0,1 ) < 1.667)
+= ( 0.95154 \times  0.3 + 0.7 \times  0.95254 )
+= 0.95224
+(iii)
+We need to calculate:
+∞
+p = \sum  P ( j claims) \times  P (all claims below retention) 
+j = 0
+∞
+= \sum  e
+− 0.25
+j = 0
+(0.25) j
+\times  (0.95224) j
+j !
+∞
+(0.25 \times  0.95224) j
+j !
+j = 0
+= e − 0.25 \times  \sum 
+= e − 0.25 \times  e 0.25 \times  0.95224
+= 0.9881
+(iv)
+We need to first calculate the mean claim amount paid by the reinsurer. This
+is given by
+∞
+I =
+∫ ( x − 200 ) f ( x ) dx
+200
+Where f(x) is the pdf of the Normal distribution with mean 150 and standard
+deviation 30.
+Page 7Subject CT6 (Statistical Method) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+Using the formula on p18 of the tables, we have:
+∞
+I =
+∫ xf ( x ) dx − 200 P ( X > 200)
+200
+= 150 \times  ⎡ ⎣ \Phi ( ∞ ) − \Phi(1.667) ⎤ ⎦ − 30 \times  ( \Phi ( ∞ ) − \Phi ( 1.667 ) ) − 200 \times  (1 − 0.95224)
+= 150 ( 1 − 0.95224 ) − 30 \times  ( 0 − 0.09942 ) − 200 \times  0.0.04776
+= 0.5946
+So the reinsurer charges 0.25 \times  0.5946 \times  2.2 = 0.32703
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(v)
+The direct insurers expected profit is given by:
+63.75 − 0.32703 − 0.25 \times  ( 150 − 0.5946 ) = 26.07
+Comment: Answers were mixed here. Parts (i) and (ii) were generally well done. Only the
+best candidates completed part (iii) with most being unable to condition on the number of
+claims. On part (iv) most candidates wrote down the integral that needed to be evaluated,
+but only the better candidates were able to use the formula from the tables to evaluate it. A
+number of candidates struggled to compute the values of the probability density function of
+the Normal distribution.
+
+
+\end{document}
