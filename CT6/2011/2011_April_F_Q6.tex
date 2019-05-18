@@ -1,0 +1,104 @@
+6
+The double exponential distribution with parameter \lambda  > 0 has density given by
+g(x) = 1⁄2\lambda e – \lambda |x| x ∈ \ .
+(i) Construct an algorithm for generating samples from this distribution.
+
+(ii) Construct an algorithm for producing samples from a N(0,1) distribution using
+samples from the double exponential distribution and the acceptance-rejection
+method.
+[6]
+[Total 9]
+
+
+
+Page 4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, April 2011
+6
+(i)
+We first note that the distribution function for this double exponential is given
+by
+⎧
+0 . 5 e \lambda  x
+x < 0
+G ( x ) = ⎨
+− \lambda  x
+⎩ 0 . 5 ( 1 − e ) + 0 . 5 x ≥ 0
+And so the inverse function is given by
+log 2 u
+⎧
+⎪
+\lambda 
+G − 1 ( u ) = ⎨
+log( 2 ( 1 − u ))
+⎪ −
+\lambda 
+⎩
+u < 0 . 5
+u ≥ 0 . 5
+And so our algorithm is:
+(ii)
+(A) Generate u from U (0,1)
+(B) If u < 0.5 set x =
+log 2 u
+log( 2 ( 1 − u ))
+otherwise set x = −
+\lambda 
+\lambda 
+We must first find M = Sup
+f ( x )
+where f ( x ) is the pdf of the N (0,1)
+g ( x )
+distribution.
+Sup
+f ( x )
+2
+e
+= Sup
+g ( x )
+\lambda  2 π
+−
+x 2
++\lambda  | x |
+2
+And using the symmetry around 0 we can concentrate on positive values of x
+x 2
+− +\lambda  x
+f ( x )
+2
+Sup
+e 2
+= Sup
+g ( x )
+\lambda  2 π
+And the exponential expression is maximised when −
+x 2
++ \lambda  x is maximised.
+2
+Differentiating, this occurs when − \lambda  + x = 0 i.e. x = \lambda 
+f ( x )
+2
+=
+e
+Hence M = Sup
+g ( x ) \lambda  2 π
+x 2
+\lambda  2
+2 .
+So define
+\lambda  2
+− + \lambda  x −
+f ( x )
+2
+h ( x ) =
+= e 2
+Mg ( x )
+Page 5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, April 2011
+So algorithm is as follows:
+(A)
+(B)
+(C)
+Generate x as in part (i)
+Generate u from U(0,1)
+If u ≤ h(x) then set y = x otherwise return to (A)
+This question was poorly answered. Only the strongest candidates treated the
+modulus in the pdf correctly. There was also difficulty deriving both parts of the
+inverse function for both the u ≥ 0.5 and the u < 0.5 case.

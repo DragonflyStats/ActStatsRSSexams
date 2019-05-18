@@ -1,0 +1,137 @@
+Claims on a portfolio of insurance policies arise as a Poisson process with parameter
+\lambda . Individual claim amounts are taken from a distribution X and we define m i = E(X i )
+for i = 1, 2, .... The insurance company calculates premiums using a premium
+loading of \theta .
+(i) Define the adjustment coefficient R.
+(ii) (a)
+Show that R can be approximated by
+
+2 \theta  m 1
+by truncating the series
+m 2
+expansion of M X (t).
+(b)
+Show that there is another approximation to R which is a solution of
+the equation m 3 y 2 + 3m 2 y − 6\theta m 1 = 0.
+[6]
+Now suppose that X has an exponential distribution with mean 10 and that \theta  = 0.3.
+(iii)
+Calculate the approximations to R in (ii) and (iii) and compare them to the true
+value of R.
+[6]
+[Total 13]
+CT6 A2011—410
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Page 10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, April 2011
+10
+(i)
+Denote the insurers profits by Z
+Under A:
+Premium income = 200 \times  40 \times  1.4 = 11200
+Expected claims = 200 \times  40 = 8000
+So E(Z) = 11200 − 8000 = 3200
+Under B
+We need first to calculate the expected loss for the insurer. Denote the
+insurer’s loss by X. Then
+E(X) =
+60
+\int  0
+∞
+0.025 xe − 0.025 x dx + 60 \times  \int  0.025 e − 0.025 x dx
+= [ − xe − 0.025 x ] 60
+0 + \int 
+60
+60 − 0.025 x
+∞
+e
+dx + 60 \times  [ − e − 0.025 x ] 60
+0
+= − 60 e − 1.5 + [ − 40 e − 0.025 x ] 0 60 + 60 e − 1.5
+= 40 − 40e−1.5 = 31.07479359
+So the expected loss for the re-insurer is 40 − 31.07479359 = 8.925206406
+Premium income = 11200 − 200 \times  1.55 \times  8.925206406 = 8433.186014
+Expected claims = 200 \times  31.07479359 = 6214.958718
+So E(Z) = 8433.186014 − 6214.958718 = 2218.227
+Under C
+Premium income = 200 \times  40 \times  1.4 − 200 \times  40 \times  0.25 \times  1.45 = 8300
+Expected claims = 200 \times  40 \times  0.75 = 6000
+So E(Z) = 8300 − 6000 = 2300
+Page 11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, April 2011
+(ii)
+We now need to find the variance of the total claim amount paid by the
+insurer. Denote this by Y. Then
+Under A
+Var(Y) = 200Var(X) + 200E(X)2
+= 200 \times  402 + 200 \times  402 = 640,000 = 8002
+So
+9200 − 8000 ⎞
+⎛
+Pr(Z < 2000) = Pr(Y > 9200) = Pr ⎜ N (0,1) >
+⎟
+800
+⎝
+⎠
+= Pr(N(0,1) > 1.5) = (1 − 0.93319) = 0.06681
+Under B
+We first need to find E(X2) as defined above.
+E(X2) =
+60
+\int  0
+∞
+0.025 x 2 e − 0.025 x dx + 60 2 \int  0.025 e − 0.025 x dx
+60
+= [ − x 2 e − 0.025 x ] 60
+0 + \int 
+= − 3600 e − 1.5 +
+=
+60
+0
+2 xe − 0.025 x dx + 3600 e − 1.5
+60
+2
+0.025 xe − 0.025 x dx + 3600 e − 1.5
+\int 
+0
+0.025
+2
+( E ( X ) − 60 e − 1.5 ) = 1414.958718
+0.025
+And so
+Var(X) = 1414.958718 – 31.07479359 2 = 449.3159219
+And therefore
+Var(Y) = 200Var(X) + 200E(X)2
+= 200 \times  449.3159219 + 200 \times  31.074793592 = 282991.7438
+Finally
+Pr(Z < 2000) = Pr(Y > 6433.186014)
+6433 . 186014 − 6214 . 958718 ⎞
+⎛
+= Pr ⎜ N ( 0 , 1 ) >
+⎟
+531 . 97
+⎝
+⎠
+Page 12%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, April 2011
+= Pr(N(0,1) > 0.41023) = 1 − 0.65918 = 0.34082
+Under C
+Var(Y) = 200Var(X) + 200E(X)2
+Var(Y) = 200 \times  0.752 \times  402 + 200 \times  (0.75 \times  30)2 = 360000 = 6002
+So
+6300 − 6000 ⎞
+⎛
+Pr(Z < 2000) = Pr(Y > 6300) = Pr ⎜ N (0,1) >
+⎟
+600
+⎝
+⎠
+= Pr(N(0,1) > 0.5) = (1 − 0.69146) = 0.30854
+This question received a wide range of quality of answers. Most candidates calculated
+A and C correctly, but many failed to produce a reasonable answer for B. Common
+errors for A and C included not re-calculating the variance and using the wrong
+claim amount when calculating the probability. Some candidates were unable to
+calculate the normal distribution probability correctly after deriving the correct claim
+and variance values. For arrangement B many struggled to evaluate the integral
+correctly.

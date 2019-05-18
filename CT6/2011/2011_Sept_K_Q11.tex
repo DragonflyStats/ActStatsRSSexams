@@ -1,0 +1,182 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+11
+Five years ago, an insurance company began to issue insurance policies covering
+medical expenses for dogs. The insurance company classifies dogs into three risk
+categories: large pedigree (category 1), small pedigree (category 2) and non-pedigree
+(category 3). The number of claims n ij in the ith category in the jth year is assumed to
+have a Poisson distribution with unknown parameter \theta  i . Data on the number of
+claims in each category over the last 5 years is set out as follows:
+Category 1
+Category 2
+Category 3
+1 2 Year
+3 4 5 \sum  j = 1 n ij \sum  j = 1 n ij 2
+30
+37
+26 43
+49
+31 49
+58
+18 58
+52
+37 60
+64
+32 240
+260
+144 12,144
+13,934
+4,354
+5
+5
+Prior beliefs about \theta  1 are given by a gamma distribution with mean 50 and variance
+25.
+\item (i) Find the Bayes estimate of \theta  1 under quadratic loss. 
+\item (ii) Calculate the expected claims for year 6 of each category under the
+assumptions of Empirical Bayes Credibility Theory Model 1 [6]
+\item (iii) Explain the main differences between the approach in (i) and that in  (ii). 
+\item (iv) Explain why the assumption of a Poisson distribution with a constant
+parameter may not be appropriate and describe how each approach might be
+generalised.
+
+[Total 17]
+END OF PAPER
+CT6 S2011—6
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+11
+(i)
+We need to find the parameters of the Gamma distribution, say \alpha  and \lambda . Then
+\alpha 
+E ( X )
+\lambda  = \lambda  = 50 = 2
+=
+\alpha 
+Var ( X )
+25
+\lambda  2
+And hence \alpha  = E(X) \times  \lambda  = 50 \times  2 = 100
+The posterior distribution is given by:
+f(\theta  1 |x) ∝f (x|\theta  1 ) f(\theta  1 )
+⎛ 5
+n ⎞
+∝ ⎜ ∏ e −\theta  1 \theta  1 1 j ⎟ \times  \theta  1 \alpha − 1 e −\lambda \theta  1
+⎜ j = 1
+⎟
+⎝
+⎠
+\alpha + \sum  j = 1 n 1 j − 1
+5
+∝ e − ( \lambda + 5) \theta  1 \theta  1
+Which is the pdf of a gamma distribution with parameters
+\alpha  +
+\sum  j = 1 n 1 j
+5
+= 100 + 240 = 340 and \lambda  + 5 = 7.
+Under quadratic loss the Bayes estimate is the mean of the posterior
+340
+distribution. So we have an estimate of
+= 48.57.
+7
+(ii)
+We have n 1 =
+240
+260
+144
+= 48 and n 2 =
+= 52 and n 3 =
+= 28.8.
+5
+5
+5
+This gives n =
+5
+\sum  ( n 1 j − n 1 ) 2
+j = 1
+=
+48 + 52 + 28.8
+= 42.9333
+3
+\sum  j = 1 n 1 j − 2 \sum  j = 1 n 1 j \times  n 1 + 5 \times  n 1 2
+5
+5
+= 12,144 − 2 \times  240 \times  48 + 5 \times  48 2 = 624
+Similarly
+5
+\sum  ( n 2 j − n 2 ) 2 = 13,934 − 2 \times  260 \times  52 + 5 \times  52 2 = 414
+j = 1
+5
+\sum  ( n 3 j − n 3 ) 2 = 4,354 − 2 \times  144 \times  28.8 + 5 \times  28.8 2 = 206.8
+j = 1
+Page 12%%%%%%%%%%%%%%%%%%%%%%%%%%%%, September 2011
+So
+E ( s 2 ( \theta  )) =
+1 \times  1 (624
+3 4
++ 414 + 206.8) = 103.733
+and
+Var( m ( \theta  )) =
+1 ((48
+2
+− 42.9333) 2 + (52 − 42.9333) 2 + (28.8 − 42.9333) 2 )
+−
+So Z =
+1 \times 
+5
+103.7333 = 133.06667
+5
+= 0.86512
+103.733
+5 +
+133.06667
+So expected claims for next year are:
+Cat 1 0.13488 \times  42.9333 + 0.86512 \times  48 = 47.32
+Cat 2 0.13488 \times  42.9333 + 0.86512 \times  52 = 50.78
+Cat 3 0.13488 \times  42.9333 + 0.86512 \times  28.8 = 30.71
+This question contained a minor typographical error in the summary statistics. Based on the
+5
+figures given in the question a direct calculation of
+\sum  n 1 2 j gives the correct figure 12,114
+j = 1
+and not 12,144 which is given in the question. Candidates who used 12114 will have
+produced slightly different results as follows:
+5
+\sum  ( n 1 j − n 1 )
+2
+= 594
+j = 1
+E ( s 2 ( \theta  )) = 101.2333
+Var ( S ( \theta  ) ) = 133.5666
+Z = 0.86837
+And the final three figures will change from 47.32, 50.78, 30.71 to 47.33, 50.81 and 30.66
+respectively. Candidates producing these figures scored full marks.
+(iii)
+The main differences are that:
+• The approach under (i) makes use of prior information about the
+distribution of \theta  1 whereas the approach in (ii) does not.
+• The approach under (i) uses only the information from the first category to
+produce a posterior estimate, whereas the approach under (ii) assumes that
+information from the other categories can give some information about
+category 1.
+Page 13%%%%%%%%%%%%%%%%%%%%%%%%%%%%, September 2011
+•
+(iv)
+The approach under (i) makes precise distributional assumptions about the number of claims (i.e. that they are Poisson distributed) whereas the
+approach under (ii) makes no such assumptions.
+The insurance policies were newly introduced 5 years ago, and it is therefore
+likely that the volume of policies written has increased (or at least not been
+constant) over time. The assumption that the number of claims has a Poisson
+distribution with a fixed mean is therefore unlikely to be accurate, as one
+would expect the mean number of claims to be proportional to the number of
+policies.
+Let P ij be the number of policies in force for risk i in year j . Then the models
+can be amended as follows:
+The approach in (i) can be taken assuming that that the mean number of claims
+in the Poisson distribution is P ij \theta  i .
+The approach in (ii) can be generalised by using EBCT Model 2 which
+explicitly incorporates an adjustment for the volume of risk.
+This long question was answered well generally. A bit of care was needed in the final two
+parts where only the better candidates were able to give a full discussion of the assumptions
+underlying the models and how the models could be amended.
+END OF EXAMINERS’ REPORT
+Page 14

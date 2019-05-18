@@ -1,0 +1,120 @@
+11
+The number of claims on a portfolio of insurance policies has a Poisson distribution
+with mean 200. Individual claim amounts are exponentially distributed with mean 40.
+The insurance company calculates premiums using a premium loading of 40% and is
+considering entering into one of the following re-insurance arrangements:
+(A) No reinsurance.
+(B) Individual excess of loss insurance with retention 60 with a reinsurance
+company that calculates premiums using a premium loading of 55%.
+(C) Proportional reinsurance with retention 75% with a reinsurance company that
+calculates premiums using a premium loading of 45%.
+(i) Find the insurance company’s expected profit under each arrangement.
+(ii) Find the probability that the insurer makes a profit of less than 2000 under
+each of the arrangements using a normal approximation.
+[8]
+[Total 14]
+[6]
+The table below shows cumulative claims paid on a portfolio of insurance policies.
+Accident Year
+2007
+2008
+2009
+2010
+0
+240
+260
+270
+276
+Development Year
+1
+2
+281.4
+302
+320
+322
+312.9
+3
+305
+All claims are fully run off by the end of development year 3.
+(i)
+Calculate the total reserve for outstanding claims using the basic chain ladder
+technique.
+[7]
+An actuary is considering modelling the future claims assuming that individual
+development factors are lognormally distributed with the following parameters:
+Parameter
+\mu 
+\sigma
+(ii)
+(iii)
+0 to 1
+0.171251
+0.032148
+Development Year
+1 to 2
+0.035850
+0.045606
+2 to 3
+0.008787
+0.046853
+Show that under these assumptions the cumulative development factor to
+ultimate is also lognormally distributed.
+
+Calculate a 99% upper confidence limit for the outstanding claims relating to
+the 2010 accident year.
+[5]
+[Total 15]
+END OF PAPER
+CT6 A2011—5
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+11
+(i)
+The development factors are:
+r0,1 = 281.4 + 320 + 312.9 914.3
+=
+= 1.187403
+240 + 260 + 270
+770
+r1,2 = 302 + 322
+624
+=
+= 1.037579
+281.4 + 320 601.4
+r2,3 = 305
+= 1.009934
+302
+And the ultimate claims are:
+For AY 2008: 322 \times  1.009934 = 325.20
+For AY 2009: 312.9 \times  1.037579 \times  1.009934 = 327.88
+For AY 2010: 276 \times  1.187403 \times  1.037579 \times  1.009934 = 343.42
+So outstanding claims reserve is
+325.20 + 327.88 + 343.42 − 322 − 312.9 − 276 = 85.60
+Page 13%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, April 2011
+(ii)
+Suppose that Ri,i+1 ~ log N(\mu i, \sigma i 2 ) for i = 0, 1, 2.
+Then log Ri,i+1 ~ N(\mu i, \sigma i 2 ).
+So (for example)
+log Ri,i+1 Ri+1,i+2 = log Ri,i+1 + log Ri+1,i+2 ~ N(\mu i + \mu i+1, \sigma i 2 + \sigma i 2 + 1 )
+Which means that the product Ri,i+1 Ri+1,i+2 is also log-normally distributed.
+
+Since any product of log-normally distributed development factors is also lognormally distributed the development factors to ultimate must also be log-
+normally distributed.
+(iii)
+Using the results from (ii) the development factor to ultimate for AY 2010 is
+log-normally distributed with parameters:
+\mu  = 0.171251 + 0.035850 + 0.008787 = 0.215889
+\sigma^{2} = 0.0321482 + 0.0456062 + 0.0468532 = 0.0728602
+So an upper 99\% confidence limit for the development factor to ultimate is
+given by exp(0.215889 + 0.07286 \times  2.3263) = 1.47018
+So an upper 99\% confidence limit for total claims is
+1.47018 \times  276 = 405.77
+So an upper 99\% confidence limit for outstanding claims is
+405.77 − 276 = 129.77
+Part (i) was answered very well by the majority of candidates. Parts (ii) and (iii) were answered poorly. Many candidates failed to produce sufficient detail in part (ii) for
+instance calculating the parameters of the distribution rather than explaining why it was a log-normal. For part (iii) few candidates were able to calculate the parameters
+of the distribution correctly. A further common mistake was to calculate a two-sided confidence interval.
+
+\end{document}

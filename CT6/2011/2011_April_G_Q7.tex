@@ -1,0 +1,70 @@
+
+7
+
+Consider the time series
+Y t = 0.7 + 0.4Y t− 1 + 0.12Y t− 2 + e t
+where e t is a white noise process with variance \sigma 2 .
+(i) Identify the model as an ARIMA(p,d,q) process. 
+(ii) Determine whether Y t is a stationary process. 
+(iii) Calculate E(Y t ). 
+(iv) Calculate the auto-correlations \rho  1 , \rho  2 , \rho  3 and \rho  4 .
+CT6 A2011—3
+
+[Total 9]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+7
+(i) The model is ARIMA(2,0,0) provided that the model is stationary.
+(ii) The lag polynomial is 1 − 0.4L − 0.12L2 = (1 − 0.6L)(1 + 0.2L)
+Since the roots
+1
+0.6
+1 are both greater than one in absolute value the
+and − 0.2
+process is stationary.
+(iii)
+Since the process is stationary we know that E(Yt) is equal to some constant \mu 
+independent of t.
+Taking expectations on both sides of the equation defining Yt gives
+E(Yt) = 0.7 + 0.4E(Yt−1) + 0.12E(Yt−2)
+\mu  = 0.7 + 0.4\mu  + 0.12\mu 
+\mu  =
+(iv)
+0.7
+= 1.45833333
+1 − 0.4 − 0.12
+The auto-covariance function is not affected by the constant term of 0.7 in the
+equation, and this term can be ignored.
+The Yule-Walker equations are
+γ0 = 0.4γ1 + 0.12γ2 + \sigma^{2}
+γ1 = 0.4γ0 + 0.12γ1 (A)
+γ2 = 0.4γ1 + 0.12γ0 (B)
+γs = 0.4γs−1 + 0.12γs−2 for s > 2
+Dividing both sides of (A) by γ0 and noting that \rho  s =
+\rho 1 = 0.4 + 0.12\rho 1 so that \rho 1 =
+Page 6
+0.4
+= 0.45454545
+0.88
+γ s
+we have
+γ 0%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, April 2011
+Substituting this result into (B) we have
+\rho 2 = 0.4 \times  0.45454545 + 0.12 = 0.30181818
+And using the final result we have
+\rho 3 = 0.4 \times  0.3018181818 + 0.12 \times  0.45454545 = 0.1752727
+and
+\rho 4 = 0.4 \times  0.1752727 + 0.12 \times  0.30181818 = 0.10632727
+Expressed as fractions:
+5 \rho  =
+\rho  1 = 11
+2
+83
+275
+241 \rho  =
+\rho  3 = 1375
+4
+731
+6875
+This straightforward question was answered well.

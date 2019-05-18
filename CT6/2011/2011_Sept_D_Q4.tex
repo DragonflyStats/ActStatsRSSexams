@@ -1,0 +1,33 @@
+
+Claims on a portfolio of insurance policies follow a Poisson process with parameter \lambda .
+The insurance company calculates premiums using a premium loading of \theta  and has an
+initial surplus of U.
+\item (i) Define the surplus process U(t). 
+\item (ii) Define the probabilities \psi (U, t) and \psi (U). 
+\item (iii) Explain how \psi (U, t) and \psi (U) depend on \lambda .
+CT6 S2011—2
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+4
+(i)
+Let S(t) denote the total claims up to time t and suppose individual claim
+amounts follow a distribution X.
+Then U(t) = U + \lambda t(1 + \theta ) E(X) − S(t).
+(ii)
+\psi (U, t) = Pr(U(s) < 0 for some s ∈ [0, t])
+\psi (U) = Pr(U(t) < 0 for some t > 0)
+(iii)
+The probability of ruin by time t will increase as \lambda  increases. This is because
+claims and premiums arrive at a faster rate, so that if ruin occurs it will occur
+earlier, which leads to an increase in \psi (U, t).
+The probability of ultimate ruin does not depend on how quickly the claims
+arrive. We are not interested in the time when ruin occurs as we are looking
+over an infinite time horizon.
+This is another standard theory question. Many candidates lost marks by not specifying the
+probabilities carefully enough in part (ii) – for example \psi  (U) = Pr(U(t) < 0) does not fully
+specify the probability since no information is given about t.
+Page 4%%%%%%%%%%%%%%%%%%%%%%%%%%%%, September 2011

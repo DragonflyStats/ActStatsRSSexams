@@ -1,0 +1,58 @@
+6
+[6]
+Let X 1 and X 2 be two independent exponentially distributed random variables with
+parameters \lambda  1 and \lambda  2 respectively. The random variable X is related to X 1 and X 2
+such that a single observation from X is chosen from X 1 with probability p and from
+X 2 with probability 1 − p.
+\item (i)
+Show that the density function of X is
+pf 1 (x) + (1 − p) f 2 (x).
+where f i (x) is the density function of X i . 
+\item (ii) Construct an algorithm for generating samples from X. 
+\item (iii) Describe how the algorithm in \item (ii) could be generalised for k independent
+components p 1 f 1 (x) + ...+ p k f k (x) where p 1 + ... + p k =1, each p i ≥ 0 and f i (x)
+is the density of an exponential distribution with parameter \lambda  i .
+
+[Total 8]
+CT6 S2011—3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+6
+(i)
+F X ( x ) = P ( X \leq  x ) = P ( X = X 1 ∩ X 1 \leq  x ) + P ( X = X 2 ∩ X 2 \leq  x )
+= pF 1 ( x ) + (1 − p ) F 2 ( x )
+and so f X ( x ) = F X ′ ( x ) = pF 1 ′ ( x ) + (1 − p ) F 2 ′ ( x ) = pf 1 ( x ) + (1 − p ) f 2 ( x )
+(ii)
+We need to combine an algorithm for determining whether to sample from X 1
+or X 2 with an algorithm for generating a sample from the appropriate
+exponential distribution.
+Page 5%%%%%%%%%%%%%%%%%%%%%%%%%%%%, September 2011
+If u is generated from a U(0,1) distribution then F i − 1 ( u ) is exponentially
+log ( 1 − u )
+distributed with mean 1 . But F i ( x ) = 1 − e −\lambda  i x so that F i − 1 = −
+\lambda  i
+\lambda 
+i
+So the algorithm is as follows:
+(iii)
+(A) Generate u 1 and u 2 from U(0,1)
+(B) If u 1 < p then set i = 1 otherwise set i = 2.
+(C) Set x = x = −
+log1 − u 2 log(1 − u 2 )
+−
+\lambda  i
+\lambda  i
+The algorithm will be as follows:
+(A) Generate u 1 and u u 2 from U(0,1)
+(B) Set q 0 = 0, q j = p 1 + ... + p j for j = 1, 2, ..., k
+(C) If q j−1 \leq  u 1 < q j then set i = j.
+(D) Set x = −
+log1 − u 2
+log(1 − u 2 )
+x =−
+\lambda  i
+\lambda  i
+A number of candidates struggled to generate the correct algorithm. Some attempted to use
+the inversion method in parts (ii) and (iii) but the method shown above is much easier.
+

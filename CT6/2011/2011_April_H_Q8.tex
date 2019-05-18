@@ -1,0 +1,115 @@
+PLEASE TURN OVER8
+Suppose that Y is a random variable belonging to a special subset of the exponential
+family where the density function of Y has the form
+⎡ y \theta  − b ( \theta  )
+⎤
+f ( y , \theta  , \phi  ) = exp ⎢
++ c ( y , \phi  ) ⎥
+\phi 
+⎣
+⎦
+For some constants \theta  and \phi  and functions b and c.
+(i)
+Show that the moment generating function of Y is given by
+⎡ b ( \theta  + t \phi  ) − b ( \theta  ) ⎤
+M Y ( t ) = exp ⎢
+⎥
+\phi 
+⎣
+⎦
+
+Hint: Note that the function f(y, \theta  + \phi t, \phi ) is the density of another random variable of
+the same family and hence
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+8
+(i)
+MY(t) = \int  e ty f ( y , \theta  , \phi  ) dy
+⎡ y \theta  − b ( \theta  )
+⎤
++ c ( y , \phi  ) ⎥ dy
+\phi 
+⎣
+⎦
+= \int  exp( ty ) exp ⎢
+⎡ y ( \theta  + t \phi  ) − b ( \theta  )
+⎤
++ c ( y , \phi  ) ⎥ dy
+\phi 
+⎣
+⎦
+= \int  exp ⎢
+⎡ b ( \theta  + t \phi  ) − b ( \theta  ) ⎤
+⎡ y ( \theta  + \phi  t ) − b ( \theta  + \phi  t )
+⎤
+exp ⎢
++ c ( y , \phi  ) ⎥ dy
+⎥
+\int 
+\phi 
+\phi 
+⎣
+⎦
+⎣
+⎦
+= exp ⎢
+⎡ b ( \theta  + t \phi  ) − b ( \theta  ) ⎤
+⎥ \times  1
+\phi 
+⎣
+⎦
+= exp ⎢
+using the hint to evaluate the second integral.
+(ii)
+dM Y ( t )
+d ⎛ b ( \theta  + t \phi  ) − b ( \theta  ) ⎞
+=
+⎜
+⎟ M Y ( t )
+dt
+\phi 
+dt ⎝
+⎠
+=
+\phi  b ′ ( \theta  + t \phi  )
+M Y ( t )
+\phi 
+= b ′ ( \theta  + t \phi  ) M Y ( t )
+Page 7%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, April 2011
+And E ( Y ) = M Y ′ (0) = b ′ ( \theta  ) M Y (0) = b ′ ( \theta  ) \times  1 = b ′ ( \theta  )
+d 2 M Y ( t )
+dt 2
+= \phi  b ′′ ( \theta  + t \phi  ) M Y ( t ) + b ′ ( \theta  + t \phi  ) M Y ′ ( t )
+So E ( Y 2) = M Y ′′ (0) = \phi  b ′′ ( \theta  ) M Y (0) + b ′ ( \theta  ) M Y ′ (0)
+= \phi  b ′′ ( \theta  ) + b ′ ( \theta  ) 2
+So Var( Y ) = E ( Y 2) − E ( Y )2 = \phi  b ′′ ( \theta  ) + b ′ ( \theta  ) 2 − b ′ ( \theta  ) 2 = \phi  b ′′ ( \theta  )
+Credit given for alternative approaches (e.g. CGF).
+(iii)
+For the Poisson distribution with parameter \mu  we have
+f(y, \theta , \phi ) =
+\mu  y e −\mu 
+= exp[y log \mu  − \mu  − log y!]
+y !
+Which is of the form in the question with \theta  = log \mu , \phi  = 1 and b(\theta ) = e\theta  and
+c(y, \phi ) = − log y!
+So the result from (i) gives
+⎡ b ( \theta  + t \phi  ) − b ( \theta  ) ⎤
+MY(t) = exp ⎢
+⎥
+\phi 
+⎣
+⎦
+⎡ e log \mu + t − e log \mu  ⎤
+= exp ⎢
+⎥ = exp[\mu (et − 1)]
+1
+⎣ ⎢
+⎦ ⎥
+which is indeed the MGF of the Poisson distribution as shown on p7 of the
+tables.
+This question was generally well done, with many candidates who could not complete
+the derivation in part (i) nevertheless able to use the result to score well in parts (ii)
+and (iii). For part (iii) some candidates calculated the first two moments rather than
+showing that the MGF of the Poisson distribution has the form given in part (i).
+Page 8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, April 2011

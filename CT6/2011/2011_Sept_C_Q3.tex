@@ -1,0 +1,61 @@
+
+3
+
+Loss amounts under a class of insurance policies follow an exponential distribution
+with mean 100. The insurance company wishes to enter into an individual excess of
+loss reinsurance arrangement with retention level M set such that 8 out of 10 claims
+will not involve the reinsurer.
+\item (i)
+Find the retention M.
+
+For a given claim, let X I denote the amount paid by the insurer and X R the amount
+paid by the reinsurer.
+\item (ii)
+4
+Calculate E(X I ) and E(X R ).
+
+[Total 5]
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3
+(i)
+We must solve
+M
+∫ 0
+0.01 e − 0.01 x dx = 0.8
+[ − e − 0.01 x ] 0 M = 0.8
+1 − e − 0.01 M = 0.8
+M =
+log 0.2
+= 160.9437912
+− 0.01
+Page 3%%%%%%%%%%%%%%%%%%%%%%%%%%%%, September 2011
+(ii)
+We have
+M
+E ( X I ) = ∫ 0.01 x e − 0.01 x dx + MP ( X > M )
+0
+= [ − xe − 0.01 x ] 0 M + ∫
+M − 0.01 x
+e
+dx + Me − 0.01 M
+0
+M
+= − Me
+− 0.01 M
+⎡ − e − 0.01 x ⎤
+− 0.01 M
++ ⎢
+⎥ + Me
+0.01
+⎣ ⎢
+⎦ ⎥ 0
+= − 100 e − 0.01 M + 100
+= − 100 e − 1.6094 + 100 = 80
+And hence E(X R ) = E(X) − E(X I ) = 100 − 80 = 20
+This standard question was generally well answered. Alternatively, one could calculate
+E(X R ) first and then apply E(X I ) = E(X) − E(X R ).
+
+

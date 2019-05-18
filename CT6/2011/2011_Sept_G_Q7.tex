@@ -1,0 +1,65 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%- Question 7
+
+A portfolio of insurance policies contains two types of risk. Type I risks make up
+80% of claims and give rise to loss amounts which follow a normal distribution with
+mean 100 and variance 400. Type II risks give rise to loss amounts which are
+normally distributed with mean 115 and variance 900.
+\item (i) Calculate the mean and variance of the loss amount for a randomly chosen
+claim.
+
+\item (ii) Explain whether the loss amount for a randomly chosen claim follows a
+normal distribution.
+
+The insurance company has in place an excess of loss reinsurance arrangement with
+retention 130.
+\item (iii)
+\item (iv)
+8
+Calculate the probability that a randomly chosen claim from the portfolio
+results in a payment by the reinsurer.
+
+Calculate the proportion of claims involving the reinsurer that arise from Type
+II risks.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+7
+(i)
+Let the loss amount be X. Then
+E(X) = 0.8 \times  100 + 0.2 \times  115 = 103
+E(X 2 ) = 0.8 \times  (100 2 + 400) + 0.2 (115 2 + 900) = 11,145
+Var(X) = E(X 2 ) − E(X) 2 = 11,145 – 103 2 = 536
+(ii) No, the loss distribution is not Normal. To see this, note that (for example) the
+pdf of the combined distribution will have local maxima at both 100 and 115.
+[Consider the case where the variances are very small to see this]
+(iii) Pr(X > 130) = 0.8 \times  Pr(N(100, 20 2 ) > 130) + 0.2 \times  Pr(N(115,30 2 ) > 130)
+130 − 100 ⎞
+130 − 115 ⎞
+⎛
+= 0.8 \times  Pr ⎛ ⎜ N (0,1) >
+⎟ + 0.2 \times  Pr ⎜ N (0,1) >
+⎟ Pr X
+20
+30
+⎝
+⎠
+⎝
+⎠
+130
+0.8 Pr N 100, 20
+130
+0.2 Pr N 115, 30
+130
+Page 6%%%%%%%%%%%%%%%%%%%%%%%%%%%%, September 2011
+= 0.8 \times  Pr(N(0,1) > 1.5) + 0.2 \times  Pr(N(0,1) > 0.5)
+= 0.8 \times  (1 − 0.93319) + 0.2 \times  (1 − 0.69146)
+= 0.115156
+(iv)
+The relevant proportion is given by:
+0.2 \times  (1 − 0.69146)
+= 53.6%
+0.115156
+Many weaker candidates struggled with this question, with a large number incorrectly
+asserting the loss distribution was Normal in part (ii).

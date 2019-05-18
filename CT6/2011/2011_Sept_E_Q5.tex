@@ -1,0 +1,102 @@
+[Total 5]5
+An insurance company covers pedigree cats against the costs of medical treatment.
+The cost of claims from a policy in a year is assumed to have a normal distribution
+with mean μ (which varies from policy to policy) and known variance 25 2 . It is
+assumed that μ = \alpha  + \betax where \alpha  and \beta are fixed constants and x is the age of the cat.
+You are given the following data for the pairs (y i , x i ) for i = 1, 2, ..., 50 where y i is the
+cost of claims last year for the ith policy and x i is the age of the corresponding cat.
+50 50 50 50
+i = 1 i = 1 i = 1 i = 1
+\sum  x i = 637 \sum  y i = 5, 492 \sum  y i x i = 74,532 \sum  x i 2 = 8,312
+Calculate the maximum likelihood estimates of \alpha  and \beta.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+5
+The likelihood is given by
+50
+l = C \times  ∏
+⎛ y −μ ⎞
+− 1⁄2 ⎜ i i ⎟
+e ⎝ 25 ⎠
+2
+i = 1
+So the log-likelihood is given by
+L = log l = D −
+= D −
+1 50
+( y i − \alpha  − \beta x i ) 2
+\sum 
+1250 i = 1
+50
+50
+50
+50
+⎞
+1 ⎛ 50 2
+2
+2
+y
+y
+x
+x
+y
+x i 2 ⎟
+2
+2
+50
+2
+−
+\alpha 
++
+\alpha \beta
++
+\alpha 
+−
+\beta
++
+\beta
+⎜ ⎜ \sum  i
+\sum 
+\sum 
+\sum 
+\sum 
+i
+i
+i i
+⎟
+1250 ⎝ i = 1
+i = 1
+i = 1
+i = 1
+i = 1
+⎠
+We can ignore the factor of 1,250.
+50
+50
+\frac{\partial}{\partial} L
+= 2 \sum  y i − 2 \beta \sum  x i − 100 \alpha  = 10,984 − 1, 274 \beta − 100 \alpha 
+\frac{\partial}{\partial}\alpha 
+i = 1
+i = 1
+50
+50
+50
+\frac{\partial}{\partial} L
+= − 2 \alpha  \sum  x i + 2 \sum  x i y i − 2 \beta \sum  x i 2 = 149, 064 − 1, 274 \alpha  − 16, 624 \beta
+\frac{\partial}{\partial}\beta
+i = 1
+i = 1
+i = 1
+Setting both partial derivatives to zero and solving:
+100\alpha  + 1,274\beta = 10,984
+(AA)
+− 1,274\alpha  − 16,624\beta = −149,064 (BB)
+(AA) \times  12.74 + (BB) gives −393.24\beta = −9,127.84 so that \beta = 23.212
+And so \alpha  = 0.01(10,984 − 1274 \times  23.212) = −185.88
+This requires some calculations to produce the mle estimates and only the stronger
+candidates were able to carry the algebra through to the end. Alternatively, solutions for
+and could also be obtained using the least-squares linear regression expressions given in
+the tables. This approach gave full credit provided it was accompanied by an explanation of
+why it produces the same estimates.

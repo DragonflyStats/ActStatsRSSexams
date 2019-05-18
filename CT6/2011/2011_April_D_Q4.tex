@@ -1,0 +1,71 @@
+
+4
+(i) Show that the posterior distribution of \theta  given y 1 is of the same form as the
+prior distribution, specifying the parameters involved.
+
+(ii) Write down the posterior distribution of \theta  given y 1 , ..., y n .
+
+[Total 6]
+The annual number of claims on an insurance policy within a certain portfolio follows
+a Poisson distribution with mean \mu . The parameter \mu  varies from policy to policy and
+can be considered as a random variable that follows an exponential distribution with
+mean 1 .
+\lambda 
+Find the unconditional distribution of the annual number of claims on a randomly
+chosen policy from the portfolio.
+[6]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+
+4
+Let the annual number of claims be denoted by N . Then
+P ( N = k ) =
+=
+\int^{\infty} 
+∞ −\mu 
+e
+0
+∞
+\int  0
+P ( N = k |\mu ) f (\mu ) d \mu 
+\mu  k −\lambda \mu 
+\lambda  e d \mu 
+k !
+\lambda  ∞ k − (1 +\lambda  ) \mu 
+\mu  e
+d \mu 
+k ! \int  0
+\lambda  \Gamma  ( k + 1) ∞ (1 + \lambda  ) k + 1 k − (1 +\lambda  ) \mu 
+= ×
+\mu  e
+d \mu 
+k ! (1 + \lambda  ) k + 1 \int  0 \Gamma  ( k + 1)
+=
+=
+\lambda 
+(1 + \lambda  ) k + 1
+× 1
+Page 3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — Examiners’ Report, April 2011
+Where the final integral is 1 since the integrand is the pdf of a Gamma distribution.
+So
+P ( N = k ) =
+\lambda 
+(1 + \lambda  )
+k + 1
+=
+\lambda 
+1
+, for k = 0, 1, 2, ...
+×
+1 + \lambda  (1 + \lambda  ) k
+Which means that N has a geometric distribution with parameter p =
+\lambda 
+. This is
+1 + \lambda 
+equivalent to a Type II negative binomial with k=1
+This was the worst answered question on this paper, with few candidates able to write
+down the first integral. Candidates who attempted the algebra often did not
+recognise the resultant distribution.
+
+

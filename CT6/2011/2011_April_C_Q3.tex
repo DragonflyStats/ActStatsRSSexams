@@ -1,0 +1,62 @@
+
+
+3
+(i) Give a brief interpretation of E[s 2 (\theta )] and V[m(\theta ))] under the assumptions of
+Empirical Bayes Credibility Theory Model 1.
+
+(ii) Explain how the value of the credibility factor Z depends on E[s 2 (\theta )] and
+V[m(\theta )].
+
+[Total 5]
+Let y 1 , ..., y n be samples from a uniform distribution on the interval [0, \theta ] where \theta  > 0
+is an unknown constant. Prior beliefs about \theta  are given by a distribution with density
+⎪ ⎧\alpha\beta \alpha  \theta  − (1 +\alpha  )
+f ( \theta  ) = ⎨
+⎩ 0
+\theta >\beta 
+otherwise
+where \alpha  and\beta are positive constants.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+3
+First note that f ( y 1|\theta ) =
+(i)
+1
+for \theta  > y 1
+\theta 
+f (\theta | y 1) \propto  f ( y 1|\theta ) f (\theta )
+=
+1
+\alpha \beta \alpha  \theta −(1+\alpha ) for \theta  >\beta and \theta  > y 1
+\theta 
+\propto  \theta −(2+\alpha ) for \theta  > max(\beta , y 1)
+\propto  (\alpha  + 1)\beta \alpha + 1 \theta −(1+1+\alpha ) for \theta  >\beta where\beta = max(\beta , y 1)
+Which is of the same form with parameters \alpha  + 1 and\beta .
+Alternatively, we can derive this formally as:
+f ( y 1 \theta  ) f ( \theta  )
+f ( \theta  y 1 ) =
+\int  f ( y 1 \theta  ) f ( \theta  ) d \theta 
+\theta 
+This gives:
+f ( \theta  y 1 ) =
+(ii)
+1
+\theta 
+× \alpha\beta \alpha  \theta  − ( 1 + \alpha  )
+∞
+\int \beta \alpha \beta 
+\alpha 
+\theta  − \alpha  d \theta 
+=
+\alpha\beta \alpha  \theta  − ( 2 + \alpha  )
+= ( \alpha  + 1 )\beta \alpha  + 1 \theta  − ( 2 + \alpha  )
+− 1
+\alpha 
+\alpha  + 1 \beta 
+The posterior distribution has the same form with parameters \alpha  + n and
+max(\beta , y 1, ..., yn ).
+This question received a wide range of quality of answers. Only the strongest
+candidates stated the correct range for the posterior in part (i). A number of
+candidates assumed a sample of size n in part (i) and therefore failed to differentiate
+between parts (i) and (ii).

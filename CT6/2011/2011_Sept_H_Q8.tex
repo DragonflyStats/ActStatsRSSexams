@@ -1,0 +1,86 @@
+[Total 10]
+Consider the time series
+Y t = 0.1 + 0.4Y t−1 + 0.9e t−1 + e t
+where e t is a white noise process with variance \sigma^{2} .
+\item (i) Identify the model as an ARIMA(p,d,q) process.
+\item (ii) Determine whether Y t is:
+(a)
+(b)
+
+a stationary process
+an invertible process
+
+9
+\item (iii) Calculate E(Y t ) and find the auto-covariance function for Y t .
+\item (iv) Determine the MA(∞) representation for Y t .
+[6]
+
+[Total 13]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+8
+(i) The model is ARIMA(1,0,1) if Y t is stationary.
+(ii) (a) The characteristic polynomial for the AR part is A(z) = 1 − 0.4z the
+root of which has absolute value greater than 1 so the process is
+stationary.
+(b) The characteristic polynomial for the MA part is B(z) = 1 + 0.9z the
+root of which has absolute value greater than 1 so the process is
+invertible.
+(iii)
+Since the process is stationary we know that E(Y t ) is equal to some constant μ
+independent of t.
+Taking expectations on both sides of the equation defining Y t gives
+E(Y t ) = 0.1 + 0.4E(Y t−1 )
+μ = 0.1 +0.4μ
+μ =
+0.1
+= 0.1666666
+1 − 0.4
+Note that
+Cov(Y t , e t ) = Cov(0.1 + 0.4Y t−1 + 0.9e t−1 + e t , e t )
+= 0.4Cov(Y t−1 , e t ) + 0.9Cov(e t−1 , e t ) + Cov(e t , e t ) = 0 + 0 + \sigma^{2} = \sigma^{2}
+Similarly
+Cov(Y t ,e t−1 ) =0 + 0.4Cov(Y t−1 , e t−1 ) + 0.9Cov(e t−1 , e t−1 ) + Cov(e t ,e t−1 )
+= 0.4\sigma^{2} + 0.9\sigma^{2} + 0 = 1.3\sigma^{2}
+Page 7%%%%%%%%%%%%%%%%%%%%%%%%%%%%, September 2011
+So
+\gamma_{0}= Cov(Y t , Y t ) = Cov(Y t , 0.1 + 0.4Y t−1 + 0.9e t−1 + e t )
+= 0.4\gamma_{1}+ 0.9 \times  1.3\sigma^{2} + \sigma^{2} = 0.4\gamma_{1}+ 2.17\sigma^{2} (A)
+And
+\gamma_{1}= Cov(Y t−1 , Y t ) = Cov(Y t−1 , 0.1 + 0.4Y t−1 + 0.9e t−1 + e t )
+= 0.4\gamma_{0}+ 0.9\sigma^{2} (B)
+Substituting for
+in (A) gives
+\gamma_{0}= 0.4 \times  0.4\gamma_{0}+ 0.4 \times  0.9\sigma^{2} + 2.17\sigma^{2} = 0.16\gamma_{0}+ 2.53\sigma^{2}
+\gamma_{0}=
+2.53 2
+σ = 3.011905\sigma^{2}
+0.84
+Substituting into (B) gives
+\gamma_{1}= 0.4 \times  3.011905\sigma^{2} + 0.9\sigma^{2} = 2.104762\sigma^{2}
+And in general
+\gamma_{s} = 0.4\gamma_{s}−1 for s
+2
+So \gamma_{s} = 0.4 s−1 \times  2.104762\sigma^{2} .
+(iv)
+We have (1 − 0.4B) Y t = 0.1 + 0.9e t-1 + e t
+so Y t = (1 − 0.4B) −1 (0.1 + 0.9e t-1 + e t )
+∞
+=
+\sum  0.4 i B i (0.1 + 0.9 e t − 1 + e t )
+i = 0
+=
+∞
+∞
+0.1
++ 0.9 \sum  0.4 i e t − i − 1 + \sum  0.4 i e t − i
+1 − 0.4
+i = 0
+i = 0
+∞
+= 0.16667 + e t + 1.3
+\sum  0.4 i − 1 e t − i
+i = 1
+Overall, this time series question was reasonably well answered, consistent with the
+improvement in the standard of answers to this type of question in recent sittings. Weaker
+candidates could not generate the correct auto-covariance function here.
