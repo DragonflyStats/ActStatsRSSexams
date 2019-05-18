@@ -1,0 +1,87 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+3
+
+An actuary needs to generate samples from the standard normal distribution for use in
+a simulation model he is constructing.
+(i) Describe the polar algorithm for generating pairs of samples from the standard
+normal distribution given pairs of samples from a uniform distribution on
+[0,1].
+
+(ii) Calculate the probability that a pair of samples from a uniform distribution on
+[0,1] results in an acceptable pair of samples from the standard normal
+distribution under the algorithm in (i).
+
+[Total 6]
+CT6 S2012–24
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3
+(i)
+Polar algorithm:
+(1) Generate independently U 1 and U 2 from U ( 0,1 )
+(2)
+(3) Set V 1 = 2 U 1 − 1 , V 2 = 2 U 2 − 1 and S = V 1 2 + V 2 2
+If S > 1 go to step 1
+Otherwise set:
+Z 1 = −
+(ii)
+2 ln S
+2 ln S
+V 1 and Z 2 = −
+V 2
+S
+S
+The acceptance probability is obtained from the condition S < 1 . So the
+required probability is obtained as P ( V 1 2 + V 2 2 < 1) where V i are independently
+drawn from U ( − 1,1 ) .
+Simple geometrical arguments show that the required probability is equivalent
+to the event that a uniform draw from the points of the square defined by
+V 1 \in  [ − 1,1] and V 2 \in  [ − 1,1] falls within the circle with centre at the origin of
+coordinates (0, 0) , and radius 1.
+The probability of this event is equivalent to the ratios of the areas:
+P =
+π 1 2
+2
+2
+=
+π
+= 0.7854 .
+4
+Part (i) was mostly well answered, though some candidates lost marks as they did not specify
+how to transform U(0,1) random samples into U( − 1,1) random samples. Very few candidates
+adopted the geometric approach in (ii).
