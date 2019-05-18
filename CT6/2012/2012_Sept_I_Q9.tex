@@ -1,0 +1,73 @@
+In order to model a particular seasonal data set an actuary is considering using a
+model of the form
+(
+)
+(1 − B 3 ) 1 − ( \alpha  + \beta  ) B + \alpha \beta  B 2 X t = e t
+where B is the backward shift operator and e t is a white noise process with variance
+σ 2 .
+(i)
+Show that for a suitable choice of s the seasonal difference series
+Y t = X t − X t − s is stationary for a range of values of \alpha  and \beta  which you should
+specify.
+
+After appropriate seasonal differencing the following sample autocorrelation values
+for the series Y t are observed: \hat{\rho} 1 = 0.2 and \hat{\rho} 2 = 0.7.
+(ii)
+Estimate the parameters \alpha  and \beta  based on this information.
+[7]
+[HINT: let X = \alpha  + \beta , Y = \alpha \beta  and find a quadratic equation with roots
+\alpha  and \beta . ]
+(iii)
+CT6 S2012–5
+Forecast the next two observations x̂ 101 and x̂ 102 based on the parameters
+estimated in part (ii) and the observed values x 1 , x 2 , ... , x 100 of X t .
+
+[Total 14]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+9
+(i)
+The order s will be 3 i.e. Y t = ∇ 3 X t = X t − X t − 3
+The characteristic polynomial will be 1 − ( \alpha  + \beta  )z + \alpha \beta  z 2 with roots 1/ \alpha  and
+1/ \beta  .
+Hence the process is stationary for \alpha  < 1 and \beta  < 1 .
+(ii)
+The Yule-Walker equations for the differenced equations give:
+ρ 1 − ( \alpha  + \beta  ) + \alpha \beta ρ 1 = 0
+ρ 2 − ( \alpha  + \beta  ) ρ 1 + \alpha \beta  = 0
+Substituting the observed values of the auto-correlation gives:
+0.2 − ( \alpha  + \beta  ) + 0.2 \alpha \beta  = 0
+0.7 − 0.2 ( \alpha  + \beta  ) + \alpha \beta  = 0
+Let X = \alpha  + \beta  and let Y = \alpha \beta  then we have
+0.2 − X + 0.2 Y = 0
+0.7 − 0.2 X + Y = 0
+The first equation gives X = 0.2 + 0.2 Y and substituting into the second gives:
+0.7 − 0.04 − 0.04 Y + Y = 0
+So 0.96 Y = − 0.66 and so Y=-0.6875 and X = 0.0625
+This means that \alpha  and \beta  are the roots of the quadratic equation
+x 2 − 0.0625 x − 0.6875 = 0
+Which are
+0.0625 \pm  0.0625 2 + 4 \times  0.6875
+2
+i.e. 0.860995 and −0.79849
+Page 12
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – Examiners’ Report
+(iii)
+Since Y t = X t − X t − 3 we have that
+X 101 = Y 101 + X 98
+and
+X 102 = Y 102 + X 99
+With the forecasted values
+x ˆ 101 = y ˆ 101 + x 98
+and
+x ˆ 102 = y ˆ 102 + x 99
+where
+y ˆ 101 = 0.0625 y 100 + 0.6875 y 99 = 0.0625 ( x 100 − x 97 ) + 0.6875( x 99 − x 96 )
+and
+y ˆ 102 = 0.0625 y ˆ 101 + 0.6875 ( x 100 − x 97 )
+Many candidates struggled with this question. In particular many failed to identify quickly
+that s=3 in part (i) leads to difficult algebra in part (ii). Those who did identify that s=3
+were generally able to write down the Yule Walker equations and make some progress in part
+(ii) though only the better candidates were able to find the numerical values required.
