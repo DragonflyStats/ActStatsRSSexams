@@ -1,0 +1,240 @@
+An insurer classifies the buildings it insures into one of three types. For Type 1
+buildings, the number of claims per building per year follows a Poisson distribution
+with parameter \lambda . Data are available for the last five years as follows:
+Year
+Number of type 1 buildings covered
+Number of claims
+(i)
+1
+89
+15
+2
+112
+23
+3
+153
+29
+4
+178
+41
+5
+165
+50
+Determine the maximum likelihood estimate of \lambda  based on the data above. 
+The insurer also has data for the other two types of building for all five years. Define
+P ij = the number of buildings insured in the jth year from type i and
+Y ij = the corresponding number of claims.
+CT6 S2012–4The five years of data can be summarised as follows:
+5
+Type(i)
+5
+P i = \sum  P ij
+X i = \sum 
+P
+j = 1 i
+j = 1
+Type 1
+Type 2
+Type 3
+697
+295
+515
+3
+Y ij
+0.226686
+0.237288
+0.330097
+5
+X = \sum \sum 
+i = 1 j = 1
+Y ij
+P
+⎛ Y ij
+⎞
+\sum  P ij ⎜ ⎜ P ij − X i ⎟ ⎟
+j = 1 ⎝
+⎠
+1.527016
+0.96605
+4.53253
+5
+2
+⎛ Y ij
+⎞
+\sum  P ij ⎜ ⎜ P ij − X ⎟ ⎟
+j = 1 ⎝
+⎠
+2.502737
+1.178133
+6.775614
+5
+2
+3
+= 0.264101 where P = \sum  P i
+i = 1
+There are 191 buildings of Type 1 to be insured in year six.
+(ii)
+(iii)
+9
+Estimate the number of claims from Type 1 buildings in year six using
+Empirical Bayes Credibility Theory model 2.
+
+Explain the main differences between the approaches in parts (i) and (ii). 
+[Total 13]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+8
+(i)
+Let N i be the number of type 1 buildings covered in year i. Set
+N = N 1 + " + N 5 = 697. Let the number of claims in year i be denoted by M i
+and set M = M 1 + " + M 5 . Then under the conditions in the question
+M ~ Poisson ( N\lambda  ) .
+The likelihood is given by
+L = Ce − 697 \lambda 
+(697 \lambda  ) m
+m !
+Where m=158 is the total number of claims over the 5 years. The log-
+likelihood is given by
+l = log L = D − 697 \lambda  + m log 697 \lambda 
+Differentiating gives
+dl
+m
+= − 697 +
+d \lambda 
+\lambda 
+And setting this equal to zero we get
+m
+158
+\lambda  ˆ =
+=
+= 0.226686
+697 6 97
+This is a maximum since
+(ii)
+d \lambda 
+2
+=−
+m
+\lambda  2
+< 0 .
+We first need to calculate
+P * =
+=
+Page 10
+d 2 l
+3
+⎛ P ⎞
+1
+P i ⎜ 1 − i ⎟
+\sum 
+5 \times  3 − 1 i = 1 ⎝
+P ⎠
+1 ⎡
+697 ⎞
+295 ⎞
+515 ⎞ ⎤
+⎛
+⎛
+⎛
+697 ⎜ 1 −
+⎟ + 295 ⎜ 1 −
+⎟ + 515 ⎜ 1 −
+⎟ ⎥
+⎢
+14 ⎣
+⎝ 1507 ⎠
+⎝ 1507 ⎠
+⎝ 1507 ⎠ ⎦%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – Examiners’ Report
+= 67.9207
+The estimators are given by
+E ( m ( \theta  ) ) = X = 0.264101
+⎞
+1 3 1 5 ⎛ Y ij
+−
+E s ( \theta  ) = \sum 
+P
+X
+⎜
+⎟
+ij ⎜
+i ⎟
+P
+3 i = 1 5 − 1 \sum 
+ij
+j = 1 ⎝
+⎠
+(
+=
+)
+2
+2
+1
+\times  ( 1.527016 + 0.96605 + 4.53253 ) = 0.585466
+12
+2
+⎛
+⎞
+3 5
+⎛ Y ij
+⎞
+1 ⎜ 1
+2
+(
+)
+Var ( m ( \theta  ) ) = *
+P
+X
+E
+s
+−
+−
+\theta 
+⎟
+( ) ⎟ ⎟
+ij ⎜
+\sum \sum 
+⎜
+⎟
+⎜
+P 3 \times  5 − 1 i = 1 j = 1 ⎝ P ij
+⎠
+⎝
+⎠
+=
+1
+⎛ 1
+⎞
+\times  ⎜ ( 2.502737 + 1.178133 + 6.775614 ) − 0.585466 ⎟
+67.9207 ⎝ 14
+⎠
+= 0.00237668
+And the credibility factor for type 1 policies is given by
+P 1
+Z 1 =
+P 1 +
+E ( s ( \theta  ) )
+Var ( m ( \theta  ) )
+2
+=
+697
+= 0.73887
+0.585466
+697 +
+0.00237668
+Number of claims per unit risk is then given by
+0.73887 \times  0.226686 + ( 1 − 0.73887 ) \times  0.264101 = 0.2364571
+And so expected claims are 0.2364571 \times  191 = 45.16
+(iii)
+The main differences are:
+• The approach in (i) uses only the data from type 1 policies; the approach in
+(ii) uses a weighted average of the data from type 1 policies and the overall
+data.
+• The approach in (i) makes a precise distributional assumption about claims
+(i.e. that they are Poisson distributed). This assumption is not used in
+approach (ii).
+Part (i) was often not well answered, with many weaker candidates not reflecting the fact that
+the number of buildings covered impacts the parameter of the Poisson distribution for the
+Page 11Subject CT6 (Statistical Method) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+number of claims. Parts (ii) and (iii) were generally well answered, which was pleasing
+given that this was the first appearance of EBCT Model 2 since its return to the syllabus.
