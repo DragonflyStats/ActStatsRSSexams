@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%-- Question 7 
+A random sample is taken from an exponential distribution with parameter $\lambda$ . The
+sample contains some censored observations for which we only know that the value is
+greater than 3. The observed values are given in the following table:
+  i 1 2 3 4 5 6 7 8 9 10
+xi 1.3 1.8 2.1 2.2 2.2 2.4 >3 >3 >3 >3
+
+Estimate the parameter \lambda using the method of maximum likelihood. You are not required to verify that your answer corresponds to the maximum. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q7
+6
+1
+6 10
+6 3 4
+1 7
+( ) [ 3] ( )
+i
+i i
+x
+x
+i
+i i
+L e P X e = e
+−\lambda
+−\lambda − \lambda
+= =
+      
+\lambda =  \lambda   >  = \lambda
+  
+Π Π [1]
+6 6
+1 1
+( ) 6log( ) i 12 6log( ) i 12 6log( ) 24
+i i
+l x x
+= =
+   
+\lambda = \lambda − \lambda − \lambda = \lambda − \lambda +  = \lambda − \lambda
+ 
+  [1]
+l (\lambda) = 6 − 24
+\lambda
+′ [1]
+6 0.25
+24
+ˆ\lambda = = . [1]
+[TOTAL 4]
+%Mixed performance. Most candidates worked through the maximisation steps, but many could not figure out the part of the likelihood corresponding to the censored information.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\newpage
+
+
+\end{document}
+
+
