@@ -1,0 +1,69 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+A statistician is sent a summary of some data. She is told that the sample mean is
+9.46 and the sample variance is 25.05. She decides to fit a continuous uniform
+distribution to the data.
+(i)
+Estimate the parameters of the distribution using the method of moments. [4]
+The full data are sent later and are given below:
+3.5 5.4 7.3 8.5 9.2 10.3 11.4 20.1
+(ii)
+CT3 A2016–3
+Comment on the results in part (i) in the light of the full data.
+[2]
+[Total 6]
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6
+Q6
+(i)
+(ii)
+E[X] = (a + b) / 2 b = 2E[X] −a
+Var( X ) = ( b − a ) 2 /12 = (2 E [ X ] − 2 a ) 2 /12 = ( E [ X ] − a ) 2 / 3. [2]
+a ˆ = x − 3 s = 0.791  b ˆ = 2* x − a ˆ = 18.12 9 . [2]
+The largest observation is greater than our estimate of b in part (i). This would
+suggest the uniform distribution is not a good fit to this data, or the largest
+observation is a mistaken observation. This also highlights a potential
+weakness of the method of moments.
+[2]
+[TOTAL 6]
+Part (i) was very well answered. In part (ii) some candidates failed to
+recognise that there is zero probability of having a sample value outside the
+range given by the parameters.
+
+\end{document}
