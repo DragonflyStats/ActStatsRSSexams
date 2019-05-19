@@ -6,9 +6,7 @@
 \usepackage{vmargin}
 \usepackage{amsmath}
 \usepackage{graphics}
-\usepackage
-
-{epsfig}
+\usepackage{epsfig}
 \usepackage{enumerate}
 \usepackage{multicol}
 \usepackage{subfigure}
@@ -44,19 +42,28 @@ is measured during a simulated driving test 60 minutes after ingesting a specifi
 amount of alcohol. The measured reaction times are in the following table.
 \sum x i \sum x i 2
 Reaction time, x i
-Group A 0.95 1.40 1.00 1.35 1.30 6.00 7.375
-Group B 1.25 1.35 0.90 1.20 1.35 6.05 7.458
-Group C 1.10 1.30 1.10 0.95 1.30 5.75 6.703
-Group D 1.05 0.80 1.25 1.05 1.05 5.20 5.510
+
+%%- September 2017 Question 9
+
+\begin{center}
+\begin{tabular}{ccccccc} \hline
+Group A& 0.95& 1.40& 1.00& 1.35& 1.30& 6.00& 7.375 \\ \hline
+Group B& 1.25& 1.35& 0.90& 1.20& 1.35& 6.05& 7.458 \\ \hline
+Group C& 1.10& 1.30& 1.10& 0.95& 1.30& 5.75& 6.703 \\ \hline
+Group D& 1.05& 0.80& 1.25& 1.05& 1.05& 5.20& 5.510 \\ \hline
+\end{tabular}
+\end{center}
+
 In a first approach the mean reaction time is studied without considering the time
 spent on exercising.
-(i)
+\begin{enumerate}
+\item (i)
 Calculate a 95% confidence interval for the mean reaction time based on the
 sample of all twenty drivers, stating any assumptions you make.
 [6]
 It is estimated that the average reaction time of drivers not under the influence of
 alcohol is 0.9 seconds.
-(ii)
+\item (ii)
 Test the null hypothesis that the mean reaction time under the influence of
 alcohol is equal to 0.9 seconds against the alternative hypothesis that the
 reaction time is different from 0.9 seconds. The test decision should be based
@@ -65,13 +72,14 @@ on the sample of all twenty drivers. Use a significance level of 5%.
 To investigate the impact of regular exercising on the reaction time under the
 influence of alcohol an analyst suggests carrying out an ANOVA test based on the
 grouping of drivers and the data in the table above.
-(iii) State the mathematical model underlying the one-way analysis of variance
+\item (iii) State the mathematical model underlying the one-way analysis of variance
 together with all assumptions.
-
+\item 
 (iv) Carry out an analysis of variance to test the null hypothesis that the time spent
 on exercising has no effect on the average reaction time under the influence of
 alcohol.[9]
-[Total 19]
+\end{enumerate}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Q9
 (i)
@@ -170,13 +178,9 @@ Residual
 The value of the test statistic is very close to 1, which needs to be compared to
 an F 3,16 distribution (3.239 at 5% level).
 
-We can therefore conclude that regular exercising has no impact on the
-reaction time under alcohol intoxication.
+We can therefore conclude that regular exercising has no impact on the reaction time under alcohol intoxication.
 
-Alternatively, the critical values (at 10%) is 2.462 > 0.961, and we come to the
-same conclusion.
-Answers were very satisfactory overall. In part (ii) many candidates
-performed a full test, and received full credit, but note that this was not
-required. There were some numerical errors in calculating the
+Alternatively, the critical values (at 10\%) is 2.462 > 0.961, and we come to the same conclusion.
+Answers were very satisfactory overall. In part (ii) many candidates performed a full test, and received full credit, but note that this was not required. There were some numerical errors in calculating the
 relevant sums in part (iv).
-Page 9Subject CT3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
