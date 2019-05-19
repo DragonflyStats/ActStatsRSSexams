@@ -1,0 +1,140 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%- Question 7 --- CT3 A2017–47
+An investigation at a large airport focuses on the delay with which flights arrive. The delay time X, in minutes, is the difference between the actual time of arrival and the scheduled arrival time of delayed flights. Assume that X has an exponential
+distribution with parameter $\lambda > 0$.
+\begin{enumerate}[(i)]
+\item
+Derive the estimator \lambdâ for $\lambda$ using the method of moments.
+
+The following table shows the observed values of $X$ for a random sample of ten
+delayed flights.
+45 20 120 90 60 30 45 90 60 150
+\item 
+Estimate the value of \lambda for this sample using the method of moments.
+
+To gain further insight into the distribution of flight delays, it is suggested that the
+time at which a flight is scheduled to arrive during a day has an impact on the delay.
+Therefore, assume now that X i has an exponential distribution with a parameter $\lambda$ that depends on the scheduled arrival time as follows:
+\[X i ~ Exp( \lambda i ) with \lambda i = θ Z i\]
+
+where the random variable Z i describes the scheduled arrival time (in minutes) after
+midnight on the day of arrival for the i th randomly selected delayed flight and θ > 0 is
+a parameter in this model.
+\item 
+%%--CT3 A2017–5
+Derive the maximum likelihood estimator θ̂ for the parameter θ. You should
+show that your solution is indeed a maximum.
+\end{enumerate}
+
+
+\end{enumerate} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+Q7
+
+X  E
+ X   1/  ˆ 
+ ˆ  1/ X 
+(ii) 1
+1
+ ˆ    0.014085
+X 71 
+(iii) L     L     n  Z i exp(-  Z i X i )
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+(i)
+n
+
+i  1
+n n
+i  1 i  1
+l     n log    log Z i    Z i X i
+l '    
+ ˆ 
+
+n n
+ Z i X i  0
+ 
+i  1 
+n 
+ i  1
+n
+Z i X i
+This is indeed a maximum since the second derivative of l    is  n   2 <0 for
+   ˆ  0.
+
+%%--- [Total 8]
+% Parts (i) and (ii) were very well answered. Performance in part (iii) was mixed. Most candidates exhibited a soundunderstanding of how to approach the question; many encountered problems related to writing the sums and the products and doing the required maths.
+
+7
+(i) 
+\begin{eqnarray*} 
+1 − P[T1 \cup T2 \cup T3] &=& 1 − (0.1 + 0.02 + 0.003) \\ &=& 1 − 0.123 \\ &=& 0.877\\ 
+\end{eqnarray*}
+(ii) (a)
+P[T1 | S] =
+(b)
+P[T1 \cup T2 \cup T3 | S] =
+(iii)
+(i)
+1
+(P[S | T1] P[T1] + P[S | T2] P[T2] + P[S | T3] P[T3])
+P [ S ]
+= 1
+0.0667
+(0.5*0.1 + 0.7 *0.02 + 0.9*0.003) =
+= 0.3335
+0.2
+0.2
+1
+\[(P[T1 \cup T 2 \cup T 3] − P [{ T 1 \cup T 2 \cup T 3} \cap S ])\]
+0.8
+1
+0.0563
+= 0.0704
+\end{document}
