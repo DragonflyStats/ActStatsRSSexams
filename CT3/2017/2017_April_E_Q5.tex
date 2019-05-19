@@ -1,0 +1,91 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+PLEASE TURN OVER5
+Let X 1 , X 2 , ..., X n be a sequence of independent, identically distributed random
+variables with finite mean \mu and finite (non-zero) variance σ 2 .
+n
+
+\begin{enumerate}[(i)]
+\item State the central limit theorem (CLT) in terms of the sum
+ X i .
+
+i = 1
+Assume now that each X i , i = 1, 2, ..., 50, follows an exponential distribution with
+50
+parameter \lambda = 2 and let Y =  X i .
+i = 1
+6
+\item (ii) Determine the approximate distribution of Y together with its parameters using
+the CLT.
+
+\item (iii) State the exact distribution of Y together with its parameters.
+\item (iv) Comment on the shape of the distribution of Y based on your answers to parts
+(ii) and (iii).
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q5
+(i)
+\begin{itemize}
+\item The CLT states that as n   , approximately,
+ X i approaches the
+i  1
+2
+N ( n \mu, n ) distribution.
+(ii)
+[2]
+\item The mean of X i is 0.5 and its variance is 0.25.
+Therefore, from CLT, Y 
+50
+ X i ~ N(25, 12.5) approximately.
+[2]
+i  1
+(iii)
+\item Exact distribution is Y 
+50
+ X i ~ Gamma(50, 2).
+i  1
+Page 4
+%%[2]Subject CT3 (Probability and Mathematical Statistics Core Technical) – April 2017 – Examiners’ Report
+(iv)
+\item Generally the gamma distribution is an asymmetric distribution. Here, as $n$ is large, the CLT suggests that the distribution of Y is approximately normal, and therefore symmetric.
+\end{itemize}
+%%[2]
+%%[Total 8]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
