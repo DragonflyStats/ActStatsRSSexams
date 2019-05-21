@@ -32,44 +32,60 @@
 
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item  % Question 3 
+% Question 3 
 
 A random variable Y has probability density function
-f(y) = 1 ,
-y
-
-y > 1
-where  > 0 is a parameter.
+\[  f(y) &=& \frac{\theta}{y^{\theta + 1}} \qquad y > 1\]
+
+where $\theta >0 $ as a parameter.
+
 \begin{enumerate}[(i)]
-\item  Show that the probability density function of $Z = \ln(Y)$ is given by ez and determine its range.
+\item Show that the probability density function of $Z = \ln(Y)$ is given by $\theta e^{-\theta z}$ and
+determine its range.
 \item State the distribution of Z identifying any parameters involved. 
 \end{enumerate}
 
-\end{enumerate}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-Q3 (i) z = log yy = ez∴ dy
-dz
-= ez
-f(y) = y\theta+1
-\theta
-∴f(z) = \theta(ez)−(\theta+1) ez = \thetae−\thetaz [1½]
-and since y> 1 z> 0. 
+\newpage
+%%-- Question 3 
 
-(ii) This is the probability density function of an exponential distribution with
-parameter \theta. 
+\begin{itemize}
+    \item 
+
+%%%%%%%%%%%%%%%%%%%%%%%5
+
+
+$z = \log y$
+Therefore $y = e^z$ 
+
+$ { \displaystyle \frac{dy}{dz}
+= e^z }$
+
+\[ f(y) = \frac{\theta}{y^{\theta + 1}} \]
+
+
+\[ f(z) = \theta (e^z)^{-(\theta + 1)}|e^z| = \theta e^{-\theta }  \]
+
+
+and since $y> 1$ therefore $z> 0$.
+
+\item (ii) This is the probability density function of an exponential distribution with
+parameter $\theta$. 
 [OR: Obtain using the distribution function:
-\[    FZ(z) = Pr(Z≤z) = Pr(Y≤ez) = FY(ez)\]
-  Also, 1 1
-  1
-  ( ) 1
-  y y
-  FY y du u y
-  u
-  −\theta −\theta
-  \theta+
-    = \theta =−   = −   
-  Thus, FZ(z) = 1−e−\thetaz implying an Exp(\theta) distribution.]
+\[    F_Z(z) = Pr(Z \leq z) = Pr(Y \leq e^z) = F_Y(e^z)\]
+  Also, 
+  
+ \begin{eqnarray*}
+F_Y(y) &=& \int^{y}_{1} \frac{\theta}{u^{\theta + 1}} du \\ 
+&=& - \left[ u^{-\theta} \right]^{y}_{1}\\
+&=& 1 - y^{-\theta}\\
+\end{eqnarray*}
 
-Part (i) required some work involving probabilistic arguments and was not well
+\item Thus, $F_Z(z) = 1−e^{−\theta z}$ implying an $Exp(\theta)$ distribution.]
+
+\item Part (i) required some work involving probabilistic arguments and was not well
 answered. There were no problems with part (ii).
+
+\end{itemize}
 \end{document}
