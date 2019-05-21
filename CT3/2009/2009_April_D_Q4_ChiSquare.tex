@@ -42,27 +42,7 @@ their corresponding losses are assumed to be independent of each other.
 \item (ii) Find the value of $k$ such that there is a probability of 0.95 that the total loss from the two claims exceeds $k$.
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-\item 
-The human resources department of a large insurance company currently estimates that 82\% of new employees recruited by their call centres will still be employed by the company after one year. A recent extension to the call centre business led to 280
-new employees being recruited.
 
-Calculate an approximate value for the probability that at least 240 of these new employees will still be employed by the company after one year.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-% [3]6
-% 7
-\item The variables $X_1 , X_2 , .\ldots, X_{40}$ give the size (in units of \$100) of each of 40 claims in a random sample of claims arising from damage to cars by vandals. The size of each claim is assumed to follow a gamma distribution with parameters $\alpha = 4$ and $\lamnda = 0.5$.
-%%%%%%%%%%%%%%%%%%%%%%%%%
-
-and each is independent of all others. Let $\bar{X} =
-\sum^{40}_{1} X i$ be the random variable
-40 i = 1
-giving the mean size of such a sample.
-\begin{enumerate}[(i)]
-\item 
-State the approximate sampling distribution of $X$ and determine its parameters.
-\item 
-Determine approximately the median of $X$ .
-\end{enumerate}
 \end{enumerate}
 %[1]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -70,11 +50,12 @@ Determine approximately the median of $X$ .
 4
 (i)
 2
-$E [ Y_i ] = 2$, $Var [ Y_i ] = 4$
+\begin{itemize}
+\item $E [ Y_i ] = 2$, $Var [ Y_i ] = 4$
 Therefore $E [ Y_1 + Y_2 ] = 4$ and (since Y_1 , Y_2 independent) $Var [ Y_1 + Y_2 ] = 8$.
-So, for total loss, mean = \$4,000 and variance = 8 ×10 6 (\$ 2 ).
+\item So, for total loss, mean = \$4,000 and variance = 8 ×10 6 (\$ 2 ).
 (OR from Y_1 + Y_2 ~ χ 2 4 )
-(ii)
+\item (ii)
 For the total loss we have $Y_1 + Y_2 \sim \chi^2_4$ , so we want a constant k
 (
 )
@@ -82,43 +63,10 @@ For the total loss we have $Y_1 + Y_2 \sim \chi^2_4$ , so we want a constant k
 such that P χ 4 > k = 0.95.
 (
 )
-From tables of the χ 24 distribution P χ 24 > 0 . 7107 = 0.95.
+\item From tables of the χ 24 distribution P χ 24 > 0 . 7107 = 0.95.
 ∴The total losses will exceed \$710.7 with probability 0.95.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-5
-Let X be the number still in employment after one year.
-∴ \[X ~ bin (280, 0.82) ≈ N (229.6, 6.43 2 )\]
-\[P ( X \geq 240) = P ( X > 239.5)\] applying a continuity correction
-= P ( Z >
-6
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-(i)
-239.5 − 229.6
-) = P ( Z > 1.54) = 1 − 0.93822 = 0.062
-6.43
-
-\begin{itemize}
-
-
-\item $E[X_i ] = 4/0.5 = 8$ and $Var[X_i ] = 4/0.5^2 = 16$ (or by noting X i ~ χ 8 2 ).
-\[Var [ X i ] ⎞
-\sigma X i ⎛\]
-X = i = 1 ≈ N E [ X ],
-, i.e. N(8, 0.4)
-40
-\item Using the CLT:
-⎜
-⎝
-40
-i
-40
-⎟
-⎠
-approximately.
-\item [Note: The exact distribution of X is Gamma(160,20)]
-(ii)
-\item The symmetry of the distribution gives: median ⎡ ⎣ X ⎤ ⎦ = mean ⎡ ⎣ X ⎤ ⎦ = 8,
-i.e. \$800.
 \end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \end{document}
