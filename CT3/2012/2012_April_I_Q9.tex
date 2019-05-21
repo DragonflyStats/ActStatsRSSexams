@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\item % Queston 9
+A random sample of 200 email messages was selected from all messages delivered through an internet provider company. Each message is monitored for the presence of
+computer viruses. It is assumed that each message contains a virus with the same
+probability p, independently from all other messages.
+Let Y i , i = 1, ... , 200 be indicator random variables taking the value 1 if message i
+contains a virus, and 0 otherwise. Also, let Y denote the total number of messages in
+200
+this sample found to contain viruses, i.e. $Y = \sum y i$ .
+i = 1
+\begin{enumerate}[(i)]
+    \item (i) Derive expressions for the expected value and the variance of $Y$ in terms of the parameter $p$, using the indicator variables $Y_1 , Y_2 , ... , Y_200$ .
+\item (ii) Explain why the approximate distribution of Y is N(200p, 200p(1−p)), using
+the indicator variables Y 1 , Y 2 , ... , Y 200 .
+
+It is found that 38 email messages in this sample contained viruses.
+\item (iii)
+%CT3 A2012–4
+Calculate an equal-tailed 90% confidence interval for the probability p using
+the approximate normal distribution from part (ii).
+\end{enumerate}
+
+
+\end{enumerate}
+
+\newpage
+%%-- Question 9
+(i)
+\begin{itemize}
+    \item The variables Y i are independent between them and have a Bernoulli(p)
+distribution with mean p and variance p(1– p).
+Therefore E ( Y ) = E ( Y 1 + " + Y 200 ) = E ( Y 1 ) + " + E ( Y 200 ) = 200p
+V ( Y ) = V ( Y 1 + " + Y 200 ) = V ( Y 1 ) + " + V ( Y 200 ) = 200p(1– p)
+(ii)
+\item Again, with Y i being iid Bernoulli(p) random variables and n being sufficiently
+large,
+200
+the central limit theorem implies that Y = $\sum y i$ follows approximately a
+i = 1
+normal distribution with mean and variance given by the mean and variance of
+Y as derived in (i), i.e.
+Y ~ N(200p, 200p(1−p))
+\end{itemize}
+
+(iii)
+From (ii) P ˆ = Y / 200 ~ N ( p , p (1 − p ) / 200) approximately, which gives a 90%
+confidence interval of the form
+p ˆ = 0.19 giving
+%p ˆ \pm z 0.05
+%p ˆ (1 − p ˆ )
+200
+$0.19 \pm 1.6445 \times 0.02774$
+i.e. (0.144, 0.236).
+Generally well tackled. Some students failed to work with the indicator variables (Bernoulli),
+which was key to this question.
+%%%%%%%%%%%%
