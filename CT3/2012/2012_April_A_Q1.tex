@@ -1,0 +1,73 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+\item The following 24 observations give the length of time (in hours, ordered) for which a
+specific fully charged laptop computer will operate on battery before requiring
+recharging.
+\begin{verbatim}
+1.2 1.4 1.5 1.6 1.7 1.7 1.8 1.8 1.9 1.9 2.0 2.0
+2.1 2.1 2.1 2.2 2.3 2.4 2.4 2.5 3.1 3.6 3.7 4.5
+\end{verbatim}
+
+The owner of this computer is about to watch a film on his fully charged laptop.
+Calculate from these data the longest showing time for a film that he can watch, so
+that the probability that the battery's lifetime will be sufficient for watching the entire
+film is 0.75.
+
+\end{enumerate}
+\newpage
+%%--- 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 2%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – April 2012 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1
+We want the first quartile of the data.
+⎛ n + 2 ⎞
+Q 1 = ⎜
+⎟ th observation counting from below = 6.5th observation
+⎝ 4 ⎠
+=
+1.7 + 1.8
+= 1.75 hours.
+2
+[With alternative definition:
+⎛ n + 1 ⎞
+Q 1 = ⎜
+⎟ th observation counting from below = 1.725 ]
+⎝ 4 ⎠
+Most answers were quite poor. Many candidates tried to work with a normal or t distribution,
+when this was not justified (or required). Only a small number of candidates realised that
+quartiles were required – but then a large proportion of them used the wrong quartile.
+\end{document}
