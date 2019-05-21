@@ -1,0 +1,72 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+A coin has two sides, “heads” and “tails”. Such a coin with P(heads) = p is tossed repeatedly until it lands “heads” for the first time. Let X be the number of tosses required.
+Suppose the process is repeated independently a total of n times, producing values of
+the variables $X_1 , X_2 , \ldots , X_n$ , where each X i has the same distribution as X.
+Let Y = min($X_1 , X_2 , \ldots , X_n$ ), so Y is the smallest number of tosses required to produce
+a “heads” in the n repetitions of the experiment.
+\begin{enumerate}[(a)]
+\item (i)
+Explain why, for each i = 1, 2, ..., n, P(X i \geq x) is given by
+P(X i \geq x) = (1 – p) x−1 , x = 1, 2, ... .
+(ii)
+
+(a) Find an expression for P(Y \geq y).
+(b) Hence deduce the probability function of Y.
+
+\end{enumerate}
+
+Page 4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – April 2012 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+(i)
+“X i \geq x” ≡ “no heads in first x − 1 tosses” so P(X i \geq x) = (1 − p) x−1 , x = 1,2,3, ...
+[OR Recognise (as geometric) and sum the probabilities
+(1 − p) x−1 p + (1 − p) x p + (1 − p) x+1 p + ... = p(1 − p) x−1 {1 – (1 − p)} −1 ]
+(ii)
+(a)
+“Y \geq y” ≡ “all X i ’s are \geq y”
+so P(Y \geq y) = P(X 1 \geq y, ..., X n \geq y) = P(X 1 \geq y) ... P(X n \geq y)
+(independent)
+= ((1 − p) y−1 ) n = ((1 − p) n ) y−1
+(b)
+The probability in part (a) implies that Y has the same distribution as X,
+but with 1 – (1 − p) n in place of p
+i.e. P(Y = y) = r(1 − r) y−1 , y = 1, 2, 3, ... where r = 1 – (1 − p) n .
+[OR P(Y = y) = P(Y \geq y) – P(Y \geq y + 1) = ((1 − p) n ) y−1 − ((1 − p) n ) y
+= (1 − p) n(y−1) {1 − (1 − p) n } as above]
+
+% Most candidates had problems with part (ii). Carefully expressed probability statements are required here. A common error was to try to differentiate the CDF, despite this being a
+% discrete distribution.
+\end{document}
