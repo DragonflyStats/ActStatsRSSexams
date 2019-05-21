@@ -1,0 +1,102 @@
+
+[Total 20]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+CT3 A2007—613
+In a study of the relation between the amount of information available and use of
+buses in eight comparable test cities, bus route maps were given to residents of the cities at the beginning of the test period. The increase in average daily bus use during the test period was recorded. The numbers of maps and the increase in bus use are
+given in the table below (both in thousands).
+Number of maps (x)
+80 220 140 120 180 100 200 160
+Increase in bus use (y) 0.60 6.70 5.30 4.00 6.55 2.15 6.60 5.75
+For these data:
+∑ x = 1, 200 , ∑ x 2 = 196,800 , ∑ y = 37.65 , ∑ y 2 = 213.4875 , ∑ xy = 6,378
+\begin{enumerate}
+\item (i) Construct a scatterplot of the data and comment on the relationship between the increase in bus use and the number of maps distributed.
+
+\item (ii) The equation of the fitted linear regression is given by y = − 1.816 + 0.04348 x .
+Perform an appropriate statistical test to assess the hypothesis that the slope in this fitted model suggests no relationship between the increase in bus use and the number of maps distributed. Any assumptions made should be clearly
+stated.
+[6]
+\item (iii) The fitted responses and the residuals from the linear regression model fitted
+in part \item (ii) are given below:
+Fitted values ( y ˆ )
+Residuals ( e ˆ )
+1.66 7.75 4.27 3.40 6.01 2.53 6.88 5.14
+- 1.06 - 1.05 1.03 0.60 0.54 - 0.38 - 0.28 0.61
+Plot the residuals against the values of the fitted responses and comment on
+the adequacy of the model.
+
+(iv)
+A new city is added to the study, and 250,000 maps are distributed to its
+citizens.
+Calculate the prediction of the increase in bus use in this city according to the model fitted in part \item (ii) and comment on the validity of this prediction.
+\end{enumerate}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%Page 9Subject CT3  — April 2007 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item (i)
+The scatterplot is shown below.
+13
+80
+100
+120
+140
+160
+180
+200
+220
+maps
+The plot suggests that there is a positive relationship between the increase in  bus use and the number of maps distributed. The increase seems to be reasonably linear up to around 180000 maps, after which point it seems to
+level off (overall, relationship seems curved, possibly quadratic).
+\item (ii)
+S_{xx} = \sum x 2 − (\sum x) 2 /n = 196800 − (1200) 2 /8 = 16800
+S_{yy} = \sigmay 2 − (\sigmay) 2 /n = 213.4875 − (37.65) 2 /8 = 36.29719
+S_{xy} = \sum xy − (\sum x)( \sigmay)/n = 6378 − (1200)(37.65)/8 = 730.5
+2 ⎞
+S_{xy} 2 ⎞ 1 ⎛
+1 ⎛ ⎜
+⎟ = ⎜ 36.29719 − (730.5) ⎟ = 0.75558
+\sigmâ =
+S_{yy} −
+n − 2 ⎜ ⎝
+S_{xx} ⎟ ⎠ 6 ⎜ ⎝/
+16800 ⎟ ⎠
+2
+s.e.( \betâ ) =
+0.75558
+\sigma ˆ 2
+=
+= 0.006706
+16800
+S_{xx}
+To test $H 0 : \beta = 0 v H 1 : \beta \neq 0$ , the test statistic is
+0.04348
+\hat{\beta} − 0
+=
+= 6.484 ,
+s.e.( \hat{\beta} ) 0.006706
+and under the assumption that the errors of the regression are i.i.d . N (0, \sigma^2 )
+random variables, it has a t distribution with $n - 2 = 6$ df.
+Page 10
+
+From statistical tables we find t 6,0.025 = 2.447 (or, t 6,0.005 = 3.707 ).
+Therefore, there is strong evidence against H 0 . We conclude that a straight line representation of the relationship between the increase in bus use and the number of maps distributed would have a non-zero slope.
+The plot is shown below.
+\item (iii)
+2
+3
+4
+5
+6
+7
+Fitted
+Negative residuals are associated with the fitted values at the two ends of the
+data set, suggesting that the model is inadequate. Pattern suggests that a
+quadratic model might be appropriate.
+(iv)
+Predicted value is y ˆ = − 1.816 + 0.04348 × 250 = 9.054
+This uses extrapolation on the fitted regression line. The prediction is probably not valid, especially as the linear model does not seem adequate.
+END OF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{itemize}
