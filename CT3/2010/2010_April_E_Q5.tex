@@ -36,20 +36,26 @@ A computer routine selects one of the integers 1, 2, 3, 4, 5 at random and repli
 the process a total of 100 times. Let S denote the sum of the 100 numbers selected.
 Calculate the approximate probability that S assumes a value between 280 and 320
 inclusive.
-[5]
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 5
-S = Σ X i where X i has a uniform distribution on 1, 2, 3, 4, 5, with mean 3 and variance
-(25 – 1)/12 = 2 (result known, or calculated via E [ X 2 ] = 11, or from book of formulae,
+$S = \sum X i$ where X i has a uniform distribution on 1, 2, 3, 4, 5, with mean 3 and variance
+(25 – 1)/12 = 2 (result known, or calculated via $E [ X^2 ] = 11$, or from book of formulae,
 p10, with a = 1, b = 5, h = 1).
 So S ~ N (300, 200) approximately
 320.5 − 300 ⎞
 ⎛ 279.5 − 300
-P (280 ≤ S ≤ 320) = P ⎜
+ P ⎜
 < Z <
 ⎟
 200
 200 ⎠
 ⎝
-= P ( − 1.450 < Z < 1.450 ) = 0.853
+\begin{eqnarray*}
+P (280 \leq S \leq 320) &=& P ( − 1.450 < Z < 1.450 ) \\
+&=& 0.853\\
+\end{eqnarray*}
+
+
+\end{document}
