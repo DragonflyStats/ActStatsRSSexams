@@ -1,0 +1,146 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+13
+The quality of primary schools in eight regions in the UK is measured by an index
+ranging from 1 (very poor) to 10 (excellent). In addition the value of a house price
+index for these eight regions is observed. The results are given in the following table:
+Region i
+School quality index x i
+House price index y i
+1
+2
+3
+4
+5
+6
+7
+8
+Sum
+7
+8
+5
+8
+4
+9
+6
+9
+56
+195 195 170 190 150 190 200 210 1500
+The last column contains the sum of all eight columns.
+From these values we obtain the following results:
+\sum x_i y i = 10, 695; \sum x_i 2 = 416;
+(i)
+\sum y i 2 = 283, 750
+
+\begin{enumerate}
+\item Calculate the correlation coefficient between the index of school quality and
+the house price index.
+
+You can assume that the joint distribution of the two random variables is a bivariate
+normal distribution.
+\item (ii) Perform a statistical test for the null hypothesis that the true correlation
+coefficient between the school quality index and the house price index is
+equal to 0.8 against the alternative that the correlation coefficient is smaller
+than 0.8, by calculating an approximate p-value.
+\item 
+(iii) Fit a linear regression model to the data, by considering the school quality
+index as the explanatory variable. You should write down the model and
+estimate all parameters.
+\item 
+(iv) Calculate the coefficient of determination R 2 for the regression model
+obtained in part (iii).
+\item (v)
+Provide a brief interpretation of the slope of the regression model obtained in
+part (iii).
+\end{enumerate}
+
+
+CT3 A2012–8
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%-- Quesiton  13
+(i)
+S_{xx} = 24, S_{yy} = 2500, S_{xy} = 195
+r =
+(ii)
+W =
+S_{xy}
+S_{xx} S_{yy}
+= 0.796084
+1
+1 + ρ
+1
+1 + r
+and
+is normally distributed with mean log
+log
+2
+1 − ρ
+2
+1 − r
+standard deviation 1/ n − 3
+observed value of W is w = 1.087828
+Under $H_{0}$ the mean of $W$ is 1.098612
+And the standard deviation is 0.447214
+p-value is 
+
+\begin{eqnarray*}
+P [ W < 1.087828 ] &=& P [ Z < ( 1.087828 − 1.098612) / 0.447214]\\
+&=& P [ Z < − 0.024113527 ] \\ &=& 1 − F (0.024113527) > 0.49\\
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+No evidence against the null hypothesis.
+(iii)
+Y i = a + bX i + ε i
+{
+For b we obtain: \hat{b} = n \sum x_i y i −
+\sum x_i \sum y i } { n \sum x_i 2 − ( \sum x_i ) 2 }
+− 1
+8*10695 − 56*1500
+= 8.125
+And therefore: \hat{b} =
+8*416 − 56 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 – April 2012 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+And \hat{a}=
+1
+8
+( \sum y i − \hat{b} \sum x_i ) = 130.625
+(iv) R^{2} \;=\; 0.796084 2 = 0.634
+(v) Any increase in school quality by 1 index-point, leads to an increase of 8.125
+in the house price index.
+Mostly very well answered.
+\end{document}
