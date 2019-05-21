@@ -33,19 +33,19 @@
 \begin{enumerate}
 %%CT3 A2008—411
 \item In an investigation about the duration of insurance policies of a certain type, a sample of n policies is studied. All n policies have been initiated at the same time, which is also the time of the start of the investigation. For each policy, the time T (in months)
-until the policy expires can be modelled as an exponential random variable with parameter λ, independently of the times for all other policies.
+until the policy expires can be modelled as an exponential random variable with parameter \lambda , independently of the times for all other policies.
 \begin{enumerate}[(i)]
 \item %(i)
-Suppose that the investigation is terminated as soon as k policies have expired, where k is a known (predetermined) constant. The observed policy expiry times are denoted by t 1 , t 2 , ..., t k with 0 < k ≤ n and t 1 < t 2 < ... < t k .
-(a) Show that the probability that any randomly selected policy is still in force at the time of the termination of the investigation is e −λ t k .
+Suppose that the investigation is terminated as soon as k policies have expired, where k is a known (predetermined) constant. The observed policy expiry times are denoted by $t_1 , t_2 , \ldots, t_k$ with $0 < k \leq n$ and t 1 < t 2 < ... < t k .
+(a) Show that the probability that any randomly selected policy is still in force at the time of the termination of the investigation is e −\lambda  t k .
 
 (b) Show that the likelihood function of the parameter $\lambda$, using information from all n policies, is given by
 k
-L ( λ ) = λ k e
-−λ ∑ t i
+L ( \lambda  ) = \lambda  k e
+−\lambda  \sum  t i
 i = 1
-e − ( n − k ) λ t k .
-Hence find the maximum likelihood estimate (MLE) of λ.
+e − ( n − k ) \lambda  t k .
+Hence find the maximum likelihood estimate (MLE) of \lambda .
 (c)
 Consider an investigation on 20 policies which is terminated when five policies have expired, giving the following observed expiry times (in
 months):
@@ -53,7 +53,7 @@ months):
 Calculate the MLE of $\lambda$ based on this sample.
 
 \item (ii)
-Suppose instead that the investigation is terminated after a fixed length of time t 0 . The number of policies that have expired by time t 0 is considered to be a random variable, denoted by $K$.
+Suppose instead that the investigation is terminated after a fixed length of time t_{0}  . The number of policies that have expired by time t_{0}  is considered to be a random variable, denoted by $K$.
 (a) Explain clearly why the distribution of K is binomial and determine its parameters.
 (b) Hence find the MLE of $\lambda$ in this case.
 (c) Consider an investigation on 20 policies that is terminated after 24 months. By the time of termination five policies have expired.
@@ -70,7 +70,7 @@ The required probability is
 \begin{eqnarray*}
 P ( T > t k ) &=& 1 − P ( T ≤ t k ) \\
 &=& 1 − F T ( t k )\\
-&=& 1 − (1 − e −λ t k ) \\
+&=& 1 − (1 − e −\lambda  t k ) \\
 &=& e − \lambda  t k (using formulae or by integration).\\
 \end{eqnarray*}
 
@@ -78,57 +78,57 @@ P ( T > t k ) &=& 1 − P ( T ≤ t k ) \\
 (b)
 The likelihood function is given by:
 k
-L ( λ ) = ∏ f ( t i )
+L ( \lambda  ) = ∏ f ( t i )
 i = 1
 k
 (
-= ∏ λ e −λ t i
+= ∏ \lambda  e −\lambda  t i
 i = 1
 n
 ∏
 j = k + 1
 P ( T > t k )
-) ∏ ( e ) = λ e
+) ∏ ( e ) = \lambda  e
 n
-−λ t k
+−\lambda  t k
 k
 k
-−λ ∑ t i
+−\lambda  \sum  t i
 i = 1
-e − ( n − k ) λ t k
+e − ( n − k ) \lambda  t k
 j = k + 1
 %Page 5Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2008 — Examiners’ Report
 For the MLE:
 k
-l ( λ ) = log L ( λ ) = k log( λ ) − λ ∑ t i − ( n − k ) λ t k
+l ( \lambda  ) = \log L ( \lambda  ) = k log( \lambda  ) − \lambda  \sum  t i − ( n − k ) \lambda  t k
 i = 1
-l ′ ( λ ) =
+l ′ ( \lambda  ) =
 k k
-− ∑ t i − ( n − k ) t k
-λ i = 1
-l ′ ( λ ) = 0 ⇒ λ ˆ =
+− \sum  t i − ( n − k ) t k
+\lambda  i = 1
+l ′ ( \lambda  ) = 0 ⇒ \hat{\lambda} =
 k
 .
 k
-∑ t i + ( n − k ) t k
+\sum  t i + ( n − k ) t k
 i = 1
-[And l ′′ ( λ ) = −
+[And l ′′ ( \lambda  ) = −
 (c)
 k
 < 0 ]
-λ 2
+\lambda  2
 %-------------------------------------------------%
 For the observed data,
 k
 
 $n = 20$, $k = 5$, $t_k = 21.54$,
-∑ t i = 54.82 .
+\sum  t i = 54.82 .
 i = 1
-λ ˆ =
+\hat{\lambda} =
 k
 =
 k
-∑ t i + ( n − k ) t k
+\sum  t i + ( n − k ) t k
 5
 = 0.0132 .
 54.82 + 15 × 21.54
@@ -138,49 +138,49 @@ $-----------------------------------------------$
 \begin{itemize}
 \item (a)
 We have n policies with independent durations, and each will have expired by the time of termination with probability
-p = P ( T ≤ t 0 ) = 1 − e −λ t 0 ,
+p = P ( T ≤ t_{0}  ) = 1 − e^{−\lambda t_{0}}  ,
 or will have not expired with probability 1 - p.
 (
-\item Therefore, K ~ bin n , 1 − e −λ t 0
+\item Therefore, K ~ bin n , 1 − e^{−\lambda t_{0}} 
 (b)
 (
-L ( λ ) ∝ 1 − e −λ t 0
+L ( \lambda  ) ∝ 1 − e^{−\lambda t_{0}} 
 )
 ) ( e )
 k
-−λ t 0 n − k
+−\lambda  t_{0}  n − k
 (
 )
-l ( λ ) = log L ( λ ) = k log 1 − e −λ t 0 − ( n − k ) λ t 0
-l ′ ( λ ) =
-kt 0 e −λ t 0
-1 − e −λ t 0
-− ( n − k ) t 0
-l ′ ( λ ) = 0 ⇒ e −λ t 0 =
+l ( \lambda  ) = \log L ( \lambda  ) = k \log 1 − e^{−\lambda t_{0}}  − ( n − k ) \lambda  t_{0} 
+l ′ ( \lambda  ) =
+kt_{0}  e^{−\lambda t_{0}} 
+1 − e^{−\lambda t_{0}} 
+− ( n − k ) t_{0} 
+l ′ ( \lambda  ) = 0 ⇒ e^{−\lambda t_{0}}  =
 
 n − k
 1
 ⎛ k ⎞
-⇒ λ ˆ = − log ⎜ 1 − ⎟
+⇒ \hat{\lambda} = − \log ⎜ 1 − ⎟
 n
-t 0
+t_{0} 
 ⎝ n ⎠S
 
 %ubject CT3 (Probability and Mathematical Statistics Core Technical) — April 2008 — Examiners’ Report
 \item [OR, observed proportion (k/n) is the MLE of corresponding
-proportion/probability ${1 − exp(−\lambda t 0 )}$; solving for $\lambda$  leads to same
+proportion/probability ${1 − exp(−\lambda t_{0}  )}$; solving for $\lambda$  leads to same
 estimate as above.]
 \end{itemize}
 %--------------------------------------------%
 (c)
-Now t 0 = 24 and all other involved quantities are as before.
+Now t_{0}  = 24 and all other involved quantities are as before.
 1
 1
 5 ⎞
 ⎛ k ⎞
 ⎛
-λ ˆ = − log ⎜ 1 − ⎟ = − log ⎜ 1 − ⎟ = 0.0120 .
-t 0
+\hat{\lambda} = − \log ⎜ 1 − ⎟ = − \log ⎜ 1 − ⎟ = 0.0120 .
+t_{0} 
 24
 ⎝ n ⎠
 ⎝ 20 ⎠
