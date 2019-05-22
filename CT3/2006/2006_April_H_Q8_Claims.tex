@@ -37,7 +37,7 @@ The events that lead to potential claims on a policy arise as a Poisson process 
 of 0.8 per year. However the policy is limited such that only the first three claims in
 any one year are paid.
 
-\begin{enumerate}
+\begin{enumerate}[(a)]
 \item 
 (i) Determine the probabilities of 0, 1, 2 and 3 claims being paid in a particular
 year.
@@ -62,17 +62,18 @@ particular year, given that there is at least one claim paid in the year.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Solutions
 
 8
-\begin{enumerate}
+\begin{itemize}
 \item (i)
 April 2006
  
 By subtraction using entries in tables for Poisson(0.8), the probabilities for the Poisson distribution for 0, 1, 2 and 3 are: [or by evaluation]
 0.44933, 0.35946, 0.14379 and (1 0.95258) = 0.04742
+%-------------------%
 \item (ii)
 Let N = number of claims paid and let X 1 ,
 S = X i is the sum of the amounts.
 , X n be the claim amounts then
-E[S] = E[N]E[X]
+\[E[S] = E[N]E[X]\]
 Here E[N] = 1(0.35946) + 2(0.14379) + 3(0.04742) = 0.7893
 and E[X] = 2/1 = 2 from gamma(2,1)
 So E[S] = (0.7893)(2) = 1.5786 = \$157.86
@@ -80,9 +81,10 @@ So E[S] = (0.7893)(2) = 1.5786 = \$157.86
 Given that N > 0, divide the probabilities in part (i) by (1 0.44933) =
 0.55067 to give the probabilities for 1, 2 and 3 claims paid as:
 0.6528, 0.2611 and 0.0861
-E[N] = 1(0.6528) + 2(0.2611) + 3(0.0861) = 1.4333
-So E[S] = (1.4333)(2) = 2.8666 = \$286.66
-\end{enumerate}
+
+\[E[N] = 1(0.6528) + 2(0.2611) + 3(0.0861) = 1.4333\]
+So \[E[S] = (1.4333)(2) = 2.8666 = \$286.66\]
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
 \end{document}
