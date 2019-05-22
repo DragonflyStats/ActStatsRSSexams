@@ -1,7 +1,5 @@
 \documentclass[a4paper,12pt]{article}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \usepackage{eurosym}
 \usepackage{vmargin}
 \usepackage{amsmath}
@@ -16,82 +14,85 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{chngpage}
-
 %\usepackage{bigints}
+
 \usepackage{vmargin}
-
 % left top textwidth textheight headheight
-
 % headsep footheight footskip
-
 \setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
-
 \renewcommand{\baselinestretch}{1.3}
 
 \setcounter{MaxMatrixCols}{10}
-
 \begin{document}
-3
+
+\large
+\noindent Let $\{X_1 , X_2 , ..., X_n\}$ be a random sample of independent random variables from a
+$N(\mu, \sigma^2 )$ distribution.
 
 
-Let X 1 , X 2 , ..., X n be a random sample of independent random variables from a
-N(m, s 2 ) distribution.
-(i) Comment on the shape of the sampling distribution of the sample variance S 2
+\begin{enumerate}[(a)]
+    \item % (i) 
+Comment on the shape of the sampling distribution of the sample variance $S^2$
 with respect to the sample size n.
-(ii)
- Determine the variance of S 2 based on its sampling distribution.
-CT3 S2017–2
+\item %(ii)
+ Determine the variance of $S^2$ based on its sampling distribution.
+\end{enumerate}
 
-[Total 4]4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 
-Q3
-(i)
-( n  1 ) S 2
+\begin{table}[ht!]
+ \centering
+ \begin{tabular}{|p{15cm}|}
+ \hline  \large
+\noindent \textbf{Part (a)}\\
+\large
+Comment on the shape of the sampling distribution of the sample variance $S^2$
+with respect to the sample size n.
+\smallskip
+ \\ \hline
+  \end{tabular}
+\end{table}
+
+$ \displaystyle{  \frac{(n-1)S^2}{\sigma^2}   \sim \chi^2_{n-1}  }$
+
+
+\begin{itemize}
+\item For small n the distribution is heavily skewed to the right.
+\item As n gets larger the distribution becomes symmetric.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\begin{table}[ht!]
+ \centering
+ \begin{tabular}{|p{15cm}|}
+ \hline  \large
+\noindent \textbf{Part (b)}\\\large
+ Determine the variance of $S^2$ based on its sampling distribution.
+
+\\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+\[ \displaystyle{  V \left( \frac{(n-1)S^2}{\sigma^2}  \right) = 2(n-1) }\]
+
+\smallskip
+\begin{framed}
+\noindent \textbf{Recall:}
+ \[ \operatorname{Var}(k X)  = k^2 \operatorname{Var}(X) \]
+where $k$ is a constant.
+\end{framed}
+
+$ \displaystyle{  \operatorname{Var} \left( S^2 \right) = \frac{\sigma^4}{(n-1)^2} 2(n-1) }$
+
+$ \displaystyle{  \operatorname{Var} \left( S^2 \right) = \frac{2\sigma^4}{(n-1)} }$
 
-2
-~ X n 2  1 . For small n the distribution is heavily skewed to the right.
 
-As n gets larger the distribution becomes symmetric.
-(ii)
 
- ( n  1 ) S 2 
- 4
-2  4
-2
-2
-V 
-\;=\;
-2
-n
-
-1
-
-V
-S
-\;=\;
-2
-n
-
-1
-
-V
-S
-\;=\;
-
-(
-)
-(
-)
-
-
-( n  1 )
- 2
-( n  1 ) 2
-
-
-( )
-( )
-
-In part (i) the quality of the answers was mixed. Many candidates
-failed to comment with respect to the sample size n. Part (ii) was better
-answered.
+%In part (i) the quality of the answers was mixed. Many candidates
+%failed to comment with respect to the sample size n. Part (ii) was better answered.
+\end{document}
