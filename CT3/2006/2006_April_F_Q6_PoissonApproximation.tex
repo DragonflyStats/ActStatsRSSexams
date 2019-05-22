@@ -1,0 +1,57 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+A large portfolio of policies is such that a proportion p (0 < p < 1) incurred claims
+during the last calendar year. An investigator examines a randomly selected group of
+25 policies from the portfolio.
+\begin{enumerate}
+\item (i) Use a Poisson approximation to the binomial distribution to calculate an
+approximate value for the probability that there are at most 4 policies with
+claims in the two cases where (a) p = 0.1 and (b) p = 0.2.
+\item 
+(ii) Comment briefly on the above approximations, given that the exact values of
+the probabilities in part (i), using the binomial distribution, are 0.9020 and
+0.4207 respectively.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Let X = number of policies with claims
+So X ~ binomial(25, p).
+Poisson approximation is X Poisson(25p).
+(a) using Poisson(2.5)
+P(X 4) = 0.89118 from tables [or evaluation]
+(b) using Poisson(5)
+P(X 4) = 0.44049 again from tables
+
+\end{document}
