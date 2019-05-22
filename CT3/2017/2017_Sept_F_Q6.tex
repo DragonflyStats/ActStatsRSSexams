@@ -1,7 +1,5 @@
 \documentclass[a4paper,12pt]{article}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \usepackage{eurosym}
 \usepackage{vmargin}
 \usepackage{amsmath}
@@ -16,70 +14,117 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{chngpage}
-
 %\usepackage{bigints}
+
 \usepackage{vmargin}
-
 % left top textwidth textheight headheight
-
 % headsep footheight footskip
-
 \setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
-
 \renewcommand{\baselinestretch}{1.3}
 
 \setcounter{MaxMatrixCols}{10}
-
 \begin{document}
-[Total 6]
-PLEASE TURN OVER6
-Some tea experts claim that the taste of a cup of tea does not change according to
+
+%%% -- Question 6
+\noindent Some tea experts claim that the taste of a cup of tea does not change according to
 whether the tea or the milk is added first to the cup. To test the hypothesis that
-people cannot tell the difference, an actuary organises a tasting experiment where an
+people cannot tell the difference, an statistician organises a tasting experiment where an
 individual is asked to taste 10 randomly presented cups of tea; five of these cups were
-prepared with tea added first, and the other five with milk added first. The individual
+prepared with tea added first, and the other five with milk added first. 
+
+
+The individual
 does not know how many cups of tea where prepared in either way.
 Under the null hypothesis that people cannot tell the difference, the probability of
 correctly recognising the preparation method purely by chance is considered to be 0.5.
-The actuary adopts the following decision rule for testing the hypothesis:
-Reject the null hypothesis if seven or more cups are correctly identified; conclude
+
+The statistician adopts the following decision rule for testing the hypothesis:
+\begin{itemize}
+\item Reject the null hypothesis if seven or more cups are correctly identified; conclude
 that the individual can tell the difference.
-Do not reject the null hypothesis if less than seven cups are correctly identified;
+\item Do not reject the null hypothesis if less than seven cups are correctly identified;
 conclude that the individual cannot tell the difference.
-(i)
+\end{itemize}
+
+
+\begin{enumerate}
+\item %(i)
 Determine the probability of a type I error for this test.
 
-Based on past experience we can quantify the probability p that an individual
+based on past experience we can quantify the probability p that an individual
 recognises the tea preparation method correctly.
 (ii)
 (iii)
 
-CT3 S2017–4
-Determine the probability of a type II error assuming that the true value of
+%%CT3 S2017–4
+\item Determine the probability of a type II error assuming that the true value of
 p is:
 (a) p = 0.7. 
 (b) p = 0.8. 
 Comment on the power of the test, based on your answers in part (ii).
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\begin{table}[ht!]
+ \centering
+ \begin{tabular}{|p{15cm}|}
+ \hline  
+ 
+ \\ \hline
+  \end{tabular}
+\end{table}
 
 Q6
 (i)
-The null hypothesis here is that the individual is guessing, i.e. H 0 : p = 0.5
+The null hypothesis here is that the individual is guessing, i.e. $H_0 : p = 0.5$
 where p is the probability of success in a binomial(10, p) experiment.
 
-P(type I error) = P(reject null hypothesis when it is correct, i.e. when p = 0.5)
+
+\begin{eqnarray*}
+P(type I error) 
+&=& P(reject null hypothesis when it is correct, i.e. when p = 0.5)\\
+&=& P(correct answers \leq 7 | p = 0.5)\\
+&=& \sum^{10}_{x-7} {10 \choose x} 0.5^x(1-0.5)^{(10-x)} \\
+&=& 1 \;-\;0.8281 \\
+&=& 0.1719 (using tables)\\
+\end{eqnarray*}
 
-= P(correct answers ≥ 7 | p = 0.5)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\begin{table}[ht!]
+ \centering
+ \begin{tabular}{|p{15cm}|}
+ \hline  
+ 
+ \\ \hline
+  \end{tabular}
+\end{table}
+
 (ii)
-10
- 10 
-\;=\;    0.5 x (1  0.5) 10  x \;=\; 1  0.8281 \;=\; 0.1719 (using tables)
-x 
-x \;=\; 7  
-(a) P(type II error) = P(accept H 0 when it is false, i.e. when p = 0.7) 
+ \begin{itemize}
+\item (a) P(type II error) = P(accept H 0 when it is false, i.e. when p = 0.7) 
 = P(correct answers < 7 | p = 0.7) = 0.3504 
 (b)
+\item 
 P(type II error) = P(accept H 0 when it is false, i.e. when p = 0.8)
 = P(correct answers < 7 | p = 0.8) = 0.1209
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\begin{table}[ht!]
+ \centering
+ \begin{tabular}{|p{15cm}|}
+ \hline  
+ 
+ \\ \hline
+  \end{tabular}
+\end{table}
 (iii)
 
 The power of the test is given by 1−P(type II error), and therefore increases as
@@ -87,10 +132,11 @@ p increases. In other words, the power is higher (i.e. it is more likely to
 correctly reject the hypothesis of guessing) when the individual is more skilled
 in identifying the preparation method correctly.
 
-The question was generally well answered, with most candidates
-showing understanding of the concepts involved. There were some
-problems however with calculating the probabilities – note that these
-are given in the statistical tables. Credit was given to answers using a
-normal approximation to the binomial distribution in parts (i) and (ii)
-despite the sample size being small. In part (iii) all valid comments
-were given credit.
+%The question was generally well answered, with most candidates
+%showing understanding of the concepts involved. There were some
+%problems however with calculating the probabilities – note that these
+%are given in the statistical tables. Credit was given to answers using a
+%normal approximation to the binomial distribution in parts (i) and (ii)
+%despite the sample size being small. In part (iii) all valid comments
+%were given credit.
+\end{document}
