@@ -35,10 +35,10 @@
 5
 Let $X_1$ , $X_2$ , $X_3$ , $X_4$ , and $X_5$ be independent random variables, such that X i ~ gamma
 5
-with parameters i and \lambda for i = 1, 2, 3, 4, 5. Let S = 2 \lambda \sum X i .
+with parameters i and \lambda for i = 1, 2, 3, 4, 5. Let $S = 2 \lambda \sum X_i$ .
 i = 1
 6
-\begin{enumerate}[(i)]
+\begin{enumerate}[(a)]
 \item (i) Derive the mean and variance of S using standard results for the mean and variance of linear combinations of random variables.
 \item
 (ii) Show that S has a chi-square distribution using moment generating functions and state the degrees of freedom of this distribution.
@@ -46,52 +46,42 @@ i = 1
 (iii) Verify the values found in part (i) using the results of part (ii). .
 \end{enumerate}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item Consider two random variables X and Y, for which the variances satisfy V[X] = 5V[Y]
-and the covariance Cov[X,Y] satisfies Cov[X,Y] = V[Y].
-Let S = X + Y and D = X − Y.
-\begin{enumerate}[(i)]
-\item (i)  Show that the covariance between S and D satisfies Cov[S,D] = 4V[Y].
-\item (ii) Calculate the correlation coefficient between S and D.
-\end{enumerate}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 5
 (i)
-E [ S ] = 2 \lambda \sum
-i
-= 30
-i = 1 \lambda
-5
-V [ S ] = 4 \lambda 2 \sum
-i = 1
-(ii)
-i
-\lambda 2
-t ⎞
-⎛
-M X i ( t ) = ⎜ 1 − ⎟
-⎝ \lambda ⎠
-= 60
-− i
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{eqnarray*}
+E(S) &=& 2 \lambda \sum^{5}_{i=1} \frac{i}{\lambda}\\
+&=& 30\\
+\end{eqnarray*}
+
+\begin{eqnarray*}
+\operatorname{Var}(S) &=& 4 \lambda^2 \sum^{5}_{i=1} \frac{i}{\lambda^2}\\
+&=& 60\\
+\end{eqnarray*}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\[ M_X_{i} = \left( 1 \;-\; \frac{t}{\lambda} \right)^{-1} \]
+
+\begin{eqnarray*}
+M_{S}(t) &=& E[ \mbox{exp}(tS) ] \\
+ &=& E[ \mbox{exp}\left(2 \lambda t \sum^{5}_{i=1}X_{i}\right) ] \\
+ &=& \prod^{5}_{i=1} E[ \mbox{exp}\left(2 \lambda t X_{i}  \right)   ] \\
+ &=& \prod^{5}_{i=1} M_X_{i} \left(2 \lambda t X_{i}  \right)    \\
+ &=& \prod^{5}_{i=1} ( 1 \;-\; 2t)^{-i}\\
+ &=& ( 1 \;-\; 2t)^{-15}\\
+ \end{eqnarray*}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 (from book of formulae)
 5
-⎡
-⎛
-⎞ ⎤ 5
-M S ( t ) = E ⎡ ⎣ exp ( tS ) ⎤ ⎦ = E ⎢ exp ⎜ 2 \lambda t \sum X i ⎟ ⎥ = ∏ E ⎡ ⎣ exp ( 2 \lambda tX i ) ⎤ ⎦
-⎜
-⎟ ⎥
-⎢ ⎣
-i = 1
-⎝
-⎠ ⎦ i = 1
-5 5
-i = 1 i = 1
-= ∏ M X i ( 2 \lambda t ) = ∏ ( 1 − 2 t )
-(iii)
-− i
-= ( 1 − 2 t )
-− 15
+
 so S ~ χ 2 , with 30 df
 2
 χ 30
@@ -99,10 +89,5 @@ has mean 30 and variance 60 , as found in part (i).
 % Page 3
 %  — Examiners’ Report, April 2011
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-6
-(i) Cov[S,D] = Cov[X + Y , X − Y] = Cov[X,X] − Cov[X,Y] + Cov[Y,X] − Cov[Y,Y]
-= V[X] − V[Y] = 4V[Y]
-(ii) V[S] = V[X] + V[Y] + 2Cov[X,Y] = 8V[Y]
-V[D] = V[X] + V[Y] − 2Cov[X,Y] = 4V[Y]
-⇒ Corr[S,D] = 4V[Y]/{8V[Y] × 4V[Y]} 1/2 = +1/√2 = +0.707
+
 \end{document}
