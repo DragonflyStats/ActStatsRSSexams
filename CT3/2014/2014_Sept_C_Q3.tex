@@ -1,0 +1,103 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+3 Let N be a random variable describing the number of withdrawals from a bank branch
+each day. It is assumed that N is Poisson distributed with mean μ. Let Xi, the random
+variable describing the amount of each withdrawal, be exponentially distributed with
+mean 1/λ. All Xi are independent and identically distributed. Let S denote the total
+amount withdrawn from that branch in a day i.e.
+1
+N
+i
+i
+S X
+=
+  = Σ
+with S = 0 if N = 0.
+\item (i) Derive the moment generating function of S. 
+\item (ii) Calculate the mean and variance of S if μ = 100 and λ = 0.025. 
+[Total 7]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+3 \item (i) tS | exp  1 2 |
+  E e N  n  E  t X  X  XN N  n
+  1 2      
+1
+exp exp 1
+n n n
+n i X
+i
+E t X X X E tX M t t
+
+
+                      
+   tS 
+MS t  E e
+ E EetS |N
+ 
+  N
+E MX t   
+ 
+ E expN logMX t 
+N log 1
+M t
+           
+1
+exp 1 t 1               
+
+\item (ii)  
+ 
+2 2
+2
+1 40, 1 40 3200
+0.025 0.025
+E Xi   E Xi    
+ES EXi  100*40  4000
+V S E Xi2  100*3200  320,000
+(OR
+           
+   
+  2 2
+  2
+  100* 1 100*40 320,000
+  0.025
+  V S  E N V Xi V N E X     )
+
+[Total 7]
+Part \item (i) required careful and precise derivation of the result, and many candidates struggled
+with it. Answers in questions involving work with MGF expressions have also been
+problematic in the past – more practice and better understanding is needed.
+Subject CT3 (Probability and Mathematical Statistics) – September 2014 
