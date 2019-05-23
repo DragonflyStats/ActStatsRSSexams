@@ -1,0 +1,70 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+70% of all customers have a home insurance policy, and 80% of all customers have a
+car insurance policy. Every customer has at least one of the two types of policies.
+Calculate the probability that a randomly selected customer:
+  \item (i) does not have a car insurance policy. 
+\item (ii) has car insurance and home insurance. 
+\item (iii) has home insurance, given that he has car insurance. 
+\item (iv) does not have car insurance, given that he has home insurance. 
+
+%%%
+
+2 Note that each customer has at least one contract, that is, PCar Home 1.
+\item (i) P CarC  1  PCar  0.2  20% 
+\item (ii) PCar  Home  PCar PHome PCar Home 
+ 0.8  0.7 1  0.5
+(iii)    
+ 
+Car Home 0.5 Home|Car 0.625
+Car 0.8
+P
+P
+P
+    
+(iv) P  CarC Home  PHome  PCarHome  0.7  0.5  0.2
+ 
+Car Home 0.2 Car |Home 0.2857
+Home 0.7
+C
+P C
+P
+P
+            
+[Total 6]
+Reasonably well done, with the exception of part (iv). Note that events are not independent
+here. Alternative ways to arrive at the correct answer were given full credit.
+Subject CT3 (Probability and Mathematical Statistics) – September 2014 
