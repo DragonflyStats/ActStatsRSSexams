@@ -1,0 +1,78 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+4 Consider six life policies, each on one of six independent lives. Each of four of the
+policies has a probability of 2/3 of giving rise to a claim within the next five years,
+and each of the other two policies has a probability of 1/3 of giving rise to a claim
+within the next five years. It is assumed that only one claim can arise from each
+policy.
+\item (i) Calculate the expected number of claims which will arise from the six policies
+within the next five years. 
+\item (ii) Calculate the probability that exactly one claim will arise from the six policies
+within the next five years. 
+(iii) Calculate the probability that two policies chosen at random from the six
+policies will both give rise to claims within the next five years. 
+[Total 8]
+
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+4 If X is the total number of claims, with X1 from group 1 (G1, with probability 2/3) and
+X2from group 2 (G2, with probability 1/3), we have
+\item (i) X1~ Bin(4, 2/3) and X2~ Bin(2, 1/3) .
+E(X )  E(X1  X2 )  E(X1)  E(X2 )
+ 4(2 / 3)  2(1/ 3) 10 / 3  3.333 
+\item (ii) P(X 1)  P(X1 1, X2  0)  P(X1  0, X2 1)
+3 0 2 0 4 1 1 4 2 4 2
+(2/ 3)(1/ 3) (1/ 3) (2/ 3) (2/ 3) (1/ 3) (1/ 3) (2/ 3)
+1 0 0 1
+       
+         
+       
+ 4 / 81  0.0494 
+(iii) P(two randomly selected policies giving claims) =
+  P(both give claims | both from G1) * P(both from G1)
++P(both give claims | both from G2) * P(both from G2)
++ 2*P(both give claims | one from G1, one from G2) * P(one from G1, one
+                                                       from G2)
+2 2 4 3 1 2 2 1 2 1 4 2 41 2 0.3037
+3 6 5 3 6 5 3 3 6 5 135
+                   
+      
+
+[Total 8]
+Mixed performance. Parts (i) and (ii) were answered well, but there were many inadequate
+attempts in part (iii). In many cases candidates failed to see the different combinations
+resulting in the required event, while there were also problems in calculating the correct
+probability for each combination.
+\end{document}
