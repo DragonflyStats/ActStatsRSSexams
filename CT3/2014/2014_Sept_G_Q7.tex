@@ -72,19 +72,27 @@ models should be used based on empirical data.
 
 7 We denote by X0 the number of policies with no claims, by X1 the number of
 policies with one claim and by X2 the number of policies with two claims per year.
-Let X  X0 + X1  X2
+Let $X = X0 + X1  X2$
 (i) Likelihood function
-L p 2 pX0 pX1 0.25 pX2 1 3.25 pn X   
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Likelihood function
+\[
+L ( p ) \propto ( 2 p )^{X_0} \times p^{X_1} ( 0.25 p )^{X_2}( 1 \;-\; 3.25 p )^{ n \;-\; X}
+\]
+
 Log-likelihood
-l  p  X0 log 2 p  X1 log  p  X2 log 0.25 p  n  X log 1 3.25 p
+\[
+l ( p ) = X_0 log ( 2 p ) \;+\; X_1 log ( p ) \;+\; X_2 log ( 0.25 p ) \;+\; ( n \;-\; X ) log ( 1 \;-\; 3.25 p )
 + constant
-    0 1 2 3.25 3.25
-1 3.25 1 3.25
-dl X X X n X X n X
-dp p p p p p p
- 
-     
- 
+\]
+
+
+\begin{eqnarray*}
+\frac{dl}{dp} &=& \frac{X_0}{p} \;+\; \frac{X_1}{p} \;+\; \frac{X_2}{p} \;-\; \frac{3.25(n-X)}{1 \;-\;3.25}\\
+\frac{X}{p} \;-\; \frac{3.25(n-X)}{1 \;-\;3.25}\\
+\end{eqnarray*}
+
  – September 2014 – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 7
 dl 0
