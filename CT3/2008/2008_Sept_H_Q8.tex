@@ -31,35 +31,39 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
 
 
 
-8
-\begin{enumerate}[(i)]
+
+%%- Question 8
+\begin{enumerate}[(a)]
 \item (i)
 Use the following uniform(0,1) random numbers
-0.9236 , 0.2578
+\[0.9236 , 0.2578\]
 and a suitable table of probabilities to simulate two observations of the random
 variable X, where $X \sim N(200,100)$.
 \item (ii)
-Use the following uniform(0,1) random numbers
-0.3287 , 0.9142
-to simulate two observations of the random variable Y, where Y has an exponential distribution with mean 100.
+Use the following uniform $(0,1)$ random numbers
+\[0.3287 , 0.9142\]
+to simulate two observations of the random variable $Y$, where $Y$ has an exponential distribution with mean 100.
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 8
+\begin{itemize}
+    \item 
+
 (i)
 From Yellow Book Table
 $P(Z < 1.43) = 0.9236$ giving x value $(10*1.43) + 200 = 214.3$
-$P(Z < −0.65) = 0.2578$ giving x value $(10*(−0.65)) + 200 = 193.5$
+$P(Z < −0.65) = 0.2578$ giving x value $(10\times (−0.65)) + 200 = 193.5$
 
-(ii)
-Setting r = P(Y < y) = 1 – exp(−y/100) ⇒ y = −100*log(1 − r)
-$r = 0.3287$ therefore $y = −100log(0.6713) = 39.85$
-$r = 0.9142$ therefore $y = −100log(0.0858) = 245.6$
-Note: We can do away with the step of subtracting r from 1 and use.
-y = −100*log(r). This gives y = 111.3, 8.971.
+\item (ii)
+Setting $r = P(Y < y) = 1 - exp(−y/100)$ ⇒ y = −100*log(1 − r)
+$r = 0.3287$ therefore $y = −100 \log(0.6713) = 39.85$
+$r = 0.9142$ therefore $y = −100 \log(0.0858) = 245.6$
+\end{itemize}
+Note: We can do away with the step of subtracting $r$ from 1 and use.
+$y = −100\times \log(r)$. This gives y = 111.3, 8.971.
 \end{document}
