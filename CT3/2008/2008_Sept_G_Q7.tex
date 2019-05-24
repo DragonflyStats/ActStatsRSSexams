@@ -31,33 +31,41 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
 
-7
-Let N be the number of claims arising on a group of policies in a period of one week and suppose that N follows a Poisson distribution with mean 60.
-Let $\{X_1 , X_2 ,  \ldots , X_N \}$ be the corresponding claim amounts and suppose that, independently of N, these are independent and identically distributed with mean £500
-and standard deviation £400.
+%%-- Question 7
+Let N be the number of claims arising on a group of policies in a period of one week and suppose that $N$ follows a Poisson distribution with mean 60.
+Let $\{X_1 , X_2 ,  \ldots , X_N \}$ be the corresponding claim amounts and suppose that, independently of $N$, these are independent and identically distributed with mean \$500
+and standard deviation \$400.
 N
 Let S   X i be the total claim amount for the period of one week.
 i  1
-\begin{enumerate}[(i)]
+\begin{enumerate}[(a)]
 \item (i) Determine the mean and the standard deviation of S.
-\item (ii) Explain why the distribution of S can be taken as approximately normal, and hence calculate, approximately, the probability that S is greater than £40,000.
+\item (ii) Explain why the distribution of S can be taken as approximately normal, and hence calculate, approximately, the probability that S is greater than \$40,000.
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 7
 (i)
-\[E ( S ) = E ( N ) E ( X ) = (60)(500) = £30, 000\]
-\[V ( S ) = E ( N ) V ( X ) + V ( N )[ E ( X )] 2\]
-\[= (60)(400 2 ) + (60)(500 2 ) = 24, 600, 000 ∴ sd ( S ) = £4,960\]
+\begin{eqnarray*}E ( S ) &=& E ( N ) E ( X ) \\
+&=& (60)(500) \\
+&=& \$30, 000 \\
+\end{eqnarray*}
+\begin{eqnarray*}
+V ( S ) &=& E ( N ) V ( X ) + V ( N )[ E ( X )]^2\\
+&=& (60)(400^2 ) + (60)(500^2 ) \\
+&=& 24, 600, 000  \\
+\end{eqnarray*}
+
+\[∴ sd ( S ) = \$4,960\]
 (ii)
 As S is the sum of a large number of i.i.d. variables, then the central limit theorem gives an approximate normal distribution for S.
 %%%%%%%%%%%%%%
-P ( S > 40000) = P ( Z >
-40000 − 30000
-= 2.016)
-4960
-= 1 − 0.9781 = 0.0219
+\begin{eqnarray*}
+P ( S > 40000) &=& P \left( Z > \frac{40000 − 30000}{4960} \right)\\
+&=& P ( Z > 2.016)\\
+&=& 1 − 0.9781 \\
+&=& 0.0219\\
+\end{eqnarray*}
 [Note: 2.02 leading to 0.0217 is also acceptable.]
 \end{document}
