@@ -31,7 +31,7 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}%[Total 6]
+%[Total 6]
 
 %%[2]
 %%[Total 8]
@@ -42,11 +42,11 @@ When a new claim comes into an office it is screened at a first stage and has a 
 \item (i) Explain clearly why the probability of a claim being rejected at the first stage
 is 1 - , of being rejected at the second stage is  (1 - ) and of progressing after the two stages is  2 .
 [3]
-\item (ii) For a sample of n independent claims which came into the office x 1 were rejected at the first stage, x 2 were rejected at the second stage and x 3
-progressed after the two stages (x 1 + x 2 + x 3 = n).
+\item (ii) For a sample of n independent claims which came into the office x_1 were rejected at the first stage, x 2 were rejected at the second stage and x 3
+progressed after the two stages (x_1 + x 2 + x 3 = n).
 (a)
 Write down the likelihood L() for this sample and hence show that the derivative of the log-likelihood is given by
-x  2 x 3 x 1  x 2
+x  2 x 3 x_1  x 2
 
 .
 log L (  )  2
@@ -59,7 +59,7 @@ Show that the maximum likelihood estimator (MLE) is given by
  ˆ 
 x 2  2 x 3
 .
-x 1  2 x 2  2 x 3
+x_1  2 x 2  2 x 3
 [7]
 \item (iii)
 (iv)
@@ -74,7 +74,7 @@ part (ii) above and hence show that the Cramer-Rao lower bound
 n (1   )
 \end{enumerate}
 (b) Use the asymptotic distribution for the MLE ̂ with the CRlb
-evaluated at ̂ to obtain an approximate large-sample 95% confidence
+evaluated at ̂ to obtain an approximate large-sample 95\% confidence
 interval for  expressing it simply in terms of ̂ and n.
 [7]
 Determine the second derivative
@@ -94,36 +94,38 @@ P(rejected at 2 nd ) = P(cleared at 1 st )P(rejected at 2 nd | cleared at 1 st )
 P(progressing after two) = P(cleared at 1 st ) P(cleared at 2 nd ) = \theta 2
 (ii)
 (a)
-L ( \theta ) = [(1 − \theta )] x 1 [ \theta (1 − \theta )] x 2 [ \theta 2 ] x 3
-= \theta x 2 + 2 x 3 (1 − \theta ) x 1 + x 2
-∴ log L ( \theta ) = ( x 2 + 2 x 3 ) log \theta + ( x 1 + x 2 ) log(1 − \theta )
+L ( \theta ) = [(1 − \theta )] x_1 [ \theta (1 − \theta )] x 2 [ \theta 2 ] x 3
+= \theta x 2 + 2 x 3 (1 − \theta ) x_1 + x 2
+∴ log L ( \theta ) = ( x 2 + 2 x 3 ) log \theta + ( x_1 + x 2 ) log(1 − \theta )
 ∴
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (b)
-x + 2 x 3 x 1 + x 2
-∂
+x + 2 x 3 x_1 + x 2
+\frac{\partial}{\partial} 
 log L ( \theta ) = 2
 −
 1 − \theta
-∂\theta
+\frac{\partial}{\partial} \theta
 \theta
 equate to zero for MLE
-∴\theta ( x 1 + x 2 ) = (1 − \theta )( x 2 + 2 x 3 )
-∴\theta ( x 1 + 2 x 2 + 2 x 3 ) = x 2 + 2 x 3
+∴\theta ( x_1 + x 2 ) = (1 − \theta )( x 2 + 2 x 3 )
+∴\theta ( x_1 + 2 x 2 + 2 x 3 ) = x 2 + 2 x 3
 x 2 + 2 x 3
-x 1 + 2 x 2 + 2 x 3
-∴\theta ˆ =
+x_1 + 2 x 2 + 2 x 3
+∴\hat{\theta} =
 (iii)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (a)
-∂ 2 x 2 + 2 x 3
-∂\theta \theta 2
+\frac{\partial}{\partial}  2 x 2 + 2 x 3
+\frac{\partial}{\partial} \theta \theta 2
 log L ( \theta ) = −
 2
 E {
 −
-x 1 + x 2
+x_1 + x 2
 (1 − \theta ) 2
-∂ 2 n \theta (1 − \theta ) + 2 n \theta 2
-∂\theta \theta 2
+\frac{\partial}{\partial}  2 n \theta (1 − \theta ) + 2 n \theta 2
+\frac{\partial}{\partial} \theta \theta 2
 log L ( \theta )} = −
 2
 −
@@ -145,36 +147,37 @@ n (1 + \theta )
 1
 CRlb =
 − E [
-∂
+\frac{\partial}{\partial} 
 log L ( \theta )]
-∂\theta 2
+\frac{\partial}{\partial} \theta 2
 2
 =
 \theta (1 − \theta )
 n (1 + \theta )
-\theta ˆ ≈ N ( \theta , CRlb ) for large n
+\hat{\theta} ≈ N ( \theta , CRlb ) for large n
 (b)
 using CRlb =
-\theta ˆ (1 − \theta ˆ )
-\theta ˆ (1 − \theta ˆ )
-, then \theta ˆ ≈ N ( \theta ,
+\hat{\theta} (1 − \hat{\theta} )
+\hat{\theta} (1 − \hat{\theta} )
+, then \hat{\theta} \approx N ( \theta ,
 )
-n (1 + \theta ˆ )
-n (1 + \theta ˆ )
-\theta ˆ (1 − \theta ˆ )
-95% CI is \theta ˆ ± 1.96
-n (1 + \theta ˆ )
+n (1 + \hat{\theta} )
+n (1 + \hat{\theta} )
+\hat{\theta} (1 − \hat{\theta} )
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+95\% CI is \hat{\theta} \pm  1.96
+n (1 + \hat{\theta} )
 (iv)
-\theta ˆ =
+\hat{\theta} =
 96 + 2(794)
 1684
 =
 = 0.8910
 110 + 2(96) + 2(794) 1890
-CRlb ≈
+CRlb \approx 
 0.8910(1 − 0.8910)
 = 0.0000514 ∴ CRlb = 0.00717
 1000(1 + 0.8910)
-∴95% CI is 0.8910 ± 1.96(0.00717)
-⇒ 0.891 ± 0.014 or (0.877, 0.905)
+∴95\% CI is 0.8910 \pm  1.96(0.00717)
+⇒ 0.891 \pm 0.014 or (0.877, 0.905)
 \end{document}
