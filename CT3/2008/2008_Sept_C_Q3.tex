@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+Let Y be the sum of two independent random variables $X_1$ and $X_2$ , that is,
+Y  X 1  X 2 .
+\begin{enumerate} 
+\item Show that the moment generating function (mgf) of Y is the product of the
+mgfs of X 1 and X 2 .
+
+(ii)
+\item Let $X_1$ and $X_2$ be independent gamma random variables with parameters
+(  1 ,  ) and (  2 ,  ) , respectively .
+Use mgfs to show that Y  X 1  X 2 is also a gamma random variable and
+specify its parameters.
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\newpage
+
+
+\begin{eqnarray*}
+M Y ( t ) &=& E ( e tY ) \\ &=& E ( e t ( X 1 + X 2 ) )
+\\ &=& E ( e tX 1 ) E ( e tX 2 ) \\ &=& M X 1 ( t ) M X 2 ( t )\\
+\end{eqnarray*}
+(ii)
+t
+M X i ( t ) = (1 − ) −\alpha  i
+\lambda 
+t
+∴ M Y ( t ) = (1 − ) − ( \alpha_{1} +\alpha_{2} )
+\lambda 
+so that Y is a gamma r.v. with parameters $( \alpha_{1} + \alpha_{2} , \lambda  )$ .
+
+
+%Subject CT3 (Probability and Mathematical Statistics Core Technical) — September2008 — Examiners’ Report
+\end{document}
