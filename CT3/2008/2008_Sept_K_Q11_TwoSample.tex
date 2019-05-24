@@ -31,16 +31,16 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}11
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%- Question 11
 Male
 4
 6
 10
 1
 1
-A study was conducted to investigate lengths of stay, in days, of short-term stay
-patients in a particular hospital. Independent random samples of 40 male patients and
-35 female patients were selected and the lengths of stay of these patients are given in
+A study was conducted to investigate lengths of stay, in days, of short-term stay patients in a particular hospital. Independent random samples of 40 male patients and 35 female patients were selected and the lengths of stay of these patients are given in
 the following tables:
 8
 6
@@ -118,6 +118,8 @@ Female: x = 168 x 2 = 1,026
 The male observations are assumed to be normally distributed with mean  1 and
 standard deviation  1 , and independently the female observations are assumed to be
 normally distributed with mean  2 and standard deviation  2 .
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{enumerate}[(a)]
 \item (i)
 Suppose that it is known that  1 = 3.0 days and  2 = 2.5 days.
@@ -126,21 +128,13 @@ mean length of stay for males and the mean length of stay for females,
 that is for  1   2 .
 (b) Comment briefly on any implications of this confidence interval.
 [6]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item (ii)
 Suppose now that  1 and  2 are unknown.
-(a) Perform a two-sample t-test to investigate whether there is a difference
-between the mean length of stay for males and the mean length of stay
-for females, assuming that  1 and  2 are equal.
-(b) Show that the variances in the male and female samples are not
-significantly different at the 5\% level, and comment briefly with
-reference to the validity of the test conducted in (ii)(a).
-(c) Suppose you are not prepared to assume more than you feel is
-absolutely necessary – in particular you do not want to assume that
- 1 and  2 are equal, nor that the observations necessarily come from
-normal populations.
-Perform an alternative (large-sample) test to that conducted in part
-(ii)(a), “to investigate whether there is a difference between the mean
-length of stay for males and the mean length of stay for females”, and
+(a) Perform a two-sample t-test to investigate whether there is a difference between the mean length of stay for males and the mean length of stay for females, assuming that  1 and  2 are equal.
+(b) Show that the variances in the male and female samples are not significantly different at the 5\% level, and comment briefly with reference to the validity of the test conducted in (ii)(a).
+(c) Suppose you are not prepared to assume more than you feel is absolutely necessary – in particular you do not want to assume that  1 and  2 are equal, nor that the observations necessarily come from normal populations.
+Perform an alternative (large-sample) test to that conducted in part (ii)(a), “to investigate whether there is a difference between the mean length of stay for males and the mean length of stay for females”, and
 compare the results of the test with the results of the test obtained in
 part (ii)(a).
 \end{enumerate}
@@ -195,8 +189,7 @@ s 2 p ⎜ + ⎟
 t 73 (0.025) = 1.996 (by interpolation of 2.000 and 1.980 for 60 df and
 120 df)
 [OR just quote the N(0,1) value 1.96 in place of the t 73 value.]
-Therefore there is no evidence to reject the null hypothesis that the
-means for males and females do not differ at the 5\% significance level,
+Therefore there is no evidence to reject the null hypothesis that the means for males and females do not differ at the 5\% significance level,
 and we conclude that the mean lengths of stay are the same.
 (b)
 s 1 2
@@ -205,11 +198,8 @@ s 2 2
 8.34295
 = 1.29
 6.45882
-Comparing this to an F 39,34 distribution, which has a 5\% critical point
-between 2.075 and 1.717 (two-sided test), there is no evidence that the
-population variances differ.
-The assumption of common variance was made when conducting the
-test in (ii)(a), and this seems valid given the result of the test in (ii)(b).
+Comparing this to an F 39,34 distribution, which has a 5\% critical point between 2.075 and 1.717 (two-sided test), there is no evidence that the population variances differ.
+The assumption of common variance was made when conducting the test in (ii)(a), and this seems valid given the result of the test in (ii)(b).
 (c)
 z =
 =
@@ -223,8 +213,7 @@ n 1 n 2
 40
 35
 = 0.917
-Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2008 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Compare with N(0,1), e.g. 1.96 for 5\% level test. Therefore we reach
-exactly the same conclusion (as in (ii)(a) but without making the
-assumptions of equal variances and normal distributions – we have
+%%--- Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2008 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Compare with N(0,1), e.g. 1.96 for 5\% level test. Therefore we reach exactly the same conclusion (as in (ii)(a) but without making the assumptions of equal variances and normal distributions – we have
 large samples and can rely on CLT).
+\end{document}
