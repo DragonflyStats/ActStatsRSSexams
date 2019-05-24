@@ -34,7 +34,7 @@
 \begin{enumerate}
 %%--Question 5
 
-\item The number of claims, X, arising on each policy in a certain portfolio depends on another random variable Y. X is considered to follow a Poisson distribution with mean Y. The variable Y itself is assumed to have a gamma distribution with
+\item The number of claims, $X$, arising on each policy in a certain portfolio depends on another random variable $Y$. $X$ is considered to follow a Poisson distribution with mean $\bar{Y}$. The variable $Y$ itself is assumed to have a gamma distribution with
 parameters (a,b).
 Find expressions for the unconditional moments $E[X]$ and $E[X^2]$ using appropriate conditional moments.
 
@@ -47,10 +47,10 @@ E ( X ) = E Y { E X ( X Y ) } = E ( Y ) =
 a
 .
 b
-E ( X 2 ) = var( X ) + E 2 ( X )
+E ( X^2 ) = \operatorname{Var}( X ) + E 2 ( X )
 with
-var( X ) = E Y { var X ( X Y ) } + var Y { E X ( X Y ) }
-= E ( Y ) + var( Y ) =
+\operatorname{Var}( X ) = E Y { \operatorname{Var} X ( X Y ) } + \operatorname{Var} Y { E X ( X Y ) }
+= E ( Y ) + \operatorname{Var}( Y ) =
 a a
 +
 b b 2
@@ -61,14 +61,14 @@ b b
 b
 2
 {
-{ var
+{ \operatorname{Var}
 }
-[ OR E ( X 2 ) = E Y E X ( X 2 Y )
+[ OR E ( X^2 ) = E Y E X ( X 2 Y )
 = E Y
 X
 }
 ( X Y ) + E X 2 ( X Y ) = E ( Y ) + E ( Y 2 )
-= E ( Y ) + var( Y ) + E 2 ( Y )
+= E ( Y ) + \operatorname{Var}( Y ) + E 2 ( Y )
 =
 6
 a a a 2
