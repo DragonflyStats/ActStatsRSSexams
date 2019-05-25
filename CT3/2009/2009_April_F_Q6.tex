@@ -1,0 +1,75 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+% [3]6
+% 7
+\item The variables $X_1 , X_2 , .\ldots, X_{40}$ give the size (in units of \$100) of each of 40 claims in a random sample of claims arising from damage to cars by vandals. The size of each claim is assumed to follow a gamma distribution with parameters $\alpha = 4$ and $\lamnda = 0.5$.
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+and each is independent of all others. Let $\bar{X} =
+\sum^{40}_{1} X_i$ be the random variable
+40 i = 1
+giving the mean size of such a sample.
+\begin{enumerate}[(a)]
+\item 
+State the approximate sampling distribution of $X$ and determine its parameters.
+\item 
+Determine approximately the median of $X$ .
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+$E[X i ] = 4/0.5 = 8$ and $Var[X i ] = 4/(0.5^2) = 16$ (or by noting $ X_i \sim \chi^2_{8}$ ).
+Var [ X i ] ⎞
+∑ X i ⎛
+X = i = 1 ≈ N E [ X ],
+, i.e. N(8, 0.4)
+40
+Using the CLT:
+⎜
+⎝
+40
+i
+40
+⎟
+⎠
+approximately.
+[Note: The exact distribution of X is Gamma(160,20)]
+(ii)
+The symmetry of the distribution gives: median ⎡ ⎣ X ⎤ ⎦ = mean ⎡ ⎣ X ⎤ ⎦ = 8,
+i.e. \$800.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
