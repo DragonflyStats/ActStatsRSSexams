@@ -1,0 +1,63 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%5
+ Let X be a random variable with moment generating function $M_X (t)$ and cumulant generating function C X (t), and let Y = aX + b, where a and b are constants. Let $Y$ have moment generating function M Y (t) and cumulant generating function $C_Y (t)$.
+\item (i) Show that C Y (t) = bt + C X (at).
+\item (ii) Find the coefficient of skewness of Y in the case that $M X (t) = (1 – t) –2$ and
+Y = 3X + 2 (you may use the fact that C Y ′′′ (0) = E[(Y − \mu  Y ) 3 ]).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 3
+\item (i)
+\[M_{Y} (t) = E[e^{tY} ] = E[e^{t(aX+b)}] = e^{tb}E[e^{atX} ] = e^{bt}M_X (at)\]
+\[C_Y (t) = \log M_{Y} (t) = bt + \log MX (at) = bt + CX (at)\]
+\item (ii)
+\[C_Y (t) = 2t + \log(1 – 3t)^{ –2} = 2t – 2\log(1 – 3t) \]
+
+\[C_Y^{\prime} (t) = 2 + 6(1 – 3t)^{-1} , C_Y^{\prime \prime} (t) = 18(1 – 3t)^{ –2} , C_Y^{\prime \prime \prime} (t) = 108(1 – 3t)^{-3}\]
+
+
+\[E[(Y - \mu_Y )^2] = C_Y^{\prime \prime }(0) = 18, \]
+\[E[(Y - \mu_Y )^3] = C_Y^{\prime \prime \prime}(0) = 108\]
+%%Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2009 — Marking Schedule
+coefficient of skewness of Y 
+\[Y = \left( \frac{108}{18} \right)^{3/2} = 2^{1/2} = 1.414\]
+OR note that coefficient of skewness of Y = coefficient of skewness of $X$ and just work with X (some candidates may recognise X ~ Gamma(2,1) and
+comment on the formula for coefficient of skewness (2/  ) given in the
+Yellow Book).
+
+\end{document}
