@@ -1,0 +1,63 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%5
+Two tickets are selected at random, one after the other and without replacement, from a group of six tickets, numbered 1, 2, 3, 4, 5, and 6.
+\begin{enumerate}[(i)]
+\item \item (i) Calculate the probability that the numbers on the selected tickets add up to 8.
+\item 
+\item (ii) Calculate the probability that the numbers on the selected tickets differ by
+3 or more.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+2
+\item (i)
+With sample space {(i,j), i = 1, ..., 6, j = 1, ..., 6, j
+i}
+(that is, i is the number on the first ticket selected, j that on the second
+selected) there are 30 equally likely outcomes.
+Favourable outcomes are $(2,6), (3,5), (5,3), (6,2)$
+so probability = 4/30 = 2/15 = 0.133
+\item (ii)
+2
+Favourable outcomes are
+\[(1,4), (4,1), (1,5), (5,1), (1,6), (6,1), (2,5), (5,2), (2,6), (6,2), (3,6), (6,3)\]
+so probability = 12/30 = 0.4
+2
+OR: Use a sample space of size 15: {(i,j)} where i is smaller number selected,
+j is larger.
+Then event (i) has 2 favourable outcomes and event (ii) has 6.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
