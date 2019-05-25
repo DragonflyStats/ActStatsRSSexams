@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%-Question 8
+A random sample of 25 recent claim amounts in a general insurance context is taken from a population that you may assume is normally distributed. In units of \$1,000, the sample mean is x = 9.416 and the sample standard deviation is s = 2.105.
+Calculate a 95\% one-sided upper confidence limit (that is, the upper limit k of a confidence interval of the form (0,k)) for the standard deviation of the claim amounts in the population.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+8
+Let $\sigma^2$ be the population variance.
+
+\[ \frac{24S^2}{\sigma^2} \sim \chi^{2}_{24} \]
+
+
+\[P \left( \frac{24S^2}{\sigma^2} > 13.85 \right) = 0.95\]
+
+
+
+\[P \left( \sigma^2 < \frac{24S^2}{13.85 }  \right) = 0.95\]
+
+
+\[ k^2 =  \frac{24 \times (2.105)^2}{13.85 }  \right) = 7.678\]
+
+Therefore $k=2.771$
+so upper confidence limit for $\sigma$  is $2.771$ i.e. \$2771
+(OR: CI is (0, 2.771) i.e. (0, \$2771)).
+
+
+
+
+\end{document}
