@@ -1,0 +1,108 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+
+\item
+
+%%- Question 6
+Consider the discrete random variable $X$ with probability function
+\[f ( x ) =
+(i)
+4
+5 x + 1
+,
+x = 0, 1, 2, ...\]
+Show that the moment generating function of the distribution of $X$ is given by
+\[M_X ( t ) = 4(5 − e t ) − 1 ,\]
+for e t < 5.
+(ii)
+
+Determine $E[X]$ using the moment generating function given in part (i).
+\end{enumerate}
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6
+\begin{itemize}
+\item (i)
+M X ( t ) = E [ e tx ]
+∞
+4 ⎛ 1 ⎞
+4 ∞
+= ∑ e
+=
+∑
+⎜ ⎟
+5 ⎝ 5 ⎠
+5 x = 0
+x = 0
+x
+tx
+⎛ e t
+⎜ ⎜
+⎝ 5
+x
+⎞
+⎟ ⎟ ,
+⎠
+and for e t < 5 ,
+\item M X ( t ) =
+(ii)
+4 1
+5 1 − e t
+(
+(
+= 4 5 − e t
+)
+− 1
+.
+5
+\item M '( t ) = 4 e t 5 − e t
+)
+− 2
+\item Mean is given by E ( X ) = M '(0)
+(
+∴ E [ X ] = 4 e 0 5 − e 0
+)
+− 2
+=
+1
+.
+4
+[OR, by expansion as a power series.]
+\end{itemize}
+%%-- Page 3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2007 — Examiners’ Report
+\end{document}
