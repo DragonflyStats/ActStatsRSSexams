@@ -1,0 +1,95 @@
+%%- D
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+\item 
+An analysis of variance investigation with samples of size eight for each of four
+treatments results in the following ANOVA table.
+%%- April 2009 Question 9 
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+Source of variation	&	d.f. 	&	SS 	&	MSS	& F \\  \hline 
+Between treatments	&	3	&	6716	&	2239 & 	\\ \hline 
+Residual	&	28	&	3362	&	120	& \\ \hline 
+Total 	&	31	&	10078	&		& \\ \hline 
+\end{tabular}
+\end{center}
+
+
+\begin{enumerate}[(i)]
+\item (i) Calculate the observed F statistic, specify an interval in which the resulting P-value lies, and state your conclusion clearly.
+\item (ii) The four treatment means are:
+\begin{itemize}
+\item $ { \displastyle \bar{ y }_1 = 85.0 }$, 
+\item $ { \displastyle \bar{ y }_2 = 66.5 }$, 
+\item $ { \displastyle \bar{ y }_3 = 59.0 }$, 
+\item $ { \displastyle \bar{ y }_4 = 95.5 }$.
+\end{itemize}
+(a) Calculate the least significant difference between pairs of means using a 5\% level.
+(b) List the means in order, illustrate the non-significant pairs using suitable underlining, and comment briefly.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+9
+9
+\begin{itemize}
+\item (i)
+
+\[ F = \frac{2239}{120} =  18.66 on 3,28 d.f.\]
+
+from tables $F_{3,28} (1\%) = 4.568$
+∴ P-value < 0.01 or 0 < P-v < 0.01
+So there is overwhelming evidence of a difference between the underlying treatment means.
+%--------------------------%
+\item (ii)
+(a)
+\begin{eqnarray*}
+LSD &=& t_{28, (2.5\%)} \hat{\sigma}^2  \sqrt{ \frac{1}{8} + \frac{1}{8} } \\
+&=& 2.048 120  \sqrt{ \frac{1}{8} + \frac{1}{8} } \\
+&=& 11.2\\
+\end{eqnarray*}
+
+
+
+\itme (b) means in order
+y 3. < y 2. < y 1. < y 4.
+underlined thus:
+Treatments 2 & 3 are separate from treatments 1 & 4 which have significantly higher means.
+%--------------------------------------%
+\end{itemize}
+%---------------------
+%--------------------------------------%
+\end{document}
