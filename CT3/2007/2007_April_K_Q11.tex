@@ -1,0 +1,153 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+The number of claims, X , which arise in a year on each policy of a particular class is to be modelled as a Poisson random variable with mean \lambda. Let X = ( X 1 , X 2 , ..., X n ) be
+1 n
+a random sample of size n from the distribution of X , and let X = ∑ X i .
+n i = 1
+Suppose that it is required to estimate \lambda , the mean number of claims on a policy.
+\begin{enumerate}[(i)]
+\item Show that $\hat{\lambdâ}$, the maximum likelihood estimator of $\lambda$, is given by $\hat{\lambda} = X $. 
+\item Derive the Cramer-Rao lower bound (CRlb) for the variance of unbiased estimators of $\lambda$.
+\item 
+
+(a) Show that \lambdâ is unbiased for \lambda and that it attains the CRlb.
+(b) Explain clearly why, in the case that n is large, the distribution of \lambdâ can be approximated by
+⎛ \lambda ⎞
+\hat{\lambda} ~ N ⎜ \lambda , ⎟ .
+⎝ n ⎠
+
+(iv)
+(a)
+Show that, in the case $n = 100$, an approximate 95\% confidence interval for $\lambda$ is given by
+x \pm 0.196 x .
+(b)
+\end{enumerate}
+Evaluate the confidence interval in (iv)(a) based on a sample with the
+following composition:
+observation
+frequency
+0
+11
+1
+28
+2
+19
+3
+28
+4
+9
+5
+2
+6
+2
+7
+1
+[6]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+11
+\item (i)
+L ( x ) =
+( \lambda ) = log L ( \lambda ) = − n \lambda + ( ∑ x i ) log \lambda + constant
+⇒
+⇒
+\item (ii)
+e − n \lambda \lambda ∑ x i
+∏ x i !
+d
+∑ x i = 0 ⇒ \hat{\lambda} =
+= − n +
+\lambda
+d \lambda
+d 2
+d \lambda 2
+=−
+∑ X i = X
+n
+∑ x i
+\lambda 2
+⎡ d 2 ⎤ 1
+n \lambda n
+⇒ − E ⎢ 2 ⎥ = 2 E ⎡ ⎣ ∑ X i ⎤ ⎦ = 2 =
+\lambda
+\lambda
+⎢ ⎣ d \lambda ⎥ ⎦ \lambda
+⇒ CRlb =
+\item (iii)
+(a)
+\lambda
+.
+n
+E ⎡ ⎣ \hat{\lambda} ⎤ ⎦ = E ⎡ ⎣ X ⎤ ⎦ = E [ X ] = \lambda
+V ⎡ ⎣ \hat{\lambda} ⎤ ⎦ = V ⎡ ⎣ X ⎤ ⎦ =
+(iv)
+V [ X ]
+n
+=
+\lambda
+,which is CRlb.
+n
+(b) The theory of asymptotic distributions of MLEs (and in this case the
+⎛ \lambda ⎞
+CLT) gives \hat{\lambda} ~ N approximately, for large n so \hat{\lambda} ~ N ⎜ \lambda , ⎟ ,
+⎝ n ⎠
+approximately.
+(a) Large sample approximate 95\% CI for \lambda is given by
+(
+( ) )
+\hat{\lambda} \pm 1.96 \times  s . e . \hat{\lambda}
+i.e. x \pm ( 1.96 \times  s . e . ( x ) )
+()
+\lambda
+s . e . \hat{\lambda} =
+which we can estimate by using x to estimate \lambda , giving
+n
+()
+the estimated standard error e . s . e . \hat{\lambda} =
+x
+n
+With n = 100, we get the 95\% CI as
+⎛
+x ⎞
+x \pm ⎜ ⎜ 1.96 \times 
+⎟ i . e . x \pm 0.196 x .
+100 ⎟ ⎠
+⎝
+Page 7Subject CT3 (Probability and Mathematical Statistics Core Technical) — April 2007 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(b)
+x = 215 /100 = 2.15
+CI is 2.15 \pm 0.196(2.15) 1/2 i.e. 2.15 \pm 0.287 i.e. (1.86, 2.44)
+\end{document}
