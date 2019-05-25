@@ -1,0 +1,142 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%%- April 2009 Question 12
+
+\begin{center
+\begin{tabular}{ccccc}
+class:   & A & B & C & D \\
+frequency:&  1071 & 62 & 68 & 299 \\
+\end{tabular}
+\end{center}
+
+A genetic model specifies that the probability that an individual plant belongs to each
+class is given by:
+
+\begin{tabular}{ccccc}
+class:   & A & B & C & D \\
+
+probability: & 
+${ \displaystyle \frac{1}{4} (2 + \theta  )  }$ & 
+${ \displaystyle \frac{1}{4} (1 − \theta  )  }$ & 
+${ \displaystyle \frac{1}{4} (1 − \theta  )  }$ & 
+${ \displaystyle \frac{1}{4} (\theta )     }$  \\
+\end{center}
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+12
+\begin{itemize}
+\item (i)
+(a)
+
+\[L ( \theta ) = [\frac{1}{4} (2 + \theta )]^{1071} [\frac{1}{4} (1 − \theta )]^{62} [ \frac{1}{4}(1 − \theta )]^{68} [\frac{1}{4} \theta ]^{299} (\times \mbox{constant})\]
+
+\[L ( \theta ) \propto (2 + \theta )^{1071} (1 − \theta ) ^{130} \theta^{299}
+\[log L ( \theta ) = const + 1071\log(2 + \theta ) + 130 \log(1 − \theta ) + 299 \log \theta\]
+%------------------%
+(b)
+
+
+\begin{eqnarray*}
+\frac{d}{d \theta} \log L ( \theta ) &=& \frac{1071}{2 + \theta } \;-\; \frac{130}{1 − \theta} ;\+\; \frac{299}{\theta} \\
+& & \\
+&=& \frac{
+1071 \theta (1 − \theta ) − 130 \theta (2 + \theta ) + 299(2 + \theta )(1 − \theta )}{
+(2 + \theta )(1 − \theta ) \theta} \\
+\end{eqnarray}
+
+\[numerator = 1071 \theta − 1071 \theta^2 − 260 \theta − 130 \theta"2 + 598 − 299 \theta − 299 \theta^2\]
+equate to zero: \[750 \theta 2 − 256 \theta − 299 = 0\]
+
+%------------------%
+
+Therefore
+\[\hat{\theta} = \frac{256 \pm \sqrt{256 2 − 4(750)( − 299)}}{2(750)}\]
+\[\hat{\theta} = 0.17067 \pm 0.65406\]
+
+So MLE$ \hat{\theta} = 0.82473$ (or 0.825 to 3dp) as other root is negative.
+(ii)
+%--------------------%
+(a)
+
+\begin{eqnarray*}
+\frac{d^2}{d^2 \theta} \log L ( \theta ) &=& -\frac{1071}{(2 + \theta )^2 } \;-\; \frac{130}{(1 − \theta )^2} ;\-\; \frac{299}{\theta^2} \\
+\end{eqnarray}
+
+
+at $\hat{\theta} = 0.825$ ,
+\[ \frac{d^2}{d^2 \theta}  \log L ( \theta ) = − 134.20 − 4244.90 − 439.30 = − 4818.4  \]
+
+%--------------------%
+\[CRlb =  \frac{1}{-E \left \frac{d^2}{d^2 \theta}  \log L ( \theta )right] } \approx \frac{1}{4818.4 }
+= 0.0002075\]
+
+%-----------------------------% 
+
+\[\hat{\theta} ≈ N ( \theta , CRlb )\] for large samples
+and so an approximate 95\% CI for $\theta$ is $\hat{\theta} \pm 1.96 CRlb$
+Here: $0.825 \pm 1.96 0.0002075$ which is equivalent to $0.825 \pm 0.028 or (0.797, 0.853)$
+
+%-----------------------------% 
+ (iii)
+(a)
+\begin{itemize}
+    \item With $\theta = 0.775$ the four probabilities are 0.69375, 0.05625, 0.05625, 0.19375 respectively
+and the corresponding expected frequencies are 1040.625, 84.375, 84.375, 290.625.
+
+
+\item The test statistic is
+\begin{eqnarray*}
+\chi^{2}_{TS} = \sum \frac{( o \;-\; e ) 2}{e}\\
+&=& 0.887 + 5.934 + 3.178 + 0.241\\ 
+&=& 10.24 \\
+\end{eqnarray*}
+
+on 3 df
+\[ P-value = P ( \chi^{2}_{3} > 10.24) = 1 − 0.983 = 0.017\]
+\item These data do not support the model with the value $\theta = 0.775$ in that the probability of observing these data when $\theta = 0.775$ is only 0.017.
+[OR: could say “do not support ate 5\% level, but do support at 1\% level”]
+(b)
+\item This is consistent with the fact that $\theta = 0.775$ is well outside the approximate 95\% CI.
+\end{itemize}
+
+
+\end{document}
