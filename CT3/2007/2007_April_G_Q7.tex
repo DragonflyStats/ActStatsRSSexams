@@ -56,4 +56,51 @@ Comment briefly on the comparison of the two approximations above given
 that the exact probability using the binomial distribution is 0.0517.
 \end{enumerate}
 
+%%-- Page 3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2007 — Examiners’ Report
+7
+\begin{itemize}
+\item (i)
+Let X = the sum repaid for a single certificate.
+\[E ( X ) = 10(0.99) + 20(0.01) = 10.1\]
+\[E ( X^2 ) = 10^2 (0.99) + 20^2 (0.01) = 103\]
+\[ V ( X ) = 103 − 10.1^2 = 0.99\] 
+\[sd ( X ) = 0.9950\]
+\item (ii)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Let S = the sum repaid for 200 certificates.
+∴ $E ( S ) = 200(10.1) = 2020$, $V ( S ) = 200(0.99) = 198$ ∴ $sd ( X ) = 14.07$
+P ( S > 2040) = P ( Z >
+2040 − 2020
+= 1.42)
+14.07
+= 1 − 0.9222 = 0.0778
+\item (iii)
+N ~ binomial(200, 0.01) ≈ Poisson(2)
+
+\begin{eqnarraty*}
+P ( S > 2040) &=& P ( N > 4)\\
+&=& 1 − P ( N \leq 4) \\ 
+&=& 1 − 0.94735 \\
+&=& 0.0527\\
+\end{eqnarray*}
+
+\item (iv)
+Clearly the Poisson approximation to the binomial is better than the Central
+Limit Theorem approximation.
+
+\item OR:
+Since S is discrete and increases in steps of 10, one can argue for the use of a
+continuity correction in (ii) above:
+2045 − 2020 ⎞
+⎛
+P ( S > 2040 ) = P ⎜ Z ≥
+⎟ = P ( Z > 1.78 )
+14.07
+⎝
+⎠
+= 1 − 0.96246 = 0.0375
+%%\item (Either approach is acceptable for the marks.)
+Page 4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2007 — Examiners’ Report
+∞
+\end{itemize}
 \end{document}
