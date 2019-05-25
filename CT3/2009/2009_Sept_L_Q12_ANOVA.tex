@@ -52,8 +52,8 @@ C: classical music
 14
 52
 \end{verbatim}
-For these data \sigma y = 93, \sigma y 2 = 865
-Let \mu  A , \mu  B , \mu  C denote the mean telephone holding times under recorded message A, B and C respectively.
+For these data $\sigma y = 93, \sigma y 2 = 865$
+Let $\mu_A , \mu_B , \mu_C$ denote the mean telephone holding times under recorded message A, B and C respectively.
 \item (i)
 (a) Perform an analysis of variance to test the hypothesis that the nature of the recorded message has no effect on the length of time that callers remain on hold. You should construct an appropriate ANOVA table and state your conclusion clearly.
 (b) Calculate a 95\% confidence interval for $\mu_A − \mu_C$ , using information available from all three samples.
@@ -98,24 +98,21 @@ obtained in (i)(b).
 (a)
 2
 y A = 27, y B = 14, y C = 52 , y = 93, y = 865
-SST = 865 – 932/15 = 288.4
+\[SST = 865 – 93^2/15 = 288.4\]
 
-2
-2
-2
-2
-SSB = (27 + 14 + 52 )/5
-SS R = 288.4
-93 /15 = 149.2
-2
-149.2 = 139.2
-\begin{verbatim}
-Source of variation
-d.f. SS MSS
-Between 2 149.2 74.6
-Residual 12 139.2 11.6
-Total 14 288.4
-\end{verbatim}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+
+\[SS_B = \frac{(27^2 + 14^2 + 5^2 )}{5} - \frac{(93)^2}{15} \;=\; 149.2 \]
+\[SS_R = 288.4 \;-\;149.2 \;=\; 139.2\]
+
+\begin{center}
+\begin{tabular}{cccccc}
+Source of variation	&	df	&	SS	&	MSS	&	F	&		\\ \hline
+Between groups	&	2	&	149.2	&	74.6	&	6.431	&	 on (2,12) degrees of freedom	\\ \hline
+Residual	&	12	&	139.2	&	11.6	&		&		\\ \hline
+Total	&	14	&	288.4	&		&		&		\\ \hline
+\end{tabular}
+\end{center}
 2
 (b)
 F = 74.6/11.6 = 6.431 on (2,12) degrees of freedom. 1
@@ -126,12 +123,12 @@ F = 74.6/11.6 = 6.431 on (2,12) degrees of freedom. 1
 against the “no message effect” hypothesis and conclude that there is a message effect. 1
 t 12 (0.025) = 2.179 1
 1
-95\% CI is (5.4 10.4) 2.179 11.6
+95\% CI is (5.4 \;-\; 10.4) \pm 2.179 \left[ 11.6 sqrt{\right( \frac{1}{5} \;+\; \frac{1}{5} } \right) \right]
 5
-i.e. 5 4.694
+i.e. $ -5 \pm 4.694$
 \item (ii)
 (a)
-or ( 9.694, 0.306)
+or $(-9.694, -0.306)$
 10.4
 2
 1
@@ -160,10 +157,7 @@ a
 C
 1
 1
-\item The 95\% CI for A C in \item (i)(b) can be used for testing H 0: 0 and equivalently H 0: b 1 = 0. The interval does not include
-A
-C
-the value 0, and thus we reject H 0 at the 5\% level.
-2
+\item The 95\% CI for $\mu_A \;-\; \mu_C$ in (i)(b) can be used for testing $H_0: \mu_A \;-\; \mu_C \;=\; 0$ and equivalently $H_0: b_1 = 0$. The interval does not include the value 0, and thus we reject $H_0$ at the 5\% level.
+
 \end{itemize}
 \end{document}
