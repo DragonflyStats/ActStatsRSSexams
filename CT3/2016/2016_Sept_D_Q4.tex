@@ -1,0 +1,56 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+
+[Total 8]4
+Consider two portfolios, A and B, of insurance policies and denote by X A the number of claims received in portfolio A and by X B the number of claims received in portfolio B during a calendar year. The observed numbers of claims received during the last calendar year are 134 for portfolio A and 91 for portfolio B. X A and X B are assumed to be independent and to have Poisson distributions with 
+unknown parameters  A and  B .
+Determine an approximate 99\% confidence interval for the difference  A   B . You
+may use an appropriate normal distribution.
+[4]
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Q4
+Since the sample size for each portfolio is one, we have that $\hat{\beta} A = 134$ and $\hat{\beta} B = 91$ .
+
+Using the normal approximation we find:
+\[\hat{\beta} A − \hat{\beta} B = X A − X B ~ N ( \beta A − \beta B , \beta A + \beta B )\]
+
+The confidence interval is then given by
+\[134 − 91 \pm 2.5758 \sqrt{134 + 91} = 43 \pm 2.5758 \times 15 = [ 4.4, 81.6 ]\]
+
+[Total 4]
+Performance in this question was mixed. Many candidates seemed unsure
+as to what is the correct size of each sample (portfolio).
+
+\end{document}
