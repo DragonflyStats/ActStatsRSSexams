@@ -62,8 +62,10 @@ Calculate the MLE of $\lambda$ given this additional information.
 \item (ii) (a)
 X ~ Bin(20,p)
 (b)
-L ( p ) ∝ p X (1 − p ) 20 − X
-⇒ l ( p ) = log( L ( p )) = X log p + (20 − X ) log(1 − p )
+\[L ( p ) \propto  p X (1 − p ) 20 − X \]
+⇒ 
+
+\[l ( p ) = log( L ( p )) = X log p + (20 − X ) log(1 − p )\]
 and l '( p ) = 0 ⇒
 (and l ''( p ) = −
 \item (iii)
@@ -85,69 +87,34 @@ p ˆ 2 (1 − p ˆ ) 2
 20
 \item Then, using the invariance property of the MLE:
 ˆ
-p ˆ = 1 − e −λ ⇒ λ ˆ = − log(1 − p ˆ ) = − log(0.75) = 0.288
+p ˆ = 1 − e −\lambda  ⇒ \hat{\lambda} = − log(1 − p ˆ ) = − log(0.75) = 0.288
 \item Likelihood function now is:
 
 (iv)
-L ( λ ) ∝ P ( X = 0) 15 × P ( X = 1) 4 × P ( X = 2)
-( ) ( λ e ) ( λ e )
-∝ e −λ
+L ( \lambda  ) \propto  P ( X = 0) 15 \times  P ( X = 1) 4 \times  P ( X = 2)
+( ) ( \lambda  e ) ( \lambda  e )
+\propto  e −\lambda 
 15
-−λ
+−\lambda 
 4
-2 −λ
-⇒ l ( λ ) ∝ − 15 λ + 4 log λ − 4 λ + 2 log λ − λ = − 20 λ + 6 log λ
-and l ′ ( λ ) = 0 ⇒ − 20 +
+2 −\lambda 
+⇒ 
+\[ l ( \lambda  ) \propto − 15 \lambda  + 4 log \lambda  − 4 \lambda  + 2 log \lambda  − \lambda  = − 20 \lambda  + 6 log \lambda \]
+
+and l ′ ( \lambda  ) = 0 ⇒ − 20 +
 Page 4
 6
-= 0 ⇒ λ ˆ = 0.3
-ˆ λ
+= 0 ⇒ \hat{\lambda} = 0.3
+ˆ \lambda 
 %%-- Subject CT3 (Probability and Mathematical Statistics) — September 2011 — Examiners’ Report
-(Also l ′′ ( λ ) = −
+(Also l ′′ ( \lambda  ) = −
 6
 < 0 , hence max)
-λ ˆ 2
+\hat{\lambda} 2
 \item Notice that part (ii)(b) requires the use of the binomial distribution from (ii)(a).
 \item In part (iii)
 the invariance property must be used and mentioned for full credit.
 \end{itemize}
 \newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-7
-\begin{itemize}
-\item (i) F = 0.213/0.0106 = 20.094 and at the 5\% significance level,
-F 3,20 (0.05) = 3.098.
-\item Since F = 20.094 > 3.098, there is strong evidence against the null hypothesis, and we conclude that there are differences in the mean amounts paid out by the companies.
-\item (ii) The variance of the residuals seems to be similar for the four companies; this is consistent with the assumption of constant variance in the response variable.
-\item Also there are no obvious patterns or outliers. The analysis seems valid.
-\item (iii) (a)
-LSD = t 20 (0.025)
-= 2.086
-(b)
-⎛ 1 1 ⎞
-σ 2 ⎜ + ⎟
-⎝ 6 6 ⎠
-0.0106 / 3 = 0.124
-\item The four company (treatment) means are:
-y 1 i = 17.810
-18.940
-17.715
-= 2.968, y 2 i =
-= 3.157, y 3 i =
-= 2.953
-6
-6
-6
-y 4 i = 16.185
-= 2.698
-6
-which are given in order and underlined as
-y 4 i < y 3 i < y 1 i < y 2 i
-\item Amounts paid out by companies 2 and 4 are significantly different from those paid out by the other two companies. 
-\item Company 4 seems to pay out significantly lower amounts, with Company 2 paying
-significantly higher.
-\item Parts (i) and (ii) were generally well answered. In part (iii) many candidates did not use the
-correct formula for LSD and then performed pair-wise comparisons using the wrong statistic.
-%%Page 5Subject CT3 (Probability and Mathematical Statistics) — September 2011 — Examiners’ Report
-\end{itemize}
+
 \end{document}
