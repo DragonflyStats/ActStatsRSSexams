@@ -31,24 +31,26 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-
-\begin{enumerate}
-%4
-\item The random variables X and Y are related as follows:
+ The random variables X and Y are related as follows:
 X conditional on Y = y has a N(2y, y 2 ) distribution.
 Y has a N(200, 100) distribution.
-Derive the unconditional variance of X, V[X].
+Derive the unconditional variance of $X$, $\operatorname {Var} (Y)$.
 % CT3 S2011—2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
 
+\begin{framed}
+\noindent The law of total variance, or conditional variance formulas, states that if X and Y are random variables on the same probability space, and the variance of Y is finite, then
+
+\[  {\displaystyle \operatorname {Var} (Y)=\operatorname {E} [\operatorname {Var} (Y\mid X)]+\operatorname {Var} (\operatorname {E} [Y\mid X]).} \]
+
+\end{framed}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-4
+
 \begin{eqnarray*}
 V[X]
 &=& E[V(X|Y)] + V[E(X|Y)]\\
 &=& E[Y 2 ] + V[2Y] \\ 
-&=& (100 + 200 2 ) + 4*100 \\ 
+&=& (100 + 200 2 ) + 4\times 100 \\ 
 &=& 40,500\\
 \end{eqnarray*}
 %% Generally very well answered.
