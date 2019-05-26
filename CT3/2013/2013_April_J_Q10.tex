@@ -41,10 +41,10 @@ S = ∑ Y i
 i = 1
 where:
 M denotes the number of windstorms each year and has a Poisson distribution
-with mean κ
+with mean \kappa 
 Y i denotes the aggregate claims from the ith windstorm and is modelled as
 N i
-Y i = ∑ X ij
+Y i = ∑ X_{ij}
 j = 1
 where:
 N i denotes the number of claims from the ith
@@ -52,46 +52,46 @@ windstorm.
 N 1 , N 2 , ... , N M are independent and identically distributed
 random variables, each with a Poisson
 distribution with rate λ.
-X ij denotes the amount of the jth claim from the
+X_{ij} denotes the amount of the jth claim from the
 ith windstorm.
-X ij , i = 1, ..., M, j = 1, ..., N i
+X_{ij} , i = 1, ..., M, j = 1, ..., N i
 is a sequence of independent and identically
 distributed random variables, each with mean
-μ and variance \sigma 2 .
-It is assumed that the random variables M, N i and X ij are independent of each other.
+\mu  and variance \sigma 2 .
+It is assumed that the random variables M, N i and X_{ij} are independent of each other.
 \begin{enumerate}[(i)]
-\item  Derive expressions for the mean and the variance of Y i in terms of λ, μ and \sigma.
+\item  Derive expressions for the mean and the variance of Y i in terms of λ, \mu  and \sigma.
 
-\item  Derive expressions for the mean and the variance of S in terms of κ, λ, μ
+\item  Derive expressions for the mean and the variance of S in terms of \kappa , λ, \mu 
 and \sigma.
 
-Now suppose that X ij has an exponential distribution with mean 1.
+Now suppose that X_{ij} has an exponential distribution with mean 1.
 \item 
 Show that for any positive numbers x and C
-P ( X ij \leq x + C | X ij > C ) = P ( X ij ≤ x ) .
+P ( X_{ij} \leq x + C | X_{ij} > C ) = P ( X_{ij} \leq  x ) .
 
 %%--- CT3 A2013–6
 Consider the new random variable S R given as:
 M N i
-S R = ∑∑ X ij *
+S R = ∑∑ X_{ij} *
 i = 1 j = 1
-⎪ X ij − 2
-where: X ij * = ⎨
+⎪ X_{ij} − 2
+where: X_{ij} * = ⎨
 ⎩ 0
-if X ij ≥ 2
+if X_{ij} ≥ 2
 otherwise
 .
-Let N i * be the number of non-zero X ij * amounts, i.e. the number of claim amounts
+Let N i * be the number of non-zero X_{ij} * amounts, i.e. the number of claim amounts
 from the ith windstorm that are greater than 2.
 *
 are independent and identically distributed Poisson
 Also assume that N 1 * , N 2 * , ... , N M
-random variables, with parameter λ * .
-Let κ = 4, λ = 1,000.
+random variables, with parameter \lambda^{\ast} .
+Let \kappa  = 4, \lambda = 1,000.
 \item %%--- (iv)
 CT3 A2013–7
-(a) Show that λ * = 135.3.
-(b) Explain why the distribution of X ij * is exponential with mean 1.
+(a) Show that \lambda^{\ast} = 135.3.
+(b) Explain why the distribution of X_{ij} * is exponential with mean 1.
 (c) Calculate the mean and variance of S R .
 
 [Total15]
@@ -101,43 +101,43 @@ CT3 A2013–7
 (i)
 Y i has a compound distribution, so
 ( )
-E ( Y i ) = E ( N i ) E X ij = λμ
+E ( Y i ) = E ( N i ) E X_{ij} = λ\mu 
 ( )
-V ( Y i ) = E ( N i ) V X ij + V ( N i ) E ( X ij ) 2 = λσ 2 + λμ 2
+V ( Y i ) = E ( N i ) V X_{ij} + V ( N i ) E ( X_{ij} ) 2 = λ\sigma^2 + λ\mu  2
 (ii)
 S also has a compound distribution.
-E ( S ) = E ( M ) E ( Y i ) = κλμ
-V ( S ) = E ( M ) V ( Y i ) + V ( M ) E ( Y i ) 2 = κλ ( σ 2 + μ 2 ) + κλ 2 μ 2 = κλ ( σ 2 + μ 2 + λμ 2 )
+E ( S ) = E ( M ) E ( Y i ) = \kappa λ\mu 
+V ( S ) = E ( M ) V ( Y i ) + V ( M ) E ( Y i ) 2 = \kappa \lambda ( \sigma^2 + \mu  2 ) + \kappa \lambda 2 \mu  2 = \kappa \lambda ( \sigma^2 + \mu  2 + λ\mu  2 )
 (iii)
-P ( X ij ≤ x + C | X ij > C ) =
+P ( X_{ij} \leq  x + C | X_{ij} > C ) =
 ( 1 − e
 =
 − x − C
 e
 (
-P C < X ij ≤ x + C
+P C < X_{ij} \leq  x + C
 − 1 + e − C
 − C
 (
-P X ij > C
+P X_{ij} > C
 ) = 1 − e
 )
 )
 − x
-= P ( X ij ≤ x )
+= P ( X_{ij} \leq  x )
 %% Page 7Subject CT3 (Probability and Mathematical Statistics) – April 2013 – Examiners’ Report
 (iv)
 (
 )
-(a) λ * = 1000 × P X ij > 2 = 1000 e − 2 = 135.3
+(a) \lambda^{\ast} = 1000 × P X_{ij} > 2 = 1000 e − 2 = 135.3
 (b) From definition of new variable and part (iii) we have that
 (
 )
-P X ij * ≤ x = P ( X ij − 2 ≤ x | X ij > 2) = P ( X ij ≤ x + 2 | X ij > 2) = P ( X ij ≤ x )
-meaning that X ij * has the same distribution as X ij , i.e. Exp(1).
+P X_{ij} * \leq  x = P ( X_{ij} − 2 \leq  x | X_{ij} > 2) = P ( X_{ij} \leq  x + 2 | X_{ij} > 2) = P ( X_{ij} \leq  x )
+meaning that X_{ij} * has the same distribution as X_{ij} , i.e. Exp(1).
 (c)
-E ( S R ) = κλ * μ = 4 × 135.3 × 1 = 541.2
-V ( S R ) = κλ * ( σ 2 + μ 2 + λ * μ 2 ) = 4 × 135.3 × ( 1 + 1 + 135.3 ) = 74306.8
+E ( S R ) = \kappa \lambda^{\ast} \mu  = 4 × 135.3 × 1 = 541.2
+V ( S R ) = \kappa \lambda^{\ast} ( \sigma^2 + \mu  2 + \lambda^{\ast} \mu  2 ) = 4 × 135.3 × ( 1 + 1 + 135.3 ) = 74306.8
 
 %-------------------------------------------------------%
 Most candidates found this question challenging. Answers to the memoryless property of the
