@@ -1,0 +1,71 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%- Question 6
+A random sample of 16 observations was selected from each of four populations. Given that the between treatments mean square is 280 and the total sum of squares is $SS_T = 1,500$, construct an analysis of variance table and test the null hypothesis that the means of the four populations are equal.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\begin{itemize}
+    \item 4 groups / populations
+    \item Between Group degrees of freedom $p-1 = 3$
+    \item 16 sampled from each group
+    \item Overall sample size $n = 4 \times 16 = 64$
+    \item Total degrees of freedom = $n-1 = 63$
+    
+\end{itemize}
+\begin{center}
+\begin{tabular}{ccccc}
+Source of variation	&	d.f.	&	SS	&	MSS	&	F	\\ \hline
+Between groups	&	3	&	….	&	280	&	?	\\ \hline
+Residual	&	….	&	….	&	….	&		\\ \hline
+Total	&	63	&	1500	&		&		\\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ccccc}
+Source of variation	&	d.f.	&	SS	&	MSS	&	F	\\ \hline
+Between groups	&	3	&	840	&	280	&	25.45	\\ \hline
+Residual	&	60	&	660	&	11	&		\\ \hline
+Total	&	63	&	1500	&		&		\\ \hline
+\end{tabular}
+\end{center}
+F = 280/11 which equals 25.45.
+
+\end{verbatim}
+Therefore there is overwhelming evidence to suggest that the four population
+means are not equal $(F 3,60 (5\%) = 2.758, F 3,60 (1\%) = 4.126)$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
