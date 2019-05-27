@@ -38,44 +38,22 @@
 \item For a group of policies the total number of claims arising in a year is modelled as a Poisson variable with mean 10. Each claim amount, in units of £100, is independently modelled as a gamma variable with parameters = 4 and = 1/5.
 Calculate the mean and standard deviation of the total claim amount.
 
+
+Let S = X 1 + X 2 + . . . + X N be the total claim amount.
+Note that \[E[N] = V[N] = 10\], \[E[X] = \frac{4}{1/5}= 20\], \[V[X] = \frac{4}{(1/5)^2} = 100\]
+\[E[S] = E[N]E[X] = 10(20) = 200\]
+mean of total claim amount = £20,000.
+\begin{eqnarray*}
+V[S] &=& E[N]V[X] + V[N]{E[X]}^2\\ 
+&=&10(100) + 10(20) 2 \\
+&=& 5000\\
+\end{eqnarray*}
+s.d.[S] = 70.71
+
+\newpage
 \item 
-%%-- Question 8
 
-The distribution of claim size under a certain class of policy is modelled as a normal random variable, and previous years records indicate that the standard deviation is £120.
 
-\begin{enumerate}[(i)]
-\item Calculate the width of a 95\% confidence interval for the mean claim size if a sample of size 100 is available.
-
-\item Determine the minimum sample size required to ensure that a 95\% confidence interval for the mean claim size is of width at most \$10 .
-
-\item Comment briefly on the comparison of the confidence intervals in (i) and (ii) with respect to widths and sample sizes used.
-\end{enumerate}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage 
-Let $X_1 , \ldots , X_n$ denote a large random sample from a distribution with unknown population mean and known standard deviation 3. The null hypothesis H 0 : = 1 is to be tested against the alternative hypothesis H 1 : > 1, using a test based on the
-sample mean with a critical region of the form X
-k , for a constant k.
-
-It is required that the probability of rejecting $H_0$ when = 0.8 should be approximately 0.05, and the probability of not rejecting H 0 when = 1.2 should be approximately 0.1.
-
-\begin{itemize}
-\item (i)
-Show that the test requires
-k 0.8
-3/ n
-where
-\item (ii)
-0.95 and
-k 1.2
-3/ n
-0.10
-is the standard normal distribution function.
-
-\item The values for the sample size n and the critical value k which satisfy the requirements of part(i) are n = 482 and k = 1.025 (you are not asked to verify these values).
-
-\item Calculate the approximate level of significance of the test, and comment on the value.
-\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Let S = X 1 + X 2 + . . . + X N be the total claim amount.
