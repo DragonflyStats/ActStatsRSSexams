@@ -35,8 +35,7 @@
 \begin{enumerate}
 
 \item %%-- Queation 10
-Let (X 1 , X 2 ,
-, X n ) be a random sample of a gamma(4.5, ) random variable, with
+Let $(X_1 , X_2 , \ldots , X_n )$ be a random sample of a gamma(4.5, ) random variable, with
 sample mean X .
 (i)
 (ii)
@@ -44,7 +43,7 @@ sample mean X .
 9 n .
 \begin{enumerate}[(i)]
 \item (a) Using moment generating functions, show that 2 nX ~
-\item (b) Construct a 95% confidence interval for , based on X and the result
+\item (b) Construct a 95\% confidence interval for , based on X and the result
 in (i)(a) above.
 \item (c) Evaluate the interval in (i)(b) above in the case for which a random
 sample of 10 observations gave a value
@@ -63,44 +62,42 @@ Show that the asymptotic standard error of
 1/ 2
 is estimated by
 .
-Construct a 95% confidence interval for based on the asymptotic
+Construct a 95\% confidence interval for based on the asymptotic
 distribution of , and evaluate this interval in the case for which a
 random sample of 100 observations gave a value
 x i 225.3.
-[9]
-[Total 18]
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%8
 \newpage
 %%--- Question10
 (i)
 (a)
-Mgf of X i is (1 – t / \lambda ) − 4.5 so mgf of
+Mgf of X i is $(1 – t / \lambda ) − 4.5$ so mgf of
 n
 ∏ ( 1 − t / \lambda )
 − 4.5
 = ( 1 − t / \lambda )
 n
-∑ X i
+\sum x_i
 is
 i = 1
 − 4.5 n
 i = 1
 n
-Hence mgf of 2 \lambda ∑ X i = 2 \lambda nX is ( 1 − 2 \lambda t / \lambda )
+Hence mgf of $2 \lambda \sum x_i = 2 \lambda nX$ is $( 1 − 2 \lambda t / \lambda )$
 − 4.5 n
 = ( 1 − 2 t )
 − 4.5 n
 i = 1
 This is the mgf of a χ 2 variable — with 9n degrees of freedom.
 (b)
-b ⎞
-⎛ a
-<\lambda<
-P ( a < 2 \lambda nX < b ) = 0.95 ⇒ P ⎜
-⎟ = 0.95
-2 nX ⎠
-⎝ 2 nX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\[ P( a < 2 \lambda n \bar{X} < b)  =0.95 \]
+
+\[ P \left(  \frac{a}{2  n \bar{X}}  < \lambda <  \frac{b}{2  n \bar{X}} \right) \;=\; 0.95\]
 where a and b are such that
 (
 )
@@ -123,39 +120,43 @@ CI is ⎜
 ,
 ⎟ = (1.53 , 2.75).
 ⎝ 2 × 21.47 2 × 21.47 ⎠
-(ii)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item (ii)
 (a)
 (
-L ( \lambda ) ∝ \lambda 4.5 n exp −\lambda ∑ x i
+L ( \lambda ) \propto \lambda 4.5 n exp −\lambda \sum x_i
 )
 so
-A ( \lambda ) = ( 4.5 n ) log \lambda − \lambda ∑ x i + constant
+A ( \lambda ) = ( 4.5 n ) log \lambda − \lambda \sum x_i + constant
 ⇒
 d A
-= 4.5 n / \lambda − ∑ x i
+= 4.5 n / \lambda − \sum x_i
 d \lambda
 d 2 A
-Setting
+\item Setting
 = 4.5 n / \lambda 2 so s . e .( \hat{\lambda}) ≅
 (b) −
-(c) 95% CI is \hat{\lambda}\pm 1.96 × s . e . \lambda ˆ
+\item (c) 95\% CI is \hat{\lambda}\pm 1.96 × s . e . \lambda ˆ
 d \lambda
 2
 {
 \lambda ˆ
 ( 4.5 n ) 1/ 2
 ( ) }
-In the case n = 100, \sigmax = 225.3,
+\item In the case $n = 100$, $\sigma x = 225.3$,
 Page 8
 4.5 n 4.5
 d A
 =
 = 0 ⇒ \hat{\lambda}=
 d \lambda
-∑ X i X
+\sum x_i X
 %%---- Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
 4.5 / 2.253
 \hat{\lambda}= 4.5 / 2.253 = 1.9973 and s . e .( \hat{\lambda}) ≅
 = 0.0942
 ( 450 ) 1/ 2
-so CI is 1.9973 \pm(1.96 × 0.0942) i.e. (1.81 , 2.18).
+so CI is $1.9973 \pm(1.96 \times  0.0942) i.e. (1.81 , 2.18)$.
+\end{itemize}
+\end{document}
