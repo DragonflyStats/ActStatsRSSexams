@@ -32,16 +32,16 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
+
 
 
 %%--- Question 8
-\item Let $X_1$ denote the mean of a random sample of size n from a normal population with
+ Let $\bar{X}_1$ denote the mean of a random sample of size n from a normal population with
 mean
 2
 1 ,
 and variance
-and let X 2 denote the mean of a random sample also of
+and let $\bar{X}_2$ denote the mean of a random sample also of
 size n from a normal population with the same mean
 two samples are independent.
 but with variance
@@ -49,12 +49,13 @@ but with variance
 2 .
 The
 Define W as the weighted average of the sample means
-W
-X 1 (1
-) X 2
+
+\[ W =\alpha {\bar{X}_1}  \;+\;(1\;-\;\alpha ){\bar{X}_2} \]
+
+
 \begin{enumerate}[(i)]
-\item (i) Show that W is an unbiased estimator of . [1]
-\item (ii) Obtain an expression for the mean square error of W. [2]
+\item (i) Show that $W$ is an unbiased estimator of $\mu$. 
+\item (ii) Obtain an expression for the mean square error of $W$. 
 \item (iii) Show that the value of
 given by
 2
@@ -69,7 +70,7 @@ and verify that the optimum corresponds to a minimum.
 9
 \item 
 (iv) Consider the special case when the variances of the two random samples are
-equal to a common value 2 . State (do not derive) the maximum likelihood
+equal to a common value $\sigma^2$ . State (do not derive) the maximum likelihood
 estimator of calculated from the combined samples, and compare it with the
 estimator obtained in (iii).
 \end{enumerate}
@@ -78,7 +79,7 @@ estimator obtained in (iii).
 (i)
 \begin{eqnarray*}
 E ( W ) &=& E ( \alpha X 1 + (1 − \alpha ) X 2 )\\
-&=& \alpha E ( X 1 ) + (1 − \alpha ) E ( X 2 ) \\ &=& \alphaμ + (1 − \alpha ) μ \\ &=& μ\\
+&=& \alpha E ( X 1 ) + (1 − \alpha ) E ( X 2 ) \\ &=& \alpha\mu  + (1 − \alpha ) \mu  \\ &=& \mu \\
 \end{eqnarray*}
 
 Therefore W is unbiased.
@@ -94,7 +95,10 @@ MSE(W) &=& var(W)\\
 
 
 (iii)
-\sigma 1 2
+\begin{itemize}
+    \item 
+
+\sigma^{2}_{1}
 \sigma 2
 + (1 − \alpha ) 2 2
 n
@@ -107,24 +111,30 @@ d \alpha
 n
 n
 d MSE
-= 0 ⇒ ( \sigma 1 2 + \sigma 2 2 ) \alpha = \sigma 2 2
+= 0 ⇒ ( \sigma^{2}_{1} + \sigma^{2}_{2} ) \alpha = \sigma^{2}_{2}
 d \alpha
 %%---Page 6Subject CT3 (Probability and Mathematical Statistics Core Technical) — September 2006 — Examiners’ Report
 \sigma 22
-∴ \alpha=
-\sigma 1 2 + \sigma 2 2
-d 2 MSE
-d \alpha 2
+∴ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\[ \alpha = \frac{\sigma^2_2}{\sigma^2_1 \;+\; \sigma^2_2} \]
+
+\[  \frac{d^2 \mathrm{MSE}}{d \alpha^2} = 2\frac{\sigma^2_1}{n} + 2 \frac{\sigma^2_2}{n}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
 (iv)
 = 2
-\sigma 1 2
+\sigma^{2}_{1}
 \sigma 2
 + 2 2 > 0 ∴ minimum
 n
 n
-The maximum likelihood estimator of μ in the special case with
-\sigma 1 2 = \sigma 2 2 = \sigma 2 is
-μ ˆ =
+%---------------------------------------------%
+\item The maximum likelihood estimator of $\mu$  in the special case with
+$\sigma^{2}_{1} = \sigma^{2}_{2} = \sigma^2$ is
+
+\mu  ˆ =
 =
 nX + nX 2
 sum of observations
@@ -136,23 +146,16 @@ number of observations
 X 1 + X 2
 2
 2
-This is the same as W since
-\alpha=
-(i)
-\sigma 2 2
-\sigma 1 2
-+ \sigma 2 2
-=
-\sigma 2
-2
-\sigma +\sigma
-2
-=
-1
-1
-1
-⇒ W = X 1 + X 2 .
-2
-2
-2
+
+\item 
+This is the same as $W$ since
+\[ \alpha = \frac{\sigma^2_2}{\sigma^2_1 \;+\; \sigma^2_2} 
+= \frac{\sigma^2}{\sigma^2 \;+\; \sigma^2}  \;=\; =\frac{1}{2}\]
+
+Therefore
+
+\[ W = \frac{1}{2}  \bar{X}_{1} \;+\; \frac{1}{2}  \bar{X}_{1}\]
+
+
+\end{itemize}
 \end{document}
