@@ -41,65 +41,40 @@
 \[E[Y] = E[E(Y|X)].\]
 \item (ii)
 Suppose that a random variable X has a standard normal distribution, and the
-conditional distribution of a Poisson random variable Y, given the value of
-X = x, has expectation g(x) = x 2 + 1.
+conditional distribution of a Poisson random variable Y, g/iven the value of
+X = x, has expectation $g(x) = x^2 + 1$.
 Determine $E[Y]$ and $Var[Y]$.
 \end{enumerate}
 4
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%8
-\newpage
-The maximum likelihood estimator of μ in the special case with
-\sigma 1 2 = \sigma 2 2 = \sigma 2 is
-μ ˆ =
-=
-nX + nX 2
-sum of observations
-= 1
-number of observations
-2 n
-1
-1
-X 1 + X 2
-2
-2
-This is the same as W since
-\alpha=
+\medskip 
 9
 (i)
-\sigma 2 2
-\sigma 1 2
-+ \sigma 2 2
-=
-\sigma 2
+
 2
-\sigma +\sigma
-2
-=
-1
-1
-1
-⇒ W = X 1 + X 2 .
-2
-2
-2
-E [ E ( Y | X )] = \int E [ Y | X = x ] f ( x ) dx
-= \int \int yf ( y | x ) dy f ( x ) dx
-= \int \int y f ( y | x ) f ( x ) dydx
-but f ( y | x ) f ( x ) = f ( x , y ), the joint pdf of X and Y , so
+\begin{eqnarray*}
+E [ E ( Y | X )] &=& \int E [ Y | X = x ] f ( x ) dx\\
+&=& \int \int yf ( y | x ) dy f ( x ) dx\\
+&=& \int \int y f ( y | x ) f ( x ) dydx\\
+\end{eqnarray*}
+
+but $f ( y | x ) f ( x ) = f ( x , y )$, the joint pdf of $X$ and $Y$ , so
 \[E [ E ( Y | X )] = \int \int y f ( x , y ) dxdy = E [ Y ]\]
 (ii)
 \begin{eqnarray*}
 E [ Y ] &=& E [ E ( Y | X )] \\
-= E [ X 2 + 1]\\
-= V [ X ] + { E [ X ]} 2 + 1 \\
-= 1 + 0 + 1 \\
-= 2\\
+&=& E [ X 2 + 1]\\
+&=& V [ X ] + { E [ X ]} 2 + 1 \\
+&=& 1 + 0 + 1 \\
+&=& 2\\
 \end{eqnarray*}
-
-Var [ Y ] = Var [ E ( Y | X )] + E [ Var ( Y | X )] = Var [ X 2 + 1] + E [ X 2 + 1]
-= Var [ X 2 ] + E [ X 2 ] + 1
+\begin{eqnarray*}
+Var [ Y ] &=& Var [ E ( Y | X )] + E [ Var ( Y | X )] \\
+&=& Var [ X 2 + 1] + E [ X 2 + 1]\\
+&=& Var [ X 2 ] + E [ X 2 ] + 1\\
+\end{eqnarray*}
 but Z = X 2 is χ 1 2 so has variance 2 and expectation 1
-Thus Var [ Y ] = 2 + 1 + 1 = 4
+Thus $Var [ Y ] = 2 + 1 + 1 = 4$
 \end{document}
