@@ -32,8 +32,8 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
-\item 
+\large 
+\noindent
 
 It is assumed that claims arising on an industrial policy can be modelled as a Poisson process at a rate of 0.5 per year.
 
@@ -48,26 +48,24 @@ two years will elapse before the next claim occurs.
 \end{enumerate}
 
 
-\end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent \textbf{Question 6}
 \begin{itemize}
 \item (i) $P(no claims) = P(X = 0)$ where X ~ Poisson(0.5)
 = 0.6065 from tables [or evaluation]
-\item (ii) Let Y = number of years with a claim
+\item (ii) Let $Y$ = number of years with a claim
 then $Y ~ binomial(,0.95)$ [or just directly as below]
 \[P(Y = 1) = (0.95)(0.6065)^2 = 0.44\]
 \item (iii)
 Let T = time until next claim
 then T ~ exp(0.5)
-\[P(T > 2) = e –0.5(2) [or by integration]
-= e –1 = 0.68\]
-[OR: answer = {P(no claim)} 2 = 0.6065 2 = 0.68]
-[OR: claim rate for period of 2 years = 1, so P(no claim in 2 years)
-= e -1 = 0.68]
+\[P(T > 2) = e^{ –0.5(2)} 
+ = e^{ –1} = 0.68\]
+ [or by integration]
+% [OR: answer = {P(no claim)} 2 = 0.6065 2 = 0.68]
+% [OR: claim rate for period of 2 years = 1, so P(no claim in 2 years)
+% = e -1 = 0.68]
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
