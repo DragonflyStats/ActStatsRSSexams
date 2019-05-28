@@ -72,7 +72,7 @@ Total
 17.715
 16.185
 For these data, Σ i Σ j y ij = 70.650 and Σ i Σ j y ij 2 = 208.828.
-Consider the ANOVA model $Y ij = μ + τ i + e ij$ , i = 1, ..., 4, j = 1, ..., 6, where Y ij is the
+Consider the ANOVA model $Y ij = \mu + \tau i + e ij$ , i = 1, ..., 4, j = 1, ..., 6, where Y ij is the
 jth amount paid out by company i, and e ij ~ N(0, σ 2 ) are independent errors.
 The ANOVA table for these data is given below.
 
@@ -94,7 +94,7 @@ MS
 0.0106
 \end{verbatim}
 
-\begin{enumerate}[(i)]
+\begin{enumerate}[(a)]
 \item (i) Test the hypothesis that there are no differences in the means of the amounts paid out under such policies by the four companies (the company means), stating your conclusions clearly.
 \item 
 (ii) Comment briefly on the validity of the test performed in (i), using the plot of the residuals given below.
@@ -115,13 +115,16 @@ F 3,20 (0.05) = 3.098.a
 \item (ii) The variance of the residuals seems to be similar for the four companies; this is consistent with the assumption of constant variance in the response variable.
 Also there are no obvious patterns or outliers. The analysis seems valid.
 \item (iii) (a)
-LSD = t 20 (0.025)
-= 2.086
-(b)
-⎛ 1 1 ⎞
-σ 2 ⎜ + ⎟
-⎝ 6 6 ⎠
-0.0106 / 3 = 0.124
+%%- September 2011 Question 7
+
+
+
+\begin{eqnarray*}
+LSD &=& t_{20, (0.025)} \sqrt{ \sigma^2 \left( \frac{1}{6} + \frac{1}{6} \right)  } \\
+&=& t_{20, (0.025)} \sqrt{ \sigma^2 \left( \frac{1}{6} + \frac{1}{6} \right)  } \\
+&=& 2.086 \sqrt{ \frac{0.0106}{3}}\\
+&=& 0.124\\
+\end{eqnarray*}
 \item The four company (treatment) means are:
 y 1 i = 17.810
 18.940
