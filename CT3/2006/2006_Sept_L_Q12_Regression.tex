@@ -102,14 +102,14 @@ There is a suggestion of a curve but linear regression might still be reasonable
 \item (ii)
 n = 7
 
-\[S_{xx} = \sigma x^2 − (\sigma x)^2 /n \]
-\[S_{yy} = \sigma y^2 − (\sigma y)^2 /n \]
-\[S_{xy} = \sigma xy − (\sigma x)( \sigma_y)/n \]
+\[S_{xx} = \sum x^2 − (\sum x)^2 /n \]
+\[S_{yy} = \sum y^2 − (\sum y)^2 /n \]
+\[S_{xy} = \sum xy − (\sum x)( \sigma_y)/n \]
 
 
-\[S_{xx} = \sigma x^2 − (\sigma x)^2 /n = 14000 − (280) 2 /7 = 2800\]
-\[S_{yy} = \sigma y^2 − (\sigma y)^2 /n = 11951 − (241) 2 /7 = 65.714\]
-\[S_{xy} = \sigma xy − (\sigma x)( \sigma_ )/n = 12790 − (280)(241)/7 = 150\]
+\[S_{xx} = \sum x^2 − (\sum x)^2 /n = 14000 − (280)^2 /7 = 2800\]
+\[S_{yy} = \sum y^2 − (\sum y)^2 /n = 11951 − (241)^2 /7 = 65.714\]
+\[S_{xy} = \sum xy − (\sum x)( \sigma_ )/n = 12790 − (280)(241)/7 = 150\]
 \begin{itemize}
     \item 
 
@@ -125,34 +125,31 @@ The equation of the least-squares fitted regression line is:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 (iii)
-\[\hat{\sigma} 2 =
-S 2
-1 ⎛
-⎜ S_{yy} − xy
-n − 2 ⎜
-S_{xx}
-⎝\]
-\[s.e.( \betâ ) =
-\hat{\sigma} 2
-=
-S_{xx}
-⎞ 1 ⎛
-(150) 2 ⎞
-⎟ = ⎜ 65.714 −
-⎟ = 21.99
-⎟ 5 ⎜ ⎝
-2800 ⎟ ⎠
-⎠
-21.99
-= 0.0886
-2800\]
+\begin{eqnarray*}
+\hat{\sigma}^2  &=& \frac{1}{n-2} \left( S_{yy} -  \frac{S^2_{xy}{S_{xx}} \\
+&=& \frac{1}{5} \left( 3653.714 -  \frac{(3150)^2}{2800} \\
+&=& 21.99 \\
+\end{eqnarray*}
+
+\[ s.e.( \hat{\beta}}  ) = \sqrt{\hat{\sigma}^2 }{S_{xx} } \;=\; \sqrt{ \frac{21.99}{2800}  } \;=\; 0.0886\]
+
+
 
 95\% confidence interval for slope:
-\[\hat{\beta} \pm t n − 2 (0.025) s.e.( \betâ )
-(df = n − 2 = 5)
-= 1.125 \pm (2.571)(0.0886) = 1.125 \pm 0.228 or (0.897, 1.5)\]
+
+\begin{eqnarray*}
+\hat{\beta} \pm t_{n − 2 (0.025)} s.e.( \hat{\beta}}
+&=& 1.125 \pm (2.571)(0.0886) \\
+&=& 1.125 \pm 0.228 \\ 
+&=& (0.897, 1.5)\\
+\end{eqnarray*}
+
+
+%- (df = n − 2 = 5)
+
 $\beta = 1$ is within this 95\% confidence interval, therefore we would not reject the
 null hypothesis $\beta = 1$ at the 5\% significance level.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (iv)
 \begn{itemize}
 \item When $x = 50$: y = −10.571 + 1.125(50) = 45.7 m
