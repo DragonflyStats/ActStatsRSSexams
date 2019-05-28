@@ -1,0 +1,63 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\large
+%% -- Question 2
+
+\noindent Let A and B denote independent events.
+Show that A and B , the complement of event B, are also independent events.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2
+\begin{itemize}
+\item Since A and B are independent, $P ( A ) = P ( A | B ) = P ( A | B )$
+\item (
+Noting that ( B ) = B , it follows immediately that $P ( A ) = P ( A | B ) = P A | ( B )$
+)
+and so A and B are independent.
+\item [OR
+Since A and B are independent P (A \cap B) = P(A)P(B).
+\item Thus,
+\begin{eqnarray*}
+P(A \cap B ) &=& P(A) − P(A \cap B) \\ 
+&=& P(A) − P(A)P(B) \\ &=& P(A){1 − P(B)} \\ &=& P(A)P( B )
+\\
+\end{eqnarray*}
+
+\item Therefore A and B are independent.
+\end{itemize}
+
+\end{document}
