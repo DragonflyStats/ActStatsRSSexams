@@ -34,41 +34,39 @@
 \begin{document}
 
 
-9
-\begin{enumerate}
-\item 
-The total claim amount on a portfolio, S, is modelled as having a compound
+%%-- Question 9
+
+The total claim amount on a portfolio, $S$, is modelled as having a compound
 distribution
-S = X 1 + X 2 +
-+ X N
-where N is the number of claims and has a Poisson distribution with mean , $X_i$ is the amount of the i th claim, and the X i s are independent and identically distributed and
-independent of N. Let $M_X (t)$ denote the moment generating function of X i .
+\[S = X_1 + X_2 + \ldots + X_N \]
+where N is the number of claims and has a Poisson distribution with mean , $X_i$ is the amount of the i th claim, and the $X_i$ s are independent and identically distributed and
+independent of N. Let $M_X (t)$ denote the moment generating function of $X_i$ .
 \begin{enumerate}
 \item (i)
 Show, using a conditional expectation argument, that the cumulant generating function of S, $C_S (t)$, is given by
-C S (t) =
-M X (t) 1}.
+\[C S (t) =
+M X (t) 1}.\]
 Note: You may quote the moment generating function of a Poisson random variable from the book of Formulae and Tables.
 \item 
 (ii)
 Calculate the variance of S in the case where
 variance 10.
-CT3 A2006 4
+%CT3 A2006 4
 = 20 and X has mean 20 and
 \end{enumerate}
-\newpage
-
+\bigskip 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 9
 \begin{enumerate}
 \item (i)
-M S (t) = E[e tS ] = E[E[e tS |N]]
-Now E[e tS |N = n] = E[exp(tX 1 +
+\[M_S (t) = E[e^{tS} ] = E[E[ e^{tS} |N]]\]
+Now E[e^{tS}|N = n] = E[exp(tX 1 +
 + tX n )] = E[exp(tX i )] = {M X (t)} n
-M S (t) = E[{M X (t)} N ] = E[exp{NlogM X (t)}] = M N {logM X (t)}
-= exp[ M X (t) 1}] since N ~ Poisson( )
-C S (t) = logM S (t) = M X (t) 1}
+M S (t) = E[{M_X (t)} N ] = E[exp{Nlog M_X (t)}] = M N {log M_X (t)}
+= exp[ M_X (t) 1}] since N ~ Poisson( )
+\[C S (t) = logM S (t) = M X (t) 1}\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item (ii)
 V[S] = C S (0) =
 M X (0)} = E[X 2 ] = 20(10 + 20 2 ) = 8200
