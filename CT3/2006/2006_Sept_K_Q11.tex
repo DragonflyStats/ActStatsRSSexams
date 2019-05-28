@@ -32,12 +32,12 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%-- Question 11
 A survey of financial institutions which offered tax-efficient savings accounts was conducted. These accounts had limits on the amounts of money that could be invested each year. The study was interested in comparing the maturity values achieved by investing the maximum possible amount each year over a certain time period.
+
 The following values (in units of \$1,000 and rounded to 2 decimal places) are the
 maturity values for such investments for 8 high street banks and 12 other banks (i.e.
 those without high street branches).
@@ -111,7 +111,7 @@ s 2 2 =
 ⎟ = 0.062882
 11 ⎜ ⎝
 12 ⎟ ⎠
-Pooled estimate of \sigma:
+Pooled estimate of $\sigma$:
 s 2 p
 ( n 1 − 1) s 1 2 + ( n 2 − 1) s 2 2 7(0.0814) + 11(0.062882)
 =
@@ -119,8 +119,9 @@ s 2 p
 = 0.05261
 n 1 + n 2 − 2
 18
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 ∴ s p = 0.208
-95\% confidence interval for μ 1 − μ 2 is
+95\% confidence interval for $\mu  1 − \mu  2$ is
 11.650 − 11.815 \pm t 18 (21⁄2%) s p
 = −0.165 \pm (2.101)(0.208)
 1 1
@@ -134,23 +135,27 @@ n 1 + n 2 − 2
 
 i.e. −0.165 \pm 0.221
 i.e. (−0.86, 0.056)
-i.e. the confidence interval for the difference between the means for high street banks and other banks (μ 1 − μ 2 ) is −\$86 to \$56.
+i.e. the confidence interval for the difference between the means for high street banks and other banks (\mu  1 − \mu  2 ) is −\$86 to \$56.
+
+\medskip
+
 As zero is within the confidence interval, there is insufficient evidence, at 5\% level, to reject the null hypothesis that the mean maturity values do not differ
 for the accounts offered by high street banks and other banks.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item (iii)
 (a)
-S 2 2
-S 1 2
-~ F 11,7
+\[ \frac{ s^{2}_{2} }{ s^{2}_{1}}  \sim F 11,7 \]
+
 under the assumption that the variances are equal for high street and
 other banks,
-i.e. H 0 : \sigma 1 2 = \sigma 2 2
-s 2 2
-s 1 2
-=
-0.062882
-= 1.65
-0.0814
+i.e. \[H 0 : \sigma^{2}_{1} = \sigma^{2}_{2}\]
+
+\[ \frac{ s^{2}_{2} }{ s^{2}_{1}} = \frac{0.0814}{0.062882} = 1.65 \]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 We cannot reject the null hypothesis at the 5\% level as the two-sided critical value of a 5\% level test is approximately 4.71 (by interpolation using 21⁄2\% one-sided F table in Yellow Book).
 [OR probability value is p > 0.20 as a two-sided 20\% level test has a critical value of approximately 2.69.]
 (b)
@@ -176,7 +181,7 @@ Page 10
 (v)
 $\sigma x = 9.20 + 141.78 + 14.8 = 78.81$
 $\sigma x^2 = 1086.0470 + 1675.8224 + 1724.2449 = 4486.114$
-SS T = 4486.114 −
+SS_{T}= 4486.114 −
 78.81 2
 = 1.82
 2
@@ -189,8 +194,9 @@ SS T = 4486.114 −
 12
 12
 2
-∴ SS R = SS T − SS B = 1.82 − 0.551 = 1.281
+∴ SS R = SS_{T}− SS B = 1.82 − 0.551 = 1.281
 SS B =
+\begin{verbatim}
 Analysis of variance table
 Source of variation
 Financial institution types
@@ -211,9 +217,11 @@ MSS
 0.276
 = 6.27 on (2, 29) degrees of freedom
 0.044
-F 2,29 (5%) = .28 and F 2,29 (1%) = 5.42
+F 2,29 (5%) = .28 and F 2,29 (1%) = 5.42    
+\end{verbatim}
+
 \begin{itemize}
-\item Reject H 0 : μ 1 = μ 2 = μ  (population means are equal) at 1\% level.
+\item Reject H 0 : $\mu_1 = \mu_2 = \mu$   (population means are equal) at 1\% level.
 \item Strong evidence of differences between the  financial institutions.
 \item The plot shows nothing strong enough to invalidate the assumptions of normality and equal variances, even though the variability for the building societies is a bit smaller than for the banks.
 \end{itemize}
