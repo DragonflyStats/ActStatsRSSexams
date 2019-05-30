@@ -31,30 +31,7 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-5
-(a) Derive an expression that could be used to estimate the central exposed
-to risk using the available data. State any assumptions you make.
-(b) Use the data to estimate μ 65 . State any further assumptions that you
-make.
-[4]
-[Total 6]
-(i) Define the hazard rate, h(t), of a random variable T denoting lifetime.
-[1]
-(ii) An investigation is undertaken into the mortality of men aged between exact
-ages 50 and 55 years. A sample of n men is followed from their 50th
-birthdays until either they die or they reach their 55th birthdays.
-The hazard of death (or force of mortality) between these ages, h(t), is
-assumed to have the following form:
-h ( t ) = α + β t
-where α and β are parameters to be estimated and t is measured in years since
-the 50th birthday.
-(a) Derive an expression for the survival function between ages 50 and 55
-years.
-(b) Sketch this on a graph.
-(c) Comment on the appropriateness of the assumed form of the hazard for
-modelling mortality over this age range.
-[6]
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 6
 A three state process with state space {A, B, C} is believed to follow a Markov chain
@@ -78,80 +55,7 @@ P BA
 P CC
 = 0.4
 Calculate the one-step transition matrix consistent with these estimates.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 5Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
-5
-(i)
-The hazard function is defined as
-h ( t ) = lim
-dt → 0 +
-(ii)
-(a)
-1
-( Pr[ T ≤ t + dt | T > t ] ) .
-dt
-Since the survival function S(t) is given by
-⎛ t
-⎞
-S ( t ) = exp ⎜ − ∫ h ( s ) ds ⎟ ,
-⎜
-⎟
-⎝ 0
-⎠
-then
-t
-⎛ t
-⎞
-⎡
-⎡
-β s 2 ⎤
-β t 2 ⎤
-S ( t ) = exp ⎜ − ∫ ( α + β s ) ds ⎟ = exp ⎢ −α s −
-⎥ = exp ⎢ −α t −
-⎥
-⎜
-⎟
-2 ⎦ ⎥
-2 ⎦ ⎥
-⎢
-⎢
-⎣
-⎣
-⎝ 0
-⎠
-0
-where 0 ≤ t ≤ 5 .
-(b)
-A suitable plot is shown below.
-1
-0.9
-0.8
-0.7
-0.6
-0.5
-0.4
-0.3
-0.2
-0.1
-0
-0
-1
-2
-3
-4
-5
-Duration since age 50 years
-Both concave and convex plots were acceptable as this depends on
-parameters, α and β.
-(c)
-If both α and β are positive, then the formula implies a force of
-mortality which increases with age, which is sensible for this age
-range.
-The parameter α measures the ‘level’ of mortality and the parameter β
-measures the rate of increase with age. Varying these permits quite a
-wide range of forms for S(t).
-So the formula seems appropriate.
-Page 6Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\newpage
 6
 Based on the given transition diagram, the one-step transition matrix must be of the
 form:
