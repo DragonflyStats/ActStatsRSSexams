@@ -1,0 +1,217 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+8
+A medical study was carried out between 1 January 2001 and 1 January 2006, to
+assess the survival rates of cancer patients. The patients all underwent surgery during
+2001 and then attended 3-monthly check-ups throughout the study.
+The following data were collected:
+For those patients who died during the study exact dates of death were recorded as
+follows:
+Patient Date of surgery Date of death
+A
+B
+C
+D
+E 1 April 2001
+1 April 2001
+1 May 2001
+1 September 2001
+1 October 2001 1 August 2005
+1 October 2001
+1 March 2002
+1 August 2003
+1 August 2002
+For those patients who survived to the end of the study:
+Patient Date of surgery
+F
+G
+H
+I
+J
+K
+L 1 February 2001
+1 March 2001
+1 April 2001
+1 June 2001
+1 September 2001
+1 September 2001
+1 November 2001
+For those patients with whom the hospital lost contact before the end of the
+investigation:
+Patient Date of surgery Date of last check-up
+M
+N
+O 1 February 2001
+1 June 2001
+1 September 2001 1 August 2003
+1 March 2002
+1 September 2005
+(i)
+Explain whether and where each of the following types of censoring is present
+in this investigation:
+(a)
+(b)
+(c)
+(ii)
+(iii)
+type I censoring
+interval censoring; and
+informative censoring
+Calculate the Kaplan-Meier estimate of the survival function for these
+patients. State any assumptions that you make.
+
+[7]
+Hence estimate the probability that a patient will die within 4 years of surgery.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+8
+(i)
+(a) Type I censoring is present for those lives still under observation at 31
+December 2005 as the censoring times are known in advance.
+(b) Interval censoring would be present if we only knew death occurred
+between check-ups. However, actual dates of death are known, so
+interval censoring is not present.
+Right censoring can be seen as a special case of interval censoring (for
+those censored before death, we know death occurs in the interval (c i ,
+∞ ) where c i is the censoring time for person i).
+(c)
+Page 10
+Informative censoring is not likely to be present. The censoring of
+lives gives us no information about future lifetimes.Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
+(ii)
+The durations at which lives died or were censored are shown below. Duration
+is measured in years and months from the date of surgery.
+Patient
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+Death or censored
+death
+death
+death
+death
+death
+censored
+censored
+censored
+censored
+censored
+censored
+censored
+censored
+censored
+censored
+Duration
+4 years 4 months
+6 months
+10 months
+1 year 11 months
+10 months
+4 years 11 months
+4 years 10 months
+4 years 9 months
+4 years 7 months
+4 years 4 months
+4 years 4 months
+4 years 2 months
+2 years 6 months
+9 months
+4 years
+The calculation of the survival function is shown in the table below. We
+assume that at duration 4 years 4 months, the death occurred before lives were
+censored.
+t j n j d j c j \hat{\lambda} j = d j / n j
+0
+0.5
+0.833
+1.917
+4.333 15
+15
+13
+11
+7 0
+1
+2
+1
+1 0
+1
+0
+3
+6 0
+1/15
+2/13
+1/11
+1/7
+(
+)
+The estimated survival function is given by, S ˆ ( t ) = ∏ 1 − \lambda j . So,
+t j ≤ t
+t Ŝ ( t )
+0.000 ≤ t < 0.500
+0.500 ≤ t < 0.833
+0.833 ≤ t < 1.917
+1.917 ≤ t < 4.333
+4.333 ≤ t < 5.0 1.0000
+0.9333
+0.7897
+0.7179
+0.6154
+Solutions using different assumptions (for example assuming the death at 4
+years 4 months occurred after lives were censored, or assuming lives M, N
+and O were censored sometime within 3 months of their last check-up) were
+acceptable and received credit.
+Page 11Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
+(iii)
+The probability that a patient will die within 4 years of surgery is estimated
+by:
+1 − S ˆ ( 4 ) = 1 – 0.7179
+= 0.2821
+\end{document}
