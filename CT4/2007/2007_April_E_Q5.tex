@@ -1,0 +1,133 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+5
+(a) Derive an expression that could be used to estimate the central exposed
+to risk using the available data. State any assumptions you make.
+(b) Use the data to estimate μ 65 . State any further assumptions that you
+make.
+%------------------------------------------%
+(i) Define the hazard rate, $h(t)$, of a random variable T denoting lifetime.
+
+(ii) An investigation is undertaken into the mortality of men aged between exact
+ages 50 and 55 years. A sample of n men is followed from their 50th
+birthdays until either they die or they reach their 55th birthdays.
+The hazard of death (or force of mortality) between these ages, $h(t)$, is
+assumed to have the following form:
+\[h ( t ) = \alpha  + \beta  t\]
+where \alpha  and \beta  are parameters to be estimated and t is measured in years since
+the 50th birthday.
+\begin{enumerate}
+\item (a) Derive an expression for the survival function between ages 50 and 55
+years.
+\item (b) Sketch this on a graph.
+\item (c) Comment on the appropriateness of the assumed form of the hazard for
+modelling mortality over this age range.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 5Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
+5
+(i)
+The hazard function is defined as
+h ( t ) = lim
+dt → 0 +
+(ii)
+(a)
+1
+( Pr[ T ≤ t + dt | T > t ] ) .
+dt
+Since the survival function S(t) is given by
+⎛ t
+⎞
+S ( t ) = exp ⎜ − ∫ h ( s ) ds ⎟ ,
+⎜
+⎟
+⎝ 0
+⎠
+then
+t
+⎛ t
+⎞
+⎡
+⎡
+\beta  s 2 ⎤
+\beta  t 2 ⎤
+S ( t ) = exp ⎜ − ∫ ( \alpha  + \beta  s ) ds ⎟ = exp ⎢ −\alpha  s −
+⎥ = exp ⎢ −\alpha  t −
+⎥
+⎜
+⎟
+2 ⎦ ⎥
+2 ⎦ ⎥
+⎢
+⎢
+⎣
+⎣
+⎝ 0
+⎠
+0
+where 0 ≤ t ≤ 5 .
+(b)
+A suitable plot is shown below.
+1
+0.9
+0.8
+0.7
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+0
+0
+1
+2
+3
+4
+5
+Duration since age 50 years
+Both concave and convex plots were acceptable as this depends on
+parameters, \alpha  and \beta .
+(c)
+If both \alpha  and \beta  are positive, then the formula implies a force of
+mortality which increases with age, which is sensible for this age
+range.
+The parameter \alpha  measures the ‘level’ of mortality and the parameter \beta 
+measures the rate of increase with age. Varying these permits quite a
+wide range of forms for S(t).
+So the formula seems appropriate.
+Page 6Subject CT4 — Models Core Technical — April 2007 — Examiners’ Report
