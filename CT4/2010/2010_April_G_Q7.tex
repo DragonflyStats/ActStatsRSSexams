@@ -1,0 +1,138 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+7
+A government has introduced a two-tier driving test system. Once someone applies for a provisional licence they are considered a Learner driver. Learner drivers who score 90% or more on the primary examination (which can be taken at any time)
+become Qualified. Those who score between 50% and 90% are obliged to sit a secondary examination and are given driving status Restricted. Those who score 50% or below on the primary examination remain as Learners. Restricted drivers who pass
+the secondary examination become Qualified, but those who fail revert back to Learner status and are obliged to start again.
+\begin{enumerate}
+\item (i) Sketch a diagram showing the possible transitions between the states.
+ 
+\item (ii) Write down the likelihood of the data, assuming transition rates between states
+are constant over time, clearly defining all terms you use.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Figures over the first year of the new system based on those who applied for a
+provisional licence during that time in one area showed the following:
+Person-months in Learner State
+Person-months in Restricted State
+Number of transitions from Learner to Restricted
+Number of transitions from Restricted to Learner
+Number of transitions from Restricted to Qualified
+Number of transitions from Learner to Qualified
+\item (iii)
+1,161
+1,940
+382
+230
+110
+217
+(a) Derive the maximum likelihood estimator of the transition rate from
+Restricted to Learner.
+(b) Estimate the constant transition rate from Restricted to Learner.
+ 
+[Total 8]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+
+%%-- Page 8Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+\newpage
+7
+\item (i)
+Learner
+P
+α
+γ
+δ
+Restricted
+Qualified
+Q
+\item (ii)
+R
+\beta
+
+\begin{itemize}
+\item  $\alpha$ be the transition rate R to P
+\item $\beta$ be the transition rate R to Q
+\item $\gamma$ be the transition rate P to Q
+\item $\delta$ be the transition rate P to R
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%5
+Let P be the time spent in Learner state
+R be the time spent in Restricted state
+Let 
+\begin{itemize}
+\item[a] the number of transitions from Restricted to Learner
+\item[b]the number of transitions from Restricted to Qualified
+\item[c] the number of transitions from Learner to Qualified
+\item[d] the number of transitions from Learner to Restricted
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\[ L \sim exp{(-\delta - \gamma) P}exp{(-\alpha -\beta)R}\alphaa\betab\gammac\deltad \]
+
+(iii) Take the logarithm of the likelihood
+\[\log_e L = k - P(\delta + \gamma) - R(\alpha + \beta) + a \ln \alpha + b \ln\beta + c \ln \gamma + d \ln \delta \]
+Differentiate with respect to \alpha
+\[ \frac{d}{d \alpha} \left(\log_e L  \right) = -R  + \frac{a}{\alpha} \]
+
+
+Set equal to zero to get estimator:
+\begin{itemize}
+\item ${ \displaystyle R = \frac{a}{\alpha} }$
+\item ${ \displaystyle \hat{\alpha} = \frac{a}{R} }$
+\end{itemize}
+
+Set equal to zero to get estimator:
+a
+= R
+α
+α ˆ = a .
+R
+%%--- Page 9Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5— Examiners’ Report
+Differentiate a second time:
+d ln L
+2
+d α
+=−
+a
+α 2
+.
+which is always negative, so that we have a maximum.
+Thus $\hat{\alpha}  = 230 /1940 = 0.1186$
