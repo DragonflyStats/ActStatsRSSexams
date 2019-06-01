@@ -31,21 +31,21 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}Let X be a random variable with probability density function:
-⎧ 1 x
-⎪ e
-f ( x ) = ⎨ 2
-⎪ 1 e − x
-⎩ 2
+\begin{enumerate}Let $X$ be a random variable with probability density function:
+
+\[ f(x) =  \begin{cases}  
+\frac{1}{2} e^{x} & x \leq 0 \\
+\frac{1}{2} e^{-x}  & x > 0 \\     \end{cases}\]
+
+
 (i)
-; x ≤ 0
-; x > 0
+
 Show that the moment generating function of X is given by:
-M X ( t ) = (1 − t 2 ) − 1 ,
-for t < 1 .
+\[M_X ( t ) = (1 − t^{2}  )^{ − 1} ,\]
+for $ |t| < 1$ .
+
 (ii)
-CT3 A2014–2
-[3]
+
 Hence find the mean and the variance of X using the moment generating
 function in part (i).
 
@@ -53,58 +53,61 @@ function in part (i).
 4
 (i)
 1
-M X ( t )  E ( e ) 
+M_X ( t ) \;=\; E ( e^{tx} ) \;=\;
 2
 tX
-1  e ( t  1) x 
- 
+1  e ( t \;-\; 1) x 
+\;=\; 
 
-2   t  1  
+2   t \;-\; 1  
 0
-
+\;-\;
 0
  e
-( t  1) x
-
-1  e ( t  1) x 
- 
+( t \;-\; 1) x
+\;-\;
+1  e ( t \;-\; 1) x 
+\;-\; 
 
-2   t  1  
+2   t \;-\; 1  
 
 1
-dx   e ( t  1) x dx
+dx \;-\;  e ( t \;-\; 1) x dx
 2
 0
 
 0
 and for  t  1
+M X ( t ) \;=\;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% --- Page 3 (Probability and Mathematical Statistics) – April 2014 – 
-M X ( t ) 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (ii)
 1  1
 1 
 1
-
+\;-\;
 
- 
-2  t  1 t  1  1  t 2
+ \;=\;
+2  t \;-\; 1 t \;-\; 1  1 \;-\; t^{2} 
 
-M  X ( t )  (1  t 2 )  1   (1  t 2 )  2 (  2 t )  2 t (1  t 2 )  2
+M  X ( t ) \;=\; (1 \;-\; t^{2}  ) \;-\; 1 \;=\; \;-\; (1 \;-\; t^{2}  ) \;-\; 2 ( \;-\; 2 t ) \;=\; 2 t (1 \;-\; t^{2}  ) \;-\; 2
 
-
- E ( X )  M  X (0)  0
-
-M  X ( t )  2 t (1  t 2 )  2
-
-  2(1  t
-2  2
-)
- 2 t (  2)(1  t 2 )  3 (  2 t )
- 2(1  t 2 )  2  8 t 2 (1  t 2 )  3
- E ( X 2 )  M  X (0)  2
-V ( X )  E ( X 2 )  E 2 ( X )  2
+
+\[ E ( X ) \;=\; M  X (0) \;=\; 0 \]
+
+
+%--------------------------------%
+M^{\prime\prime} X ( t ) 
+&=&  2 t (1 \;-\; t^{2}  ) \;-\; 2  \\
+&=&  2(1 \;-\; t2 \;-\; 2)   \\
+\;-\; 2 t ( \;-\; 2)(1 \;-\; t^{2}  ) \;-\; 3 ( \;-\; 2 t )
+\;=\; 2(1 \;-\; t^{2}  ) \;-\; 2 \;-\; 8 t^{2}  (1 \;-\; t^{2}  ) \;-\; 3
+
+\[ E ( X 2 ) \;=\; M^{\prime\prime} X (0) \;=\; 2  \]
+\[V ( X ) \;=\; E ( X^2 ) \;-\; E^2 ( X ) \;=\; 2\]
 (Alternatively, based on a series expansion:
-M X ( t )  1  t 2  t 4  ...  E ( X )  0 and E ( X 2 )  2 and the variance follows.)
+M X ( t ) \;=\; 1 \;-\; t^{2}  \;-\; t 4 \;-\; ...  E ( X ) \;=\; 0 and E ( X 2 ) \;=\; 2 and the variance follows.)
 
 %%-- Generally well answered. In part (ii) most candidates were familiar with the method, but some showed poor differentiation skills.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
