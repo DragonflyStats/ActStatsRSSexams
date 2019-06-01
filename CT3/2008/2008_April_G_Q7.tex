@@ -30,48 +30,35 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-
-\begin{enumerate}
-\item % Question 6
+ % Question 7
 The claim amount X in units of \$1,000 for a certain type of industrial policy is modelled as a gamma variable with parameters $\alpha = 3$ and $\lambda = 1⁄4$.
-1
-X ~ χ 6 2 .
-2
-\begin{enumerate}
-    \item (i) Use moment generating functions to show that
-\item (ii) Hence use tables to find the probability that a claim amount exceeds \$20,000.
-\end{enumerate}
 
+\begin{enumerate}[(a)]
+    \item (i) Use moment generating functions to show that $\frac{1}{2}X \sim \chi^{2}_{6}$.
+\item (ii) Hence use tables to find the probability that a claim amount exceeds \$20,000.
 \end{enumerate}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2008 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-7
+
+%%- Question 7
 \begin{itemize}
 \item (i)
-E ( Y ) =
-2 1
-2 2 y 3 1 2 2 4
-y
-(2
-−
-y
-)
-dy
-=
-[ y − ] 0 = ⋅ =
-3 ∫ 0
-3
-3
-3 3 9
-\[M_X ( t ) = E ( e tX ) = (1 − 4 t ) − 3\] from yellow book
-\item Let Y =
-1
-X .
-2
-Therefore \[M Y ( t ) = E ( e tY ) = E ( e tX / 2 ) = M X ( t / 2) = (1 − 2 t ) − 6 / 2\]
-which is the m.g.f. of a gamma(3,1/2) or χ 6 2 variable
+
+
+\[M_X ( t ) = E(e^{tX}) = (1 -4t)^{-3}\] from yellow book
+\item 
+
+Let $Y = \frac{1}{2} X$
+
+Therefore 
+\begin{eqnarray*}
+M_{Y}(t) &=& E(e^{tY}) \\
+&=& E(e^{tX/2})\\ 
+&=& M_{X}(t/2) \\
+&=& (1\;-\; 2t) ^{-6/2}\\
+\end{eqnarray*}
+which is the m.g.f. of a gamma(3,1/2) or $\chi^{2}_{6}$ variable
 \item (ii)
 \begin{eqnarray*}
 P ( X > 20) &=& P ( Y > 10)\\
