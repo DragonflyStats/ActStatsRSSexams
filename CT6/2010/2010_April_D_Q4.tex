@@ -31,19 +31,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The number of claims N on a portfolio of insurance policies follows a binomial
-distribution with parameters n and p. Individual claim amounts follow an exponential
-distribution with mean 1/ \lambda . The insurer has in place an individual excess of loss
+distribution with parameters $n$ and $p$. Individual claim amounts follow an exponential
+distribution with mean $1/ \lambda$ . The insurer has in place an individual excess of loss
 reinsurance arrangement with retention M.
-(i)
+\begin{enumerate}
+\item (i)
 Derive an expression, involving M and \lambda, for the probability that an individual
 claim involves the reinsurer.
 
 Let I i be an indicator variable taking the value 1 if the ith claim involves the reinsurer
 and 0 otherwise.
-(ii)
+\item (ii)
 Evaluate the moment generating function M I i ( t ) .
 Let K be the number of claims involving the re-insurer so that K = I 1 +
-(iii)
+\item (iii)
 
 
 + I N .
@@ -51,13 +52,12 @@ Let K be the number of claims involving the re-insurer so that K = I 1 +
 (b) Deduce that K follows a binomial distribution with parameters that you
 should specify.
 
-
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 4
 (i)
-Let X represent the distribution of individual claims. Let denote the
-probability that an individual claim involves the reinsurer. Then
+Let $X$ represent the distribution of individual claims. Let denote the probability that an individual claim involves the reinsurer. Then
 ∞
 \pi  = P ( X > M ) =
 ∫ \lambda e
@@ -70,8 +70,7 @@ M
 ⎦ M
 = e −\lambda M
 (ii) M I i ( t ) = E ( e tI i ) = \pi  e t + 1 − \pi 
-(iii) Using the results for the moment generating function of a compound
-distribution, we have
+(iii) Using the results for the moment generating function of a compound distribution, we have
 M K ( t ) = M N (log M I i ( t ))
 (
 = pM I i ( t ) + 1 − p
@@ -93,3 +92,4 @@ Hence, by the uniqueness of MGFs K has a binomial distribution with
 parameters n and p\pi  .
 Comment: This question was well answered.
 
+\end{document}
