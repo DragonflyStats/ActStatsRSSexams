@@ -1,0 +1,77 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+2 An insurance company has a portfolio of two-year policies. Aggregate annual claims
+from the portfolio follow an exponential distribution with mean 10 (independently
+from year to year). Annual premiums of 15 are payable at the start of each year. The
+insurer checks for ruin only at the end of each year. The insurer starts with no capital.
+Calculate the probability that the insurer is not ruined by the end of the second year.
+
+2. Then to avoid ruin after the first year, we require X 1 <15 and to avoid ruin after 2
+years we require X 1 + X 2 <30.
+15
+P ( X 1 15 and X 1
+X 2
+30)
+f X 1 ( x ) P ( X 2
+30 x ) dx
+0
+15
+0.1 e 0.1 x
+0.1 e 0.1 x
+(1 e
+0.1(30 x )
+0
+15
+0
+Page 2
+0.1 e 3 dx
+) dx%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+e
+e
+0.1 x
+1.5
+0.1 xe
+1.5 e
+3
+3 15
+0
+1
+0.702189
+This was a question involving the concept of ruin in discrete time and requiring
+candidates to calculate a probability by integrating the pdf of the exponential
+distribution. This question was not answered well. Many candidates did not recognise
+the condition for ruin at t=2, ie X 1 +X 2 <30.
+
+\end{document}
