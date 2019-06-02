@@ -31,34 +31,49 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-
-Sixty per cent of new drivers in a particular country have had additional driving education. During their first year of driving, new drivers who have not had additional
+\large
+\noindent Sixty per cent of new drivers in a particular country have had additional driving education. During their first year of driving, new drivers who have not had additional
 driving education have a probability 0.09 of having an accident, while new drivers who have had additional driving education have a probability 0.05 of having an
 accident.
-(a) Calculate the probability that a new driver does not have an accident during
+\begin{enumerate}[(a)]
+\item Calculate the probability that a new driver does not have an accident during
 their first year of driving.
-(b) Calculate the probability that a new driver has had additional driving
+\item Calculate the probability that a new driver has had additional driving
 education, given that the driver had no accidents in the first year.
-
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \newpage
 %% Question 3
-Consider the following events:
+\noindent \textbf{Notation}\\
+\noindent Consider the following events:
 \begin{description}
 \item[A:] Driver has had additional education
 \item[B:] Driver has not had additional education
 \item[C:] Driver has not had accident in the first year.
 \end{description}
-(a)
-\[P(C) = P(C|A) Pr(A) + P(C|B) Pr(B) = 0.95*0.6 + 0.91*0.4
-= 0.934\]
-(b)
-P  A  C  
-P  C | A  P  A 
-P  C 
-
-0.95  0.6
- 0.610
-0.934
+
+\medskip 
+
+\noindent \textbf{Part (a)}\\
+\noindent Calculate the probability that a new driver does not have an accident during
+their first year of driving.
+
+\begin{eqnarray*}
+P(C)  &=& P(C \mbox{ and } A)  \;+\; P(C \mbox{ and } B)\\ 
+&=& P(C|A)P(A)  \;+\; P(C|B)P(B)\\ 
+&=& (0.95 \times 0.6 ) \;+\; (0.91 \times 0.4 ) \\
+&=& 0.934 \\
+\end{eqnarray*}
+
+
+\noindent \textbf{Part (b)}\\
+\noindent Calculate the probability that a new driver has had additional driving
+education, given that the driver had no accidents in the first year.
+
+
+\[ P(A|C)  \;=\; \frac{ P(C|A)P(A) }{P(C)} \;=\; \frac{0.95 \times 0.6}{0.934} \;=\;0.610\]
+
+
 %Reasonably well answered. Some candidates did not realise that the answer from part (a) could be used in part (b).
+\end{document}
