@@ -1,0 +1,209 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+PLEASE TURN OVER9
+A certain proportion p of electrical gadgets produced by a factory is defective. Prior
+beliefs about p are represented by a Beta distribution with parameters \alpha and \beta . A
+sample of n gadgets is inspected, and k are found to be defective.
+(i) Explain what is meant by a conjugate prior distribution. 
+(ii) Derive the posterior distribution for beliefs about p . 
+(iii) ⎛ 1
+Show that if X ~ Beta( \alpha , \beta ) with \alpha > 1 then E ⎜
+⎝ X
+(iv)
+⎞ \alpha + \beta − 1
+.
+⎟ =
+\alpha − 1
+⎠
+It is required to make an estimate d of p. The loss function is given by
+( d − p ) 2
+L ( d , p ) =
+.
+p
+Determine the Bayes estimate d* of p.
+(v)
+
+
+Determine a parameter Z such that d* can be written as
+k
+1
+d* = Z × + (1 − Z ) ×
+n
+\mu 
+where \mu is the prior expectation of 1/p.
+(vi)
+
+\alpha+ k
+.
+\alpha +β+ n
+Comment on the difference in the two Bayes’ estimates in the specific case
+where \alpha = \beta = 3 , k = 2 and n = 10.
+
+[Total 15]
+Under quadratic loss, the Bayes estimate would have been
+
+%%%%%%%%%%%%%%%%%%%%
+9
+(i) A distribution is a conjugate prior for an unknown parameter if when used
+as a prior distribution for that parameter it leads to a posterior distribution
+which is from the same family.
+(ii) f ( p k ) f ( k p ) f ( p )
+p k (1 p ) n
+p
+Page 8
+k 1
+k
+p
+(1 p )
+1
+(1 p )
+n k 1
+1%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+k ,
+Which is the pdf of a Beta(
+(iii)
+1
+1
+1 (
+)
+E
+x
+X
+x ( ) ( )
+n k ) distribution.
+1
+1
+(1 x )
+dx
+0
+1
+(
+)
+x
+( ) ( )
+0
+( 1) (
+( ) (
+(
+(
+1
+(1 x )
+)
+1)
+1) (
+1) (
+1
+2
+1
+0
+1
+(
+(
+dx
+1)
+x
+1) ( )
+1) (
+1) (
+2
+(1 x )
+1
+dx
+1)
+1
+1)
+.
+Other derivations are acceptable.
+(iv) Let
+h ( d ) E ( L ( d , p ))
+h ( d )
+E
+( d
+p ) 2
+p
+E
+d 2
+2 dp
+p
+p 2
+d 2 E (1/ p ) 2 d
+E ( p )
+h ( d ) 2 dE (1/ p ) 2
+And
+h ( d ) 0
+2 d * E (1/ p )
+When
+2
+k 1
+n 1
+d * 1/ E (1/ p )
+Using the result from (iii) applied to the posterior distribution for p.
+(v)
+k 1
+n 1
+x
+(1 Z ) Z
+n
+n
+Where Z
+1
+d *
+(vi)
+1
+1
+n 1
+and
+k
+n 1 n
+n
+n 1
+is the prior expectation of 1/p.D
+The estimates are:
+Using the given loss function the estimate is
+Page 9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+(3 + 2
+1) / (3 + 3 + 10
+1) = 4/15 = 0.266666
+Using Bayesian loss, we have (3 + 2) / (3 + 3 + 10) = 5/16 = 0.3125.
+The mean of the prior is 0.5 and the observed sample mean is 0.2. The loss
+function in (iv) penalises mis-estimates particularly when the true value of p is
+lower. This means that the estimate in (iv) is lower than would result from
+straight quadratic loss.
+A longer Bayes question with derivation of a posterior Beta distribution, a
+credibility factor Z and consideration of a non-standard loss function (given) and
+the quadratic loss. There was a wide range of quality of answers for this 6 part
+question. Generally i) and ii) were answered well, iii) to v) proved trickier, in
+particular deriving d* in part v).
