@@ -1,0 +1,178 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+CT6 S2009—610
+The total number of claims N on a portfolio of insurance policies has a Poisson
+distribution with mean λ. Individual claim amounts are independent of N and each
+other, and follow a distribution X with mean \mu and variance \sigma^2  . The total aggregate
+claims in the year is denoted by S. The random variable S therefore has a compound
+Poisson distribution.
+(i) Derive an expression for the moment generating function of S in terms of the
+moment generating function of X.
+
+(ii) Derive expressions for the mean and variance of S in terms of λ , \mu and \sigma  .
+
+For a particular type of policy, individual losses are exponentially distributed with
+mean 100. For losses above 200 the insurer incurs an additional expense of 50 per
+claim.
+(iii)
+Calculate the mean and variance of S for a portfolio of such policies with
+λ = 500.
+[9]
+[Total 19]
+END OF PAPER
+CT6 S2009—7
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10
+E ( e tS )
+(i) M S ( t )
+E ( E ( e t ( X 1
+X 2  X N )
+N )
+E ( M X ( t ) N ) since the X i are independent and identically distributed
+E ( e N log M X ( t ) )
+M N (log M X ( t ))
+exp( (exp(log( M X ( t ) 1))))
+exp( ( M X ( t ) 1))
+(ii) M S ( t ) M S ( t ) M X ( t )
+E ( S ) M S (0) M S (0)
+M X (0)
+1
+M S ( t ) M S ( t )
+E ( S 2 ) M S '' (0)
+M X ( t ) M S ( t )
+M S ' (0)
+1
+2 2
+2
+(
+M X ' (0) M S (0)
+2
+2
+)
+2
+And so
+Var( S )
+E ( S 2 ) E ( S ) 2
+2 2
+(
+Page 10
+2
+2
+2
+)
+M X ( t )
+2
+2 2
+M X '' (0)%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+(iii) First, we must calculate the mean and variance of a single claim, say Y.
+Let us denote by X the underlying loss. Then
+200
+0.01 xe
+E ( Y )
+0.01 x
+dx
+( x 50) 0.01 e
+0
+0.01 x dx
+0.01 x dx
+0.01 x dx
+200
+0.01 xe
+0.01 x
+dx 50
+0
+0.01 e
+0.01 x
+dx
+200
+E ( X ) 50 P ( X
+200)
+200 0.01
+= 100 50 e
+100 6.76676
+106.76676
+200
+2
+0.01 x 2 e
+E ( Y )
+0.01 x
+( x 50) 2 0.01 e
+dx
+0
+0.01 x 2 e
+200
+0.01 x
+dx
+0
+E ( X 2 )
+xe
+0.01 x
+dx 50 2
+200
+100 xe
+200
+0.01 x
+200
+100 2 100 2 20,000 e
+20,000 20,000 e 2
+20,000 32,500 e
+24,398.39671 2
+0.01 e
+2
+100 e
+0.01 x
+d 50 2 P ( X
+200)
+200
+100 2 e
+10,000 e
+2
+0.01 x
+2,500 e
+200
+2
+2,500 e
+2
+And finally, using the results from part (ii)
+E ( S ) 500 E ( X ) 500 106.76676
+53,383.38
+and
+Var( S ) 500 E ( X 2 ) 500 24,398.39671 12,199,198.36
+A long question about deriving mgf of a compound Poisson distribution. Mixture of
+bookwork and proof, and a numerical application to finish. This question was
+answered reasonably well, in particular part i) and part ii).
+END OF EXAMINERS’ REPORT
+Page 11
