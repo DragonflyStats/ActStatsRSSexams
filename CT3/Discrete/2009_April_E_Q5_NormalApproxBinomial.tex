@@ -1,0 +1,96 @@
+
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\large
+
+\begin{framed}
+\noindent A continuity correction is an adjustment that is made when a discrete distribution is approximated by a continuous distribution.
+\\ 
+\medskip
+
+\noindent If a random variable X has a binomial distribution with parameters $n$ and $p$, i.e., $X$ is distributed as the number of ``successes" in n independent Bernoulli trials with probability $p$ of success on each trial, then
+
+    \[ {\displaystyle P(X\leq x) \;\approx \; P(X<x+1)} \]
+
+\noindent for any $x \in \{0, 1, 2, \ldots n\}$. If $np$ and $np(1 - p)$ are large (sometimes taken to mean $\geq 5$), then we can say
+
+    \[ {\displaystyle P(X\leq x) \;\approx \; P(Y\leq x \;+\;1/2)} \]
+    \[ {\displaystyle P(X\geq x) \;\approx \; P(Y\geq x \;-\;1/2)} \]
+
+\noindent where $Y$ is a normally distributed random variable with the same expected value and the same variance as $X$, i.e., $E(Y) = np$ and $var(Y) = np(1 \;-\; p)$. This addition (or subtraction) of 1/2 to $x$ is the continuity correction.
+\end{framed}
+\newpage
+
+\noindent The human resources department of a large insurance company currently estimates that 82\% of new employees recruited by their call centres will still be employed by the company after one year. A recent extension to the call centre business led to 280
+new employees being recruited.
+\medskip 
+
+\noindent Calculate an approximate value for the probability that at least 240 of these new employees will still be employed by the company after one year.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\medskip 
+%%- Question 5
+\begin{itemize}
+\item Let X be the number still in employment after one year.
+
+\item $X$ is a binomial random variables with parameters $n \;=\; 280$, $p \;=\;0.82$ 
+
+\[X \sim  \mbox{bin} (280, 0.82) \]
+\begin{itemize}
+\item[$\bullet$] The binomial mean is $np= 280 \times 0.82 \;=\; 229.6$ .
+\item[$\bullet$] The  variance is $np(1-p) \;=\;280 \times 0.82 \times 0.18 \;=\; 41.328$.
+\item[$\bullet$] The standard deviation is therefore $\sqrt{41.328} = 6.43$
+\end{itemize}
+
+\item Using the normal distribution to approximate $X$
+\[X \sim N (229.6, 6.43^2 )\]
+
+
+\item  applying a continuity correction
+\[P ( X \geq 240) = P ( X > 239.5)\]
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{eqnarray*}
+P ( X > 239.5) &=& P\left(Z > \left[ \frac{239.5 \;-\; 229.6}{6.43} \right] \right) \\
+&=&  P ( Z > 1.54) \\ 
+&=&  1 \;-\; \Phi(1.54) \\
+&=& 1 \;-\; 0.93822 \\
+&=& 0.062 \\
+\end{eqnarray*}
+
+
+\end{document}
