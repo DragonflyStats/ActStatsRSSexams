@@ -1,0 +1,116 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+[Total 5]
+CT6 S2009—24
+A portfolio consists of k independent travel insurance policies. Each policy covers the
+policyholder’s trips over one year. For policy i , the number of claims in the j th month
+of the covered year, Y ij , is assumed to have a distribution given by
+P ( Y ij = y ) = θ ij (1 − θ ij ) y for y = 0,1, 2, ...
+where θ ij are unknown constants between 0 and 1.
+(i)
+(ii)
+Write down the likelihood function and obtain the maximum likelihood
+estimate for the parameters θ ij .
+Show that P ( Y ij = y ) can be written in exponential family form and suggest its
+natural parameter.
+(iii)
+
+
+Suppose that θ ij depends on the temperature x j recorded in the j th month.
+Explain why it is not appropriate to set θ ij = \alpha + \beta x j . Suggest another
+relationship between θ ij and \alpha + \beta x j that might be used.
+
+[Total 8]
+4
+(i) The likelihood is
+k
+L
+i 1
+12
+
+ij (1
+ij )
+y ij
+j 1
+Where y ij is the number of claims on the ith policy in the jth month.
+Taking the logarithm of L we have
+k 12
+log L
+log
+ij
+y ij log(1
+ij )
+i 1 j 1
+and so
+Page 3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+log L 1
+ij ij
+y ij
+1
+ij
+And setting the derivative to zero we find 1 ˆ ij
+ˆ
+ij
+(ii)
+y ij ˆ ij so that
+1
+1 y ij
+P ( Y ij
+y )
+ij (1
+ij )
+y
+e
+The natural parameter is log(1
+x j is (
+(iii) The range of
+modelling parameters
+ij
+log
+ij
+y log(1
+ij )
+ij ) .
+,
+) which means it is not suitable for
+[0,1] .
+A possible relationship to consider is log
+ij
+1
+x j .
+ij
+Other sensible alternatives should be given credit.
+A question testing derivation of the m.l.e. of a non-standard p.d.f, with an example
+application of the theory in the last part. The question was not answered well,
+particularly part iii).
