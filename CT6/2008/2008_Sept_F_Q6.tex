@@ -29,18 +29,15 @@
 \begin{document}
 6
 Consider the ARCH(1) process
-X t = \mu + e t \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2
+\[X_t = \mu + e t \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2\]
 where e t are independent normal random variables with variance 1 and mean 0.
 Show that, for s = 1, 2, ... , t-1, X t and X t-s are:
 (i)
 (ii)
-uncorrelated.
-not independent.
-CT6 S2008—3
-
-[3]
-[Total 8]
-
+\begin{enumerate}
+\item uncorrelated.
+\item not independent.
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 6
@@ -70,9 +67,13 @@ Cov ( X t , X t − s ) = E ( X t X t − s ) − E ( X t ) E ( X t − s )
 + E ( e t ) E ( e t − s \alpha  0 + \alpha  1 ( X t − s − 1 − \mu ) 2 \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2 ) − \mu 2
 = \mu 2 + 0 + 0 + 0 \times  E ( e t − s \alpha  0 + \alpha  1 ( X t − s − 1 − \mu ) 2 \alpha  0 + \alpha  1 ( X t − 1 − \mu ) 2 ) − \mu 2
 = 0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 (ii)
 The conditional variance of X t X t − 1 is
 var( X t X t − 1 ) = var( e t )( \alpha  0 + \alpha  1 ( X t - 1 - \mu ) 2 ) = \alpha  0 + \alpha  1 ( X t - 1 - \mu ) 2 .
 So the values of X t - 1 are affecting the variance of X t . If the same idea is
 applied recursively, it can be seen that the variance of X t will be affected by
 the value of X t - s . So X t and X t - s are not independent.
+\end{document}
