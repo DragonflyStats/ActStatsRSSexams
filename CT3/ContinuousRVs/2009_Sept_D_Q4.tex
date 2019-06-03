@@ -1,0 +1,92 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%CT3 S2009—2
+	% 
+	\large
+	\noindent Let the random variables $(X,Y)$ have the joint probability density function
+	\[f_{X , Y} ( x , y ) = exp\{- ( x + y )\}, \mbox{ where } x > 0, y > 0.\]
+	\begin{enumerate}[(a)]
+		\item Derive the marginal probability density functions of $X$ and $Y$, and hence determine (giving reasons) whether or not the two variables are independent.
+		\item Derive the joint cumulative distribution function $F_{X , Y} ( x , y )$.
+	\end{enumerate}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\medskip
+	\large
+	\noindent \textbf{Part (a)}\\
+	
+	\begin{eqnarray*}
+		f_{X} ( x )  &=& \int^{\infty}_{0}f ( x , y ) dy\\
+		&=& \int^{\infty}_{0}e^{-x-y} dy\\
+		&=& e^{-x} \left[ -e^{-y} \right]^{\infty}_{0}\\
+		&=& e^{-x}\\
+	\end{eqnarray*}
+	%------------------------------------------%
+	\begin{eqnarray*}
+		f_{Y} ( y )
+		&=& \int^{\infty}_{0}f ( x , y ) dx\\
+		&=& \int^{\infty}_{0}e^{-x-y} dx\\
+		&=& e^{-y} \left[ -e^{-x} \right]^{\infty}_{0}\\
+		&=& e^{-y}\\
+	\end{eqnarray*}
+	
+	
+	%------------------------------------------%
+	Since 
+	\begin{eqnarray*}
+		f_{X , Y} ( x , y ) &=& e^{-x-y} \\
+		&=&  f_{X} ( x ) \times f_{Y} ( y )\\
+	\end{eqnarray*}
+	Therefore we can state that $X$ and $Y$ are independent.
+	
+	%--------------------------------------------%
+	
+	\newpage
+	\large
+	\noindent \textbf{Part (b)}\\
+	
+	\begin{eqnarray*}
+		F_{X , Y} ( x , y )
+		&=& \int^{x}_{0}e^{-u-v} dv du\\
+	\end{eqnarray*}
+	\begin{eqnarray*}
+		f_{X , Y} ( x , y )
+		&=& \int^{x}_{0}e^{-u} du\times \int^{x}_{0}e^{-v} dv \\
+		&=& \left[ -e^{-u} \right]^{x}_{0} \times \left[ -e^{-v} \right]^{y}_{0} \\
+		&=& ( 1 -e^{-x} ) ( 1 -e^{-y} )\\
+	\end{eqnarray*}
+	
+	%------------------------------%
+\end{document}
