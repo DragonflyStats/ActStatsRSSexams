@@ -31,35 +31,36 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
-
-\item It is assumed that claims on a certain type of policy arise as a Poisson process with
-claim rate λ per year.
+\large
+\noindent It is assumed that claims on a certain type of policy arise as a Poisson process with
+claim rate $\lambda$ per year.
 For a group of 150 independent policies of this type, the total number of claims during
 the last calendar year was recorded as 123.
 Determine an approximate 95\% confidence interval for the true underlying annual
 claim rate for such a policy.
 
-\end{enumerate}
-\newpage
+\noindent \textbf{Solution}
 
 %%%%%%%%%%%%%5
-2
+% %--2
 \begin{itemize}
 
-\item The mean number of claims per policy is X =
-123
-= 0.82
-150
-\item Using the normal approximation to the Poisson distribution approximate 95\% confidence interval for λ is X ± 1.96
-→ 0.82 ± 1.96
-0.82
-150
-X
-n
-→ 0.82 ± 1.96(0.0739)
-→ 0.82 ± 0.145 or (0.675, 0.965)
+\item The mean number of claims per policy is 
+\[ \bar{X} = \frac{123}{150} = 0.82 \]
+
+\item Using the normal approximation to the Poisson distribution approximate 95\% confidence interval for $\lambda$ is 
 \end{itemize}
+\begin{eqnarray*}
+\bar{X} \pm 1.96 \sqrt{\frac{\bar{X}}{n}} 
+&=& 0.82 \pm 1.96 \sqrt{\frac{{0.82}}{150}} \\
+& & \\
+&=& 0.82 \pm 1.96(0.0739)\\
+& & \\
+&=& 0.82 \pm 0.145 \\
+& & \\
+&=& (0.675, 0.965)\\
+\end{eqnarray*}
+
 %%%%%%%%%%%%%%%%%%
 
 \end{document}
