@@ -30,47 +30,84 @@
 
 \begin{document}
 
-\begin{enumerate}
+
+\large
+%%- Question 4 
+\noindent A manufacturing company is analysing its accident record. The accidents fall into two categories:
 
 
-4 A manufacturing company is analysing its accident record. The accidents fall into two categories:
-   Minor – dealt with by first aider. Average cost £50.
- Major – hospital visit required. Average cost £1,000.
-The company has 1,000 employees, of which 180 are office staff and the rest work in the factory.
+\begin{itemize}
+    \item \textbf{Minor} : dealt with by first aider. Average cost \$50.
+    \item \textbf{Major} : hospital visit required. Average cost \$1,000.
+\end{itemize}  
+The company has 1,000 employees, of which 180 are office staff and the rest work in the factory.\\
 
-The analysis shows that 10\% of employees have an accident each year and 20\% of  accidents are major. It is assumed that an employee has no more than one accident in
+\noindent The analysis shows that 10\% of employees have an accident each year and 20\% of  accidents are major. It is assumed that an employee has no more than one accident in
 a year.
-\begin{enuerate}[(i)]
-\item (i) Determine the expected total cost of accidents in a year. [2]
+\begin{enumerate}[(a)]
+\item  Determine the expected total cost of accidents in a year. \\
+\medskip 
 On further analysis it is discovered that a member of office staff has half the probability of having an accident relative to those in the factory.
-\item (ii) Show that the probability that a given member of office staff has an accident in a year is 0.0549. [3]
-\item (iii) Determine the probability that a randomly chosen employee who has had an accident is office staff. [2]
+\item  Show that the probability that a given member of office staff has an accident in a year is 0.0549. 
+\item  Determine the probability that a randomly chosen employee who has had an accident is office staff. 
 \end{enumerate}
 
+\newpage
+%% Q4
+%% (i)
 
-Q4
-(i)
-Let A = Accident
-(ii)
-Expected cost of an accident= Average Cost(Major)*P(Major|A)
-+ Average Cost(Minor)*P(Minor|A)
-= 0.2*1000 + 0.8*50 =£240 [1]
-Expected total cost of accidents = £240 *1000 * 0.1 = £24,000 [1]
-Let O = Office Staff &F = Factory Staff. Then P(A|O) = 0.5 P(A|F)
-(iii)
-P(A) = P(A|O)P(O)+P(A|F)P(F) = P(A|O)*0.18 + 2*P(A|O)*0.82 [2]
-P(A|O) = 0.1 / (0.18+.82*2) = 0.0549 [1]
-P(O|A) =
-P ( A | O ) P ( O ) 0.0549*0.18
-=
-= 0.099.
-P ( A )
-0.1
-[2]
-[TOTAL 7]
-Part (i) was well answered with most candidates giving a fully or partially
-correct answer. Answers in parts (ii) and (iii) were generally poor; some
-candidates were confused with the conditional probabilities and considered
-conditioning on the wrong event.
+\noindent \textbf{Notation}
+\begin{itemize}
+\item A = Accident
+\item O = Office Staff 
+\item F = Factory Staff.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\medskip 
+\noindent \textbf{Part (a) }\begin{eqnarray*}
+\mbox{ Expected cost of an accident } &=& \mbox{Average Cost(Major) } \times P(\mbox{Major}|A)
++  \\ 
+& &  \mbox{Average Cost(Minor)}  \times P(\mbox{Minor}|A)\\
+&=& 0.2\times 1000 \;+\; 0.8 \times 50 \\
+&=& \$240 \\ 
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{eqnarray*}
+\mbox{ Expected total cost of accidents } &=&
+\$ 240 \times 1000 \times  0.1\\
+&=& \$24,000 \\
+\end{eqnarray*}
+\newpage
+\noindent \textbf{Part (b) }\\
+We are told that \[P(A|O) = 0.5 P(A|F)\] or equivalently \[2 P(A|O) = P(A|F).\]
+Also we know that 
+\begin{itemize}
+    \item $P(A) \;=\; 0.1$
+    \item $P(O) \;=\; 0.18$
+    \item $P(F) \;=\; 0.82$
+\end{itemize}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{eqnarray*}
+P(A) &=& P(A \mbox{ and } O)+P(A \mbox{ and }F)\\
+& & \\
+&=& P(A|O)P(O)+P(A|F)P(F) \\ & & \\ &=& P(A|O)\times 0.18 + 2\times P(A|O)\times 0.82 \\
+& & \\
+0.1 &=& P(A|O) \times 1.82
+\end{eqnarray*}
+\[P(A|O) \;=\; \frac{0.1 }{1.82} \;=\;  0.0549\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\noindent \textbf{Part (c) }
+\begin{eqnarray*}
+P(O|A) &=& \frac{P ( A | O ) P ( O )}{P ( A )}\\ 
+& &  \\
+&=& \frac{0.0549\times 0.18}{0.1}\\
+& &  \\
+&=&  0.099.\\
+\end{eqnarray*}
+% [2]
+% [TOTAL 7]
+% Part (i) was well answered with most candidates giving a fully or partially correct answer. Answers in parts (ii) and (iii) were generally poor; some candidates were confused with the conditional probabilities and considered conditioning on the wrong event.
 
 \end{document}
