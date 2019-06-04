@@ -1,10 +1,46 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
 7 The volatility of equity prices is classified as being High (H) or Low (L) according to
 whether it is above or below a particular level. The volatility status is assumed to
 follow a Markov jump process with constant transition rates ϕLH = μ and ϕHL = ρ.
-(i) Write down the generator matrix of the Markov jump process. 
-(ii) State the distribution of holding times in each state. 
+\begin{enumerate}
+\item (i) Write down the generator matrix of the Markov jump process. 
+\item (ii) State the distribution of holding times in each state. 
 A history of equity price volatility is available over a representative time period.
-(iii) Explain how the parameters μ and ρ can be estimated. 
+\item (iii) Explain how the parameters μ and ρ can be estimated. 
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Let ij
 t ps be the probability that the process is in state j at time s+t given that it was in
 state i at time s (i, j = H, L), where t ≥ 0. Let
@@ -85,8 +121,8 @@ t
 ∂
 so 0LL exp( )
 t P = −μt
-Subject CT4 (Models) – September 2012 – Examiners’ Report
-Page 12
+%%- Subject CT4 (Models) – September 2012 – Examiners’ Report
+%% Page 12
 Looking for time when 0LL 1/ 2
 t P =
 1/ 2 = exp(−μT )
@@ -138,3 +174,4 @@ In part (vi) working through with tP0
 LH then at the end taking one minus the answer is a valid
 approach .
 
+\end{document}
