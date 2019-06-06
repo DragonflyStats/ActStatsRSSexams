@@ -1,0 +1,83 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\large
+%%- Question 6
+\noindent In a survey conducted by a mail order company a random sample of 200 customers yielded 172 who indicated that they were highly satisfied with the delivery time of their orders.
+Calculate an approximate 95\% confidence interval for the proportion of the
+company's customers who are highly satisfied with delivery times.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{framed}
+\noindent \textbf{General Structure of a Confidence Interval}
+\[  \mbox{Point Estimate} \;\pm\; \left[ \mbox{Quantile} \times \mbox{Standard Error}\right]\]
+\end{framed}
+
+
+\begin{itemize}
+\item Point Estimate: Sample Proportion ${ \displaystyle \hat{p} = \frac{172}{200} = 0.86 }$
+\item Interval Size : 95\%
+\item Sample Size : $n=200$
+\item We consider this a large sample (i.e. $n \geq 30$), and assume the sampling distribution is approximated by the Normal distribution.
+\end{itemize}
+%--------------------%
+\noindent \textbf{Quantiles for Confidence Intervals}
+\\ \textit{ Assuming Normality based on large sample size.}\\
+\begin{center}
+\begin{tabular}{|c|c|c|} \hline
+90\%     & $Z_{0.95}$ & 1.645 \\ \hline
+95\%     & $Z_{0.975}$ & 1.96 \\ \hline
+98\%    & $Z_{0.99}$ & 2.326    \\ \hline
+99\%    & $Z_{0.995}$ &  2.576  \\ \hline
+\end{tabular}
+\end{center}
+
+\newpage
+\noindent \textbf{Standard Error}
+\begin{framed}
+\[ S.E.(p) \;=\; \sqrt{ \frac{\hat{p} (1\;-\;\hat{p})  }{n}  } \]
+\end{framed}
+\begin{eqnarray*} S.E.(p) &=& \sqrt{ \frac{0.86 \times 0.14 }{200}  }\\
+&=& \sqrt{ \frac{0.1204 }{200}  }\\
+&=& \sqrt{ 0.000602 }\\
+&=& 0.0245 \\
+\end{eqnarray*}
+\medskip
+
+\noindent \textbf{Calculation of Confidence Interval}
+\begin{eqnarray*}
+\mbox{95\% Confidence Interval} &=& 0.86 \;\pm\; 1.96(0.0245)\\
+&=& 0.86 \;\pm\; 0.048 \\
+&=& (0.812, 0.908)\\
+\end{eqnarray*}
+\end{document}
