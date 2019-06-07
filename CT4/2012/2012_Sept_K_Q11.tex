@@ -1,0 +1,258 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+[Total 13]
+A company operates a sick pay scheme as follows:
+\item Healthy employees pay a percentage of salary to fund the scheme.
+\item For the first two consecutive months an employee is sick, the sick pay scheme
+pays their full salary.
+\item For the third and subsequent consecutive months of sickness the sick pay is
+reduced to 50% of full salary.
+To simplify administration the scheme operates on whole months only, that is for a
+particular month’s payroll an employee is either healthy or sick for the purpose of the
+scheme.
+The company’s experience is that 10% of healthy employees become sick the
+following month, and that sick employees have a 75% chance of being healthy the
+next month.
+The scheme is to be modelled using a Markov Chain.
+\begin{enumerate}[(i)]
+\item(i) Explain what is meant by a Markov Chain. (ii) Identify the minimum number of states under which the payments under the
+scheme can be modelled using a time homogeneous Markov Chain, specifying
+these states.
+
+\item (iii) Draw a transition graph for this Markov chain. 
+\item (iv) Derive the stationary distribution for this process. 
+\item (v) Calculate the minimum percentage of salary which healthy employees should
+pay for the scheme to cover the sick pay costs.
+
+\item (vi) Calculate the contributions required if, instead, sick pay continued at 100% of
+salarY_indefinitely.
+
+\item (vii) Comment on the benefit to the scheme of the reduction in sick pay to 50%
+from the third month.
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+12
+(i)
+A process with a discrete state space and discrete time space
+where the future development is only dependent on the current state occupied.
+OR
+P [ X t \in A | X s 1 = x 1 , X s 2 = x 2 ,..., X s n = x n ] = P [ X t \in A | X s = x ]
+for all times s 1 < s 2 < ... < s n < s < t , all states x 1 , x 2 ,..., x n , x in S and all
+subsets A of S.
+THEN EITHER THE THREE STATE SOLUTION
+(ii)
+The sick pay depends on the duration of sickness, so to model with a time
+homogeneous Markov chain needs as a minimum the states:
+Healthy (H)
+Sick month 1 (S1)
+Sick month 2 or more (S2+)
+So the minimum number of states is 3.
+Page 16Subject CT4 (Models) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+(iii)
+(iv)
+If using H, S1, S2+ then the stationary distribution \pi is given by:
+⎛ 0.9 0.1 0 ⎞
+⎜
+⎟
+\pi ⎜ 0.75 0 0.25 ⎟ = \pi
+⎜ 0.75 0 0.25 ⎟
+⎝
+⎠
+\pi H = 0.9 \pi H + 0.75 \pi S 1 + 0.75 \pi S 2 +
+\pi S 1 = 0.1 \pi H
+\pi S 2 + = 0.25 \pi S 1 + 0.25 \pi S 2 +
+\pi H + \pi S 1 + \pi S 2 + = 1
+3 \pi S 2 + = \pi S 1
+30 \pi S 2 + = \pi H
+Implies
+\pi S 2 + =
+(v)
+1
+3
+15
+, \pi S 1 = , \pi H =
+34
+34
+17
+Let percentage of salary when healthy be a%
+Then in the stationary state looking at payments for the next month we need
+Expected income = Expected outgo.
+Probability healthy *a% of salary = Probability of 100% sick pay*100% of salary +
+Probability on 50% sick pay*50% of salary:
+2
+1
+15
+⎛ 15
+⎞
+⎛ 3
+⎞
+⎜ *0.9 + *0.75 ⎟ a = ⎜ *0.25 + *0.25*50% + *0.1 ⎟
+17
+34
+17
+⎝ 17
+⎠
+⎝ 34
+⎠
+Page 17Subject CT4 (Models) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+0.88235a = 0.113971
+a =12.917% of salary.
+(vi)
+Now just need a two state version {H,S}
+\pi H =
+15
+2
+, \pi S =
+17
+17
+and need contribution rate > 2/15 = 13.333% of salary.
+OR THE FOUR STATE SOLUTION
+(ii)
+The sick pay depends on the duration of sickness, so to model with a time
+homogeneous Markov chain needs as a minimum the states:
+Healthy (H)
+Sick month 1 (S1)
+Sick month 2 (S2)
+Sick month 3 or more (S3+)
+So the minimum number of states is 4.
+
+(iii)
+0.1
+0.9
+H
+0.75
+0.25
+0.25
+S1
+S2
+S3+
+0.75
+0.75
+(iv)
+If using H, S1, S2, S3+ then the stationary distribution \pi is given by:
+0
+0 ⎞
+⎛ 0.9 0.1
+⎜
+⎟
+0.75 0 0.25
+0 ⎟
+⎜
+\pi
+=\pi
+⎜ 0.75 0
+0
+0.25 ⎟
+⎜
+⎟
+0
+0.25 ⎠
+⎝ 0.75 0
+\pi H = 0.9 \pi H + 0.75 \pi S 1 + 0.75 \pi S 2 + 0.75 \pi S 3 +
+\pi S 1 = 0.1 \pi H
+\pi S 2 = 0.25 \pi S 1
+\pi S 3 + = 0.25 \pi S 2 + 0.25 \pi S 3 +
+\pi H + \pi S 1 + \pi S 2 + \pi S 3 + = 1
+Page 18
+0.25Subject CT4 (Models) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\pi H = 10 \pi S 1
+1
+\pi S 2 = \pi S 1
+4
+0.75 \pi S 3 + = 0.25 \pi S 2
+1 1
+\pi S 3 + = . \pi S 1
+3 4
+1 1 ⎫
+⎧
+\pi S 1 ⎨ 10 + 1 + + ⎬ = 1
+4 12 ⎭
+⎩
+Implies
+\pi S 1 =
+(v)
+12
+3
+120 15
+3
+1
+= , \pi H =
+= , \pi s 2 =
+\pi s 3 + =
+136 34
+136 17
+136
+136
+Let percentage of salary when healthy be a%
+Expected income = Expected outgo
+Probability healthy *a% of salary = Probability of 100% sick pay*100% of salary
+Probability on 50\% sick pay*50% of salary
+15
+3 ⎞ 1 ⎛ 1 ⎞
+⎛ 3
+a = ⎜ +
+⎟ + ⎜
+⎟
+17
+⎝ 34 136 ⎠ 2 ⎝ 136 ⎠
+0.88235a = 0.113971
+a =12.917% of salary.
+(vi)
+Now all those not healthy get 100\% so
+15
+2
+a =
+17
+17
+and need contribution rate > 2/15 = 13.333\% of salary
+(vii)
+\begin{itemize}
+\item The reduction in cost is calculated as 3.23\%.
+\item This is not particularly significant either relative to the likely uncertaintY_in the
+assumptions or because recovery rates are so high.
+The reduction in sick paY_is likely to encourage employees to try to get back into
+work.
+\item This question was well answered despite its complexity. Most candidates went for the four
+state solution, and there were many correct answers to parts (i)-(iv). In parts (v) and (vi) a
+
+common mistake was to fail to divide by the proportion of healthy employees, as only healthy
+employees (i.e. those not receiving sick pay) contribute to the scheme. Answers to part (vii)
+often included sensible comments that gained credit, even if some candidates answered as if
+the scheme had an unlimited supply of funds!
+\end{itemize}
+\end{document}
