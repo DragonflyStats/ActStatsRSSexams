@@ -1,0 +1,222 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 6104 Questions
+B1
+A Cox proportional hazards model was estimated to assess the effect on survival of a
+person s sex and his or her self-esteem (measured on a three-point scale as low ,
+medium or high ). The baseline category was males with low self-esteem.
+Write down the equation of the model, using algebraic symbols to represent variables
+and parameters and defining all the symbols that you use.
+[4]
+B2
+(i)
+(a) Explain why it is important to sub-divide data when carrying out
+mortality investigations.
+(b) Describe the problems that can arise with sub-dividing data.
+[4]
+B3
+(ii) List four factors which are often used to sub-divide life assurance data.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+(i) Assume that the force of mortality between consecutive integer ages, y and
+y + 1, is constant and takes the value μ y .
+Let T x be the future lifetime after age x ( x
+function of T x .
+y ) and S x (t) be the survival
+Show that:
+y
+(ii)
+log[ S x ( y x )] log[ S x ( y 1 x )] .
+[4]
+An investigation was carried out into the mortality of male life office
+policyholders. Each life was observed from his 50th birthday until the first of
+three possible events occurred: his 55th birthday, his death, or the lapsing of
+his policy. For those policyholders who died or allowed their policies to lapse,
+the exact age at exit was recorded.
+Using the result from part (i) or otherwise, describe how the data arising from
+this investigation could be used to estimate:
+(a) 50
+(b) 5 q 50
+
+[Total 7]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 7
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+B1
+h ( t )
+h 0 ( t ) exp[ 1 F
+2 M
+3 H ]
+where
+h ( t ) is the estimated hazard,
+h 0 ( t ) is the baseline hazard,
+F is a variable taking the value 1 if the life is female, and 0 otherwise,
+M is a variable taking the value 1 if the life has medium self-
+esteem and 0 otherwise,
+H is a variable taking the value 1 if the life has high self-esteem and 0 otherwise,
+and
+1 , 2
+B2
+(i)
+and
+(a)
+3 are
+parameters to be estimated.
+The models of mortality we use assume that we can observe a group of
+lives with the same mortality characteristics. This is not possible in
+practice.
+However, data can be sub-divided according to certain characteristics
+that we know to have a significant effect on mortality.
+This will reduce the heterogeneity of each group, so that we can at
+least observe groups with similar, but not the same, characteristics.
+(b)
+Sub-dividing data using many factors can result in the numbers in each
+class being too low.
+It is necessary to strike a balance between homogeneity of the group
+and retaining a large enough group to make statistical analysis
+possible.
+Sufficient data may not be collected to allow sub-division.
+This may be because marketing pressures mean proposal forms are
+kept to a minimum.
+Page 11Subject CT4
+(ii)
+Models Core Technical
+April 2006
+Examiners Report
+The following are factors often used:
+Sex
+Age
+Type of policy
+Smoker/Non-smoker status
+Level of underwriting
+Duration in force
+Sales channel
+Policy size
+Occupation (or social class) of policyholder
+Known impairments
+Geographical region
+B3
+(i)
+Consider the year of age between y and y + 1. We know that
+t
+t p y
+exp
+y s ds
+.
+0
+If t=1 and
+y (a
+y s
+p y
+exp
+constant), evaluating the integral produces
+.
+y
+Now, conditioning on survival to age x, survival to age y + 1 implies survival
+from age x to age y and then survival for a further year:
+y 1 x
+p x p y . y
+y 1 x p x
+x
+p x .
+Thus
+p y
+y x
+p x
+,
+which, since, in general t p x
+p y
+Page 12
+S x ( y 1 x )
+.
+S x ( y x )
+S x ( t ) , may be writtenSubject CT4
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Examiners Report
+Therefore
+exp(
+S x ( y 1 x )
+,
+S x ( y x )
+y )
+so that
+y
+(ii)
+(a)
+S x ( y x )
+S x ( y 1 x )
+log
+log[ S x ( y x )] log[ S x ( y 1 x )] .
+Using the result from part (i) and putting x = 50, y = 50 gives
+50
+log
+S 50 (0)
+S 50 (1)
+log[ S 50 (1)]
+Since we have censored data, because of the possibility of policy lapse,
+we should estimate S 50 (1) using the Kaplan-Meier or Nelson-Aalen
+estimator and hence obtain an estimate of
+(b)
+5 q 50
+50 .
+= 1 - 5 p 50 ,
+and, since
+5 p 50
+5 q 50
+S 50 (5) ,
+can be estimated directly as 1
+S 50 (5),
+where S 50 (5) is the Kaplan-Meier or Nelson-Aalen estimator of the
+probability of a life aged 50 years surviving for a further 5 years.
+
+
+\end{document}
