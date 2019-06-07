@@ -1,0 +1,254 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 8B5
+A life assurance company carried out an investigation of the mortality of male life
+assurance policyholders. The investigation followed a group of 100 policyholders
+from their 60 th birthday until their 65 th birthday, or until they died or cancelled their
+policy (whichever event occurred first).
+The ages at which policyholders died or cancelled their policies were as follows:
+Died Cancelled policy
+Age in
+years and months Age in
+years and months
+60y 5m
+61y 1m
+62y 6m
+63y 0m
+63y 0m
+63y 8m
+64y 3m 60y 2m
+60y 3m
+60y 8m
+61y 0m
+61y 0m
+61y 0m
+61y 5m
+62y 2m
+62y 9m
+63y 9m
+64y 5m
+\begin{enumerate}
+\item (i) Explain which types of censoring are present in the investigation. 
+\item (ii) Calculate the Nelson-Aalen estimate of the integrated hazard for these
+policyholders. 
+\item (iii) Sketch the estimated integrated hazard function. 
+\item (iv) Estimate the probability that a policyholder will survive to age 65.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 9
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\n
+
+
+
+
+B4
+(i) We have a policy-year rate interval.
+(ii) The age classification of the lapsing data is age last birthday on the policy
+anniversary prior to lapsing .
+This can be calculated by adding the policyholder s age last birthday when the
+policy was taken to out to the number of annual premiums paid minus 1
+(assuming that the first premium was paid at policy inception).
+Define P x , t as the number of policies in force aged x last birthday at the
+preceding policy anniversary at time t. This corresponds with the lapsing
+data.
+Page 13Subject CT4
+Models Core Technical
+April 2006
+Examiners Report
+Then, if t is measured in years since 1 January 2003, a consistent exposed-to-
+risk would be
+1
+E x c
+P x , t dt ,
+0
+which, assuming that policy anniversaries are uniformly distributed across the
+calendar year,
+may be approximated as
+E x c
+1
+[ P x ,0
+2
+P x ,1 ] .
+But we do not observe P x,t directly. Instead we observe P x , t * the number of
+policies in force at time t, classified by age last birthday at time t.
+But the range of exact ages that could apply to a life aged x last birthday
+the policy anniversary prior to lapsing is (x, x + 2).
+on
+Assuming that birthdays are uniformly distributed across the policy year, half
+of these lives will be aged x last birthday and half will be aged x+ 1 last
+birthday.
+Hence,
+P x , t
+1
+[ P x , t * P x
+2
+*
+1, t
+] .
+Therefore, by substituting this into the approximation above, the appropriate
+exposed-to-risk is
+E x c
+(iii)
+1 1
+[ P x ,0 * P x
+2 2
+*
+1,0 ]
+1
+[ P x ,1 * P x
+2
+*
+1,1 ]
+.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Both assumptions might be unreasonable because:
+policies might be taken out in large numbers just before the end of the tax
+year,
+policies might tend to be taken out just before birthdays,
+under group schemes, many policy anniversaries might be identical.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(i)
+
+The following types of censoring will be present:
+Right censoring because some policyholders cancel their policy before
+the end of the period.
+Type I censoring
+because the investigation stops at a fixed time.
+Random censoring
+unknown time.
+because some lives cancel their policy at an
+Informative censoring
+in better health.
+(ii)
+(a)
+because those who cancel their policy tend to be
+The calculations are as follows:
+d j
+t j
+(years)
+d j
+n j d j c j n j 100 0 2 0 0
+98 1 4 1/98 0.0102
+93 1 2 1/93 0.0210
+t 3 90 1 1 1/90 0.0321
+3 t 3 812 88 2 0 2/88 0.0548
+3 8 12 t 4 3 12 86 1 1 1/86 0.0664
+4 312 t 84 1 1 1/84 0.0783
+5
+0 t
+5
+12
+1 112
+2 612
+t
+t
+12
+1 1 12
+2 6 12
+j
+n j
+(b)
+B5
+Models Core Technical
+0.09
+0.08
+0.07
+0.06
+0.05
+0.04
+0.03
+0.02
+0.01
+0
+0
+1
+2
+3
+4
+5
+Duration since 60th birthday
+Page 15Subject CT4
+(iii)
+Models Core Technical
+April 2006
+Examiners Report
+Either
+Using the results of the calculation in (ii), the survival function can be
+estimated by S t exp
+t .
+And so, for t
+S t
+4 3 / 12 , we have
+exp
+0.0783
+0.925
+which is the probability of survival to 65.
+Or
+Using the Kaplan-Meier estimate of S t
+1
+t j t
+we get, for t
+S t
+d j
+n j
+,
+4 3 / 12 :
+1
+1
+98
+1
+1
+93
+1
+1
+90
+1
+2
+88
+1
+1
+86
+1
+1
+84
+= 0.9243
