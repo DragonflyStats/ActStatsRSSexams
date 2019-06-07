@@ -1,0 +1,180 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 4A6
+(i)
+(a) Explain what is meant by a Markov jump process.
+(b) Explain the condition needed for such a process to be time-
+homogeneous.
+
+(ii)
+Outline the principal difficulties in fitting a Markov jump process model with
+time-inhomogeneous rates.
+
+A company provides sick pay for a maximum period of six months to its employees
+who are unable to work. The following three-state, time-inhomogeneous Markov
+jump process has been chosen to model future sick pay costs for an individual:
+(t)
+Healthy
+(H)
+(t)
+(t)
+Sick
+(S)
+(t)
+Dead
+(D)
+Where Sick means unable to work and Healthy means fit to work.
+The time dependence of the transition rates is to reflect increased mortality and morbidity rates as an employee gets older. Time is expressed in years.
+(iii) Write down Kolmorgorov s forward equations for this process, specifying theappropriate transition matrix.
+
+(iv) (a)
+Given an employee is sick at time w < T, write down an expression for the probability that he or she is sick throughout the period w < t < T.
+(b)
+Given that a transition out of state H occurred at time w, state the probability that the transition was into state S.
+(c)
+For an employee who is healthy at time , give an approximateexpression for the probability that there is a transition out of state H in
+a small time interval [w, w + dw], where w > . Your expression should be in terms of the transition rates and P HH ( , w ) only.
+
+(v)
+Using the results of part (iv) or otherwise, derive an expression for the probability that an employee is sick at time T and has been sick for less than 6 months, given that they were healthy at time < T - 1⁄2. Your expression should be in terms of the transition rates and P HH ( , w ) only.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 5
+PLEASE TURN OVER(vi)
+Comment on the suggestions that:
+(a)
+(b)
+(t) should also depend on the holding time in state S, and
+mortality rates can be ignored.
+
+[Total 14]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A6
+(i)
+(ii)
+%%-- Models Core Technical
+%%-- April 2006
+%%-- Examiners Report
+(a) A continuous-time Markov process X t ,t 0 with a discrete state space S is called a Markov jump process.
+(b) In the case where the probabilities P X t j | X s i for i, j in S and 0 s t depend only on the length of time interval t s , the process
+is called time-homogeneous.
+A model with time-inhomogeneous rates has more parameters, and there may not be sufficient data available to estimate these parameters.
+Also, the solution to Kolmogorov s equations may not be easy (or even possible) to find analytically.
+(iii)
+P ( t )
+P ( t ). A ( t )
+where
+( t )
+A ( t )
+( t )
+( t )
+( t )
+0
+( t )
+0
+( t )
+( t )
+( t )
+0
+T
+(iv)
+(a)
+Pr(Waiting time T
+w X w
+S ) exp
+( ( t )
+( t )) dt
+w
+(b)
+Given there is a transition from state H at time w, the probabilities that this is into state S or D are given by the relative transition rates at time $w$.
+So Probability into state S =
+(c)
+( w )
+( w )
+( w )
+This is the probability that the individual is in state H at time w, multiplied by the sum of transition rates out of state H at time w, that is:
+P HH ( , w ).( ( w )
+( w )) dw
+%%-- Page 9Subject CT4
+(v)
+%%-- Models Core Technical
+%%-- April 2006
+%%-- Examiners Report
+Expressing time in years,
+Pr( X T
+S , Waiting time 1/ 2 X
+H )
+T
+Pr(Transition from state H at w ) Pr(Transition toS) Pr(stays in S to time T) dW
+T 1/ 2
+T
+=
+P HH ( , w ).( ( w )
+( w )).
+T 1/ 2
+T
+=
+(vi)
+(a)
+( w )
+( w )
+.exp
+( ( t )
+( t )) dt . dw
+w
+T
+P HH ( , w ). ( w ).exp
+T 1/ 2
+T
+( w )
+( ( t )
+( t )) dt . dw
+w
+This is likely to improve the predictive power of the model because:
+There is empirical evidence that recovery rates depend on the duration of the sickness.
+The limit of 6 months on sick pay may cause some durational effects around this point.
+However this would make the model more complicated to analyse, and increase the volume of data required to fit parameters reliably.
+(b)
+%%-- Page 10
+For individuals in employment mortality rates are likely to be low, and
+may be ignorable. It is less likely that mortality out of state S could be
+excluded.Subject CT4
+Models Core Technical
+April 2006
+Examiners Report
+104 Solutions
