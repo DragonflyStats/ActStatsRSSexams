@@ -1,0 +1,197 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+A3
+A motor insurer s No Claims Discount system uses the following levels of discount
+{0%, 25%, 40%, 50%}. Following a claim free year a policyholder moves up one
+discount level (or remains on 50% discount). If the policyholder makes one (or more)
+claims in a year they move down one level (or remain at 0% discount).
+The insurer estimates that the probability of making at least one claim in a year is 0.1
+if the policyholder made no claims the previous year, and 0.25 if they made a claim
+the previous year.
+New policyholders should be ignored.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(i) Explain why the system with state space {0%, 25%, 40%, 50%} does not form
+a Markov chain.
+[2]
+(ii) (a)
+Show how a Markov chain can be constructed by the introduction of
+additional states.
+(b)
+Write down the transition matrix for this expanded system, or draw its
+transition diagram.
+[4]
+(iii) Comment on the appropriateness of the current No Claims Discount system.
+[2]
+[Total 8]
+A3
+(i)
+AB
+t p 0
+AA AB
+t p 0 . t . dt
+lim
+dt
+0
+AB
+t p 0 (1
+AB
+t dt p 0
+AB
+t p 0
+dt
+BA
+t . dt
+BC
+t . dt
+AA AB
+t p 0 . t
+BD
+t . dt )
+AB BA
+t p 0 ( t
+o ( dt )
+BC
+t
+BD
+t )
+This is not a Markov chain because it does not possess the Markov property,
+that is transition probabilities do not depend only on the current state.
+Specifically, if you are in the 25% discount level, the transition probability to
+state 0% is 0.25 if a claim was made last year and 0.1 if the previous year was
+claim free.
+(ii)
+(a)
+Split the 25% and 40% discount states to include whether the previous
+year was claim free.
+New state space:
+0% discount
+25%NC (no claim last year)
+25%C (at least one claim last year)
+40%NC (no claim last year)
+40%C (at least one claim last year)
+50%
+Page 4Subject CT4
+Models Core Technical
+April 2006
+Examiners Report
+(b)
+0.9
+0.75
+0%
+25% 40%
+NC NC
+0.1
+0.25
+50%
+0.75
+0.75
+0.1
+0.25
+0.9
+25% 40%
+C C
+0.9
+0.1
+0.25
+New state
+(iii)
+0%
+25%C
+25%NC
+40%C
+40%NC
+50%
+0%
+0.25
+0.25
+0.1
+0
+0
+0
+25%C
+0
+0
+0
+0.25
+0.1
+0
+25%NC
+0.75
+0
+0
+0
+0
+0
+40%C
+0
+0
+0
+0
+0
+0.1
+40%NC
+0
+0.75
+0.9
+0
+0
+0
+50%
+0
+0
+0
+0.75
+0.9
+0.9
+In theory, the insurer should just use 2 NCD states according to whether the
+policyholder made a claim in the previous year. This is because the company
+believes the claims frequency is the same for drivers who have not made a
+claim for 1, 2, 3 years (i.e. it remains at 0.1 whether the driver has been
+claims-free for 1 or 10 years).
+However there may be other reasons for adopting this scale:
+Marketing or competitive pressures.
+It may discourage the policyholder from making small claims, or
+encourage careful driving, to preserve their discount.
+General comments:
+The following, more general comments about the appropriateness of an NCD
+model also received credit:
+It is appropriate to award a no-claims discount because there is empirical
+evidence that drivers who have made a recent claim are more likely to
+make a further claim.
+More factors should be taken into account (with a suitable example such
+as how long the policyholder has been driving).
+Page 5Subject CT4
