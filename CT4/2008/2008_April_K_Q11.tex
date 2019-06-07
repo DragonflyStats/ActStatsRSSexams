@@ -1,0 +1,216 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+11
+An investigation was carried out into the relationship between sickness and mortality
+in an historical population of working class men. The investigation used a three-state
+model with the states:
+1
+2
+3
+Healthy
+Sick
+Dead
+Let the probability that a person in state i at time x will be in state j at time x+t be
+ij
+ij
+t p x . Let the transition intensity at time x+t between any two states i and j be \mu x + t .
+\begin{enumerate}
+\item (i) Draw a diagram showing the three states and the possible transitions between
+them.
+
+\item (ii) Show from first principles that
+∂
+23
+21 13
+22 23
+t p x = t p x \mu x + t + t p x \mu x + t .
+∂ t
+\item (iii)
+
+Write down the likelihood of the data iN_the investigation iN_terms of the
+transition rates and the waiting times iN_the Healthy and Sick states, under the
+assumptioN_that the transition rates are constant.
+
+The investigation collected the following data:
+\begin{itemize}
+\item man-years in Healthy state : 265
+\item man-years in Sick state : 140
+\item number of transitions from Healthy to Sick : 20
+\item number of transitions from Sick to Dead : 40
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\item (iv) Derive the maximum likelihood estimator of the transition rate from Sick to
+Dead.
+
+\item (v) Hence estimate:
+(a)
+(b)
+the value of the constant transition rate from Sick to Dead
+95 per cent confidence intervals around this transition rate
+\end{enumerate}
+% [Total 17]
+% END OF PAPER
+% CT4 A2008—7
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+11
+(i)
+1 Healthy
+2 Sick
+3 Dead
+(ii)
+By the Markov assumption OR conditioning on the
+state occupied at time x+t
+t + dt 22
+23
+23
+33
+p x 23 = t p x 21 dt p 13
+x + t + t p x dt p x + t + t p x dt p x + t .
+But dt
+t + dt 22
+23
+23
+p x 23 = t p x 21 dt p 13
+x + t + t p x dt p x + t + t p x .
+p 33
+x + t = 1, so
+We now assume that
+dt
+p x 23 + t = μ 23
+x + t dt + o ( dt ) and
+dt
+=
+p 13
+= μ 13
+x + t dt + o ( dt )
+x + t
+o ( dt )
+= 0 .
+dt → 0 dt
+where o ( dt ) is defined such that lim
+Substituting for
+t + dt
+dt
+p x 23 + t and
+dt
+p 13
+x + t produces
+21 13
+23
+p x 23 = t p x 22 [ μ 23
+x + t dt + o ( dt )] + t p x [ μ x + t dt + o ( dt )] + t p x ,
+and, subtracting t p x 23 from both sides and taking limits
+gives
+d
+23
+22 23
+t p x − t + dt p x
+= t p x 21 μ 13
+t p x = lim
+x + t + t p x μ x + t
+→
+0
+dt
+dt
+dt
+Page 18Subject CT4 — Models Core Technical — April 2008 — Examiners’ Report
+(iii)
+The likelihood, L, is proportional to
+12
+21
+13
+exp[( −μ 12 − μ 13 ) v 1 ]exp[( −μ 23 − μ 21 ) v 2 ]( μ 12 ) d ( μ 21 ) d ( μ 13 ) d ( μ 23 ) d
+23
+where v i is the total observed waiting time in state i,
+and d ij is the number of transitions observed from
+state i to state j.
+(iv)
+Taking the logarithm of the likelihood in the
+answer to part (iii) gives
+log L = −μ 23 v 2 + d 23 log μ 23 + terms not involving μ 23
+Differentiating this with respect to μ 23 we obtain
+d log L
+d μ 23
+= − v 2 +
+d 23
+μ 23
+.
+Setting this to 0 we obtain the maximum likelihood
+estimator of μ 23
+^
+μ 23 =
+d 23
+v 2
+.
+This is a maximum because
+d 2 (log L )
+( d μ 23 ) 2
+=−
+d 23
+( μ 23 ) 2
+which is always negative.
+(v)
+(a) Therefore, if there are 40 transitions from
+the Sick state to the Dead state and 140 man-years
+observed in the sick state, the maximum
+40
+= 0.2857 .
+likelihood estimate of μ 23 is
+140
+(b) The maximum likelihood estimator of μ 23 has a
+μ 23
+, μ 23 is the true
+E [ V ]
+transition rate in the population and E [ V ] is the
+expected waiting time in the Sick state.
+variance equal to
+Page 19Subject CT4 — Models Core Technical — April 2008 — Examiners’ Report
+^
+Approximating μ 23 by μ 23 and E [ V ] by v 2 we
+0.2857
+estimate for the variance as
+= 0.00204 .
+140
+A 95 per cent confidence interval around our
+estimate of μ 23 is therefore 0.2857 ± 1.96 0.00204
+which is 0.2857 ± 0.0885
+or (0.1972, 0.3742).
+END OF EXAMINERS’ REPORT
+Page 20
+\end{document}
