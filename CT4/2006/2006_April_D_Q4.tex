@@ -1,0 +1,106 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+A4
+(i) Explain why the system with state space {0%, 25%, 40%, 50%} does not form
+a Markov chain.
+
+(ii) (a)
+Show how a Markov chain can be constructed by the introduction of
+additional states.
+(b)
+Write down the transition matrix for this expanded system, or draw its
+transition diagram.
+[4]
+(iii) Comment on the appropriateness of the current No Claims Discount system.
+
+[Total 8]
+(i) List the benefits of modelling in actuarial work. 
+(ii) Describe the difference between a stochastic and a deterministic model. 
+(iii) Outline the factors you would consider in deciding whether to use a stochastic
+or deterministic model to study a problem.
+
+(iv) Explain how a deterministic model might be used to validate model outcomes
+where a stochastic approach has been selected.
+
+[Total 9]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A4
+(i)
+Models Core Technical
+April 2006
+Examiners Report
+Systems with long time frames such as the operation of a pension fund can be
+studied in compressed time.
+Different future policies or possible actions can be compared to see which best
+suits the requirements or constraints of a user.
+Complex situations can be studied.
+Modelling may be the only practicable approach for certain actuarial
+problems.
+(ii)
+A model is described as stochastic if it allows for the random variation in at
+least one input variable.
+Often the output from a stochastic model is in the form of many simulated
+possible outcomes of a process, so distributions can be studied.
+A deterministic model can be thought of as a special case of a stochastic model where only a single outcome from the underlying random processes is considered.
+Sometimes stochastic models have analytical/closed form solutions, such that simulation is not required, but they are still stochastic as they allow for factors
+to be random variables.
+(iii)
+If the distribution of possible outcomes is required then stochastic modelling would be needed, or if only interested in a single scenario then
+deterministic.
+Budget and time available
+stochastic modelling can be considerably more expensive and time consuming.
+Nature of existing models.
+Audience for the results and the way they will be communicated.
+The following factors may favour a stochastic approach:
+The regulator may require a stochastic approach.
+Extent of non-linear variation
+for example existence of options or
+guarantees.
+Skewness of distribution of underlying variables, such as cost of storm claims.
+Interaction between variables, such as lapse rates with investment performance.
+Page 6Subject CT4
+Models Core Technical
+April 2006
+Examiners Report
+The following may favour a deterministic approach:
+Lack of credible historic data on which to fit distribution of a variable.
+If accuracy of result is not paramount, for example if a simple model with deliberately cautious assumptions is chosen so as not to underestimate costs.
+(iv)
+A deterministic result on best estimate assumptions could be compared with the mean and median outcomes from a stochastic approach.
+
+A deterministic model may also be used to calculate the expected or median outcome, with a stochastic approach being used to estimate the volatility around the central outcome.
+\end{document}
