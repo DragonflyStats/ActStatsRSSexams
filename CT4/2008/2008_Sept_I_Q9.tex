@@ -1,0 +1,197 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+\item %%- Question 8
+An education authority provides children with musical instrument tuition. The
+authority is concerned about the number of children giving up playing their
+instrument and is testing a new tuition method with a proportion of the children which
+it hopes will improve persistency rates. Data have been collected and a Cox
+proportional hazards model has been fitted for the hazard of giving up playing the
+instrument. Symmetric 95\% confidence intervals (based upon standard errors) for the
+regression parameters are shown below.
+Covariate
+Confidence Interval
+Instrument
+Piano
+Violin
+Trumpet 0
+[-0.05,0.19]
+[0.07,0.21]
+Tuition method
+Traditional
+New 0
+[-0.15,0.05]
+Sex
+Male
+Female
+[-0.08,0.12]
+0
+
+\begin{enumerate}[(i)]
+\item (i) Write down a general expression for the Cox proportional hazards model,
+defining all terms that you use.
+
+\item (ii) State the regression parameters for the fitted model. 
+\item (iii) Describe the class of children to which the baseline hazard applies. [1]
+\item (iv) Discuss the suggestion that the new tuition method has improved the chances
+of children continuing to play their instrument.
+\item 
+(v) Calculate, using the results from the model, the probability that a boy will still
+be playing the piano after 4 years if provided with the new tuition method,
+given that the probability that a girl will still be playing the trumpet after 4
+years following the traditional method is 0.7.
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+8
+\begin{itemize}
+\item (i)
+
+\[h ( z , t ) = h 0 ( t ).exp( \beta . z i T )\]
+where h(z,t) is the hazard at duration t
+h o (t) is the baseline hazard
+z i are the covariates
+\beta is the vector of regression parameters
+\item (ii)
+(iii)
+z 1 = 1 plays violin, 0 otherwise \beta 1 = 0.07
+z 2 = 1 plays trumpet, 0 otherwise \beta 2 = 0.14
+z 3 = 1 new tuition method, 0 otherwise \beta 3 = − 0.05
+z 4 = 1 male, 0 otherwise \beta 4 = 0.02
+\item Baseline hazard refers to
+a female,
+following traditional tuition method,
+playing the piano
+(iv)
+\item The parameter associated with the new tuition
+method is - 0.05. Because the parameter is negative, the hazard of dropping
+out is reduced by the new tuition method.
+\item Therefore the new tuition method does appear
+to improve the chances of a child continuing
+with his or her instrument.
+\item However the 95\% confidence interval for the parameter spans zero.
+\item So at the 5% significance level it is not possible to conclude that the new
+tuition method has improved the chances of children continuing to play their
+instrument.
+\item (v)
+The hazard for a girl being taught the trumpet by the traditional
+method giving up is h 0 ( t ) exp(0.14) .
+\item Therefore the probability of her still playing after 4 years is
+4
+⎛ 4
+⎞
+⎛
+⎞
+S female (4) = exp ⎜ − \int h 0 ( t ) exp(0.14) dt ⎟ = exp ⎜ − 1.150274 \int h 0 ( t ) dt ⎟
+0
+⎝ 0
+⎠
+⎝
+⎠
+Page 13%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2008 — Examiners’ Report
+\item Since this is equal to 0.7, we have
+4
+⎛
+⎞
+exp ⎜ − 1.150274 \int h 0 ( t ) dt ⎟ = 0.7, so that
+0
+⎝
+⎠
+4
+log e 0.7 = − 1.150274 \int h 0 ( t ) dt ,
+0
+4
+\end{itemize}
+
+and hence
+\int h 0 ( t ) dt =
+0
+log e 0.7
+= 0.310078.
+− 1.150274
+The hazard of giving up for a boy taught the piano by the new
+method is \[h 0 ( t ) exp( − 0.05 + 0.02) = h 0 ( t ) exp( − 0.03).\]
+Therefore the probability of him still playing after 4 years is
+⎛ 4
+⎞
+S male (4) = exp ⎜ − \int h 0 ( t ) exp( − 0.03) dt ⎟ = exp [ − 0.310078(0.970446) ]
+⎝ 0
+⎠
+which is exp( - 0.300914) = 0.74014.
+\newpage
+ALTERNATIVELY
+The hazard of giving up for a girl being taught the trumpet by the
+traditional method is $h 0 ( t ) exp( \beta 2 )$ .
+Therefore the probability of her still playing after 4 years is
+4
+⎛ 4
+⎞
+⎛
+⎞
+S female (4) = exp ⎜ − \int h 0 ( t ) exp( \beta 2 ) dt ⎟ = exp ⎜ − exp( \beta 2 ) \int h 0 ( t ) dt ⎟
+0
+⎝ 0
+⎠
+⎝
+⎠
+and hence
+4
+\int h 0 ( t ) dt =
+0
+log e [ S female (4)]
+− exp \beta 2
+= − exp( − \beta 2 ) log e [ S female (4)] .
+The hazard of a boy being taught the piano by the new
+method giving up is h 0 ( t ) exp( \beta 3 + \beta 4 ) .
+Page 14%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — April 2008 — Examiners’ Report
+Therefore the probability of him still playing after 4 years is
+4
+⎛
+⎞
+S male (4) = exp ⎜ − exp( \beta 3 + \beta 4 ) \int h 0 ( t ) dt ⎟ .
+0
+⎝
+⎠
+4
+Substituting for
+\int h ( t ) dt produces
+0
+0
+S male (4) = exp ( exp( \beta 3 + \beta 4 ) exp( − \beta 2 ) log e [ S female (4)] )
+= exp[exp(-0.05+0.02)exp(-0.14)log e (0.7)]
+= exp[0.970446 x 0.869358 x -0.356675)
+= 0.74014.
