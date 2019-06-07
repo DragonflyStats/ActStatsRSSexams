@@ -1,0 +1,205 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 3
+PLEASE TURN OVERA5
+Employees of a company are given a performance appraisal each year. The appraisal
+results in each employee s performance being rated as High (H), Medium (M) or Low
+(L). From evidence using previous data it is believed that the performance rating of an
+employee evolves as a Markov chain with transition matrix:
+H
+M
+2
+H 1
+P
+M
+L
+L
+2
+1 2
+2
+for some parameter
+1
+2
+.
+\begin{enumerate}[(a)]
+\item Draw the transition graph of the chain. 
+\item Determine the range of values for
+transition matrix. 
+for which the matrix P is a valid
+\item Explain whether the chain is irreducible and/or aperiodic.
+\item For = 0.2, calculate the proportion of employees who, in the long run, are in
+state L.
+
+\item (v) Given that = 0.2, calculate the probability that an employee s rating in the
+third year, X 3 , is L:
+(a)
+(b)
+(c)
+
+in the case that the employee s rating in the first year, X 1 , is H
+in the case X 1 = M
+in the case X 1 = L
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+A5
+(i)
+Transition graph given below.
+2
+1
+1 2
+State H
+State M
+2
+1
+2
+2
+State L
+(ii)
+Transition probabilities must lie in [0,1]. Thus we need
+and 1
+(iii)
+2
+0, 1 - 2
+0
+0.
+The solution of the quadratic is the interval 1
+2
+5 1
+,
+2
+2
+conditions are satisfied simultaneously for 1
+[0, ].
+2
+5
+, so all
+2
+The chain is both irreducible, as every state can be reached from every other
+state, and aperiodic, as the chain may remain at its current state for all H, M,
+L.
+Page 7Subject CT4
+(iv)
+Models Core Technical
+April 2006
+Examiners Report
+From the result in (iii), a stationary probability distribution exists and it is
+unique. Let = ( H , M , L ) denote the stationary distribution. Then, can be
+determined by solving P = .
+For
+= 0.2, the transition matrix becomes
+P
+0.76 0.2 0.04
+0.2
+0.04 0.6
+0.2 0.2
+0.76
+So that the system P =
+0.76
+0.2
+0.04
+H
+H
+H
++ 0.2
++ 0.6
++ 0.2
+reads
+M
+M
+M
++0.04
++0.2
++0.76
+L
+L
+L
+=
+=
+=
+(1)
+H
+M
+(2)
+L
+Discard the second of these equations and use also that the stationary
+probabilities must also satisfy
+H
++
+M
++
+L
+= 1
+(3)
+Subtracting (2) from (1) gives
+H
+=
+L .
+Substituting into (1) we obtain H = M , thus (3) gives that H = M =
+The proportion of employees who are in state L in the long run is 1/3.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(v)
+L
+The second order transition matrix is
+P
+2
+0.76 0.2 0.04 0.76 0.2 0.04
+0.2
+0.04 0.6
+0.2 0.2
+0.76 0.2
+0.04 0.6
+0.2 0.2
+0.76
+0.6192 0.28
+0.28
+0.44
+0.1008 0.28
+0.1008
+0.28
+0.6192
+The relevant entries are those in the last column, so that the answers are:
+(a)
+(b)
+(c)
+Page 8
+=1/3.
+0.1008
+0.28
+0.6192.Subject CT4
+\end{document}
