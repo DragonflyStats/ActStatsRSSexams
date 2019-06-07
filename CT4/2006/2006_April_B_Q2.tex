@@ -1,0 +1,195 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+Institute of Actuaries103 Questions
+A1
+In the context of a stochastic process {X t : t
+following conditions:
+(a)
+(b)
+J}, explain the meaning of the
+strict stationarity
+weak stationarity
+
+A2
+A savings provider offers a regular premium pension contract, under which the customer is able to cease paying in premiums and restart them at a later date. In order
+to profit test the product, the provider set up the four-state Markov model shown in the following diagram:
+Policy
+matured
+(D)
+AD
+t
+Premium
+paying
+(A)
+BD
+t
+Premiums
+ceased/paid up
+(B)
+AB
+t
+BA
+t
+BC
+t
+AC
+t
+Policy
+surrendered
+(C)
+Show, from first principles, that under this model:
+t
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 2
+t
+p 0 AB
+t
+p 0 AA .
+AB
+t
+t
+p 0 AB .(
+BA
+t
+BC
+t
+BD
+t )
+A3
+A motor insurer s No Claims Discount system uses the following levels of discount
+{0%, 25%, 40%, 50%}. Following a claim free year a policyholder moves up one
+discount level (or remains on 50% discount). If the policyholder makes one (or more)
+claims in a year they move down one level (or remain at 0% discount).
+The insurer estimates that the probability of making at least one claim in a year is 0.1
+if the policyholder made no claims the previous year, and 0.25 if they made a claim
+the previous year.
+New policyholders should be ignored.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+103 Solutions
+A1
+(a)
+For a process to be strictly stationary, the joint distribution of X t 1 , X t 2 ,..., X t n
+and X t
+t 1 , X t t 2 ,..., X t t n
+are identical for all t , t 1 , t 2 ,..., t n in J and all integers
+n.
+This means that the statistical properties of the process remain unchanged over
+time.
+(b)
+Because strict stationarity is difficult to test fully in real life, we also use the
+less stringent condition of weak stationarity.
+Weak stationarity requires that the mean of the process, E[X t ] = m(t), is
+constant and the covariance, E[(X s - m(s)) (X t - m(t))], depends only on the
+time difference t s.
+A2
+Condition on the state occupied at time t to consider the survival probability
+t dt
+p 0 AB (this requires the Markov property):
+t dt
+p 0 AB
+Observe that
+dt
+t
+p 0 AA . dt p t AB
+p t CB
+DB
+dt p t
+t
+p 0 AB . dt p t BB
+t
+p 0 AC . dt p t CB
+t
+p 0 AD . dt p t DB
+0
+From the law of total probability:
+dt
+p t BB
+Substituting for
+t dt
+p 0 AB
+1
+dt
+p t BA
+BC
+dt p t
+dt
+p t BD
+BB
+dt p t
+t
+p 0 AA . dt p t AB
+t
+p 0 AB .(1
+BA
+dt p t
+BC
+dt p t
+BD
+dt p t )
+For small dt:
+dt p t BA
+dt p t BC
+dt p t BD
+dt p t AB
+BA
+t . dt
+BC
+t . dt
+BD
+t . dt
+AB
+t . dt
+o ( dt )
+o ( dt )
+o ( dt )
+o ( dt )
+Page 3Subject CT4
+Models Core Technical
+April 2006
+Examiners Report
+Where o(dt) covers the possibility of more than one transition in time dt and
+lim o ( dt )
+dt 0 dt
+0
+Substituting in:
+AB
+t dt p 0
+t
+
+\end{document}
