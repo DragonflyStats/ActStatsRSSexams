@@ -1,0 +1,185 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+[Total 9]10
+11
+A study is undertaken of marriage patterns for women in a country where bigamy is
+not permitted. A sample of women is interviewed and asked about the start and end
+dates of all their marriages and where the marriages had ended, whether this was due
+to death or divorce (all other reasons can be ignored). The investigators are interested
+in estimating the rate of first marriage for all women and the rate of re-marriage
+among widows.
+\begin{enumerate}
+\item (i) Draw a diagram illustrating a multiple-state model which the investigators
+could use to make their estimates, using the four states: “Never married”,
+“Married”, “Widowed” and “Divorced”.
+
+\item (ii) Derive from first principles the Kolmogorov differential equation for first
+marriages.
+\item 
+(iii) Write down the likelihood of the data in terms of the waiting times in each
+state, the numbers of transitions of each type, and the transition intensities,
+assuming the transition intensities are constant.
+\item 
+(iv) Derive the maximum likelihood estimator of the rate of first marriage.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Question 10
+(i)
+(ii)
+1 Never married 2 Married
+3 Widowed 4 Divorced
+Using the numbering of the states above, let the probability that a women who is in
+state i at time x will be in state j at time x + t be t p ij x .
+Using the Markov property, and conditioning on the state occupied
+at time x + t,
+and noting that for first marriages return from the widowed or
+divorced state is not possible, we can write
+t + dt
+11
+12
+12
+22
+p 12
+x = t p x dt p x + t + t p x dt p x + t
+Using the law of total probability,
+dt
+p x 22 + t = 1 − dt p x 23 + t − dt p x 24 + t ,
+so that
+t + dt
+11
+12
+12
+23
+24
+p 12
+x = t p x dt p x + t + t p x (1 − dt p x + t − dt p x + t )
+Let the transition rate from state i to state j at time x+t be \mu ijx + t .
+Assume that
+Page 12
+dt
+p ij x + t = \mu ij x + t dt + o ( dt ) , i ≠ j %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+o ( dt )
+= 0 .
+dt → 0 + dt
+where lim
+Substituting for the
+t + dt
+t
+p ij x in the equation above produces
+11 12
+12
+23
+24
+p 12
+x = t p x \mu x + t dt + t p x (1 − \mu x + t dt − \mu x + t dt ) + o ( dt )
+Therefore
+t + dt
+12
+11 12
+12 23
+12 24
+p 12
+x − t p x = t p x \mu x + t dt − t p x \mu x + t dt − t p x \mu x + t dt + o ( dt )
+and, taking limits, we have
+lim
+dt → 0 +
+t + dt
+12
+p 12
+12
+12 23
+12 24
+x − t p x
+= t p 11
+x \mu x + t − t p x \mu x + t − t p x \mu x + t
+dt
+So
+d 12
+11
+12
+12 23
+12 24
+t p x = t p x \mu x + t − t p x \mu x + t − t p x \mu x + t
+dt
+%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{itemize}
+\item (iii)
+Let the waiting time in state i be v i ,
+and the number of transitions from state i to state j be d ij
+and the transition intensity from state i to state j is \mu ij
+\item Then the likelihood, L, may be written
+\[L = K exp[ − v 1 \mu 12 − v 2 ( \mu 23 + \mu 24 ) − v 3 \mu 32 − v 4 \mu 42 ] \mu 12 d 12 \mu 23 d 23 \mu 24 d 24 \mu 32 d 32 \mu 42 d 42 .\]
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%
+(iv)
+The logarithm of the likelihood is
+log e L = log e K − v 1 \mu 12 − v 2 ( \mu 23 + \mu 24 ) − v 3 \mu 32 − v 4 \mu 42
++ d 12 log e \mu 12 + d 23 log e \mu 23 + d 24 log e \mu 24 + d 32 log e \mu 32 + d 42 log e \mu 42
+Differentiating with respect to \mu 12 gives
+d
+\partial L
+= − v 1 + 12 .
+\partial\mu 12
+\mu 12
+Page 13 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+Setting this equal to 0 and solving for \mu 12 gives
+^
+\mu 12 =
+d 12
+.
+v 1
+This is a maximum because
+\partial 2 L
+\partial\mu 12
+2
+=−
+d 12
+\mu 12 2
+which is negative.
+Answers to (i), (iii) and (iv) were generally good. In (i) the arrows from Widowed to Married
+and Divorced to Married were not required for full marks, as the question is about first
+marriages. Answers to (ii) were more disappointing, with many candidates omitting steps in
+32
+14 42
+the argument. In (ii), some candidates included the extra terms + t p 13
+x \mu x + t + t p x \mu x + t . Since it
+is just about possible to interpret the question in a way such that these should be included,
+this was not heavily penalised.
+\end{itemize}
+\end{document}
