@@ -1,0 +1,135 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%PLEASE TURN OVER10
+An investigation was conducted into the effect marriage has on mortality and a model
+was constructed with three states: 1 Single, 2 Married and 3 Dead. It is assumed that
+transition rates between states are constant.
+\begin{enumerate}
+\item (i) Sketch a diagram showing the possible transitions between states.
+\item 
+(ii) Write down an expression for the likelihood of the data in terms of transition
+rates and waiting times, defining all the terms you use.
+\medskip 
+The following data were collected from information on males and females in their
+thirties.
+Years spent in Married state
+Years spent in Single state
+Number of transitions from Married to Single
+Number of transitions from Single to Dead
+Number of transitions from Married to Dead
+11
+40,062
+10,298
+1,382
+12
+9
+\item (iii) Derive the maximum likelihood estimator of the transition rate from Single to
+Dead.
+
+\item (iv) Estimate the constant transition rate from Single to Dead and its variance. 
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%5
+
+\newpage
+10
+(i)
+1. Single
+2. Married
+3. Dead
+(ii)
+{ (
+12
+13
+L ∝ exp −\mu − \mu
+) ν } exp { ( −\mu
+1
+23
+−\mu
+21
+) ν } ( \mu ) ( \mu ) ( \mu ) ( \mu )
+2
+12
+d 12
+21
+d 21
+13
+d 13
+23
+d 23
+where
+\mu ij is the transition intensity from state i to state j
+ν i is the total observed waiting time in state i
+d ij is the number of transitions from state i to state j
+Page 13Subject CT4 (Models) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+(iii)
+Taking the logarithm of the likelihood we get
+log e ( L ) = −\mu 13 ν 1 + d 13 log e ( \mu 13 ) + terms not involving \mu 13 .
+13
+Differentiate with respect to \mu
+d ln( L )
+d \mu 13
+1
+= −ν +
+d 13
+\mu 13
+.
+Setting this to zero we obtain
+\mu ˆ 13 =
+d 13
+ν 1
+.
+To check it is a maximum differentiate again giving
+d 2 log e ( L )
+( d \mu 13 ) 2
+(iv)
+=−
+d 13
+( \mu 13 ) 2
+which is always negative.
+The maximum likelihood estimate of \mu 13 is 12/10,298 = 0.001165.
+The variance is
+− 1
+d 2 ln( L )
+( d \mu 13 ) 2
+= 12
+10, 298 2
+= 1.13 x 10 -7 .
+This was the best answered question on the paper, with most candidates scoring at least 9 of
+the 11 marks available. In part (ii) many candidates omitted the constant of proportionality.
+In part (iv) the question says “estimate”, so we needed some indication of where the answers
+came from for full marks.
+\end{document}
