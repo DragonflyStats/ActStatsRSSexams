@@ -1,0 +1,140 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%- Question 5
+For a particular investigation the hazard of mortalitY_is assumed to take the form:
+h ( t ) = A + Bt
+where A and B are constants and t represents time.
+For each life i in the investigation (i = 1, ..., n) information was collected on the
+length of time the life was observed t i and whether the life exited due to death ( \delta  i = 1
+if the life died, 0 otherwise).
+\begin{enumerate}
+\item (i)
+Show that the likelihood of the data is given by:
+n
+L = \product^{n}_{i = 1} ( A + Bt i ) \delta  i exp[ − At i −
+i = 1
+6
+1 2
+Bt i ] .
+2
+\item 
+(ii) Derive two simultaneous equations from which the maximum likelihood
+estimates of the parameters A and B can be calculated.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+5
+(i)
+The likelihood of the data is given by:
+n
+L = \product^{n}_{i = 1} f ( t i ) \delta  i S ( t i ) 1 −\delta  i ,
+i = 1
+where f(t i ) is the probability density function and S(t i ) is the survivor function.
+Since f(t i ) is related to the hazard function by
+f(t i ) = h(t i ) S(t i )
+the likelihood can be rewritten:
+
+\[L = \product^{n}_{i = 1} h ( t i ) \delta  i S ( t i ).\]
+%%%%%%%%%%%%5
+Since
+⎡ t i
+⎤
+1
+S ( t i ) = exp ⎢ − ∫ h ( r ) dr ⎥ = exp[ − At i − Bt i 2 ],
+2
+⎢ r = o
+⎥
+⎣
+⎦
+n
+1
+L = \product^{n}_{i = 1} ( A + Bt i ) \delta  i exp[ − At i − Bt i 2 ] as required.
+2
+i = 1
+(ii)
+The log likelihood is given by:
+n
+1
+⎡
+⎤
+log L = ∑ ⎢ \delta  i log( A + Bt i ) − At i − Bt i 2 ⎥ .
+2
+⎦
+i = 1 ⎣
+We are trying to maximise likelihood with respect to two parameters,
+so need partial differentials with respect to A and B:
+n
+⎡ \delta  i
+⎤
+∂
+log L = ∑ ⎢
+− t i ⎥ ,
+∂ A
+⎦
+i = 1 ⎣ A + Bt i
+Page 5Subject CT4 (Models) – April 2012 – Examiners’ Report
+n
+⎡ \delta  t
+1 ⎤
+∂
+log L = ∑ ⎢ i i − t i 2 ⎥ .
+∂ B
+2 ⎦
+i = 1 ⎣ A + Bt i
+The simultaneous equations satisfied by the MLEs are obtained by
+setting these to zero:
+n
+⎡
+⎤
+\delta 
+∑ ⎢ A + i Bt i − t i ⎥ = 0,
+i = 1 ⎣
+n
+⎡ \delta  t
+⎦
+1
+⎤
+∑ ⎢ A + i Bt i i − 2 t i 2 ⎥ = 0.
+i = 1 ⎣
+⎦
+In part (i) many candidates failed to explain where the components of the likelihood came
+from by explaining the different contributions of the lives who were observed to die and those
+who were not. In part (ii) credit was given for knowing the correct method even if this was
+not executed. Credit was also given for differentiating a second time and showing that the
+second derivatives were negative (and hence that we do have maxima), even though this was
+not required for full marks.
+
+\end{document}
