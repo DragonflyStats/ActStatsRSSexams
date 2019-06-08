@@ -1,3 +1,37 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
 [Total 10]
 Consider the time series
 Y t = 0.1 + 0.4Y t−1 + 0.9e t−1 + e t
@@ -37,8 +71,14 @@ E(Y t ) = 0.1 + 0.4E(Y t−1 )
 = 0.1666666
 1 − 0.4
 Note that
-Cov(Y t , e t ) = Cov(0.1 + 0.4Y t−1 + 0.9e t−1 + e t , e t )
-= 0.4Cov(Y t−1 , e t ) + 0.9Cov(e t−1 , e t ) + Cov(e t , e t ) = 0 + 0 + \sigma^{2} = \sigma^{2}
+\begin{eqnarray*}
+Cov(Y t , e t ) &=& Cov(0.1 + 0.4Y t−1 + 0.9e t−1 + e t , e t )\\
+&=& 0.4Cov(Y t−1 , e t ) + 0.9Cov(e t−1 , e t ) + Cov(e t , e t ) \\
+&=& 0 + 0 + \sigma^{2} \\
+&=& \sigma^{2}\\
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 Similarly
 Cov(Y t ,e t−1 ) =0 + 0.4Cov(Y t−1 , e t−1 ) + 0.9Cov(e t−1 , e t−1 ) + Cov(e t ,e t−1 )
 = 0.4\sigma^{2} + 0.9\sigma^{2} + 0 = 1.3\sigma^{2}
