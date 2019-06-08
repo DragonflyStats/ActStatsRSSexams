@@ -31,46 +31,58 @@
 \renewcommand{\baselinestretch}{1.3}
 \setcounter{MaxMatrixCols}{10}
 \begin{document} 
-
-3
-The following two models have been suggested for representing some quarterly data
+\large
+%%- Question 3
+\noindent The following two models have been suggested for representing some quarterly data
 with underlying seasonality.
-Model 1
-Model 2
-Y t = \alpha Y t − 4 + e t
-Y t = \beta e t − 4 + e t
-Where e t is a white noise process in each case.
-(i)
-Determine the auto-correlation function for each model.
 
+\begin{description}
+\item[Model 1] ${ \displaystyle  Y_t = \alpha Y_{t − 4} + e_t }$
+\item[Model 2] ${ \displaystyle Y_t = \beta e_{t − 4} +  e_t }$
+\end{description}
+
+
+Where $e_t$ is a white noise process in each case.
+\begin{enumerate}[(a)]
+\item
+Determine the auto-correlation function for each model.
+\item 
 The observed quarterly data is used to calculate the sample auto-correlation.
-(ii)
 State the features of the sample auto-correlation that would lead you to prefer
 Model 1.
-
-[Total 5]
-CT6 A2010—24
+\end{enumerate}
+%% [Total 5]
+%% CT6 A2010—24
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-3
-(i)
-Model 1
+%% 3
+%% (i)
+\noindent \textbf{Part (a)} \\
+\noindent \textbf{Model 1} \\
+
 In general we have γ k = \alphaγ k − 4
 Taking covariance with Y t , Y t − 1 , Y t − 2 , Y t − 3 we get:
 γ 1 = \alphaγ 3
 γ 2 = \alphaγ 2
 γ 3 = \alphaγ 1
-For \alpha ≠ 0 these equations imply that ρ k = 0 unless k is divisible by 4.
-Page 2%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2010 — Examiners’ Report
+For $\alpha \neq 0$ these equations imply that ρ k = 0 unless k is divisible by 4.
+
 So we have ρ 4 k = \alpha k and all other autocorrelations are zero.
-Model 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2010 — Examiners’ Report
+\noindent \textbf{Model 2} \\
 Here we have γ k = 0 unless k=4 and k=0. In these cases
 .
-So ρ 0 = 1 ,
+So $\rho_0 = 1$ ,
 (ii)
 and all the other autocorrelations are zero.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \textbf{Part (b)} \\
 Model 1 is preferred in situations where the sample auto-correlation is non-
 zero and decays exponentially.
-Comment: This question was reasonably well attempted, although a number of candidates
-dropped marks especially in calculating the ACF of Model 1.
+
+%% Comment: This question was reasonably well attempted, although a number of candidates
+%% dropped marks especially in calculating the ACF of Model 1.
+\end{document}
