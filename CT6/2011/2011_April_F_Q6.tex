@@ -1,13 +1,49 @@
-6
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%- Question 6
 The double exponential distribution with parameter \lambda  > 0 has density given by
 g(x) = 1⁄2\lambda e – \lambda |x| x ∈ \ .
-(i) Construct an algorithm for generating samples from this distribution.
 
+\begin{enumerate}[(a)]
+\item (i) Construct an algorithm for generating samples from this distribution.
+\item 
 (ii) Construct an algorithm for producing samples from a N(0,1) distribution using
 samples from the double exponential distribution and the acceptance-rejection
 method.
-[6]
-[Total 9]
+\end{enumerate}
 
 
 
@@ -99,6 +135,9 @@ So algorithm is as follows:
 Generate x as in part (i)
 Generate u from U(0,1)
 If u ≤ h(x) then set y = x otherwise return to (A)
-This question was poorly answered. Only the strongest candidates treated the
-modulus in the pdf correctly. There was also difficulty deriving both parts of the
-inverse function for both the u ≥ 0.5 and the u < 0.5 case.
+
+
+%% This question was poorly answered. Only the strongest candidates treated the modulus in the pdf correctly. There was also difficulty deriving both parts of the inverse function for both the u ≥ 0.5 and the u < 0.5 case.
+
+
+\end{document}
