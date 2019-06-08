@@ -40,7 +40,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% -- question 7 
-
+\large
 \noindent A continuous random variable $X$ has the cumulative distribution function $F_X(x)$ given
 by:
 
@@ -48,7 +48,7 @@ by:
 \[ F_X(x) = \begin{cases}
 0, & x <0 \\
 \frac{1}{8}x^3 , & 0 \leq x \leq 2\\
-1, x > 2 \\
+1& x > 2 \\
 \end{cases}\]
 
 \begin{enumerate}[(a)]
@@ -61,33 +61,13 @@ Let $Y =  \sqrt{X}$
 function of $Y$. 
 \item Calculate the expected values of $X$ and $Y$. 
 \end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%CT3 A2015–4
-%%--Question 8 
-\item The random variables X and Y have a joint probability distribution with density
-function:
-  3 , 0 1
-, )
-0, otherwise
-xy (
-  x y x
-  f x y
-     
-  
-  
-  
-\begin{enumerate}[(i)]
-\item Determine the marginal densities of $X$ and $Y$. 
-\item State, with reasons, whether $X$ and $Y$ are independent. 
-\item Determine $E[X]$ and $E[Y]$. 
-\end{enumerate}
-  
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-  7 (i)     3 2
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-(i) 
+\medskip
+\noindent \textbf{Part (a)}
 \begin{eqnarray*}
 f ( x ) &=& F ^{\prime} ( x ) \\  
 &=& \frac{3}{8} x^2 \mbox{ for } 0 \leq y \leq 2
@@ -96,7 +76,8 @@ f ( x ) &=& F ^{\prime} ( x ) \\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-(ii) 
+\medskip
+\noindent \textbf{Part (b)}
 
 \begin{eqnarray*}
 P [ 0.5 \leq  X \leq  1 ] &=& F ( 1 ) \; - \; F ( 0.5 ) \\
@@ -108,7 +89,12 @@ P [ 0.5 \leq  X \leq  1 ] &=& F ( 1 ) \; - \; F ( 0.5 ) \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-(iii) Distribution function for $0 \leq y \leq \sqrt{2}$ :
+\medskip
+\noindent \textbf{Part (c)}\\
+\noindent Determine the cumulative distribution function and the probability density
+function of $Y$. 
+
+Distribution function for $0 \leq y \leq \sqrt{2}$ :
 
 \begin{eqnarray*}
 P \left[ Y \leq y right] 
@@ -122,7 +108,10 @@ Density function for $0 \leq y \leq \sqrt{2}$ :
 
 \[f_Y ( y ) = \frac{6}{8} y^5 \]
 
-(iv)
+\medskip
+\noindent \textbf{Part (d)}\\
+
+\noindent Calculate the expected values of $X$ and $Y$. 
 \begin{eqnarray*}
 E(X) &=& \frac{3}{8} \int^{2}_{0} x^3 dx \\
 &=& \frac{3}{8} \left[ \frac{x^4}{4} \right]^{2}_{0} \\
@@ -138,10 +127,9 @@ E(Y) &=& \frac{6}{8} \int^{\sqrt{2} }_{0} y^6 dy \\
 &=& \frac{6}{56 } \left[( \sqrt{2}^7) \;-\; (0)^7 \right] \\
 &=& \frac{6}{56 } \left[ 8 \times 2^{0.5} \right] \\
 &=& \frac{48 \times \sqrt{2} }{56}\\
-&=& 1.212183\\
+&=& 1.2122\\
 \end{eqnarray*}
-  8 8 7 56
-  E Y  y dy   y      
+
  % \item Most candidates did very well. However, candidates that were not very competent with
  % differentiation and integration of functions made basic errors.
  \end{document}
