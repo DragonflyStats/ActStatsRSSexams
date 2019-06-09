@@ -1,3 +1,37 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
 %% -- [Total 7]5
 Population censuses in a certain country are taken each year on the President’s
 birthday, provided that the President’s astrological advisor deems the taking of a
@@ -38,37 +72,7 @@ the period between the 2009 and 2010 censuses
 Explain the exact age to which your estimates apply.
 
 
-%% -- [Total 7]
-6
-(i) State the form of the hazard function for the Cox Regression Model, defining
-all the terms used.
 
-(ii) State two advantages of the Cox Regression Model.
-
-Susanna is studying for an on-line test. She has collected data on past attempts at the
-test and has fitted a Cox Regression Model to the success rate using three covariates:
-Employment Z 1 = 0 if an employee, and 1 if self-employed
-Attempt
-Z 2 = 0 if first attempt, and 1 if subsequent attempt
-Study time
-Z 3 = 0 if no study time taken, and 1 if study time taken
-Having analysed the data Susanna estimates the parameters as:
-Employment 0.4
-Attempt
-−0.2
-Study time
-1.15
-Bill is an employee. He has taken study time and is attempting the test for the second time. Ben is self-employed and is attempting the test for the first time without taking
-study time.
-(iii)
-Calculate how much more or less likely Ben is to pass, compared with Bill. 
-Susanna subsequently discovers that the effect of the number of attempts is different
-for employees and the self-employed.
-(iv)
-7
-Explain how the model could be adjusted to take this into account.
-
-%% -- [Total 9]
 
 %%%%%%%%%%%%%%%%%%%%
 5
@@ -111,46 +115,3 @@ A common error in part (i) was to use equal time periods, whereas the period 200
 the script close to the relevant bit of calculation. Candidates who listed many assumptions, both necessary and unnecessary, in a block at the end of the answer were penalised. In part
 (i), some candidates calculated q x rather than \mu x . Full credit was given for this provided that the initial exposed-to-risk was used as the denominator. In part (ii) the age to which q x
 applies is 64.5 years (i.e. the age at the start of the rate interval), and for full credit the answers to parts (i) and (ii) had to be consistent.
-Page 7Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-6
-(i)
-\lambda(t:Z i ) = \lambda 0 (t) exp (\beta Z iT )
-Where:
-\lambda(t:Z i) is the hazard at time t
-\lambda 0 (t) is the baseline hazard
-Z i is a vector of covariates
-\beta is a vector of regression parameters
-(ii)
-It ensures the hazard is always positive.
-The log-hazard is linear.
-You can ignore the shape of the baseline hazard and calculate the effect of covariates
-directly from the data.
-It is widely available in standard computer packages OR is a popular, well-established
-model.
-(iii)
-Ben, self-employed, first attempt, no study has hazard \lambda 0 (t) exp(0.4)
-Bill, employee, re-sit, study leave has hazard \lambda 0 (t) exp (0.95)
-So Ben is only exp(−0.55) = 57.7% as likely to pass as Bill OR 42.3% less likely to
-pass than Bill.
-OR
-Bill is 73% more likely to pass than Ben
-(iv)
-The model could be adjusted by including a covariate measuring the interaction
-between the number of attempts and employment status.
-The covariate would be equal to Z 1 Z 2 and would take the value 1 for a self-employed
-person on his or her second or subsequent attempt, and 0 otherwise.
-The effect of the number of attempts for an employee would be equal to exp(\beta 2 ),
-where \beta 2 is the parameter related to Z 2 , For a self-employed person, the effect of the
-number of attempts would be equal to exp(\beta 2 + \beta 3 ), where \beta 3 is the parameter related
-to the interaction term.
-This question was well answered by many candidates. In part (iii) the question asked
-candidates to “calculate” so the correct numerical answer scored full credit. However a
-common error was to use ambiguous or incorrect wording in the final comparison (e.g. Bill
-Page 8Subject CT4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-is 57.7 per cent less likely to pass than Ben). In part (iv) no credit was given for the addition
-of covariates with no bearing on the interaction term. However redundant parameters were
-not penalised provided the modification to the model allowed the interaction to be quantified.
-
-
-\newpage
-
