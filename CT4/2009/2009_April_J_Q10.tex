@@ -1,0 +1,162 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+[Total 9]
+CT4 A2009—4
+10
+Let $T_x$ be a random variable denoting future lifetime after age x, and let T be
+another random variable denoting the lifetime of a new-born person.
+\item (i)
+\item (ii)
+(a) Define, in terms of probabilities, $S_x(t)$ , which represents the survival
+function of $T_x$ .
+(b) Derive an expression relating $S_x(t)$ to $S ( t )$ , the survival function of $T$.
+
+Define, in terms of probabilities involving T x , the force of mortality, \mu x + t .
+
+The Weibull distribution has a survival function given by
+
+\[
+S_x(t) = exp − ( \lambda t ) \beta ,
+\]
+where $\lambda$ and $\beta$ are parameters ($\lambda, \beta > 0$).
+\item (iii)
+Derive an expression for the Weibull force of mortality in terms of $\lambda$ and $\beta$.
+
+(iv)
+Sketch, on the same graph, the Weibull force of mortality for $0 \leq t \leq 5$ for the
+following pairs of values of $\lambda$ and $\beta$:
+\lambda = 1, \beta = 0.5
+\lambda = 1, \beta = 1.0
+\lambda = 1, \beta = 1.5
+
+[Total 10]
+CT4 A2009—5
+10
+\item (i)
+(a) $S_x(t) = Pr[ T x > t ]$
+(b) EITHER
+Since 
+\begin{eqnarray*} Pr[ T x > t ] &=& Pr[ T > x + t | T > x ] \\ &=&
+Pr[ T > x + t ] \times
+Pr[ T > x ]
+\end{eqnarray*}
+and S ( t ) = Pr[ T > t ] ,
+then S_x(t) =
+S ( x + t )
+.
+S ( x )
+OR
+Since S_x(t) = t p x , then using the consistency principle
+x + t p 0 = t p x . x p 0
+Therefore t p x = S_x(t) =
+\item (ii)
+p 0 S ( x + t )
+=
+.
+S ( x )
+x p 0
+x + t
+EITHER
+\mu x + t = −
+1
+d
+[Pr( T x > t )]
+Pr[ T x > t ] dt
+OR
+\mu x + t = lim
+h → 0
+\item (iii)
++
+1
+( Pr[ T x ≤ t + h | T x > t )
+h
+EITHER
+If the density function of T x is $f_x ( t )$ , then we can write
+f x ( t ) = S_x(t) \mu x + t = −
+d
+S_x(t)
+dt
+Page 13%%%%%%%%%%%%%%%%%%%%%%%%%%%— %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+Therefore \mu x + t = −
+1 d
+S_x(t)
+S_x(t) dt
+(
+)
+If $S_x(t) = exp − ( \lambda t ) \beta$ , therefore, we have
+\mu x + t = −
+\mu x + t = −
+(
+1
+exp − ( \lambda t ) \beta
+)
+(
+d
+exp − ( \lambda t ) \beta
+dt
+)
+( exp ( − ( \lambda t ) ) ) ( −\lambda \beta t ) = \lambda \beta t
+exp ( − ( \lambda t ) )
+1
+\beta
+\beta
+OR
+⎡ t
+⎤
+S_x(t) = exp ⎢ − \int \mu x + s ds ⎥ = exp ⎡ − ( \lambda t ) \beta ⎤ .
+⎣
+⎦
+⎢ ⎣ 0
+⎥ ⎦
+So
+t
+⎤
+d ⎡
+d
+⎢ \int \mu x + s ds ⎥ = \mu x + t = ⎡ ( \lambda t ) \beta ⎤ ,
+⎦
+dt ⎢
+dt ⎣
+⎥ ⎦
+⎣ 0
+and hence
+\mu x + t = \beta\lambda \beta t \beta− 1 .
+(iv)
+Page 14
+\beta
+\beta− 1
+\beta
+\beta− 1%%%%%%%%%%%%%%%%%%%%%%%%%%%— %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+
+\end{document}
