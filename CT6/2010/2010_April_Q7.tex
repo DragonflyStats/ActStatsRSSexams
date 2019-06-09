@@ -67,15 +67,18 @@ c
 7
 (i)
 
+%%-- 1
+
+\[ \int^{c}_{0} a e^{-lambda x}dx \;=\; 1\]
+
 \begin{eqnarray*}
-1 &=& \int^{c}_{0} ae^{ −\lambda x} dx \\
-&=& \left[ − \frac{a}{\lambda} e^{ −\lambda x} \right]^{c}_{0} \\
-&=& \frac{a}{\lambda} \left(1 − e^{ −\lambda c} \right) \\
-\end{eqnarray*}
+\int^{c}_{0} a e^{-lambda x}dx &=& \left[ - \frac{a}{\lambda} e^{-lambda x} \left] ^{c}_{0} \\
+&=& \frac{a}{\lambda} \left( 1 \;-\; e^{-lambda c} \right) \\
+\edn{eqnarray*}
 
-\[  a  \;=\; \frac{\lambda}{1 \;-\; e^{ −\lambda c} \]
+So \[ a \;=\; \frac{\lambda}{ 1 \;-\; e^{-lambda c}} \]
 
-%---------%
+%-------------------%
 
 (ii)
 The distribution function is
@@ -86,6 +89,19 @@ F(x) &=& \int^{x}_{0} ae^{ −\lambda y} dy \\
 &=& \frac{1 − e^{ −\lambda x}}{1 − e^{ −\lambda c}\\
 \end{eqnarray*}
 
+
+
+
+\begin{array*} 
+F(x) &=& \int^{x}_{0} a e^{-lambda y}dy \\
+&=& \left[  - \frac{a}{\lambda}  e^{-lambda y} \right]^{x}_{0}\\
+&=& \frac{a}{\lambda} \left( 1 \;-\; e^{-lambda cx \right) \\
+&=& a \frac{1}{\lambda} \left( 1 \;-\; e^{-lambda cx \right) \\
+&=& \left(\frac{\lambda}{ 1 \;-\; e^{-lambda c}}\right) \times \frac{1}{\lambda} \left( 1 \;-\; e^{-lambda cx \right) \\
+&=& \left(\frac{1 \;-\; e^{-lambda x}}}{ 1 \;-\; e^{-lambda c}}\right)
+\end{eqnarray*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--------------------------%
 
 The required transformation is therefore given by:
