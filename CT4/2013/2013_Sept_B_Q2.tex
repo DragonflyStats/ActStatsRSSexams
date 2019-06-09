@@ -1,0 +1,161 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+2
+Data are often subdivided when investigating mortality statistics.
+(i) Explain why this is done.
+[2]
+(ii) Discuss one potential problem with sub-dividing mortality data.
+[2]
+(iii) List four factors which are commonly used to sub-divide mortality data.
+[2]
+[Total 6]
+The two football teams in a particular city are called United and City and there is
+intense rivalry between them. A researcher has collected the following history on the
+results of the last 20 matches between the teams from the earliest to the most recent,
+where:
+U indicates a win for United;
+C indicates a win for City;
+D indicates a draw.
+UCCDDUCDCUUDUDCCUDCC
+The researcher has assumed that the probability of each result for the next match
+depends only on the most recent result. He therefore decides to fit a Markov chain to
+this data.
+3
+(i) Estimate the transition probabilities for the Markov chain.
+[3]
+(ii) Estimate the probability that United will win at least two of the next three
+matches against City.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Page 3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2
+(i)
+Need to rearrange data as tally chart of next states:
+Previous state Number where next state is:
+U
+C
+D
+U
+C
+D 1
+11
+11
+11
+111
+111
+111
+11
+1
+So the transition probabilities are estimated as:
+(ii)
+From/To U C D
+U
+C
+D 1/6
+2/7
+1/3 1/3
+3/7
+1/2 1/2
+2/7
+1/6
+The possible sequences with at least 2 wins for United are:
+UUU, UUC, UUD, DUU, CUU, UDU, UCU
+The probabilities if the last match was won by City are:
+UUU
+UUC
+UUD
+DUU
+CUU
+UDU
+UCU
+=
+=
+=
+=
+=
+=
+=
+2/7*1/6*1/6
+2/7*1/6*1/3
+2/7*1/6*1/2
+2/7*1/3*1/6
+3/7*2/7*1/6
+2/7*1/2*1/3
+2/7*1/3*2/7
+=
+=
+=
+=
+=
+=
+=
+1/126
+1/63
+1/42
+1/63
+1/49
+1/21
+4/147
+OR (quicker)
+UUX
+DUU
+CUU
+UDU
+UCU
+=
+=
+=
+=
+=
+2/7*1/6 = 1/21
+2/7*1/3*1/6 = 1/63
+3/7*2/7*1/6 = 1/49
+2/7*1/2*1/3 = 1/21
+2/7*1/3*2/7 = 4/147
+where X refers to any result
+Total = 140/882 = 10/63 = 0.15873
+Answers to this question were generally disappointing. In both parts (i) and (ii) the question
+said “estimate” so some explanation of where the answer is coming from was required for
+full credit (e.g. in part (i) a statement that n ij /n i is needed, or a suitable diagram were
+acceptable). A common error was to use 8 as the denominator for the C row. A more serious
+error was to use 19 as the denominator for all the transition probabilities. Many candidates
+Page 4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+did not take account of the fact that City had won the last match in the string given and thus
+only used pairs, rather than triplets, of probabilities.
