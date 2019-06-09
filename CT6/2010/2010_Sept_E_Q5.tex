@@ -40,12 +40,15 @@ Risk, i
 335.1
 65.1
 33.9
-(i) Calculate the credibility premium of each risk under the assumptions of EBCT
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}[(a)]
+\item (i) Calculate the credibility premium of each risk under the assumptions of EBCT
 Model 1.
-[6]
+\item 
 (ii) Explain why the credibility factor is relatively high in this case.
-[2]
-[Total 8]
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 The probability density function of a gamma distribution is given in the following
 parameterised form:
 f ( x ) =
@@ -85,44 +88,6 @@ respectively.
 
 \newpage
 
-4
-Let the prior distribution of \mu  have a Gamma distribution with parameters α and \lambda 
-as per the tables.
-Then
-α
-α
-= 50 and 2 = 15 2
-\lambda 
-\lambda 
-Then dividing the first by the second \lambda  =
-50
-15 2
-= 0.22222
-And so α = 50 × 0.22222 = 11.111111
-
-%%--- Page 3Subject CT6 (Statistical Methods Core Technical) — September 2010 — Examiners’ Report
-
-The posterior distribution of \mu  is then given by
-f ( \mu  x ) ∝ f ( x \mu  ) f ( \mu  )
-∝ e − 10 \mu  ×\mu  630 ×\mu  10.11111 e − 0.22222 \mu 
-∝ \mu  640.11111 e − 10.22222 \mu 
-Which is the pdf of a Gamma distribution with parameters α ' = 641.11111 and
-\lambda  '= 10 . 22222
-Now under all or nothing loss, the Bayesian estimate is given by the mode of the
-posterior distribution. So we must find the maximum of
-f ( x ) = x 640.11111 e − 10.2222 x (we may ignore constants here)
-Differentiating:
-(
-f '( x ) = e − 10.22222 x − 10.2222 x 640.11111 + 640.1111 x 639.11111
-)
-= x 639.1111 e − 10.22222 x ( − 10.2222 x + 640.11111)
-And setting this equal to zero we get
-x =
-640.111111
-= 62.62
-10.22222
-Alternatively, credit was given for differentiating the log of the posterior (which is simpler).
-This question was well answered by most candidates.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 5
@@ -165,12 +130,18 @@ Page 4
 928 . 14
 %%----- Subject CT6 (Statistical Methods Core Technical) — September 2010 — Examiners’ Report
 And the credibility premia for the risks are:
-For risk 1 : 0 . 978213 × 127 . 9 + ( 1 − 0 . 978213 ) × 122 . 167 = 127 . 8
-For risk 2 : 0 . 978213 × 88 . 9 + ( 1 − 0 . 978213 ) × 122 . 167 = 89 . 6
-For risk 3 : 0 . 978213 × 149 . 7 + ( 1 − 0 . 978213 ) × 122 . 167 = 149 . 1
+\begin{itemize}
+\item For risk 1 : 0 . 978213 × 127 . 9 + ( 1 − 0 . 978213 ) × 122 . 167 = 127 . 8
+\item For risk 2 : 0 . 978213 × 88 . 9 + ( 1 − 0 . 978213 ) × 122 . 167 = 89 . 6
+\item For risk 3 : 0 . 978213 × 149 . 7 + ( 1 − 0 . 978213 ) × 122 . 167 = 149 . 1
+\item 
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (ii)
-The data show that the variation within risks is relatively low (the S i 2 are low, especially for the 2 nd and 3 rd risks) but there seems to be quite a high variation between the average claims on the risks.
-With the S i 2 being low, this variation cannot be explained just by variability in the claims, and must be due to variability in the underlying parameter.
-This means that we can put relatively little weight on the information provided by the data set as a whole, and must put more on the data from the individual risks, leading to a relatively high credibility factor.
-Most candidates scored well on part (i). Only the better candidates were able to give a clear explanation in part (ii).
+\begin{itemize}
+\item The data show that the variation within risks is relatively low (the S i 2 are low, especially for the 2 nd and 3 rd risks) but there seems to be quite a high variation between the average claims on the risks.
+\item With the S i 2 being low, this variation cannot be explained just by variability in the claims, and must be due to variability in the underlying parameter.
+\item This means that we can put relatively little weight on the information provided by the data set as a whole, and must put more on the data from the individual risks, leading to a relatively high credibility factor.
+\item Most candidates scored well on part (i). Only the better candidates were able to give a clear explanation in part (ii).
+\end{itemize}
 \end{document}
