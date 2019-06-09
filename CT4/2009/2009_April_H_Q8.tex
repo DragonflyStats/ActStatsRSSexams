@@ -1,0 +1,164 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+There is a population of ten cats in a certain neighbourhood. Whenever a cat which
+has fleas meets a cat without fleas, there is a 50% probability that some of the fleas
+transfer to the other cat such that both cats harbour fleas thereafter. Contacts between
+two of the neighbourhood cats occur according to a Poisson process with rate μ, and
+these meetings are equally likely to involve any of the possible pairs of individuals.
+Assume that once infected a cat continues to have fleas, and that none of the cats’
+owners has taken any preventative measures.
+\begin{enumerate}
+\item (i) If the number of cats currently infected is x, explain why the number of
+possible pairings of cats which could result in a new flea infection is x(10 – x).
+\item 
+(ii) Show how the number of infected cats at any time, X(t), can be formulated as
+a Markov jump process, specifying:
+(a)
+(b)
+the state space
+the Kolmogorov differential equations in matrix form
+\item 
+(iii) State the distribution of the holding times of the Markov jump process.
+\item (iv) Calculate the expected time until all the cats have fleas, starting from a single
+flea-infected cat.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+8
+\item (i)
+
+There are x infected cats and hence 10 – x uninfected cats.
+Flea transmission requires one of the x infected cats to meet one of the (10 − x )
+uninfected cats.
+\item (ii)
+⎛ 10 ⎞
+The total number of pairings of cats is ⎜ ⎟ = 45.
+⎝ 2 ⎠
+So the probability of a meeting resulting in an increase in the number of cats
+with fleas is 0.5 x (10 − x )/45.
+As this depends only on the number of cats currently infected, and meetings
+occur according to a Poisson process, the number of infected cats over time
+follows a Markov jump process.
+(a)
+The state space is the number of cats infected {0,1,2,,.....10}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%— %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+(b)
+The generator matrix is
+⎛ 0 0
+⎞
+⎜
+⎟
+− 9 9
+⎜
+⎟
+⎜
+⎟
+− 16 16
+⎜
+⎟
+− 21 21
+⎜
+⎟
+⎜
+⎟
+− 24 24
+⎟
+\mu ⎜
+A = ⎜
+− 25 25
+⎟
+90 ⎜
+⎟
+− 24 24
+⎜
+⎟
+− 21 21
+⎜
+⎟
+⎜
+⎟
+− 16 16
+⎜
+⎟
+⎜
+− 9 9 ⎟
+⎜
+⎟
+0 ⎠
+⎝
+Kolmogorov’s equations:
+EITHER
+forward form
+d
+P ( t ) = P ( t ) A
+dt
+OR
+backward form
+\item (iii)
+Holding times are exponentially distributed.
+With mean
+(iv)
+d
+P ( t ) = AP ( t )
+dt
+90
+\mu x (10 − x )
+OR parameter
+.
+\mu x (10 − x )
+90
+Total expected time is the sum of the mean holding times.
+=
+90 9
+1
+90 ⎛ 1 1 1
+1
+1
+1
+1 1 1 ⎞
+= ⎜ + + +
++
++
++ + + ⎟
+∑
+\mu x = 1 x (10 − x ) \mu ⎝ 9 16 21 24 25 24 21 16 9 ⎠
+= 50.92/
+
+\mu
+Page 11%%%%%%%%%%%%%%%%%%%%%%%%%%%— %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — Examiners’ Report
+
+
+\end{document}
