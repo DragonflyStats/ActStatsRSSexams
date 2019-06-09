@@ -34,22 +34,26 @@ Observations y 1 , y 2 , ... , y n are made from a random walk process given by:
 Y 0 = 0 and Y t = a + Y t − 1 + e t for t > 0
 where e t is a white noise process with variance \sigma^2 .
 7
-(i) Derive expressions for E(Y_{t} ) and Var(Y_{t} ) and explain why the process is not
-stationary.
 
-(ii) Show that γ t , s = Cov ( Y t , Y t − s ) for s < t is linear in s.
+\begin{enumerate}
+\item (i) Derive expressions for E(Y_{t} ) and Var(Y_{t} ) and explain why the process is not
+stationary.
+\item 
+(ii) Show that γ t , $s = Cov ( Y t , Y t − s )$ for s < t is linear in s.
+\item
 (iii) Explain how you would use the observed data to estimate the parameters a
 and \sigma.
-
+\item 
 (iv) Derive expressions for the one-step and two-step forecasts for Y n + 1 and Y n + 2 .
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 6
 (i)
 We can deduce that Y t = at + \sum e i
 i = 1
-and so E ( Y t ) = at and
-Var ( Y t ) = t \sigma^2 .
+and so $E ( Y t ) = at$ and
+$Var ( Y t ) = t \sigma^2$ .
 Since these expressions depend on t the process is not stationary.
 (ii)
 As s < t we have
@@ -59,16 +63,21 @@ Cov ( Y t , Y t − s ) = Cov ( at + \sum e i , as + \sum e j ) = Var ( \sum e j
 Which is linear in s as required.
 (iii)
 First note that the differenced series:
-X t = Y t − Y t − 1 = a + e t
+\[X t = Y t − Y t − 1 = a + e t\]
 is essentially a white noise process. So estimates of a and \sigma^2 can be found by constructing the sample differences series x i = y i − y i − 1 for i = 1, 2, ... , n and
 taking the mean and sample variance(or its square for estimating )
 respectively.
 (iv)
 In this case \hat{y} n (1) = a ˆ + y n + 0 = a ˆ + y n
 And \hat{y} n (2) = a ˆ + \hat{y} n (1) + 0 = 2 a ˆ + y n
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\newpage
 Comment: This was a rather hard question with many candidates confirming the non-
 stationarity in (i) but not finding the general solution. In part (ii) a good number of answers
 failed to score full marks. Alternative answers to (i) and (ii) could have been obtained by
 increasing t iteratively and noticing a pattern developing.
-Page 5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2010 — Examiners’ Report
+
+
+%% Page 5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2010 — Examiners’ Report
 \end{document}
