@@ -33,22 +33,6 @@
 \begin{document}
 \begin{enumerate}
 
-A bus route in a large town has one bus scheduled every 15 minutes. Traffic
-conditions in the town are such that the arrival times of buses at a particular bus stop
-may be assumed to follow a Poisson process.
-Mr Bean arrives at the bus stop at 12 midday to find no bus at the stop. He intends to
-get on the first bus to arrive.
-(ii)
-Determine the probability that the first bus will not have arrived by 1.00 pm
-the same day.
-
-The first bus arrived at 1.10 pm but was full, so Mr Bean was unable to board it.
-(iii) Explain how much longer Mr Bean can expect to wait for the second bus to
-arrive.
-
-(iv) Calculate the probability that at least two more buses will arrive between
-1.10 pm and 1.20 pm.
-
 %%--------------7]
 CT4 S2013–24
 (i)
@@ -66,108 +50,8 @@ recent national mortality table is then applied to give the rate at which care h
 5
 Discuss the suitability of this model.
 
-%%--------------9]
-A motor insurer offers a No Claims Discount scheme which operates as follows. The discount levels are $\{0\%,25\%, 50\%, 60\%\}$. Following a claim-free year a
-policyholder moves up one discount level (or stays at the maximum discount). After a year with one or more claims the policyholder moves down two discount levels (or
-moves to, or stays in, the 0\% discount level).
-
-The probability of making at least one claim in any year is 0.2.
-(i) Write down the transition matrix of the Markov chain with state space $\{0\%,25\%, 50\%, 60\%\}$.
-
-(ii) State, giving reasons, whether the process is:
-(a)
-(b)
-irreducible.
-aperiodic.
-
-(iii)
-Calculate the proportion of drivers in each discount level in the stationary distribution.
-
-The insurer introduces a “protected” No Claims Discount scheme, such that if the 60\% discount is reached the driver remains at that level regardless of how many
-claims they subsequently make.
-
-(iv)
-CT4 S2013–3
-Explain, without doing any further calculations, how the answers to parts (ii)
-and (iii) would change as a result of introducing the “protected” No Claims
-Discount scheme.
-
 %%--------------11]
 %%%%%%%%%%%%%%%%%%%%
-5
-(i)
-0 
- 0.2 0.8 0
-
-
-0.2 0 0.8 0 
-P = 
- 0.2 0
-0 0.8 
-
-
- 0 0.2 0 0.8 
-where the levels are ordered 0%, 25%, 50%, 60%.
-(ii)
-(iii)
-Page 8
-(a) The chain is irreducible as it is clear that any state can eventually be reached
-from any other state.
-(b) The process is aperiodic because, for example, the process can loop round in
-the 0% or 60% states giving no set return period to any state.
-Stationary distribution  satisfies    P
-0.2  0  0.2  25  0.2  50   0
-0.8  0  0.2  60   25
-0.8 25   50
-0.8  50  0.8  60   60 (1)
-Also  0   25   50   60  1 (5)
-(2)
-(3)
-(4)%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Working in terms of  60
- 50  0.25  60
- 25 
- 0 
-5
- 60
-16
-9
- 60
-64
-Hence
-(64  16  20  9)
- 60  1
-64
- 9 
- 
-1  20 
-So the e stationary distribution is
-109  16 
- 
- 64 
-and the proportion of drivers at each level is
-0%
-25%
-50%
-60%
-(iv)
-9/109 = 0.08257
-20/109 = 0.18349
-16/109 = 0.14679
-64/109 = 0.58716.
-The 60\% discount level becomes an absorbing state and so it is no longer irreducible.
-However it is still aperiodic because you cannot get out of the absorbing state 60%
-and the other states still have no period.
-The process would now be stationary when all drivers are in the absorbing 60%
-discount level.
-OR
-The new stationary distribution is [0,0,0,1] because the 60% state is now absorbing.
-This question was well answered, with many candidates scoring close to full marks. In part
-(iii) the correct numerical probabilities scored full marks, provided that it was clear to which
-level each probability applied. In part (iv) some candidates made vague statements that the
-probability of being in the 60% state would increase. While this is true, it was not given full
-credit, as the key point is that the stationary distribution has everyone in the 60% state.
-Page 9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -241,4 +125,6 @@ Most candidates made a good attempt at part (i). Answers to part (ii) were more 
 and tended to focus more on the problems with the mortality data rather than issues
 connected with the supply and provision of care homes. In both parts of this question, not all
 the points listed were required for full marks.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \end{document}
