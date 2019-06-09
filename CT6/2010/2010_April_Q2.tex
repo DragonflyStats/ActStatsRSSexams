@@ -28,28 +28,30 @@
 \begin{document} 
 
 %%% - Question 2
-[5]
+\large
+
 An insurance company is modelling claim numbers on its portfolio of motor insurance
 policies using a Poisson distribution, whose mean depends on the age and gender of
 the policyholder.
-(i) Suggest a link function for fitting a generalised linear model for the mean of
+\begin{enumerate}
+\item (i) Suggest a link function for fitting a generalised linear model for the mean of
 the Poisson distribution.
 
-(ii) Specify the corresponding linear predictor used for modelling the age and
+\item (ii) Specify the corresponding linear predictor used for modelling the age and
 gender dependence as:
-(a)
-(b)
-age + gender
-age + gender + age \times gender
-
+\begin{enumerate}[(a)]
+\item age + gender
+\item age + gender + age \times gender
+\end{enumerate}
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 2
-(i) The link function here is g ( \mu  ) = log \mu  .
-(ii) (a) The linear predictor is \alpha i + \beta x where the intercept \alpha i for i = 1, 2
+(i) The link function here is $g ( \mu  ) = \log \mu $ .
+(ii) (a) The linear predictor is $\alpha i + \beta x$ where the intercept $\alpha i$ for i = 1, 2
 depends on gender.
 (b) The linear predictor is \alpha i + \beta i x so that both parameters depend on
 gender.
 Comment: This straightforward question was generally well answered.
-
+\end{document}
 
