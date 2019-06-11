@@ -1,0 +1,233 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%- Question 7
+The following diagram shows the transitions under a Healthy-Sick-Dead multiple
+state model under which:
+\item  transition rates are dependent on time, t.
+\item  transitions out of the Sick state are dependent on the duration, C t , a person has
+been in the Sick state as well as on time.
+σ(t)
+Sick
+Healthy
+ρ(t, C t )
+υ(t, C t )
+μ(t)
+Dead
+(i)
+Show from first principles, that if p ij (x,t) is the probability of being in state j at
+time t conditional on being in state i at time x, that
+∂
+p HH ( x , t ) = p HH ( x , t ) ( −σ ( t ) − μ ( t ) ) + p HS ( x , t ) ρ ( t , C t ) 
+∂ t
+(ii)
+Determine the probability that a life is in the Healthy state throughout the
+period 0 to t if the life is in the Healthy state at time 0.
+
+(iii) Describe how integrated Kolmogorov equations can be constructed by
+conditioning on the first or the last jump, illustrating your answer with a
+diagram.
+(iv) Explain the difference in approach between deriving forward and backward
+integrated Kolmogorov equations.
+
+An actuarial student suggests the following integrated Kolmogorov equation for this
+model:
+t
+Pr[X t = H |X s = S, C s = w] = ∫ e
+y
+− ∫ ( ρ ( u , w − s + u ) +υ ( u , w − s + u ) ) du
+0
+0
+(v)
+
+CT4 S2017–6
+Identify TWO errors in this equation.
+υ ( y , w − s + y ) p HH ( y , t ) dy
+
+[Total 13]
+
+%%%%%%%%%%%%%%%%%%%%%
+
+Q7
+(i)
+Page 10
+EITHER
+Using the Markov assumption,
+OR
+The Chapman Kolmogorov equation is
+%%%%%%%% – Examiners’ Report
+p HH ( x , t \;+\; dt ) \;=\; p HH ( x , t ) p HH ( t , t \;+\; dt )
+\;+\; p HS ( x , t ) p SH ( t , t \;+\; dt ) \;+\; p HD ( x , t ) p DH ( t , t \;+\; dt ) 
+But p DH ( t , t \;+\; dt ) \;=\; 0 or other explanation why path through D can be
+ignored 
+So:
+p HH ( x , t \;+\; dt ) \;=\; p HH ( x , t ) p HH ( t , t \;+\; dt ) \;+\; p HS ( x , t ) p SH ( t , t \;+\; dt )
+
+Assuming that, for small dt
+p ij ( t , t \;+\; dt ) \;=\;  ij ( t ) dt \;+\; o ( dt )
+i  j
+
+p ii ( t , t \;+\; dt ) \;=\; 1 \;+\;  ii ( t ) dt \;+\; o ( dt )
+OR
+p ii ( t , t \;+\; dt ) \;=\; 1    ij ( t ) dt \;+\; o ( dt )
+
+j  i
+where the λs are the instantaneous transition rates and
+o ( dt )
+\;=\; 0 ,
+dt  0 dt
+lim
+then substituting, we have
+p HH ( x , t \;+\; dt ) \;=\; p HH ( x , t )(1   ( t ) dt   ( t ) dt ) \;+\; p HS ( x , t )  ( t , C t ) \;+\; o ( dt )
+%%---
+so that
+p HH ( x , t \;+\; dt )  p HH ( x , t ) \;=\; p HH ( x , t )(  ( t )   ( t )) dt
+\;+\; p HS ( x , t )  ( t , C t ) dt \;+\; o ( dt )
+and hence
+p ( x , t \;+\; dt )  p HH ( x , t )
+d
+p HH ( x , t ) \;=\; lim HH
+dt  0
+dt
+dt
+\;=\; p HH ( x , t )(  ( t )   ( t )) \;+\; p HS ( x , t )  ( t , C t )
+%%---
+
+(ii)
+The equation simplifies when considering p HH ( t ) to
+d
+p ___ (0, t ) \;=\;  (  ( t ) \;+\;  ( t )) p ___ ( t )
+HH
+dt HH
+
+Page 11%%%%%%%% – Examiners’ Report
+1
+d
+d
+p ___ (0, t ) \;=\;  (  ( t ) \;+\;  ( t )) \;=\; ln p ___ ( t ) .
+HH
+p ___ (0, t ) dt HH
+dt
+HH
+Integrate both sides:
+t
+t
+  ln p HH (0, t )   \;=\;
+0
+
+ (  ( s ) \;+\;  ( s )) ds 
+(  ( s ) \;+\;  ( s )) ds ) %%---
+s \;=\; 0
+as p HH (0) \;=\; 1
+t
+p HH (0, t ) \;=\; exp  (
+
+s \;=\; 0
+
+(iii)
+One method of deriving probabilities for continuous time Markov
+processes is by integral equations. 
+Using the law of total probability 
+we can consider the full set of possibilities for the first
+jump from state X or the last jump to state Y. 
+For a given time of this first/last jump, the probabilities that the
+jump was from each state will be in proportion to transition rates
+at that time. %%---
+By integrating across all possible times for the first/last jump
+we obtain the overall probability. 
+Where a probability for being in the same state at start and
+end is required, an additional term is needed for the probability
+of remaining in the same state throughout the period i.e. no jumps. 
+EITHER THE BACKWARD EQUATION
+Suppose looking at P XY (s,t) we condition on jumps to all other states Z.
+State X
+Jumps out of X to Z (say)
+Stays in X
+Start time
+Page 12
+State Y
+Transition Z to Y in this interval
+Time of first jump
+End time%%%%%%%% – Examiners’ Report
+s
+s+w
+t
+
+OR THE FORWARD EQUATION
+Suppose looking at P XY (s,t) we condition on jumps from all other states Z.
+State X
+Jumps out of Z (say) to Y
+State Y
+Transition X to Z in interval
+Start time
+s
+Stays in Y
+Time of last jump
+t-w
+End time
+t
+
+[max. 3]
+(iv)
+(v)
+The integrated forward equation is derived by conditioning
+on the last jump to state Y and the integrated backward
+equation from the first jump from state X.
+%%---
+For reference, the correct equation is:
+y
+t
+Pr[ X t \;=\; H X s \;=\; S , C s \;=\; w ] \;=\;  e
+  (  ( u , w  s \;+\; u ) \;+\; ( u , w  s \;+\; u )) du
+s
+ ( y , w  s \;+\; y ) P HH ( y , t ) dy
+s
+1.
+2.
+3.
+The term saying  ( y , w  s \;+\; y ) is wrong: 
+it should be  ( y , w  s \;+\; y ) . 
+The lower limit on the integral in the exponential term is wrong: 
+it should be s. 
+The lower limit on the outer integral is wrong: 
+it should be s. 
+[max. 2]
+[Total 13]
+This was one of the more difficult questions on the examination paper, and performance was, as expected, variable. A substantial number of
+candidates only attempted part (i). In part (ii) several candidates attempted to evaluate the integral by assuming the transition rates were
+Page 13%%%%%%%% – Examiners’ Report
+constant, which is incorrect as the question stated that the transition rates were dependent on time. Of those candidates who attempted part
+(iii), many made a good effort at the diagrams. Few candidates offered correct solutions to part (iv). It should be noted that the correct
+equation noted here does not match that shown in the Core Reading, Unit 4, page 17. The lower limit on the outer integral should be s
+rather than 0. Candidates could score credit for spotting the error in the Core Reading, but even without this, full credit could be scored, as
+there were two further errors to be identified.
