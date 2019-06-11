@@ -1,0 +1,451 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%- Question 9 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%9
+(i)
+(a) List TWO different methods of graduating crude mortality data.
+(b) State, for each method, TWO advantages and ONE disadvantage.
+
+A large pension scheme is examining its most recent experience and has graduated its
+data over a range of ages using μ x = 0.0005 + 0.00005(1.1 x ). The table below gives
+some of the data.
+Age Exposed to Risk Observed Deaths Graduated Rates
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69 7,966
+7,728
+7,870
+7,622
+7,097
+7,208
+6,833
+6,474
+6,208
+5,914 127
+139
+162
+167
+205
+179
+185
+212
+209
+195 0.015724
+0.017246
+0.018921
+0.020763
+0.022790
+0.025019
+0.027470
+0.030167
+0.033134
+0.036398
+(ii) Perform an overall goodness of fit test on the data.
+(iii) (a)
+
+State THREE possible defects of the graduation which the test you
+performed in (ii) would fail to detect.
+(b)
+Suggest, for each defect in part (a), an alternative test which would
+detect each defect.
+
+(iv)
+
+CT4 S2017–8
+Carry out TWO of the tests you mentioned in part (iii), clearly stating your
+conclusions in relation to the relevant defects.
+
+[Total 17]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+Q9
+(i)
+(a)
+(b)
+Graduation by parametric formula. 
+Graduation by reference to a standard table. 
+Graphical graduation. 
+{1]
+Parametric formula
+Advantages:
+The resultant graduation will be sufficiently smooth provided
+few parameters are used.
+It is a suitable method to produce standard tables.
+It can be useful to fit the same formula to several
+experiences to give insight into the differences between
+experiences.
+Disadvantages
+It may be difficult to find one equation which fits at all ages.
+
+
+
+
+Reference to a standard table
+Advantages
+It can be used to fit relatively small data sets where a
+suitable standard table exists.
+The graduated rates should be smooth provided that a simple
+function is used.
+The standard table can provide information at extreme ages
+where data may be scanty.
+Page 18
+
+
+%%%%%%%% – Examiners’ Report
+Disadvantages
+It may be difficult to find a standard table which
+correctly reflects the population under investigation.
+
+Graphical graduation
+Advantages
+It can be used for scanty data sets.
+It enables an experienced analyst to allow for known (or likely)
+features of the data.
+It can give a quick initial feel for the rates.
+Disadvantages
+The expertise may not be available.
+The resultant figures may not be to sufficient
+decimal places for e.g. premium calculations
+It is difficult to ensure smoothness of the resultant rates.
+(ii)
+
+
+
+
+
+
+{2}
+[max. 3]
+To test for the overall goodness of fit use the χ 2 test.
+The null hypothesis is that the graduated rates are the same as the true
+underlying rates in the block of business.
+The test statistic
+
+ z x 2   m 2 where m is the degrees of freedom.
+x
+Age Exposed to
+Risk Observed
+Deaths Graduated
+Rates Expected
+Deaths
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69 7,966
+7,728
+7,870
+7,622
+7,097
+7,208
+6,833
+6,474
+6,208
+5,914 127
+139
+162
+167
+205
+179
+185
+212
+209
+195 0.015724
+0.017246
+0.018921
+0.020763
+0.022790
+0.025019
+0.027470
+0.030167
+0.033134
+0.036398 125.26
+133.28
+148.91
+158.26
+161.74
+180.33
+187.71
+195.30
+205.70
+215.26
+Total
+zx
+0.1556
+0.4954
+1.0728
+0.6949
+3.4018
+–0.0993
+–0.1974
+1.1947
+0.2303
+–1.3806
+zx 2
+0.0242
+0.2454
+1.1508
+0.4830
+11.5720
+0.0099
+0.0390
+1.4273
+0.0530
+1.9060
+16.9106
+
+The observed test statistic is 16.91.
+
+The number of age groups is 10,
+Page 19%%%%%%%% – Examiners’ Report
+but we lose three degrees of freedom, one for each parameter, 
+so m = 7. 
+The critical value of the χ 2 distribution with 7 degrees of freedom at the 95%
+significance level is 14.07.
+
+(iii)
+Since 16.91 > 14.07, 
+we have sufficient evidence to reject the null hypothesis. 
+
+May fail to detect small but consistent bias. 
+For this use the signs test or cumulative deviations test over the
+whole age range. 
+May fail to detect a few large deviations offset by a lot of small deviations
+OR
+may fail to detect outliers.
+
+For this use the standardised deviations test 
+The shape of the graduation may be wrong
+OR
+even if there is not bias over the whole range, there may be areas of the
+graduation where there is significant bias.
+OR
+there may be clumping of the signs. 
+For this use the grouping of signs test, the cumulative deviations test over
+sections of the age range, or the serial correlations test at lag 1.
+
+(iv)
+The graduated rates may not be smooth. 
+For this use the third differences test. 
+
+Signs test
+The null hypothesis is that the graduated rates are the same as the true
+underlying rates in the block of business. 
+We have 3 negative signs out of 10 ages. 
+EITHER
+The probability of getting exactly 3 negative signs is equal to
+Page 20%%%%%%%% – Examiners’ Report
+ 10  10
+  0.5 \;=\; 0.1172
+ 3 
+OR
+The probability of getting 3 or fewer negative signs is 0.1719, %%---
+which is greater than 0.025 (two tailed test) 
+Therefore at the 95% significance level we do not reject the null
+hypothesis: we can say that there is no bias. 
+Cumulative Deviations test
+The null hypothesis is that the graduated rates are the same as the true
+underlying rates in the block of business.
+
+ (Observed deaths  Expected deaths)
+the test statistic
+x
+ Expected deaths
+~ Normal(0,1)
+
+x
+So, using the results in the table, the value of the test statistic is
+1,780  1,712
+\;=\; 1.6499
+1,712 %%---
+Since –1.96 < test statistic < %%---.96 
+Therefore at the 95% significance level we do not reject the null
+hypothesis: there does not appear to be a bias. 
+Grouping of Signs test
+The null hypothesis is that the graduated rates are the same as the true
+underlying rates in the block of business. 
+We have n 1 = 7 positive signs and n 2 = 3 negative signs. 
+There are 2 positive runs. 
+EITHER
+Using the table on p. 189 of the Golden Book, we reject the null
+hypothesis with 1 positive run or fewer.
+
+Since 2 > 1, we do not reject the null hypothesis: there do not seem
+to be an unduly large number of runs of consecutive ages with the
+Page 21%%%%%%%% – Examiners’ Report
+same sign.
+%%---
+OR
+Since
+ 6  4 
+  
+0 1
+4
+1
+\;=\;
+Pr[1 positive run] =     \;=\;
+120 30
+ 10 
+ 
+ 7 
+ 6  4 
+  
+1 2
+36
+3
+\;=\;
+Pr[2 positive runs] =     \;=\;
+120 10
+ 10 
+ 
+ 7 
+The calculations show that Pr[1 positive run] < 0.05, but
+Pr[2 positive runs] > 0.05. 
+Hence we do not reject the null hypothesis: there do not seem
+to be an unduly large number of runs of consecutive ages with the
+same sign. %%---
+Individual Standardised Deviations test
+The null hypothesis is that the graduated rates are the same as the true
+underlying rates in the block of business. 
+Under the null hypothesis we would expect the individual z x s to be
+distributed Normal (0,1). 
+EITHER
+Only 1 in 20 z x s should have absolute magnitude
+greater than 1.96, and none should be outside the range 3 to +3,
+OR
+a table showing split of deviations, actual versus expected as below.
+Range
+∞,3
+Expected 0.0
+Actual
+0
+3,2
+0.2
+0
+2,1
+1.4
+1
+1,0
+3.4
+2
+0,1
+3.4
+4
+1,2
+1.4
+2
+2,3
+0.2
+0
+3, +∞
+0.0
+1
+%%---
+Page 22%%%%%%%% – Examiners’ Report
+z 64 = 3.40, is a definite outlier. 
+Therefore we reject the null hypothesis. 
+Test for smoothness
+Age
+x Graduated rates
+μ x First difference
+ x \;=\;  x   x  1 Second difference
+ 2 x \;=\;  x   x 1 Third difference
+ 3 x \;=\;  2 x   2 x 1
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69 0.015724
+0.017246
+0.018921
+0.020763
+0.022790
+0.025019
+0.027470
+0.030167
+0.033134
+0.036398 0.001522
+0.001675
+0.001842
+0.002027
+0.002229
+0.002451
+0.002697
+0.002967
+0.003264 0.000153
+0.000167
+0.000185
+0.000202
+0.000222
+0.000246
+0.000270
+0.000297 0.000014
+0.000018
+0.000017
+0.000020
+0.000024
+0.000024
+0.000027
++2
+Note that it does not matter against which ages the third differences appear in the table: they could appear against ages 60-66 or against ages 63-69.
+The third differences are small and progress smoothly with age.
+Therefore the graduation is acceptably smooth.
+
+
+
+[Total 17]
+This question was very well answered by many candidates, a high proportion scoring 13 or more. In part (iv), credit was given to candidates who attempted the serial correlations test with lag 1 to test
+whether the shape of the graduated rates were consistent with the underlying mortality. However, we do not recommend that candidates attempt this test in the examination if they have a choice. The calculations are very time-consuming and errors are likely; and other, quicker, tests for the same defect are available.
+
+
+\end{document}
