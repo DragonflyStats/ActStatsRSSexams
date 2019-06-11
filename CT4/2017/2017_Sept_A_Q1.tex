@@ -1,0 +1,137 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1
+A Markov Chain has the following transition graph:
+A
+B
+C
+The following is a partially completed transition matrix for this Markov Chain:
+⎛ 0.2
+⎜ –
+⎝ –
+–
+–
+–
+–
+1.0
+0.4
+⎛
+⎜
+⎝
+A
+B
+C
+(i) Determine the remaining entries in the transition matrix.
+(ii) Explain whether each of the following is a valid sample path for this process.
+(a)
+
+Path 1:
+State
+A
+B
+C
+0
+CT4 S2017–2
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Time(b)
+Path 2:
+State
+A
+B
+C
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9 10 Time
+
+
+[Total 4]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+
+Solutions
+Q1
+(i)
+Rows must sum to 1.
+P AC = 0 and P CB = 0 from transition graph.
+So full transition matrix is:
+A  0.2 0.8 0 
+
+
+B  0
+0 1.0  .
+C   0.6 0 0.4  
++2
+
+(ii)
+Path 1 is a valid sample path.
+
+All the movements between states are valid transitions from the transition
+graph.
+
+Path 2 is not a valid sample path.
+
+EITHER
+There are transitions from C to B, which is not possible according to the
+transition graph.
+OR
+The process cannot stay in B.
+
+
+[Total 4]
+The vast majority of candidates correctly computed the transition
+matrix in part (i). In part (ii), some candidates interpreted the
+diagrams in the question to depict a continuous time process and
+therefore argued neither sample path was valid, as a Markov chain is a
+discrete time process. Full credit was given for this.
+Page 3%%%%%%%% – Examiners’ Report
