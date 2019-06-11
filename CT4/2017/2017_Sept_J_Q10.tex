@@ -1,0 +1,292 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+
+%%- Question 10
+(i)
+Write down the formulae for the Kaplan-Meier estimator Ŝ(t) and Nelson-Aalen estimator S̃(t) of survival in the presence of a stated hazard,
+defining all terms used.
+
+The following graph shows the functions:
+y = 1 – x and
+y = e –x over the range 0 \leq x \leq 1.
+1.00
+0.90
+0.80
+0.70
+0.60
+y = 1 – x
+0.50
+y = exp(– x)
+0.40
+0.30
+0.20
+0.10
+0.00
+(ii)
+0
+0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.00
+Value of x
+Demonstrate that the Nelson-Aalen estimator is never lower than the
+Kaplan-Meier estimator.
+
+A trial is conducted amongst 20 patients who have suffered from eczema but are
+in remission (that is, they are clear of the condition). The trial is to assess whether
+continuing with periodic doses of a certain steroid cream in remission reduces the rate
+at which eczema recurs. Patients are invited to tests every 3 months for a period of up
+to 5 years from when first declared to be in remission.
+(iii)
+Describe THREE types of censoring present in the investigation.
+/
+The data for the trial are subdivided into a group who continued to receive the steroid
+cream, and a control group who did not receive the steroid cream. The data for the
+patients in the trial showing the quarterly test at which eczema recurred, or censoring
+occurred, are as follows (an * indicates a patient who was censored):
+For group receiving steroid cream:
+For control group:
+CT4 S2017–9 
+3, 5, 6*, 7*, 10, 10, 12*, 14*, 18, 19*
+6, 8, 8, 10*, 11*, 12*, 14, 15*, 18, 18
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%(iv)
+Calculate the Kaplan-Meier estimates of the survival function for remaining
+clear of eczema for:
+(a)
+the group who continued to receive the steroid cream; and
+(b)
+the control group.
+
+(v)
+(a)
+Recommend, without performing any calculations, a method of
+establishing whether the hazard of eczema returning is statistically
+lower for those continuing to receive the steroid cream.
+(b)
+Comment on the chance of being able to conclude from the trial
+data that continuing to receive the steroid cream reduces the risk of
+recurrence of eczema.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Q10
+(i)
+The Kaplan-Meier estimator is
+æ d ö
+Ŝ(t) = Õ ç 1- j ÷
+n j ø
+t j <=t è
+
+and the Nelson-Aalen estimator is
+Page 23%%%%%%%% – Examiners’ Report
+,
+
+where d j represents the number of occurrences of the event of
+interest at duration t j ,
+
+and n j represents the number exposed to the hazard at duration t j .
+(ii)
+
+
+Expanding into the individual terms:
+ d j
+ d  d 
+S ˆ ( t ) \;=\;  1  1  .  1  2  .......  1 
+ n j
+ n 1   n 2 
+
+
+  ,
+
+
+and
+
+d j
+S ( t ) \;=\; exp   
+ t \;=\; t n j
+ j
+
+ d
+ \;=\; exp    d 1   .exp    d 2   ........exp   j
+ n j
+
+ n 1 
+ n 2 
+
+
+
+ .
+
+
+
+As each d j /n j must be between 0 and 1 the chart shows each term in the
+Nelson-Aalen estimator is no lower than the parallel in the Kaplan-Meier. 
+Hence the Nelson-Aalen estimator is always no lower than the
+Kaplan-Meier estimator.
+(iii)
+
+
+Interval censoring is present because the tests only take place every three
+months and recurrence of eczema could occur between tests.
+%%---
+Type 1 censoring is present because it is specified in advance that the study
+will end after 5 years.
+%%---
+Random censoring is present as for patients who leave the study, the time of
+their censoring can be considered a random variable.
+%%---
+Right censoring is present for patients still free of eczema after 5 years or
+patients who left the study, as we do not know when the reoccurrence of
+eczema happened, just that it happened after a certain date.
+%%---
+Non-informative censoring could be said to be present as we have no reason
+to believe that those patients who left the study were any more or less likely to
+have the eczema recur than those who remained in the study.
+%%---
+Page 24%%%%%%%% – Examiners’ Report
+Informative censoring could be said to be present as we could argue that
+those who left the study may have done so because they considered
+themselves cured, and were therefore less likely to suffer a recurrence than
+those still in the study.
+%%---
+[max. 3]
+(iv)
+For the group continuing to receive steroid cream:
+t j n j d j c j \lambda j 1 – \lambda j
+3
+5
+10
+18 10
+9
+6
+2 1
+1
+2
+1 0
+2
+2
+1 1/10
+1/9
+1/3
+1/2 9/10
+8/9
+2/3
+1/2
++2
+The Kaplan-Meier estimate of the survival function, S(t) KM , is
+t S(t) KM
+0 \leq t < 3
+3 \leq t < 5
+5 \leq t < 10
+10 \leq t < 18
+18 \leq t < 20 1
+9/10
+4/5
+8/15
+4/15
+%%--- %%---
++2
+For the control group:
+t j n j d j c j \lambda j (1 – \lambda j )
+6
+8
+14
+18 10
+9
+4
+2 1
+2
+1
+2 0
+3
+1
+0 1/10
+2/9
+1/4
+2/2 9/10
+7/9
+3/4
+0
++2
+The Kaplan-Meier estimate of the survival function, S(t) KM , is:
+t S(t) KM
+0 \leq t < 6
+6 \leq t < 8
+8 \leq t < 14
+14 \leq t < 18
+18 \leq t < 20 1
+9/10
+7/10
+21/40
+0
+Page 25%%%%%%%% – Examiners’ Report
++2
+
+(v)
+(a)
+In order to assess whether the risk is statistically lower a simple and quick approach would be to calculate confidence intervals around each survival function. 
+If the confidence intervals do not overlap the survival rate is statistically higher or lower at the chosen confidence level. 
+For the Kaplan Meier estimate the variance can be estimated using
+Greenwood’s formula,
+
+which is:
+Var[ S ( t )]  ( S ( t )) 2  t
+(b)
+d j
+j  t
+n j ( n j  d j )
+.
+
+Methods such as the log-rank test or Wilcoxon’s test could
+be used. 
+In this case it is unlikely it could be shown that continuing to
+receive steroid cream statistically reduces the risk of recurrence, 
+as the sample size is small 
+and the survival rates do not appear markedly better for the group
+receiving steroid cream.
+
+[max. 3]
+[Total 18]
+In part (i) many candidates were imprecise about the durations over
+which the product should be calculated for the Kaplan-Meier estimate,
+or over which the hazards should be summed for the Nelson-Aalen method. Vague descriptions, such as ‘sum over j’, lost marks. Many
+candidates failed to state that the d j and n j were the deaths and
+remaining risk set at duration t j . Part (ii) was very poorly answered,
+with many candidates supposing that the graph in the question paper
+was of the Kaplan-Meier and Nelson-Aalen estimates and merely describing the graph. Such answers scored little or no credit. In part
+(iii) a minority of the candidates worked on the basis that each of the
+20 sample members was in both groups. Good answers to part (iv)
+were very few. Credit was given for mentioning sensible approaches
+other than those listed above.
+\end{document}
