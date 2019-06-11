@@ -1,0 +1,239 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%- Question 8
+A company has for many years offered a car insurance policy with four levels of No
+Claims Discount (NCD): 0%, 15%, 30% and 40%. A policyholder who does not
+claim in a year moves up one level of discount, or remains at the highest level. A
+policyholder who claims one or more times in a year moves down a level of discount
+or remains at the lowest level. The company pays a maximum of three claims in any
+year on any one policy.
+The company has established that:
+\item  the arrival of claims follows a Poisson process with a rate of 0.35 per year.
+\item  the average cost per claim is £2,500.
+\item  the proportion of policyholders at each level of discount is as follows:
+(i)
+Discount level Proportion of policyholders
+0%
+15%
+30%
+40% 4.4%
+10.5%
+25.1%
+60.0%
+Calculate the premium paid by a policyholder at the 40% discount level
+ignoring expenses and profit.
+
+The company has decided to introduce a protected NCD feature whereby
+policyholders can make one claim on their policy in a year and, rather than move
+down a level of discount, remain at the level they are at. All other features of the
+policy remain the same.
+(ii)
+Draw the transition graph for this process.
+
+(iii)
+Calculate the premium paid, in the long term, by a policyholder at the 40%
+discount level of the policy with protected NCD, ignoring expenses and profit.
+
+(iv)
+
+CT4 S2017–7 
+Discuss THREE issues with the policy with protected NCD which may each
+be either a disadvantage or an advantage to the company.
+
+[Total 15]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Q8
+(i)
+The probability of making n claims in a year is given by
+ n exp (  )
+n !
+where \lambda = 0.35.
+
+
+Number of claims Probability Cost
+0
+1
+2
+3 or more 0.7047
+0.2466
+0.0432
+0.0055 0
+616.60
+215.81
+41.32
+
+Giving an average cost per policy of £873.73
+
+If P is the premium paid by someone at the 0% no claims
+discount (NCD) level, then the premiums paying for this cost per policy
+are P * (1 – discount) * proportion at that level.
+Discount Level Proportion of P Proportion at
+level Payment
+0
+15%
+30%
+40% 1
+0.85
+0.7
+0.6 0.044
+0.105
+0.251
+0.600 0.0440 P
+0.0893 P
+0.1757 P
+0.3600 P
+Total 0.6690 P
+
+%%---
+So we have 0.6690 P = £873.73,
+
+giving P = £1,306.12.
+So the premium at 40% NCD level is £783.67
+Page 14
+
+%%%%%%%% – Examiners’ Report
+(ii)
+0%
+15%
+30%
+40%
+
+(iii)
+The transition matrix for the process is
+0  0.2953 0.7047
+0
+0 
+
+
+15  0.0487 0.2466 0.7047
+0 
+.
+30  0
+0.0487 0.2466 0.7047 
+
+
+40  0
+0
+0.0487 0.9513 
+%%---
+The stationary distribution, \pi , satisfies \pi  = \pi P
+
+\pi_{1} \;=\; 0.2953 \pi_{1} \;+\; 0.0487 \pi_{2} (1)
+\pi_{2} \;=\; 0.7047 \pi_{1} \;+\; 0.2466 \pi_{2} \;+\; 0.0487 \pi_{3} (2)
+\pi_{3} \;=\; 0.7047 \pi_{2} \;+\; 0.2466 \pi_{3} \;+\; 0.0487 \pi_{4} (3)
+\pi_{4} \;=\; 0.7047 \pi_{3} \;+\; 0.9513 \pi_{4} (4)
+%%---
+Also \pi_{1} \;+\; \pi_{2} \;+\; \pi_{3} \;+\; \pi_{4} \;=\; 1 .
+(5)
+
+Working in terms of \pi_{4} :
+(4) gives
+0.7047 \pi_{3} \;=\; \pi_{4} ( 1  0.9513 )
+\pi_{3} \;=\; 0.069068 \pi_{4} ;
+(3) gives
+0.7047 \pi_{2} \;=\; ( 1  0.2466 ) \pi_{3}  0.0487 \pi_{4}
+0.7047 \pi_{2} \;=\; 0.7534 ( 0.069068 ) \pi_{4}  0.0487 \pi_{4}
+0.7047 \pi_{2} \;=\; 0.003362 \pi_{4}
+\pi_{2} \;=\; 0.00477 \pi_{4} ;
+(1) gives \pi_{1} ( 1  0.2953 ) \;=\; 0.0487 ( 0.00477 ) \pi_{4}
+\pi_{1} \;=\; 0.000329 \pi_{4} ; and
+(5) gives \pi_{4} (0.000329 \;+\; 0.00477 \;+\; 0.069068 \;+\; 1) \;=\; 1
+
+Page 15%%%%%%%% – Examiners’ Report
+So \pi_{4} \;=\; 0.930954
+\pi_{3} \;=\; 0.064299
+\pi_{2} \;=\; 0.004441
+\pi_{1} \;=\; 0.000307
+%%---
+Page 16%%%%%%%% – Examiners’ Report
+As before:
+Discount Level Proportion of P Proportion at
+level Payment
+0
+15%
+30%
+40% 1
+0.85
+0.7
+0.6 0.000307
+0.004441
+0.064299
+0.930954 0.00031 P
+0.00377 P
+0.04501 P
+0.55857 P
+Total 0.60766 P
+%%---
+0.60766 P = £873.73, so P = £1,437.85, and those at the 40% NCD level
+pay £862.71
+(iv)
+
+
+This may be a common feature in the market. If competitors offer it
+and this company does not, it may lose business. %%---
+The previous system may have discouraged claims if it meant
+that people lost their NCD. Introducing the new system may change the
+incidence of claims. Or the average size of claims may change
+(smaller ones may have gone unreported previously). %%---
+The one-off increase in premium when they introduce the scheme
+may prompt otherwise loyal customers to shop around for a better deal. %%---
+If the company is the first in the market to launch this option, they
+may win lots of new business. %%---
+Extra administrative costs may be incurred. 
+
+The protected NCD may appear unfair to policyholders as customers not making a claim can end up with the same discount as those who made a claim. %%---
+The new system may embody a moral hazard as it could make customers drive less carefully. 
+The new system may induce selection against the office if any new customers are more likely to make claims than those who leave the company and seek a better deal elsewhere.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+This question proved to be more difficult than anticipated. Few
+candidates we able to apply the correct approach to calculating the Page 17%%%%%%%% – Examiners’ Report
+premium in part (i). Those who did calculate a premium often used the
+incorrect approach of multiplying £2,500 by 0.35 to obtain a cost per
+policy of £875. They then simply multiplied this by 0.6 to obtain the premium for someone with a no claims discount of 40%. In part (ii) a
+common error was to suppose that no customer could ever move down from 40% to 30%, 30% to 15% or 15% to 0%. Some candidates
+attempted to subdivide the 40%, 30% and 15% levels according to whether the customer made no claims or exactly one claim in the
+previous year. This produces a seven-state model which is inconsistent
+with the scenario in the question. A seven-state model can be constructed by subdividing the 40%, 30% and 15% levels according to
+whether the customer made no claims or one or more claims in the
+previous year, but it is complex. Credit was given for this if it was correct. In part (iii) it was expected that answers would be consistent
+with part (ii). Thus it was expected that candidates who supposed, in part (ii) that no customer could ever move down from 40% to 30%,
+30% to 15% or 15% to 0% would write in part (iii) that in the long run
+all customers would be at the 40% discount level.
+
+\end{document}
