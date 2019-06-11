@@ -1,0 +1,187 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%- Question 6
+
+A pharmaceutical company is undertaking trials on a new drug which, it claims, cures
+a particularly uncomfortable but not life threatening condition. It has conducted
+extensive testing of the drug on a large group of people suffering from the condition
+and has noticed that the drug is much more effective in some groups of patients than
+others. It has fitted a Cox regression for the hazard of symptoms disappearing h(t)
+with three parameters
+h ( t ) = h 0 ( t ) exp ( S \beta S + A \beta A + G \beta G )
+where \beta S , \beta A , and \beta G are parameters and
+\item  S represents the sex of the patient and takes a value of 1 if the patient is female, 0
+if male.
+\item  A represents the age, in years minus 20, of the patient when the drug was
+administered.
+\item  G takes the value 1 if the patient attended a gym, 0 otherwise.
+The company has discovered the following, where the age given is the age when the
+drug was administered:
+\item  a 25 year old female who attended a gym had a hazard of symptoms disappearing
+equal to twice that of a male of the same age who did not attend a gym;
+\item  a 45 year old male who did not attend a gym had a hazard of symptoms
+disappearing half that of a 43 year old male who attended a gym; and
+\item  a 32 year old female who attended a gym had a hazard of symptoms disappearing
+60% greater than that of a 45 year old female who did not attend a gym.
+(i) Calculate the values of the parameters \beta S , \beta A , and \beta G .
+(ii) Determine for which group of people the drug is most effective.
+
+The probability that a woman who attended a gym and was aged 38 years when
+she was given the drug still had symptoms of the condition after 28 days was found to
+be 0.75.
+(iii)
+
+CT4 S2017–5 
+Calculate the probability of still having symptoms after 28 days for a male
+aged 26 years when given the drug who did not attend a gym.
+
+[Total 12]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Q6
+(i)
+The statements in the question give rise to the following equations:
+(1)
+(2)
+(3)
+exp (  S \;+\; 5  A \;+\;  G ) \;=\; 2exp ( 5  A )
+exp ( 25  A ) \;=\; 0.5exp ( 23  A \;+\;  G )
+exp (  S \;+\; 12  A \;+\;  G ) \;=\; 1.6exp (  S \;+\; 25  A )
++2
+(2) gives us
+ln 0.5 \;=\; 2  A   G
+(3) gives us
+(4)
+ln1.6 \;=\;  G  13  A
+Combining these gives
+ 11  A \;=\; ln 0.5 \;+\; ln1.6
+So  A \;=\; 0.02029 %%---
+Substituting in (4) gives  G \;=\; 0.73372 %%---
+(1) gives us
+ S \;=\; ln 2   G
+So  S \;=\;  0.04057
+Page 8
+%%---
+%%%%%%%% – Examiners’ Report
+(ii)
+Here h(t) is the hazard of symptoms disappearing so we wish to find
+the group with the maximum value of the hazard, or the minimum
+value of
+ t
+
+S t \;=\; exp    h 0 ( t ) exp ( S  S \;+\; A  A \;+\; G  G )  ,
+
+
+ 0
+
+the probability of still suffering from the symptoms. %%---
+\beta S is negative, so we want S = 0 i.e. male. 
+\beta A is positive, so we want A to be as large as possible i.e. the person to
+be as old as possible when the drug is administered. %%---
+\beta G is positive so we want G = 1 i.e. someone who attends a gym.
+(iii)
+
+
+EITHER
+ 28
+
+S givenfemale ( 28 ) \;=\; exp    h 0 ( t ) exp (  S \;+\; 18  A \;+\;  G ) dt  \;=\; 0.75
+  0
+ 
+28
+  h 0 ( t ) \;=\;
+0
+ln ( 0.75 )
+exp (  S \;+\; 18  A \;+\;  G )
+.
+%%---
+%%---
+The probability for the required male is
+ 28
+
+S required ( 28 ) \;=\; exp    h 0 ( t ) exp ( 6  A ) dt  .
+  0
+ 
+
+So
+ln ( 0.75 )
+ 
+ 
+S required ( 28 ) \;=\; exp 
+exp ( 6  A )  .
+  exp (  S \;+\; 18  A \;+\;  G )
+ 
+
+Inserting the calculated values for \beta S , \beta A and \beta G gives
+S required ( 28 ) \;=\; exp (  0.11276 ) \;=\; 0.89337 ,
+which is an 89.3% probability of still having the symptoms for the
+Page 9%%%%%%%% – Examiners’ Report
+male aged 26 years when given the drug who did not attend as gym.
+%%---
+OR
+ 28
+
+S givenfemale ( 28 ) \;=\; exp    h 0 ( t ) exp (  S \;+\; 18  A \;+\;  G ) dt  \;=\; 0.75
+  0
+  %%---
+The hazard for the given female is h 0 ( t ) exp (  S \;+\; 18  A \;+\;  G ) . %%---
+The hazard for the required male is h 0 ( t ) exp ( 6  A ) . 
+The ratio of the hazards is therefore
+e 6  A
+e 18  A \;+\; S \;+\; G
+\;=\; 0.39195 .
+
+Therefore
+S required ( 28 ) \;=\; 0.75 0.39195 \;=\; 0.89337 ,
+which is an 89.3% probability of still having the symptoms for the
+male aged 26 years when given the drug who did not attend as gym
+%%---
+
+[Total 12]
+Many candidates were able to formulate the equations in part (i),
+though a wide range of numerical errors was made when solving them.
+In parts (ii) and (iii), credit was given for answers that were correct
+given the solutions offered in part (i) for the values of \beta A , \beta G , and \beta S .
+Few candidates spotted that the age related to when the drug was
+administered. Some candidates interpreted the question as asking for a
+comparison of the effectiveness of the drug among the groups of people
+mentioned in the bullet points in the question. Credit was given for this
+if the hazards for the six groups were correctly calculated and the
+correct group identified (43 year old males who attended the gym).
+Part (iii) was less well answered than the other parts. Candidates who
+worked only with hazards, rather than survival probabilities, received
+little credit.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
