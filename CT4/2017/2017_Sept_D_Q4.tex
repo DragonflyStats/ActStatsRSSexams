@@ -1,0 +1,176 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+4
+A study was conducted into the mortality of persons aged between exact ages 85 and
+86 years. The study took place from 1 April 2015 to 31 March 2016. The following
+table shows information on 10 lives observed in the study.
+Life number
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Date of 85th birthday Date of death
+1 August 2014
+1 November 2014
+1 January 2015
+1 February 2015
+1 March 2015
+1 April 2015
+1 June 2015
+1 July 2015
+1 September 2015
+1 January 2016 –
+–
+1 February 2016
+–
+–
+1 January 2016
+1 November 2015
+–
+1 March 2016
+–
+(i) Calculate a central exposed to risk for the 10 lives in the sample, working in
+months.
+(ii) Give the maximum likelihood estimate of the mortality hazard at age 85 last
+birthday.
+(iii)
+ Estimate q 85 .
+[Total 5]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+Q4
+(i)
+For the central exposed to risk for each life we need the difference between
+STARTDATE and ENDDATE (in months) where:
+STARTDATE = latest of 85th birthday and 1 April 2015
+ENDDATE = earliest of 86th birthday, date of death, 31 March 2016
+(ii)
+Life number STARTDATE ENDDATE Contribution to
+exposed to risk
+(months)
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10 1 April 2015
+1 April 2015
+1 April 2015
+1 April 2015
+1 April 2015
+1 April 2015
+1 June 2015
+1 July 2015
+1 September 2015
+1 January 2016 1 August 2015
+1 November 2015
+1 January 2016
+1 February 2016
+1 March 2016
+1 January 2016
+1 November 2015
+31 March 2016
+1 March 2016
+31 March 2016 4
+7
+9
+10
+11
+9
+5
+9
+6
+3
+The total exposed to risk is therefore 73 months. %%---
+
+There are 3 deaths at age 85. 
+Maximum likelihood estimate is 3/73 = 0.04110 (monthly)
+(36/73 = 0.49315 working annually).
+(iii)
++2
+
+
+EITHER (CONSTANT FORCE)
+Page 5%%%%%%%% – Examiners’ Report
+q 85 = 1 – p 85 = 1 – exp (-12 * 0.04110) 
+= 0.3893. 
+OR (ACTUARIAL ESTIMATE)
+d
+3
+q 85  c 85
+\;=\;
+E 85 \;+\; 0.5 d 85 (73 /12) \;+\; 1.5 
+= 0.3956. 
+OR (EXACT EXPOSURE)
+We add to the exposure for the deaths the duration between death and
+the time at which the deceased would have attained exact age 86 years.
+This is 3 months for life 6, 7 months for life 7 and 6 months for life 9,
+a total of 16 months.
+q 85 
+
+d 85
+3
+\;=\;
+\;=\; 0.4045.
+E \;+\; (16 /12) (73 \;+\; 16) /12
+
+c
+85
+
+[Total 5]
+Many candidates correctly calculated the exposed to risk in part (i). A
+large number of candidates did not realise that one of the deaths took
+place after the life’s 86th birthday and so used 4 deaths rather than 3
+in part (ii). It was acceptable to work in years rather than months, and
+credit could also be obtained for parts (i) and (ii) working in days. In
+part (iii), however, q 85 is the probability of death within one year for a
+person at exact age 85 years, so it was not acceptable to compute the
+probability of death per month.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
