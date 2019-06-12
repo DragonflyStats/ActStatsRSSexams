@@ -1,0 +1,323 @@
+\documentclass[a4paper,12pt]{article}
+
+%%- B6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+(i) (a)
+Describe the general form of the polynomial formula used to graduate
+the most recent standard tables produced for use by UK life insurance
+companies.
+(b)
+Show how the Gompertz and Makeham formulae arise as special cases
+of this formula.
+
+CT4 S2006
+8
+(ii)
+An investigation was undertaken of the mortality of persons aged between 40
+and 75 years who are known to be suffering from a degenerative disease. It is
+suggested that the crude estimates be graduated using the formula:
+o
+(iii)
+1
+x
+2
+exp b 0
+1
+b 1 x
+2
+b 2
+1
+x
+2
+2
+.
+(a) Explain why this might be a sensible formula to choose for this class of
+lives.
+(b) Suggest two techniques which can be used to perform the graduation.
+
+The table below shows the crude and graduated mortality rates for part of the
+relevant age range, together with the exposed to risk at each age and the
+standardised deviation at each age.
+Age last
+birthday
+x
+Graduated
+force of
+mortality
+Crude
+force of
+mortality
+Exposed
+to risk
+o
+x 1/ 2
+x 1/ 2
+E x c
+Standardised deviation
+E x c
+o
+x 12
+z x
+E x c
+50
+51
+52
+53
+54
+55
+56
+57
+0.08127
+0.08770
+0.09439
+0.10133
+0.10853
+0.11600
+0.12373
+0.13175
+0.07941
+0.08438
+0.09000
+0.10345
+0.09200
+0.10000
+0.11176
+0.12222
+340
+320
+300
+290
+250
+200
+170
+180
+x 12
+o
+x 12
+-0.12031
+-0.20055
+-0.24749
+0.11341
+-0.79336
+-0.66436
+-0.44369
+-0.35225
+Test this graduation for:
+(a) overall goodness-of-fit
+(b) bias; and
+(c) the existence of individual ages at which the graduated rates depart to a
+substantial degree from the observed rates
+[9]
+[Total 15]
+END OF PAPER
+CT4 S2006
+9
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+B6
+(i)
+(a)
+The general form is
+\mu  x = (polynomial(1)) + exp(polynomial(2)) ,
+where polynomial (1) takes the form
+\alpha  0 + \alpha  1 x + \alpha  2 x 2 + ...
+and polynomial (2) takes the form
+\beta 0 + \beta 1 x + \beta 2 x 2 + ....
+(b)
+In the case of the Gompertz formula \mu  x = Bc x , then putting
+B = exp( \beta 0 ) and c = exp( \beta 1 ) ,
+we can re-write the formula as
+\mu  x = exp( \beta 0 ) exp( \beta 1 x ) = exp( \beta 0 + \beta 1 x ) ,
+which is of the required form if
+\alpha  i = 0 for all i
+and
+\beta i = 0 for i = 2, 3, ....
+Page 20
+5 5
+Similarly the Makeham formula \mu  x = A + Bc x
+can be expressed in the required form by putting
+A = \alpha  0 , B = exp( \beta 0 ) and c = exp( \beta 1 ) .
+(ii)
+(a)
+The Gompertz formula written
+\[\mu_{x} = exp( \beta 0 + \beta 1 x )]\
+is an exponential function which implies that the rate of increase of mortality with age is constant.
+This is often a reasonable assumption for ordinary lives at middle ages and older ages.
+In the special case of the impaired lives known to be suffering from a degenerative disease, it is plausible to suppose that the rate of increase
+of mortality might increase with age.
+2
+1 ⎞
+⎛
+The term b 2 ⎜ x + ⎟ in the formula can allow for this possibility.
+2 ⎠
+⎝
+(b)
+The graduation can be achieved by
+maximum likelihood estimation of the parameters
+or by ordinary least squares regression
+⎡
+⎤
+1
+of log ⎢ \mu  ˆ 1 ⎥ on x + and
+2
+⎢ ⎣ x+ 2 ⎥ ⎦
+(iii)
+(a)
+2
+1 ⎞
+⎛
+⎜ x + ⎟ .
+2 ⎠
+⎝
+The null hypothesis is that there is no difference between the graduated rates and the underlying rates in the population from which the crude
+rates are derived.
+To test overall goodness-of-fit we use the chi-squared test.
+\sum  z x 2 ∼ \chi^{2} m ,
+x
+where m is the number of degrees of freedom.
+In this case, we have 8 ages, but 3 parameters were estimated when
+performing the graduation, so m = 5.
+Page 21
+The calculations are shown in the table below.
+Age x
+last
+birthday
+50
+51
+52
+53
+54
+55
+56
+57
+Sum
+z x
+- 0.12031
+- 0.20055
+- 0.24749
+0.11341
+- 0.79336
+- 0.66436
+- 0.44369
+- 0.35225
+z x 2
+0.01447
+0.04022
+0.06125
+0.01286
+0.62942
+0.44137
+0.19686
+0.12408
+1.52053
+The critical value of the chi-squared distribution with 5 degrees of
+freedom at the 5 per cent level is 11.07.
+Since 1.52052 11.07, we do not reject the null hypothesis and
+conclude that the graduation adheres satisfactorily to the data.
+(b)
+To test for bias we use EITHER the Signs Test or the Cumulative
+Deviations test.
+Signs Test
+The test statistic, P, is the number of signs that is positive.
+Under the null hypothesis, P ~ Binomial(8,0.5)
+In this case P = 1, and Prob[ P ≤ 1 ] = 0.0352.
+Since this probability > 0.025 (two-tailed test) we do not reject the null
+hypothesis.
+We conclude that the graduated rates are not biased above or below the
+crude rates.
+Page 22
+Cumulative deviations test
+The test statistic
+o
+\sum  ( \mu  ˆ x + 1 E x - \mu  x + 1 2 E x )
+x
+2
+~ Normal(0,1) .
+o
+\sum  \mu  x + 12 E x
+x
+The calculations are shown in the table below.
+Age x
+\mu  ˆ
+1 E x
+x +
+2
+o
+- \mu  x + 1 E x
+2
+o
+\mu  x + 1 E x
+2
+last
+birthday
+50
+51
+52
+53
+54
+55
+56
+57
+Sum
+- 0.63
+- 1.06
+- 1.32
+0.61
+- 4.13
+- 3.20
+- 2.03
+- 1.72 27.63
+28.06
+28.32
+29.39
+27.13
+23.20
+21.03
+23.72
+- 13.48 208.48
+The value of the test statistic is therefore
+( - 13.48/ √ 208.48) = - 0.9335.
+using a two-tailed test, the absolute value of the test statistics is less
+than 1.96, so we do not reject the null hypothesis.
+We conclude that the graduated rates are not biased above or below the
+crude rates.
+(c)
+To test for the existence of individual ages at which the graduated rates
+depart greatly from the observed rates we can use the Individual
+Standardised Deviations Test.
+There are no ages at which the absolute value of z x exceeds 1.96.
+Therefore we do not reject the null hypothesis and conclude that there
+are no outliers.
+END OF EXAMINERS’ REPORT
+Page 23
+\end{document}
