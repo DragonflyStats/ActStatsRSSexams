@@ -1,0 +1,96 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%- A2
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+[Total 6]
+The price of a stock can either take a value above a certain point (state A), or take a
+value below that point (state B). Assume that the evolution of the stock price in time
+can be modelled by a two-state Markov jump process with homogeneous transition
+rates AB
+, BA
+.
+The process starts in state A at t = 0 and time is measured in weeks.
+(i) Write down the generator matrix of the Markov jump process.
+
+(ii) State the distribution of the holding time in each of states A and B.
+
+(iii) If
+3, find the value of t such that the probability that no transition to state
+B has occurred until time t is 0.2.
+
+(iv) Assuming all the information about the price of the stock is available for a
+time interval [0,T], explain how the model parameters and can be
+estimated from the available data.
+
+(v) State what you would test to determine whether the data support the
+assumption of a two-state Markov jump process model for the stock price. 
+[Total 7]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A2
+(i)
+2
+=-
+\sum  f i
+i = 1
+\mu  2
+< 0
+The generator matrix is
+⎛ -\sigma 
+A =⎜
+⎝ \rho
+\sigma  ⎞
+- \rho ⎟ ⎠
+(ii) The distribution is exponential in both cases; with parameter \sigma  in state A, \rho in
+state B.
+(iii) The probability that the process stays in A throughout [0, t] is
+∞
+\int  \sigma  e
+-\sigma  s
+ds = e -\sigma  t .
+t
+For \sigma  = 3, we get e - 3 t = 0.2
+which gives t = - ln (0.2)/3 = 0.54 weeks.
+(iv)
+The time spent in state A before the next visit to B has mean 1/\sigma .
+Therefore a reasonable estimate for \sigma  is the reciprocal of the mean length of
+each visit:
+\sigma ̂ = (Number of transitions from A to B) / (Total time spent in state A up until
+the last transition from A to B).
+[An alternative is to use the maximum likelihood estimator for \sigma , which is
+(Number of transitions from A to B)/Total time spent in state A).]
+Similarly we can estimate \hat{\rho}.
+(v)
+Testing whether the successive holding times are exponential variables and
+independent would be best. Any procedure which does this test is acceptable.
+Page 5
+\end{document}
