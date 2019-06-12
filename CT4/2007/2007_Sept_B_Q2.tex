@@ -1,0 +1,75 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+
+A particular baker’s shop in a small town sells only one product: currant buns. These
+currant buns are delicious and customers travel many miles to buy them.
+Unfortunately, the buns do not keep fresh and cannot be stored overnight.
+The baker’s practice is to bake a certain number of buns, K, before the shop opens
+each morning, and then during the day to continue baking c buns per hour. He is
+concerned that:
+\item
+\item
+3
+he does not run out of buns during the day; and
+the number of buns left over at the end of each day is as few as possible
+\begin{enumerate}[(i)]
+\item (i) Describe a model which would allow you to estimate the probability that the baker will run out of buns. State any assumptions you make.
+\item 
+(ii) Determine the relevant expression for the probability that the baker will run out of buns, in terms of K, c, and B j , the number of buns bought by the day’s jth customer.
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2
+(a)
+Assume that, during each day, customers arrive at the shop according to a Poisson process.
+Assume that the numbers of buns bought by each customer, the B j , are independent and identically distributed random variables.
+Then if $X_t$ is the total number of buns sold between the beginning of the day and time $t$, (where $t$ is measured in hours since the shop opens), $X_t$ is a
+compound Poisson process defined by
+N t
+X t = ∑ B j ,
+j = 1
+where the number of customers arriving between the shop opening and time t
+is N t .
+(b)
+The probability that the baker will run out of buns is
+N t
+Pr[ K + ct − ∑ B j < 0]
+j = 1
+for some t.
+%% 3
+%%  — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
+%%-- 4 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
