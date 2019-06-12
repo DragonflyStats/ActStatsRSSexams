@@ -1,0 +1,233 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+An investigation took place into the mortality of persons between exact ages 60 and
+61 years. The table below gives an extract from the results. For each person it gives
+the age at which they were first observed, the age at which they ceased to be observed
+and the reason for their departure from observation.
+Person Age at entry
+years months Age at exit
+years months Reason for exit
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10 60
+60
+60
+60
+60
+60
+60
+60
+60
+60 60
+61
+60
+61
+60
+61
+60
+61
+60
+61 withdrew
+survived to 61
+died
+survived to 61
+died
+survived to 61
+died
+survived to 61
+died
+survived to 61
+0
+1
+1
+2
+3
+4
+5
+7
+8
+9
+6
+0
+3
+0
+9
+0
+11
+0
+10
+0
+(i) Estimate q 60 using the Binomial model.
+(ii) List the strengths and weaknesses of the Binomial model for the estimation of
+empirical mortality rates, compared with the Poisson and two-state models.
+
+[Total 8]
+CT4 S2006
+7
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+B4
+(i)
+0.9714
+Let the age individual i enters observation be a i and the age that individual i
+leaves observation be b i . Define an indicator variable d i such that d i = 0 if
+individual i is not observed to die and d i = 1 if individual i dies.
+Measure all ages in years since exact age 60.
+The estimate of q 60 using the Binomial model is:
+10
+q ˆ 60 =
+\sum  d i
+i = 1
+10
+\sum  ( 1 - a i - ⎡ ⎣ ( 1 - d i )( 1 - b i ) ⎤ ⎦ )
+.
+i = 1
+Page 17
+The denominator in this formula shows that for persons who do not die
+(d i = 0) the exposed to risk is b i – a i and for persons who die (d i = 1) the
+exposed to risk is 1 – a i .
+Thus the relevant calculations are shown in the table below (all durations are
+in years).
+Person a i b i d i 1 - a i 1 – b i 1 - a i - (1 - d i )( - b i )
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10 0
+1/12
+1/12
+2/12
+3/12
+4/12
+5/12
+7/12
+8/12
+9/12 6/12
+1
+3/12
+1
+9/12
+1
+11/12
+1
+10/12
+1 0
+0
+1
+0
+1
+0
+1
+0
+1
+0 1
+11/12
+11/12
+10/12
+9/12
+8/12
+7/12
+5/12
+4/12
+3/12 6/12
+0
+9/12
+0
+3/12
+0
+1/12
+0
+2/12
+0 6/12
+11/12
+11/12
+10/12
+9/12
+8/12
+7/12
+5/12
+4/12
+3/12
+Totals
+4
+Therefore q ˆ 60 =
+74/12
+4
+= 0.6486 .
+74 /12
+ALTERNATIVELY
+10
+Take the central exposed to risk,
+\sum  ( b i - a i ) (in years) and add
+1
+1⁄2d 60 to give the initial exposed to risk.
+This involves estimating q 60 using the formula
+q ˆ 60 =
+d 60
+c
+E 60
++ 0.5 d 60
+=
+4
+4
+=
+= 0.5783.
+(59 /12) + 2 83 /12
+[This approach is inferior to the first, as it does not use all the information
+available in the data, and involves the assumption that the deaths take place,
+on average, half way through the year.]
+(ii)
+Page 18
+Strengths of Binomial model
+\item  avoids numerical solution of equations
+\item  can be generalised to give the Kaplan-Meier estimate
+Weaknesses of Binomial model
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
