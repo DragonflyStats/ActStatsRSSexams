@@ -31,10 +31,10 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
-PLEASE TURN OVER8
-(i)
-Describe the difference between the central exposed to risk and the initial
+
+8
+\begin{enumerate}[(a)]
+\item Describe the difference between the central exposed to risk and the initial
 exposed to risk.
 
 The following data come from an investigation of the mortality of participants in a
@@ -42,9 +42,8 @@ dangerous sport during the calendar year 2005.
 Age x
 22
 23
-(ii)
-(a)
-(b)
+
+
 Number of lives aged x last
 birthday on:
 1 January 2005 1 January 2006 Number of deaths
@@ -55,19 +54,20 @@ birthday at death
 160 160
 155 20
 25
+%----------------%
+\item 
+(a)
+(b)
 Estimate the initial exposed to risk at ages 22 and 23.
 Hence estimate q 22 and q 23 .
 
-Suppose that in this investigation, instead of aggregate data we had individual-level
-data on each person’s date of birth, date of death, and date of exit from observation (if
+Suppose that in this investigation, instead of aggregate data we had individual-level data on each person’s date of birth, date of death, and date of exit from observation (if
 exit was for reasons other than death).
-(iii)
-9
+\item 
 Explain how you would calculate the initial exposed-to-risk for lives aged 22
 years last birthday.
 
-[Total 10]
-
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 8
 (i)
@@ -135,7 +135,8 @@ the date of person i ’s entry into observation.
 The initial exposed to risk is then calculated by adding on to the central exposed to risk a quantity equal to 1 − b i for all lives who died aged 22 last
 birthday during the calendar year 2005.
 
-Page 11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
 ALTERNATIVE 2
 The initial exposed to risk is calculated as
 ∑ ( b i − a i ) ,
@@ -151,146 +152,4 @@ the date of person i ’s 22nd birthday
 the start of the calendar year 2005
 the date of person i ’s entry into observation.
 for all lives i for whom b i − a i > 0 .
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-
-In a game of tennis, when the score is at “Deuce” the player winning the next point
-holds “Advantage”. If a player holding “Advantage” wins the following point that
-player wins the game, but if that point is won by the other player the score returns to
-“Deuce”.
-When Andrew plays tennis against Ben, the probability of Andrew winning any point
-is 0.6. Consider a particular game when the score is at “Deuce”.
-\begin{enumerate}[(a)]
-\item (i)
-Show that the subsequent score in the game can be modelled as a Markov
-Chain, specifying both:
-(a)
-(b)
-\item (ii)
-the state space; and
-the transition matrix
-
-State, with reasons, whether the chain is:
-(a)
-(b)
-irreducible; and
-aperiodic
-
-\item (iii) Calculate the number of points which must be played before there is more than
-a 90\% chance of the game having been completed.
-
-\item (iv) (a)
-(b)
-CT4 S2007—6
-Calculate the probability that Andrew wins the game.
-Comment on your answer.
-
-\end{enumerate}
-
-\newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-9
-(i)
-State space:
-{Deuce, Advantage A(ndrew), Advantage B(en),
-Game A(ndrew), Game B(en)}.
-Transition matrix:
-Deuce
-Adv A
-Adv B
-Game A
-Game B
-Deuce Adv A Adv B
-0
-0.4
-0.6
-0
-0 0.6
-0
-0
-0
-0 0.4
-0
-0
-0
-0
-Game
-A
-0
-0.6
-0
-1
-0
-Game
-B
-0
-0
-0.4
-0
-1
-The chain is Markov because the probability of moving to the next state does not depend on history prior to entering that state (because the probability of
-each player winning a point is constant)
-(ii)
-The chain is reducible because it has two absorbing states Game A and
-Game B.
-States Game A and Game B are absorbing so have no period. The other three
-states each have a period of 2 so the chain is not aperiodic.
-Page 12%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
-(iii)
-The game either ends after 2 points or it returns to Deuce.
-The probability of it returning to Deuce after two points is:
-Prob A wins 1 st point \times  Prob B wins 2 nd point
-+ Prob B wins 1 st point \times  Prob A wins 2 nd point
-= 0.6 \times  0.4 + 0.4 \times  0.6 = 0.48.
-[This can also be obtained by calculating the square of the transition matrix.]
-Need to find number of such cycles N such that:
-0.48 N < 1 − 0.9 ,
-so that
-N >
-ln 0.1
-> 3.14 .
-ln(0.48)
-But the game can only finish every two points so we require 4 cycles, that is 8
-points.
-(iv)
-(a)
-Define A X to be the probability that A ultimately wins the game when
-the current state is X .
-We require A Deuce .
-By definition A Game A = 1 and A Game B = 0.
-Conditioning on the first move out of state Adv A:
-A Adv A = 0.6 \times  A Game A + 0.4 \times  A Deuce = 0.6 + 0.4 \times  A Deuce .
-Similarly:
-A Adv B = 0.6 \times  A Deuce ,
-and
-A Deuce = 0.6 \times  A Adv A + 0.4 \times  A Adv B = 0.6 \times  A Adv A + 0.24 \times  A Deuce .
-Page 13%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
-So,
-A Deuce =
-0.6
-A Adv A ,
-0.76
-A Adv A = 0.6 + 0.4 \times 
-0.6
-A Adv A ,
-0.76
-and
-A Adv A = 0.8769 ,
-and
-A Deuce = 0.6923 .
-ALTERNATIVELY
-Probability A wins after 2 points = 0.6*0.6 =0.36
-Probability that A wins from Deuce
-=
-∞
-∑
-Probability A wins after i points have been played
-i =1
-= Probability A wins after 2 points
-+ Probability A wins after 4 points +.....
-(as period 2)
-= 0.36 + 0.48 * 0.36 + 0.48 2 * 0.36 +.......
-= 0.36/(1-0.48) as a geometric progression
-= 0.6923
-(b)
 \end{document}
