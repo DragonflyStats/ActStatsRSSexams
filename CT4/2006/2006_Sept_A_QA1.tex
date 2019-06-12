@@ -1,0 +1,126 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%- A1
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A1
+A manufacturer uses a test rig to estimate the failure rate in a batch of electronic
+components. The rig holds 100 components and is designed to detect when a
+component fails, at which point it immediately replaces the component with another
+from the same batch. The following are recorded for each of the n components used
+in the test (i = 1,2, ,n):
+s i = time at which component i placed on the rig
+t i = time at which component i removed from rig
+f i
+1 Component removed due to failure
+0 Component working at end of test period
+The test rig was fully loaded and was run for two years continuously.
+You should assume that the force of failure, , of a component is constant and
+component failures are independent.
+(i)
+Show that the contribution to the likelihood from component i is:
+exp
+(ii)
+A2
+t i s i
+f i
+Derive the maximum likelihood estimator for .
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A1
+(i)
+If the ith component is still working at the end of the test period its
+contribution to the likelihood is:
+t_{i} \;-\; s_{i} 
+p s i = exp( -\mu  ( t_{i} \;-\; s_{i} ))
+under the assumption of a constant force of failure.
+If the ith component fails at time t i its contribution to the likelihood is:
+t_{i} \;-\; s_{i} 
+p s i . \mu  t i = exp( -\mu  ( t_{i} \;-\; s_{i} )). \mu 
+under the assumption of a constant force of failure.
+In both cases the contribution equals:
+exp( -\mu  ( t_{i} \;-\; s_{i} )). \mu  f i
+(ii)
+Denote the total number of components used in the test by n. The likelihood
+for n independent components is:
+n
+L = \product exp( -\mu  ( t_{i} \;-\; s_{i} )). \mu  f i
+i = 1
+n
+n
+f i
+L = exp( -\mu  \sum  ( t_{i} \;-\; s_{i}  )). \mu  i \sum 
+= 1
+i = 1
+Now the rig contains 100 components at all times because it is fully loaded
+n
+and failed components are immediately replaced, so
+\sum  ( t_{i} \;-\; s_{i}  ) = 200(years) .
+i = 1
+n
+So
+L = exp ( - 200 \mu  ) ⋅\mu 
+\sum  f i
+i = 1
+n
+ln L = - 200 \mu  + ln \mu  . \sum  f i
+i = 1
+n
+\sum  f i
+\frac{\partial}{\partial} ln L
+= - 200 + i = 1
+\frac{\partial}{\partial}\mu 
+\mu 
+
+Setting this to zero the MLE is:
+n
+\mu  ˆ =
+\sum  f i
+i = 1
+200
+To verify this is a maximum we see that:
+n
+\frac{\partial}{\partial} 2 ln L
+\frac{\partial}{\partial}\mu 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+
+
+
+\end{document}
