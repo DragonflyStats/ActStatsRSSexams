@@ -1,0 +1,111 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%- A3
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+CT4 S2006
+2A3
+(i)
+Define the following types of a stochastic process:
+(a)
+(b)
+(c)
+a Poisson process
+a compound Poisson process; and
+a general random walk
+
+(ii)
+(iii)
+A4
+For each of the processes in (i), state whether it operates in continuous or
+discrete time and whether it has a continuous or discrete state space.
+
+For each of the processes in (i), describe one practical situation in which an
+actuary could use such a process to model a real world phenomenon.
+
+[Total 8]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+A3
+(i)
+(a)
+A Poisson process with rate \lambda  is an integer-valued process N t , t
+\geq  0 with the following properties:
+N 0 = 0;
+N t has independent increments;
+N t has stationary increments, each having a Poisson distribution, i.e.
+P [ N t - N s = n ]
+(b)
+n
+\lambda  ( t - s ) ] e -\lambda  ( t - s )
+[
+=
+,
+n !
+s < t , n = 0,1, 2,...
+Let N t be a Poisson process, t \geq  0 and let Y 1 , Y 2 , ..., Y j , ..., be a
+sequence of i.i.d. random variables. Then a compound Poisson process
+is defined by
+N t
+X t = \sum  Y j ,
+t \geq  0.
+j = 1
+(c)
+Let Y 1 , Y 2 , ..., Y j , ..., be a sequence of independent and identically
+distributed random variables and define
+n
+X n = \sum  Y j
+j = 1
+∞
+with initial condition X 0 = 0. Then { X n } n = 0 constitutes a general
+random walk.
+(ii)
+(a) A Poisson process operates in continuous time and has a discrete state space, the set of nonnegative integers.
+(b) A compound Poisson process operates in continuous time.
+It has a discrete or continuous state space depending on whether the variables Y j are discrete or continuous respectively.
+(iii)
+(c) A general random walk operates in discrete time. Again, this has a discrete or continuous state space according to whether the variables $Y_j$ have a discrete or continuous distribution.
+(a) Examples of a Poisson process:
+\item 
+\item 
+\item 
+Page 6
+claims arriving to an insurance company through time car accidents reported over time arrival of customers at a service point over time
+(b) A standard example of a compound Poisson process used by actuaries is for modelling the total amount of claims to an insurance company over time.
+(c) Examples of a general random walk:
+\item 
+\item 
+modelling share prices daily
+inflation index, measured on say a monthly basis
+Other reasonable examples received credit.
+\end{document}
