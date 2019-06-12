@@ -53,14 +53,20 @@ Not applicable
 45
 Not applicable
 It is proposed to fit a Markov jump model to this data set.
-(i)
-(ii)
-(a)
-(b) List all the parameters of the model.
-Describe the assumptions underlying the model. 
-(a)
-(b) Estimate the parameters of the model.
-Give the estimated generator matrix. 
+
+\begin{enumerate}[(a)]
+\item 
+\begin{enumerate}[(i)]
+\item List all the parameters of the model.
+\item Describe the assumptions underlying the model. 
+\end{enumerate}
+\item
+\begin{enumerate}[(i)]
+\item Estimate the parameters of the model.
+\item Give the estimated generator matrix. 
+\end{enumerate}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The following additional data in respect of secondary transitions were collected from
 observation of the same process.
 Triplet of
@@ -97,7 +103,7 @@ CBC 38
 7
 (iii) State the distribution of the number of transitions from state i to state j , given
 the number of transitions out of state i .
-[1]
+
 (iv) Test the goodness-of-fit of the model by considering whether triplets of
 successive transitions adhere to the distribution given in (iii).
 [Hint: Use the test statistic χ = ∑∑∑
@@ -133,22 +139,21 @@ performing any calculations.
 The parameters are:
 •
 •
-the rate of leaving state i , \lambda i , for each i ,
-the jump-chain transition probabilities, r ij , for j ≠ i , where r ij is the
+\begin{itemize}
+\item the rate of leaving state i , \lambda i , for each i ,
+\item the jump-chain transition probabilities, r ij , for $j \neq i$ , where r ij is the
 conditional probability that the next transition is to state j given the
 current state is i .
+\end{itemize}
 [Alternatively the parameters may be expressed as \sigma  ij , where \sigma  ii = - \lambda i
 and (for j ≠ i), \sigma  ij = \lambda i r ij .]
 (b)
 The assumptions are as follows.
-• The holding time in each state is exponentially distributed. The
-parameter of this distribution varies only by state i . The
-distribution is independent of anything that happened prior to the
-current arrival in state i .
-• The destination of the jump on leaving state i is independent of
-holding time, and of anything that happened prior to the current
-arrival in state i .
-Page 16%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
+\begin{itemize}
+\item The holding time in each state is exponentially distributed. The parameter of this distribution varies only by state i . The distribution is independent of anything that happened prior to the current arrival in state i .
+\item The destination of the jump on leaving state i is independent of holding time, and of anything that happened prior to the current arrival in state i .
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Page 16%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
 ALTERNATIVELY
 The holding time in each state is exponentially distributed and the
 destination of the jump on leaving state i is independent of holding
@@ -160,7 +165,7 @@ i are independent of anything that happened prior to arrival in state i
 The estimator [it is the MLE but this need not
 be stated] of \lambda i , \lambdâ , is the inverse of the average duration of each visit
 to state i .
-so \hat{\lambda} A = 4 per hour, \hat{\lambda} B = 5 per hour, \hat{\lambda} C = 1.5 per hour
+so $\hat{\lambda} A = 4 per hour$, $\hat{\lambda} B = 5 per hour$, $\hat{\lambda} C = 1.5 per hour$
 The estimator [it is the MLE but this need not be stated] of r ij , r ˆ ij , is
 the proportion of observed jumps out of state i to state j .
 r ˆ AB = 11/20
@@ -193,9 +198,7 @@ Distribution is binomial with mean n . r ij and variance n.r ij
 (1 - r ij ), where n is the given number of transitions.
 Page 17%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
 (iv)
-Null hypothesis is that the Markov property applies to successive transitions,
-or that the observed triplets are from a Binomial distribution with the
-estimated parameters (given the number of transitions to the middle state).
+Null hypothesis is that the Markov property applies to successive transitions, or that the observed triplets are from a Binomial distribution with the estimated parameters (given the number of transitions to the middle state).
 Using test statistic given in the hint, we can draw up the table below.
 Triplet n ijk
 ABC
@@ -261,14 +264,15 @@ Minus One
 3
 1
 8 degrees of freedom
-The critical value of χ 8 2 at the 5% significance level is 15.51
-As 7.7335 < 15.51 there is no evidence to reject the null hypothesis.
-[Alternative approaches could be taken which resulted in a slightly different
-result for the test statistic. These were given full credit where appropriate.]
-Page 18%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
+The critical value of $\chi^{2}_{8}$ at the 5\% significance level is 15.51
+As $7.7335 < 15.51$ there is no evidence to reject the null hypothesis.
+
+%% [Alternative approaches could be taken which resulted in a slightly different result for the test statistic. These were given %% full credit where appropriate.]
+
+%% Page 18%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 — September 2007 — Examiners’ Report
 (v)
-[Refer back to part (i) — the test in (iv) has only tested that there is no
-evidence that the destination that the next jump depends on the previous state occupied. Need to test the other assumptions].
+
+[Refer back to part (i) — the test in (iv) has only tested that there is no evidence that the destination that the next jump depends on the previous state occupied. Need to test the other assumptions].
 Holding times — are these exponentially distributed?
 A chi-squared goodness of fit test would be appropriate Is destination of jump independent of the holding time?
 There is no obvious test statistic for doing this. A suitable test would be to
@@ -276,8 +280,8 @@ classify jumps as being from short, medium and long holding times and investigat
 (vi)
 APPROXIMATE METHOD
 Divide time into very short intervals, h , such that \sigma  ij h is much less than 1.
-Simulate a discrete-time Markov chain { Y n : n \geq  0 } , with transition
-probabilities p ij * ( h ) = δ ij + h \sigma  ij .
+Simulate a discrete-time Markov chain ${ Y n : n \geq  0 }$ , with transition
+probabilities p ij * ( h ) =  \delta_{ij} + h \sigma  ij .
 The jump process, X t is given by X t = Y [ t h ] .
 EXACT METHOD
 Simulate the jump chain as a Markov chain, with transition probabilities
