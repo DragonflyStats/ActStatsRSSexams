@@ -1,0 +1,164 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+PLEASE TURN OVER104 Questions
+B1
+B2
+Calculate 0.25 p 80 and 0.25 p 80.5 , using the ELT15 (Females) mortality table and
+assuming a uniform distribution of deaths.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 13
+104 Solutions
+B1
+= 1 - 0.25 q 80 = 1 - 0.25 \times q 80
+under the assumption of a uniform distribution of deaths (UDD)
+between ages 80 and 81.
+0.25 p 80
+From ELT 15, q 80 = 0.05961, so
+= 1 - 0.25 \times 0.05961 = 0.98510
+0.25 p 80
+ALTERNATIVE 1
+Under UDD we have, for 0 - s < t - 1,
+t - s q x + s
+=
+( t - s ) q x
+.
+1 - sq x
+Putting t = 0.75, s = 0.5 and x = 80, therefore,
+0.75 - 0.5 q 80 + 0.5
+0.25 p 80.5
+= 1 -
+=
+0.25 q 80
+, and so
+1 - 0.5 q 80
+0.25 q 80
+.
+1 - 0.5 q 80
+Using ELT15, this is evaluated as
+1 -
+0.25 ( 0.05961 )
+1 - 0.5 ( 0.05961 )
+= 1 -
+0.01490
+= 1 - 0.01536 = 0.98464
+0.97020
+ALTERNATIVE 2
+Using
+t
+p x = s p x ⋅ t - s p x + s ,
+0.75 p 80 = 0.5 p 80 ⋅ 0.25 p 80.5
+Using an assumption of UDD between ages 80 and 81, we have
+0.5 p 80
+= 1 – 0.5 \times 0.05961 = 0.97020
+0.75 p 80 =
+Page 14
+1 – 0.75 \times 0.05961 = 0.95529
+B2
+0.75 p 80
+=
+0.95529
+= 0.98463
+0.97020
+So, 0.25 p 80.5 =
+(i) (a) The age definition changes 6 months before/after each birthday, so this
+is a life year rate interval.
+(b) Lives are aged x - 1⁄2 at the start of the rate interval.
+(ii)
+0.5 p 80
+Under the principle of correspondence the age definition of deaths and census
+should correspond, which they do here. So we do not need to adjust the
+census information.
+3
+The exposed to risk is given by
+E x c
+= \int  P x ( t ) dt .
+0
+Assuming P x ( t ) is linear over calendar years, we can approximate this to
+2
+E x c = \sum 
+0
+1
+( P x ( t ) + P x ( t + 1 ) ) , where t is measured from 1 January 2002
+2
+1
+⎛ 1
+⎞
+= ⎜ P x ( 0 ) + P x ( 1 ) + P x ( 2 ) + P x ( 3 ) ⎟
+2
+⎝ 2
+⎠
+(iii)
+The age definitions for deaths and census no longer correspond. So, we need
+to adjust the census information for those companies who supply details of
+P x * ( t ) .
+Assuming birthdays are uniformly distributed over the calendar year,
+1
+we can approximate P x ( t ) ≈ P x * - 1 ( t ) + P x * ( t ) .
+2
+(
+)
+And the exposed to risk is then:
+2
+E x c = \sum 
+0
+2
+1
+( P x ( t ) + P x ( t + 1 ) )
+2
+(
+) (
+)
+1 ⎛ 1
+1
+⎞
+= \sum  ⎜ P x * - 1 ( t ) + P x * ( t ) + P x * - 1 ( t + 1 ) + P x * ( t + 1 ) ⎟
+2
+⎠
+0 2 ⎝ 2
+1
+1
+1
+= P x * - 1 ( 0 ) + P x * ( 0 ) + P x * - 1 ( 1 ) + P x * ( 1 ) + P x * - 1 ( 2 ) + P x * ( 2 ) + P x * - 1 ( 3 ) + P x * ( 3 )
+4
+2
+4
+(
+) (
+) (
+)
+
+\end{document}
