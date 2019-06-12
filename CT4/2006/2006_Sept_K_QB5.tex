@@ -1,0 +1,191 @@
+\documentclass[a4paper,12pt]{article}
+
+%% B5 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+PLEASE TURN OVERB5
+A life insurance company has carried out a mortality investigation. It followed a
+sample of independent policyholders aged between 50 and 55 years. Policyholders
+were followed from their 50th birthday until they died, they withdrew from the
+investigation while still alive, or they celebrated their 55th birthday (whichever of
+these events occurred first).
+(i)
+Describe the censoring that is present in this investigation.
+
+An extract from the data for 12 policyholders is shown in the table below.
+B6
+Policyholder Last age at which
+policyholder was observed
+(years and months) Outcome
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12 50 years 3 months
+50 years 6 months
+51 years 0 months
+51 years 0 months
+52 years 3 months
+52 years 9 months
+53 years 0 months
+53 years 6 months
+54 years 3 months
+54 years 3 months
+55 years 0 months
+55 years 0 months Died
+Withdrew
+Died
+Withdrew
+Withdrew
+Died
+Withdrew
+Withdrew
+Withdrew
+Died
+Still alive
+Still alive
+(ii) Calculate the Nelson-Aalen estimate of the survival function.
+(iii) Sketch on a suitably labelled graph the Nelson-Aalen estimate of the survival
+function.
+
+[Total 9]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+B5
+(i)
+\item  need to compute an initial exposed-to-risk is a pointless complication if
+census-type data are available
+\item  not so easily generalised as two-state or Poisson models to processes with
+more than one decrement, and not so easily generalised as two-state model
+to increments
+\item  estimate of q x has a higher variance than that of the two-state Poisson
+models (though the difference is very small unless mortality is very high)
+There will be Type I censoring of lives that survive to age 55 years.
+There will be random censoring of lives that withdraw before age 55 years.
+(ii)
+The calculations are shown in the table below, where durations are measured
+in years since the 50th birthday.
+Using the convention that, when deaths and withdrawals are observed at the
+same duration, deaths occur first:
+t j
+0
+0.25
+1.00
+2.75
+4.25
+N j
+12
+12
+10
+7
+4
+d j
+1
+1
+1
+1
+c j
+1
+2
+2
+3
+d j / N j ˆ =
+Λ
+\sum  ( d j / N j )
+t
+0.0833
+0.1000
+0.1429
+0.25 0.0833
+0.1833
+0.3262
+0.5762
+t j ≤ t
+ˆ )
+Since S ˆ ( t ) = exp( -Λ
+t
+the estimated survival function is
+t S ˆ ( t )
+0 ≤ t < 0.25
+0.25 ≤ t < 1.00
+1.00 ≤ t < 2.75
+2.75 ≤ t < 4.25
+4.25 ≤ t < 5.00 1.0000
+0.9201
+0.8325
+0.7217
+0.5620
+Page 19
+(iii)
+1 1
+0.9
+0.9
+0.8
+0.8
+0.7
+0.7
+0.6
+0.6
+0.5
+0.5
+0.4
+0.4
+0.3
+0.3
+0.2
+0.2
+0.1
+0.1
+0 0
+0
+0.5
+1
+1.5
+2
+2.5
+3 3
+3.5
+4 4
+4.5
+Duration
+Duration since 50th birthday
+
+\end{document}
