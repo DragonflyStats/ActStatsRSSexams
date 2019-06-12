@@ -1,0 +1,174 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% A-5
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+PLEASE TURN OVERA5
+A motor insurance company wishes to estimate the proportion of policyholders who
+make at least one claim within a year. From historical data, the company believes that
+the probability a policyholder makes a claim in any given year depends on the number
+of claims the policyholder made in the previous two years. In particular:
+the probability that a policyholder who had claims in both previous years will
+make a claim in the current year is 0.25
+the probability that a policyholder who had claims in one of the previous two
+years will make a claim in the current year is 0.15; and
+the probability that a policyholder who had no claims in the previous two years
+will make a claim in the current year is 0.1
+
+
+\begin{enumerate}
+(i) Construct this as a Markov chain model, identifying clearly the states of the
+chain.
+
+(ii) Write down the transition matrix of the chain.
+(iii) Explain why this Markov chain will converge to a stationary distribution. 
+(iv) Calculate the proportion of policyholders who, in the long run, make at least
+one claim at a given year.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 8
+A5
+(i)
+Consider the following four states that the policyholder might be at the end of
+a year:
+\item  the policyholder has made at least one claim both in the year just ended
+and the previous one (state A)
+\item  the policyholder has made no claims in the year just ended but s/he made
+at least one claim during the previous year (state B)
+\item  the policyholder has made at least one claim in the year just ended but not
+in the previous one (state C)
+\item  the policyholder has made no claim during either the year ended or the
+previous one (state D)
+If the year ended is year n, and X n denotes the current state of the policyholder,
+then X n constitutes a Markov chain.
+(ii)
+The transition matrix is
+⎛ 0.25
+⎜
+0
+P = ⎜
+⎜ 0.15
+⎜
+⎝ 0
+(iii)
+0.75
+0
+0.85
+0
+0
+0.15
+0
+0.10
+0 ⎞
+⎟
+0.85 ⎟
+0 ⎟
+⎟
+0.90 ⎠
+The chain has a finite number of states (A,B,C,D). In order to show that it has
+a stationary distribution, it suffices to show that it is irreducible and aperiodic.
+It is apparent from the transition matrix above that any state can be reached
+from any other; hence the chain is irreducible.
+The chain is also aperiodic since for states A, D the state can remain at the
+same state after one step, while for states B, C the state may return to its
+current state after 2 or 3 steps.
+Hence the chain has a stationary distribution (which is unique).
+Page 9
+(iv)
+The set of equations is given (in matrix from) by \pi P=\pi ,
+where \pi  = (\pi  A , \pi  B , \pi  C , \pi  D ) denotes the stationary distribution.
+Using the transition matrix from (ii) above we obtain the equations
+0.25 \pi  A +
+0.75 \pi  A +
+0.15 \pi  B
+0.85 \pi  B
++0.15 \pi  C
++0.85 \pi  C
++0.10 \pi  D
++0.90 \pi  D
+= \pi  A
+= \pi  B
+= \pi  C
+= \pi  D
+(1)
+(2)
+(3)
+Discard the last of these equations and use also that the stationary probabilities
+must also satisfy
+\pi  A + \pi  B + \pi  C + \pi  D = 1
+(4)
+Equation (1) gives
+0.75 \pi  A = 0.15 \pi  C
+Or
+(5)
+5 \pi  A = \pi  C
+Substituting (5) into (2) yields immediately
+\pi  B = \pi  C
+and inserting this into (3) we get
+\pi  D =
+17
+\pi  B .
+2
+In view of the above, we obtain now from (4) that
+17 ⎞
+10
+⎛ 1
+.
+\pi  B ⎜ + 1 + 1 + ⎟ = 1 ⇒ \pi  B =
+2 ⎠
+107
+⎝ 5
+Hence the other probabilities are
+\pi  A =
+2
+10
+85
+, \pi  C =
+, \pi  D =
+.
+107
+107
+107
+The proportion of policyholders who, in the long run, make at least one claim
+in a given year is
+\pi  A + \pi  B =
+Page 10
+12
+.
+
+
+\end{document}
