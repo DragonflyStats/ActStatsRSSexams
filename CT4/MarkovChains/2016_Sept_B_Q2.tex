@@ -1,0 +1,100 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\large
+\noindent The diagrams below show three Markov chains, where arrows indicate a non-zero
+transition probability.\\ 
+State whether each of the chains is:
+\begin{itemize}
+	\item irreducible.
+	\item periodic, giving the period.
+\end{itemize}
+\begin{framed}
+	\noindent 	
+A Markov chain is said to be irreducible if it is possible to get to any state from any state. 
+\end{framed}
+
+\begin{framed}
+\noindent 	A state in a discrete-time Markov chain is periodic if the chain can return to the state only at multiples of some specific integer larger than 1
+\end{framed}
+
+\begin{framed}
+\noindent A Markov chain is aperiodic if every state is aperiodic.
+\end{framed}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\linewidth]{Plot1}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Plot2}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Plot3}
+\end{figure}
+
+
+\newpage
+% %- Q2
+
+\noindent \textbf{Markov Chain 1}
+
+\begin{itemize}
+\item Irreducible
+\item Aperiodic
+
+\end{itemize}
+
+
+
+\noindent \textbf{Markov Chain 2}
+\begin{itemize}
+\item Irreducible
+\item Periodic with period 2
+\end{itemize}
+
+
+\noindent \textbf{Markov Chain 3}
+\begin{itemize}
+	\item Reducible
+	\item Aperiodic
+\end{itemize}
+
+
+
+% [Total 3]
+% Many candidates did well on this question. The most common errors were to regard Markov Chain 1 as periodic (this is incorrect because return to any state is possible in 2 or 3 steps, and 2 and 3 have no common factor higher than 1), and to regard Markov Chain 2 as being periodic with period 4 rather than 2.
+
+\end{document}
