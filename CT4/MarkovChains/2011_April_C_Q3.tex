@@ -1,0 +1,141 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\large
+	\noindent Children at a school are given weekly grade sheets, in which their effort is graded in four levels: 
+	\begin{framed}
+		\begin{multicols}{2}
+			\begin{enumerate}
+				\item  “Poor”, 
+				\item  “Satisfactory”, 
+				\item  “Good” and 
+				\item  “Excellent”.
+			\end{enumerate}
+		\end{multicols}
+	\end{framed}
+	
+	\noindent Subject to a
+	maximum level of Excellent and a minimum level of Poor, between each week and the next, a child has:
+	\begin{itemize}
+		\item a 20 per cent chance of moving up one level.
+		\item a 20 per cent chance of moving down one level.
+		\item a 10 per cent chance of moving up two levels.
+		\item a 10 per cent chance of moving down two levels.
+		\item Moving up or down three levels in a single week is not possible.
+	\end{itemize}
+	
+	\begin{enumerate}[(a)]
+		\item 
+		Write down the transition matrix of this process. \bigskip
+		
+		\newpage
+		
+		\[M = \begin{pmatrix}
+		0.7	&	0.2	&	0.1 & 0 \\
+		0.3	&	0.4	&	0.2 & 0.1 \\
+		0.1	&	0.2	&	0.4 & 0.3 \\
+		0	&	0.1	&	0.2 & 0.7 \\
+		\end{pmatrix}\]
+		
+		\newpage
+		
+		
+		
+		\item Children are graded on Friday afternoon in each week. On Friday of the first week of the school year, as there is little evidence on which to base an assessment, all children
+		are graded “Satisfactory”.
+		
+		Calculate the probability distribution of the process after the grading on Friday of the third week of the school year.
+		
+	\end{enumerate}
+	\newpage
+	% Question 4
+	
+	
+	
+	
+	\noindent If the probability distribution in the first week is $\Pi$ , and the transition matrix is M,
+	then the probability distribution at the end of the third week is
+	\begin{eqnarray*} \Pi M^2 &=& 
+		\begin{pmatrix}
+			0	&	1	&	0 & 0 \\    
+		\end{pmatrix} \times \begin{pmatrix}
+		0.7	&	0.2	&	0.1 & 0 \\
+		0.3	&	0.4	&	0.2 & 0.1 \\
+		0.1	&	0.2	&	0.4 & 0.3 \\
+		0	&	0.1	&	0.2 & 0.7 \\
+	\end{pmatrix} \times \begin{pmatrix}
+	0.7	&	0.2	&	0.1 & 0 \\
+	0.3	&	0.4	&	0.2 & 0.1 \\
+	0.1	&	0.2	&	0.4 & 0.3 \\
+	0	&	0.1	&	0.2 & 0.7 \\
+\end{pmatrix}\\
+& & \\
+&=&      \begin{pmatrix}
+	0	&	1	&	0 & 0 \\    
+\end{pmatrix} \times \begin{pmatrix}
+0.56	&	0.24	&	0.15	&	0.05	\\ 
+0.35	&	0.27	&	0.21	&	0.17	\\ 
+0.17	&	0.21	&	0.27	&	0.35	\\ 
+0.05	&	0.15	&	0.24	&	0.56	\\ 
+\end{pmatrix}
+\\
+& & \\
+&=&      \begin{pmatrix}
+	0.35	&	0.27	&	0.21 & 0.17 \\    
+\end{pmatrix} 
+\end{eqnarray*}
+
+so that there is a probability of
+\begin{itemize}
+	\item 35\% that a child will be graded Poor’,
+	\item 27\% that a child will be graded Satisfactory,
+	\item 21\% that a child will be graded Good and
+	\item 17\% that a child will be graded Excellent..
+\end{itemize}
+
+
+\newpage
+There were two common errors on this question. The first was to assume that if a child could
+not move up or down two levels, he or she would not move at all. The phrase in the question
+“[s]ubject to a maximum level of Excellent and a minimum level of Poor” was intended to
+indicate that children could not move beyond these limits in either direction, but would move
+as far as they could. Thus a child at level “Good”, who had a 20% chance of moving up one
+level and a 10% chance of moving up two levels, would have a 30% chance of moving to
+level Excellent, as the 10% who would have moved up two levels will only be able to move up
+one level. The second error was to use Π M 3 in part (ii). Candidates who made the first
+error were penalised in part (i) but could gain full credit for part (ii) if they followed through
+correctly.
+\end{document}
