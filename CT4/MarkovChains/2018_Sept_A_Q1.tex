@@ -31,42 +31,48 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-CT4 S2018 
-© Institute and Faculty of Actuaries1
+%% CT4 S2018 
+%% © Institute and Faculty of Actuaries1
+\large
+\noindent 
 Explain why each of the following matrices is, or is not, a valid transition matrix for a
 Markov chain.
-(a) ⎛ 0
-0 ⎞
-⎜
-⎟
-⎝ 0.5 0.5 ⎠
-(b) ⎛ 0.5
-⎜
-⎝ 0.3
-(c) ⎛ 0 0.5 0.5 ⎞
-⎟
-⎜
-⎜ 0.2 0 0.8 ⎟
-⎜ 0.4 0.6 0 ⎟
-⎠
-⎝
-0.3
-0.1
-0.2
-0.6
-⎞
-⎟
-⎠
-⎛ 0.5 0.3 0.2 ⎞
-⎟
-⎜
-(d)
-⎜ 0.3 0.4 0.3 ⎟
-⎜ 0.4 –0.1 0.7 ⎟
-				
-⎠
-⎝
+\begin{enumerate}[(a)]
+    \item 
+\[\begin{pmatrix}
+0 & 0 \\
+0.5 & 0.5 \\
+\end{pmatrix}\]
+\bigskip
+
+\item 
+\[\begin{pmatrix}
+0.5 & 0.3 & 0.2\\
+0.3 & 0.1 & 0.6 \\
+\end{pmatrix}\]
+\bigskip
+\item 
+
+\[\begin{pmatrix}
+ 0 & 0.5 & 0.5\\ 
+0.2 & 0 & 0.8 \\
+0.4 & 0.6 & 0 \\
+\end{pmatrix}\]
+\bigskip
+
+\item
+\[\begin{pmatrix}
+ 0.5 & 0.3 & 0.2\\ 
+0.3 & 0.4 & 0.3 \\
+0.5 & -0.1 & 0.7 \\
+\end{pmatrix}\]
+\bigskip
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+
 Q1
 (a) Not a valid transition matrix,
 because the first row sums to 0 not 1. 
@@ -87,3 +93,5 @@ Most candidates answered this question well. The most common
 error was not to recognise that transition matrices for a Markov
 chain must be square.
 
+
+\end{document}
