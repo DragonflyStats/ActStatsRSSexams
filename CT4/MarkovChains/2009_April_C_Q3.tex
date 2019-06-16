@@ -1,0 +1,83 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\large
+\begin{enumerate}[(a)]
+\item 
+Explain what is meant by a time-homogeneous Markov chain.
+
+\item Consider the time-homogeneous two-state Markov chain with transition matrix:
+
+\[
+\begin{pmatrix}
+1 - a & a \\
+b & 1 - b \\
+\end{pmatrix}
+\]
+\noindent Explain the range of values that a and b can take which result in this being a
+valid Markov chain which is:
+\begin{enumerate}[(i)]
+\item  irreducible
+\item periodic
+\end{enumerate}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+
+\begin{itemize}
+\item[(a)]
+A Markov chain is a stochastic process with discrete states operating in discrete time in which the probabilities of moving from one state to another
+are dependent only on the present state of the process.
+\begin{itemize}
+    \item If the transition probabilities are also independent of time.
+\item Also: If the $n-$step transition probabilities are dependent only on the time lag, the
+chain is said to be time-homogeneous.
+\end{itemize}
+
+\item[(b)]
+
+\begin{enumerate}[(i)]
+\item In this case the chain is irreducible if the transition probability out of each state is non-zero (or, equivalently, if it is possible to
+reach the other state from both states)
+\\\\
+So this requires $0 < a \leq 1$ and $0 < b \leq 1$
+\item 
+The chain is only periodic if the chain must alternate between
+the states.
+So $a = 1$ and $b = 1$.
+\end{enumerate}
+\end{itemize}
+\end{document}
+
