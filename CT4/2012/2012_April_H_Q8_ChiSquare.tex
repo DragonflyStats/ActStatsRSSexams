@@ -37,16 +37,8 @@
 \setcounter{MaxMatrixCols}{10}
 \begin{document}
 
+The mortality experience of a large company pension scheme is to be tested to see if the experience of males aged 65–72 years is consistent with a standard table. The results were collated by the firm conducting the analysis on a computer spreadsheet, with positive and negative standardised deviations being distinguished only by being in a different coloured font. Unfortunately the results have been supplied to the company in the form of a printout produced on a black-and-white printer from which it is not possible to tell the signs of the deviations.
 
-
-[Total 9]
-The mortality experience of a large company pension scheme is to be tested to see if
-the experience of males aged 65–72 years is consistent with a standard table. The
-results were collated by the firm conducting the analysis on a computer spreadsheet,
-with positive and negative standardised deviations being distinguished only by being
-in a different coloured font. Unfortunately the results have been supplied to the
-companY_in the form of a printout produced on a black-and-white printer from which
-it is not possible to tell the signs of the deviations.
 The values of the standardised deviations shown are as follows:
 0.052
 0.967
@@ -56,7 +48,7 @@ The values of the standardised deviations shown are as follows:
 0.250
 1.023
 0.756
-\begin{enumerate}
+\begin{enumerate}[(a)]
 \item (i) Suggest two tests which could be conducted from the information given.
 \item (ii) Carry out the tests you suggested in your answer to part (i).
 \end{enumerate}
@@ -68,23 +60,22 @@ Chi-squared test (for overall goodness of fit)
 (Modified) individual standardised deviations test (for outliers)
 (ii)
 Chi-squared test
-The null hypothesis is that the mortality among the members of the company’s
-pension scheme is represented by the standard table.
+The null hypothesis is that the mortality among the members of the company’s pension scheme is represented by the standard table.
 The test statistic is
 ∑ z x 2 , where the z x are the standardised deviations.
 x
-Under the null hypothesis, this statistic has a chi-squared distribution with 8 degrees
-of freedom.
-Page 9Subject CT4 (Models) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+Under the null hypothesis, this statistic has a chi-squared distribution with 8 degrees of freedom.
+%%%--------------------Page 9Subject CT4 (Models) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 ∑ z x 2
 = 0.052 2 + 0.967 2 + 2.528 2 + 0.328 2 + 1.234 2 + 0.250 2
 x
 + 1.023 2 + 0.756 2 = 10.64.
-The critical value of the chi-squared distribution with 8 degrees of freedom at the 5%
-significance level is 15.51.
-Since 10.64 < 15.51
+The critical value of the chi-squared distribution with 8 degrees of freedom at the 5\% significance level is 15.51.
+Since $10.64 < 15.51$
+
 we do not reject the null hypothesis.
 (Modified) individual standardised deviations test
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Under the null hypothesis (same as for the chi-squared test)
 we would expect individual deviations to be distributed Normal (0,1)
 Only 1 in 20 of the z x should lie above 1.96 in absolute value
@@ -105,11 +96,10 @@ Expected deaths
 (2,∞)
 1
 0.32
-The largest deviation we have here is 2.528 in absolute value,
-which is well outside the range −1.96 to +1.96,
+The largest deviation we have here is 2.528 in absolute value, which is well outside the range −1.96 to +1.96,
 therefore we have reason to reject the null hypothesis.
-but, since we have 8 ages we cannot say definitively whether the null hypothesis
-should be rejected, but the large deviation of 2.528 suggests there may be a problem.
+
+but, since we have 8 ages we cannot say definitively whether the null hypothesis should be rejected, but the large deviation of 2.528 suggests there may be a problem.
 
 %Many candidates scored highly on this question, though the chi-squared test was generally better done than the individual standardised deviations test. A surprising proportion of candidates thought that it was possible to perform the serial correlations test with the data given. The most common errors were to reduce the number of degrees of freedom in the chi- squared test (incorrect here as we are not testing a graduation) and a failure to spot the large deviation of 2.528, and state that this is a source of concern.
 
