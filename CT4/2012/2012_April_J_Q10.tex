@@ -34,17 +34,13 @@
 
 
 %%PLEASE TURN OVER10
-An investigation was conducted into the effect marriage has on mortality and a model
-was constructed with three states: 1 Single, 2 Married and 3 Dead. It is assumed that
-transition rates between states are constant.
-\begin{enumerate}
+\large
+\noindent An investigation was conducted into the effect marriage has on mortality and a model was constructed with three states: 1 Single, 2 Married and 3 Dead. It is assumed that transition rates between states are constant.
+\begin{enumerate}[(a)]
 \item (i) Sketch a diagram showing the possible transitions between states.
-\item 
-(ii) Write down an expression for the likelihood of the data in terms of transition
-rates and waiting times, defining all the terms you use.
+\item (ii) Write down an expression for the likelihood of the data in terms of transition rates and waiting times, defining all the terms you use.
 \medskip 
-The following data were collected from information on males and females in their
-thirties.
+The following data were collected from information on males and females in their thirties.
 Years spent in Married state
 Years spent in Single state
 Number of transitions from Married to Single
@@ -56,9 +52,7 @@ Number of transitions from Married to Dead
 1,382
 12
 9
-\item (iii) Derive the maximum likelihood estimator of the transition rate from Single to
-Dead.
-
+\item (iii) Derive the maximum likelihood estimator of the transition rate from Single to Dead.
 \item (iv) Estimate the constant transition rate from Single to Dead and its variance. 
 \end{itemize}
 
@@ -70,6 +64,7 @@ Dead.
 1. Single
 2. Married
 3. Dead
+%------------------------------%
 (ii)
 { (
 12
@@ -91,15 +86,17 @@ d 13
 23
 d 23
 where
-\mu ij is the transition intensity from state i to state j
-ν i is the total observed waiting time in state i
-d ij is the number of transitions from state i to state j
-Page 13Subject CT4 (Models) – %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\begin{itemize}
+\item $ { \displaystyle \mu ij }$ is the transition intensity from state i to state j
+\item $ { \displaystyle ν i}$ is the total observed waiting time in state i
+\item ${ \displaystyle d ij}$ is the number of transitions from state i to state j
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 (iii)
 Taking the logarithm of the likelihood we get
-log e ( L ) = −\mu 13 ν 1 + d 13 log e ( \mu 13 ) + terms not involving \mu 13 .
+log e ( L ) = −\mu 13 ν 1 + d 13 log e ( \mu 13 ) + terms not involving $\mu_{13}$.
 13
-Differentiate with respect to \mu
+Differentiate with respect to $\mu$
 d ln( L )
 d \mu 13
 1
@@ -120,7 +117,7 @@ d 2 log e ( L )
 d 13
 ( \mu 13 ) 2
 which is always negative.
-The maximum likelihood estimate of \mu 13 is 12/10,298 = 0.001165.
+The maximum likelihood estimate of \mu 13 is $ { \displaystyle \frac{12}{10,298} = 0.001165  }$.
 The variance is
 − 1
 d 2 ln( L )
@@ -128,8 +125,7 @@ d 2 ln( L )
 = 12
 10, 298 2
 = 1.13 x 10 -7 .
-This was the best answered question on the paper, with most candidates scoring at least 9 of
-the 11 marks available. In part (ii) many candidates omitted the constant of proportionality.
-In part (iv) the question says “estimate”, so we needed some indication of where the answers
-came from for full marks.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+This was the best answered question on the paper, with most candidates scoring at least 9 of the 11 marks available. In part (ii) many candidates omitted the constant of proportionality. In part (iv) the question says “estimate”, so we needed some indication of where the answers came from for full marks.
 \end{document}
