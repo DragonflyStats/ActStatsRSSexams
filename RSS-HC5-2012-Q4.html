@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Spanning Trees</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs-2.25/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Spanning Trees
+]
+.subtitle[
+## DiscreteMaths.github.io
+]
+
+---
+
+
+&lt;style type="text/css"&gt;
+  body{
+  font-size: 20pt;
+}
+&lt;/style&gt;
+
+
+
+
+
+
+&lt;style&gt; 
+  /* Hide page numbers */ .
+  remark-slide-number { display: none; } 
+&lt;/style&gt;
+
+## Bayesian Statistics with R
+### Bayesian Analysis of Cloud Kitchen Sales
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+## &lt;tt&gt;Statistical Computing with R&lt;/tt&gt;
+###&lt;tt&gt;CS1B (ASI - May 2023) 
+
+---
+
+### Estimating Parameters and Analyzing Statistical Properties of Independent Normal Distributions
+
+* This exercise focuses on estimating an unknown parameter `\(\theta\)` of two independent, normally distributed random variables `\(X_1\)` and `\(X_2\)`, each with mean and variance `\(\theta\)`. 
+
+* Through a series of steps, the exercise guides you to derive the method of moments estimator, demonstrate its unbiasedness, and compute its variance. 
+
+* Additionally, it explores the distribution and properties of the difference `\(Y = X_1 - X_2\)`, evaluates alternative unbiased estimators, and uses moment generating functions to find specific moments and variances. 
+
+* The goal is to provide a comprehensive understanding of statistical estimation, the properties of normal distributions, and the efficiency of different estimators.
+
+---
+
+
+Random variables `\(X_1\)` and `\(X_2\)` are independent, each having a Normal distribution with mean and variance both equal to `\(\theta\)`, an unknown parameter. 
+It is required to use `\(X_1\)` and `\(X_2\)` to estimate `\(\theta\)`.
+
+
+### Exercises
+
+**A**. Find the method of moments estimator `\(\hat{\theta}\)` of `\(\theta\)` based on the first sample moment. 
+Show that `\(\hat{\theta}\)` is unbiased and find its variance. 
+
+**B.** The random variable `\(Y = X_1 - X_2\)`. State the distribution of `\(Y\)`. 
+
+**C**. Show that `\(\hat{\theta}\)` and `\(Y\)` are uncorrelated. 
+
+
+---
+
+
+### Exercise A.
+
+**Method of Moments Estimator**
+
+* The method of moments estimator `\(\hat{\theta}\)` is based on equating the sample moments to the population moments. 
+* Given `\(X_1\)` and `\(X_2\)` are independent and normally distributed with mean and variance `\(\theta\)`, the first sample moment (mean) is:
+
+`$$\bar{X} = \frac{X_1 + X_2}{2}$$`
+
+* Since `\(E(X_1) = E(X_2) = \theta\)`, the expected value of the sample mean is:
+
+`$$E(\bar{X}) = \theta$$`
+
+* Thus, the method of moments estimator for `\(\theta\)` is:
+
+`$$\hat{\theta} = \bar{X} = \frac{X_1 + X_2}{2}$$`
+
+---
+
+**Unbiasedness:**
+
+* To show that `\(\hat{\theta}\)` is unbiased, we need to show that `\(E(\hat{\theta}) = \theta\)`:
+
+`$$E(\hat{\theta}) = E\left(\frac{X_1 + X_2}{2}\right) = \frac{E(X_1) + E(X_2)}{2} = \frac{\theta + \theta}{2} = \theta$$`
+
+* So, `\(\hat{\theta}\)` is an unbiased estimator of `\(\theta\)`.
+
+---
+
+**Variance:**
+
+* The variance of `\(\hat{\theta}\)` is given by:
+
+`$$\text{Var}(\hat{\theta}) = \text{Var}\left(\frac{X_1 + X_2}{2}\right) = \frac{1}{4} [\text{Var}(X_1) + \text{Var}(X_2)]$$`
+
+* Since `\(\text{Var}(X_1) = \text{Var}(X_2) = \theta\)`:
+
+`$$\text{Var}(\hat{\theta}) = \frac{1}{4} (\theta + \theta) = \frac{1}{4} \times 2\theta = \frac{\theta}{2}$$`
+
+---
+
+### Exercise B.
+
+**Distribution of `\(Y = X_1 - X_2\)`**
+
+Given `\(X_1\)` and `\(X_2\)` are independent and normally distributed with mean and variance `\(\theta\)`, the distribution of `\(Y\)`:
+
+`$$Y = X_1 - X_2$$`
+
+`$$\text{Mean of } Y: \mu_Y = E(X_1) - E(X_2) = \theta - \theta = 0$$`
+
+`$$\text{Variance of } Y: \sigma_Y^2 = \text{Var}(X_1) + \text{Var}(X_2) = \theta + \theta = 2\theta$$`
+
+Hence, `\(Y\)` is normally distributed with mean 0 and variance `\(2\theta\)`:
+
+`$$Y \sim N(0, 2\theta)$$`
+
+
+---
+
+### Exercise C.
+
+**Uncorrelatedness of `\(\hat{\theta}\)` and `\(Y\)`**
+
+To show that `\(\hat{\theta}\)` and `\(Y\)` are uncorrelated, we need to show that the covariance between `\(\hat{\theta}\)` and `\(Y\)` is zero:
+
+`$$\text{Cov}(\hat{\theta}, Y) = E(\hat{\theta} Y) - E(\hat{\theta}) E(Y)$$`
+
+---
+
+### Exercise C. 
+
+Since `\(E(Y) = 0\)`:
+
+`$$\text{Cov}(\hat{\theta}, Y) = E(\hat{\theta} Y)$$`
+
+`$$\hat{\theta} = \frac{X_1 + X_2}{2}$$`
+
+`$$E(\hat{\theta} Y) = E\left(\left(\frac{X_1 + X_2}{2}\right)(X_1 - X_2)\right) = \frac{1}{2} E(X_1^2 - X_2^2)$$`
+
+---
+
+### Exercise C. 
+
+Recall that the variance of `\(X\)` is defined as:
+`$$\text{Var}(X) = E(X^2) - (E(X))^2$$`
+
+Given `\(\text{Var}(X) = \theta\)` and `\(E(X) = \theta\)`, we can substitute these into the equation:
+`$$\theta = E(X^2) - \theta^2$$`
+
+Solving for `\(E(X^2)\)`:
+`$$E(X^2) = \theta + \theta^2$$`
+
+So, `\(E(X^2) = \theta + \theta^2\)`.
+
+---
+
+### Exercise C. 
+
+Given `\(X_1\)` and `\(X_2\)` are independent and `\(E(X_1^2) = E(X_2^2)\)`:
+
+`$$E(\hat{\theta} Y) = \frac{1}{2} [E(X_1^2) - E(X_2^2)] = \frac{1}{2} [\theta + \theta^2 - (\theta + \theta^2)] = 0$$`
+
+Hence, `\(\hat{\theta}\)` and `\(Y\)` are uncorrelated.
+
+
+---
+
+
+### Exercises
+
+**D**. Another unbiased estimator of `\(\theta\)` is `\(kY^2\)`, where `\(k\)` is a constant. Find the value of `\(k\)`. 
+
+
+
+**E**. Show that `\(E(Y^4) = 12\theta^2\)`. 
+
+You may use the result that the moment generating function of a Normal distribution with mean `\(\mu\)` and variance `\(\theta\)` is 
+`$$M_X(t) = \exp\left(\mu t + \frac{\sigma^2 t^2}{2}\right).$$`
+
+**F**. Use the results of ***exercise E*** to find the variance of `\(\theta\)`, and hence the efficiency of `\(\hat{\theta}\)` relative to `\(\theta\)`. 
+
+
+---
+
+### Exercise D. 
+
+**Unbiased Estimator `\(kY^2\)`**
+
+Given that another unbiased estimator of `\(\theta\)` is `\(kY^2\)`:
+
+To find the value of `\(k\)`, we need to ensure that `\(E(kY^2) = \theta\)`.
+
+Since `\(Y \sim N(0, 2\theta)\)`, the expectation `\(E(Y^2) = 2\theta\)`:
+
+`$$E(kY^2) = k E(Y^2) = k \times 2\theta = \theta$$`
+
+`$$k \times 2\theta = \theta$$`
+
+`$$k = \frac{1}{2}$$`
+
+Thus, the unbiased estimator is:
+
+`$$\hat{\theta}_2 = \frac{1}{2} Y^2$$`
+
+---
+
+### Exercise E.
+
+**Expectation `\(E(Y^4)\)`**
+
+Using the result for a normal distribution `\(N(\mu, \sigma^2)\)`:
+
+Given `\(Y \sim N(0, 2\theta)\)`, the fourth moment `\(E(Y^4)\)` can be found using the moment generating function `\(M_X(t)\)`:
+
+`$$M_Y(t) = \exp\left(0 \times t + \frac{2\theta t^2}{2}\right) = \exp(\theta t^2)$$`
+
+---
+
+### Exercise E.
+
+The fourth moment is the fourth derivative of the moment generating function evaluated at `\(t = 0\)`:
+
+`$$E(Y^4) = \frac{d^4}{dt^4} M_Y(t) \Big|_{t=0}$$`
+
+For `\(M_Y(t) = \exp(\theta t^2)\)`:
+
+`$$E(Y^4) = 12\theta^2$$`
+
+So, `\(E(Y^4) = 12\theta^2\)`.
+
+
+---
+
+### Exercise F.
+
+**Variance and Efficiency**
+
+To find the variance of the estimator `\(\theta\)`:
+
+`$$\text{Var}(\hat{\theta}_2) = \text{Var}\left(\frac{1}{2}Y^2\right) = \frac{1}{4}\text{Var}(Y^2)$$`
+
+Using the variance of `\(Y^2\)`:
+
+`$$Y \sim N(0, 2\theta) \Rightarrow Y^2 \sim \chi^2_1(2\theta)$$`
+
+The variance of `\(Y^2\)`:
+
+`$$\text{Var}(Y^2) = 2(2\theta)^2 = 8\theta^2$$`
+
+Thus,
+
+`$$\text{Var}(\hat{\theta}_2) = \frac{1}{4} \times 8\theta^2 = 2\theta^2$$`
+
+---
+
+**Efficiency:**
+
+Efficiency of `\(\hat{\theta}\)` relative to `\(\hat{\theta}_2\)` is given by:
+
+`$$\text{Efficiency} = \frac{\text{Var}(\hat{\theta}_2)}{\text{Var}(\hat{\theta})} = \frac{2\theta^2}{\frac{\theta}{2}} = 4\theta$$`
+
+
+---
+
+---
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

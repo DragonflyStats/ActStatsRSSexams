@@ -1,0 +1,300 @@
+---
+title: "Spanning Trees"
+subtitle: "DiscreteMaths.github.io"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    font_size: 20pts
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+---
+
+<style type="text/css">
+  body{
+  font-size: 20pt;
+}
+</style>
+
+```{r eval=FALSE,include=FALSE}
+
+# CT6 
+# - ASI 2005 April Question B - 1
+# - ASI 2006 April Question B - 1
+
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magrittr)
+library(knitr)
+library(dplyr)
+library(janitor)
+
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  #base_color = "#4169e1", #)(vvv#TREES
+  #background_color = "#E6E6FA",  #TREE
+  base_color = "black", #)(
+  background_color =  "#dbcccc",
+  text_color="black",
+  text_bold_color = "black",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "400", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+<style> 
+  /* Hide page numbers */ .
+  remark-slide-number { display: none; } 
+</style>
+
+## Bayesian Statistics with R
+### Bayesian Analysis of Cloud Kitchen Sales
+<br><br><br><br>
+## <tt>Statistical Computing with R</tt>
+###<tt>CS1B (ASI - May 2023) 
+
+---
+
+### Estimating Parameters and Analyzing Statistical Properties of Independent Normal Distributions
+
+* This exercise focuses on estimating an unknown parameter $\theta$ of two independent, normally distributed random variables $X_1$ and $X_2$, each with mean and variance $\theta$. 
+
+* Through a series of steps, the exercise guides you to derive the method of moments estimator, demonstrate its unbiasedness, and compute its variance. 
+
+* Additionally, it explores the distribution and properties of the difference $Y = X_1 - X_2$, evaluates alternative unbiased estimators, and uses moment generating functions to find specific moments and variances. 
+
+* The goal is to provide a comprehensive understanding of statistical estimation, the properties of normal distributions, and the efficiency of different estimators.
+
+---
+
+
+Random variables $X_1$ and $X_2$ are independent, each having a Normal distribution with mean and variance both equal to $\theta$, an unknown parameter. 
+It is required to use $X_1$ and $X_2$ to estimate $\theta$.
+
+
+### Exercises
+
+**A**. Find the method of moments estimator $\hat{\theta}$ of $\theta$ based on the first sample moment. 
+Show that $\hat{\theta}$ is unbiased and find its variance. 
+
+**B.** The random variable $Y = X_1 - X_2$. State the distribution of $Y$. 
+
+**C**. Show that $\hat{\theta}$ and $Y$ are uncorrelated. 
+
+
+---
+
+
+### Exercise A.
+
+**Method of Moments Estimator**
+
+* The method of moments estimator $\hat{\theta}$ is based on equating the sample moments to the population moments. 
+* Given $X_1$ and $X_2$ are independent and normally distributed with mean and variance $\theta$, the first sample moment (mean) is:
+
+$$\bar{X} = \frac{X_1 + X_2}{2}$$
+
+* Since $E(X_1) = E(X_2) = \theta$, the expected value of the sample mean is:
+
+$$E(\bar{X}) = \theta$$
+
+* Thus, the method of moments estimator for $\theta$ is:
+
+$$\hat{\theta} = \bar{X} = \frac{X_1 + X_2}{2}$$
+
+---
+
+**Unbiasedness:**
+
+* To show that $\hat{\theta}$ is unbiased, we need to show that $E(\hat{\theta}) = \theta$:
+
+$$E(\hat{\theta}) = E\left(\frac{X_1 + X_2}{2}\right) = \frac{E(X_1) + E(X_2)}{2} = \frac{\theta + \theta}{2} = \theta$$
+
+* So, $\hat{\theta}$ is an unbiased estimator of $\theta$.
+
+---
+
+**Variance:**
+
+* The variance of $\hat{\theta}$ is given by:
+
+$$\text{Var}(\hat{\theta}) = \text{Var}\left(\frac{X_1 + X_2}{2}\right) = \frac{1}{4} [\text{Var}(X_1) + \text{Var}(X_2)]$$
+
+* Since $\text{Var}(X_1) = \text{Var}(X_2) = \theta$:
+
+$$\text{Var}(\hat{\theta}) = \frac{1}{4} (\theta + \theta) = \frac{1}{4} \times 2\theta = \frac{\theta}{2}$$
+
+---
+
+### Exercise B.
+
+**Distribution of $Y = X_1 - X_2$**
+
+Given $X_1$ and $X_2$ are independent and normally distributed with mean and variance $\theta$, the distribution of $Y$:
+
+$$Y = X_1 - X_2$$
+
+$$\text{Mean of } Y: \mu_Y = E(X_1) - E(X_2) = \theta - \theta = 0$$
+
+$$\text{Variance of } Y: \sigma_Y^2 = \text{Var}(X_1) + \text{Var}(X_2) = \theta + \theta = 2\theta$$
+
+Hence, $Y$ is normally distributed with mean 0 and variance $2\theta$:
+
+$$Y \sim N(0, 2\theta)$$
+
+
+---
+
+### Exercise C.
+
+**Uncorrelatedness of $\hat{\theta}$ and $Y$**
+
+To show that $\hat{\theta}$ and $Y$ are uncorrelated, we need to show that the covariance between $\hat{\theta}$ and $Y$ is zero:
+
+$$\text{Cov}(\hat{\theta}, Y) = E(\hat{\theta} Y) - E(\hat{\theta}) E(Y)$$
+
+---
+
+### Exercise C. 
+
+Since $E(Y) = 0$:
+
+$$\text{Cov}(\hat{\theta}, Y) = E(\hat{\theta} Y)$$
+
+$$\hat{\theta} = \frac{X_1 + X_2}{2}$$
+
+$$E(\hat{\theta} Y) = E\left(\left(\frac{X_1 + X_2}{2}\right)(X_1 - X_2)\right) = \frac{1}{2} E(X_1^2 - X_2^2)$$
+
+---
+
+### Exercise C. 
+
+Recall that the variance of $X$ is defined as:
+$$\text{Var}(X) = E(X^2) - (E(X))^2$$
+
+Given $\text{Var}(X) = \theta$ and $E(X) = \theta$, we can substitute these into the equation:
+$$\theta = E(X^2) - \theta^2$$
+
+Solving for $E(X^2)$:
+$$E(X^2) = \theta + \theta^2$$
+
+So, $E(X^2) = \theta + \theta^2$.
+
+---
+
+### Exercise C. 
+
+Given $X_1$ and $X_2$ are independent and $E(X_1^2) = E(X_2^2)$:
+
+$$E(\hat{\theta} Y) = \frac{1}{2} [E(X_1^2) - E(X_2^2)] = \frac{1}{2} [\theta + \theta^2 - (\theta + \theta^2)] = 0$$
+
+Hence, $\hat{\theta}$ and $Y$ are uncorrelated.
+
+
+---
+
+
+### Exercises
+
+**D**. Another unbiased estimator of $\theta$ is $kY^2$, where $k$ is a constant. Find the value of $k$. 
+
+
+
+**E**. Show that $E(Y^4) = 12\theta^2$. 
+
+You may use the result that the moment generating function of a Normal distribution with mean $\mu$ and variance $\theta$ is 
+$$M_X(t) = \exp\left(\mu t + \frac{\sigma^2 t^2}{2}\right).$$
+
+**F**. Use the results of ***exercise E*** to find the variance of $\theta$, and hence the efficiency of $\hat{\theta}$ relative to $\theta$. 
+
+
+---
+
+### Exercise D. 
+
+**Unbiased Estimator $kY^2$**
+
+Given that another unbiased estimator of $\theta$ is $kY^2$:
+
+To find the value of $k$, we need to ensure that $E(kY^2) = \theta$.
+
+Since $Y \sim N(0, 2\theta)$, the expectation $E(Y^2) = 2\theta$:
+
+$$E(kY^2) = k E(Y^2) = k \times 2\theta = \theta$$
+
+$$k \times 2\theta = \theta$$
+
+$$k = \frac{1}{2}$$
+
+Thus, the unbiased estimator is:
+
+$$\hat{\theta}_2 = \frac{1}{2} Y^2$$
+
+---
+
+### Exercise E.
+
+**Expectation $E(Y^4)$**
+
+Using the result for a normal distribution $N(\mu, \sigma^2)$:
+
+Given $Y \sim N(0, 2\theta)$, the fourth moment $E(Y^4)$ can be found using the moment generating function $M_X(t)$:
+
+$$M_Y(t) = \exp\left(0 \times t + \frac{2\theta t^2}{2}\right) = \exp(\theta t^2)$$
+
+---
+
+### Exercise E.
+
+The fourth moment is the fourth derivative of the moment generating function evaluated at $t = 0$:
+
+$$E(Y^4) = \frac{d^4}{dt^4} M_Y(t) \Big|_{t=0}$$
+
+For $M_Y(t) = \exp(\theta t^2)$:
+
+$$E(Y^4) = 12\theta^2$$
+
+So, $E(Y^4) = 12\theta^2$.
+
+
+---
+
+### Exercise F.
+
+**Variance and Efficiency**
+
+To find the variance of the estimator $\theta$:
+
+$$\text{Var}(\hat{\theta}_2) = \text{Var}\left(\frac{1}{2}Y^2\right) = \frac{1}{4}\text{Var}(Y^2)$$
+
+Using the variance of $Y^2$:
+
+$$Y \sim N(0, 2\theta) \Rightarrow Y^2 \sim \chi^2_1(2\theta)$$
+
+The variance of $Y^2$:
+
+$$\text{Var}(Y^2) = 2(2\theta)^2 = 8\theta^2$$
+
+Thus,
+
+$$\text{Var}(\hat{\theta}_2) = \frac{1}{4} \times 8\theta^2 = 2\theta^2$$
+
+---
+
+**Efficiency:**
+
+Efficiency of $\hat{\theta}$ relative to $\hat{\theta}_2$ is given by:
+
+$$\text{Efficiency} = \frac{\text{Var}(\hat{\theta}_2)}{\text{Var}(\hat{\theta})} = \frac{2\theta^2}{\frac{\theta}{2}} = 4\theta$$
+
+
+---
+
+---

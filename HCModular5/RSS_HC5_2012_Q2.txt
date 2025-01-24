@@ -1,0 +1,235 @@
+Solve the following
+### Problem Statement
+
+#### (a) Discrete Random Variable X
+Suppose that \(X\) is a discrete random variable that can only take non-negative integer values (i.e., 0, 1, 2, ...). 
+Define the probability generating function \(G_X(t)\) of \(X\).
+(2 marks)
+
+
+If you need any more details or further assistance, feel free to ask!
+
+############################################################################
+
+The random variable \( Y \) has the following probability distribution:
+
+\[ P(Y = k) = \frac{e^{-\lambda} \lambda^{k-1}}{(k-1)!} \text{ for } k = 1, 2, \ldots \]
+
+This is known as the **shifted Poisson distribution** (also sometimes called the **displaced Poisson distribution** or **zero-truncated Poisson distribution**) with parameter \(\lambda\). It resembles the Poisson distribution but starts from \( k = 1 \) instead of \( k = 0 \). In other words, it is a Poisson distribution shifted to the right by one unit.
+
+############################################################################
+
+
+2. **Exponential Function Series**:
+   The exponential function \( e^x \) can be expressed as an infinite series:
+   \[ e^x = \sum_{k=0}^{\infty} \frac{x^k}{k!} \]
+
+############################################################################
+
+To evaluate the mean (expected value) of a discrete random variable \(X\) using its probability generating function \(G_X(t)\), you can use the following procedure:
+
+1. **Define the Probability Generating Function (PGF)**:
+   The probability generating function \(G_X(t)\) of a discrete random variable \(X\) is defined as:
+   \[ G_X(t) = E(t^X) = \sum_{k=0}^{\infty} P(X = k) t^k \]
+
+2. **Differentiate the PGF**:
+   To find the mean \(E(X)\), you need the first derivative of the PGF evaluated at \(t = 1\):
+   \[ G_X'(t) = \frac{d}{dt} G_X(t) \]
+
+3. **Evaluate the Derivative at \(t = 1\)**:
+   The mean \(E(X)\) is given by:
+   \[ E(X) = G_X'(1) \]
+
+Let's see an example to illustrate this process:
+
+Suppose \(X\) is a Poisson random variable with parameter \(\lambda\). The PGF of \(X\) is:
+\[ G_X(t) = e^{\lambda(t-1)} \]
+
+1. **Differentiate the PGF**:
+   \[ G_X'(t) = \frac{d}{dt} e^{\lambda(t-1)} = \lambda e^{\lambda(t-1)} \]
+
+2. **Evaluate at \(t = 1\)**:
+   \[ E(X) = G_X'(1) = \lambda e^{\lambda(1-1)} = \lambda \]
+
+So, the mean \(E(X)\) of a Poisson random variable with parameter \(\lambda\) is \(\lambda\).
+
+This method leverages the power of the PGF to extract moments, making it a handy tool for analyzing discrete random variables. 
+If you have any more questions or need further clarification, feel free to ask!
+
+
+The probability generating function (PGF) is a valuable tool in probability theory and statistics used to encode the probabilities of a discrete random variable into a generating function form. For a discrete random variable \(X\) that takes non-negative integer values, the PGF is defined as \(G_X(t) = E(t^X) = \sum_{k=0}^{\infty} P(X = k) t^k\). This function is particularly useful because it provides a convenient way to calculate moments, such as the mean and variance, by differentiating the PGF and evaluating it at specific points. The PGF also facilitates the analysis of sums of independent random variables, as the PGF of the sum is the product of the individual PGFs. Overall, the PGF is a powerful method for studying the distributions and properties of discrete random variables.
+
+
+############################################################################
+
+
+To evaluate the variance of a discrete random variable \(X\) using its probability generating function \(G_X(t)\), you follow these steps:
+
+1. **Define the Probability Generating Function (PGF)**:
+   The PGF \(G_X(t)\) of a discrete random variable \(X\) is defined as:
+   \[ G_X(t) = E(t^X) = \sum_{k=0}^{\infty} P(X = k) t^k \]
+
+2. **Find the First and Second Derivatives of the PGF**:
+   To compute the variance, you need the first and second derivatives of \(G_X(t)\):
+
+   \[ G_X'(t) = \frac{d}{dt} G_X(t) \]
+   \[ G_X''(t) = \frac{d^2}{dt^2} G_X(t) \]
+
+3. **Evaluate the Derivatives at \( t = 1 \)**:
+   The mean \(E(X)\) and the second moment \(E(X^2)\) are given by:
+   \[ E(X) = G_X'(1) \]
+   \[ E(X^2) = G_X''(1) + G_X'(1) \]
+
+4. **Calculate the Variance**:
+   The variance \( \text{Var}(X) \) is calculated using the formula:
+   \[ \text{Var}(X) = E(X^2) - (E(X))^2 \]
+
+Let's see an example to illustrate this process.
+
+Suppose \(X\) is a Poisson random variable with parameter \(\lambda\). The PGF of \(X\) is:
+\[ G_X(t) = e^{\lambda(t-1)} \]
+
+1. **First Derivative**:
+   \[ G_X'(t) = \frac{d}{dt} e^{\lambda(t-1)} = \lambda e^{\lambda(t-1)} \]
+
+2. **Second Derivative**:
+   \[ G_X''(t) = \frac{d}{dt} (\lambda e^{\lambda(t-1)}) = \lambda^2 e^{\lambda(t-1)} \]
+
+3. **Evaluate at \( t = 1 \)**:
+   \[ G_X'(1) = \lambda e^{\lambda(1-1)} = \lambda \]
+   \[ G_X''(1) = \lambda^2 e^{\lambda(1-1)} = \lambda^2 \]
+
+4. **Calculate Mean and Second Moment**:
+   \[ E(X) = G_X'(1) = \lambda \]
+   \[ E(X^2) = G_X''(1) + G_X'(1) = \lambda^2 + \lambda = \lambda(\lambda + 1) \]
+
+5. **Variance**:
+   \[ \text{Var}(X) = E(X^2) - (E(X))^2 \]
+   \[ \text{Var}(X) = \lambda(\lambda + 1) - \lambda^2 = \lambda \]
+
+So, the variance \( \text{Var}(X) \) of a Poisson random variable with parameter \(\lambda\) is \(\lambda\).
+
+By following these steps, you can evaluate the variance of any discrete random variable using its probability generating function. 
+
+
+
+
+In summary, for the shifted Poisson distribution:
+- **Mean \( E(Y) = 1 + \lambda \)**
+- **Variance \( \text{Var}(Y) = \lambda \)**
+
+
+
+############################################################################
+
+
+#### (b) Discrete Random Variable Y
+The discrete random variable \(Y\) has the following probability distribution:
+\[ P(Y = k) = \frac{e^{-\lambda} \lambda^{k-1}}{(k-1)!} \text{ for } k = 1, 2, \ldots \]
+where \(\lambda\) is a positive parameter.
+
+1. **Show that the probability generating function of \(Y\) is \(G_Y(t) = te^{\lambda(t-1)}\).** (4 marks)
+2. **Use the probability generating function of \(Y\) to evaluate the mean and variance of \(Y\). Outline how you would find \(E(Y^3)\).** (8 marks)
+3. **Suppose that \(Y_1, Y_2, \ldots, Y_n\) are independent random variables, each with the same distribution as \(Y\), and that \(W = \sum_{i=1}^n Y_i\). 
+Find the probability generating function of \(W\) and hence find \(P(W = k)\) for \(k = 0, 1, 2, 3, \ldots\).** (6 marks)
+
+
+######################
+
+The random variable \( Y \) has the following probability distribution:
+
+\[ P(Y = k) = \frac{e^{-\lambda} \lambda^{k-1}}{(k-1)!} \text{ for } k = 1, 2, \ldots \]
+
+This is known as the **shifted Poisson distribution** (also sometimes called the **displaced Poisson distribution** or **zero-truncated Poisson distribution**) with parameter \(\lambda\). It resembles the Poisson distribution but starts from \( k = 1 \) instead of \( k = 0 \). In other words, it is a Poisson distribution shifted to the right by one unit.
+
+######################
+
+### Problem Solutions
+
+#### (a) Discrete Random Variable \(X\)
+
+**Definition:**
+The probability generating function \(G_X(t)\) of a discrete random variable \(X\) that takes non-negative integer values is defined as:
+\[ G_X(t) = E(t^X) = \sum_{k=0}^{\infty} P(X = k) t^k \]
+
+This function encodes the probabilities \(P(X = k)\) in a generating function form.
+
+#### (b) Discrete Random Variable \(Y\)
+
+The discrete random variable \(Y\) has the following probability distribution:
+\[ P(Y = k) = \frac{e^{-\lambda} \lambda^{k-1}}{(k-1)!} \quad \text{for} \quad k = 1, 2, \ldots \]
+
+1. **Probability Generating Function of \(Y\):**
+
+The probability generating function \(G_Y(t)\) is defined as:
+\[ G_Y(t) = E(t^Y) = \sum_{k=1}^{\infty} P(Y = k) t^k \]
+
+Substitute \(P(Y = k)\):
+\[ G_Y(t) = \sum_{k=1}^{\infty} \frac{e^{-\lambda} \lambda^{k-1}}{(k-1)!} t^k \]
+\[ G_Y(t) = e^{-\lambda} \sum_{k=1}^{\infty} \frac{\lambda^{k-1}}{(k-1)!} t^k \]
+
+Let \( j = k-1 \) (so \( k = j+1 \)):
+\[ G_Y(t) = e^{-\lambda} \sum_{j=0}^{\infty} \frac{\lambda^j}{j!} t^{j+1} \]
+\[ G_Y(t) = e^{-\lambda} t \sum_{j=0}^{\infty} \frac{(\lambda t)^j}{j!} \]
+\[ G_Y(t) = e^{-\lambda} t e^{\lambda t} \]
+\[ G_Y(t) = t e^{\lambda(t-1)} \]
+
+So, the probability generating function is:
+\[ G_Y(t) = t e^{\lambda(t-1)} \]
+
+2. **Mean and Variance of \(Y\):**
+
+The mean and variance can be found using the probability generating function:
+\[ E(Y) = G_Y'(1) \]
+\[ \text{Var}(Y) = G_Y''(1) + G_Y'(1) - (G_Y'(1))^2 \]
+
+First derivative:
+\[ G_Y(t) = t e^{\lambda(t-1)} \]
+\[ G_Y'(t) = e^{\lambda(t-1)} + \lambda t e^{\lambda(t-1)} \]
+
+Evaluate at \( t = 1 \):
+\[ G_Y'(1) = e^{\lambda(1-1)} + \lambda \cdot 1 \cdot e^{\lambda(1-1)} = 1 + \lambda \]
+
+So, \( E(Y) = G_Y'(1) = 1 + \lambda \).
+
+Second derivative:
+\[ G_Y''(t) = \lambda e^{\lambda(t-1)} + \lambda e^{\lambda(t-1)} + \lambda^2 t e^{\lambda(t-1)} = \lambda e^{\lambda(t-1)}(1 + t + \lambda t) \]
+
+Evaluate at \( t = 1 \):
+\[ G_Y''(1) = \lambda e^{\lambda(1-1)}(1 + 1 + \lambda \cdot 1) = \lambda(1 + 1 + \lambda) = \lambda(2 + \lambda) \]
+
+So, \( G_Y''(1) = \lambda(2 + \lambda) \).
+
+Variance:
+\[ \text{Var}(Y) = G_Y''(1) + G_Y'(1) - (G_Y'(1))^2 \]
+\[ \text{Var}(Y) = \lambda(2 + \lambda) + 1 + \lambda - (1 + \lambda)^2 \]
+\[ \text{Var}(Y) = \lambda(2 + \lambda) + 1 + \lambda - (1 + 2\lambda + \lambda^2) \]
+\[ \text{Var}(Y) = \lambda(2 + \lambda) + 1 + \lambda - 1 - 2\lambda - \lambda^2 \]
+\[ \text{Var}(Y) = \lambda \]
+
+So, \( \text{Var}(Y) = \lambda \).
+
+To find \( E(Y^3) \), you would typically use the third derivative of the probability generating function evaluated at \( t = 1 \):
+\[ E(Y^3) = G_Y'''(1) \]
+
+3. **Probability Generating Function of \(W = \sum_{i=1}^n Y_i\):**
+
+Since \( Y_i \) are independent and identically distributed, the probability generating function of \( W \) is the product of the generating functions of \( Y_i \):
+\[ G_W(t) = (G_Y(t))^n \]
+\[ G_W(t) = (t e^{\lambda(t-1)})^n = t^n e^{n\lambda(t-1)} \]
+
+To find \( P(W = k) \):
+\[ P(W = k) = \text{coefficient of } t^k \text{ in } G_W(t) \]
+\[ G_W(t) = t^n e^{n\lambda(t-1)} \]
+
+The coefficient of \( t^k \) in the expansion of \( e^{n\lambda(t-1)} \) is given by:
+\[ P(W = k) = \frac{(n\lambda)^{k-n} e^{-n\lambda}}{(k-n)!} \]
+
+So,
+\[ P(W = k) = \begin{cases} 
+      \frac{e^{-n\lambda} (n\lambda)^{k-n}}{(k-n)!} & \text{if } k \geq n \\
+      0 & \text{if } k < n 
+   \end{cases}
+\]
+
+I hope this helps! If you have any more questions or need further assistance, feel free to ask.

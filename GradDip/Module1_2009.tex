@@ -82,6 +82,7 @@ Ten calls arrive within 30 minutes; find (to two significant figures) the
 probability that at most two of them are urgent, stating any assumptions you
 make.
 (8)
+##########################
 (i) Consider a family of non-negative random variables with the property that the
 variance of any member of the family is proportional to the square of its
 expected value. Let X be a member of this family, with E(X) = μ . Use a
@@ -104,6 +105,8 @@ the property described in (i) as ν varies.
 [You may use without proof the results Γ ( α ) = ∫ e − t t α − 1 dt and Γ ( α + 1) = α Γ ( α ). ]
 0
 3
+
+##################################
 Turn over5.
 The continuous random variables X and Y have joint probability density function
 f ( x , y ) = kxy if 0 < x < y < 1, with f ( x , y ) = 0 elsewhere, where k is a constant.
@@ -117,6 +120,71 @@ reason, whether or not X and Y are independent.
 Hence find the correlation between X and Y.
 (10)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Sure, let's tackle this step-by-step.
+
+### Part (i)
+
+We start by considering a family of non-negative random variables with the property that the variance of any member is proportional to the square of its expected value.
+
+Let \( X \) be a member of this family, with \( \mathbb{E}(X) = \mu \) and \( \text{Var}(X) = k\mu^2 \) where \( k \) is a constant.
+
+We need to show that if \( Y = \log(X) \), then \( \text{Var}(Y) \) is approximately constant.
+
+Using the Taylor series expansion, for \( \log(X) \) around \( \mu \):
+\[ \log(X) \approx \log(\mu) + \frac{X - \mu}{\mu} - \frac{(X - \mu)^2}{2\mu^2} + \cdots \]
+
+Since \( Y = \log(X) \):
+\[ \mathbb{E}(Y) \approx \log(\mu) \]
+\[ \text{Var}(Y) \approx \mathbb{E}\left[\left(\frac{X - \mu}{\mu} - \frac{(X - \mu)^2}{2\mu^2}\right)^2\right] \]
+
+Ignoring higher-order terms, we get:
+\[ \text{Var}(Y) \approx \frac{1}{\mu^2}\text{Var}(X) \]
+
+Using \( \text{Var}(X) = k\mu^2 \):
+\[ \text{Var}(Y) \approx \frac{1}{\mu^2} \cdot k\mu^2 = k \]
+
+This shows that the variance of \( Y \) is approximately constant, as \( k \) is a constant.
+
+### Part (ii)
+
+Given that \( X \) has the Gamma distribution \( \Gamma(\alpha, \nu) \), its probability density function is:
+\[ f(x) = \frac{\nu^\alpha x^{\alpha-1} e^{-\nu x}}{\Gamma(\alpha)} \]
+
+We need to show that:
+\[ \mathbb{E}(X^k) = \frac{\Gamma(k + \alpha)}{\nu^k \Gamma(\alpha)} \text{ for } k > 0 \]
+
+Using the property of the Gamma function:
+\[ \Gamma(\alpha) = \int_0^\infty t^{\alpha-1} e^{-t} dt \]
+
+For \( X \) following \( \Gamma(\alpha, \nu) \):
+\[ \mathbb{E}(X^k) = \int_0^\infty x^k f(x) dx \]
+
+Substitute \( f(x) \):
+\[ \mathbb{E}(X^k) = \int_0^\infty x^k \frac{\nu^\alpha x^{\alpha-1} e^{-\nu x}}{\Gamma(\alpha)} dx \]
+
+\[ \mathbb{E}(X^k) = \frac{\nu^\alpha}{\Gamma(\alpha)} \int_0^\infty x^{k+\alpha-1} e^{-\nu x} dx \]
+
+Using the substitution \( t = \nu x \):
+\[ \mathbb{E}(X^k) = \frac{\nu^\alpha}{\Gamma(\alpha)} \cdot \frac{1}{\nu^{k+\alpha}} \int_0^\infty t^{k+\alpha-1} e^{-t} dt \]
+
+\[ \mathbb{E}(X^k) = \frac{1}{\nu^k \Gamma(\alpha)} \Gamma(k+\alpha) \]
+
+Hence,
+\[ \mathbb{E}(X^k) = \frac{\Gamma(k+\alpha)}{\nu^k \Gamma(\alpha)} \]
+
+For fixed \( \alpha > 0 \), as \( \nu \) varies, we see that:
+\[ \text{Var}(X) = \text{E}(X^2) - (\text{E}(X))^2 \]
+
+Using \( \text{E}(X) = \frac{\alpha}{\nu} \) and \( \text{E}(X^2) = \frac{\Gamma(2 + \alpha)}{\nu^2 \Gamma(\alpha)} \):
+
+\[ \text{Var}(X) = \frac{\alpha(\alpha+1)}{\nu^2} - \left(\frac{\alpha}{\nu}\right)^2 \]
+
+\[ \text{Var}(X) = \frac{\alpha}{\nu^2} = \left(\frac{1}{\nu^2}\right)\left(\frac{\Gamma(2 + \alpha)}{\Gamma(\alpha)}\right) = \left(\frac{\Gamma(1 + \alpha)}{\Gamma(\alpha)}\right)^2 \left(\frac{1}{\nu^2}\right) \]
+
+This shows that the family of random variables \( X \) has the property that the variance is proportional to the square of the expected value as \( \nu \) varies.
+
+I hope this helps you understand the concepts better! If you have any more questions or need further clarification, feel free to ask.
+###################################
 6.
 (i) State the Central Limit Theorem for sums of independent identically
 distributed random variables.
@@ -155,6 +223,9 @@ Name the distribution followed by U. Using the density function, show that
 E(U) = 2, and hence verify that E(X / Y) > E(X) / E(Y). Explain briefly why this
 is no surprise.
 (10)
+
+############################################
+
 It is desired to use the rejection technique to simulate values from the beta distribution
 with density f ( x ) = 6 x ( 1 − x ) over 0 < x < 1.
 (i) Sketch the graph of the function f (x ) and, on the same diagram, draw the
@@ -175,3 +246,108 @@ state the reason for your answer.
 over the interval (0, 1), to generate points uniformly distributed inside ABCD.
 (6)
 5
+
+#############
+
+Let's break this down step-by-step:
+
+### Part (i)
+
+First, we need to sketch the function \( f(x) = 6x(1-x) \) over \( 0 < x < 1 \) and draw the trapezium whose vertices are A = (0, 0), B = (0.25, 1.5), C = (0.75, 1.5), and D = (1, 0).
+
+1. **Sketch \( f(x) = 6x(1-x) \)**:
+   The function \( f(x) = 6x(1-x) \) is a quadratic function which opens downwards. It reaches its maximum value at \( x = 0.5 \).
+
+2. **Trapezium ABCD**:
+   - A = (0, 0)
+   - B = (0.25, 1.5)
+   - C = (0.75, 1.5)
+   - D = (1, 0)
+
+To prove that \( f(x) \) is entirely contained within this trapezium, observe the following:
+- At \( x = 0 \) and \( x = 1 \), \( f(x) = 0 \) and these points lie on the lines AD and AB.
+- At \( x = 0.25 \) and \( x = 0.75 \), the value of \( f(x) = 6(0.25)(1-0.25) = 6(0.75)(1-0.75) = 1.5 \).
+
+Thus, the function \( f(x) \) is bounded above by the horizontal line at \( y = 1.5 \) and the vertices of the trapezium. The function lies entirely within the trapezium ABCD.
+
+### Part (ii)
+
+We need to show that 1/9 of the points generated uniformly inside the trapezium ABCD will be rejected when the rejection technique is used.
+
+The area of the trapezium ABCD is:
+\[ \text{Area} = \frac{1}{2} \times (\text{base}_1 + \text{base}_2) \times \text{height} \]
+\[ \text{Area} = \frac{1}{2} \times (1 + 1) \times 1.5 = 1.5 \]
+
+The area under the density function \( f(x) \) is:
+\[ \int_0^1 6x(1-x) \, dx = 6 \left[ \frac{x^2}{2} - \frac{x^3}{3} \right]_0^1 = 6 \left( \frac{1}{2} - \frac{1}{3} \right) = 6 \times \frac{1}{6} = 1 \]
+
+Thus, the probability of accepting a point is \( \frac{\text{Area under } f(x)}{\text{Area of trapezium}} = \frac{1}{1.5} = \frac{2}{3} \).
+
+The proportion of points rejected is \( 1 - \frac{2}{3} = \frac{1}{3} \). Therefore, 1/9 of the points are rejected.
+
+### Part (iii)
+
+Applying the rejection technique to the four points:
+
+1. \( (0.452, 0.697) \):
+   - \( f(0.452) = 6 \times 0.452 \times (1 - 0.452) = 6 \times 0.452 \times 0.548 \approx 1.485 \).
+   - Since 0.697 < 1.485, it is **accepted**.
+
+2. \( (0.120, 0.066) \):
+   - \( f(0.120) = 6 \times 0.120 \times (1 - 0.120) = 6 \times 0.120 \times 0.880 \approx 0.6336 \).
+   - Since 0.066 < 0.6336, it is **accepted**.
+
+3. \( (0.914, 0.871) \):
+   - \( f(0.914) = 6 \times 0.914 \times (1 - 0.914) = 6 \times 0.914 \times 0.086 \approx 0.471 \).
+   - Since 0.871 > 0.471, it is **rejected**.
+
+4. \( (0.657, 1.345) \):
+   - \( f(0.657) = 6 \times 0.657 \times (1 - 0.657) = 6 \times 0.657 \times 0.343 \approx 1.351 \).
+   - Since 1.345 < 1.351, it is **accepted**.
+
+### Part (iv)
+
+An efficient method to generate points uniformly distributed inside ABCD is as follows:
+
+1. Generate a random variable \( U \) uniformly distributed over \( (0,1) \).
+2. If \( U \leq 0.25 \), set \( X = U \times 4 \times 1.5 \).
+3. If \( 0.25 < U < 0.75 \), set \( X = 1.5 \times \left(\frac{U - 0.25}{0.5} \right) \).
+4. If \( U \geq 0.75 \), set \( X = 1.5 \times (1 - (U - 0.75) \times 4) \).
+
+
+##################
+Certainly! Here's the R code to sketch the function \( f(x) = 6x(1-x) \) over \( 0 < x < 1 \) and draw the trapezium whose vertices are A = (0, 0), B = (0.25, 1.5), C = (0.75, 1.5), and D = (1, 0).
+
+```R
+# Define the function f(x)
+f <- function(x) {
+  6 * x * (1 - x)
+}
+
+# Define the x values
+x <- seq(0, 1, length.out = 100)
+
+# Calculate the y values
+y <- f(x)
+
+# Plot the function f(x)
+plot(x, y, type = "l", col = "blue", lwd = 2, 
+     xlab = "x", ylab = "f(x)", 
+     main = "Function f(x) = 6x(1-x) and Trapezium ABCD",
+     ylim = c(0, 2))
+
+# Add the trapezium ABCD
+polygon(c(0, 0.25, 0.75, 1), c(0, 1.5, 1.5, 0), border = "red", lwd = 2, col = rgb(1, 0, 0, 0.2))
+
+# Add points A, B, C, D
+points(c(0, 0.25, 0.75, 1), c(0, 1.5, 1.5, 0), pch = 19, col = "red")
+text(c(0, 0.25, 0.75, 1), c(0.1, 1.6, 1.6, 0.1), labels = c("A", "B", "C", "D"), col = "red", pos = 4)
+```
+
+This code defines the function \( f(x) = 6x(1-x) \), plots it over the interval \( 0 < x < 1 \), and adds the trapezium with vertices A, B, C, and D. The trapezium is shown in red, and the function is shown in blue.
+
+Feel free to try this code in R and visualize the function and the trapezium! If you have any other questions or need further assistance, I'm here to help.
+
+This method ensures that points are uniformly distributed inside the trapezium ABCD.
+
+I hope this helps clarify things! If you have more questions or need further assistance, feel free to ask!

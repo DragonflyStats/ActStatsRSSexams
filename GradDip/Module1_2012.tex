@@ -44,6 +44,8 @@ for which the events
 E = {Outcome divisible by 2} and F = {Outcome divisible by 3}
 are independent.
 (10)
+
+###############################################
 2.
 Suppose X has a Poisson distribution with parameter .
 (i)
@@ -77,7 +79,11 @@ then decreases. Describe the behaviour of this sequence when
 integer.
 (8)
 2
-Turn over3.
+Turn ove
+
+######################################################################
+
+3.
 (i) A random variable has the continuous uniform distribution over the interval
 ( b a ) 2
 [a, b]. Write down its mean and show that its variance is
@@ -91,6 +97,129 @@ variance of Y, in terms of and 2 .
 (14)
 [You may use the results
 E(Y) = E ( E(Y | X) ) and Var(Y) = E ( Var(Y | X) ) + Var ( E(Y | X) ) .]
+
+Sure, let's break it down:
+
+### (i) Mean and Variance of Continuous Uniform Distribution
+
+For a random variable \(X\) uniformly distributed over the interval \([a, b]\):
+
+- The probability density function (pdf) is:
+  \[
+  f(x) = \frac{1}{b - a}, \quad \text{for } a \leq x \leq b
+  \]
+
+- The mean (expected value) \(E(X)\) is:
+  \[
+  E(X) = \frac{a + b}{2}
+  \]
+
+- The variance \( \text{Var}(X) \) is given by:
+  \[
+  \text{Var}(X) = E(X^2) - [E(X)]^2
+  \]
+
+  Let's calculate \(E(X^2)\):
+  \[
+  E(X^2) = \int_{a}^{b} x^2 f(x) dx = \int_{a}^{b} x^2 \frac{1}{b - a} dx = \frac{1}{b - a} \int_{a}^{b} x^2 dx
+  \]
+
+  The integral of \(x^2\) over \([a, b]\) is:
+  \[
+  \int_{a}^{b} x^2 dx = \left[ \frac{x^3}{3} \right]_{a}^{b} = \frac{b^3}{3} - \frac{a^3}{3}
+  \]
+
+  Thus,
+  \[
+  E(X^2) = \frac{1}{b - a} \left( \frac{b^3}{3} - \frac{a^3}{3} \right) = \frac{b^3 - a^3}{3(b - a)}
+  \]
+
+  Using the difference of cubes,
+  \[
+  b^3 - a^3 = (b - a)(b^2 + ab + a^2)
+  \]
+
+  Therefore,
+  \[
+  E(X^2) = \frac{(b - a)(b^2 + ab + a^2)}{3(b - a)} = \frac{b^2 + ab + a^2}{3}
+  \]
+
+  The variance is then:
+  \[
+  \text{Var}(X) = E(X^2) - [E(X)]^2 = \frac{b^2 + ab + a^2}{3} - \left(\frac{a + b}{2}\right)^2
+  \]
+
+  Simplifying,
+  \[
+  \left(\frac{a + b}{2}\right)^2 = \frac{a^2 + 2ab + b^2}{4}
+  \]
+
+  Therefore,
+  \[
+  \text{Var}(X) = \frac{b^2 + ab + a^2}{3} - \frac{a^2 + 2ab + b^2}{4}
+  \]
+
+  Combine the fractions:
+  \[
+  \text{Var}(X) = \frac{4(b^2 + ab + a^2) - 3(a^2 + 2ab + b^2)}{12}
+  \]
+  \[
+  \text{Var}(X) = \frac{4b^2 + 4ab + 4a^2 - 3a^2 - 6ab - 3b^2}{12} = \frac{b^2 - 2ab + a^2}{12} = \frac{(b - a)^2}{12}
+  \]
+
+Thus, the variance of a continuous uniform distribution over \([a, b]\) is:
+\[ \text{Var}(X) = \frac{(b - a)^2}{12} \]
+
+### (ii) Mean and Variance of Y
+
+Let \(X\) be a random variable with mean \( \mu \), variance \( \sigma^2 \), and \( 0 \leq X \leq 1 \).
+Given \(X\), the independent random variables \(V\) and \(W\) are uniformly distributed over \([0, X]\) and \([X, 1]\) respectively.
+Define \(Y = W - V\).
+
+#### Mean of Y
+
+Using the law of total expectation:
+\[ E(Y) = E(E(Y|X)) \]
+
+Given \(X\), the mean of \(V\) and \(W\) are:
+\[ E(V|X) = \frac{X}{2} \]
+\[ E(W|X) = \frac{X + 1}{2} \]
+
+Therefore:
+\[ E(Y|X) = E(W|X) - E(V|X) = \frac{X + 1}{2} - \frac{X}{2} = \frac{1}{2} \]
+
+Thus,
+\[ E(Y) = E\left(\frac{1}{2}\right) = \frac{1}{2} \]
+
+#### Variance of Y
+
+Using the law of total variance:
+\[ \text{Var}(Y) = E(\text{Var}(Y|X)) + \text{Var}(E(Y|X)) \]
+
+First, calculate the variance given \(X\):
+\[ \text{Var}(V|X) = \frac{X^2}{12} \]
+\[ \text{Var}(W|X) = \frac{(1 - X)^2}{12} \]
+
+Since \(V\) and \(W\) are independent given \(X\):
+\[ \text{Var}(Y|X) = \text{Var}(W|X) + \text{Var}(V|X) = \frac{(1 - X)^2}{12} + \frac{X^2}{12} = \frac{(1 - X)^2 + X^2}{12} = \frac{1 - 2X + X^2 + X^2}{12} = \frac{1 - 2X + 2X^2}{12} \]
+
+Next, calculate the expectation:
+\[ E(\text{Var}(Y|X)) = E\left(\frac{1 - 2X + 2X^2}{12}\right) = \frac{1}{12} - \frac{2}{12}E(X) + \frac{2}{12}E(X^2) \]
+
+Given \(E(X) = \mu\) and \(\text{Var}(X) = \sigma^2 = E(X^2) - E(X)^2\):
+\[ E(X^2) = \sigma^2 + \mu^2 \]
+
+Therefore:
+\[ E(\text{Var}(Y|X)) = \frac{1}{12} - \frac{2\mu}{12} + \frac{2(\sigma^2 + \mu^2)}{12} = \frac{1}{12} - \frac{2\mu}{12} + \frac{2\sigma^2}{12} + \frac{2\mu^2}{12} = \frac{1 + 2\sigma^2 - 2\mu + 2\mu^2}{12} \]
+
+Finally, calculate the variance of the expectation:
+\[ \text{Var}(E(Y|X)) = \text{Var}\left(\frac{1}{2}\right) = 0 \]
+
+Thus,
+\[ \text{Var}(Y) = E(\text{Var}(Y|X)) = \frac{1 + 2\sigma^2 - 2\mu + 2\mu^2}{12} \]
+
+Let me know if you have any more questions!
+########################################################################
 4.
 A sequence of Bernoulli trials is conducted, in which the probability of success is
 p > 0. Let W denote the number of trials needed to obtain the first success. Write
